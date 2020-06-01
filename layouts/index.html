@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='{{ .Site.LanguageCode }}'>
+  {{- partial "head.html" . -}}
+  <body class="bg-gradient flex flex-col min-h-screen">
+    {{- partial "header.html" . -}}
+    <main class="flex-1 mt-12 max-w-3xl mx-auto text-gray-700 w-full">
+      <article class="article">
+        {{ partial "intro.html" . }}
+
+        {{ range site.RegularPages.GroupByDate "2006" -}}
+          {{ $year := int .Key }}
+          {{ if gt $year 2014  }}
+            <div class="flex flex-col md:flex-row md:border-b border-gray-400">
+              <h2 class="text-3xl font-bold mb-2 md:w-32 flex-shrink-0 flex-grow-0">{{ .Key }}</h2>
+              
+              <ol class="md:pt-3 mb-4">
+                {{ range where .Pages "Type" "ne" "page" -}}
+                <li>
+                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </li>
+                {{- end }}
+              </ol>
+            </div>
+          {{ end }}
+
+        {{ end }}
+
+        <p class="text-lg text-center">
+          <a href="/archives">All posts</a> (including the ones in Portuguese)
+        </p>
+      </article>
+    </main>
+    {{- partial "footer.html" . -}}
+  </body>
+</html>

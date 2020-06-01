@@ -1,0 +1,49 @@
+baseURL = "https://leonardofaria.net/"
+languageCode = "en-us"
+title = "Leonardo Faria"
+theme = "bento"
+
+googleAnalytics = "UA-157386-6"
+disqusShortname = "leonardofaria"
+
+[markup.highlight]
+  style = "github"
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  intro = true
+  headline = "Hi, I'm Leo 👋"
+  description = "I am Leonardo Faria, a Brazillian developer living in Vancouver. This is my blog about software development and more since 2005."
+
+  # favicon = "favicon.ico" # TODO: add support
+  cover = "images/vancouver.jpg"
+  ogImage = "images/og_image.jpg"
+
+  github = "leonardofaria"
+  twitter = "leozera"
+  linkedin = "https://linkedin.com/in/leonardofariacoelho"
+  email = "leonardofaria@gmail.com"
+
+  avatar = "images/avatar.jpg"
+
+  showAuthorBio = true
+  authorBio = "If you like my content, follow me on <a class='transition duration-300 ease-in-out hover:text-blue-600' href='https://twitter.com/leozera'>Twitter</a> and <a class='transition duration-300 ease-in-out hover:text-blue-600' href='https://github.com/leonardofaria'>GitHub</a>"
+
+  [[menu.main]]
+    name = "Archives"
+    url = "/archives"
+    weight = 1
+
+  [[menu.main]]
+    name = "Portfolio"
+    url = "/portfolio"
+    weight = 1
+
+  [[menu.main]]
+    name = "Talks"
+    url = "/talks"
+    weight = 1
+
+[permalinks]
+  posts = "/:year/:month/:day/:title/"
