@@ -1,3 +1,3 @@
 [submodule "themes/bento"]
 	path = themes/bento
-	url = git@github.com:leonardofaria/bento.git
+	url = https://github.com/leonardofaria/bento.git
