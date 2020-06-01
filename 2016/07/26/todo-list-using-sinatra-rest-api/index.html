@@ -1,0 +1,262 @@
+<!doctype html><html prefix="og: http://ogp.me/ns#" lang=en-us><head itemscope itemtype=https://leonardofaria.net/><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta property="og:locale" content="en"><meta name=language content="en"><title itemprop=name>Todo list using a Sinatra REST API &#183; Leonardo Faria</title><meta property="og:title" content="Todo list using a Sinatra REST API &#183; Leonardo Faria"><meta name=twitter:title content="Todo list using a Sinatra REST API &#183; Leonardo Faria"><meta itemprop=name content="Todo list using a Sinatra REST API &#183; Leonardo Faria"><meta name=application-name content="Leonardo Faria"><meta property="og:site_name" content="Leonardo Faria"><base href=https://leonardofaria.net/2016/07/26/todo-list-using-sinatra-rest-api/><link rel=canonical href=https://leonardofaria.net/2016/07/26/todo-list-using-sinatra-rest-api/ itemprop=url><meta name=url content="https://leonardofaria.net/2016/07/26/todo-list-using-sinatra-rest-api/"><meta name=twitter:url content="https://leonardofaria.net/2016/07/26/todo-list-using-sinatra-rest-api/"><meta property="og:url" content="https://leonardofaria.net/2016/07/26/todo-list-using-sinatra-rest-api/"><meta itemprop=image content="https://leonardofaria.net/images/og-images/1746.png"><meta property="og:image" content="https://leonardofaria.net/images/og-images/1746.png"><meta name=twitter:image content="https://leonardofaria.net/images/og-images/1746.png"><meta name=twitter:image:src content="https://leonardofaria.net/images/og-images/1746.png"><meta name=twitter:card content="summary_large_image"><meta property="og:type" content="article"><meta itemprop=description content="<p>I am attending to a <a href=&#34;http://langara.ca/programs-and-courses/programs/web-and-mobile-app/index.html&#34;>post-degree program</a> and one of its courses is"><meta property="og:description" content="<p>I am attending to a <a href=&#34;http://langara.ca/programs-and-courses/programs/web-and-mobile-app/index.html&#34;>post-degree program</a> and one of its courses is"><meta name=description content="<p>I am attending to a <a href=&#34;http://langara.ca/programs-and-courses/programs/web-and-mobile-app/index.html&#34;>post-degree program</a> and one of its courses is"><meta name=twitter:description content="<p>I am attending to a <a href=&#34;http://langara.ca/programs-and-courses/programs/web-and-mobile-app/index.html&#34;>post-degree program</a> and one of its courses is"><meta property="article:published_time" content="2016-07-26T19:01:16-03:00"><meta name=twitter:label1 value="Reading time"><meta name=twitter:data1 value="6 minutes"><meta property="og:updated_time" content="2016-07-26T19:01:16-0300"><meta property="og:article:author" content="Leonardo Faria"><meta property="article:author" content="Leonardo Faria"><meta name=author content="Leonardo Faria"><meta name=generator content="Hugo 0.68.3"><link rel=stylesheet href=https://leonardofaria.net/css/styles.min.40f381f3bef851f3167b2f40b59915fca5c10a5c569f67b5fe43c58c19effd0c.css integrity="sha256-QPOB8774UfMWey9AtZkV/KXBClxWn2e1/kPFjBnv/Qw="><link href=/index.xml rel=alternate type=application/rss+xml title="Leonardo Faria"></head><body class="bg-gradient flex flex-col min-h-screen"><header id=header class="w-full m-0 fixed z-10 transition-all duration-300 ease-in-out border-t-4 border-gray-300 py-4 backdrop-filter-blur"><div id=header-container class="max-w-7xl mx-auto p-6 flex items-center flex-wrap lg:flex-no-wrap relative justify-between"><a href=https://leonardofaria.net/ class="leading-10 text-3xl font-normal text-gray-600 flex flex-shrink-0">Leonardo Faria</a><div class="block lg:hidden mx-2"><button class="nav-button w-10 h-10 justify-center flex items-center opacity-75 hover:opacity-100 transition duration-300 ease-in-out"><svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg></button>
+<button class="hidden nav-button w-10 h-10 justify-center flex items-center opacity-75 hover:opacity-100 transition duration-300 ease-in-out"><svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Close menu</title><polygon points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2" transform="rotate(45 10 10)" /></svg></button></div><div class="absolute right-8 top-16 lg:relative lg:right-0 lg:top-0 flex flex-col lg:flex-row items-center rounded-md bg-white shadow lg:bg-transparent lg:shadow-none"><nav id=nav-social-links class="p-4 lg:p-0 text-gray-600 hidden lg:block lg:order-last w-full lg:w-auto lg:ml-3"><ul class="flex justify-end"><li><a class="block p-2 opacity-75 hover:opacity-100 transition duration-300 ease-in-out" title=Twitter href=https://www.twitter.com/leozera rel=me><svg class="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Twitter</title><path d="M6.29 18.25c7.55.0 11.67-6.25 11.67-11.67v-.53c.8-.59 1.49-1.3 2.04-2.13-.75.33-1.54.55-2.36.65a4.12 4.12.0 001.8-2.27c-.8.48-1.68.81-2.6 1a4.1 4.1.0 00-7 3.74 11.65 11.65.0 01-8.45-4.3 4.1 4.1.0 001.27 5.49C2.01 8.2 1.37 8.03.8 7.7v.05a4.1 4.1.0 003.3 4.03 4.1 4.1.0 01-1.86.07 4.1 4.1.0 003.83 2.85A8.23 8.23.0 010 16.4a11.62 11.62.0 006.29 1.84"/></svg></a></li><li><a class="block p-2 opacity-75 hover:opacity-100 transition duration-300 ease-in-out" title=Github href=https://www.github.com/leonardofaria rel=me><svg class="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>GitHub</title><path d="M10 0A10 10 0 006.84 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94.0-1.1.39-1.99 1.03-2.69a3.6 3.6.0 01.1-2.64s.84-.27 2.75 1.02a9.58 9.58.0 015 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69.0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0010 0"/></svg></a></li><li><a class="block p-2 opacity-75 hover:opacity-100 transition duration-300 ease-in-out" title=Linkedin href=https://linkedin.com/in/leonardofariacoelho rel=me><svg class="fill-current w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853.0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601.0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144.0-2.063-.926-2.063-2.065.0-1.138.92-2.063 2.063-2.063 1.14.0 2.064.925 2.064 2.063.0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225.0H1.771C.792.0.0.774.0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2.0 22.222.0h.003z"/></svg></a></li><li><a class="block p-2 opacity-75 hover:opacity-100 transition duration-300 ease-in-out" title=Email href=mailto:leonardofaria@gmail.com><svg class="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V4e2c0 26.5-21.5 48-48 48H48c-26.5.0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5.0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg></a></li><li><a class="block p-2 opacity-75 hover:opacity-100 transition duration-300 ease-in-out" title=Feed href><svg class="fill-current w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>RSS</title><path d="M19.199 24C19.199 13.467 10.533 4.8.0 4.8V0c13.165.0 24 10.835 24 24h-4.801zM3.291 17.415c1.814.0 3.293 1.479 3.293 3.295.0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526.0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727.0 15.909 7.184 15.909 15.91z"/></svg></a></li></ul></nav><nav id=nav-menu class="p-4 lg:p-0 hidden lg:block w-full lg:w-auto text-gray-600"><ul class="w-full flex flex-col lg:flex-row justify-end items-end lg:items-center"><li class="flex my-2 lg:my-2 mx-1 lg:mx-2"><a title=Archives class="uppercase font-bold lg:py-2 lg:px-3 rounded text-sm opacity-75 hover:opacity-100 transition duration-300 ease-in-out" href=/archives>Archives</a></li><li class="flex my-2 lg:my-2 mx-1 lg:mx-2"><a title=Portfolio class="uppercase font-bold lg:py-2 lg:px-3 rounded text-sm opacity-75 hover:opacity-100 transition duration-300 ease-in-out" href=/portfolio>Portfolio</a></li><li class="flex my-2 lg:my-2 mx-1 lg:mx-2"><a title=Talks class="uppercase font-bold lg:py-2 lg:px-3 rounded text-sm opacity-75 hover:opacity-100 transition duration-300 ease-in-out" href=/talks>Talks</a></li></ul></nav></div></div></header><main class="flex-1 mt-12 max-w-3xl mt-32 mx-auto text-gray-700 w-full"><div id=reading-progress-bar role=presentation class="fixed z-10 top-0 left-0 h-1 bg-gray-700"></div><article class=article><h1 class=artitle__title><a href=https://leonardofaria.net/2016/07/26/todo-list-using-sinatra-rest-api/>Todo list using a Sinatra REST API</a></h1><header class=article__header><span>Read in 6 minutes &#183;
+<time datetime=2016-07-26T19:01:16-03:00>26 Jul, 2016</time></span></header><div class=py-5><p>I am attending to a <a href=http://langara.ca/programs-and-courses/programs/web-and-mobile-app/index.html>post-degree program</a> and one of its courses is Server-Side Scripting. The professor gave us a project which students should create a project and my colleague and I created a <a href=http://sinatra-todo-api.herokuapp.com>Sinatra REST API</a> for a <a href=http://leonardofaria.github.io/todo>todo list application</a>.</p><p><img src=/wp-content/uploads/2016/07/todo.gif alt></p><p>The back end is a decent example of how to use Sinatra and Active Record to create simple APIs. In the <a href=https://github.com/leonardofaria/todo-api#todo-api>repository&rsquo;s readme</a>, I show how to install it and use it. In this post, I detail what I coded:</p><h2 id=managing-dependencies-and-configuring-the-database>Managing dependencies and configuring the database</h2><p>First, I need to specify the dependencies for this project. Here are the gems:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>ruby <span style=color:#d14>&#39;2.2.2&#39;</span>
+
+source <span style=color:#d14>&#39;https://rubygems.org&#39;</span>
+
+gem <span style=color:#d14>&#39;sinatra&#39;</span>
+gem <span style=color:#d14>&#39;sinatra-cross_origin&#39;</span>
+gem <span style=color:#d14>&#39;json&#39;</span>
+gem <span style=color:#d14>&#39;activerecord&#39;</span>
+gem <span style=color:#d14>&#39;pg&#39;</span>
+gem <span style=color:#d14>&#39;sinatra-activerecord&#39;</span>
+gem <span style=color:#d14>&#39;rake&#39;</span>
+
+group <span style=color:#990073>:development</span> <span style=color:#000;font-weight:700>do</span>
+  gem <span style=color:#d14>&#39;shotgun&#39;</span>
+<span style=color:#000;font-weight:700>end</span>
+</code></pre></div><p>In this project, I use <a href=https://github.com/rtomayko/shotgun>shotgun</a> to update my Sinatra app without restarting the server every time that I change my <code>app.rb</code>. The gem <a href=https://github.com/britg/sinatra-cross_origin>sinatra-cross_origin</a> is needed to allow me perform requests externally. In addition, I use activerecord as ORM and <a href=https://github.com/janko-m/sinatra-activerecord>sinatra-activerecord</a> to extends Sinatra with extension methods and Rake tasks.</p><p>The file <code>environment.rb</code> specifies the database credentials:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>configure <span style=color:#990073>:production</span>, <span style=color:#990073>:development</span> <span style=color:#000;font-weight:700>do</span>
+  set <span style=color:#990073>:show_exceptions</span>, <span style=color:#000;font-weight:700>true</span>
+
+  db <span style=color:#000;font-weight:700>=</span> <span style=color:teal>URI</span><span style=color:#000;font-weight:700>.</span>parse(<span style=color:teal>ENV</span><span style=color:#000;font-weight:700>[</span><span style=color:#d14>&#39;DATABASE_URL&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#000;font-weight:700>||</span> <span style=color:#d14>&#39;postgres://127.0.0.1/todo&#39;</span>)
+
+  <span style=color:teal>ActiveRecord</span><span style=color:#000;font-weight:700>::</span><span style=color:teal>Base</span><span style=color:#000;font-weight:700>.</span>establish_connection(
+    <span style=color:#990073>adapter</span>:  db<span style=color:#000;font-weight:700>.</span>scheme <span style=color:#000;font-weight:700>==</span> <span style=color:#d14>&#39;postgres&#39;</span> ? <span style=color:#d14>&#39;postgresql&#39;</span> : db<span style=color:#000;font-weight:700>.</span>scheme,
+    <span style=color:#990073>host</span>:     db<span style=color:#000;font-weight:700>.</span>host,
+    <span style=color:#990073>username</span>: db<span style=color:#000;font-weight:700>.</span>user,
+    <span style=color:#990073>password</span>: db<span style=color:#000;font-weight:700>.</span>password,
+    <span style=color:#990073>database</span>: db<span style=color:#000;font-weight:700>.</span>path<span style=color:#000;font-weight:700>[</span><span style=color:#099>1</span><span style=color:#000;font-weight:700>..-</span><span style=color:#099>1</span><span style=color:#000;font-weight:700>]</span>,
+    <span style=color:#990073>encoding</span>: <span style=color:#d14>&#39;utf8&#39;</span>
+  )
+
+  <span style=color:teal>ActiveRecord</span><span style=color:#000;font-weight:700>::</span><span style=color:teal>Base</span><span style=color:#000;font-weight:700>.</span>class_eval <span style=color:#000;font-weight:700>do</span>
+    <span style=color:#000;font-weight:700>def</span> <span style=color:#458;font-weight:700>self</span><span style=color:#000;font-weight:700>.</span><span style=color:#900;font-weight:700>reset_autoincrement</span>(options<span style=color:#000;font-weight:700>=</span>{})
+      options<span style=color:#000;font-weight:700>[</span><span style=color:#990073>:to</span><span style=color:#000;font-weight:700>]</span> <span style=color:#000;font-weight:700>||=</span> <span style=color:#099>1</span>
+      <span style=color:#000;font-weight:700>case</span> <span style=color:#0086b3>self</span><span style=color:#000;font-weight:700>.</span>connection<span style=color:#000;font-weight:700>.</span>adapter_name
+        <span style=color:#000;font-weight:700>when</span> <span style=color:#d14>&#39;MySQL&#39;</span>
+          <span style=color:#0086b3>self</span><span style=color:#000;font-weight:700>.</span>connection<span style=color:#000;font-weight:700>.</span>execute <span style=color:#d14>&#34;ALTER TABLE </span><span style=color:#d14>#{</span><span style=color:#0086b3>self</span><span style=color:#000;font-weight:700>.</span>table_name<span style=color:#d14>}</span><span style=color:#d14> AUTO_INCREMENT=</span><span style=color:#d14>#{</span>options<span style=color:#000;font-weight:700>[</span><span style=color:#990073>:to</span><span style=color:#000;font-weight:700>]</span><span style=color:#d14>}</span><span style=color:#d14>&#34;</span>
+        <span style=color:#000;font-weight:700>when</span> <span style=color:#d14>&#39;PostgreSQL&#39;</span>
+          <span style=color:#0086b3>self</span><span style=color:#000;font-weight:700>.</span>connection<span style=color:#000;font-weight:700>.</span>execute <span style=color:#d14>&#34;ALTER SEQUENCE </span><span style=color:#d14>#{</span><span style=color:#0086b3>self</span><span style=color:#000;font-weight:700>.</span>table_name<span style=color:#d14>}</span><span style=color:#d14>_id_seq RESTART WITH </span><span style=color:#d14>#{</span>options<span style=color:#000;font-weight:700>[</span><span style=color:#990073>:to</span><span style=color:#000;font-weight:700>]</span><span style=color:#d14>}</span><span style=color:#d14>;&#34;</span>
+        <span style=color:#000;font-weight:700>when</span> <span style=color:#d14>&#39;SQLite&#39;</span>
+          <span style=color:#0086b3>self</span><span style=color:#000;font-weight:700>.</span>connection<span style=color:#000;font-weight:700>.</span>execute <span style=color:#d14>&#34;UPDATE sqlite_sequence SET seq=</span><span style=color:#d14>#{</span>options<span style=color:#000;font-weight:700>[</span><span style=color:#990073>:to</span><span style=color:#000;font-weight:700>]</span><span style=color:#d14>}</span><span style=color:#d14> WHERE name=&#39;</span><span style=color:#d14>#{</span><span style=color:#0086b3>self</span><span style=color:#000;font-weight:700>.</span>table_name<span style=color:#d14>}</span><span style=color:#d14>&#39;;&#34;</span>
+        <span style=color:#000;font-weight:700>else</span>
+      <span style=color:#000;font-weight:700>end</span>
+    <span style=color:#000;font-weight:700>end</span>
+  <span style=color:#000;font-weight:700>end</span>
+<span style=color:#000;font-weight:700>end</span>
+</code></pre></div><p>I created a <code>reset_autoincrement</code> method that will be used in my seeds file. I will talk about it soon. I also created a cors.rb file that enables Cross Domain Resource Sharing (CORS).</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>configure <span style=color:#000;font-weight:700>do</span>
+  set <span style=color:#990073>:allow_origin</span>, <span style=color:#990073>:any</span>
+  set <span style=color:#990073>:allow_methods</span>, <span style=color:#000;font-weight:700>[</span><span style=color:#990073>:get</span>, <span style=color:#990073>:post</span>, <span style=color:#990073>:options</span>, <span style=color:#990073>:delete</span>, <span style=color:#990073>:put</span><span style=color:#000;font-weight:700>]</span>
+
+  enable <span style=color:#990073>:cross_origin</span>
+<span style=color:#000;font-weight:700>end</span>
+
+options <span style=color:#d14>&#34;*&#34;</span> <span style=color:#000;font-weight:700>do</span>
+  response<span style=color:#000;font-weight:700>.</span>headers<span style=color:#000;font-weight:700>[</span><span style=color:#d14>&#34;Allow&#34;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#d14>&#34;HEAD,GET,PUT,POST,OPTIONS,DELETE&#34;</span>
+  response<span style=color:#000;font-weight:700>.</span>headers<span style=color:#000;font-weight:700>[</span><span style=color:#d14>&#34;Access-Control-Allow-Headers&#34;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#000;font-weight:700>=</span> <span style=color:#d14>&#34;X-Requested-With, X-HTTP-Method-Override, Content-Type, Cache-Control, Accept&#34;</span>
+<span style=color:#000;font-weight:700>end</span>
+</code></pre></div><p>Last not the least, I need to create a <code>Rakefile</code> that will be used on my rake tasks:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#0086b3>require</span> <span style=color:#d14>&#39;sinatra/activerecord/rake&#39;</span>
+
+namespace <span style=color:#990073>:db</span> <span style=color:#000;font-weight:700>do</span>
+  task <span style=color:#990073>:load_config</span> <span style=color:#000;font-weight:700>do</span>
+    <span style=color:#0086b3>require</span> <span style=color:#d14>&#34;./app&#34;</span>
+  <span style=color:#000;font-weight:700>end</span>
+<span style=color:#000;font-weight:700>end</span>
+</code></pre></div><h2 id=defining-models>Defining models</h2><center><img src=/wp-content/uploads/2016/07/diagram.png alt=Diagram width=250 height=149 class="aligncenter size-full wp-image-1770"></center><p>As you can see in ERD above, my todo list has two entities: <code>List</code> and <code>Task</code>.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#000;font-weight:700>class</span> <span style=color:#458;font-weight:700>Task</span> <span style=color:#000;font-weight:700>&lt;</span> <span style=color:teal>ActiveRecord</span><span style=color:#000;font-weight:700>::</span><span style=color:teal>Base</span>
+  belongs_to <span style=color:#990073>:list</span>
+
+  validates <span style=color:#990073>:name</span>, <span style=color:#990073>presence</span>: <span style=color:#000;font-weight:700>true</span>
+  validates <span style=color:#990073>:list_id</span>, <span style=color:#990073>presence</span>: <span style=color:#000;font-weight:700>true</span>
+<span style=color:#000;font-weight:700>end</span>
+
+<span style=color:#000;font-weight:700>class</span> <span style=color:#458;font-weight:700>List</span> <span style=color:#000;font-weight:700>&lt;</span> <span style=color:teal>ActiveRecord</span><span style=color:#000;font-weight:700>::</span><span style=color:teal>Base</span>
+  has_many <span style=color:#990073>:tasks</span>, <span style=color:#990073>dependent</span>: <span style=color:#990073>:destroy</span>
+
+  validates <span style=color:#990073>:name</span>, <span style=color:#990073>presence</span>: <span style=color:#000;font-weight:700>true</span>
+  validates <span style=color:#990073>:color</span>, <span style=color:#990073>presence</span>: <span style=color:#000;font-weight:700>true</span>, <span style=color:#0086b3>format</span>: <span style=color:#009926>/\A#?(?:[A-F0-9]{3}){1,2}\z/i</span>
+<span style=color:#000;font-weight:700>end</span>
+</code></pre></div><p>I used the <a href=http://guides.rubyonrails.org/active_record_validations.html><code>validates</code></a> method to ensure some valid data. The attribute color, for example, must be a hexadecimal color. The next step is creating the migrations:</p><pre><code>$ rake db:create_migration NAME=lists
+</code></pre><p>This command creates a file inside <code>db/migrate</code>. This is my migration file:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#000;font-weight:700>class</span> <span style=color:#458;font-weight:700>Lists</span> <span style=color:#000;font-weight:700>&lt;</span> <span style=color:teal>ActiveRecord</span><span style=color:#000;font-weight:700>::</span><span style=color:teal>Migration</span>
+  <span style=color:#000;font-weight:700>def</span> <span style=color:#900;font-weight:700>up</span>
+    create_table <span style=color:#990073>:lists</span> <span style=color:#000;font-weight:700>do</span> <span style=color:#000;font-weight:700>|</span>t<span style=color:#000;font-weight:700>|</span>
+      t<span style=color:#000;font-weight:700>.</span>string <span style=color:#990073>:name</span>
+      t<span style=color:#000;font-weight:700>.</span>string <span style=color:#990073>:color</span>
+    <span style=color:#000;font-weight:700>end</span>
+  <span style=color:#000;font-weight:700>end</span>
+
+  <span style=color:#000;font-weight:700>def</span> <span style=color:#900;font-weight:700>down</span>
+    drop_table <span style=color:#990073>:lists</span>
+  <span style=color:#000;font-weight:700>end</span>
+<span style=color:#000;font-weight:700>end</span>
+</code></pre></div><p>The same applies to Task:</p><p><code>$ rake db:create_migration NAME=tasks</code></p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#000;font-weight:700>class</span> <span style=color:#458;font-weight:700>Tasks</span> <span style=color:#000;font-weight:700>&lt;</span> <span style=color:teal>ActiveRecord</span><span style=color:#000;font-weight:700>::</span><span style=color:teal>Migration</span>
+  <span style=color:#000;font-weight:700>def</span> <span style=color:#900;font-weight:700>up</span>
+    create_table <span style=color:#990073>:tasks</span> <span style=color:#000;font-weight:700>do</span> <span style=color:#000;font-weight:700>|</span>t<span style=color:#000;font-weight:700>|</span>
+      t<span style=color:#000;font-weight:700>.</span>string <span style=color:#990073>:name</span>
+      t<span style=color:#000;font-weight:700>.</span>references <span style=color:#990073>:list</span>, <span style=color:#990073>foreign_key</span>: <span style=color:#000;font-weight:700>true</span>
+    <span style=color:#000;font-weight:700>end</span>
+  <span style=color:#000;font-weight:700>end</span>
+
+  <span style=color:#000;font-weight:700>def</span> <span style=color:#900;font-weight:700>down</span>
+    drop_table <span style=color:#990073>:tasks</span>
+  <span style=color:#000;font-weight:700>end</span>
+<span style=color:#000;font-weight:700>end</span>
+</code></pre></div><p>After defining the table schema, it&rsquo;s time to create the tables on the database:</p><p><code>$ rake db:migrate</code></p><h2 id=creating-the-api-routes>Creating the API routes</h2><p>Here is the initial version of my <code>app.rb</code>:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#0086b3>require</span> <span style=color:#d14>&#39;sinatra&#39;</span>
+<span style=color:#0086b3>require</span> <span style=color:#d14>&#39;sinatra/cross_origin&#39;</span>
+<span style=color:#0086b3>require</span> <span style=color:#d14>&#39;sinatra/activerecord&#39;</span>
+<span style=color:#0086b3>require</span> <span style=color:#d14>&#39;./config/environments&#39;</span>
+<span style=color:#0086b3>require</span> <span style=color:#d14>&#39;./config/cors&#39;</span>
+<span style=color:#0086b3>require</span> <span style=color:#d14>&#39;./models/list&#39;</span>
+<span style=color:#0086b3>require</span> <span style=color:#d14>&#39;./models/task&#39;</span>
+<span style=color:#0086b3>require</span> <span style=color:#d14>&#39;json&#39;</span>
+
+before <span style=color:#000;font-weight:700>do</span>
+  content_type <span style=color:#990073>:json</span>
+<span style=color:#000;font-weight:700>end</span>
+
+get <span style=color:#d14>&#39;/lists&#39;</span> <span style=color:#000;font-weight:700>do</span>
+  <span style=color:teal>List</span><span style=color:#000;font-weight:700>.</span>all<span style=color:#000;font-weight:700>.</span>to_json(<span style=color:#000;font-weight:700>include</span>: <span style=color:#990073>:tasks</span>)
+<span style=color:#000;font-weight:700>end</span>
+
+get <span style=color:#d14>&#39;/lists/:id&#39;</span> <span style=color:#000;font-weight:700>do</span>
+  <span style=color:teal>List</span><span style=color:#000;font-weight:700>.</span>where(<span style=color:#0086b3>id</span>: params<span style=color:#000;font-weight:700>[</span><span style=color:#d14>&#39;id&#39;</span><span style=color:#000;font-weight:700>]</span>)<span style=color:#000;font-weight:700>.</span>first<span style=color:#000;font-weight:700>.</span>to_json(<span style=color:#000;font-weight:700>include</span>: <span style=color:#990073>:tasks</span>)
+<span style=color:#000;font-weight:700>end</span>
+
+post <span style=color:#d14>&#39;/lists&#39;</span> <span style=color:#000;font-weight:700>do</span>
+  list <span style=color:#000;font-weight:700>=</span> <span style=color:teal>List</span><span style=color:#000;font-weight:700>.</span>new(params)
+
+  <span style=color:#000;font-weight:700>if</span> list<span style=color:#000;font-weight:700>.</span>save
+    list<span style=color:#000;font-weight:700>.</span>to_json(<span style=color:#000;font-weight:700>include</span>: <span style=color:#990073>:tasks</span>)
+  <span style=color:#000;font-weight:700>else</span>
+    halt <span style=color:#099>422</span>, list<span style=color:#000;font-weight:700>.</span>errors<span style=color:#000;font-weight:700>.</span>full_messages<span style=color:#000;font-weight:700>.</span>to_json
+  <span style=color:#000;font-weight:700>end</span>
+<span style=color:#000;font-weight:700>end</span>
+
+put <span style=color:#d14>&#39;/lists/:id&#39;</span> <span style=color:#000;font-weight:700>do</span>
+  list <span style=color:#000;font-weight:700>=</span> <span style=color:teal>List</span><span style=color:#000;font-weight:700>.</span>where(<span style=color:#0086b3>id</span>: params<span style=color:#000;font-weight:700>[</span><span style=color:#d14>&#39;id&#39;</span><span style=color:#000;font-weight:700>]</span>)<span style=color:#000;font-weight:700>.</span>first
+
+  <span style=color:#000;font-weight:700>if</span> list
+    list<span style=color:#000;font-weight:700>.</span>name <span style=color:#000;font-weight:700>=</span> params<span style=color:#000;font-weight:700>[</span><span style=color:#d14>&#39;name&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#000;font-weight:700>if</span> params<span style=color:#000;font-weight:700>.</span>has_key?(<span style=color:#d14>&#39;name&#39;</span>)
+    list<span style=color:#000;font-weight:700>.</span>color <span style=color:#000;font-weight:700>=</span> params<span style=color:#000;font-weight:700>[</span><span style=color:#d14>&#39;color&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#000;font-weight:700>if</span> params<span style=color:#000;font-weight:700>.</span>has_key?(<span style=color:#d14>&#39;color&#39;</span>)
+
+    <span style=color:#000;font-weight:700>if</span> list<span style=color:#000;font-weight:700>.</span>save
+      list<span style=color:#000;font-weight:700>.</span>to_json
+    <span style=color:#000;font-weight:700>else</span>
+      halt <span style=color:#099>422</span>, list<span style=color:#000;font-weight:700>.</span>errors<span style=color:#000;font-weight:700>.</span>full_messages<span style=color:#000;font-weight:700>.</span>to_json
+    <span style=color:#000;font-weight:700>end</span>
+  <span style=color:#000;font-weight:700>end</span>
+<span style=color:#000;font-weight:700>end</span>
+
+delete <span style=color:#d14>&#39;/lists/:id&#39;</span> <span style=color:#000;font-weight:700>do</span>
+  list <span style=color:#000;font-weight:700>=</span> <span style=color:teal>List</span><span style=color:#000;font-weight:700>.</span>where(<span style=color:#0086b3>id</span>: params<span style=color:#000;font-weight:700>[</span><span style=color:#d14>&#39;id&#39;</span><span style=color:#000;font-weight:700>]</span>)
+
+  <span style=color:#000;font-weight:700>if</span> list<span style=color:#000;font-weight:700>.</span>destroy_all
+    {<span style=color:#990073>success</span>: <span style=color:#d14>&#34;ok&#34;</span>}<span style=color:#000;font-weight:700>.</span>to_json
+  <span style=color:#000;font-weight:700>else</span>
+    halt <span style=color:#099>500</span>
+  <span style=color:#000;font-weight:700>end</span>
+<span style=color:#000;font-weight:700>end</span>
+</code></pre></div><p>The routes for Task entity are very similar:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>get <span style=color:#d14>&#39;/tasks&#39;</span> <span style=color:#000;font-weight:700>do</span>
+  <span style=color:teal>Task</span><span style=color:#000;font-weight:700>.</span>all<span style=color:#000;font-weight:700>.</span>to_json
+<span style=color:#000;font-weight:700>end</span>
+
+get <span style=color:#d14>&#39;/tasks/:id&#39;</span> <span style=color:#000;font-weight:700>do</span>
+  <span style=color:teal>Task</span><span style=color:#000;font-weight:700>.</span>where(<span style=color:#0086b3>id</span>: params<span style=color:#000;font-weight:700>[</span><span style=color:#d14>&#39;id&#39;</span><span style=color:#000;font-weight:700>]</span>)<span style=color:#000;font-weight:700>.</span>first<span style=color:#000;font-weight:700>.</span>to_json
+<span style=color:#000;font-weight:700>end</span>
+
+post <span style=color:#d14>&#39;/tasks&#39;</span> <span style=color:#000;font-weight:700>do</span>
+  task <span style=color:#000;font-weight:700>=</span> <span style=color:teal>Task</span><span style=color:#000;font-weight:700>.</span>new(params)
+
+  <span style=color:#000;font-weight:700>if</span> task<span style=color:#000;font-weight:700>.</span>save
+    task<span style=color:#000;font-weight:700>.</span>to_json
+  <span style=color:#000;font-weight:700>else</span>
+    halt <span style=color:#099>422</span>, task<span style=color:#000;font-weight:700>.</span>errors<span style=color:#000;font-weight:700>.</span>full_messages<span style=color:#000;font-weight:700>.</span>to_json
+  <span style=color:#000;font-weight:700>end</span>
+<span style=color:#000;font-weight:700>end</span>
+
+put <span style=color:#d14>&#39;/tasks/:id&#39;</span> <span style=color:#000;font-weight:700>do</span>
+  task <span style=color:#000;font-weight:700>=</span> <span style=color:teal>Task</span><span style=color:#000;font-weight:700>.</span>where(<span style=color:#0086b3>id</span>: params<span style=color:#000;font-weight:700>[</span><span style=color:#d14>&#39;id&#39;</span><span style=color:#000;font-weight:700>]</span>)<span style=color:#000;font-weight:700>.</span>first
+
+  <span style=color:#000;font-weight:700>if</span> task
+    task<span style=color:#000;font-weight:700>.</span>name <span style=color:#000;font-weight:700>=</span> params<span style=color:#000;font-weight:700>[</span><span style=color:#d14>&#39;name&#39;</span><span style=color:#000;font-weight:700>]</span> <span style=color:#000;font-weight:700>if</span> params<span style=color:#000;font-weight:700>.</span>has_key?(<span style=color:#d14>&#39;name&#39;</span>)
+
+    <span style=color:#000;font-weight:700>if</span> task<span style=color:#000;font-weight:700>.</span>save
+      task<span style=color:#000;font-weight:700>.</span>to_json
+    <span style=color:#000;font-weight:700>else</span>
+      halt <span style=color:#099>422</span>, task<span style=color:#000;font-weight:700>.</span>errors<span style=color:#000;font-weight:700>.</span>full_messages<span style=color:#000;font-weight:700>.</span>to_json
+    <span style=color:#000;font-weight:700>end</span>
+  <span style=color:#000;font-weight:700>end</span>
+<span style=color:#000;font-weight:700>end</span>
+
+delete <span style=color:#d14>&#39;/tasks/:id&#39;</span> <span style=color:#000;font-weight:700>do</span>
+  task <span style=color:#000;font-weight:700>=</span> <span style=color:teal>Task</span><span style=color:#000;font-weight:700>.</span>where(<span style=color:#0086b3>id</span>: params<span style=color:#000;font-weight:700>[</span><span style=color:#d14>&#39;id&#39;</span><span style=color:#000;font-weight:700>]</span>)
+
+  <span style=color:#000;font-weight:700>if</span> task<span style=color:#000;font-weight:700>.</span>destroy_all
+    {<span style=color:#990073>success</span>: <span style=color:#d14>&#34;ok&#34;</span>}<span style=color:#000;font-weight:700>.</span>to_json
+  <span style=color:#000;font-weight:700>else</span>
+    halt <span style=color:#099>500</span>
+  <span style=color:#000;font-weight:700>end</span>
+<span style=color:#000;font-weight:700>end</span>
+</code></pre></div><p>I added two extra routes to this application. One will render a <code>index.html</code> file, which I describe the project. The another one will populate the database with my initial data:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>get <span style=color:#d14>&#39;/&#39;</span> <span style=color:#000;font-weight:700>do</span>
+  content_type <span style=color:#990073>:html</span>
+  send_file <span style=color:#d14>&#39;./public/index.html&#39;</span>
+<span style=color:#000;font-weight:700>end</span>
+
+get <span style=color:#d14>&#39;/refresh&#39;</span> <span style=color:#000;font-weight:700>do</span>
+  <span style=color:#998;font-style:italic># Clean the database and create the initial data</span>
+  <span style=color:#0086b3>load</span> <span style=color:#d14>&#39;./db/seeds.rb&#39;</span>
+<span style=color:#000;font-weight:700>end</span>
+</code></pre></div><p>Time to create the <code>config.ru</code> file, responsable for start the application:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:#0086b3>require</span> <span style=color:#d14>&#39;./app&#39;</span>
+run <span style=color:teal>Sinatra</span><span style=color:#000;font-weight:700>::</span><span style=color:teal>Application</span>
+</code></pre></div><p>Everything is done, let&rsquo;s go:</p><p><code>$ shotgun</code></p><p>Hopefully, shotgun should return something like:</p><pre><code>== Shotgun/WEBrick on http://127.0.0.1:9393/
+[2016-08-03 19:51:50] INFO  WEBrick 1.3.1
+[2016-08-03 19:51:50] INFO  ruby 2.2.2 (2015-04-13) [x86_64-darwin14]
+[2016-08-03 19:51:50] INFO  WEBrick::HTTPServer#start: pid=13348 port=9393
+</code></pre><p>After that, you will be able to do requests as I did:</p><p><img src=/wp-content/uploads/2016/07/httpie.png class=aligncenter></p><h2 id=seeding-initial-data>Seeding initial data</h2><p>The file <code>db/seeds.rb</code> populates the database with initial data:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby><span style=color:teal>Task</span><span style=color:#000;font-weight:700>.</span>delete_all
+<span style=color:teal>List</span><span style=color:#000;font-weight:700>.</span>delete_all
+<span style=color:teal>Task</span><span style=color:#000;font-weight:700>.</span>reset_autoincrement
+<span style=color:teal>List</span><span style=color:#000;font-weight:700>.</span>reset_autoincrement
+
+<span style=color:#0086b3>puts</span> <span style=color:#d14>&#39;Creating sample lists&#39;</span>
+colors <span style=color:#000;font-weight:700>=</span> <span style=color:#000;font-weight:700>[</span><span style=color:#d14>&#39;54b2a1&#39;</span>, <span style=color:#d14>&#39;95d5cf&#39;</span>, <span style=color:#d14>&#39;809bbe&#39;</span>, <span style=color:#d14>&#39;98d2f3&#39;</span>, <span style=color:#d14>&#39;80bf86&#39;</span>, <span style=color:#d14>&#39;a3d49f&#39;</span><span style=color:#000;font-weight:700>]</span>
+<span style=color:#000;font-weight:700>[</span><span style=color:#d14>&#39;Todo&#39;</span>, <span style=color:#d14>&#39;Movies&#39;</span>, <span style=color:#d14>&#39;Supermarket&#39;</span><span style=color:#000;font-weight:700>].</span>each_with_index <span style=color:#000;font-weight:700>do</span> <span style=color:#000;font-weight:700>|</span>list, index<span style=color:#000;font-weight:700>|</span>
+  <span style=color:teal>List</span><span style=color:#000;font-weight:700>.</span>find_or_create_by(<span style=color:#0086b3>name</span>: list, <span style=color:#990073>color</span>: colors<span style=color:#000;font-weight:700>[</span>index<span style=color:#000;font-weight:700>]</span>)
+<span style=color:#000;font-weight:700>end</span>
+
+<span style=color:#0086b3>puts</span> <span style=color:#d14>&#39;Creating sample tasks&#39;</span>
+<span style=color:#000;font-weight:700>[</span><span style=color:#d14>&#39;Nathan\&#39;s Assignment&#39;</span>, <span style=color:#d14>&#39;Go to Meetup&#39;</span><span style=color:#000;font-weight:700>].</span>each <span style=color:#000;font-weight:700>do</span> <span style=color:#000;font-weight:700>|</span>task<span style=color:#000;font-weight:700>|</span>
+  <span style=color:teal>Task</span><span style=color:#000;font-weight:700>.</span>find_or_create_by(<span style=color:#0086b3>name</span>: task, <span style=color:#990073>list</span>: <span style=color:teal>List</span><span style=color:#000;font-weight:700>.</span>where(<span style=color:#0086b3>name</span>: <span style=color:#d14>&#39;Todo&#39;</span>)<span style=color:#000;font-weight:700>.</span>first)
+<span style=color:#000;font-weight:700>end</span>
+
+<span style=color:#000;font-weight:700>[</span><span style=color:#d14>&#39;The Godfather&#39;</span>, <span style=color:#d14>&#39;Star Wars&#39;</span><span style=color:#000;font-weight:700>].</span>each <span style=color:#000;font-weight:700>do</span> <span style=color:#000;font-weight:700>|</span>task<span style=color:#000;font-weight:700>|</span>
+  <span style=color:teal>Task</span><span style=color:#000;font-weight:700>.</span>find_or_create_by(<span style=color:#0086b3>name</span>: task, <span style=color:#990073>list</span>: <span style=color:teal>List</span><span style=color:#000;font-weight:700>.</span>where(<span style=color:#0086b3>name</span>: <span style=color:#d14>&#39;Movies&#39;</span>)<span style=color:#000;font-weight:700>.</span>first)
+<span style=color:#000;font-weight:700>end</span>
+
+<span style=color:#000;font-weight:700>[</span><span style=color:#d14>&#39;Milk&#39;</span>, <span style=color:#d14>&#39;Bread&#39;</span>, <span style=color:#d14>&#39;Butter&#39;</span><span style=color:#000;font-weight:700>].</span>each <span style=color:#000;font-weight:700>do</span> <span style=color:#000;font-weight:700>|</span>task<span style=color:#000;font-weight:700>|</span>
+  <span style=color:teal>Task</span><span style=color:#000;font-weight:700>.</span>find_or_create_by(<span style=color:#0086b3>name</span>: task, <span style=color:#990073>list</span>: <span style=color:teal>List</span><span style=color:#000;font-weight:700>.</span>where(<span style=color:#0086b3>name</span>: <span style=color:#d14>&#39;Supermarket&#39;</span>)<span style=color:#000;font-weight:700>.</span>first)
+<span style=color:#000;font-weight:700>end</span>
+</code></pre></div><h2 id=deployment--heroku>Deployment – Heroku</h2><p>In order to deploy the app on Heroku, create a <code>Procfile</code>:</p><p><code>web: bundle exec ruby app.rb -p $PORT</code></p><p>Another option is clicking on the “Deploy to Heroku” button on the repository page. Heroku will look for the <code>app.json</code> file and setup all that you need. If you area curious about this file:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>{
+  <span style=color:#d14>&#34;name&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#d14>&#34;todo-api&#34;</span>,
+  <span style=color:#d14>&#34;description&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#d14>&#34;A simple Sinatra REST API&#34;</span>,
+  <span style=color:#d14>&#34;keywords&#34;</span><span style=color:#000;font-weight:700>:</span> [<span style=color:#d14>&#34;sinatra&#34;</span>, <span style=color:#d14>&#34;api&#34;</span>, <span style=color:#d14>&#34;activerecord&#34;</span>, <span style=color:#d14>&#34;reminders&#34;</span>],
+  <span style=color:#d14>&#34;repository&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#d14>&#34;https://github.com/leonardofaria/todo-api&#34;</span>,
+  <span style=color:#d14>&#34;addons&#34;</span><span style=color:#000;font-weight:700>:</span> [
+    <span style=color:#d14>&#34;heroku-postgresql:hobby-dev&#34;</span>
+  ],
+  <span style=color:#d14>&#34;env&#34;</span><span style=color:#000;font-weight:700>:</span> {
+    <span style=color:#d14>&#34;RACK_ENV&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#d14>&#34;production&#34;</span>
+  },
+  <span style=color:#d14>&#34;scripts&#34;</span><span style=color:#000;font-weight:700>:</span> {
+    <span style=color:#d14>&#34;postdeploy&#34;</span><span style=color:#000;font-weight:700>:</span> <span style=color:#d14>&#34;bundle exec rake db:migrate &amp;&amp; bundle exec rake db:seed&#34;</span>
+  }
+}
+</code></pre></div><p>This is not the focus of this post, then read the Heroku documentation [<a href=https://devcenter.heroku.com/articles/heroku-button>1</a>, <a href=https://devcenter.heroku.com/articles/app-json-schema>2</a>] if you are interested on this. Pretty interesting.</p><h2 id=final-thoughts>Final thoughts</h2><p>I am not sure if I described everything but I hope that you got the main idea. You can take a look in the <a href=https://github.com/leonardofaria/todo-api>source code</a> on Github, fork it or star it.</p><p>A <a href=http://leonardofaria.github.io/todo>web app</a> (gif above) was also created to show how to use the API. The web app is also <a href=http://github.com/leonardofaria/todo>available in Github</a>.</p><h2 id=other-references>Other references</h2><p>Part of my work was inspired in the following articles:</p><ul><li><a href=https://www.xplatform.rocks/2014/04/28/create-a-lightweight-rest-service-using-sinatra/>Create a lightweight REST service using Sinatra</a></li><li><a href=http://blog.cloud66.com/deploying-rest-apis-to-docker-using-ruby-and-sinatra/>Deploying REST APIs to Docker Using Ruby and Sinatra</a></li><li><a href=https://www.sitepoint.com/uno-use-sinatra-implement-rest-api/>Uno! Use Sinatra to Implement a REST API</a></li><li><a href=https://github.com/hatboysam/sinatra-activerecord-heroku>sinatra-activerecord-heroku</a></ul></li></ul></div><section class=author><img alt="Avatar photo" class=author__avatar src=/images/avatar.jpg>
+<span class=author__bio>If you like my content, follow me on <a class="transition duration-300 ease-in-out hover:text-blue-600" href=https://twitter.com/leozera>Twitter</a> and <a class="transition duration-300 ease-in-out hover:text-blue-600" href=https://github.com/leonardofaria>GitHub</a></span>
+<a href="http://twitter.com/share?url=https%3a%2f%2fleonardofaria.net%2f2016%2f07%2f26%2ftodo-list-using-sinatra-rest-api%2f&text=Todo%20list%20using%20a%20Sinatra%20REST%20API&via=leozera" class="author__share bg-twitter hover:color-white hover:opacity-75"><svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Twitter</title><path d="M6.29 18.25c7.55.0 11.67-6.25 11.67-11.67v-.53c.8-.59 1.49-1.3 2.04-2.13-.75.33-1.54.55-2.36.65a4.12 4.12.0 001.8-2.27c-.8.48-1.68.81-2.6 1a4.1 4.1.0 00-7 3.74 11.65 11.65.0 01-8.45-4.3 4.1 4.1.0 001.27 5.49C2.01 8.2 1.37 8.03.8 7.7v.05a4.1 4.1.0 003.3 4.03 4.1 4.1.0 01-1.86.07 4.1 4.1.0 003.83 2.85A8.23 8.23.0 010 16.4a11.62 11.62.0 006.29 1.84"/></svg>Tweet</a></section><section class=comments><h2>Comments</h2><div id=disqus_thread></div><script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return;}
+var d=document,s=d.createElement('script');s.async=true;s.src='//'+"leonardofaria"+'.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></section></article><aside class=flex><a class="w-full md:w-1/2 flex flex-col items-center py-7 px-3 no-underline rounded-md hover:bg-white transition duration-300 ease-in-out" href=/2016/08/06/serving-raw-files-directly-from-github/><span class="border border-gray-6 text-xs rounded-md mb-2 uppercase font-bold py-2 px-3">Read this next</span>
+<span class=text-center>Serving raw files directly from Github</span></a>
+<a class="w-full md:w-1/2 flex flex-col items-center py-7 px-3 no-underline rounded-md hover:bg-white transition duration-300 ease-in-out" href=/2016/06/24/my-first-meetup-presentation/><span class="border border-gray-6 text-xs rounded-md mb-2 uppercase font-bold py-2 px-3">You might enjoy</span>
+<span class=text-center>My first Meetup presentation</span></a></aside></main><footer class="w-full max-w-7xl mx-auto text-center border-t border-gray-200 py-9 px-3 mt-9 pin-b text-sm text-gray-500">Made with <a href=https://gohugo.io class="underline transition duration-300 ease-in-out hover:text-blue-600">Hugo</a> and <a href=https://github.com/leonardofaria/bento class="underline transition duration-300 ease-in-out hover:text-blue-600">Bento theme</a></footer><script>const navButtons=document.querySelectorAll('.nav-button');const navMenu=document.querySelector('#nav-menu');const navSocialLinks=document.querySelector('#nav-social-links');for(const button of navButtons){button.addEventListener('click',()=>{navMenu.classList.toggle("hidden");if(navSocialLinks){navSocialLinks.classList.toggle("hidden");}
+for(const navButton of navButtons){navButton.classList.toggle("hidden");};});}</script><script>let scrollPos=window.scrollY;const header=document.querySelector('#header');const headerContainer=document.querySelector("#header-container");const readingProgressBar=document.querySelector("#reading-progress-bar");let scrollTop=0;let scrollBottom=0;let scrollPercent=0;const addClassOnScroll=()=>{header.classList.add("shadow");header.classList.add("bg-white-90");header.classList.remove("py-4");}
+const removeClassOnScroll=()=>{header.classList.remove("shadow");header.classList.remove("bg-white-90");header.classList.add("py-4");}
+window.onscroll=function(){scrollPos=window.scrollY;scrollTop=document.documentElement["scrollTop"]||document.body["scrollTop"];scrollBottom=(document.documentElement["scrollHeight"]||document.body["scrollHeight"])-document.documentElement.clientHeight;scrollPercent=scrollTop/scrollBottom*100;readingProgressBar.style.width=(scrollTop/scrollBottom*100)+'%';if(scrollPos>0){addClassOnScroll()}
+else{removeClassOnScroll()}}</script><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-157386-6','auto');ga('send','pageview');}</script></body></html>
