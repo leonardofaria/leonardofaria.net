@@ -3,13 +3,13 @@ id: 2204
 title: The Mentoring Framework
 date: 2020-06-01
 author: Leonardo Faria
-ogImage: /wp-content/uploads/2020/06/the-mentoring-framework.png
+ogImage: /images/og-images/2204.png
 permalink: /2020/06/01/the-mentoring-framework
 categories:
   - protip
 ---
 
-A while ago I created a Mentoring Framework at work. The goal was creating a project from scratch using Ruby on Rails and in this journey, learning more about Ruby, Frontend, Project Management and Git, Databases and DevOps. 
+Last October I created a Mentoring Framework at work. The goal was creating a project from scratch using Ruby on Rails and in this journey, learning more about Ruby, Frontend, Project Management and Git, Databases and DevOps. 
 
 This Mentoring Framework is similar to what bootcamps do but the difference here is I am sharing a list of suggested features / things to learn and the person can focus in what is important for them. 
 
