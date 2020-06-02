@@ -11,8 +11,6 @@ dsq_thread_id:
   - "1020433179"
 categories:
   - apache
-  - desenvolvimento
-  - php
 tags:
   - apache
 ---
@@ -23,7 +21,9 @@ O arquivo httpd.conf é o principal gerenciador de configurações do servidor. 
   
 Devemos procurar pela seguinte linha (aproximdamente na linha 220): 
 
-    AddType application/x-httpd-php .php .php4 .php3 .phtml .leo
+```apache
+AddType application/x-httpd-php .php .php4 .php3 .phtml .leo
+```
 
 Essa é linha responsável por definir quais extensões serão executadas com suporte a PHP. Observe que acrescentei a extensão .leo.  
 A partir de agora, index.leo, por exemplo, será processado com PHP. Logo, nele posso escrever toda minha aplicação. Mas lembre-se, o suporte só estará funcionando após a reinicialização do Apache.

@@ -11,7 +11,8 @@ dsq_thread_id:
   - "1088681714"
 categories:
   - browser
-  - desenvolvimento
+tags:
+  - browser
 ---
 A Juliana Vieira entrou em contato e queria saber como executar um programa na máquina do cliente.  
 Se fosse no lado do servidor, poderíamos usar a função [exec();](http://www.php.net/function.exec) do PHP, por exemplo. 

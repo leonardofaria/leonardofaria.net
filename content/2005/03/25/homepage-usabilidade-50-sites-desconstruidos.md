@@ -10,9 +10,9 @@ permalink: /2005/03/25/homepage-usabilidade-50-sites-desconstruidos/
 dsq_thread_id:
   - "5338218048"
 categories:
-  - usabilidade
+  - usability
 tags:
-  - usabilidade
+  - usability
 ---
 [<img src="/wp-content/uploads/2006/05/useit_homepage.jpg" align="right" alt="Capa do Livro" />](http://www.submarino.com.br/books_productdetails.asp?Query=ProductPage&ProdTypeId=1&ProdId=168450&ST=SE)Algo importante visto no livro de [Jacob Nielsen](http://www.useit.com) e Marie Tamir.
 

@@ -10,11 +10,9 @@ permalink: /2006/04/10/diferenca-entre-web-10-e-web-20/
 dsq_thread_id:
   - "1009858247"
 categories:
-  - humor
-  - web2.0
+  - fun
 tags:
-  - humor
-  - web2.0
+  - fun
 ---
 <center>
   <img src="/wp-content/uploads/2006/05/web1.0-2.0.jpg" />

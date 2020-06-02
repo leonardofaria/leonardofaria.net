@@ -13,9 +13,13 @@ categories:
   - ajax
   - css
   - webstandards
+tags:
+  - webstandards
+  - ajax
 ---
 Ajax é mais uma das palavras da moda (assim como tableless).  
 Para quem não sabe, é um label para um trabalho envolvendo:  
+
 1) Apresentação webstandard (XHTML e CSS);  
 2) Interação e exibição dinâmica com DOM;  
 3) Interação e manipulação de dados com XML;  
@@ -24,5 +28,5 @@ Para quem não sabe, é um label para um trabalho envolvendo:
 
 ## Mais do mesmo:
 
-[Artigo](http://www.adaptivepath.com/publications/essays/archives/000385.php) esclarecedor de &#8216;conceituação' do Ajax  
-[Links](http://www.fiftyfoureleven.com/resources/programming/xmlhttprequest) com exemplos e artigos. Em um desses links, encontrei um [batepapo](http://www.plasticshore.com/viewEntry.php?id=205 "Anúncio do projeto") que [utiliza](http://www.plasticshore.com/projects/chat/index.html "Veja o chat") da abordagem.
+- [Artigo](http://www.adaptivepath.com/publications/essays/archives/000385.php) esclarecedor de &#8216;conceituação' do Ajax  
+- [Links](http://www.fiftyfoureleven.com/resources/programming/xmlhttprequest) com exemplos e artigos. Em um desses links, encontrei um [batepapo](http://www.plasticshore.com/viewEntry.php?id=205 "Anúncio do projeto") que [utiliza](http://www.plasticshore.com/projects/chat/index.html "Veja o chat") da abordagem.

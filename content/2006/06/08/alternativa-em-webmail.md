@@ -13,7 +13,8 @@ categories:
   - linux
   - php
 tags:
-  - webmail
+  - linux
+  - php
 ---
 Quem usa webmail de servidores LAMP provavelmente conhece as sérias limitações do Horde e do SquirelMail, que são instalados juntos no cPanel. Interfaces feias e falta de usabilidade sempre estão ligadas a esses webmails.
 

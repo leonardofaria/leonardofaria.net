@@ -9,17 +9,15 @@ guid: https://leonardofaria.net/2006/06/15/por-que-webstandards/
 permalink: /2006/06/15/por-que-webstandards/
 categories:
   - css
-  - web
-  - web2.0
   - webstandards
 tags:
-  - webdevelopment
+  - css
   - webstandards
 ---
 O artigo que vem a seguir foi escrito por mim em fevereiro do ano passado, para o projeto ReclamaSite (que nasceu morto). Naquela época, web2.0 não era [capa de revista](http://info.abril.com.br/) e muita gente ainda tinha desconfiança das vantagens do Tableless.  
 <!--more-->
 
-# Por que webstandarts?
+# Por que webstandards?
 
 Com toda a guerra de navegadores na última década, Netscape e Microsoft criaram uma série de recursos proprietários, que só funcionavam em seus respectivos aplicativos. Esses recursos excluiam os usuários do produto concorrente, colocando-os entre a cruz e a espada, digo, entre um browser e outro.
 

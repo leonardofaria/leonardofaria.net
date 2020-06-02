@@ -13,9 +13,7 @@ categories:
   - php
   - wordpress
 tags:
-  - cms
   - php
-  - plugins
   - wordpress
 ---
 WordPress é unanimidade em solução para blog. Há uns três anos, quando comecei minha vida blogger, eu mesmo escrevia um pequeno gerenciador de notícias, mas isso não se mostrou tão eficiente. Depois disso, adotei o [AJ-Fork](http://ajfork.berlios.de/), mas esse também não se mostrou tão eficiente. Adotei o WordPress e agora relato alguns plugins bastantes interessantes, que uso aqui, ou na extranet da empresa (sim, aonde trabalho estamos desenvolvendo uma extranet).  

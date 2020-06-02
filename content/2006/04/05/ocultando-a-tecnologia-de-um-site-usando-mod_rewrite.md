@@ -11,7 +11,6 @@ dsq_thread_id:
   - "5342459188"
 categories:
   - apache
-  - desenvolvimento
 tags:
   - apache
 ---
@@ -19,13 +18,13 @@ No artigo anterior, sugeri a mudança na configuração do httpd.conf para ocult
 <!--more-->
 
 
-Mas voltando ao conteúdo desse artigo, o Apache oferece outra forma de maquiar uma URL. E isso é através do mod\_rewrite. Além de oferecer a segurança em não mostrar a extensão de um arquivo, o mod\_rewrite permite a criação de URLS &#8216;fáceis' de entender e não monstros do tipo index.php?id=7&date=05/02/97&page=6
+Mas voltando ao conteúdo desse artigo, o Apache oferece outra forma de maquiar uma URL. E isso é através do mod\_rewrite. Além de oferecer a segurança em não mostrar a extensão de um arquivo, o mod\_rewrite permite a criação de URLS &#8216;fáceis' de entender e não monstros do tipo `index.php?id=7&date=05/02/97&page=6`
 
 O mod_rewrite não passa de um módulo (que deve estar ativado no httpd.conf) que permite, através de expressões regulares, redirecionar o usuário. Mas, como ele funciona? <!--more-->
 
 A configuração das URLs amigáveis envolve a criação de um arquivo .htaccess. Esse arquivo deve estar no diretório no qual deve ser trabalhado. Vamos a configuração:
 
-```
+```apache
 RewriteEngine On
 RewriteRule ^(noticias)/(.+)$	 index.php?id=$1&go=$2
 ```

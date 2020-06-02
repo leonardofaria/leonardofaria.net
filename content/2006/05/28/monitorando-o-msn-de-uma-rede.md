@@ -14,7 +14,6 @@ categories:
 tags:
   - linux
   - msn
-  - tutorial
 ---
 Esse artigo não tem tanto a ver com esse site, mas pode ajudar muitos admistradores de rede Linux.
 

@@ -10,7 +10,9 @@ permalink: /2005/04/18/adobe-compra-macromedia/
 dsq_thread_id:
   - "1347713525"
 categories:
-  - macromedia
+  - flash
+tags:
+  - flash
 ---
 Mais interessante e assustador do que a compra da Conectiva, pela Mandrake, é a compra da Macromedia feita pela Adobe. A transação, que custou aos bolsos da empresa do Photoshop 3,4 bilhões de dólares promote mudar o mercado.
 

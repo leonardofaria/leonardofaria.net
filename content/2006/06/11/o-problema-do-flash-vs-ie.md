@@ -15,7 +15,6 @@ categories:
 tags:
   - browser
   - flash
-  - ie
 ---
 Nos últimos tempos, a Microsoft lançou um patch, para o IE, que bloqueava a execução de Flash em documentos da Web. A Adobe lançou um patch, para corrigir o patch do IE mas ainda hoje vejo gente em fóruns, listas e orkut reclamando do problema.
 

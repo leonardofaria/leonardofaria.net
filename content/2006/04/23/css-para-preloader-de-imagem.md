@@ -11,10 +11,8 @@ dsq_thread_id:
   - "1009870965"
 categories:
   - css
-  - experiment
 tags:
   - css
-  - tutorial
 ---
 [Pescado](http://specere.net/?webtips) do [digg](http://www.digg.com):
 

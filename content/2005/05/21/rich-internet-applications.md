@@ -10,12 +10,10 @@ permalink: /2005/05/21/rich-internet-applications/
 dsq_thread_id:
   - "5169722341"
 categories:
-  - ajax
-  - ria
-  - web2.0
+  - flash
 tags:
   - flash
-  - ria
+  - ajax
 ---
 O futuro da Web é incerto. Não conhecemos qual será o rumo das coisas, principalmente em se tratando das Rich Web Applications. Entretanto, navegando agora no [del.icio.us](http://del.icio.us) (uma das minhas principais fontes de informação sobre web), conheci a [Backbase](http://www.backbase.com/), que trabalha com esse tipo de solução. O próprio site já é um exemplo de interação.
 

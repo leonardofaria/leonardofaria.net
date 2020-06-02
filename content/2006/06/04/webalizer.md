@@ -12,9 +12,7 @@ dsq_thread_id:
 categories:
   - php
 tags:
-  - estatísticas
   - php
-  - webalizer
 ---
 O Webalizer, para quem não sabe, é um software que mostra as estatísticas de utilização de um site. Seu acesso, na maioria das vezes, é feita pelo cPanel, painel de controle do servidor. Esse acesso só acontece se o usuário estiver logado, o que pode inviabilizar o acesso as estatísticas por pessoas sem a senha.  
 Entretanto, há uma forma de exibir esses dados, publicamente.  

@@ -10,13 +10,9 @@ permalink: /2006/03/20/verificando-contas-de-e-mail-pop3-com-php/
 dsq_thread_id:
   - "5340574550"
 categories:
-  - desenvolvimento
-  - experiment
   - php
 tags:
   - php
-  - tutorial
-  - webmail
 ---
 Escrevi uma funçãozinha que verifica a existência de emails (e informações adicionais como: assunto, remetente e data) de contas POP3, em PHP. O código está abaixo.
 

@@ -10,12 +10,9 @@ permalink: /2006/06/23/radio-online-e-moleza/
 dsq_thread_id:
   - "5339145251"
 categories:
-  - experiment
-  - web
+  - radio
 tags:
-  - rádio
-  - shoutcast
-  - tutorial
+  - radio
 ---
 **[update] Esse artigo foi escrito em 2006 e atualmente pode não ser a melhor opção para streaming.**
 

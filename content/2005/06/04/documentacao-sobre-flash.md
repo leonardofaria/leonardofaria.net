@@ -11,9 +11,7 @@ dsq_thread_id:
   - "1665376552"
 categories:
   - flash
-  - macromedia
 tags:
-  - download
   - flash
 ---
 Em uma das [comunidades sobre Flash](http://www.orkut.com/CommunitySearch.aspx?q=flash&lang=all) do orkut, descobri uma documentação muito interessante da Macromedia.  

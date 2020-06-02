@@ -10,9 +10,8 @@ permalink: /2005/03/27/web-essentials-2004/
 dsq_thread_id:
   - "1513804975"
 categories:
-  - desenvolvimento
-  - web
-  - web2.0
+  - webstandards
+tags:
   - webstandards
 ---
 2 links interessantes sobre o Web Essentials 2004, que aconteceu em Sidney.  

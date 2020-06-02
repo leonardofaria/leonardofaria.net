@@ -8,11 +8,11 @@ layout: post
 guid: https://leonardofaria.net/2006/05/27/ibook/
 permalink: /2006/04/20/ibook/
 categories:
-  - macintosh
+  - mac
 tags:
   - mac
 ---
-<img src="/wp-content/uploads/2006/05/homeoffice.thumbnail.jpg" align="right" alt="Home Office" />
+<img src="/wp-content/uploads/2006/05/homeoffice.jpg" class="w-32 mr-3" align="left" alt="Home Office" />
 
 Finalmente chegou meu Mac. 
 

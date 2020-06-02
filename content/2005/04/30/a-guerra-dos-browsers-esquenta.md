@@ -11,9 +11,11 @@ dsq_thread_id:
   - "1391537907"
 categories:
   - browser
+tags:
+  - browser
 ---
-Well, o domínio ainda é do I(gnorant) Explorer, mas a briga por um lugar ao sol, ou a manutenção dele, está quente. Observando  
-as últimas notícias:  
+Well, o domínio ainda é do I(gnorant) Explorer, mas a briga por um lugar ao sol, ou a manutenção dele, está quente. Observando as últimas notícias:  
+
 1) [Opera 8 lançado](http://www.opera.com) com suporte à voz, Gmail e uma série de features que acabam virando extensions no Firefox;  
 2) [Mozilla Firefox](http://www.mozilla.org) alcançando 50 milhões de downloads e chegando à quase 9% de participação no mercado;  
 3) [Safari](http://weblogs.mozillazine.org/hyatt/archives/2005_04.html#008042) passando pelo [Acid 2](http://webstandards.org/act/acid2/). O Acid 2 é um teste proposto pelo [The Web Standards Project](http://webstandards.org) para observar como os browsers renderizam a formatação. Tudo bem, o Safari saiu na frente, mas com uma série de correções;  

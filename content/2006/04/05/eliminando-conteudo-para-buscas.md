@@ -10,7 +10,8 @@ permalink: /2006/04/05/eliminando-conteudo-para-buscas/
 dsq_thread_id:
   - "1308101337"
 categories:
-  - desenvolvimento
+  - web
+tags:
   - web
 ---
 Sistemas de busca, ao trabalhar, lêem um arquivo &#8220;robots.txt&#8221; (deixado na raiz do servidor). Esse arquivo especifica para o spider quais arquivos devem aparecer na busca.
@@ -18,8 +19,7 @@ Sistemas de busca, ao trabalhar, lêem um arquivo &#8220;robots.txt&#8221; (deix
 Nesse artigo, veremos como excluir determinada pasta de uma search engine.  
 <!--more-->
 
-
-```
+```apache
 User-agent: *
 Disallow: login.php
 Disallow: /images/

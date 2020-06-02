@@ -13,7 +13,6 @@ categories:
   - css
 tags:
   - css
-  - tutorial
 ---
 Existem formas distintas para fazer efeitos de transparência, via CSS. Cada browser reconhece um atributo nas folhas de estilo. Vamos lá então:
 

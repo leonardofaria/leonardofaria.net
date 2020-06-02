@@ -10,12 +10,9 @@ permalink: /2005/07/10/10-encontro-de-webdesign-o-bom-o-ruim-e-o-feio/
 dsq_thread_id:
   - "1061687403"
 categories:
-  - web
+  - event
 tags:
-  - arteccom
-  - bh
-  - encontro
-  - webdesign
+  - event
 ---
 Ontem foi realizado o Décimo Encontro de Webdesign, promovido em Belo Horizonte, pelo Arteccom. Todo o sábado foi marcado por cinco palestras, que comentarei nesse post. 
 

@@ -11,12 +11,9 @@ dsq_thread_id:
   - "1000136064"
 categories:
   - css
-  - desenvolvimento
 tags:
   - browser
   - css
-  - hack
-  - ie
 ---
 Escrever uma página 100% idêntica para vários browsers pode parecer impossível. Mas não é.  
 Para contornar isso, hacks são usados, para tentar uma aproximação entre browsers.  

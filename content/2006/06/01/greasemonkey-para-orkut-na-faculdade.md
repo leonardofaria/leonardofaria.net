@@ -11,7 +11,6 @@ dsq_thread_id:
   - "1000135294"
 categories:
   - browser
-  - faculdade
 tags:
   - browser
   - firefox

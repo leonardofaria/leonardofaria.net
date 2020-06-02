@@ -10,7 +10,7 @@ permalink: /2006/06/15/desenvolvimento-web-no-macintosh/
 dsq_thread_id:
   - "1000135341"
 categories:
-  - macintosh
+  - mac
 tags:
   - mac
 ---

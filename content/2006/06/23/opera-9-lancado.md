@@ -13,8 +13,6 @@ categories:
   - browser
 tags:
   - browser
-  - download
-  - opera
 ---
 <img src="/wp-content/uploads/2006/06/Reference.thumbnail.png" align="right" alt="Esse é o teste ACID2" />A mais nova versão do browser [Opera](http://opera.com/index.dml) acaba de ser lançada.
 

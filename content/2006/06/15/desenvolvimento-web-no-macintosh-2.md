@@ -10,13 +10,9 @@ permalink: /2006/06/15/desenvolvimento-web-no-macintosh-2/
 dsq_thread_id:
   - "1089017847"
 categories:
-  - apache
-  - desenvolvimento
-  - macintosh
-  - php
+  - mac
 tags:
   - mac
-  - webdevelopment
 ---
 ## Apache, PHP e MySQL de forma mais fácil
 

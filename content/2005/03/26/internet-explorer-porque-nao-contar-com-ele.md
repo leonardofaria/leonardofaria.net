@@ -11,7 +11,8 @@ dsq_thread_id:
   - "1000134646"
 categories:
   - browser
-  - web
+tags:
+  - browser
 ---
 A minha raiva (e a de todos) do Internet Explorer é justificável. Esse navegador web conta com uma série de falhas, que além de inseguras, tornam-o também incompatíveis com os padrões web.
 

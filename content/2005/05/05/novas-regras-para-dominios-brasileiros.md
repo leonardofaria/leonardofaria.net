@@ -12,7 +12,5 @@ dsq_thread_id:
 categories:
   - web
 ---
-À partir de 09/05, os domínios .br poderão ter acentos e cedilhas. Os novos registros só serão homologados caso não  
-houver nenhum outro registro parecido sem os acentos, isso é, os antigos proprietários terão preferência para registrar domínios  
-semelhantes.  
-[Leia](http://registro.br/anuncios/20050504.html) o anúncio do registro.br
+À partir de 09/05, os domínios .br poderão ter acentos e cedilhas. Os novos registros só serão homologados caso não houver nenhum outro registro parecido sem os acentos, isso é, os antigos proprietários terão preferência para registrar domínios  
+semelhantes. [Leia](http://registro.br/anuncios/20050504.html) o anúncio do registro.br

@@ -10,12 +10,7 @@ permalink: /2005/07/21/eu-testei-o-wallop/
 dsq_thread_id:
   - "1000135299"
 categories:
-  - web2.0
-tags:
-  - teste
-  - ui
-  - usabilidade
-  - wallop
+  - review
 ---
 Nessa semana, testei o [Wallop](http://mywallop.com). O Wallop, para quem não sabe, é uma rede de relacionamentos powered by [Microsoft Research](http://www.research.microsoft.com/scg/).
 

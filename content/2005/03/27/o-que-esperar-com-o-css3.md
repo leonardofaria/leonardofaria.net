@@ -11,7 +11,6 @@ dsq_thread_id:
   - "1811027111"
 categories:
   - css
-  - webstandards
 tags:
   - css
 ---

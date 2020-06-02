@@ -11,9 +11,9 @@ dsq_thread_id:
   - "1000136096"
 categories:
   - browser
-  - desenvolvimento
+  - javascript
 tags:
-  - bookmarklets
+  - browser
   - javascript
 ---
 [<img src="/wp-content/uploads/2006/06/flickr.jpg" alt="Revista Webdesign" width="250" align="right" />](/wp-content/uploads/2006/06/flickr.jpg)Há pelo menos 2 anos, falei dos bookmarklets, Javascripts que modificam o comportamento do navegador. Talvez eles seriam o avó do Greasemonkey, que prometem algo semelhante, mais com uma maior riqueza e poder.

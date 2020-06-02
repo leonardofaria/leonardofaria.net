@@ -9,7 +9,8 @@ guid: https://leonardofaria.net/2005/04/15/flash-8/
 permalink: /2005/04/15/flash-8/
 categories:
   - flash
-  - macromedia
+tags:
+  - flash
 ---
 
 <img src="/wp-content/uploads/2006/05/8ball-pi-filters.jpg" align="right" width="280" alt="Uma foto roubada do novo Flash." />  

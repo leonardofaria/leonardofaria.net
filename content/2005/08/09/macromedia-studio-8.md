@@ -11,7 +11,6 @@ dsq_thread_id:
   - "2117582112"
 categories:
   - flash
-  - macromedia
 tags:
   - flash
 ---
