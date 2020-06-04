@@ -10,11 +10,9 @@ permalink: /2007/04/12/criando-rss-com-rails/
 dsq_thread_id:
   - "1000136958"
 categories:
-  - desenvolvimento
   - rubyonrails
 tags:
-  - rails
-  - rss
+  - rubyonrails
 ---
 **Nota**: antes do artigo vale lembrar do [curso online de Ruby on Rails + Flex](http://www.egenial.com.br/curso/) do [Carlos](http://www.egenial.com.br). Ele já fez [alguns experimentos](http://blog.egenial.com.br/?p=42) com esses dois ambientes e rolou um resultado bacana. Vamos ao artigo então :P
 

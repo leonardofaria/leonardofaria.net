@@ -10,10 +10,9 @@ permalink: /2007/07/03/sobre-macs-refurbisheds/
 dsq_thread_id:
   - "1000137015"
 categories:
-  - macintosh
+  - mac
 tags:
   - mac
-  - refurbished
 ---
 Para quem não sabe, um **[Refurbished](http://en.wikipedia.org/wiki/Refurbished)** é um produto que não passou por todos testes de qualidade da fábrica e é recondicionado, sendo posteriormente vendido. Em sites de leilão como o **[MercadoLivre](http://www.mercadolivre.com.br)**, aparecem dezenas de notebooks recondicionados. Não posso falar quanto a PCs, mas posso falar de Macs Refurbisheds.
 

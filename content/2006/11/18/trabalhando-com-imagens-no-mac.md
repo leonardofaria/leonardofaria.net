@@ -10,11 +10,9 @@ permalink: /2006/11/18/trabalhando-com-imagens-no-mac/
 dsq_thread_id:
   - "1000296952"
 categories:
-  - macintosh
-tags:
-  - download
   - mac
-  - software
+tags:
+  - mac
 ---
 Muitas vezes você não precisa de um editor de imagens pesado como o Photoshop para fazer pequenos trabalhos. Então, falo de três soluções para trabalhar com imagens no Mac.
 

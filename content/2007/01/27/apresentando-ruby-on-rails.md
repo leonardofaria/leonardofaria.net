@@ -15,11 +15,9 @@ enclosure:
 dsq_thread_id:
   - "1000136630"
 categories:
-  - desenvolvimento
   - rubyonrails
-  - web2.0
 tags:
-  - rails
+  - rubyonrails
 ---
 Resolvi escrever esse post para mostrar algumas características do [Ruby on Rails](http://www.rubyonrails.org), um framework que me chamou muito a atenção após [ver a implementação](http://media.rubyonrails.org/video/rails_take2_with_sound.mov) de um blog em 58(!) linhas.
 

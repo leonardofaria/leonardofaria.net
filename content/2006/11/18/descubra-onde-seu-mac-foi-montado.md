@@ -10,11 +10,9 @@ permalink: /2006/11/18/descubra-onde-seu-mac-foi-montado/
 dsq_thread_id:
   - "1024463799"
 categories:
-  - macintosh
-tags:
-  - download
   - mac
-  - software
+tags:
+  - mac
 ---
 O [coconutIdentityCard](http://coconut-flavour.com/coconutidentitycard/index.html) é um software que analisa onde e quando seu Mac foi montado, a partir do serial number dele. Vale também para iPods.  
 

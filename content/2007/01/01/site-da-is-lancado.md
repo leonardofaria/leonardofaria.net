@@ -10,11 +10,11 @@ permalink: /2007/01/01/site-da-is-lancado/
 dsq_thread_id:
   - "2314325545"
 categories:
-  - desenvolvimento
+  - portfolio
   - flash
 tags:
+  - portfolio
   - flash
-  - is®
 ---
 <center>
   <img src="/wp-content/uploads/2007/01/462.jpg" alt="is®" />

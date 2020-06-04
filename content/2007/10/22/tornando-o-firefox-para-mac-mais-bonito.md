@@ -11,9 +11,9 @@ dsq_thread_id:
   - "1049885441"
 categories:
   - browser
-  - macintosh
+  - mac
 tags:
-  - firefox
+  - browser
   - mac
 ---
 Quem usa maçãs tem diversas alternativas para navegar. O Safari, para mim, é a melhor opção, mas o Firefox com seus plugins faz falta. O Firefox é pesado e a interface dele não incorpora os elementos da interface do Mac OS.

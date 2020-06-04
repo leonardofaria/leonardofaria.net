@@ -10,7 +10,6 @@ permalink: /2007/01/06/motion-blur-no-flash/
 dsq_thread_id:
   - "1000137473"
 categories:
-  - desenvolvimento
   - flash
 tags:
   - flash

@@ -10,13 +10,9 @@ permalink: /2007/08/11/endless-pageless/
 dsq_thread_id:
   - "1000136697"
 categories:
-  - ajax
-  - desenvolvimento
   - rubyonrails
 tags:
-  - ajax
-  - rails
-  - ui
+  - rubyonrails
 ---
 Ano passado me deparei com o [searchmash](http://www.searchmash.com) (leia-se Google).  
 Um sistema de busca e&#8230; sem paginação! Quando chega no fim da página os próximos registros aparecem magicamente (retificando, via Ajax).

@@ -11,13 +11,10 @@ dsq_thread_id:
   - "1378144855"
 categories:
   - browser
-  - macintosh
+  - mac
 tags:
   - browser
   - mac
-  - safari
-  - software
-  - windows
 ---
 <img src="/wp-content/uploads/2006/07/img_tabExpose.thumbnail.jpg" align="right" />
 

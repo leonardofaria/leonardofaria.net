@@ -10,10 +10,10 @@ permalink: /2007/08/05/bookmarklet-para-ver-propriedades-dos-elementos-de-uma-pa
 dsq_thread_id:
   - "1421046724"
 categories:
-  - desenvolvimento
+  - browser
   - javascript
 tags:
-  - bookmarklet
+  - browser
   - javascript
 ---
 O [XRAY](http://westciv.com/xray/) é um bookmarklet para Safari e família Mozilla que mostra as características de determinado elemento de uma página. Para quem usa Firefox, o XRAY lembra a função Inspect da extension Firebug. Recomendado!

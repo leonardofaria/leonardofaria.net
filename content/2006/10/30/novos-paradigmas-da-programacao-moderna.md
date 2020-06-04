@@ -10,12 +10,9 @@ permalink: /2006/10/30/novos-paradigmas-da-programacao-moderna/
 dsq_thread_id:
   - "1006511191"
 categories:
-  - desenvolvimento
-  - humor
-  - offtropic
+  - fun
 tags:
-  - humor
-  - pog
+  - fun
 ---
 Essa [Desciclopédia](http://desciclo.pedia.ws) é uma prosa! Novos paradigmas da Programação Moderna.
 

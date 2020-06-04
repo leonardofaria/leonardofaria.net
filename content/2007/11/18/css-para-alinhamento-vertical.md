@@ -11,10 +11,8 @@ dsq_thread_id:
   - "1000136244"
 categories:
   - css
-  - desenvolvimento
 tags:
   - css
-  - hack
 ---
 O [Bruno Fernandes](http://www.brunofernandes.com.br/) e eu estávamos no MSN ontem discutindo uma forma de fazer alinhamento vertical, para uma imagem da qual não se sabe a altura.
 

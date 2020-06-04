@@ -11,12 +11,8 @@ dsq_thread_id:
   - "1082172729"
 categories:
   - css
-  - desenvolvimento
-  - webstandards
 tags:
   - css
-  - dicas
-  - tutorial
 ---
 Todo mundo lembra do pseudo-seletor :hover, quando quer fazer um simples efeito rollover em um link. Well, o que pouco sabe é que existe outros dois seletores muito bacanas: o :after e o :before.
 

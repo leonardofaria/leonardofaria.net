@@ -10,14 +10,9 @@ permalink: /2007/05/16/pesquisa-sobre-mac-users/
 dsq_thread_id:
   - "1000135260"
 categories:
-  - desenvolvimento
-  - macintosh
-  - rubyonrails
-  - web2.0
+  - mac
 tags:
   - mac
-  - pesquisa
-  - web2.0
 ---
 Lancei uma [pesquisa](http://pesquisa.leonardofaria.net/) para conhecer o perfil do Mac User brasileiro. Isso tudo é para aquele projeto 2.0 que estou trabalhando que fala de Macintoshs. Responder é rápido, são apenas 14 questões e o resultado da pesquisa será divulgada aqui no site.
 

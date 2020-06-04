@@ -8,11 +8,9 @@ layout: post
 guid: https://leonardofaria.net/2006/11/25/varios-icones-que-valem-uma-palavra/
 permalink: /2006/11/25/varios-icones-que-valem-uma-palavra/
 categories:
-  - macintosh
-  - offtropic
+  - mac
 tags:
-  - design
-  - flickr
+  - mac
 ---
 <center>
   <a href="http://www.flickr.com/groups/icon_words/pool/"><img src="/wp-content/uploads/2006/11/windowzesux.jpg" alt="windowzesux" /></a>

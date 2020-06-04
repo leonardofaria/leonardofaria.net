@@ -10,9 +10,8 @@ permalink: /2006/12/17/widgets-para-seu-dashboard/
 dsq_thread_id:
   - "2195872849"
 categories:
-  - macintosh
+  - mac
 tags:
-  - dashboard
   - mac
 ---
 Um dos recursos mais espetaculares do Mac OS é o [Dashboard](http://www.apple.com/downloads/dashboard/), que são pequenos widgets em seu Desktop. Estou postando alguns dos meus favoritos:

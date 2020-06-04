@@ -12,7 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 <center>
   <img src='/wp-content/uploads/2007/07/rails-fuckyou.jpg' alt='Fuck you' />

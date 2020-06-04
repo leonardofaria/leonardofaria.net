@@ -10,13 +10,9 @@ permalink: /2007/07/05/deployment-na-dreamhost-e-railsplayground/
 dsq_thread_id:
   - "1000136979"
 categories:
-  - desenvolvimento
   - rubyonrails
 tags:
-  - deployment
-  - dreamhost
-  - host
-  - rails
+  - rubyonrails
 ---
 Minha aplicação **Rails** está pronta, mas, e agora? Como instalá-la no servidor?  
 Essa é uma dúvida muito comum entre desenvolvedores Rails. Fazer a configuração do ambiente de produção de uma aplicação é uma tarefa bem DIY (do it yourself, ou, faça você mesmo). Não existe uma fórmula certa ou errada para isso, mas sim diferentes soluções para essa questão. Esse artigo, portanto, mostra uma forma, que eu e o [Nando](http://www.simplesideias.com.br) usamos para rodarmos nossas aplicações. Ele na [**RailsPlayground**](http://railsplayground.com/) e eu na [**Dreamhost**](http://www.dreamhost.com). Vamos lá:

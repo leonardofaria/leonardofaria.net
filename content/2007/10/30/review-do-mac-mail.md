@@ -10,11 +10,9 @@ permalink: /2007/10/30/review-do-mac-mail/
 dsq_thread_id:
   - "1000137031"
 categories:
-  - macintosh
-tags:
-  - dotmac
   - mac
-  - review
+tags:
+  - mac
 ---
 Nos primórdios tempos que conheci a plataforma mac – no auge dos meus 14 anos e usando um iMac 266 mhz – a Apple possuia o iTools, serviço que fornecia e-mail, servidor de arquivos, página web e outras cositas más. Em setembro de 2002 o iTools virou .Mac e passou a ser pago. Com isso, a conta de email @mac.com que tinha passou a ser cobrada.
 

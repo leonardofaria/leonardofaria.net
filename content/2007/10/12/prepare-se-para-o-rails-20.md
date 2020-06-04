@@ -12,7 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 A versão 2.0 do framework Rails está por vir e isso significa algumas mudanças e novidades. Já [existem](http://blog.viget.com/whats-coming-in-rails-20/) [vários](http://mentalized.net/journal/2007/03/13/rails_20_deprecations/) [posts](http://weblog.rubyonrails.org/2007/9/30/rails-2-0-0-preview-release) na [blogosfera](http://www.google.com/search?client=safari&rls=pt-pt&q=rails+2.0&ie=UTF-8&oe=UTF-8) mostrando as particulariedades da nova versão. Vou falar de algumas delas:
 

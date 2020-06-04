@@ -10,11 +10,9 @@ permalink: /2007/05/15/novos-resources-sobre-rails/
 dsq_thread_id:
   - "1056853400"
 categories:
-  - desenvolvimento
   - rubyonrails
 tags:
-  - dicas
-  - rails
+  - rubyonrails
 ---
 Trabalhar com Rails me garante bons bookmarks (:
 

@@ -10,12 +10,11 @@ permalink: /2007/11/16/minas-on-rails/
 dsq_thread_id:
   - "1318386471"
 categories:
+  - event
   - rubyonrails
 tags:
-  - bh
-  - encontro
-  - minasonrails
-  - rails
+  - event
+  - rubyonrails
 ---
 <center>
   <a href="http://www.minasonrails.org"><img src='/wp-content/uploads/2007/11/yqewzqhzk1c5ojefw09yffo6_400.png' class='foto' alt='Minas on Rails' class='foto' /></a>

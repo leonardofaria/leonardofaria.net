@@ -15,10 +15,9 @@ enclosure:
 dsq_thread_id:
   - "1000136375"
 categories:
-  - desenvolvimento
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 <img src='/wp-content/uploads/2007/04/rails.gif' align='right' style="margin-right: 7px" class='white' /> Resolvi escrever esse post após um amigo me perguntar se compensava aprender/trabalhar com Ruby e com Rails, já que é demasiadamente recente e sem apoio de grandes empresas, como acontece com o PHP e Python.
 

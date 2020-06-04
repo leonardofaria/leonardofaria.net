@@ -10,9 +10,8 @@ permalink: /2007/01/09/apple-reinventa-o-celular/
 dsq_thread_id:
   - "1239098790"
 categories:
-  - macintosh
+  - iphone
 tags:
-  - apple
   - iphone
 ---
 <center>

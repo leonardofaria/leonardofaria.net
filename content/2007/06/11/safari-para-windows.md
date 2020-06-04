@@ -11,12 +11,9 @@ dsq_thread_id:
   - "1000137354"
 categories:
   - browser
-  - macintosh
+  - mac
 tags:
   - browser
   - mac
-  - safari
-  - software
-  - windows
 ---
 A única novidade relevante da [WWDC](http://developer.apple.com/wwdc/) – Worldwide Developers Conference – é o lançamento do [Safari](http://www.apple.com/safari/) para Windows. O Safari é o browser padrão que vem no Mac OS e a agora a Apple invade o quintal do Windows com um browser rápido, minimalista e que dá ao usuários de PCs o gostinho de experimentar as vantagens de um Mac.

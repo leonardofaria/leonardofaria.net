@@ -10,12 +10,9 @@ permalink: /2006/11/12/tela-azul-da-morte-no-mac/
 dsq_thread_id:
   - "5342050724"
 categories:
-  - linux
-  - macintosh
-tags:
-  - download
   - mac
-  - software
+tags:
+  - mac
 ---
 Não é nada disso que você está pensando. É apenas uma de dezenas de proteções de telas encontradas [aqui](http://www.jwz.org/xscreensaver/). O [download](http://www.jwz.org/xscreensaver/xscreensaver-5.01.dmg) das proteções de tela para Mac OS tem 25MB. Para instalar a proteção de tela, basta dar abrir o arquivo correspondente. Simples assim!
 

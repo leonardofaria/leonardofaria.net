@@ -10,11 +10,9 @@ permalink: /2006/07/01/migracao-para-macintosh/
 dsq_thread_id:
   - "3270476022"
 categories:
-  - macintosh
+  - mac
 tags:
   - mac
-  - switch
-  - webdevelopment
 ---
 [Momento Caparica](http://sinistras.aranha.com.br): Muitos que estão habituados a PCs e se migram para o Mac OS apresentam diversas dúvidas.
 

@@ -11,12 +11,9 @@ dsq_thread_id:
   - "2148284062"
 categories:
   - browser
-  - macintosh
+  - mac
 tags:
   - browser
-  - download
   - mac
-  - safari
-  - software
 ---
 O Safari é um grande conhecido de quem usa Mac OS. Esse browser usa uma máquina de renderização criada pela própria Apple, a Apple [Webkit](http://en.wikipedia.org/wiki/WebKit). Paralelo a tudo isso, descobri na última semana o [Swift](http://www.getwebkit.org/), um browser para Windows que utiliza a mesma engine do Safari.

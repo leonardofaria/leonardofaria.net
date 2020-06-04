@@ -10,7 +10,8 @@ permalink: /2006/09/22/modifique-seu-adminstrador-do-wordpress/
 dsq_thread_id:
   - "1890255992"
 categories:
-  - css
+  - wordpress
+tags:
   - wordpress
 ---
 [<img src="/wp-content/uploads/2006/10/wp-spotmilk.jpg" title="Clique para ver maior" align="left" />](/wp-content/uploads/2006/10/wp-spotmilk.jpg "Clique para ver maior")

@@ -10,14 +10,9 @@ permalink: /2006/11/26/mp3-to-swf/
 dsq_thread_id:
   - "1000136145"
 categories:
-  - desenvolvimento
   - flash
 tags:
-  - download
   - flash
-  - mp3
-  - software
-  - swf
 ---
 Como [estou trabalhando](http://www.is.ind.br) muito nessas últimas semanas, venho estudando uma forma rápida e eficiente de fazer streaming de áudio. O Flash possui uma classe Sound bastante eficiente para manipulação de áudio, entretanto, conexões discadas de países subdesenvolvidos pode sofrer com isso.
 

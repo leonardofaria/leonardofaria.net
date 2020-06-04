@@ -12,7 +12,6 @@ dsq_thread_id:
 categories:
   - linux
 tags:
-  - crítica
   - linux
 ---
 O [Bruno](http://www.brunotorres.net) acha que [instalar programas no Linux é mais fácil que no Windows](http://brunotorres.net/2005/10/20/instalar-programas-no-linux-e-mais-facil-que-no-windows). O [Elcio](http://blog.elcio.com.br/), comentou ontem, [sobre o avanço do Linux](http://blog.elcio.com.br/ubuntu-xara-e-o-avanco-do-linux/). Então resolvi dar o meu pitaco na história.

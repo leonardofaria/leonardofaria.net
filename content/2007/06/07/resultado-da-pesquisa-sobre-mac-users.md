@@ -10,11 +10,9 @@ permalink: /2007/06/07/resultado-da-pesquisa-sobre-mac-users/
 dsq_thread_id:
   - "1000136739"
 categories:
-  - macintosh
+  - mac
 tags:
   - mac
-  - pesquisa
-  - web2.0
 ---
 No [último dia 16 lancei](https://leonardofaria.net/2007/05/16/pesquisa-sobre-mac-users/) uma [pesquisa](http://pesquisa.leonardofaria.net) para conhecer o perfil dos usuários de Macintosh no Brasil. A intenção dessa pesquisa, além do óbvio, é servir de background para o lançamento de um novo serviço sobre Macs no Brasil.
 

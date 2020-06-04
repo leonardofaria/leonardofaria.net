@@ -10,10 +10,9 @@ permalink: /2007/05/06/manipulando-datas-no-rails/
 dsq_thread_id:
   - "5338864321"
 categories:
-  - desenvolvimento
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 Em nossas aplicações geralmente trabalhamos com datas. Em nossos bancos de dados, temos sempre um campo do tipo DATETIME. Mas como formatar as datas e evitar tosqueiras como Mon May 18 00:00:00 -0400 2007?
 

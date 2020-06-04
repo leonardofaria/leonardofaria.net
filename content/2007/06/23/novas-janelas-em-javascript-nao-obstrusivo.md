@@ -10,11 +10,11 @@ permalink: /2007/06/23/novas-janelas-em-javascript-nao-obstrusivo/
 dsq_thread_id:
   - "5340626613"
 categories:
-  - desenvolvimento
   - javascript
+  - usability
 tags:
   - javascript
-  - ui
+  - usability
 ---
 A newsletter dessa semana do [SitePoint](http://www.sitepoint.com/) mostrou uma forma bem interessante de abrir novas janelas com javascript não-obstrusivo e validando XHTML Strict (para quem não sabe, o atributo &#8216;target' da tag &#8216;a' não passa na validação).
 

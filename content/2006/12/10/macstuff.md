@@ -10,10 +10,9 @@ permalink: /2006/12/10/macstuff/
 dsq_thread_id:
   - "1105321883"
 categories:
-  - macintosh
+  - mac
 tags:
   - mac
-  - software
 ---
 Lançado [Creammonkey](http://creammonkey.sourceforge.net/), uma forma de trabalhar com os scripts do Greasemonkey no Safari. Particularmente, prefiro o Safari com browser default no Macintosh.
 

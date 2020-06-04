@@ -11,13 +11,10 @@ dsq_thread_id:
   - "1000134929"
 categories:
   - ajax
-  - desenvolvimento
-  - usabilidade
+  - usability
 tags:
   - ajax
-  - crítica
-  - ui
-  - usabilidade
+  - usability
 ---
 Usar Ajax desenfreamente por aí pode causar dependência química. O [Ajaxonline](http://www.ajaxonline.com.br) é um portal sobre o assunto e apresenta uma séria falha, que muitos sites que também usam XMLHttpRequest também apresentam: links obstrusivos.
 

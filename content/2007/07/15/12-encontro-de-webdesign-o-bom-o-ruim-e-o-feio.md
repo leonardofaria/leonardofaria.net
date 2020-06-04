@@ -10,15 +10,9 @@ permalink: /2007/07/15/12-encontro-de-webdesign-o-bom-o-ruim-e-o-feio/
 dsq_thread_id:
   - "1000136150"
 categories:
-  - desenvolvimento
-  - opiniao
-  - web
-  - web2.0
+  - event
 tags:
-  - arteccom
-  - bh
-  - encontro
-  - webdesign
+  - event
 ---
 Sábado, levantei às 6h e fui rumo a BH em mais um [Encontro de Webdesign da Arteccom](http://arteccom.com.br/encontro/). É a [**segunda vez**](https://leonardofaria.net/2005/07/10/10-encontro-de-webdesign-o-bom-o-ruim-e-o-feio/) que vou a um encontro dessa editora que faz uns extras com eventos. Morar no interior de Minas não me dá muitas opções de [eventos bacanas](http://code.google.com/events/developerday/). 
 

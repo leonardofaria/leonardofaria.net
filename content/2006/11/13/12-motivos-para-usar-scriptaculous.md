@@ -10,11 +10,9 @@ permalink: /2006/11/13/12-motivos-para-usar-scriptaculous/
 dsq_thread_id:
   - "1000137065"
 categories:
-  - desenvolvimento
-  - web2.0
+  - javascript
 tags:
   - javascript
-  - script.aculo.us
 ---
 Criar efeitos visuais em Javascript era algo bem complexo. Muitos efeitos da lista que cito abaixo era algo somente imaginável para criar, para mim, no Flash. Entretanto, as coisas mudaram. O [script.aculo.us](http://script.aculo.us/) é uma biblioteca que permite a criação de efeitos de forma super-simples, sem requerer conhecimentos jedi em JS. Vamos a lista então:
 

@@ -10,12 +10,8 @@ permalink: /2007/10/19/alterando-o-phpini-da-dreamhost/
 dsq_thread_id:
   - "1000137490"
 categories:
-  - desenvolvimento
   - php
 tags:
-  - desenvolvimento
-  - dreamhost
-  - host
   - php
 ---
 Algumas configurações do PHP da Dreamhost, como o uso do fopen(), são desabilitadas por questões de segurança. Isso pode atrapalhar o funcionamento de suas aplicações. Entretanto, é possível habilitar essa e outras funções via shell.

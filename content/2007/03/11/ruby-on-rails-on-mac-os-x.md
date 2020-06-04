@@ -10,11 +10,11 @@ permalink: /2007/03/11/ruby-on-rails-on-mac-os-x/
 dsq_thread_id:
   - "1000137115"
 categories:
-  - desenvolvimento
+  - mac
   - rubyonrails
 tags:
   - mac
-  - rails
+  - rubyonrails
 ---
 [Estou de fato sumido do blog. [Mudei](https://leonardofaria.net/2006/12/30/mudanca-e-previsoes/) para [Piumhi Harbor](http://pt.wikipedia.com/wiki/piumhi) e fiquei com computador somente na primeira semana. Meu iBook teve problemas e fiquei quase um mês esperando. Enfim, computador novo, finalmente posso brincar com Ruby on Rails. Inclusive já estou começando a trabalhar em um projeto comercial com o uso desse framework.]
 

@@ -10,11 +10,9 @@ permalink: /2007/01/28/listas-de-discussoes-e-suas-respostas/
 dsq_thread_id:
   - "5341924131"
 categories:
-  - humor
-  - offtropic
+  - fun
 tags:
-  - humor
-  - listas
+  - fun
 ---
 Assinar listas é uma ótima forma de aprendizado mas as discussões podem se tornar inválidas em alguns momentos. Então, fica a pergunta: Quantas pessoas que assinam listas na internet você precisa para trocar uma lâmpada?
 

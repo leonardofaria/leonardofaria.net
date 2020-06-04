@@ -11,13 +11,10 @@ dsq_thread_id:
   - "1000136365"
 categories:
   - browser
-  - macintosh
+  - mac
 tags:
   - browser
-  - download
   - mac
-  - safari
-  - software
 ---
 <center>
   <img src="/wp-content/uploads/2006/10/inquisitor.jpg" alt="Inquisitor em ação" />

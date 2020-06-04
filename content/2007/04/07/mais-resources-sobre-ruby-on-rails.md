@@ -12,8 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - dicas
-  - rails
+  - rubyonrails
 ---
 No desenvolvimento de um projeto pessoal – que devo lançar em breve – ando vendo algumas coisas bacanas. Ai estão:
 

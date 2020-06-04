@@ -10,11 +10,9 @@ permalink: /2007/06/28/curiosidade-ruby-do-dia/
 dsq_thread_id:
   - "1000137260"
 categories:
-  - desenvolvimento
   - rubyonrails
 tags:
-  - rails
-  - ruby
+  - rubyonrails
 ---
 Não existe &#8216;else if' em **Ruby** e sim &#8216;elsif' – sem o &#8216;e' mesmo! Isso costuma pegar alguns desatentos. Veja o exemplo:
 

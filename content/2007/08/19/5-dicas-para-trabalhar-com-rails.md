@@ -12,8 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - dicas
-  - rails
+  - rubyonrails
 ---
 Começar em um ambiente novo de desenvolvimento pode se mostrar desengonçado. Então, para começar em Rails, aí vão minhas dicas, que acho bem produtivas.
 
