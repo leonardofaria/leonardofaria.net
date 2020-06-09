@@ -6,6 +6,4 @@ code(some_ruby_code, :theme =&amp;gt; &amp;#34;twilight&amp;#34;, :lang =&amp;gt
 &lt;h3 id="xcode">Xcode&lt;/h3>
 &lt;p>&lt;strong>ANTES DE MAIS NADA&lt;/strong>, instalei o Xcode. Ele está junto no DVD do Snow Leopard, na pasta de Instalações Opcionais.&lt;/p>
 &lt;h3 id="rails">Rails&lt;/h3>
-&lt;p>O Snow Leopard já vem com duas versões do Rails já instaladas: 2.2.2 e 1.13.6. Caso queira atualizar seu ambiente:&lt;/p></description></item><item><title>Rails, Git, MySQL e mod_rails no Leopard</title><link>https://leonardofaria.net/2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/</link><pubDate>Sat, 24 May 2008 16:53:23 -0300</pubDate><guid>https://leonardofaria.net/2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/</guid><description>&lt;p>Comprou um Mac? Não sabe por onde começar? Esse é um mega-post mostrando como configurar Ruby on Rails, Git, MySQL e mod_rails no Leopard. É tudo &lt;strong>muito-fácil&lt;/strong>!&lt;/p>
-&lt;h3 id="ruby-on-rails">Ruby on Rails&lt;/h3>
-&lt;p>O Leopard já vem com Ruby e Rails já instalados. Então, a única sugestão é a de atualizar todos os gems. O comando &lt;code>gem list&lt;/code> deve apontar os gems instalados. Por padrão, são:&lt;/p></description></item></channel></rss>
+&lt;p>O Snow Leopard já vem com duas versões do Rails já instaladas: 2.2.2 e 1.13.6. Caso queira atualizar seu ambiente:&lt;/p></description></item></channel></rss>
