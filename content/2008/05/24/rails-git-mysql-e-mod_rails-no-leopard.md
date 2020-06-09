@@ -10,17 +10,11 @@ permalink: /2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/
 dsq_thread_id:
   - "1000136193"
 categories:
-  - desenvolvimento
-  - macintosh
+  - mac
   - rubyonrails
 tags:
-  - git
-  - howto
-  - leopard
   - mac
-  - mod_rails
-  - mysql
-  - rails
+  - rubyonrails
 ---
 Comprou um Mac? Não sabe por onde começar? Esse é um mega-post mostrando como configurar Ruby on Rails, Git, MySQL e mod_rails no Leopard. É tudo **muito-fácil**!
 

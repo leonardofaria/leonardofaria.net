@@ -12,7 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 Trabalhar com Rails é certeza de encontrar ótimo material para trabalhar/documentar sua aplicação. Tenho uma lista de plugins/gems úteis para o desenvolvimento, o que daria um enorme post. Seguindo os conceitos do Getting Real, rapidinho vou postando (é muito material).
 
@@ -34,5 +34,7 @@ O primeiro da lista é o [annotate_model](http://github.com/ctran/annotate_model
 #
 
 class Comment < ActiveRecord::Base
+  # ...
+end
 ```
- Uma forma de se conhecer os atributos de uma entidade é, a partir do script/console, digitar: Model.new.attributes, entretanto com o gem, o conhecimento dessas informações fica bem mais fácil. Após instalada (sudo gem install annotate-models), bastar executar o comando annotate na pasta do seu aplicativo. Simples, rápido e quebra um galhão.
+ Uma forma de se conhecer os atributos de uma entidade é, a partir do script/console, digitar: `Model.new.attributes`, entretanto com o gem, o conhecimento dessas informações fica bem mais fácil. Após instalada (sudo gem install annotate-models), bastar executar o comando annotate na pasta do seu aplicativo. Simples, rápido e quebra um galhão.

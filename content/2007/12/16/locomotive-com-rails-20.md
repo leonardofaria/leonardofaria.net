@@ -10,12 +10,11 @@ permalink: /2007/12/16/locomotive-com-rails-20/
 dsq_thread_id:
   - "1031892199"
 categories:
-  - macintosh
+  - mac
   - rubyonrails
 tags:
-  - locomotive
   - mac
-  - rails
+  - rubyonrails
 ---
 Uma das formas simples de se ter Ruby on Rails no Mac é através do [Locomotive](http://www.locomotive.raaum.org/), um pacote all-in-one com Ruby, Rails e vários gems importantes para desenvolvimento. Como o Rails 2.0 foi lançado no último dia 7, resolvi atualizar minha máquina.
 

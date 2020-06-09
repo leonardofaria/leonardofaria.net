@@ -10,15 +10,9 @@ permalink: /2008/03/10/uml-e-mysql-no-mac/
 dsq_thread_id:
   - "1000137287"
 categories:
-  - desenvolvimento
-  - macintosh
-  - rubyonrails
-tags:
-  - desenvolvimento
   - mac
-  - mysql
-  - software
-  - uml
+tags:
+  - mac
 ---
 Quem não usa Mac às vezes pode pensar que soluções em desenvolvimento são escassas. Mas não são. Hoje vou apresentar duas ferramentas de modelagem de dados para Mac OS e o CocoaMySQL, para manipulação do MySQL.
 

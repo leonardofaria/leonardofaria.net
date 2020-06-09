@@ -10,10 +10,9 @@ permalink: /2008/06/07/extreme-programming-para-todos/
 dsq_thread_id:
   - "1022115991"
 categories:
-  - offtropic
+  - academic
 tags:
-  - acadêmico
-  - extreme programming
+  - academic
 ---
 Esse é outro post [acadêmico](http://www.leonardofaria.net/tag/academico) e novamente um artigo para a disciplina de Engenharia de Software. O artigo está abaixo e dessa vez há também [slides](/wp-content/uploads/2008/06/XP.pdf) (PDF, 2 MB) da apresentação feita na [Faculdade Pitágoras](http://www.faculdadepitagoras.com.br/).
 

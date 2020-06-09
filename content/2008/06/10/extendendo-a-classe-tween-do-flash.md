@@ -12,9 +12,7 @@ dsq_thread_id:
 categories:
   - flash
 tags:
-  - actionscript
   - flash
-  - tutorial
 ---
 A cada trabalho que volto ao Actionscript, me deparo com soluções interessantíssimas para problemas comuns. Esse post falar sobre classes de transição
 

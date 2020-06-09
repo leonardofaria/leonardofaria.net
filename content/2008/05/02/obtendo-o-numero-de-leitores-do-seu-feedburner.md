@@ -12,10 +12,7 @@ dsq_thread_id:
 categories:
   - php
 tags:
-  - feedburner
-  - parser
   - php
-  - xml
 ---
 Post rápido da madrugada: eu e toda blogosfera (sic) que utiliza o Feedburner para gerenciar feeds de blogs e whatever pode não gostar dessa imagenzinha:
 

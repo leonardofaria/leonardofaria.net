@@ -11,13 +11,9 @@ dsq_thread_id:
   - "1016687731"
 categories:
   - browser
-  - css
-  - desenvolvimento
-  - macintosh
+  - mac
 tags:
   - browser
-  - download
-  - ie
   - mac
 ---
 Desenvolver layouts pode ser uma tarefa difícil por causa da compatibilidade entre browsers. Isso significa que nem tudo que fique funcional em um navegador vá funcionar em outro. No Mac a alternativa para testar o Internet Explorer é instalar softwares como o VMware ou Parallels, que emulam o Windows e, a partir daí, usar o I(gnorant) Explorer. Entretanto hoje existe uma alternativa para isso: o ies4osx.

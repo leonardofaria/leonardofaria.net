@@ -12,7 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 Uma dica que pouca gente conhece sobre documentação é o gem\_server. O comando gem\_server inicia na porta 8808 uma instância WEBrick com a listagem de todos os gems instalados na máquina e suas respectivas informações de versão e inclusive documentação. Por ali, é possível obter inclusive todas as informações sobre métodos e classes dos cincos pacotes que integram o Rails. Uma vez startado, para ver o serviço basta carregar a URI [localhost:8808](http://localhost:8808) e obter uma página como a abaixo. [Dica via [Akita](http://www.akitaonrails.com)]
 

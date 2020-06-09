@@ -10,11 +10,10 @@ permalink: /2008/06/01/6-screensavers-para-seu-mac/
 dsq_thread_id:
   - "1001850800"
 categories:
-  - macintosh
-tags:
-  - download
   - mac
-  - screensaver
+  - software
+tags:
+  - mac
   - software
 ---
 Particularmente, acho os screensavers do Mac OS mais bonitos do que os do Windows e Linux. Nesse post linko alguns screensavers bem interessantes:

@@ -11,14 +11,15 @@ dsq_thread_id:
   - "1000136269"
 categories:
   - rubyonrails
+  - mac
 tags:
-  - mod_rails
-  - rails
+  - rubyonrails
+  - mac
 ---
 Que o mod_rails veio para revolucionar o deployment de Rails, todo mundo já sabe. Agora, me deparei com isso: 
 
 <center>
-  <img src="/wp-content/uploads/2008/06/passenger.jpg" alt="" title="passenger" />
+  <img src="/wp-content/uploads/2008/06/passenger.jpg" alt="Passenger" title="passenger" />
 </center>
 
 Como no [Locomotive](http://locomotive.raaum.org/), [criaram](http://www.fngtps.com/2008/06/putting-the-pane-back-into-deployment), com RubyCocoa, um painel para gerenciar suas aplicações. Agora, nem é mais preciso declarar cada aplicação no httpd.conf. Virou brincadeira, né?

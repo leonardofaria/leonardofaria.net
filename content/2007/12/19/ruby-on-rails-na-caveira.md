@@ -12,7 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 Nos últimos dias, tenho lido muita coisa sobre RoR. Infelizmente, queria blogar sobre cada um desses assuntos, mas o tempo anda muito corrido. Fiz esse mega-post com alguns links de assuntos interessantes para aprendizagem.
 

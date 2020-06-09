@@ -17,7 +17,7 @@ tags:
   - rubyonrails
 ---
 <center>
-  <a href="http://www.minasonrails.org"><img src='/wp-content/uploads/2007/11/yqewzqhzk1c5ojefw09yffo6_400.png' class='foto' alt='Minas on Rails' class='foto' /></a>
+  <a href="http://www.minasonrails.org"><img src='/wp-content/uploads/2007/11/yqewzqhzk1c5ojefw09yffo6_400.png' alt='Minas on Rails' /></a>
 </center>
 
   

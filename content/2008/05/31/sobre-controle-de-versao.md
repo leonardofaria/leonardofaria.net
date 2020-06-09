@@ -10,10 +10,11 @@ permalink: /2008/05/31/sobre-controle-de-versao/
 dsq_thread_id:
   - "1007796758"
 categories:
-  - offtropic
+  - academic
+  - git
 tags:
-  - acadêmico
-  - desenvolvimento
+  - academic
+  - git
 ---
 Na disciplina de Engenharia de Software que faço no curso de Sistemas de Informação da Faculdade Pitágoras, fiz um trabalho introdutório sobre Sistemas de Controle de Versão. O trabalho está abaixo e também disponível em [PDF](/wp-content/uploads/2008/05/controle.pdf).
 

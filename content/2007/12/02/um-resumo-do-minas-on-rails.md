@@ -11,11 +11,10 @@ dsq_thread_id:
   - "5342049188"
 categories:
   - rubyonrails
+  - event
 tags:
-  - bh
-  - encontro
-  - minasonrails
-  - rails
+  - rubyonrails
+  - event
 ---
 Ontem aconteceu o Minas on Rails. O evento surgiu da idéia do [Ronaldo Ferraz](http://logbr.reflectivesurface.com/) e da organização do pessoal da [Dito](http://www.dito.com.br) – André, [Milk-it](http://www.milk-it.net/) – Carlos, Michel e cia, [Idéia Digital](http://www.ideiadigital.ppg.br/) – Rafael Apocalypse, entre outros. Eu, dei meus pitacos sobre a organização do evento na lista [rails-mg](http://groups.google.com.br/group/rails-mg?hl=pt-BR). O evento começou com uma alfineta engraçadíssima ao Cake PHP, o Ronaldo ficou [blogando ao vivo](http://logbr.reflectivesurface.com/2007/12/01/minas-on-rails-o-trem-esta-rolando/) e o Open Talk final foi descontraído e bacana.
 
