@@ -24,6 +24,7 @@ disqusShortname = "leonardofaria"
   twitter = "leozera"
   linkedin = "https://linkedin.com/in/leonardofariacoelho"
   email = "leonardofaria@gmail.com"
+  rss = "/feed"
 
   avatar = "images/avatar.jpg"
 
