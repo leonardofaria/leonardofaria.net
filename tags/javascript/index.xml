@@ -1,16 +1,120 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>javascript on Leonardo Faria</title><link>https://leonardofaria.net/tags/javascript/</link><description>Recent content in javascript on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 16 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://leonardofaria.net/tags/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>Creating your own ESLint config package</title><link>https://leonardofaria.net/2020/06/16/creating-your-own-eslint-config-package/</link><pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate><guid>https://leonardofaria.net/2020/06/16/creating-your-own-eslint-config-package/</guid><description>ESLint is a powerful tool to enforce consistent coding conventions and ensure quality in your JavaScript codebase. Coding conventions are sometimes difficult to decide and having a tool to automate enforcement is great to avoid unnecessary discussions. Ensuring quality is also a welcoming feature: linters are excellent tools for catching bugs, such as those related to variable scope.
-ESLint is designed to be completely configurable, giving you the option of enabling/disabling each rule, or mixing the rules to match your needs.</description></item><item><title>jQuery no Spotlight</title><link>https://leonardofaria.net/2009/05/25/jquery-no-spotlight/</link><pubDate>Mon, 25 May 2009 00:21:40 -0300</pubDate><guid>https://leonardofaria.net/2009/05/25/jquery-no-spotlight/</guid><description>Anteriormente eu postei sobre como integrar a documentação do Ruby e do Rails no dicionário do Mac OS, que automaticamente é indexado pelo Spotlight.
-A dica de hoje é copiar o ‘dicionário&amp;rsquo; do jQuery para a pasta de dicionários do seu usuário (~/Library/Dictionaries) e curtir a documentação do jQuery dentro do Spotlight.
-PS.: existe também um aplicativo AIR com a API do jQuery.
-PS 2.: jPlanet é um agregador de conteúdo sobre jQuery.</description></item><item><title>Bookmarklet para ver propriedades dos elementos de uma página</title><link>https://leonardofaria.net/2007/08/05/bookmarklet-para-ver-propriedades-dos-elementos-de-uma-pagina/</link><pubDate>Sun, 05 Aug 2007 22:47:54 -0300</pubDate><guid>https://leonardofaria.net/2007/08/05/bookmarklet-para-ver-propriedades-dos-elementos-de-uma-pagina/</guid><description>O XRAY é um bookmarklet para Safari e família Mozilla que mostra as características de determinado elemento de uma página. Para quem usa Firefox, o XRAY lembra a função Inspect da extension Firebug. Recomendado!
-P.S.: do mesmo desenvolvedor do XRAY vem um guia bacaníssimo sobre CSS.</description></item><item><title>Novas janelas em Javascript não-obstrusivo</title><link>https://leonardofaria.net/2007/06/23/novas-janelas-em-javascript-nao-obstrusivo/</link><pubDate>Sat, 23 Jun 2007 00:49:44 -0300</pubDate><guid>https://leonardofaria.net/2007/06/23/novas-janelas-em-javascript-nao-obstrusivo/</guid><description>A newsletter dessa semana do SitePoint mostrou uma forma bem interessante de abrir novas janelas com javascript não-obstrusivo e validando XHTML Strict (para quem não sabe, o atributo ‘target&amp;rsquo; da tag ‘a&amp;rsquo; não passa na validação).
-&amp;lt;a href=&amp;#34;http://example.com/&amp;#34; onclick=&amp;#34; if (confirm(&amp;#39;Open this link in a new window?&amp;#39;)) { open(&amp;#39;http://example.com/&amp;#39;); return false; } &amp;#34;&amp;gt;external link&amp;lt;/a&amp;gt; Basicamente, emprega-se o uso de uma caixa de diálogo. Bem simples. Uma alternativa mais sofisticada é criar uma função e ativá-la através do uso de uma classe.</description></item><item><title>12 efeitos bacanas com script.aculo.us</title><link>https://leonardofaria.net/2006/11/13/12-motivos-para-usar-scriptaculous/</link><pubDate>Mon, 13 Nov 2006 17:17:22 -0200</pubDate><guid>https://leonardofaria.net/2006/11/13/12-motivos-para-usar-scriptaculous/</guid><description>&lt;p>Criar efeitos visuais em Javascript era algo bem complexo. Muitos efeitos da lista que cito abaixo era algo somente imaginável para criar, para mim, no Flash. Entretanto, as coisas mudaram. O &lt;a href="http://script.aculo.us/">script.aculo.us&lt;/a> é uma biblioteca que permite a criação de efeitos de forma super-simples, sem requerer conhecimentos jedi em JS. Vamos a lista então:&lt;/p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>javascript on Leonardo Faria</title><link>https://leonardofaria.net/tags/javascript/</link><description>Recent content in javascript on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 16 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://leonardofaria.net/tags/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>Creating your own ESLint config package</title><link>https://leonardofaria.net/2020/06/16/creating-your-own-eslint-config-package/</link><pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate><guid>https://leonardofaria.net/2020/06/16/creating-your-own-eslint-config-package/</guid><description>&lt;p>ESLint is a powerful tool to enforce consistent coding conventions and ensure quality in your JavaScript codebase. Coding conventions are sometimes difficult to decide and having a tool to automate enforcement is great to avoid unnecessary discussions. Ensuring quality is also a welcoming feature: linters are excellent tools for catching bugs, such as those related to variable scope.&lt;/p>
+&lt;p>ESLint is designed to be completely configurable, giving you the option of enabling/disabling each rule, or mixing the rules to match your needs. With this in mind, the JavaScript community and companies who use JavaScript can extend the original ESLint config. There are &lt;a href="https://www.npmjs.com/search?q=eslint-config">several examples&lt;/a> in the npm registry: &lt;a href="https://www.npmjs.com/package/eslint-config-airbnb">eslint-config-airbnb&lt;/a> is one of the most famous.&lt;/p>
+&lt;p>In your daily basis, you will probably combine more than one config, since there is no one-config-fits-all. This post will show how to create your repository of configurations, giving you the option to centralize all your rule definitions.&lt;/p>
+&lt;p>The first step is creating a new folder and creating an npm project. &lt;a href="https://eslint.org/docs/developer-guide/shareable-configs">By convention&lt;/a>, the module name begins with &lt;code>eslint-config-&lt;/code>, such as &lt;code>eslint-config-test&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mkdir eslint-config-test
+&lt;span style="color:#0086b3">cd&lt;/span> eslint-config-test
+npm init
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>You will have a package.json file that will look like the following snippet:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;span style="color:#000080">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;eslint-config-test&amp;#34;&lt;/span>,
+&lt;span style="color:#000080">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;1.0.0&amp;#34;&lt;/span>,
+&lt;span style="color:#000080">&amp;#34;description&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;&amp;#34;&lt;/span>,
+&lt;span style="color:#000080">&amp;#34;main&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;index.js&amp;#34;&lt;/span>,
+&lt;span style="color:#000080">&amp;#34;scripts&amp;#34;&lt;/span>: {
+&lt;span style="color:#000080">&amp;#34;test&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;echo \&amp;#34;Error: no test specified\&amp;#34; &amp;amp;&amp;amp; exit 1&amp;#34;&lt;/span>
+},
+&lt;span style="color:#000080">&amp;#34;author&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;&amp;#34;&lt;/span>,
+&lt;span style="color:#000080">&amp;#34;license&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;ISC&amp;#34;&lt;/span>
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Next, time to add your ESLint dependencies:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install -D eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-import eslint-plugin-jsx eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The packages will change according to your needs. In this case, I work with React codebases and I use &lt;a href="https://prettier.io/">Prettier&lt;/a> to format my code. The &lt;a href="https://eslint.org/docs/developer-guide/shareable-configs#publishing-a-shareable-config">documentation&lt;/a> mentions that if your shareable config depends on a plugin, you should also specify it as a &lt;code>peerDependency&lt;/code>.&lt;/p>
+&lt;p>Next, I will create a &lt;code>.eslintrc.js&lt;/code> with my configuration - this is similar to what you already do in your apps:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">module.exports &lt;span style="color:#000;font-weight:bold">=&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">extends&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> [
+&lt;span style="color:#d14">&amp;#39;airbnb&amp;#39;&lt;/span>,
+&lt;span style="color:#d14">&amp;#39;eslint:recommended&amp;#39;&lt;/span>,
+&lt;span style="color:#d14">&amp;#39;plugin:import/errors&amp;#39;&lt;/span>,
+&lt;span style="color:#d14">&amp;#39;plugin:react/recommended&amp;#39;&lt;/span>,
+&lt;span style="color:#d14">&amp;#39;plugin:jsx-a11y/recommended&amp;#39;&lt;/span>,
+&lt;span style="color:#d14">&amp;#39;plugin:prettier/recommended&amp;#39;&lt;/span>,
+&lt;span style="color:#d14">&amp;#39;prettier/react&amp;#39;&lt;/span>,
+],
+plugins&lt;span style="color:#000;font-weight:bold">:&lt;/span> [
+&lt;span style="color:#d14">&amp;#39;react-hooks&amp;#39;&lt;/span>,
+],
+rules&lt;span style="color:#000;font-weight:bold">:&lt;/span> {
+},
+};
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The &lt;code>rules&lt;/code> object stores any rule that you want to override. In the snippet above &lt;code>rules&lt;/code> is empty but feel free to check &lt;a href="https://github.com/leonardofaria/eslint-config-leozera/blob/master/.eslintrc.js#L14:L58">my overrides&lt;/a>. In the airbnb/javascript repository you can &lt;a href="https://github.com/airbnb/javascript/issues/1089">find a list of overridden rules&lt;/a> by the community.&lt;/p>
+&lt;p>Time to create a &lt;code>.prettierrc&lt;/code> with your custom rules - this is a tricky part since Prettier and ESLint can conflict in a few rules:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;span style="color:#000080">&amp;#34;tabWidth&amp;#34;&lt;/span>: &lt;span style="color:#099">2&lt;/span>
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>It is important to mention that the &lt;code>.prettierrc&lt;/code> file should live in the root of the project that is using your package. Right now, I am manually copying it. Next step is exporting your config in the &lt;code>index.js&lt;/code> file:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="color:#000;font-weight:bold">const&lt;/span> eslintrc &lt;span style="color:#000;font-weight:bold">=&lt;/span> require(&lt;span style="color:#d14">&amp;#39;./.eslintrc.js&amp;#39;&lt;/span>);
+module.exports &lt;span style="color:#000;font-weight:bold">=&lt;/span> eslintrc;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>It is technically possible to create all configuration in the &lt;code>index.js&lt;/code> file however you wouldn&amp;rsquo;t get the config object linted (insert your &lt;a href="https://www.imdb.com/title/tt1375666/">Inception&lt;/a> joke here).&lt;/p>
+&lt;p>&lt;em>Voilà!&lt;/em> That&amp;rsquo;s all you need to start your own package of configurations. You can test locally your config package by running, in a JavaScript project:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install /Users/leonardo/path/to/eslint-config-test
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Keep in mind that the dependencies of your configuration package may also be installed.&lt;/p>
+&lt;p>If everything looks fine, you can publish to the npm registry:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm publish
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="full-example">Full example&lt;/h2>
+&lt;p>I have a functional GitHub project showing the setup of this post: &lt;a href="https://github.com/leonardofaria/eslint-config-leozera">eslint-config-leozera&lt;/a>. You can also see it below:&lt;/p>
+&lt;div class="full-width">
+&lt;iframe
+src="https://codesandbox.io/embed/github/leonardofaria/eslint-config-leozera/tree/master/?fontsize=14&amp;theme=dark"
+style="width:100%; height:600px; border:0;overflow:hidden;"
+title="leonardofaria/eslint-config-leozera"
+allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+>&lt;/iframe>
+&lt;/div>
+&lt;h2 id="more-about-it">More about it&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://eslint.org/docs/user-guide/configuring">Configuring ESLint&lt;/a>: official ESLint docs. You know, &lt;em>read the docs&lt;/em>&lt;/li>
+&lt;li>&lt;a href="https://medium.com/@bretcameron/how-to-publish-your-first-npm-package-b224296fc57b">How to publish your first NPM package&lt;/a>: quoting the post subtitle&amp;rdquo;, everything you need to know to create a NPM package&amp;rdquo;&lt;/li>
+&lt;li>&lt;a href="https://github.com/wesbos/eslint-config-wesbos">eslint-config-wesbos&lt;/a>: a project by &lt;a href="https://www.wesbos.com/">Wes Bos&lt;/a> that help me doing this work&lt;/li>
+&lt;/ul></description></item><item><title>jQuery no Spotlight</title><link>https://leonardofaria.net/2009/05/25/jquery-no-spotlight/</link><pubDate>Mon, 25 May 2009 00:21:40 -0300</pubDate><guid>https://leonardofaria.net/2009/05/25/jquery-no-spotlight/</guid><description>&lt;p>&lt;a href="https://leonardofaria.net/2009/02/08/documentacao-do-rails-e-ruby-no-spotlight/">Anteriormente&lt;/a> eu postei sobre como integrar a documentação do Ruby e do Rails no dicionário do Mac OS, que automaticamente é indexado pelo Spotlight.&lt;/p>
+&lt;center>
+&lt;a href="http://www.appelsiini.net/2009/2/search-jquery-api-docs-from-spotlight">&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/05/jquery_spotlight.png" alt="jquery_spotlight" title="jquery no spotlight" />&lt;/a>
+&lt;/center>
+&lt;p>A dica de hoje é &lt;a href="http://www.appelsiini.net/download/jQuery.dictionary.zip">copiar o ‘dicionário&amp;rsquo;&lt;/a> do &lt;a href="http://www.jquery.com">jQuery&lt;/a> para a pasta de dicionários do seu usuário (&lt;code>~/Library/Dictionaries&lt;/code>) e curtir a documentação do jQuery dentro do Spotlight.&lt;/p>
+&lt;p>PS.: existe também um &lt;a href="http://api.jquery.com/update/jquery-api-browser-2.0.air">aplicativo AIR&lt;/a> com a API do jQuery.&lt;br>
+PS 2.: &lt;a href="http://jplanet.tumblr.com/">jPlanet&lt;/a> é um agregador de conteúdo sobre jQuery. Assine o feed!&lt;/p></description></item><item><title>Bookmarklet para ver propriedades dos elementos de uma página</title><link>https://leonardofaria.net/2007/08/05/bookmarklet-para-ver-propriedades-dos-elementos-de-uma-pagina/</link><pubDate>Sun, 05 Aug 2007 22:47:54 -0300</pubDate><guid>https://leonardofaria.net/2007/08/05/bookmarklet-para-ver-propriedades-dos-elementos-de-uma-pagina/</guid><description>&lt;p>O &lt;a href="http://westciv.com/xray/">XRAY&lt;/a> é um bookmarklet para Safari e família Mozilla que mostra as características de determinado elemento de uma página. Para quem usa Firefox, o XRAY lembra a função Inspect da extension Firebug. Recomendado!&lt;/p>
+&lt;p>P.S.: do &lt;a href="http://westciv.com/">mesmo desenvolvedor&lt;/a> do XRAY vem um &lt;a href="http://westciv.com/style_master/academy/css_tutorial/index.html">guia bacaníssimo sobre CSS&lt;/a>.&lt;/p></description></item><item><title>Novas janelas em Javascript não-obstrusivo</title><link>https://leonardofaria.net/2007/06/23/novas-janelas-em-javascript-nao-obstrusivo/</link><pubDate>Sat, 23 Jun 2007 00:49:44 -0300</pubDate><guid>https://leonardofaria.net/2007/06/23/novas-janelas-em-javascript-nao-obstrusivo/</guid><description>&lt;p>A newsletter dessa semana do &lt;a href="http://www.sitepoint.com/">SitePoint&lt;/a> mostrou uma forma bem interessante de abrir novas janelas com javascript não-obstrusivo e validando XHTML Strict (para quem não sabe, o atributo ‘target&amp;rsquo; da tag ‘a&amp;rsquo; não passa na validação).&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;http://example.com/&amp;#34;&lt;/span> &lt;span style="color:#008080">onclick&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;
+&lt;/span>&lt;span style="color:#d14"> if (confirm(&amp;#39;Open this link in a new window?&amp;#39;)) {
+&lt;/span>&lt;span style="color:#d14"> open(&amp;#39;http://example.com/&amp;#39;);
+&lt;/span>&lt;span style="color:#d14"> return false;
+&lt;/span>&lt;span style="color:#d14"> }
+&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>&amp;gt;external link&amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Basicamente, emprega-se o uso de uma caixa de diálogo. Bem simples. Uma alternativa mais sofisticada é criar uma função e ativá-la através do uso de uma classe. Veja:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;http://example.com/&amp;#34;&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;ext&amp;#34;&lt;/span>&amp;gt;external link&amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">script&lt;/span> &lt;span style="color:#008080">type&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;text/javascript&amp;#34;&lt;/span>&amp;gt;
+&lt;span style="color:#000;font-weight:bold">var&lt;/span> links &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#0086b3">document&lt;/span>.getElementsByTagName(&lt;span style="color:#d14">&amp;#34;a&amp;#34;&lt;/span>);
+&lt;span style="color:#000;font-weight:bold">for&lt;/span> (&lt;span style="color:#000;font-weight:bold">var&lt;/span> i &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#099">0&lt;/span>; i &lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span> links.length; i&lt;span style="color:#000;font-weight:bold">++&lt;/span>) {
+&lt;span style="color:#000;font-weight:bold">var&lt;/span> link &lt;span style="color:#000;font-weight:bold">=&lt;/span> links[i];
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> (link.className &lt;span style="color:#000;font-weight:bold">==&lt;/span> &lt;span style="color:#d14">&amp;#34;ext&amp;#34;&lt;/span>) {
+link.onclick &lt;span style="color:#000;font-weight:bold">=&lt;/span> clickHandler;
+}
+}
+&lt;span style="color:#000;font-weight:bold">function&lt;/span> clickHandler() {
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> (confirm(&lt;span style="color:#d14">&amp;#34;Open this link in a new window?&amp;#34;&lt;/span>)) {
+open(&lt;span style="color:#000;font-weight:bold">this&lt;/span>.href);
+&lt;span style="color:#000;font-weight:bold">return&lt;/span> &lt;span style="color:#000;font-weight:bold">false&lt;/span>;
+}
+}
+&amp;lt;/&lt;span style="color:#000080">script&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>12 efeitos bacanas com script.aculo.us</title><link>https://leonardofaria.net/2006/11/13/12-motivos-para-usar-scriptaculous/</link><pubDate>Mon, 13 Nov 2006 17:17:22 -0200</pubDate><guid>https://leonardofaria.net/2006/11/13/12-motivos-para-usar-scriptaculous/</guid><description>&lt;p>Criar efeitos visuais em Javascript era algo bem complexo. Muitos efeitos da lista que cito abaixo era algo somente imaginável para criar, para mim, no Flash. Entretanto, as coisas mudaram. O &lt;a href="http://script.aculo.us/">script.aculo.us&lt;/a> é uma biblioteca que permite a criação de efeitos de forma super-simples, sem requerer conhecimentos jedi em JS. Vamos a lista então:&lt;/p>
 &lt;ol>
 &lt;li>&lt;a href="http://pragmaticobjects.org/index.php?itemid=7">Image Gallery&lt;/a> – Efeitos suaves e bem feitos&lt;/li>
 &lt;li>&lt;a href="http://mir.aculo.us/stuff/reflector/reflector.html">Reflector&lt;/a> – Imagens com reflexos (muito usado no site da Apple)&lt;/li>
 &lt;li>&lt;a href="http://www.bartelme.at/journal/archive/accessible_javascript_newsticker">Newsticker&lt;/a> – Newsticker não-obstrusivo&lt;/li>
 &lt;li>&lt;a href="http://www.ajaxcf.com/blog/index.cfm/2006/2/28/Building-a-Local-AutoCompleter">Auto-Completer&lt;/a> – Estilo Google Suggest&lt;/li>
 &lt;li>&lt;a href="http://wiki.script.aculo.us/scriptaculous/show/Autocompleter.Local">Auto-Completer&lt;/a> – Demo do wiki do script.aculo.us&lt;/li>
-&lt;/ol></description></item><item><title>Bookmarklets</title><link>https://leonardofaria.net/2006/06/08/bookmarklets/</link><pubDate>Thu, 08 Jun 2006 14:55:37 -0300</pubDate><guid>https://leonardofaria.net/2006/06/08/bookmarklets/</guid><description>Há pelo menos 2 anos, falei dos bookmarklets, Javascripts que modificam o comportamento do navegador. Talvez eles seriam o avó do Greasemonkey, que prometem algo semelhante, mais com uma maior riqueza e poder.
-Nas versões anteriores do site, sempre divulgava vários desses Javascripts. Na transição de versão do site, havia me esquecido deles. Mais agora, separei a documentação.
-P.S.: Na Revista Webdesign de março desse ano há uma interessante reportagem sobre esses recursos, onde inclusive aparece meu nome.</description></item></channel></rss>
+&lt;/ol>
+&lt;ol start="6">
+&lt;li>&lt;a href="http://blog.remvee.net/post/17">Slideshow&lt;/a>&lt;/li>
+&lt;li>Outro &lt;a href="http://www.bigbold.com/snippets/posts/show/1068">Slideshow&lt;/a>&lt;/li>
+&lt;li>Outro &lt;a href="http://mikeomatic.net/?p=78">Newsticker&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://blog.innerewut.de/articles/2006/10/19/a-prototype-based-javascript-tooltip">Tooltip&lt;/a>&lt;/li>
+&lt;li>Efeito &lt;a href="http://prototype-carousel.xilinus.com/">Carousel&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.ajaxlessons.com/2006/02/19/ajax-workshop-3-shopping-cart-using-scriptaculous">Shopping car&lt;/a> – Nada que se compara a loja virtual da &lt;a href="http://panic.com/goods/">Panic&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.glanzani.com.ar/select/">Select box replacement&lt;/a> – Vindo dos hermanos&lt;/li>
+&lt;/ol>
+&lt;p>[tags]script.aculo.us, frameworks, prototype, web2.0, javascript[/tags]&lt;/p></description></item><item><title>Bookmarklets</title><link>https://leonardofaria.net/2006/06/08/bookmarklets/</link><pubDate>Thu, 08 Jun 2006 14:55:37 -0300</pubDate><guid>https://leonardofaria.net/2006/06/08/bookmarklets/</guid><description>&lt;p>&lt;a href="https://leonardofaria.net/wp-content/uploads/2006/06/flickr.jpg">&lt;img src="https://leonardofaria.net/wp-content/uploads/2006/06/flickr.jpg" alt="Revista Webdesign" width="250" align="right" />&lt;/a>Há pelo menos 2 anos, falei dos bookmarklets, Javascripts que modificam o comportamento do navegador. Talvez eles seriam o avó do Greasemonkey, que prometem algo semelhante, mais com uma maior riqueza e poder.&lt;/p>
+&lt;p>Nas versões anteriores do site, sempre divulgava vários desses Javascripts. Na transição de versão do site, havia me esquecido deles. Mais agora, &lt;a href="https://leonardofaria.net/wp-content/uploads/2006/06/bookmarklets.html">separei&lt;/a> a documentação.&lt;/p>
+&lt;p>P.S.: Na &lt;a href="http://www.arteccom.com.br/webdesign">Revista Webdesign&lt;/a> de março desse ano há uma interessante reportagem sobre esses recursos, onde inclusive aparece meu nome.&lt;/p></description></item></channel></rss>

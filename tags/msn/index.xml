@@ -1,2 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>msn on Leonardo Faria</title><link>https://leonardofaria.net/tags/msn/</link><description>Recent content in msn on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 28 May 2006 17:57:30 -0300</lastBuildDate><atom:link href="https://leonardofaria.net/tags/msn/index.xml" rel="self" type="application/rss+xml"/><item><title>Monitorando o MSN de uma rede</title><link>https://leonardofaria.net/2006/05/28/monitorando-o-msn-de-uma-rede/</link><pubDate>Sun, 28 May 2006 17:57:30 -0300</pubDate><guid>https://leonardofaria.net/2006/05/28/monitorando-o-msn-de-uma-rede/</guid><description>&lt;p>Esse artigo não tem tanto a ver com esse site, mas pode ajudar muitos admistradores de rede Linux.&lt;/p>
-&lt;p>O uso do MSN desenfreado pode acabar com a produtividade do trabalho em uma empresa, por exemplo. Aonde eu trabalho, implementamos uma solução interessante: um sniffer, que gera relatórios das conversas dos funcionários (o que não é tão ético assim) e que está instalado em nosso servidor de Internet (rodando Slackware Linux).&lt;/p></description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>msn on Leonardo Faria</title><link>https://leonardofaria.net/tags/msn/</link><description>Recent content in msn on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 28 May 2006 17:57:30 -0300</lastBuildDate><atom:link href="https://leonardofaria.net/tags/msn/index.xml" rel="self" type="application/rss+xml"/><item><title>Monitorando o MSN de uma rede</title><link>https://leonardofaria.net/2006/05/28/monitorando-o-msn-de-uma-rede/</link><pubDate>Sun, 28 May 2006 17:57:30 -0300</pubDate><guid>https://leonardofaria.net/2006/05/28/monitorando-o-msn-de-uma-rede/</guid><description>&lt;p>Esse artigo não tem tanto a ver com esse site, mas pode ajudar muitos admistradores de rede Linux.&lt;/p>
+&lt;p>O uso do MSN desenfreado pode acabar com a produtividade do trabalho em uma empresa, por exemplo. Aonde eu trabalho, implementamos uma solução interessante: um sniffer, que gera relatórios das conversas dos funcionários (o que não é tão ético assim) e que está instalado em nosso servidor de Internet (rodando Slackware Linux).&lt;/p>
+&lt;p>O software que usamos chama-se &lt;a href="http://sourceforge.net/projects/im-snif/">im-snif&lt;/a>. Infelizmente, seu projeto não está documentado. Talvez essa seja a única documentação sobre ele.&lt;br>
+Após o &lt;a href="http://sourceforge.net/project/showfiles.php?group_id=92795&amp;amp;package_id=98290&amp;amp;release_id=353699">download&lt;/a> do software, instale-o com:&lt;br>
+&lt;code>installpkg imsniff_0.04.tgz&lt;/code>&lt;/p>
+&lt;p>Após a instalação do software, vá até a pasta /linux, onde é para lá que o programa é copiado.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#0086b3">cd&lt;/span> /linux/
+./build
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>A linha acima, &lt;code>./build&lt;/code>, é usada para compilá-lo, aparentemente.&lt;br>
+Para executá-lo, faça:&lt;br>
+&lt;code>./imsniff -cd log --dd log -p eth0 &amp;amp;&lt;/code>&lt;br>
+Através do comando &lt;code>./imsniff -help&lt;/code>, obtém-se como executar o programa.&lt;/p>
+&lt;p>&lt;strong>[Update]&lt;/strong> O &lt;a href="http://www.ataliba.eti.br">Ataliba&lt;/a> me sugeriu uma forma rápida de colocar o sniffer durante o boot. Cole o conteúdo a seguir em um arquivo chamado &lt;code>rc.msniff&lt;/code>, dentro do &lt;code>/etc/rc.d/&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#999;font-weight:bold;font-style:italic">#!/bin/sh
+&lt;/span>&lt;span style="color:#999;font-weight:bold;font-style:italic">&lt;/span> imsstart&lt;span style="color:#000;font-weight:bold">()&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#0086b3">cd&lt;/span> /linux/
+./imsniff -opcoes&lt;span style="color:#d14">`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#000;font-weight:bold">case&lt;/span> &lt;span style="color:#008080">$1&lt;/span> in
+&amp;amp;&lt;span style="color:#998;font-style:italic">#8220;start&amp;amp;#8221;)&lt;/span>
+imsstart
+;;
+&amp;amp;&lt;span style="color:#998;font-style:italic">#8220;stop&amp;amp;#8221;)&lt;/span>
+killall -9 imsniff
+;;
+*&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;span style="color:#0086b3">echo&lt;/span> &amp;amp;&lt;span style="color:#998;font-style:italic">#8220;Use: rc.imsniff start or stop &amp;amp;#8220;&lt;/span>
+;;
+&lt;span style="color:#000;font-weight:bold">esac&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Depois disso, acrescente &lt;code>/etc/rc.d/rc.imsniff start&lt;/code> no arquivo &lt;code>rc.local&lt;/code>, do diretório &lt;code>/etc/rc.d&lt;/code> e seja feliz! (Ah, o arquivo tem que ter permissão de execução!)&lt;/p>
+&lt;p>&lt;strong>[Update 2]&lt;/strong> Recebi um email ontem perguntando se analisei o código-fonte do sniffer, verificando se era seguro a sua execução. Não, não verifiquei.&lt;/p>
+&lt;p>&lt;strong>Mais do mesmo:&lt;/strong>&lt;br>
+&lt;a href="http://www.slackwarenaveia.org/modules.php?name=Sections&amp;amp;op=viewarticle&amp;amp;artid=315">Outra solução&lt;/a> em sniffer. Chegamos a testá-la, mais ela não foi tão amiga assim.&lt;/p></description></item></channel></rss>

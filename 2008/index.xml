@@ -1,47 +1,465 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2008s on Leonardo Faria</title><link>https://leonardofaria.net/2008/</link><description>Recent content in 2008s on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 26 Dec 2008 16:02:10 -0200</lastBuildDate><atom:link href="https://leonardofaria.net/2008/index.xml" rel="self" type="application/rss+xml"/><item><title>Edge Rails: método render mais esperto</title><link>https://leonardofaria.net/2008/12/26/edge-rails-metodo-render-mais-esperto/</link><pubDate>Fri, 26 Dec 2008 16:02:10 -0200</pubDate><guid>https://leonardofaria.net/2008/12/26/edge-rails-metodo-render-mais-esperto/</guid><description>Quem já está usando o Rails 2.2 já deve estar vendo um warning: no Rails 2.3, o método render está mais esperto e dispensará a instrução sobre qual tipo de renderização ele está fazendo. Confira:
-Agora, você não precisa especificar se quer renderizar uma action, template ou file. Isso é bem legal e mostra cada vez mais o minimalismo do framework.</description></item><item><title>Os axiomas de Zurique</title><link>https://leonardofaria.net/2008/12/04/os-axiomas-de-zurique/</link><pubDate>Thu, 04 Dec 2008 12:28:04 -0200</pubDate><guid>https://leonardofaria.net/2008/12/04/os-axiomas-de-zurique/</guid><description>Num país onde 75% dos carros vendidos são financiados, onde os juros do cheque especial são os maiores dos últimos 5 anos e onde instituições financeiras faturam grandezas de 6 dígitos, a maneira com que você gerencia seu dinheiro pode fazê-lo um vencedor ou apenas mais um endividado do terceiro mundo.
-Esse ano fiz um curso sobre como operar na bolsa de valores sendo um pequeno investidor e tive acesso a um livro que revoluciona a vida financeira de qualquer um: Os Axiomas de Zurique desperta em você seu lado investidor adormecido e trás mandamentos muito interessantes sobre o mercado financeiro.</description></item><item><title>gem cheat</title><link>https://leonardofaria.net/2008/11/29/gem-cheat/</link><pubDate>Sat, 29 Nov 2008 20:23:04 -0200</pubDate><guid>https://leonardofaria.net/2008/11/29/gem-cheat/</guid><description>Essa é uma gem do Chris Wanstrath que muita gente não conhece e que só hoje me deparei. Para instalar:
-gem install cheat Para usar, basta executar no terminal o comando cheat acrescido do assunto desejado, como por exemplo: cheat rails_svn. A lista de todas cheats é encontradada executando:
-cheat sheets</description></item><item><title>PHP junto com o Passenger no Leopard</title><link>https://leonardofaria.net/2008/11/26/php-junto-com-o-passenger-no-leopard/</link><pubDate>Wed, 26 Nov 2008 23:32:30 -0200</pubDate><guid>https://leonardofaria.net/2008/11/26/php-junto-com-o-passenger-no-leopard/</guid><description>Na minha máquina de desenvolvimento uso o Passenger para trabalhar com o Rails e hoje eu precisei fazer alguns testes com PHP. Deixar o PHP junto com o Passenger é tão simples como 2 + 2 são 4. Vamos lá.
-Abra o arquivo de configuração do Apache (/etc/apache2/httpd.conf) como superusuário e procure a linha que chama o módulo do PHP (linha 114):
-LoadModule php5_module libexec/apache2/libphp5.so Basta descomentar essa linha. Em seguida, no fim desse arquivo, crie um host virtual chamado php:</description></item><item><title>Quer conhecer mais da história da Apple?</title><link>https://leonardofaria.net/2008/11/23/quer-conhecer-mais-da-historia-da-apple/</link><pubDate>Sun, 23 Nov 2008 21:08:43 -0200</pubDate><guid>https://leonardofaria.net/2008/11/23/quer-conhecer-mais-da-historia-da-apple/</guid><description>O Mactracker é um aplicativo que reúne toda a linha de produtos da Apple. Há inclusive uma versão online do app para iPhone. Muito interessante! Além desse app, existe também o site Apple History, com um banco de dados cheio de informações e a possibilidade de download das informações.
-Se você gosta de publicidade e design, deve conferir os anúncios da maçã desde os primórdios da computação, as screenshots da homepage apple.</description></item><item><title>Migrations sem timestamp</title><link>https://leonardofaria.net/2008/11/09/migrations-sem-timestamp/</link><pubDate>Sun, 09 Nov 2008 16:22:44 -0200</pubDate><guid>https://leonardofaria.net/2008/11/09/migrations-sem-timestamp/</guid><description>No Rails 2.0, os arquivos de migração eram gerados com o prefixo do timestamp. Exemplo: 20080614155951_create_users.rb. Nas versões anteriores, o prefixo era numérico. Para o Rails 2.2, será possível você mesmo configurar isso, definindo no environment.rb:
-Vale a pena a leitura do Release Notes do Rails 2.2 e, se você ainda não pegou o RC 1 do Rails, lembre-se:
-gem install rails -s http://gems.rubyonrails.org -v 2.2.0</description></item><item><title>RubyMine: Textmate-killer?</title><link>https://leonardofaria.net/2008/11/08/rubymine-textmate-killer/</link><pubDate>Sat, 08 Nov 2008 19:07:41 -0200</pubDate><guid>https://leonardofaria.net/2008/11/08/rubymine-textmate-killer/</guid><description>Essa semana apareceu uma nova IDE para Ruby: a RubyMine, que se auto-denomina com a mais inteligente IDE para Ruby. O software é multiplataforma e parece ser bem interessante. Notei algumas coisinhas numa primeira-impressão:
-há templates para testes (RSpec e TestUnit)
-2) integração com o Mac OS: o look&amp;rsquo;n feel não combina muito (= feia) com o sistema e ele está mais para NetBeans e Eclipse do que para um Textmate.</description></item><item><title>Google em 2001</title><link>https://leonardofaria.net/2008/10/23/google-em-2001/</link><pubDate>Thu, 23 Oct 2008 00:18:20 -0200</pubDate><guid>https://leonardofaria.net/2008/10/23/google-em-2001/</guid><description>Como parte das comemorações dos 10 anos, o Google criou uma busca que indexa tudo como era 2001. Um verdadeiro túnel do tempo. Bem interessante.</description></item><item><title>Integração contínua no codestacker</title><link>https://leonardofaria.net/2008/10/23/integracao-continua-no-codestacker/</link><pubDate>Thu, 23 Oct 2008 00:17:40 -0200</pubDate><guid>https://leonardofaria.net/2008/10/23/integracao-continua-no-codestacker/</guid><description>Meses atrás lancei o codestacker. Para seu desenvolvimento segui a conhecida metodologia Getting Real e lancei o serviço sem os principais features. Pouco a pouco estou acrescentando recursos ao site.
-Internet é isso. Caia na real e tenha integração contínua em seu serviço.
-[update 22/11/08] corrigido bugs no ie.
-[update 16/11/08] implementado busca e agora o código pode ser &amp;lsquo;embedado&amp;rsquo;. Exemplo:
-[update 02/11/08] corrigido alguns bugs (valeu os toques, André!</description></item><item><title>Ruby on Rails Portable</title><link>https://leonardofaria.net/2008/10/19/ruby-on-rails-portable/</link><pubDate>Sun, 19 Oct 2008 23:49:26 -0200</pubDate><guid>https://leonardofaria.net/2008/10/19/ruby-on-rails-portable/</guid><description>Você não precisa mais ficar querendo o novo Macbook para levar suas aplicações Rails para qualquer lugar. Um sujeito chamado Etienne Savard criou o Ruby on Rails Portable. O pacote, com uns trinta e poucos megabytes vem com o Scite – um editor de código – também portátil.
-PS. só falta saber se um aplicativo Rails rodando em um pendrive vai escalar :P
-PS2. o autor desse projeto também fez um Cygwin portátil.</description></item><item><title>Backup no Mac OS</title><link>https://leonardofaria.net/2008/10/12/backup-no-mac-os/</link><pubDate>Sun, 12 Oct 2008 16:09:34 -0300</pubDate><guid>https://leonardofaria.net/2008/10/12/backup-no-mac-os/</guid><description>Felizes são os pessimistas… porque já fizeram backup hoje! Depois do dia que o HD do meu MacBook morreu misteriosamente (sem motivo algum!), fiquei simplesmente viciado em backup. Na busca de um software perfeito, encontrei várias opções e resolvi escrrever sobre isso. No meu caso, buscava um software que fizesse backup da minha partição onde está o Leopard e que também espelhasse minha outra partição de dados, em FAT32 (sim, FAT32, acredite!</description></item><item><title>Artigos da semana sobre Rails</title><link>https://leonardofaria.net/2008/09/28/artigos-da-semana-sobre-rails/</link><pubDate>Sun, 28 Sep 2008 23:45:35 -0300</pubDate><guid>https://leonardofaria.net/2008/09/28/artigos-da-semana-sobre-rails/</guid><description>Ando muito sem tempo para postar, basicamente devido aos meus dois trabalhos. Essa semana vi várias coisas interessantes e abaixo um comentário para cada uma delas.
-Rails Security Checklist – dicas básicas para implementar segurança em suas views, models e controllers. Getting Started with Rails e DataMapper – estou num meio de um projeto onde cogitamos a possibilidade de substituir o ActiveRecord pelo DataMapper. Para quem não conhece a solução, é um bom start.</description></item><item><title>Impressione todo mundo com o LiquidMac</title><link>https://leonardofaria.net/2008/09/21/impressione-todo-mundo-com-o-liquidmac/</link><pubDate>Sun, 21 Sep 2008 23:36:57 -0300</pubDate><guid>https://leonardofaria.net/2008/09/21/impressione-todo-mundo-com-o-liquidmac/</guid><description>Tem um Mac? Mate seu amigos (e inimigos) de inveja com o LiquidMac.</description></item><item><title>Edge Rails no Windows Vista</title><link>https://leonardofaria.net/2008/09/10/edge-rails-no-windows-vista/</link><pubDate>Wed, 10 Sep 2008 02:26:40 -0300</pubDate><guid>https://leonardofaria.net/2008/09/10/edge-rails-no-windows-vista/</guid><description>Uma das mudanças do Rails 2.2 é não inclusão do bundle do MySQL, responsável por conectar seu projeto ao banco. Mês passado eu postei sobre isso e hoje, ao tentar instalar o gem do MySQL no Windows Vista de um co-worker, me deparei com um problema na DLL libmySQL.dll.
-A solução encontrada foi copiar esse arquivo (geralmente em C:\Program Files\MySQL\MySQL Server 4.1\bin) para a pasta bin do Ruby (por exemplo: C:\ruby\bin).</description></item><item><title>Acelerando seu Textmate</title><link>https://leonardofaria.net/2008/08/16/acelerando-seu-textmate/</link><pubDate>Sat, 16 Aug 2008 16:42:25 -0300</pubDate><guid>https://leonardofaria.net/2008/08/16/acelerando-seu-textmate/</guid><description>Estou trabalhando em um projeto usando o Edge Rails. No Textmate, a tecla de atalho CMD + T é uma mão na roda para localizar e abrir qualquer arquivo, entretanto, com o Edge estando na pasta /vendor/rails, a busca pode se tornar lenta e encontrar, além dos seus arquivos, os arquivos do framework. Foi então que encontrei essa dica do Dr. Nic (sempre ele):
-É possível mudar a forma default de como funciona os patterns para localizar os arquivos.</description></item><item><title>Ruby on Rails na WebMobile</title><link>https://leonardofaria.net/2008/08/10/ruby-on-rails-na-webmobile/</link><pubDate>Sun, 10 Aug 2008 19:32:50 -0300</pubDate><guid>https://leonardofaria.net/2008/08/10/ruby-on-rails-na-webmobile/</guid><description>Ruby on Rails é um framework minimalista que chama cada vez mais atenção do mainstream. Dia-a-dia a comunidade avança, com encontros (Rails Summit está chegando), publicações e artigos e reportagens em revistas especializadas. E é com grande satisfação que divulgo que a WebMobile, da editora DevMedia, traz, a partir dessa edição, um micro curso apresentando as funcionalidades do RoR.
-Vale a pena correr a banca e me conferir lá ;)</description></item><item><title>Mudanças no Rails 2.2</title><link>https://leonardofaria.net/2008/08/02/mudancas-no-rails-22/</link><pubDate>Sat, 02 Aug 2008 18:41:42 -0300</pubDate><guid>https://leonardofaria.net/2008/08/02/mudancas-no-rails-22/</guid><description>O Rails 2.2 está chegando e ao baixar o Edge para testar o novo recurso de internacionalização (uma das grandes novidades), me deparei com a primeira diferença da versão: o arquivo de conexão com o MySQL não está mais integrado ao framework. É isso o que diz o log do development.log:
-!!! The bundled mysql.rb driver has been removed from Rails 2.2. Please install the mysql gem and try again: gem install mysql.</description></item><item><title>Protegendo projetos com o .htaccess</title><link>https://leonardofaria.net/2008/07/16/protegendo-projetos-com-o-htaccess/</link><pubDate>Wed, 16 Jul 2008 01:48:18 -0300</pubDate><guid>https://leonardofaria.net/2008/07/16/protegendo-projetos-com-o-htaccess/</guid><description>O Apache pode te ajudar a proteger um projeto com seu sistema de autenticação. E isso é mais fácil do que você pensa. Para tal, crie um arquivo .htaccess com o seguinte conteúdo:
-AuthUserFile /home/leonardo/public_html/project/.htpasswd AuthGroupFile /dev/null AuthName &amp;quot;Restricted Access&amp;quot; AuthType Basic &amp;lt;limit GET&amp;gt; require valid-user &amp;lt;/limit&amp;gt; Após isso, crie um .htpasswd com os dados de usuário e senha (atenção ao caminho do arquivo). A senha é criptografada e o conteúdo do arquivo é algo como o seguinte:</description></item><item><title>Usando ApacheBench para testes: Apache/mod_rails e Nginx/mongrel</title><link>https://leonardofaria.net/2008/07/15/usando-apachebench-para-testes-apachemod_rails-e-nginxmongrel/</link><pubDate>Tue, 15 Jul 2008 00:41:42 -0300</pubDate><guid>https://leonardofaria.net/2008/07/15/usando-apachebench-para-testes-apachemod_rails-e-nginxmongrel/</guid><description>O ApacheBench é um software do Apache usado para fazer testes de perfomance de servidores web, independente do servidor usado. Isso é muito útil para comparar o desempenho de diversas configurações, mas nem sempre pode apresentar a realidade do ambiente.
-O ApacheBench é distribuído nos ambientes Linux pelo pacote apache2-utils – versões para Mac OS e Windows podem ser encontradas no site do software. Em distribuições como o Ubuntu, para instalá-lo basta um apt-get install apache2-utils (como super-usuário).</description></item><item><title>Rails Screencasts</title><link>https://leonardofaria.net/2008/07/11/rails-screencasts/</link><pubDate>Fri, 11 Jul 2008 01:31:43 -0300</pubDate><guid>https://leonardofaria.net/2008/07/11/rails-screencasts/</guid><description>É incrível a qualidade de material existente sobre Rails. A comunidade está cada vez mais crescendo e para quem está vindo para o lado Rails da força, nada mau uns screencast para aprender.
-Learnivore é um agregador com diversos sites de screencasts, incluindo os listados a seguir. Railscasts: já são 117 episódios do mais conhecido site de vídeos. PeepCode: screencasts de ótima qualidade, entretanto, pagos (o Júlio fez um ótimo post sobre isso).</description></item><item><title>Nasceu: codestacker.com</title><link>https://leonardofaria.net/2008/07/02/nasceu-codestackercom/</link><pubDate>Wed, 02 Jul 2008 00:05:33 -0300</pubDate><guid>https://leonardofaria.net/2008/07/02/nasceu-codestackercom/</guid><description>Nasceu meu projeto Rails de 2 fins-de-semana: codestacker (é em minúsculas, tá?) é um site para compartilhamento de código, anônimo ou não, público ou privado. Existem vários sites semelhantes ao codestacker, entretanto, quis fazer minha solução cobrindo minha abordagem para o problema e como posso solucioná-lo.
-Tenho vários features que ainda não implementei, caí na real e lancei o básico do serviço. Existirão outros fins-de-semana para atualizações.</description></item><item><title>annotate_model, gem útil da semana</title><link>https://leonardofaria.net/2008/06/30/annotate_model-gem-util-da-semana/</link><pubDate>Mon, 30 Jun 2008 02:27:05 -0300</pubDate><guid>https://leonardofaria.net/2008/06/30/annotate_model-gem-util-da-semana/</guid><description>Trabalhar com Rails é certeza de encontrar ótimo material para trabalhar/documentar sua aplicação. Tenho uma lista de plugins/gems úteis para o desenvolvimento, o que daria um enorme post. Seguindo os conceitos do Getting Real, rapidinho vou postando (é muito material).
-O primeiro da lista é o annotate_model, um gem que gera para cada model as informações da estrutura da tabela daquela entidade. Por exemplo:
-# == Schema Information # Schema version: 20080628203259 # # Table name: comments # # id :integer(11) not null, primary key # name :string(255) # email :string(255) # body :text # code_id :integer(11) # created_at :datetime # updated_at :datetime # class Comment &amp;lt; ActiveRecord::Base # .</description></item><item><title>Passenger no painel de preferências do Leopard</title><link>https://leonardofaria.net/2008/06/28/passenger-no-painel-de-preferencias-do-leopard/</link><pubDate>Sat, 28 Jun 2008 17:04:01 -0300</pubDate><guid>https://leonardofaria.net/2008/06/28/passenger-no-painel-de-preferencias-do-leopard/</guid><description>Que o mod_rails veio para revolucionar o deployment de Rails, todo mundo já sabe. Agora, me deparei com isso:
-Como no Locomotive, criaram, com RubyCocoa, um painel para gerenciar suas aplicações. Agora, nem é mais preciso declarar cada aplicação no httpd.conf. Virou brincadeira, né?
-Para funcionar, bastar ter Mac OS 10.5.2 e Pessenger 2.0.1 instalados.</description></item><item><title>Extendendo a classe Tween do Flash</title><link>https://leonardofaria.net/2008/06/10/extendendo-a-classe-tween-do-flash/</link><pubDate>Tue, 10 Jun 2008 17:58:21 -0300</pubDate><guid>https://leonardofaria.net/2008/06/10/extendendo-a-classe-tween-do-flash/</guid><description>A cada trabalho que volto ao Actionscript, me deparo com soluções interessantíssimas para problemas comuns. Esse post falar sobre classes de transição
-Color Tween A classe Tween é responsável por fazer transições de objetos do Flash. Entre essas transições estão mudanças nos eixos, na largura, na altura e na opacidade de objetos, não existindo transições entre cores. Existem alguns protótipos para isso, mas a melhor solução que encontrei foi usar a classe TweenColor, que extende a classe padrão encontrada no Flash.</description></item><item><title>Extreme Programming para todos</title><link>https://leonardofaria.net/2008/06/07/extreme-programming-para-todos/</link><pubDate>Sat, 07 Jun 2008 20:21:15 -0300</pubDate><guid>https://leonardofaria.net/2008/06/07/extreme-programming-para-todos/</guid><description>&lt;p>Esse é outro post &lt;a href="http://www.leonardofaria.net/tag/academico">acadêmico&lt;/a> e novamente um artigo para a disciplina de Engenharia de Software. O artigo está abaixo e dessa vez há também &lt;a href="https://leonardofaria.net/wp-content/uploads/2008/06/XP.pdf">slides&lt;/a> (PDF, 2 MB) da apresentação feita na &lt;a href="http://www.faculdadepitagoras.com.br/">Faculdade Pitágoras&lt;/a>.&lt;/p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2008s on Leonardo Faria</title><link>https://leonardofaria.net/2008/</link><description>Recent content in 2008s on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 26 Dec 2008 16:02:10 -0200</lastBuildDate><atom:link href="https://leonardofaria.net/2008/index.xml" rel="self" type="application/rss+xml"/><item><title>Edge Rails: método render mais esperto</title><link>https://leonardofaria.net/2008/12/26/edge-rails-metodo-render-mais-esperto/</link><pubDate>Fri, 26 Dec 2008 16:02:10 -0200</pubDate><guid>https://leonardofaria.net/2008/12/26/edge-rails-metodo-render-mais-esperto/</guid><description>&lt;p>Quem já está usando o Rails 2.2 já deve estar vendo um warning: no Rails 2.3, o método render está mais esperto e dispensará a instrução sobre qual tipo de renderização ele está fazendo. Confira:&lt;/p>
+&lt;p>Agora, você não precisa especificar se quer renderizar uma action, template ou file. Isso é bem legal e mostra cada vez mais o minimalismo do framework.&lt;/p></description></item><item><title>Os axiomas de Zurique</title><link>https://leonardofaria.net/2008/12/04/os-axiomas-de-zurique/</link><pubDate>Thu, 04 Dec 2008 12:28:04 -0200</pubDate><guid>https://leonardofaria.net/2008/12/04/os-axiomas-de-zurique/</guid><description>&lt;p>Num país onde 75% dos carros vendidos são financiados, onde os juros do cheque especial são os maiores dos últimos 5 anos e onde instituições financeiras faturam grandezas de 6 dígitos, a maneira com que você gerencia seu dinheiro pode fazê-lo um vencedor ou apenas mais um endividado do terceiro mundo.&lt;/p>
+&lt;p>Esse ano fiz um curso sobre como operar na bolsa de valores sendo um pequeno investidor e tive acesso a um livro que revoluciona a vida financeira de qualquer um: Os Axiomas de Zurique desperta em você seu lado investidor adormecido e trás mandamentos muito interessantes sobre o mercado financeiro. Veja a reprodução de um dos axiomas, o do concenso:&lt;/p>
+&lt;blockquote>
+&lt;p>René Descartes foi campeão mundial da dúvida. Teimosamente, recusava-se a acreditar em qualquer coisa até que a tivesse verificado pessoalmente. Este foi um dos traços que fez dele um bem sucedido jogador-especulador. Morreu há mais de trezentos anos, mas o especulador moderno aproveitará muito – além de passar várias noites agradáveis – da leitura da obra desse encantador homenzinho feioso, com seus olhos negros e penetrantes, o nariz feito um crescente, e dotado de um gigantesco intelecto.&lt;/p>
+&lt;p>Descartes começa a sua filosofia duvidando de tudo, literalmente, inclusive da existência de Deus, do homem e de si próprio. As autoridades religiosas da sua França natal ficaram furibundas, de maneira que foi melhor ele fugir para os Países Baixos. Continuando a recusar o que outros queriam vender-lhe como verdade, ele buscou meios de descobrir a verdade através dos seus próprios sentidos e experiências. Finalmente, deu com o que considerou uma verdade básica e indiscutível: “Cogito, ergo sum”, ou seja: “Penso, logo existo.” Agora convencido de que não era apenas um fantasma dos seus próprios sonhos, Descartes continuou a comprovar ou rejeitar outras verdades postuladas. No processo, fez importantes contribuições à matemática, e construiu uma filosofia que, pela pura lucidez do seu pensamento, não foi superada em três séculos – e, na minha opinião, nunca teve concorrentes, sequer quem se lhe aproximasse. No mesmo impulso, também, tanto como hobby quanto porque gostava de vinhos caros e de outros luxos, Descartes estudou cientificamente os jogos.&lt;/p>
+&lt;p>Na primeira metade do século XVII, existiam umas poucas e mal organizadas bolsas de valores e de mercadorias. Descartes deixou-se fascinar pelo grande e ativo mercado de Amsterdã; se chegou a pôr o seu dinheiro ali, e em quantidades, não se sabe. Sabe-se, porém, que freqüentemente viajava a Paris, às vezes com papéis falsos para não ser preso como herege, a fim de jogar.&lt;/p>
+&lt;p>Para tomar dinheiro dos trouxas, havia disponíveis jogos de cartas, tabuleiros e roletas. Descartes gostava de jogos que, como o bridge e o pôquer hoje em dia, além de sorte implicavam cálculos matemáticos e psicologia. Estudava os jogos com o cuidado e o ceticismo costumeiros, rejeitando todos os clichês e lugares-comuns da sua época, insistindo em descobrir verdades e falácias por conta própria. Aparentemente, sempre voltava de Paris mais rico do que na ida, às vezes muito mais. Embora o único meio de vida conhecido, ao longo de toda sua vida de adulto, fosse uma modesta herança do pai, Descartes morreu financeiramente muito bem.&lt;/p>
+&lt;p>O truque, não se cansava ele de repetir em diferentes contextos, é rejeitar o que lhe dizem, até ter pensado tudo pela própria cabeça. Duvidava das verdades afirmadas por autoproclamados especialistas, e recusava-se até a ouvir a opinião da maioria. Escreveu ele: “Não existe praticamente nada que tenha sido afirmado por um sábio e não tenha sido contraditado por outro.” E também: “Contar votos não serve de nada. Em qualquer questão difícil, é mais provável que a verdade seja descoberta por uns poucos do que por muitos.”&lt;/p>
+&lt;p>Foi com esta visão do mundo, arrogante talvez, e certamente solitária, que René Descartes freqüentou as mesas de jogo de Paris, das quais saiu rico. Um especulador bem sucedido só tem a ganhar dando atenção às palavras desse homenzinho duro, de olhar penetrante.&lt;/p>
+&lt;p>Na nossa era democrática, no nosso democrático lado do mundo, tendemos a aceitar sem críticas a opinião da maioria. Se um monte de gente diz que é assim, tudo bem, assim seja. É como nós pensamos. Se não temos certeza de alguma coisa, vamos contar os votos. Desde o primário aprendemos que a maioria está sempre certa. Nos EUA e em outras nações ocidentais, é quase uma religião, principalmente na França e na Inglaterra, ambos países com longas tradições de resolver problemas pelo voto popular. Se 75% das pessoas acreditam em alguma coisa, parece quase sacrilégio perguntar, ainda que num sussurro:&lt;/p>
+&lt;p>– Ei, esperem aí, será que não podem estar errados?&lt;/p>
+&lt;p>Guiemo-nos por Descartes: podem.&lt;/p>
+&lt;p>Nos EUA, é o voto que decide quem governa. É o único meio de fazê-lo. Pelo menos, é o único meio que os americanos aceitam sem briga. São treinados desde a infância a aceitar o desejo da maioria. Às vezes, há quem resmungue contra esse desejo – quem perde uma eleição reclama muito -, mas, no fundo, por trás de todo o som e toda a fúria, sempre se ouve o tema da democracia: “O povo falou. Não se pode iludi-lo. Se é isto que quer, deve estar certo.”&lt;/p>
+&lt;p>Essa humilde aceitação da opinião da maioria passa para a vida financeira. Não apenas são ouvidos economistas, banqueiros, corretores, assessores e outros especialistas, mas também as maiorias. E isto pode custar dinheiro, pois, como dizia Descartes, é mais provável que a verdade tenha sido encontrada por uns poucos do que por muitos.&lt;/p>
+&lt;p>Os muitos podem estar certos, mas as probabilidades são contra eles. Pare com o hábito de achar que todas as afirmativas muito repetidas são a verdade. “Um grande déficit orçamentário será a ruína da América”, diz quase todo mundo. É verdade? Talvez sim, talvez não. Descubra você mesmo. Tire suas próprias conclusões. “Na segunda metade da década, aumentarão a inflação e a taxa de juros.” É mesmo? Não engula, simplesmente. Examine. Não deixe que a maioria manobre com você.&lt;/p>
+&lt;p>Estudando os outros Axiomas, vimos muitas coisas que são afirmadas por maiorias. Vale mais um pássaro na mão que dois voando. Mantenha uma carteira diversificada. Arrisque somente apenas o que pode se permitir perder. E assim por diante. Todos esses conselhos supostamente sábios fazem parte do consciente popular. Em qualquer coquetel ou reunião, é só trazer investimentos à discussão que os clichês logo aparecem. E, à medida que esses chavões vão sendo repetidos, quem estiver por perto balançará a cabeça, compenetradamente, e dirá:&lt;/p>
+&lt;p>– Exato. Perfeito! Excelente conselho!&lt;/p>
+&lt;p>A maioria das pessoas acredita que os antigos clichês são verdades indiscutíveis. Isto posto, vale a pena observar que a maioria das pessoas não é rica.&lt;/p>
+&lt;/blockquote>
+&lt;p>Outro axioma genial é o da religião e do ocultismo: “É improvável que entre os designios de Deus para o Universo se inclua o de fazer você ficar rico”. De um modo geral, o livro é um convite para que você arrisque, pois afinal, o que vier é lucro. E você, de que lado vai ficar?&lt;/p></description></item><item><title>gem cheat</title><link>https://leonardofaria.net/2008/11/29/gem-cheat/</link><pubDate>Sat, 29 Nov 2008 20:23:04 -0200</pubDate><guid>https://leonardofaria.net/2008/11/29/gem-cheat/</guid><description>&lt;p>Essa é uma &lt;a href="http://cheat.errtheblog.com/">gem&lt;/a> do &lt;a href="http://www.errtheblog.com">Chris Wanstrath&lt;/a> que muita gente não conhece e que só hoje me deparei. Para instalar:&lt;/p>
+&lt;pre>&lt;code>gem install cheat
+&lt;/code>&lt;/pre>&lt;p>Para usar, basta executar no terminal o comando cheat acrescido do assunto desejado, como por exemplo: &lt;code>cheat rails_svn&lt;/code>. A lista de todas cheats é encontradada executando:&lt;/p>
+&lt;pre>&lt;code>cheat sheets
+&lt;/code>&lt;/pre></description></item><item><title>PHP junto com o Passenger no Leopard</title><link>https://leonardofaria.net/2008/11/26/php-junto-com-o-passenger-no-leopard/</link><pubDate>Wed, 26 Nov 2008 23:32:30 -0200</pubDate><guid>https://leonardofaria.net/2008/11/26/php-junto-com-o-passenger-no-leopard/</guid><description>&lt;p>Na minha máquina de desenvolvimento uso o Passenger para trabalhar com o Rails e hoje eu precisei fazer alguns testes com PHP. Deixar o PHP junto com o Passenger é tão simples como 2 + 2 são 4. Vamos lá.&lt;/p>
+&lt;p>Abra o arquivo de configuração do Apache (/etc/apache2/httpd.conf) como superusuário e procure a linha que chama o módulo do PHP (linha 114):&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">LoadModule php5_module libexec/apache2/libphp5.so
+&lt;/pre>
+&lt;p>Basta descomentar essa linha. Em seguida, no fim desse arquivo, crie um host virtual chamado php:&lt;/p>
+&lt;pre>&lt;code>&amp;lt;virtualhost *:80&amp;gt;
+ServerName php
+DocumentRoot &amp;quot;/Users/leonardofaria/Sites/php&amp;quot;
+&amp;lt;directory &amp;quot;/Users/leonardofaria/Sites/php&amp;quot;&amp;gt;
+Options Indexes MultiViews
+AllowOverride None
+Order allow,deny
+Allow from all
+&amp;lt;/directory&amp;gt;
+&amp;lt;/virtualhost&amp;gt;
+&lt;/code>&lt;/pre>&lt;p>Pronto. Agora a url http://php/ responderá pelo conteúdo da pasta “/Users/leonardofaria/Sites/php”. Lá dentro, você pode criar um index.php e para testar se está tudo ok, use o conhecido phpinfo()&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-php" data-lang="php">&lt;span style="color:#999;font-weight:bold;font-style:italic">&amp;lt;?php&lt;/span>
+phpinfo();
+&lt;span style="color:#999;font-weight:bold;font-style:italic">?&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Se tudo der certo, você terá uma tela como a seguinte :)&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/11/phpinfo.jpg" alt="" title="phpinfo" />
+&lt;/center></description></item><item><title>Quer conhecer mais da história da Apple?</title><link>https://leonardofaria.net/2008/11/23/quer-conhecer-mais-da-historia-da-apple/</link><pubDate>Sun, 23 Nov 2008 21:08:43 -0200</pubDate><guid>https://leonardofaria.net/2008/11/23/quer-conhecer-mais-da-historia-da-apple/</guid><description>&lt;p>O &lt;a href="http://www.mactracker.ca/">Mactracker&lt;/a> é um aplicativo que reúne toda a linha de produtos da Apple. Há inclusive uma &lt;a href="http://mactracker.dreamhosters.com/iphone/">versão online&lt;/a> do app para iPhone. Muito interessante! Além desse app, existe também o site &lt;a href="http://www.apple-history.com/">Apple History&lt;/a>, com um banco de dados cheio de informações e a possibilidade de download das informações.&lt;/p>
+&lt;center>
+&lt;a href='http://www.mactracker.ca/'>&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/11/mactracker.png" alt="" title="mactracker" />&lt;/a>
+&lt;/center>
+&lt;p>Se você gosta de publicidade e design, deve conferir os &lt;a href="http://www.macmothership.com/gallery/gallery1.html">anúncios da maçã&lt;/a> desde os primórdios da computação, as &lt;a href="http://www.flickr.com/photos/kernelpanic/sets/283374/">screenshots da homepage&lt;/a> &lt;a href="http://www.apple.com">apple.com&lt;/a> e logicamente, &lt;a href="http://www.iindigo3d.com/blog/?page_id=40">as interfaces&lt;/a> do Mac OS.&lt;/p></description></item><item><title>Migrations sem timestamp</title><link>https://leonardofaria.net/2008/11/09/migrations-sem-timestamp/</link><pubDate>Sun, 09 Nov 2008 16:22:44 -0200</pubDate><guid>https://leonardofaria.net/2008/11/09/migrations-sem-timestamp/</guid><description>&lt;p>No Rails 2.0, os arquivos de migração eram gerados com o prefixo do timestamp. Exemplo: 20080614155951_create_users.rb. Nas versões anteriores, o prefixo era numérico. Para o Rails 2.2, será possível você mesmo configurar isso, definindo no environment.rb:&lt;/p>
+&lt;p>Vale a pena a leitura do &lt;a href="http://www.akitaonrails.com/2008/10/24/tradu-o-ruby-on-rails-2-2-release-notes">Release Notes do Rails 2.2&lt;/a> e, se você ainda não pegou o RC 1 do Rails, lembre-se:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">gem install rails -s http://gems.rubyonrails.org -v 2.2.0
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>RubyMine: Textmate-killer?</title><link>https://leonardofaria.net/2008/11/08/rubymine-textmate-killer/</link><pubDate>Sat, 08 Nov 2008 19:07:41 -0200</pubDate><guid>https://leonardofaria.net/2008/11/08/rubymine-textmate-killer/</guid><description>&lt;p>Essa semana apareceu uma nova IDE para Ruby: a &lt;a href="http://www.jetbrains.com/ruby/index.html">RubyMine&lt;/a>, que se auto-denomina com a mais inteligente IDE para Ruby. O software é multiplataforma e parece ser bem interessante. Notei algumas coisinhas numa primeira-impressão:&lt;/p>
+&lt;ol>
+&lt;li>há templates para testes (RSpec e TestUnit)&lt;br>
+&lt;a href="http://www.jetbrains.com/ruby/index.html">&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/11/rubymine.jpg" alt="" title="RubyMine" align="right" />&lt;/a>2) integração com o Mac OS: o look&amp;rsquo;n feel não combina muito (= feia) com o sistema e ele está mais para NetBeans e Eclipse do que para um Textmate. Nada de maçã + w para fechar um arquivo nem maçã + n para um novo arquivo. A velocidade dele também está mais para NetBeans/Eclipse do que para um Textmate&lt;/li>
+&lt;li>inspetor: ele possui um inspetor interessante: para CSS, por exemplo, ele verifica suas folhas de estilo e informa por imagens quebradas, seletores não usados e código desnecessário (como escrever ‘0px&amp;rsquo;, onde somente ‘0&amp;rsquo; já resolve). Para Ruby, ele verifica, entre vários itens, referências não resolvidas e erros em chamadas de métodos (apesar de que, no meu projeto, o que ele inspencionou estava certo)&lt;/li>
+&lt;li>parece ter uma integração interessante com controle de versão (Git, Subversion e CVS)&lt;/li>
+&lt;li>ele também tem um Go to File, como no Textmate&lt;/li>
+&lt;li>ele tem uma janela amigável para rodar scripts (como o RadRails)&lt;/li>
+&lt;/ol>
+&lt;p>Essa próxima semana vou utilizá-lo e ver se ele pode ser um Textmate-killer ou uma boa alternativa para Windows e Linux.&lt;/p></description></item><item><title>Google em 2001</title><link>https://leonardofaria.net/2008/10/23/google-em-2001/</link><pubDate>Thu, 23 Oct 2008 00:18:20 -0200</pubDate><guid>https://leonardofaria.net/2008/10/23/google-em-2001/</guid><description>&lt;p>Como parte das comemorações dos 10 anos, o Google criou uma &lt;a href="http://www.google.com/search2001.html">busca&lt;/a> que indexa tudo como era 2001. Um verdadeiro túnel do tempo. Bem interessante.&lt;/p>
+&lt;center>
+&lt;a href='http://www.google.com/search2001.html'>&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/10/google-2001.jpg" alt="" title="google-2001" />&lt;/a>
+&lt;/center></description></item><item><title>Integração contínua no codestacker</title><link>https://leonardofaria.net/2008/10/23/integracao-continua-no-codestacker/</link><pubDate>Thu, 23 Oct 2008 00:17:40 -0200</pubDate><guid>https://leonardofaria.net/2008/10/23/integracao-continua-no-codestacker/</guid><description>&lt;p>&lt;a href="https://leonardofaria.net/2008/07/02/nasceu-codestackercom/">Meses atrás&lt;/a> lancei o &lt;a href="http://www.codestacker.com">codestacker&lt;/a>. Para seu desenvolvimento segui a conhecida metodologia &lt;a href="https://gettingreal.37signals.com/GR_por.php">Getting Real&lt;/a> e lancei o serviço sem os principais features. Pouco a pouco estou acrescentando recursos ao site.&lt;/p>
+&lt;p>Internet é isso. Caia na real e tenha integração contínua em seu serviço.&lt;/p>
+&lt;center>
+&lt;a href='http://www.codestacker.com'>&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/11/codestacker.jpg" alt="" title="codestacker" />&lt;/a>
+&lt;/center>
+&lt;p>&lt;strong>[update 22/11/08]&lt;/strong> corrigido bugs no ie.&lt;br>
+&lt;strong>[update 16/11/08]&lt;/strong> implementado busca e agora o código pode ser &amp;lsquo;embedado&amp;rsquo;. Exemplo:&lt;/p>
+&lt;p>&lt;strong>[update 02/11/08]&lt;/strong> corrigido alguns bugs (valeu os toques, &lt;a href="http://dito.com.br/">André&lt;/a>!) e refatorado muito código.&lt;br>
+&lt;strong>[update 23/10/08]&lt;/strong> implementado textile.&lt;/p></description></item><item><title>Ruby on Rails Portable</title><link>https://leonardofaria.net/2008/10/19/ruby-on-rails-portable/</link><pubDate>Sun, 19 Oct 2008 23:49:26 -0200</pubDate><guid>https://leonardofaria.net/2008/10/19/ruby-on-rails-portable/</guid><description>&lt;p>Você não precisa mais ficar querendo o novo Macbook para levar suas aplicações Rails para qualquer lugar. Um sujeito chamado &lt;a href="http://www.symbiosoft.net">Etienne Savard&lt;/a> criou o &lt;a href="http://www.symbiosoft.net/?q=node/12">Ruby on Rails Portable&lt;/a>. O pacote, com uns trinta e poucos megabytes vem com o &lt;a href="http://www.scintilla.org/SciTE.html">Scite&lt;/a> – um editor de código – também portátil.&lt;/p>
+&lt;p>PS. só falta saber se um aplicativo Rails rodando em um pendrive vai escalar :P&lt;/p>
+&lt;p>PS2. o autor desse projeto também fez um &lt;a href="http://www.symbiosoft.net/?q=cygwinportable">Cygwin&lt;/a> portátil.&lt;/p>
+&lt;p>PS3. ainda não testei, talvez pelo estranho fato de ter um pen-drive de 256 mb da Toshiba que só é detectado após 15 minutos ligado na usb.&lt;/p></description></item><item><title>Backup no Mac OS</title><link>https://leonardofaria.net/2008/10/12/backup-no-mac-os/</link><pubDate>Sun, 12 Oct 2008 16:09:34 -0300</pubDate><guid>https://leonardofaria.net/2008/10/12/backup-no-mac-os/</guid><description>&lt;p>&lt;strong>Felizes são os pessimistas… porque já fizeram backup hoje!&lt;/strong> Depois do dia que o HD do meu MacBook morreu misteriosamente (sem motivo algum!), fiquei simplesmente viciado em backup. Na busca de um software perfeito, encontrei várias opções e resolvi escrrever sobre isso. No meu caso, buscava um software que fizesse backup da minha partição onde está o Leopard e que também espelhasse minha outra partição de dados, em FAT32 (sim, FAT32, acredite!).&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/10/sync.jpg" alt="sync" title="Sync Professional" />
+&lt;/center>
+&lt;p>&lt;strong>[updated]&lt;/strong> Meu novo aplicativo favorito de backup para o Mac é &lt;strong>&lt;a href="http://decimus.net/synk_professional.php">Sync Professional&lt;/a>&lt;/strong>. Faz a sincronização de uma forma bem amigável&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/10/backup1-tm.jpg" alt="" title="Time Machine" />
+&lt;/center>
+&lt;p>O Time Machine resolve o problema de backup da partição do Leopard. Assim sendo, não tenho muito o que falar sobre ele, além do óbvio: USE.&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/10/backup3-silverkeeper.png" alt="" title="SilverKeeper" />
+&lt;/center>
+&lt;p>O &lt;a href="http://www.lacie.com/silverkeeper/">&lt;strong>SilverKeeper&lt;/strong>&lt;/a> é atualmente o software que estou usando para fazer backup da minha partição FAT32. É um software da Lacie, aquela marca famosa de HDs e é grátis. Além de todas essa vantagens, ele tem um log beeeem completo e dar para acompanhar, em tempo real, qual arquivo ele está copiando no momento (modo neurótico ON).&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/10/backup5-ccc.jpg" alt="" title="Carbon Copy Copier" />
+&lt;/center>
+&lt;p>O &lt;a href="http://www.bombich.com/software/ccc.html">&lt;strong>Carbon Copy Copier&lt;/strong>&lt;/a> é talvez o mais interessante dos softwares. Ele possui tarefas automatizadas e poderia criar uma que, ao conectar meu HD USB, executasse o backup previamente estabelecido. Só parei de usá-lo porque descobri que minha partição de destino do backup não poderia ser diferente de HFS.&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/10/backup2-rsyncx.png" alt="" title="RsyncX" />
+&lt;/center>
+&lt;p>O &lt;a href="http://archive.macosxlabs.org/rsyncx/rsyncx.html">&lt;strong>RsyncX&lt;/strong>&lt;/a>, conforme sugerido pelo nome, é uma interface bonitinha para o Rsync. Eu estava utilizando esse software e do nada ele parou. Foi aí que o substituí pelo SilverKeeper. Mesmo assim, pode funcionar pra você.&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/10/backup4-ibackup.gif" alt="" title="iBackup" />
+&lt;/center>
+&lt;p>O &lt;a href="http://www.grapefruit.ch/iBackup/">&lt;strong>iBackup&lt;/strong>&lt;/a> também é um software interessante e faz backup de uma série de coisas, como configurações dos seus aplicativos (Firefox, Adobe, por exemplo), dos seus System Preferences, além de suas pastas de usuário (Sites, Music, Movies…). Para backup de pastas, o achei bem lento.&lt;/p>
+&lt;p>PS: todos os softwares que uso no Mac estão no meu &lt;a href="http://osx.iusethis.com/user/leozera">iUseThis&lt;/a>.&lt;/p></description></item><item><title>Artigos da semana sobre Rails</title><link>https://leonardofaria.net/2008/09/28/artigos-da-semana-sobre-rails/</link><pubDate>Sun, 28 Sep 2008 23:45:35 -0300</pubDate><guid>https://leonardofaria.net/2008/09/28/artigos-da-semana-sobre-rails/</guid><description>&lt;p>Ando muito sem tempo para postar, basicamente devido aos meus dois trabalhos. Essa semana vi várias coisas interessantes e abaixo um comentário para cada uma delas.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://rubythis.blogspot.com/2006/11/rails-security-checklist.html">Rails Security Checklist&lt;/a> – dicas básicas para implementar segurança em suas views, models e controllers.&lt;/li>
+&lt;li>&lt;a href="http://bustoutsolutions.com/blog/2007/09/17/getting-started-with-datamapper-and-rails/">Getting Started with Rails e DataMapper&lt;/a> – estou num meio de um projeto onde cogitamos a possibilidade de substituir o ActiveRecord pelo DataMapper. Para quem não conhece a solução, é um bom start.&lt;/li>
+&lt;li>&lt;a href="http://coderkitty.sweetperceptions.com/2008/7/6/meaningful-404s-and-500s">Meaning 400s and 500s&lt;/a> – um rápido código abordando erros&lt;/li>
+&lt;li>&lt;a href="http://blog.zerosum.org/2008/7/2/clone-pastie-with-sinatra-datamapper-redux">Clone Pastie with Sinatra and DataMapper&lt;/a> – Sinatra é um pequeno framework em Ruby bem interessante. O link levanta como fazer um app que manipula dados em um banco através do DataMapper.&lt;/li>
+&lt;/ul>
+&lt;p>ps.: quem está assinando o rss do site está recebendo &lt;a href="http://www.codestacker.com/user/leozera">meus códigos&lt;/a> no &lt;a href="http://www.codestacker.com">codestacker&lt;/a>.&lt;/p></description></item><item><title>Impressione todo mundo com o LiquidMac</title><link>https://leonardofaria.net/2008/09/21/impressione-todo-mundo-com-o-liquidmac/</link><pubDate>Sun, 21 Sep 2008 23:36:57 -0300</pubDate><guid>https://leonardofaria.net/2008/09/21/impressione-todo-mundo-com-o-liquidmac/</guid><description>&lt;p>Tem um Mac? Mate seu amigos (e inimigos) de inveja com o &lt;a href="http://uri.cat/software/LiquidMac/">&lt;strong>LiquidMac&lt;/strong>&lt;/a>.&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/mdVOrJvAWzY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div></description></item><item><title>Edge Rails no Windows Vista</title><link>https://leonardofaria.net/2008/09/10/edge-rails-no-windows-vista/</link><pubDate>Wed, 10 Sep 2008 02:26:40 -0300</pubDate><guid>https://leonardofaria.net/2008/09/10/edge-rails-no-windows-vista/</guid><description>&lt;p>Uma das mudanças do Rails 2.2 é não inclusão do bundle do MySQL, responsável por conectar seu projeto ao banco. &lt;a href="https://leonardofaria.net/2008/08/02/mudancas-no-rails-22/">Mês passado&lt;/a> eu postei sobre isso e hoje, ao tentar instalar o gem do MySQL no Windows Vista de um co-worker, me deparei com um problema na DLL libmySQL.dll.&lt;/p>
+&lt;p>A solução encontrada foi copiar esse arquivo (geralmente em C:\Program Files\MySQL\MySQL Server 4.1\bin) para a pasta bin do Ruby (por exemplo: C:\ruby\bin).&lt;/p>
+&lt;p>Que fique documentado ;)&lt;/p></description></item><item><title>Acelerando seu Textmate</title><link>https://leonardofaria.net/2008/08/16/acelerando-seu-textmate/</link><pubDate>Sat, 16 Aug 2008 16:42:25 -0300</pubDate><guid>https://leonardofaria.net/2008/08/16/acelerando-seu-textmate/</guid><description>&lt;p>Estou trabalhando em um projeto usando o Edge Rails. No Textmate, a tecla de atalho CMD + T é uma mão na roda para localizar e abrir qualquer arquivo, entretanto, com o Edge estando na pasta /vendor/rails, a busca pode se tornar lenta e encontrar, além dos seus arquivos, os arquivos do framework. Foi então que encontrei &lt;a href="http://groups.google.com/group/rubyonrails-textmate/browse_thread/thread/8de96ea96d51de59?hl=en">essa dica&lt;/a> do &lt;a href="http://drnicwilliams.com/">Dr. Nic&lt;/a> (sempre ele):&lt;/p>
+&lt;p>É possível mudar a forma default de como funciona os patterns para localizar os arquivos. Para isso, acione as preferências do software, escolha Advanced, depois Folder References e substitua, em Folder Pattern, o valor padrão, pelo seguinte:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">!.*/(\.[^/]*|vendor/rails|doc|rails_root|CVS|log|data_dump|build|_darcs|pkg |_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)? |bundle))$ &lt;/pre>
+&lt;p>Caso queira reverter, o valor padrão é:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$&lt;/pre>
+&lt;p>Após isso, alguns diretórios não serão mais ‘encontrados&amp;rsquo; e você terá uma busca mais rápida.&lt;/p></description></item><item><title>Ruby on Rails na WebMobile</title><link>https://leonardofaria.net/2008/08/10/ruby-on-rails-na-webmobile/</link><pubDate>Sun, 10 Aug 2008 19:32:50 -0300</pubDate><guid>https://leonardofaria.net/2008/08/10/ruby-on-rails-na-webmobile/</guid><description>&lt;center>
+&lt;a href='http://www.devmedia.com.br/resumo/default.asp?site=5'>&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/08/webmobile19.jpg" title="Webmobile #19" />&lt;/a>
+&lt;/center>
+&lt;p>Ruby on Rails é um framework minimalista que chama cada vez mais atenção do mainstream. Dia-a-dia a comunidade avança, com encontros (&lt;a href="http://www.devmedia.com.br/loja/img/capaWM19_M.jpg">Rails Summit está chegando&lt;/a>), publicações e artigos e reportagens em revistas especializadas. E é com grande satisfação que divulgo que a &lt;a href="http://www.devmedia.com.br/resumo/default.asp?site=5">WebMobile&lt;/a>, da editora &lt;a href="http://www.devmedia.com.br/">DevMedia&lt;/a>, traz, a partir dessa edição, um micro curso apresentando as funcionalidades do RoR.&lt;/p>
+&lt;p>Vale a pena correr a banca e me conferir lá ;)&lt;/p>
+&lt;p>P.S.: Mês que vem tem Minas on Rails &amp;lsquo;08. Em breve novas informações desse evento.&lt;/p></description></item><item><title>Mudanças no Rails 2.2</title><link>https://leonardofaria.net/2008/08/02/mudancas-no-rails-22/</link><pubDate>Sat, 02 Aug 2008 18:41:42 -0300</pubDate><guid>https://leonardofaria.net/2008/08/02/mudancas-no-rails-22/</guid><description>&lt;p>O Rails 2.2 está chegando e ao baixar o Edge para testar o novo recurso de internacionalização (uma das grandes novidades), me deparei com a primeira diferença da versão: o arquivo de conexão com o MySQL não está mais integrado ao framework. É isso o que diz o log do development.log:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">!!! The bundled mysql.rb driver has been removed from Rails 2.2. Please install the mysql gem and try again: gem install mysql.
+&lt;/pre>
+&lt;p>Como o próprio log já sugere, é só instalar o gem, mas atenção: é preciso especificar o path do arquivo mysql_config, através do flag “–with-mysql-config”. Para o Mac OS X, a instalação pode ser feita com:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">sudo gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
+&lt;/pre>
+&lt;p>e no Ubuntu, com:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">sudo gem install mysql -- --with-mysql-config=/usr/bin/mysql_config
+&lt;/pre>
+&lt;p>Depois disso, é só correr pro abraço!&lt;/p></description></item><item><title>Protegendo projetos com o .htaccess</title><link>https://leonardofaria.net/2008/07/16/protegendo-projetos-com-o-htaccess/</link><pubDate>Wed, 16 Jul 2008 01:48:18 -0300</pubDate><guid>https://leonardofaria.net/2008/07/16/protegendo-projetos-com-o-htaccess/</guid><description>&lt;p>O Apache pode te ajudar a proteger um projeto com seu sistema de autenticação. E isso é mais fácil do que você pensa. Para tal, crie um arquivo .htaccess com o seguinte conteúdo:&lt;/p>
+&lt;pre>&lt;code>AuthUserFile /home/leonardo/public_html/project/.htpasswd
+AuthGroupFile /dev/null
+AuthName &amp;quot;Restricted Access&amp;quot;
+AuthType Basic
+&amp;lt;limit GET&amp;gt;
+require valid-user
+&amp;lt;/limit&amp;gt;
+&lt;/code>&lt;/pre>&lt;p>Após isso, crie um .htpasswd com os dados de usuário e senha (atenção ao caminho do arquivo). A senha é criptografada e o conteúdo do arquivo é algo como o seguinte:&lt;/p>
+&lt;pre>&lt;code>leo:4tHAiRmQ4OpjM
+&lt;/code>&lt;/pre>&lt;p>Para criptografar a senha use um dos &lt;a href="http://www.kxs.net/support/htaccess_pw.html">vários&lt;/a> serviços &lt;a href="http://shop.alterlinks.com/htpasswd/htpasswd.php">por aí&lt;/a> existentes. Para proteger um projeto em Rails, a solução também funciona bem, desde que seu .htaccess esteja na pasta public de sua aplicação&lt;/p></description></item><item><title>Usando ApacheBench para testes: Apache/mod_rails e Nginx/mongrel</title><link>https://leonardofaria.net/2008/07/15/usando-apachebench-para-testes-apachemod_rails-e-nginxmongrel/</link><pubDate>Tue, 15 Jul 2008 00:41:42 -0300</pubDate><guid>https://leonardofaria.net/2008/07/15/usando-apachebench-para-testes-apachemod_rails-e-nginxmongrel/</guid><description>&lt;p>O &lt;a href="http://httpd.apache.org/docs/2.2/programs/ab.html">ApacheBench&lt;/a> é um software do Apache usado para fazer testes de perfomance de servidores web, independente do servidor usado. Isso é muito útil para comparar o desempenho de diversas configurações, mas nem sempre pode apresentar a realidade do ambiente.&lt;/p>
+&lt;p>O ApacheBench é distribuído nos ambientes Linux pelo pacote apache2-utils – versões para Mac OS e Windows podem ser encontradas no &lt;a href="http://httpd.apache.org/docs/2.2/programs/ab.html">site do software&lt;/a>. Em distribuições como o Ubuntu, para instalá-lo basta um apt-get install apache2-utils (como super-usuário). A partir daí, o comando ab fica disponível em seu terminal e é só correr para o abraço!&lt;/p>
+&lt;p>Um teste pode ser feito com o comando:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">ab -n 100 -c 5 http://www.leonardofaria.net/
+&lt;/pre>
+&lt;p>O Flag ‘-n&amp;rsquo; indica o número de requisições, enquanto a opção ‘-c&amp;rsquo; indica a ocorrência de conexões simultâneas. A saída do comando acima é semelhante a:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">This is ApacheBench, Version 2.0.40-dev &lt; $Revision: 1.146 $> apache-2.0
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Copyright 2006 The Apache Software Foundation, http://www.apache.org/
+Benchmarking www.leonardofaria.net (be patient).....done
+Server Software: Apache/2.2.8
+Server Hostname: www.leonardofaria.net
+Server Port: 80
+Document Path: /
+Document Length: 0 bytes
+Concurrency Level: 5
+Time taken for tests: 16.460184 seconds
+Complete requests: 100
+Failed requests: 0
+Write errors: 0
+Non-2xx responses: 100
+Total transferred: 41600 bytes
+HTML transferred: 0 bytes
+Requests per second: 6.08 [#/sec] (mean)
+Time per request: 823.009 [ms] (mean)
+Time per request: 164.602 [ms] (mean, across all concurrent requests)
+Transfer rate: 2.43 [Kbytes/sec] received
+Connection Times (ms)
+min mean[+/-sd] median max
+Connect: 255 291 21.2 287 361
+Processing: 442 506 131.1 485 1732
+Waiting: 438 492 42.9 484 655
+Total: 698 797 137.9 774 2040
+Percentage of the requests served within a certain time (ms)
+50% 774
+66% 804
+75% 812
+80% 818
+90% 878
+95% 925
+98% 982
+99% 2040
+100% 2040 (longest request)
+&lt;/pre>
+&lt;p>Dezenas de possibilidades podem ser traçadas com esses testes.&lt;br>
+Nos meus benchmarks, realizei basicamente 2 testes: a renderização do index.html default do framework e a renderização de um Time.Now do Ruby. Em ambos os testes, o desempenho do nginx + mongrel_cluster foi superior ao Apache + mod_rails. Esse teste também &lt;a href="http://blog.matt-darby.com/2008/07/10/apachepassenger-vs-nginxmongrel/">foi feito&lt;/a> por aí, e com resultados semelhantes ao meu.&lt;/p>
+&lt;p>Desse modo, em uma balança estão Apache/mod_rails e Nginx/mongrel_cluster. De um lado, pesam a facilidade de deployment e o crescente uso em shared hosts. De outro lado pesam a rapidez do servidor e a ‘dificuldade&amp;rsquo; do deployment. E aí? De que lado você vai ficar?&lt;/p></description></item><item><title>Rails Screencasts</title><link>https://leonardofaria.net/2008/07/11/rails-screencasts/</link><pubDate>Fri, 11 Jul 2008 01:31:43 -0300</pubDate><guid>https://leonardofaria.net/2008/07/11/rails-screencasts/</guid><description>&lt;center>
+&lt;a href='http://www.flickr.com/photos/belfathus/534214937/'>&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/07/popcorn.jpg" />&lt;/a>
+&lt;/center>
+&lt;p>É incrível a qualidade de material existente sobre Rails. A comunidade está cada vez mais crescendo e para quem está vindo para o lado Rails da força, nada mau uns screencast para aprender.&lt;/p>
+&lt;ol>
+&lt;li>&lt;a href="http://www.learnivore.com/">Learnivore&lt;/a> é um agregador com diversos sites de screencasts, incluindo os listados a seguir.&lt;/li>
+&lt;li>&lt;a href="http://www.railscasts.com/">Railscasts&lt;/a>: já são 117 episódios do mais conhecido site de vídeos.&lt;/li>
+&lt;li>&lt;a href="http://www.peepcode.com/">PeepCode&lt;/a>: screencasts de ótima qualidade, entretanto, pagos (o Júlio fez um &lt;a href="http://www.monteiro.eti.br/2008/07/08/investimento-nao-e-perder-dinheiro-e-se-preparar-para-ganhar-mais/">ótimo post&lt;/a> sobre isso).&lt;/li>
+&lt;li>&lt;a href="http://www.rubyplus.org/">Ruby Plus&lt;/a>: outro site interessante de conteúdo.&lt;/li>
+&lt;li>&lt;a href="http://www.thinkrefresh.com/">ThinkRefresh&lt;/a>: um site com um bom número de screencasts.&lt;/li>
+&lt;li>&lt;a href="http://www.makemesimple.com/blog/category/learncast/">Learncasts&lt;/a>: o Lucas Húngaro começou sua série de screencasts.&lt;/li>
+&lt;li>&lt;a href="http://www.gitcasts.com/">Git&lt;/a>: git parece ser ainda um mistério, mas não se você ver esses screencasts.&lt;/li>
+&lt;li>&lt;a href="http://kanemar.com/2006/03/18/screencast-of-test-driven-development-with-ruby-part-2-exceptions/">TDD Screencast&lt;/a>: não assisti ainda, mas promete ser um screencast bem bacana.&lt;/li>
+&lt;li>&lt;strong>[update]&lt;/strong> o &lt;a href="http://www.nomedojogo.com/">Carlos Brando&lt;/a> também tem &lt;a href="http://www.nomedojogo.com/category/screencast/">screencasts&lt;/a> brilhantes! (E não deixe de conferir o &lt;a href="http://podcast.rubyonrails.pro.br">Rails Podcast Brasil&lt;/a>, do qual ele também participa.)&lt;/li>
+&lt;li>&lt;a href="http://www.rubypulse.com/">RubyPulse&lt;/a> é um novo site de screencasts&lt;/li>
+&lt;li>&lt;a href="http://derekneighbors.com/category/community/textmate/">Sceencasts sobre o Textmate&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.rubyinside.com.br/17-videos-cobrindo-o-basico-de-ruby-1183">17 videos cobrindo o básico sobre Ruby&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>Nasceu: codestacker.com</title><link>https://leonardofaria.net/2008/07/02/nasceu-codestackercom/</link><pubDate>Wed, 02 Jul 2008 00:05:33 -0300</pubDate><guid>https://leonardofaria.net/2008/07/02/nasceu-codestackercom/</guid><description>&lt;center>
+&lt;a href='http://www.codestacker.com'>&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/07/codestacker.jpg" alt="" title="codestacker" />&lt;/a>
+&lt;/center>
+&lt;p>Nasceu meu projeto Rails de 2 fins-de-semana: &lt;a href="http://www.codestacker.com">codestacker&lt;/a> (é em minúsculas, tá?) é um site para compartilhamento de código, anônimo ou não, público ou privado. Existem vários sites semelhantes ao &lt;a href="http://www.codestacker.com">codestacker&lt;/a>, entretanto, quis fazer minha solução cobrindo minha abordagem para o problema e como posso solucioná-lo.&lt;/p>
+&lt;p>Tenho vários features que ainda não implementei, &lt;a href="http://gettingreal.37signals.com/GR_por.php">caí na real&lt;/a> e lancei o básico do serviço. Existirão outros fins-de-semana para atualizações.&lt;/p>
+&lt;p>Então é isso, vejo todo mundo &lt;a href="http://www.codestacker.com">lá&lt;/a>.&lt;/p></description></item><item><title>annotate_model, gem útil da semana</title><link>https://leonardofaria.net/2008/06/30/annotate_model-gem-util-da-semana/</link><pubDate>Mon, 30 Jun 2008 02:27:05 -0300</pubDate><guid>https://leonardofaria.net/2008/06/30/annotate_model-gem-util-da-semana/</guid><description>&lt;p>Trabalhar com Rails é certeza de encontrar ótimo material para trabalhar/documentar sua aplicação. Tenho uma lista de plugins/gems úteis para o desenvolvimento, o que daria um enorme post. Seguindo os conceitos do Getting Real, rapidinho vou postando (é muito material).&lt;/p>
+&lt;p>O primeiro da lista é o &lt;a href="http://github.com/ctran/annotate_models/">annotate_model&lt;/a>, um gem que gera para cada model as informações da estrutura da tabela daquela entidade. Por exemplo:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="color:#998;font-style:italic"># == Schema Information &lt;/span>
+&lt;span style="color:#998;font-style:italic"># Schema version: 20080628203259 &lt;/span>
+&lt;span style="color:#998;font-style:italic"># &lt;/span>
+&lt;span style="color:#998;font-style:italic"># Table name: comments &lt;/span>
+&lt;span style="color:#998;font-style:italic"># &lt;/span>
+&lt;span style="color:#998;font-style:italic"># id :integer(11) not null, primary key &lt;/span>
+&lt;span style="color:#998;font-style:italic"># name :string(255) &lt;/span>
+&lt;span style="color:#998;font-style:italic"># email :string(255) &lt;/span>
+&lt;span style="color:#998;font-style:italic"># body :text &lt;/span>
+&lt;span style="color:#998;font-style:italic"># code_id :integer(11) &lt;/span>
+&lt;span style="color:#998;font-style:italic"># created_at :datetime &lt;/span>
+&lt;span style="color:#998;font-style:italic"># updated_at :datetime &lt;/span>
+&lt;span style="color:#998;font-style:italic">#&lt;/span>
+&lt;span style="color:#000;font-weight:bold">class&lt;/span> &lt;span style="color:#458;font-weight:bold">Comment&lt;/span> &lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span> &lt;span style="color:#008080">ActiveRecord&lt;/span>&lt;span style="color:#000;font-weight:bold">::&lt;/span>&lt;span style="color:#008080">Base&lt;/span>
+&lt;span style="color:#998;font-style:italic"># ...&lt;/span>
+&lt;span style="color:#000;font-weight:bold">end&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Uma forma de se conhecer os atributos de uma entidade é, a partir do script/console, digitar: &lt;code>Model.new.attributes&lt;/code>, entretanto com o gem, o conhecimento dessas informações fica bem mais fácil. Após instalada (sudo gem install annotate-models), bastar executar o comando annotate na pasta do seu aplicativo. Simples, rápido e quebra um galhão.&lt;/p></description></item><item><title>Passenger no painel de preferências do Leopard</title><link>https://leonardofaria.net/2008/06/28/passenger-no-painel-de-preferencias-do-leopard/</link><pubDate>Sat, 28 Jun 2008 17:04:01 -0300</pubDate><guid>https://leonardofaria.net/2008/06/28/passenger-no-painel-de-preferencias-do-leopard/</guid><description>&lt;p>Que o mod_rails veio para revolucionar o deployment de Rails, todo mundo já sabe. Agora, me deparei com isso:&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/06/passenger.jpg" alt="Passenger" title="passenger" />
+&lt;/center>
+&lt;p>Como no &lt;a href="http://locomotive.raaum.org/">Locomotive&lt;/a>, &lt;a href="http://www.fngtps.com/2008/06/putting-the-pane-back-into-deployment">criaram&lt;/a>, com RubyCocoa, um painel para gerenciar suas aplicações. Agora, nem é mais preciso declarar cada aplicação no httpd.conf. Virou brincadeira, né?&lt;/p>
+&lt;p>Para funcionar, bastar ter Mac OS 10.5.2 e Pessenger 2.0.1 instalados.&lt;/p></description></item><item><title>Extendendo a classe Tween do Flash</title><link>https://leonardofaria.net/2008/06/10/extendendo-a-classe-tween-do-flash/</link><pubDate>Tue, 10 Jun 2008 17:58:21 -0300</pubDate><guid>https://leonardofaria.net/2008/06/10/extendendo-a-classe-tween-do-flash/</guid><description>&lt;p>A cada trabalho que volto ao Actionscript, me deparo com soluções interessantíssimas para problemas comuns. Esse post falar sobre classes de transição&lt;/p>
+&lt;h3 id="color-tween">Color Tween&lt;/h3>
+&lt;p>A classe Tween é responsável por fazer transições de objetos do Flash. Entre essas transições estão mudanças nos eixos, na largura, na altura e na opacidade de objetos, não existindo transições entre cores. Existem alguns protótipos para isso, mas a melhor solução que encontrei foi usar a classe &lt;a href="http://www.flashextension.net/product.php?productid=16238&amp;amp;cat=75">TweenColor&lt;/a>, que extende a classe padrão encontrada no Flash.&lt;/p>
+&lt;p>Para usá-la, basta copiar o pacote, instalar (via Extension Manager) e começar a usar. Um rápido exemplo funcional:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-actionscript" data-lang="actionscript">&lt;span style="color:#000;font-weight:bold">import&lt;/span> mx.transitions.TweenRGB&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">var&lt;/span> container&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#0086b3">MovieClip&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">this&lt;/span>.createEmptyMovieClip(&lt;span style="color:#d14">&amp;#34;container&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000;font-weight:bold">this&lt;/span>.getNextHighestDepth());
+&lt;span style="color:#000;font-weight:bold">var&lt;/span> label&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#0086b3">TextField&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> container.createTextField(&lt;span style="color:#d14">&amp;#34;label&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#099">1&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#099">0&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#099">0&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#099">150&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#099">20&lt;/span>);
+label.text &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">&amp;#34;Hello World&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">;&lt;/span>
+container.onRollOver &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">function&lt;/span>()&lt;span style="color:#000;font-weight:bold">:&lt;/span>&lt;span style="color:#000;font-weight:bold">Void&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">var&lt;/span> mytween &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> TweenRGB(&lt;span style="color:#000;font-weight:bold">this&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#d14">&amp;#34;&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> Regular.easeInOut&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#099">0x000000&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#099">0xff0000&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#099">3&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000;font-weight:bold">true&lt;/span>);
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="tween-extended">Tween Extended&lt;/h3>
+&lt;p>A classe &lt;a href="http://www.sqcircle.com/downloads/">Tween Extended&lt;/a> multiplica as possibilidades de se usar a classe Tween padrão. Como a Color Tween, ela também permite a transição entre cores e além disso, possibilita passar de uma só vez, múltiplos parâmetros (_x, _y, _alpha, _width, _height, _xscale, _yscale e _rotation) para um Tween de um objeto.&lt;/p>
+&lt;p>O &lt;a href="http://www.leonardofranca.com.br/index.php/2006/01/06/usando-a-classe-tweenextended/">Leonardo França&lt;/a> e o &lt;a href="http://www.ericksouza.com/">Erick Sousa&lt;/a> já explicaram o funcionamento dessa classe.&lt;/p>
+&lt;h3 id="outras-classes-de-transição">Outras classes de transição&lt;/h3>
+&lt;p>Antes de surgir a classe Tween (Flash 2004 – Actionscript 2), surgiram outras classes interessantes para transição. Uma é a MC Tween 2, do brasileiro Zeh Fernando e a outra é lazo. Para ambas, basta copiar e instalar a extensão e começar a usar.&lt;/p></description></item><item><title>Extreme Programming para todos</title><link>https://leonardofaria.net/2008/06/07/extreme-programming-para-todos/</link><pubDate>Sat, 07 Jun 2008 20:21:15 -0300</pubDate><guid>https://leonardofaria.net/2008/06/07/extreme-programming-para-todos/</guid><description>&lt;p>Esse é outro post &lt;a href="http://www.leonardofaria.net/tag/academico">acadêmico&lt;/a> e novamente um artigo para a disciplina de Engenharia de Software. O artigo está abaixo e dessa vez há também &lt;a href="https://leonardofaria.net/wp-content/uploads/2008/06/XP.pdf">slides&lt;/a> (PDF, 2 MB) da apresentação feita na &lt;a href="http://www.faculdadepitagoras.com.br/">Faculdade Pitágoras&lt;/a>.&lt;/p>
 &lt;p>Naturalmente, essa não é a maior referência sobre XP, apenas uma boa introdução sobre o tema. Especialistas mesmo são o &lt;a href="http://www.improveit.com.br/vinicius">Vinícius Teles&lt;/a> e o time da &lt;a href="http://www.improveit.com.br">Improve It&lt;/a>, que possuem um &lt;a href="http://www.improveit.com.br/xp">ótimo conteúdo&lt;/a> sobre o assunto. Vamos lá:&lt;/p>
 &lt;h3 id="introdução">Introdução&lt;/h3>
-&lt;p>Extreme Programming é uma metodologia de desenvolvimento de software que visa a criação de sistemas de melhor qualidade, produzidos em menos tempo e com menores custos. Criada por Kent Beck no fim da década de 90, o desenvolvimento ágil é atingido através de alguns valores e práticas que muito divergem dos conceitos tradicionais.&lt;/p></description></item><item><title>6 screensavers para seu Mac</title><link>https://leonardofaria.net/2008/06/01/6-screensavers-para-seu-mac/</link><pubDate>Sun, 01 Jun 2008 14:57:06 -0300</pubDate><guid>https://leonardofaria.net/2008/06/01/6-screensavers-para-seu-mac/</guid><description>&lt;p>Particularmente, acho os screensavers do Mac OS mais bonitos do que os do Windows e Linux. Nesse post linko alguns screensavers bem interessantes:&lt;/p>
+&lt;p>Extreme Programming é uma metodologia de desenvolvimento de software que visa a criação de sistemas de melhor qualidade, produzidos em menos tempo e com menores custos. Criada por Kent Beck no fim da década de 90, o desenvolvimento ágil é atingido através de alguns valores e práticas que muito divergem dos conceitos tradicionais.&lt;/p>
+&lt;h3 id="valores">Valores&lt;/h3>
+&lt;p>O XP, como também é chamado o Extreme Programming, estabelece alguns valores para que a empresa de desenvolvimento não se perca em seu projeto e para que o cliente tenha um acompanhamento real do que está pedindo (e pagando). Entre os valores estão: comunicação, coragem, feedback e simplicidade.&lt;/p>
+&lt;p>&lt;strong>Comunicação&lt;/strong>&lt;/p>
+&lt;p>A comunicação é um importante fator no processo de criação e é privilegiada no Extreme Programming, como premissa para garantir o sucesso do desenvolvimento. No XP, cliente e equipe de desenvolvimento ficam cara-a-cara, o que evita mal entendidos e especulações. Essa comunicação é muito positiva para ambos, pois, além de possibilitar o enriquecimento das relações pessoais, faz com o que o cliente faça parte de todo um processo de criação, além de dar a ele um entendimento e domínio cada vez maior do que está querendo.&lt;/p>
+&lt;p>&lt;strong>Coragem&lt;/strong>&lt;/p>
+&lt;p>Outro mandamento do XP é a coragem, no que diz respeito a quebra de paradigmas tradicionais no desenvolvimento. Isso significa que menos é mais: menos documentação, menos modelagem e menos testes manuais. Além disso, é possibilitar o cliente a definir prioridades e manter o sistema sempre simples.&lt;/p>
+&lt;p>&lt;strong>Feedback&lt;/strong>&lt;/p>
+&lt;p>Um dos alicerces mais importantes do Extreme Programming é o Feedback imediato. No feedback, o cliente tem a oportunidade de corrigir falhas que surgem no desenvolvimento e aprender em etapas o funcionamento do seu software – o que é bem mais sútil que o modelo tradicional de desenvolvimento. Além disso, dá ao desenvolvedor a oportunidade de apontar problemas e alternativas do que está sendo solicitado em tempo real.&lt;/p>
+&lt;p>&lt;strong>Simplicidade&lt;/strong>&lt;/p>
+&lt;p>O conceito de simplicidade do XP possui certa relação com o Just in Time, sistema de produção criado pela Toyota na década de 50. Assim como no Toyotismo, o XP prega a simplicidade como máxima. Isso significa escrever somente o necessário para que um requisito funcione e evitar suposições para o futuro.&lt;/p>
+&lt;h3 id="práticas">Práticas&lt;/h3>
+&lt;p>Valores podem ser simples palavras caso não se tenha uma postura condizente com o que se prega. O Extreme Programming têm interessantes práticas. As principais são:&lt;/p>
+&lt;p>&lt;strong>Desenvolvimento Orientado a Testes&lt;/strong>&lt;/p>
+&lt;p>Cria os testes unitários (unit tests) e depois cria o código para que os testes funcionem. Esta abordagem é complexa no início, pois vai contra o processo de desenvolvimento de muitos anos. Entretanto, os testes unitários são essenciais para que a qualidade do projeto seja mantida.&lt;/p>
+&lt;p>&lt;strong>Integração Contínua&lt;/strong>&lt;/p>
+&lt;p>Nunca espera para integrar à versão atual do sistema uma nova funcionalidade. Integrar de forma contínua permite saber o real status do desenvolvimento.&lt;/p>
+&lt;p>&lt;strong>Jogo de Planejamento&lt;/strong>&lt;/p>
+&lt;p>O desenvolvimento é feito em iterações semanais. A cada começo de semana, desenvolvedores e cliente se reúnem para priorizar as funcionalidades. Ao longo da semana, o projeto é desenvolvido para que, ao final de cada semana, o cliente receba as novas funcionalidades, teste-as e caso aprove, sejam colocada em produção.&lt;/p>
+&lt;p>&lt;strong>Pequenas Versões&lt;/strong>&lt;/p>
+&lt;p>A liberação de pequenas versões funcionais auxilia o processo de aceitação e absorção do software por parte do cliente.&lt;/p>
+&lt;p>&lt;strong>Programação em pares&lt;/strong>&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/06/xp1.jpg" title="Programação em par" width="300" align="right" class="photo white" />&lt;/p>
+&lt;p>A programação em pares é um dos principais diferenciais do XP. Dois profissionais trabalhando juntos produzem códigos mais limpos, funcionais, revisados e sujeito a menos falhas.&lt;/p>
+&lt;p>&lt;strong>Projeto Simples&lt;/strong>&lt;/p>
+&lt;p>A simplicidade de um projeto está em fazer apenas o que o cliente solicita, não se preocupando em atender a requisitos não pedidos. Por exemplo: caso o cliente tenha pedido que na primeira versão apenas o usuário “teste” possa entrar no sistema com a senha “123” e assim ter acesso a todo o sistema, você vai fazer o código exato para que esta funcionalidade seja implementada, sem se preocupar com sistemas de autenticação e restrições de acesso.&lt;/p>
+&lt;p>&lt;strong>Refatoração&lt;/strong>&lt;/p>
+&lt;p>A refatoração é um processo continuamente feito. Significa melhorara a clareza do cógido, dividindo-o em módulos coesos e de maior aproveitamento, baseando-se no conceito DRY (don&amp;rsquo;t repeat yourself – não se repita).&lt;/p>
+&lt;p>&lt;strong>Reuniões em pé&lt;/strong>&lt;/p>
+&lt;p>Reuniões em pé para não se perder o foco nos assuntos, produzindo reuniões rápidas, apenas abordando tarefas realizadas e tarefas a realizar pela equipe.&lt;/p>
+&lt;p>&lt;strong>Ritmo Sustentável&lt;/strong>&lt;/p>
+&lt;p>Ritmo Sustentável significa trabalhar com qualidade, buscando ter ritmo de trabalho saudável (40 horas/semana, 8 horas/dia), sem horas extras. Horas extras, ao contrário do que parece, pode não trazer a produtividade esperada. Outra prática que se verifica neste processo é a prática de trabalho energizado, onde se busca trabalho motivado sempre. Para isto o ambiente de trabalho e a motivação da equipe devem estar sempre em harmonia.&lt;/p>
+&lt;p>&lt;strong>Time Coeso&lt;/strong>&lt;/p>
+&lt;p>A equipe de desenvolvimento é formada pelo cliente e pela equipe de desenvolvimento. Isso significa que o cliente deve ter disponibilidade e boa vontade para um trabalho satisfatório.&lt;/p>
+&lt;h3 id="equipe">Equipe&lt;/h3>
+&lt;p>Uma equipe de Extreme Programming possui desenvolvedores que desempenham diferentes papéis. São eles:&lt;/p>
+&lt;p>&lt;strong>Gerente de Projeto&lt;/strong>&lt;/p>
+&lt;p>Principal responsável pelo relacionamento com o cliente, além de ser responsável também por filtrar assuntos e requisitos desnecessários.&lt;/p>
+&lt;p>&lt;strong>Coach&lt;/strong>&lt;/p>
+&lt;p>Responsável pelas questões técnicas do projeto. Recomenda-se que o coach seja a pessoa com maior conhecimento do processo de desenvolvimento, dos valores e práticas do XP, para que possa verificar o desenvolvimento e apontar eventuais erros da equipe.&lt;/p>
+&lt;p>&lt;strong>Analista de Teste&lt;/strong>&lt;/p>
+&lt;p>Responsável em garantir a qualidade do sistema através dos testes escritos. Ele deve ajudar o cliente a escrever os casos de testes e no final de cada iteração verificar se o software atende todos os casos de testes. Em muitos casos, o Analista em Teste também escreve a documentação.&lt;/p>
+&lt;p>&lt;strong>Redator Técnico&lt;/strong>&lt;/p>
+&lt;p>Responsável por escrever a documentação mínima necessária do projeto, tirando dos desenvolvedores essa tarefa.&lt;/p>
+&lt;p>&lt;strong>Desenvolvedor&lt;/strong>&lt;/p>
+&lt;p>Responsável em analisar, projetar e codificar o sistema. No XP não existe diferença entre analista, projetista e programador uma vez que em vários momentos do projeto o desenvolvedor estará exercendo alguma destas atividades.&lt;/p>
+&lt;h3 id="conclusão">Conclusão&lt;/h3>
+&lt;p>Existem várias formas de se conduzir um processo de desenvolvimento de software. O sucesso da aplicação independe do processo de desenvolvimento escolhido, desde que essa seja seguido corretamente com o comprometimento do cliente e da equipe de desenvolvedores. O Extreme Programming está entre as melhores metodologias por acreditar em um fator fundamental: a comunicação entre todos os participantes.&lt;/p></description></item><item><title>6 screensavers para seu Mac</title><link>https://leonardofaria.net/2008/06/01/6-screensavers-para-seu-mac/</link><pubDate>Sun, 01 Jun 2008 14:57:06 -0300</pubDate><guid>https://leonardofaria.net/2008/06/01/6-screensavers-para-seu-mac/</guid><description>&lt;p>Particularmente, acho os screensavers do Mac OS mais bonitos do que os do Windows e Linux. Nesse post linko alguns screensavers bem interessantes:&lt;/p>
 &lt;p>O &lt;a href="http://blog.pixelbreaker.com/polarclock">Polar Clock&lt;/a> é escrito com ActionScript 3, e tem versões para Windows e Mac.&lt;/p>
 &lt;center>
 &lt;a href='http://blog.pixelbreaker.com/polarclock/'>&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/05/ss1.png" width="400" alt="" title="polar clock" />&lt;/a>
-&lt;/center></description></item><item><title>Sobre Controle de Versão</title><link>https://leonardofaria.net/2008/05/31/sobre-controle-de-versao/</link><pubDate>Sat, 31 May 2008 17:38:06 -0300</pubDate><guid>https://leonardofaria.net/2008/05/31/sobre-controle-de-versao/</guid><description>&lt;p>Na disciplina de Engenharia de Software que faço no curso de Sistemas de Informação da Faculdade Pitágoras, fiz um trabalho introdutório sobre Sistemas de Controle de Versão. O trabalho está abaixo e também disponível em &lt;a href="https://leonardofaria.net/wp-content/uploads/2008/05/controle.pdf">PDF&lt;/a>.&lt;/p></description></item><item><title>Novo trabalho interativo: is®</title><link>https://leonardofaria.net/2008/05/26/novo-trabalho-interativo-is/</link><pubDate>Mon, 26 May 2008 20:59:26 -0300</pubDate><guid>https://leonardofaria.net/2008/05/26/novo-trabalho-interativo-is/</guid><description>Nos últimos meses, estive desenvolvendo o hotsite da coleção de inverno da grife mineira is®. Já é o meu terceiro trabalho com o designer Pedro Frot.a e enfim, é uma grife fantástica, cool, contemporânea e que traz o encontro das artes com a moda.
-P.S.: Durante a navegação, curta o som de artistas do mundo todo que se identificam com o espírito da marca.</description></item><item><title>Rails, Git, MySQL e mod_rails no Leopard</title><link>https://leonardofaria.net/2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/</link><pubDate>Sat, 24 May 2008 16:53:23 -0300</pubDate><guid>https://leonardofaria.net/2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/</guid><description>&lt;p>Comprou um Mac? Não sabe por onde começar? Esse é um mega-post mostrando como configurar Ruby on Rails, Git, MySQL e mod_rails no Leopard. É tudo &lt;strong>muito-fácil&lt;/strong>!&lt;/p>
+&lt;/center>
+&lt;center>
+&lt;a href='http://www.simonheys.com/2008/05/17/word-clock-in-18-languages/'>&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/05/ss2.jpg" alt="" title="word clock" />&lt;/a>
+&lt;/center>
+&lt;p>O &lt;a href="http://www.simonheys.com/2008/05/17/word-clock-in-18-languages/">Word Clock&lt;/a> mostra a data corrente de forma bem interessante.&lt;/p>
+&lt;center>
+&lt;a href='http://www.9031.com/downloads/screensavers.html'>&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/05/ss3.jpg" alt="" title="Fliqlo" />&lt;/a>
+&lt;/center>
+&lt;p>O &lt;a href="http://www.9031.com/downloads/screensavers.html">FLIQLO&lt;/a> mostra as horas simulando aqueles painéis de aeroporto, onde as plaquinhas vão caindo para mudar os dígitos.&lt;/p>
+&lt;p>O &lt;a href="http://bodysoulspirit.deviantart.com/art/Time-Machine-Saver-Update-80034933">Time Machine screensaver&lt;/a> é uma das mais belas proteções de tela que já vi. Para instalá-lo, basta fazer o &lt;a href="http://www.deviantart.com/download/80034933/Time_Machine_Saver_Update_by_bodysoulspirit.zip">download&lt;/a> e copiar para a pasta ~/Library/Screen Savers.&lt;/p>
+&lt;p>Para pregar peças nos amigos, existe o &lt;a href="http://doomlaser.com/?p=12">KPSaver&lt;/a>, proteção de tela que mostra o Kernel Panic do OS. Mas se o que você quer é fazer piada com a turma que usa Windows, não deixe de ter a &lt;a href="http://mac.softpedia.com/get/Screensavers/Blue-Screen-of-Death-SS.shtml">Blue Screen of Death&lt;/a>&lt;/p></description></item><item><title>Sobre Controle de Versão</title><link>https://leonardofaria.net/2008/05/31/sobre-controle-de-versao/</link><pubDate>Sat, 31 May 2008 17:38:06 -0300</pubDate><guid>https://leonardofaria.net/2008/05/31/sobre-controle-de-versao/</guid><description>&lt;p>Na disciplina de Engenharia de Software que faço no curso de Sistemas de Informação da Faculdade Pitágoras, fiz um trabalho introdutório sobre Sistemas de Controle de Versão. O trabalho está abaixo e também disponível em &lt;a href="https://leonardofaria.net/wp-content/uploads/2008/05/controle.pdf">PDF&lt;/a>.&lt;/p>
+&lt;h3 id="introdução">Introdução&lt;/h3>
+&lt;p>O desenvolvimento de software envolve um processo contínuo de evolução de código e baseado nesse paradigma, surgiu a necessidade do desenvolvimento de uma solução que gerenciasse o controle de versões dos códigos-fonte, da documentação e do compartilhamento de trabalho. Assim, surgiram os softwares responsáveis de controle de versão.&lt;/p>
+&lt;p>Entre suas funções, os Sistemas de Controle de Versão se destacam por possibilitar:&lt;/p>
+&lt;ul>
+&lt;li>Controle do histórico: possibilidade de se ter um histórico do desenvolvimento, bem como a possibilidade de rastrear as alterações feitas durante um projeto.&lt;/li>
+&lt;li>Trabalho em equipe: oportunidade de possibilitar a divisão de tarefas de forma que não comprometa a integridade total do projeto. Desse modo, pode-se dividir uma equipe de programadores sem que nenhum atrapalhe o projeto do outro, tudo isso sem problemas de sincronização de arquivos.&lt;/li>
+&lt;li>Marcação e resgate de versões estáveis: a utilização dos Sistemas de Controle de Versão facilita a restauração de versões funcionais. Desse modo, é possível trabalhar com segurança o desenvolvimento de uma versão de software sem o comprometimento da versão estável.&lt;/li>
+&lt;li>Apresentando todo essas vantagens, o Controle de Versão é amplamente usado no desenvolvimento de sistemas. Seja em times pequenos ou grandes, softwares livres ou fechados, o Controle de Versão organiza e centraliza decisões.&lt;/li>
+&lt;/ul>
+&lt;h3 id="funcionamento">Funcionamento&lt;/h3>
+&lt;p>Existem diversas soluções para Controle de Versão, gratuitas e pagas. Entre as opções pagas, destacam-se o SourceSafe (Microsoft) e ClearCase (IBM). Entre as opções gratuitas, estão o CVS, o SVN e o Git.&lt;br>
+Todas essas ferramentas tem em comum a forma de funcionamento. Em um rápido resumo:&lt;/p>
+&lt;ol>
+&lt;li>Existe um repositório em um servidor qualquer. Esse servidor armazena todas as versões do software.&lt;/li>
+&lt;li>Os desenvolvedores (clientes) acessam o repositório e trabalham nos arquivos do projeto, em seus respectivos computadores.&lt;/li>
+&lt;li>Periodicamente, os desenvolvedores enviam o código atualizado para o repositório (commit).&lt;/li>
+&lt;/ol>
+&lt;h3 id="comparativo-svn-e-sourcesafe">Comparativo: SVN e SourceSafe&lt;/h3>
+&lt;p>Para um comparativo, escolhemos dois sistemas bastante antagônicos: o SVN, solução livre e o SourceSafe, da Microsoft. O SVN funciona apenas com a arquitetura cliente-servidor, enquanto o SourceSafe possibilita a utilização de repositórios distribuídos, além de também trabalhar no&lt;br>
+modo cliente-servidor.&lt;br>
+Outra diferença significativa está que o SourceSafe funciona apenas em plataforma Windows, e que surgiu de uma demanda interna da própria Microsoft. Já o SVN é multi-plataforma e livre.&lt;br>
+Além disso, é importante ressaltar outra diferença entre os dois: facilidade de utilização. O SVN funciona a partir do terminal (e através de ferramentas de frontend) e é bem mais simples de instalar e gerenciar do que a ferramenta de controle de versões da empresa de Redmond.&lt;/p>
+&lt;h3 id="conclusão">Conclusão&lt;/h3>
+&lt;p>Para um desenvolvimento profissional de aplicações, é imprescindível o Controle de Versão. É ele que garante a integridade do projeto e é, além de ter todas as vantagens apresentadas nesse trabalho, outra forma de previnir acidentes de percurso no desenvolvimento, como estações que podem parar de funcionar por causas diversas.&lt;/p></description></item><item><title>Novo trabalho interativo: is®</title><link>https://leonardofaria.net/2008/05/26/novo-trabalho-interativo-is/</link><pubDate>Mon, 26 May 2008 20:59:26 -0300</pubDate><guid>https://leonardofaria.net/2008/05/26/novo-trabalho-interativo-is/</guid><description>&lt;p>Nos últimos meses, estive desenvolvendo o hotsite da coleção de inverno da grife mineira &lt;a href="http://www.is.ind.br">is®&lt;/a>. Já é o meu terceiro trabalho com o designer Pedro Frot.a e enfim, é uma grife fantástica, cool, contemporânea e que traz o encontro das artes com a moda.&lt;/p>
+&lt;p>P.S.: Durante a navegação, curta o som de artistas do mundo todo que se identificam com o espírito da marca.&lt;/p>
+&lt;center>
+&lt;a href='http://www.is.ind.br'>&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/05/itisatshirtlife.jpg" alt="" title="it is® a t-shirt life" width="400" height="287" />&lt;/a>
+&lt;/center></description></item><item><title>Rails, Git, MySQL e mod_rails no Leopard</title><link>https://leonardofaria.net/2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/</link><pubDate>Sat, 24 May 2008 16:53:23 -0300</pubDate><guid>https://leonardofaria.net/2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/</guid><description>&lt;p>Comprou um Mac? Não sabe por onde começar? Esse é um mega-post mostrando como configurar Ruby on Rails, Git, MySQL e mod_rails no Leopard. É tudo &lt;strong>muito-fácil&lt;/strong>!&lt;/p>
 &lt;h3 id="ruby-on-rails">Ruby on Rails&lt;/h3>
-&lt;p>O Leopard já vem com Ruby e Rails já instalados. Então, a única sugestão é a de atualizar todos os gems. O comando &lt;code>gem list&lt;/code> deve apontar os gems instalados. Por padrão, são:&lt;/p></description></item><item><title>Obtendo o número de leitores do seu Feedburner</title><link>https://leonardofaria.net/2008/05/02/obtendo-o-numero-de-leitores-do-seu-feedburner/</link><pubDate>Fri, 02 May 2008 05:50:54 -0300</pubDate><guid>https://leonardofaria.net/2008/05/02/obtendo-o-numero-de-leitores-do-seu-feedburner/</guid><description>Post rápido da madrugada: eu e toda blogosfera (sic) que utiliza o Feedburner para gerenciar feeds de blogs e whatever pode não gostar dessa imagenzinha:
-Esse azul-calcinha geralmente não combina muito com os layouts de nossos sites. Eu sei que existe forma de mudar de azul-calcinha para rosa-bebê, mas isso não melhora grandes coisas. A solução em duas linhas está no PHP:
-&amp;lt;?php $xml = simplexml_load_file(&amp;#34;http://api.feedburner.com/awareness/1.0/GetFeedData?uri=SEUFEED&amp;#34;); $subs = $xml-&amp;gt;feed-&amp;gt;entry[&amp;#39;circulation&amp;#39;]; ?</description></item><item><title>Tenha vários Internet Explorer no Mac OS</title><link>https://leonardofaria.net/2008/03/16/tenha-varios-internet-explorer-no-mac-os/</link><pubDate>Sun, 16 Mar 2008 15:19:57 -0300</pubDate><guid>https://leonardofaria.net/2008/03/16/tenha-varios-internet-explorer-no-mac-os/</guid><description>Desenvolver layouts pode ser uma tarefa difícil por causa da compatibilidade entre browsers. Isso significa que nem tudo que fique funcional em um navegador vá funcionar em outro. No Mac a alternativa para testar o Internet Explorer é instalar softwares como o VMware ou Parallels, que emulam o Windows e, a partir daí, usar o I(gnorant) Explorer. Entretanto hoje existe uma alternativa para isso: o ies4osx.
-O ies4osx é baseado no projeto brasileiro ie4linux.</description></item><item><title>UML e MySQL no Mac</title><link>https://leonardofaria.net/2008/03/10/uml-e-mysql-no-mac/</link><pubDate>Mon, 10 Mar 2008 22:53:13 -0300</pubDate><guid>https://leonardofaria.net/2008/03/10/uml-e-mysql-no-mac/</guid><description>Quem não usa Mac às vezes pode pensar que soluções em desenvolvimento são escassas. Mas não são. Hoje vou apresentar duas ferramentas de modelagem de dados para Mac OS e o CocoaMySQL, para manipulação do MySQL.
-O CanonSketch é um software desenvolvido na Universidade de Madeira, em Portugal. É uma ferramenta interessante para modelagem UML 2.0, muito utilizado em times de desenvolvimento.
-Outro software de modelagem que utilizo aqui é o OmniGraffle Pro.</description></item></channel></rss>
+&lt;p>O Leopard já vem com Ruby e Rails já instalados. Então, a única sugestão é a de atualizar todos os gems. O comando &lt;code>gem list&lt;/code> deve apontar os gems instalados. Por padrão, são:&lt;/p>
+&lt;pre>&lt;code>actionmailer (1.3.6, 1.3.3)
+actionpack (1.13.6, 1.13.3)
+actionwebservice (1.2.6, 1.2.3)
+activerecord (1.15.6, 1.15.3)
+activesupport (1.4.4, 1.4.2)
+acts_as_ferret (0.4.1)
+capistrano (2.0.0)
+cgi_multipart_eof_fix (2.2)
+daemons (1.0.7)
+dnssd (0.6.0)
+fastthread (1.0)
+fcgi (0.8.7)
+ferret (0.11.4)
+gem_plugin (0.2.2)
+highline (1.2.9)
+hpricot (0.6)
+libxml-ruby (0.3.8.4)
+mongrel (1.0.1)
+needle (1.3.0)
+net-sftp (1.1.0)
+net-ssh (1.1.2)
+rails (1.2.6, 1.2.3)
+rake (0.7.3)
+RedCloth (3.0.4)
+ruby-openid (1.1.4)
+ruby-yadis (0.3.4)
+rubynode (0.1.3)
+sources (0.0.1)
+sqlite3-ruby (1.2.1)
+termios (0.9.4)
+&lt;/code>&lt;/pre>&lt;p>Observa-se que o Mac OS vem com Rails 1.2.6 e 1.2.3. Para garantir tudo atualizado, é interessante usar o flag update, do comando gem e instalar o Rails, caso sua versão seja diferente da última versão corrente.&lt;/p>
+&lt;pre>&lt;code>sudo gem update --system
+sudo gem install rails
+&lt;/code>&lt;/pre>&lt;p>Após atualizar o sistema e executar &lt;code>gem list&lt;/code>, tem-se:&lt;/p>
+&lt;pre>&lt;code>actionmailer (2.0.2, 1.3.6, 1.3.3)
+actionpack (2.0.2, 1.13.6, 1.13.3)
+actionwebservice (1.2.6, 1.2.3)
+activerecord (2.0.2, 1.15.6, 1.15.3)
+activeresource (2.0.2)
+activesupport (2.0.2, 1.4.4, 1.4.2)
+acts_as_ferret (0.4.1)
+capistrano (2.0.0)
+cgi_multipart_eof_fix (2.2)
+daemons (1.0.7)
+dnssd (0.6.0)
+fastthread (1.0.1, 1.0)
+fcgi (0.8.7)
+ferret (0.11.4)
+gem_plugin (0.2.2)
+highline (1.2.9)
+hpricot (0.6)
+libxml-ruby (0.3.8.4)
+mongrel (1.0.1)
+needle (1.3.0)
+net-sftp (1.1.0)
+net-ssh (1.1.2)
+passenger (1.0.5)
+rails (2.0.2, 1.2.6, 1.2.3)
+rake (0.8.1, 0.7.3)
+RedCloth (3.0.4)
+ruby-openid (1.1.4)
+ruby-yadis (0.3.4)
+rubygems-update (1.1.1)
+rubynode (0.1.3)
+sources (0.0.1)
+sqlite3-ruby (1.2.1)
+termios (0.9.4)
+&lt;/code>&lt;/pre>&lt;h3 id="git">Git&lt;/h3>
+&lt;p>O suporte ao Git não é bicho de sete cabeças. São duas as formas de instalar: via &lt;strong>GUI&lt;/strong> ou via &lt;strong>shell&lt;/strong>. A instalação via GUI é idêntica as demais instalações de aplicativos do Mac, além de ser mais rápida do que a instalação via shell. Basta &lt;a href="http://code.google.com/p/git-osx-installer/downloads/list?can=3&amp;amp;q=&amp;amp;sort=-uploaded&amp;amp;colspec=Filename+Summary+Uploaded+Size+DownloadCount">fazer o download&lt;/a> do pacote e apertar ‘next&amp;rsquo;, ‘next&amp;rsquo;, ‘finish&amp;rsquo;. Para &lt;a href="http://dysinger.net/2007/12/30/installing-git-on-mac-os-x-105-leopard/">instalação&lt;/a> via &lt;a href="http://blog.kineticweb.com/articles/2007/10/30/compiling-git-for-mac-os-x-leopard-10-5">shell&lt;/a> é necessário compilar o GIT e outras coisinhas mais.&lt;/p>
+&lt;h3 id="mysql">MySQL&lt;/h3>
+&lt;p>Para o MySQL, também existem duas formas de instalação: via GUI e através da compilação dos binários, via Shell. Via Gui basta &lt;a href="http://dev.mysql.com/downloads/mysql/5.0.html#macosx-dmg">copiar o pacote&lt;/a> do site e instalar como qualquer outra aplicação do Mac OS. Para compilação, o melhor é seguir &lt;a href="http://hivelogic.com/articles/2007/11/installing-mysql-on-mac-os-x">esse artigo&lt;/a> do &lt;a href="http://hivelogic.com">Hivelogic&lt;/a>.&lt;/p>
+&lt;h3 id="mod_rails-passenger">mod_rails (Passenger)&lt;/h3>
+&lt;p>A instalação ao Passenger é bem menos complicado do que as antigas formas de se trabalhar com Rails. Inicialmente, copie o gem passenger e execute o instalador:&lt;/p>
+&lt;pre>&lt;code>sudo gem install passenger
+sudo passenger-install-apache2-module
+&lt;/code>&lt;/pre>&lt;p>O instalador é simples e não há configurações a serem feitas. Agora, é necessário alterar o arquivo de configuração do Apache para carregar o suporte a Rails. Abra o arquivo &lt;code>/etc/apache2/httpd.conf&lt;/code> e adicione as seguintes linhas no final do arquivo:&lt;/p>
+&lt;pre>&lt;code>LoadModule passenger_module /opt/local/lib/ruby/gems/1.8/gems/passenger-1.0.1/ext/apache2/mod_passenger.so
+RailsSpawnServer /opt/local/lib/ruby/gems/1.8/gems/passenger-1.0.1/bin/passenger-spawn-server
+RailsRuby /opt/local/bin/ruby
+&lt;/code>&lt;/pre>&lt;p>Além disso, é necessário informar, nesse arquivo, as configurações de sua aplicação&lt;/p>
+&lt;pre>&lt;code>&amp;lt;directory &amp;quot;/Users/leonardofaria/Sites/test/public&amp;quot;&amp;gt;
+Order allow,deny
+Allow from all
+ServerName localhost
+DocumentRoot /Users/leonardofaria/Sites/test/public
+&amp;lt;/directory&amp;gt;
+&amp;lt;virtualhost *&amp;gt;
+ServerName localhost
+DocumentRoot /Users/leonardofaria/Sites/test/public
+&amp;lt;/virtualhost&amp;gt;
+&lt;/code>&lt;/pre>&lt;p>Feita todas as alterações, é hora de reiniciar o Apache. Você pode fazer isso via Preferências do Sistema &amp;gt; Compartilhamento, ou pelo shell:&lt;/p>
+&lt;pre>&lt;code>sudo apachectl start
+&lt;/code>&lt;/pre>&lt;h3 id="notas">Notas&lt;/h3>
+&lt;ul>
+&lt;li>O &lt;a href="http://simplesideias.com.br/">Nando&lt;/a> mostra em &lt;a href="http://simplesideias.com.br/instalando-o-mod_rails-phusion-passenger-no-mac-os-x-leopard/#comments">seu artigo&lt;/a> outra forma de carregar as informações das aplicações.&lt;/li>
+&lt;li>O Passenger possui uma &lt;a href="http://www.modrails.com/documentation/Users%20guide.html">longa documentação&lt;/a> sobre a configuração do Apache&lt;/li>
+&lt;/ul>
+&lt;h3 id="fontes">Fontes&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="http://dysinger.net/2007/12/30/installing-git-on-mac-os-x-105-leopard/">http://dysinger.net/2007/12/30/installing-git-on-mac-os-x-105-leopard/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://developer.apple.com/tools/developonrailsleopard.html">http://developer.apple.com/tools/developonrailsleopard.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://simplesideias.com.br/instalando-o-mod_rails-phusion-passenger-no-mac-os-x-leopard/">http://simplesideias.com.br/instalando-o-mod_rails-phusion-passenger-no-mac-os-x-leopard/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.akitaonrails.com/2008/4/16/phusion-passenger-mod_rails-test-drive">http://www.akitaonrails.com/2008/4/16/phusion-passenger-mod_rails-test-drive&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Obtendo o número de leitores do seu Feedburner</title><link>https://leonardofaria.net/2008/05/02/obtendo-o-numero-de-leitores-do-seu-feedburner/</link><pubDate>Fri, 02 May 2008 05:50:54 -0300</pubDate><guid>https://leonardofaria.net/2008/05/02/obtendo-o-numero-de-leitores-do-seu-feedburner/</guid><description>&lt;p>Post rápido da madrugada: eu e toda blogosfera (sic) que utiliza o Feedburner para gerenciar feeds de blogs e whatever pode não gostar dessa imagenzinha:&lt;/p>
+&lt;center>
+&lt;img src="https://feeds.feedburner.com/~fc/leonardofaria" />
+&lt;/center>
+&lt;p>Esse azul-calcinha geralmente não combina muito com os layouts de nossos sites. Eu sei que existe forma de mudar de azul-calcinha para rosa-bebê, mas isso não melhora grandes coisas. A solução em duas linhas está no PHP:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-php" data-lang="php">&lt;span style="color:#999;font-weight:bold;font-style:italic">&amp;lt;?php&lt;/span>
+&lt;span style="color:#008080">$xml&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> simplexml_load_file(&lt;span style="color:#d14">&amp;#34;http://api.feedburner.com/awareness/1.0/GetFeedData?uri=SEUFEED&amp;#34;&lt;/span>);
+&lt;span style="color:#008080">$subs&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#008080">$xml&lt;/span>&lt;span style="color:#000;font-weight:bold">-&amp;gt;&lt;/span>&lt;span style="color:#008080">feed&lt;/span>&lt;span style="color:#000;font-weight:bold">-&amp;gt;&lt;/span>&lt;span style="color:#008080">entry&lt;/span>[&lt;span style="color:#d14">&amp;#39;circulation&amp;#39;&lt;/span>];
+&lt;span style="color:#999;font-weight:bold;font-style:italic">?&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>O método &lt;a href="http://br2.php.net/simplexml_load_file">simplexml_load_file&lt;/a> é um parser rápido e esperto do PHP 5. No código acima, $subs retorna o número de leitores. Simples assim.&lt;/p></description></item><item><title>Tenha vários Internet Explorer no Mac OS</title><link>https://leonardofaria.net/2008/03/16/tenha-varios-internet-explorer-no-mac-os/</link><pubDate>Sun, 16 Mar 2008 15:19:57 -0300</pubDate><guid>https://leonardofaria.net/2008/03/16/tenha-varios-internet-explorer-no-mac-os/</guid><description>&lt;p>Desenvolver layouts pode ser uma tarefa difícil por causa da compatibilidade entre browsers. Isso significa que nem tudo que fique funcional em um navegador vá funcionar em outro. No Mac a alternativa para testar o Internet Explorer é instalar softwares como o VMware ou Parallels, que emulam o Windows e, a partir daí, usar o I(gnorant) Explorer. Entretanto hoje existe uma alternativa para isso: o ies4osx.&lt;/p>
+&lt;center>
+&lt;img src='https://leonardofaria.net/wp-content/uploads/2008/03/i_3.jpg' alt='ies4osx no Leopard' />
+&lt;/center>
+&lt;p>O &lt;a href="http://www.kronenberg.org/ies4osx/">ies4osx&lt;/a> é baseado no projeto brasileiro &lt;a href="http://www.tatanka.com.br/ies4linux">ie4linux&lt;/a>. O software nada mais faz do que gerar o IE para ser executado com o Wine. Além disso, ele já instala as principais fontes do Windows e até o plugin do Flash, sem grandes mágicas.&lt;/p>
+&lt;p>PS.: para o ie4osx é preciso ter instalado os pacotes X11 e o Darwine. O X11 está no DVD de instalação do Mac OS e o &lt;a href="http://www.kronenberg.org/darwine/">Darwine&lt;/a> é um fork do Wine para Mac.&lt;/p></description></item><item><title>UML e MySQL no Mac</title><link>https://leonardofaria.net/2008/03/10/uml-e-mysql-no-mac/</link><pubDate>Mon, 10 Mar 2008 22:53:13 -0300</pubDate><guid>https://leonardofaria.net/2008/03/10/uml-e-mysql-no-mac/</guid><description>&lt;p>Quem não usa Mac às vezes pode pensar que soluções em desenvolvimento são escassas. Mas não são. Hoje vou apresentar duas ferramentas de modelagem de dados para Mac OS e o CocoaMySQL, para manipulação do MySQL.&lt;/p>
+&lt;p>O &lt;a href="http://dme.uma.pt/projects/canonsketch/">CanonSketch&lt;/a> é um software desenvolvido na Universidade de Madeira, em Portugal. É uma ferramenta interessante para modelagem UML 2.0, muito utilizado em times de desenvolvimento.&lt;/p>
+&lt;p>Outro software de modelagem que utilizo aqui é o &lt;a href="http://www.omnigroup.com/applications/omnigraffle/">OmniGraffle Pro&lt;/a>. Além de diagramas de UML, o software pode criar vários outros tipos de diagrama. A desvantagem frente ao CanonSketch é que OmniGraffle é pago.&lt;/p>
+&lt;p>Para manipular bancos de dados em MySQL, a pedida é o &lt;a href="http://cocoamysql.sourceforge.net/">CocoaMySQL&lt;/a>. Ele possui a mesma interface ‘bonitinha&amp;rsquo; dos softwares escritos em Cocoa e é bastante eficaz em tarefaz corriqueiras com a linguagem.&lt;/p>
+&lt;p>P.S.: o &lt;a href="http://www.iusethis.com">iUseThis&lt;/a> é mais um site social em Rails, que lista os aplicativos que o pessoal usa. Eu tenho um &lt;a href="http://osx.iusethis.com/user/leozera">perfil&lt;/a> lá com todos apetrechos.&lt;/p>
+&lt;p>P.S.2.: estou a muito tempo sem postar, mas vou voltar às antigas. (Esse post está sendo escrito da sala da facu)&lt;/p></description></item></channel></rss>

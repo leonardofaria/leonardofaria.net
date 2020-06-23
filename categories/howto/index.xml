@@ -1,3 +1,44 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>howto on Leonardo Faria</title><link>https://leonardofaria.net/categories/howto/</link><description>Recent content in howto on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 10 Jul 2015 08:26:05 -0300</lastBuildDate><atom:link href="https://leonardofaria.net/categories/howto/index.xml" rel="self" type="application/rss+xml"/><item><title>Uptime monitoring tools</title><link>https://leonardofaria.net/2015/07/10/uptime-monitoring-tools/</link><pubDate>Fri, 10 Jul 2015 08:26:05 -0300</pubDate><guid>https://leonardofaria.net/2015/07/10/uptime-monitoring-tools/</guid><description>Sometimes people cann&amp;rsquo;t believe in their infrastructure. This can be easily understood because maintaining complex software integrates several pieces of information. Moreover, people sometimes hire bad IT solutions and as a result, shit accidents happen.
-I have been using some tools to report me web server down time. Here we go:
-monitor.us: it is a powerful tool that provides several features. I am currently using it to monitor a specific term in a specific page.</description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>howto on Leonardo Faria</title><link>https://leonardofaria.net/categories/howto/</link><description>Recent content in howto on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 10 Jul 2015 08:26:05 -0300</lastBuildDate><atom:link href="https://leonardofaria.net/categories/howto/index.xml" rel="self" type="application/rss+xml"/><item><title>Uptime monitoring tools</title><link>https://leonardofaria.net/2015/07/10/uptime-monitoring-tools/</link><pubDate>Fri, 10 Jul 2015 08:26:05 -0300</pubDate><guid>https://leonardofaria.net/2015/07/10/uptime-monitoring-tools/</guid><description>&lt;p>Sometimes people cann&amp;rsquo;t believe in their infrastructure. This can be easily understood because maintaining complex software integrates several pieces of information. Moreover, people sometimes hire bad IT solutions and as a result, &lt;s>shit&lt;/s> accidents happen.&lt;/p>
+&lt;p>I have been using some tools to report me web server down time. Here we go:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.monitor.us/">monitor.us&lt;/a>: it is a powerful tool that provides several features. I am currently using it to monitor a specific term in a specific page. It&amp;rsquo;s a free feature and it can check a website from 2 different countries&lt;/li>
+&lt;li>&lt;a href="https://www.pingdom.com/">Pingdom&lt;/a>: it looks like a full solution to analyse performance issues and downtime&lt;/li>
+&lt;li>&lt;a href="http://pingoou.com.br/">Pingoou&lt;/a>: this a Brazilian option. It offers up to 3 URLs in the free account and notifications via SMS, Campfire, Hipchat and email in the paid accounts&lt;/li>
+&lt;li>&lt;a href="http://www.siteuptime.com/">SiteUptime&lt;/a>: 1 monitor for free each 30 minutes. Actually is not the best deal&lt;/li>
+&lt;li>&lt;a href="http://www.uptimerobot.com/">UptimeRobot&lt;/a>: it monitors up to 50 websites for free&lt;/li>
+&lt;/ul>
+&lt;h2 id="building-it-own-tool">Building it own tool&lt;/h2>
+&lt;p>You can alternatively build your own monitoring tool to check if a website is up or down. The concept is pretty simple: you can use your favorite language to create a script that loads a page and then you are able to check a specific string in the document. In the following example I used Ruby and Mechanize gem to request a status page.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-ruby" data-lang="ruby">gem &lt;span style="color:#d14">&amp;#39;mechanize&amp;#39;&lt;/span>, &lt;span style="color:#d14">&amp;#39;2.7.2&amp;#39;&lt;/span>
+&lt;span style="color:#0086b3">require&lt;/span> &lt;span style="color:#d14">&amp;#39;mechanize&amp;#39;&lt;/span>
+&lt;span style="color:#0086b3">require&lt;/span> &lt;span style="color:#d14">&amp;#39;pony&amp;#39;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">def&lt;/span> &lt;span style="color:#900;font-weight:bold">sendmail&lt;/span>(to, subject, body)
+&lt;span style="color:#008080">Pony&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>mail({
+&lt;span style="color:#990073">:to&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> to,
+&lt;span style="color:#990073">:via&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#990073">:smtp&lt;/span>,
+&lt;span style="color:#990073">:subject&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> subject,
+&lt;span style="color:#990073">:body&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> body,
+&lt;span style="color:#990073">:charset&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#d14">&amp;#39;UTF-8&amp;#39;&lt;/span>,
+&lt;span style="color:#990073">:via_options&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> {
+&lt;span style="color:#990073">:address&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#d14">&amp;#39;smtp.sendgrid.net&amp;#39;&lt;/span>,
+&lt;span style="color:#990073">:port&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#d14">&amp;#39;587&amp;#39;&lt;/span>,
+&lt;span style="color:#990073">:domain&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#d14">&amp;#39;heroku.com&amp;#39;&lt;/span>,
+&lt;span style="color:#990073">:user_name&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#008080">ENV&lt;/span>&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#d14">&amp;#39;SENDGRID_USERNAME&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">]&lt;/span>,
+&lt;span style="color:#990073">:password&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#008080">ENV&lt;/span>&lt;span style="color:#000;font-weight:bold">[&lt;/span>&lt;span style="color:#d14">&amp;#39;SENDGRID_PASSWORD&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">]&lt;/span>,
+&lt;span style="color:#990073">:authentication&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#990073">:plain&lt;/span>,
+&lt;span style="color:#990073">:enable_starttls_auto&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#000;font-weight:bold">true&lt;/span>
+}
+})
+&lt;span style="color:#000;font-weight:bold">end&lt;/span>
+mechanize &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#008080">Mechanize&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>new{&lt;span style="color:#000;font-weight:bold">|&lt;/span>a&lt;span style="color:#000;font-weight:bold">|&lt;/span> a&lt;span style="color:#000;font-weight:bold">.&lt;/span>ssl_version, a&lt;span style="color:#000;font-weight:bold">.&lt;/span>verify_mode &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">&amp;#39;SSLv3&amp;#39;&lt;/span>, &lt;span style="color:#008080">OpenSSL&lt;/span>&lt;span style="color:#000;font-weight:bold">::&lt;/span>&lt;span style="color:#008080">SSL&lt;/span>&lt;span style="color:#000;font-weight:bold">::&lt;/span>&lt;span style="color:#008080">VERIFY_NONE&lt;/span>}
+page &lt;span style="color:#000;font-weight:bold">=&lt;/span> mechanize&lt;span style="color:#000;font-weight:bold">.&lt;/span>get(&lt;span style="color:#d14">&amp;#39;https://www.yourwebsite.com/mytesturl&amp;#39;&lt;/span>)
+content &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">&amp;#34;&amp;#34;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> page&lt;span style="color:#000;font-weight:bold">.&lt;/span>body&lt;span style="color:#000;font-weight:bold">.&lt;/span>include?(&lt;span style="color:#d14">&amp;#39;refused&amp;#39;&lt;/span>)
+content &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">&amp;#39;Error: Connection Refused&amp;#39;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">end&lt;/span>
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> content
+&lt;span style="color:#0086b3">puts&lt;/span> content
+sendmail(&lt;span style="color:#d14">&amp;#34;email@domain.com&amp;#34;&lt;/span>, &lt;span style="color:#d14">&amp;#34;Monitor&amp;#34;&lt;/span>, content)
+&lt;span style="color:#000;font-weight:bold">end&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>In this case, I use Heroku to run this script. The emails are delivered by SendGrid, via Pony gem. There are no costs in the process.&lt;/p>
+&lt;p>&lt;em>This post is also &lt;a href="https://coderwall.com/p/9nqnwg/uptime-monitoring-tools">published in coderwall&lt;/a>&lt;/em>.&lt;/p></description></item></channel></rss>

@@ -1,4 +1,120 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>protip on Leonardo Faria</title><link>https://leonardofaria.net/categories/protip/</link><description>Recent content in protip on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://leonardofaria.net/categories/protip/index.xml" rel="self" type="application/rss+xml"/><item><title>The Mentoring Framework</title><link>https://leonardofaria.net/2020/06/01/the-mentoring-framework/</link><pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate><guid>https://leonardofaria.net/2020/06/01/the-mentoring-framework/</guid><description>Last October I created a Mentoring Framework at work. The goal was creating a project from scratch using Ruby on Rails and in this journey, learning more about Ruby, Frontend, Project Management and Git, Databases and DevOps.
-This Mentoring Framework is similar to what bootcamps do but the difference here is I am sharing a list of suggested features / things to learn and the person can focus in what is important for them.</description></item><item><title>Changing node versions automatically per directory</title><link>https://leonardofaria.net/2020/05/20/changing-node-versions-automatically-per-directory/</link><pubDate>Wed, 20 May 2020 07:00:00 -0700</pubDate><guid>https://leonardofaria.net/2020/05/20/changing-node-versions-automatically-per-directory/</guid><description>Working in multiple Node projects sometimes means using different versions of Node. nvm is one popular solution for Linux, macOS and Windows WSL that handles multiple Node installations. One of its most unknown tricks is the deeper shell integration. Check the video:
-If you are using macOS Catalina, you are probably using ZSH as default shell. To make the magic happen, paste the following in ~/.zshrc file.
-# place this after nvm initialization!</description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>protip on Leonardo Faria</title><link>https://leonardofaria.net/categories/protip/</link><description>Recent content in protip on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://leonardofaria.net/categories/protip/index.xml" rel="self" type="application/rss+xml"/><item><title>The Mentoring Framework</title><link>https://leonardofaria.net/2020/06/01/the-mentoring-framework/</link><pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate><guid>https://leonardofaria.net/2020/06/01/the-mentoring-framework/</guid><description>&lt;p>Last October I created a Mentoring Framework at work. The goal was creating a project from scratch using Ruby on Rails and in this journey, learning more about Ruby, Frontend, Project Management and Git, Databases and DevOps.&lt;/p>
+&lt;p>This Mentoring Framework is similar to what bootcamps do but the difference here is I am sharing a list of suggested features / things to learn and the person can focus in what is important for them.&lt;/p>
+&lt;p>&lt;strong>In a nutshell: Goals → Project → Execution → Knowledge (and profit)&lt;/strong>&lt;/p>
+&lt;p>The document is divided into 4 main sections: &lt;a href="#before-start">Before start&lt;/a>, &lt;a href="#project-ideas">Project ideas&lt;/a>, &lt;a href="#execution">Execution&lt;/a>, &lt;a href="#examples">Examples&lt;/a> and &lt;a href="#resources">Resources&lt;/a>.&lt;/p>
+&lt;h2 id="before-start">Before start&lt;/h2>
+&lt;p>What are your main goals? For the following list, pick: &amp;ldquo;basic understanding&amp;rdquo;, &amp;ldquo;intermediate understanding&amp;rdquo;, &amp;ldquo;advanced understanding&amp;rdquo;. This will help to identify where you are going to invest more time and energy.&lt;/p>
+&lt;ul>
+&lt;li>Learn Ruby / Ruby on Rails&lt;/li>
+&lt;li>Learn Frontend&lt;/li>
+&lt;li>Learn Project Management and Git&lt;/li>
+&lt;li>Learn Databases&lt;/li>
+&lt;li>Learn DevOps&lt;/li>
+&lt;/ul>
+&lt;h2 id="project-ideas">Project ideas&lt;/h2>
+&lt;p>Once you know your main goals, you need a project. Check the following two ideas:&lt;/p>
+&lt;h3 id="book-store">Book store&lt;/h3>
+&lt;p>Imagine you want to sell books online. What kind of features does a bookstore have?&lt;/p>
+&lt;ul>
+&lt;li>List books per title&lt;/li>
+&lt;li>List books per authors&lt;/li>
+&lt;li>List books per categories&lt;/li>
+&lt;li>Search books&lt;/li>
+&lt;li>Buy books&lt;/li>
+&lt;li>List your orders&lt;/li>
+&lt;/ul>
+&lt;h3 id="pet-adoption-website">Pet adoption website&lt;/h3>
+&lt;p>Imagine you want to create a website for an organisation that takes care of animals (in British Columbia we have SPCA). What kind of features does a pet adoption website have?&lt;/p>
+&lt;ul>
+&lt;li>List pets per type (dog, cat and others)&lt;/li>
+&lt;li>List pets per size (or breed, or age)&lt;/li>
+&lt;li>List pets per location&lt;/li>
+&lt;li>Search pet per name&lt;/li>
+&lt;li>Request an adoption&lt;/li>
+&lt;li>List your adoption requests&lt;/li>
+&lt;/ul>
+&lt;h2 id="execution">Execution&lt;/h2>
+&lt;p>Once you know your main goals and you have an idea, it is time to work. Check the list of tasks you will be doing:&lt;/p>
+&lt;h3 id="learn-ruby-on-rails">Learn Ruby on Rails&lt;/h3>
+&lt;ul>
+&lt;li>Use scaffolds to create your entities (basic understanding) or create your own controllers, models and views (intermediate)&lt;/li>
+&lt;li>Add authentication with Devise (basic understanding) or create your own (intermediate). Or use Devise with Oauth authentication (Facebook, Google, etc - intermediate)&lt;/li>
+&lt;li>Add friendly URLs with a gem (basic) or create your own solution (intermediate)&lt;/li>
+&lt;li>Add search (intermediate)&lt;/li>
+&lt;li>Add tests for all your code&lt;/li>
+&lt;li>Create seeds for your data so you don&amp;rsquo;t need to create manually data&lt;/li>
+&lt;li>Send email to users (intermediate)&lt;/li>
+&lt;li>Create different user roles (intermediate)&lt;/li>
+&lt;li>Add pagination (basic)&lt;/li>
+&lt;li>Add localization (intermediate)&lt;/li>
+&lt;li>Add a tag system (intermediate)&lt;/li>
+&lt;li>Add images (intermediate)&lt;/li>
+&lt;/ul>
+&lt;h3 id="learn-frontend">Learn Frontend&lt;/h3>
+&lt;ul>
+&lt;li>Use Tailwind CSS (basic) or your own CSS/SASS (intermediate) to create a beautiful layout&lt;/li>
+&lt;li>Use Turbolinks (advanced / optional)&lt;/li>
+&lt;li>Add basic animations - ex.: when adding a book in the cart show some animation (advanced/optional)&lt;/li>
+&lt;li>Add Google Maps in your app (intermediate)&lt;/li>
+&lt;li>Add Google Places in your users&lt;/li>
+&lt;li>Add a carousel with photos&lt;/li>
+&lt;li>Add Pagination with Ajax or endless pagination (advanced)&lt;/li>
+&lt;/ul>
+&lt;h3 id="learn-project-management-and-git">Learn Project Management and Git&lt;/h3>
+&lt;ul>
+&lt;li>Use Github Project to organize your features&lt;/li>
+&lt;li>Use feature branches in Git, create PR for all your features&lt;/li>
+&lt;/ul>
+&lt;h3 id="learn-databases">Learn Databases&lt;/h3>
+&lt;ul>
+&lt;li>Write plain SQL to find relevant information. A few examples:
+&lt;ul>
+&lt;li>Find best-sellers authors in the book store&lt;/li>
+&lt;li>Find the number of orders or pet requests per city&lt;/li>
+&lt;li>Find which day has more sales&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Add charts in your app to expose the data&lt;/li>
+&lt;/ul>
+&lt;h3 id="learn-devops">Learn DevOps&lt;/h3>
+&lt;ul>
+&lt;li>Deploy the website to Heroku (easy/intermediate) or AWS (advanced)&lt;/li>
+&lt;li>Setup CI in Heroku (easy/intermediate)&lt;/li>
+&lt;li>Add Airbrake to monitor errors in your app (easy)&lt;/li>
+&lt;li>Buy a domain, set up Cloudflare (advanced/optional)&lt;/li>
+&lt;/ul>
+&lt;h2 id="examples">Examples&lt;/h2>
+&lt;p>&lt;img src="https://leonardofaria.net/wp-content/uploads/2020/06/the-mentoring-framework.png" alt="Website screenshots">&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://adopt.spca.bc.ca">SPCA&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.petfinder.com/">Petfinder&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="resources">Resources&lt;/h2>
+&lt;ul>
+&lt;li>Courses: &lt;a href="https://www.linkedin.com/learning/ruby-on-rails-5-essential-training">Ruby on Rails 5 Essential Training&lt;/a> and &lt;a href="https://www.linkedin.com/learning/ruby-on-rails-6-essential-training">Ruby on Rails 6 Essential Training&lt;/a> - The first course is longer than the second.&lt;/li>
+&lt;li>Screencasts: &lt;a href="https://rubytapas.com">RubyTapas&lt;/a>, &lt;a href="https://gorails.com">GoRails&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Changing node versions automatically per directory</title><link>https://leonardofaria.net/2020/05/20/changing-node-versions-automatically-per-directory/</link><pubDate>Wed, 20 May 2020 07:00:00 -0700</pubDate><guid>https://leonardofaria.net/2020/05/20/changing-node-versions-automatically-per-directory/</guid><description>&lt;p>Working in multiple Node projects sometimes means using different versions of Node. &lt;a href="https://github.com/nvm-sh/nvm">nvm&lt;/a> is one popular solution for Linux, macOS and Windows WSL that handles multiple Node installations. One of its most unknown tricks is the &lt;a href="https://github.com/nvm-sh/nvm#deeper-shell-integration">deeper shell integration&lt;/a>. Check the video:&lt;/p>
+&lt;video class="w-full h-auto" controls autoplay="autoplay">
+&lt;source src="https://leonardofaria.net/wp-content/uploads/2020/05/nvm.mp4" type="video/mp4">
+&lt;/video>
+&lt;p>If you are using macOS Catalina, you are probably using ZSH as default shell. To make the magic happen, paste the following in &lt;code>~/.zshrc&lt;/code> file.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#998;font-style:italic"># place this after nvm initialization!&lt;/span>
+autoload -U add-zsh-hook
+load-nvmrc&lt;span style="color:#000;font-weight:bold">()&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#0086b3">local&lt;/span> &lt;span style="color:#008080">node_version&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">$(&lt;/span>nvm version&lt;span style="color:#000;font-weight:bold">)&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>
+&lt;span style="color:#0086b3">local&lt;/span> &lt;span style="color:#008080">nvmrc_path&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">$(&lt;/span>nvm_find_nvmrc&lt;span style="color:#000;font-weight:bold">)&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span> -n &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#008080">$nvmrc_path&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+&lt;span style="color:#0086b3">local&lt;/span> &lt;span style="color:#008080">nvmrc_node_version&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#000;font-weight:bold">$(&lt;/span>nvm version &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">$(&lt;/span>cat &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#d14">${&lt;/span>&lt;span style="color:#008080">nvmrc_path&lt;/span>&lt;span style="color:#d14">}&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span> &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#008080">$nvmrc_node_version&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">&amp;#34;N/A&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+nvm install
+&lt;span style="color:#000;font-weight:bold">elif&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span> &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#008080">$nvmrc_node_version&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span> !&lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#008080">$node_version&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+nvm use
+&lt;span style="color:#000;font-weight:bold">fi&lt;/span>
+&lt;span style="color:#000;font-weight:bold">elif&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span> &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#008080">$node_version&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span> !&lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">$(&lt;/span>nvm version default&lt;span style="color:#000;font-weight:bold">)&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+&lt;span style="color:#0086b3">echo&lt;/span> &lt;span style="color:#d14">&amp;#34;Reverting to nvm default version&amp;#34;&lt;/span>
+nvm use default
+&lt;span style="color:#000;font-weight:bold">fi&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>After restarting your terminal, nvm will automatically change the version of Node based in the current folder.&lt;/p></description></item></channel></rss>

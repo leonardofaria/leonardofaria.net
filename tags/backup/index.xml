@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>backup on Leonardo Faria</title><link>https://leonardofaria.net/tags/backup/</link><description>Recent content in backup on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 12 Oct 2008 16:09:34 -0300</lastBuildDate><atom:link href="https://leonardofaria.net/tags/backup/index.xml" rel="self" type="application/rss+xml"/><item><title>Backup no Mac OS</title><link>https://leonardofaria.net/2008/10/12/backup-no-mac-os/</link><pubDate>Sun, 12 Oct 2008 16:09:34 -0300</pubDate><guid>https://leonardofaria.net/2008/10/12/backup-no-mac-os/</guid><description>Felizes são os pessimistas… porque já fizeram backup hoje! Depois do dia que o HD do meu MacBook morreu misteriosamente (sem motivo algum!), fiquei simplesmente viciado em backup. Na busca de um software perfeito, encontrei várias opções e resolvi escrrever sobre isso. No meu caso, buscava um software que fizesse backup da minha partição onde está o Leopard e que também espelhasse minha outra partição de dados, em FAT32 (sim, FAT32, acredite!</description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>backup on Leonardo Faria</title><link>https://leonardofaria.net/tags/backup/</link><description>Recent content in backup on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 12 Oct 2008 16:09:34 -0300</lastBuildDate><atom:link href="https://leonardofaria.net/tags/backup/index.xml" rel="self" type="application/rss+xml"/><item><title>Backup no Mac OS</title><link>https://leonardofaria.net/2008/10/12/backup-no-mac-os/</link><pubDate>Sun, 12 Oct 2008 16:09:34 -0300</pubDate><guid>https://leonardofaria.net/2008/10/12/backup-no-mac-os/</guid><description>&lt;p>&lt;strong>Felizes são os pessimistas… porque já fizeram backup hoje!&lt;/strong> Depois do dia que o HD do meu MacBook morreu misteriosamente (sem motivo algum!), fiquei simplesmente viciado em backup. Na busca de um software perfeito, encontrei várias opções e resolvi escrrever sobre isso. No meu caso, buscava um software que fizesse backup da minha partição onde está o Leopard e que também espelhasse minha outra partição de dados, em FAT32 (sim, FAT32, acredite!).&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/10/sync.jpg" alt="sync" title="Sync Professional" />
+&lt;/center>
+&lt;p>&lt;strong>[updated]&lt;/strong> Meu novo aplicativo favorito de backup para o Mac é &lt;strong>&lt;a href="http://decimus.net/synk_professional.php">Sync Professional&lt;/a>&lt;/strong>. Faz a sincronização de uma forma bem amigável&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/10/backup1-tm.jpg" alt="" title="Time Machine" />
+&lt;/center>
+&lt;p>O Time Machine resolve o problema de backup da partição do Leopard. Assim sendo, não tenho muito o que falar sobre ele, além do óbvio: USE.&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/10/backup3-silverkeeper.png" alt="" title="SilverKeeper" />
+&lt;/center>
+&lt;p>O &lt;a href="http://www.lacie.com/silverkeeper/">&lt;strong>SilverKeeper&lt;/strong>&lt;/a> é atualmente o software que estou usando para fazer backup da minha partição FAT32. É um software da Lacie, aquela marca famosa de HDs e é grátis. Além de todas essa vantagens, ele tem um log beeeem completo e dar para acompanhar, em tempo real, qual arquivo ele está copiando no momento (modo neurótico ON).&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/10/backup5-ccc.jpg" alt="" title="Carbon Copy Copier" />
+&lt;/center>
+&lt;p>O &lt;a href="http://www.bombich.com/software/ccc.html">&lt;strong>Carbon Copy Copier&lt;/strong>&lt;/a> é talvez o mais interessante dos softwares. Ele possui tarefas automatizadas e poderia criar uma que, ao conectar meu HD USB, executasse o backup previamente estabelecido. Só parei de usá-lo porque descobri que minha partição de destino do backup não poderia ser diferente de HFS.&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/10/backup2-rsyncx.png" alt="" title="RsyncX" />
+&lt;/center>
+&lt;p>O &lt;a href="http://archive.macosxlabs.org/rsyncx/rsyncx.html">&lt;strong>RsyncX&lt;/strong>&lt;/a>, conforme sugerido pelo nome, é uma interface bonitinha para o Rsync. Eu estava utilizando esse software e do nada ele parou. Foi aí que o substituí pelo SilverKeeper. Mesmo assim, pode funcionar pra você.&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/10/backup4-ibackup.gif" alt="" title="iBackup" />
+&lt;/center>
+&lt;p>O &lt;a href="http://www.grapefruit.ch/iBackup/">&lt;strong>iBackup&lt;/strong>&lt;/a> também é um software interessante e faz backup de uma série de coisas, como configurações dos seus aplicativos (Firefox, Adobe, por exemplo), dos seus System Preferences, além de suas pastas de usuário (Sites, Music, Movies…). Para backup de pastas, o achei bem lento.&lt;/p>
+&lt;p>PS: todos os softwares que uso no Mac estão no meu &lt;a href="http://osx.iusethis.com/user/leozera">iUseThis&lt;/a>.&lt;/p></description></item></channel></rss>

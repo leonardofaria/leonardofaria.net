@@ -1,7 +1,143 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2012s on Leonardo Faria</title><link>https://leonardofaria.net/2012/</link><description>Recent content in 2012s on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 31 Dec 2012 11:30:47 -0200</lastBuildDate><atom:link href="https://leonardofaria.net/2012/index.xml" rel="self" type="application/rss+xml"/><item><title>Configurando o Sublime Text 2</title><link>https://leonardofaria.net/2012/12/31/configurando-o-sublime-text-2/</link><pubDate>Mon, 31 Dec 2012 11:30:47 -0200</pubDate><guid>https://leonardofaria.net/2012/12/31/configurando-o-sublime-text-2/</guid><description>Tempos atrás tinha instalado o Sublime, mas não o usei efetivamente. O Nando Vieira fez um ótimo post detalhado sobre o editor, e após isso, resolvi dar uma olhada mais a fundo. O Sublime é altamente configurável e abaixo cito algumas modificações que fiz.
-Plugins O Sublime possui um gerenciador de plugins que extendem as funcionalidades do editor. O post que citei do Nando mostra como instalá-los. Esses são os plugins que andei testando:</description></item><item><title>Raspberry Pi</title><link>https://leonardofaria.net/2012/12/30/raspberry-pi/</link><pubDate>Sun, 30 Dec 2012 17:10:41 -0200</pubDate><guid>https://leonardofaria.net/2012/12/30/raspberry-pi/</guid><description>A alguns dias atrás comprei um Raspberry Pi. Ele é um computador do tamanho de um cartão de crédito, possui um processador de 700 MHz, 512 MB de Ram e você pode usar um cartão de memória como disco de boot. Para alimentação, um carregador de celular basta. Estou usando um teclado de um iMac capacete e um adaptador wifi xing ling para acessar a rede sem fio de casa.</description></item><item><title>Para agilizar o desenvolvimento do frontend</title><link>https://leonardofaria.net/2012/11/21/para-agilizar-o-desenvolvimento-do-frontend/</link><pubDate>Wed, 21 Nov 2012 22:45:14 -0200</pubDate><guid>https://leonardofaria.net/2012/11/21/para-agilizar-o-desenvolvimento-do-frontend/</guid><description>Uso o Chrome como browser padrão em minha máquina e algumas extensões interessantes para desenvolvedores.
-Kingsquare HTML Validator: faz validação do seu código usando o Tidy. Se você usa o Safari, não deixe de conhecer o Tidy Validator Secure Shell: um terminal em seu browser – atualmente prefiro o iTerm ligado em um monitor extra e com várias telas divididas. PageSpeed Insights: uma espécie de YSlow do Google. Descobri em um vídeo (slides) do Ilka Grigorik.</description></item><item><title>mytop, para monitorar seu MySQL</title><link>https://leonardofaria.net/2012/10/04/mytop-para-monitorar-seu-mysql/</link><pubDate>Thu, 04 Oct 2012 00:27:33 -0300</pubDate><guid>https://leonardofaria.net/2012/10/04/mytop-para-monitorar-seu-mysql/</guid><description>O mytop é um clone do comando top para o MySQL. Ele é usado para monitorar a performance do seu banco, sem precisar de softwares caros, complexos ou pesados. Ele é escrito em Perl e abaixo está um mini-roteiro de como instalá-lo – no meu caso, Mac OS Mountain Lion.
-Antes de compilar o mytop é necessário instalar o pré-requisito DBD-Mysql. No terminal, digite:
-perl -MCPAN -e 'shell' Em seguida, execute:</description></item><item><title>Atualizando o MacBook Pro</title><link>https://leonardofaria.net/2012/05/29/atualizando-o-macbook-pro/</link><pubDate>Tue, 29 May 2012 15:56:24 -0300</pubDate><guid>https://leonardofaria.net/2012/05/29/atualizando-o-macbook-pro/</guid><description>Estive um mês de férias na Califórnia, com direito a visitas a Cupertino na Apple e a Stanford. Aproveitando minha vinda aos Estados Unidos, resolvi fazer um upgrade na minha máquina, trocando memória RAM, substituindo o HD original por um drive SSD e também trocando o SuperDrive pelo HD original. Esse não é um upgrade inédito, o Fábio Akita já fez e o Rafael Gimenez também.
-Porque fazer Porque não tinha grana para comprar um MacBook Air; Porque ainda que tivesse grana para um MacBook Air, não poder fazer trocar memória era algo que me incomodava; Porque abrir Macs é divertido.</description></item><item><title>Geração de PDFs indolor no PHP</title><link>https://leonardofaria.net/2012/02/12/geracao-de-pdfs-indolor-no-php/</link><pubDate>Sun, 12 Feb 2012 15:04:44 -0200</pubDate><guid>https://leonardofaria.net/2012/02/12/geracao-de-pdfs-indolor-no-php/</guid><description>Tempos atrás escrevi um artigo sobre como gerar PDF dentro do Rails usando a gem wicked_pdf e o wkhtmltopdf. Como escrevi no post anterior, o wkhtmltopdf usa Webkit, a engine de renderização do Safari / Chrome para gerar a visualização do documento. Isso o torna superior se comparado com bibliotecas do PHP como o FPDF, pois, geralmente, essa bibliotecas possuem dificuldades para reproduzir efeitos de CSS.
-Em um novo projeto, estou usando novamente o wkhtmltopdf, mas agora dentro do PHP.</description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2012s on Leonardo Faria</title><link>https://leonardofaria.net/2012/</link><description>Recent content in 2012s on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 31 Dec 2012 11:30:47 -0200</lastBuildDate><atom:link href="https://leonardofaria.net/2012/index.xml" rel="self" type="application/rss+xml"/><item><title>Configurando o Sublime Text 2</title><link>https://leonardofaria.net/2012/12/31/configurando-o-sublime-text-2/</link><pubDate>Mon, 31 Dec 2012 11:30:47 -0200</pubDate><guid>https://leonardofaria.net/2012/12/31/configurando-o-sublime-text-2/</guid><description>&lt;p>Tempos atrás tinha instalado o Sublime, mas não o usei efetivamente. O &lt;a href="http://simplesideias.com.br/">Nando Vieira&lt;/a> fez um &lt;a href="http://simplesideias.com.br/configurando-o-sublime-text-2">ótimo post detalhado&lt;/a> sobre o editor, e após isso, resolvi dar uma olhada mais a fundo. O Sublime é altamente configurável e abaixo cito algumas modificações que fiz.&lt;/p>
+&lt;h2 id="plugins">Plugins&lt;/h2>
+&lt;p>O Sublime possui um gerenciador de plugins que extendem as funcionalidades do editor. O post que citei do Nando mostra como instalá-los. Esses são os plugins que andei testando:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/kemayo/sublime-text-2-git/">Git&lt;/a>: integra funcionalidades do Git a seu projeto;&lt;/li>
+&lt;li>&lt;a href="https://github.com/SublimeText/SideBarGit">SidebarGit&lt;/a>: integrar comandos do Git a sidebar do projeto;&lt;img src="https://leonardofaria.net/wp-content/uploads/2012/12/tree.jpg" class="foto right" align="right" />&lt;/li>
+&lt;li>&lt;a href="https://github.com/afterdesign/MacTerminal">MacTerminal&lt;/a>: integra o iTerm 2 ao Sublime;&lt;/li>
+&lt;li>&lt;a href="https://github.com/facelessuser/BracketHighlighter/">BracketHighlighter&lt;/a>: destaca blocos de código. Útil quando você pega código alheiro e se perde tentando entender onde começam e terminam funções e métodos;&lt;/li>
+&lt;li>&lt;a href="https://github.com/lunixbochs/sublimelint">Sublime Lint&lt;/a>: valida a sintaxe inline de códigos JavaScript, Ruby e PHP. Nunca fui fã desses recursos, mas resolvi instalar para experimentar;&lt;/li>
+&lt;/ul>
+&lt;h2 id="tema">Tema&lt;/h2>
+&lt;p>No Textmate eu usava o esquema de cor All Hallow&amp;rsquo;s Eve. Esse e todos os outros esquemas de cores podem ser usados no Sublime. Para isso você precisará do tema Soda. Criei um &lt;a href="https://github.com/leonardofaria/soda-theme">fork&lt;/a> do &lt;a href="http://buymeasoda.github.com/soda-theme/">tema original&lt;/a> para colocar ícones nas pastas, baseado em um &lt;a href="http://sublimetext.userecho.com/topic/19274-theming-of-the-sidebar/">hack que encontrei&lt;/a>. Para instalar o tema, clona o repositório:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#0086b3">cd&lt;/span> ~/Library/Application&lt;span style="color:#d14">\ &lt;/span>Support/Sublime&lt;span style="color:#d14">\ &lt;/span>Text&lt;span style="color:#d14">\ &lt;/span>2/Packages
+git clone https://github.com/leonardofaria/soda-theme.git &lt;span style="color:#d14">&amp;#34;Theme - Soda&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Para ativá-lo, abra o arquivo de preferências do Sublime (Sublime Text 2 &amp;gt; Preferences &amp;gt; Settings – User ou &lt;code>command + ,&lt;/code>) e adicione:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">{
+&lt;span style="color:#d14">&amp;#34;theme&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;Soda Light.sublime-theme&amp;#34;&lt;/span>,
+&lt;span style="color:#d14">&amp;#34;color_scheme&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;Packages/Color Scheme - User/All Hallow&amp;#39;s Eve Custom.tmTheme&amp;#34;&lt;/span>
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Os temas do Textmate podem ser encontrados &lt;a href="https://github.com/jwhitmire/tm-themes">nesse repositório&lt;/a> do Github. O tema Soda permite a customização das abas, tornando-as semelhantes as abas do Google Chrome.&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2012/12/multiple-tab-styles.png" />
+&lt;/center>
+&lt;p>Para usar o estilo clássico de abas, acrescente no seu arquivo de preferências:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="color:#d14">&amp;#34;soda_classic_tabs&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">true&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ícone">Ícone&lt;/h2>
+&lt;p>Eu particulamente não gosto do ícone padrão do Sublime. No Dribbble, vi alguns designers fazendo releituras do icone original. Uma &lt;a href="http://dribbble.com/search?q=sublime">busca no site&lt;/a> retorna dezenas de boas opções.&lt;/p>
+&lt;center>
+&lt;br /> &lt;a href="http://dribbble.com/shots/872166-Sublime-Text-2-Replacement-Icon">&lt;img src="https://leonardofaria.net/wp-content/uploads/2012/12/icon1.png" />&lt;/a>&lt;a href="http://dribbble.com/shots/382465-Sublime-Text-2-update-Replacement-Icon">&lt;img src="https://leonardofaria.net/wp-content/uploads/2012/12/icon2.png" />&lt;/a>&lt;a href="http://dribbble.com/shots/468176-Sublime-Text-2-icon-you-can-actually-see-when-switching-apps">&lt;img src="https://leonardofaria.net/wp-content/uploads/2012/12/icon3.png" />&lt;/a>&lt;a href="http://dribbble.com/shots/382409-Sublime-Text-2-Icon">&lt;img src="https://leonardofaria.net/wp-content/uploads/2012/12/icon4.png" />&lt;/a>&lt;br />
+&lt;/center>
+&lt;p>Escolhido o ícone, basta &lt;a href="http://dribbble.com/shots/468176-Sublime-Text-2-icon-you-can-actually-see-when-switching-apps">copiá-lo do site&lt;/a> e substituí-lo no Sublime. Vá na pasta Aplicativos do seu Mac OS, clique com o botão direito no ícone do Sublime e escolha “Mostrar Conteúdo do Pacote”. Em seguida, localize a pasta Contents &amp;gt; Resources. O arquivo a ser substituído é o “Sublime Text 2.icns”.&lt;/p></description></item><item><title>Raspberry Pi</title><link>https://leonardofaria.net/2012/12/30/raspberry-pi/</link><pubDate>Sun, 30 Dec 2012 17:10:41 -0200</pubDate><guid>https://leonardofaria.net/2012/12/30/raspberry-pi/</guid><description>&lt;p>&lt;a href="http://instagram.com/p/TO-7dfjTU3/">&lt;img src="https://leonardofaria.net/wp-content/uploads/2012/12/raspberry-300x300.jpg" alt="" title="raspberry" align="right" width="200" height="200" class="foto left" />&lt;/a> A alguns dias atrás comprei um &lt;a href="http://pt.wikipedia.org/wiki/Raspberry_Pi">Raspberry Pi&lt;/a>. Ele é um computador do tamanho de um cartão de crédito, possui um processador de 700 MHz, 512 MB de Ram e você pode usar um cartão de memória como disco de boot. Para alimentação, um carregador de celular basta. Estou usando um &lt;a href="http://en.wikipedia.org/wiki/File:Apple_USB_Keyboard_B.jpg">teclado de um iMac capacete&lt;/a> e um &lt;a href="http://dx.com/p/802-11b-g-54mbps-wifi-wlan-wireless-network-usb-adapter-50856">adaptador wifi xing ling&lt;/a> para acessar a rede sem fio de casa.&lt;/p>
+&lt;p>Existe uma versão de Debian específica para ele, mas se você não gosta dessa distribuição, pode usar o &lt;a href="http://www.raspberrypi.org/downloads">Arch Linux&lt;/a>. Escolhi o Debian, configurei Apache e PHP para me enviarem email com o IP do computador e assim trabalho remotamente com ele. Ainda não dei um destino final a ele, mas pela Internet dá para &lt;a href="http://www.wired.com/design/2012/12/more-raspberry-pi-please/?pid=1634&amp;amp;viewall=true">imaginar várias possibilidades&lt;/a>:&lt;/p>
+&lt;p>&lt;a href="http://theswitchtolinux.blogspot.com.br/2012/12/raspberry-pi-daily-deviations-picture.html">Painel de fotos&lt;/a>;&lt;br>
+&lt;a href="http://www.raspbmc.com/about/">Media Center&lt;/a>, para reproduzir seus filmes, &lt;a href="http://www.element14.com/community/groups/raspberry-pi/blog/2012/11/08/build-a-raspberry-pi-media-center">usando o conhecido XBMC&lt;/a>;&lt;br>
+&lt;a href="http://hackaday.com/2012/12/11/garage-door-opener-using-siri-and-raspberry-pi/">Portão eletrônico de garagem&lt;/a>;&lt;br>
+&lt;a href="http://jordanburgess.com/post/38986434391/raspberry-pi-airplay">Wireless airplay speaker&lt;/a>, muito bacana para quem não tem um Apple TV.&lt;/p></description></item><item><title>Para agilizar o desenvolvimento do frontend</title><link>https://leonardofaria.net/2012/11/21/para-agilizar-o-desenvolvimento-do-frontend/</link><pubDate>Wed, 21 Nov 2012 22:45:14 -0200</pubDate><guid>https://leonardofaria.net/2012/11/21/para-agilizar-o-desenvolvimento-do-frontend/</guid><description>&lt;p>Uso o Chrome como browser padrão em minha máquina e algumas extensões interessantes para desenvolvedores.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/kingsquare-html-validator/anjdemaoejlpgmnmkijdemoiebcddhkc">Kingsquare HTML Validator&lt;/a>: faz validação do seu código usando o Tidy. Se você usa o Safari, não deixe de conhecer o &lt;a href="http://zappatic.net/projects/safarivalidator">Tidy Validator&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo">Secure Shell&lt;/a>: um terminal em seu browser – atualmente prefiro o &lt;a href="http://iterm2.com/">iTerm&lt;/a> ligado em um monitor extra e com várias telas divididas.&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/pagespeed-insights-by-goo/gplegfbjlmmehdoakndmohflojccocli">PageSpeed Insights&lt;/a>: uma espécie de &lt;a href="https://chrome.google.com/webstore/detail/yslow/ninejjcohidippngpapiilnmkgllmakh">YSlow&lt;/a> do Google. Descobri em um &lt;a href="https://www.youtube.com/watch?v=BaneWEqNcpE">vídeo&lt;/a> (&lt;a href="http://www.igvita.com/slides/2012/devtools-tips-and-tricks/#1">slides&lt;/a>) do &lt;a href="http://www.igvita.com/">Ilka Grigorik&lt;/a>.&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh">Window Resizer&lt;/a> e &lt;a href="https://chrome.google.com/webstore/detail/resizer/gekhbemhcekbaodnijabeajoeolfplbp?hl=en-US&amp;amp;gl=US">Resizer&lt;/a>: uso o primeiro para testar o layout em diferentes resoluções do desktop; enquanto o segundo trás as resoluções de celulares e tablets.&lt;/li>
+&lt;/ul></description></item><item><title>mytop, para monitorar seu MySQL</title><link>https://leonardofaria.net/2012/10/04/mytop-para-monitorar-seu-mysql/</link><pubDate>Thu, 04 Oct 2012 00:27:33 -0300</pubDate><guid>https://leonardofaria.net/2012/10/04/mytop-para-monitorar-seu-mysql/</guid><description>&lt;p>O &lt;a href="http://jeremy.zawodny.com/mysql/mytop/">mytop&lt;/a> é um clone do comando top para o MySQL. Ele é usado para monitorar a performance do seu banco, sem precisar de softwares caros, complexos ou pesados. Ele é escrito em Perl e abaixo está um mini-roteiro de como instalá-lo – no meu caso, Mac OS Mountain Lion.&lt;/p>
+&lt;center>
+&lt;a href="http://jeremy.zawodny.com/mysql/mytop/">&lt;img src="https://leonardofaria.net/wp-content/uploads/2012/10/mytop.jpg" alt="" title="mytop" />&lt;/a>
+&lt;/center>
+&lt;p>Antes de compilar o mytop é necessário &lt;a href="https://discussions.apple.com/thread/3136351?start=0&amp;amp;tstart=0">instalar o pré-requisito DBD-Mysql&lt;/a>. No terminal, digite:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">perl -MCPAN -e 'shell'
+&lt;/pre>
+&lt;p>Em seguida, execute:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">get DBD::mysql
+exit
+&lt;/pre>
+&lt;p>Ao sair do prompt do cpan, digite:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">cd ~/.cpan/build/DBD-mysql-&lt;version>/
+perl Makefile.PL--testuser='mysql_user_name' --testpassword='mysql_passwd'
+make
+make test
+make install
+&lt;/pre>
+&lt;p>Faça o &lt;a href="http://jeremy.zawodny.com/mysql/mytop/mytop-1.6.tar.gz">download do pacote&lt;/a> porque já é hora de compilá-lo:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">tar -zxvf mytop-&lt;version>.tar.gz
+cd mytop-&lt;version>
+perl Makefile.PL
+make
+make test
+make install
+&lt;/pre>
+&lt;p>Execute o mytop pela primeira vez:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">mytop&lt;/pre>
+&lt;p>Pode acontecer o seguinte erro:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">Error in option spec: "long|!"&lt;/pre>
+&lt;p>Caso esse erro aconteça, é necessário editarmos o mytop. Abra o arquivo – aqui instalado em /usr/local/bin e edite a linha 159:&lt;/p>
+&lt;pre class="brush: perl; title: ; notranslate" title="">"long|long_nums|l!" => \$config{long_nums},&lt;/pre>
+&lt;p>Além disso, substitua as linhas 958 e 959 pelas linhas seguintes:&lt;/p>
+&lt;pre class="brush: perl; title: ; notranslate" title="">if ($host)
+{
+$host =~ s/^([^.]+).*/$1/;
+$thread->{Host} = $host;
+}
+&lt;/pre>
+&lt;h2 id="usando-o-mytop">Usando o mytop&lt;/h2>
+&lt;p>Você pode monitorar seu banco passando as configurações de conexão via shell:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">mytop -u 'seuusuario' -p 'suasenha' -h 127.0.0.1 -d 'seubanco'&lt;/pre>
+&lt;p>…ou pode criar um arquivo .mytop em sua pasta de usuários, como o abaixo:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">user=seuusuario
+pass=suasenha
+host=127.0.0.1
+db=seubanco&lt;/pre></description></item><item><title>Atualizando o MacBook Pro</title><link>https://leonardofaria.net/2012/05/29/atualizando-o-macbook-pro/</link><pubDate>Tue, 29 May 2012 15:56:24 -0300</pubDate><guid>https://leonardofaria.net/2012/05/29/atualizando-o-macbook-pro/</guid><description>&lt;p>Estive um mês de férias na Califórnia, com direito a visitas a Cupertino na Apple e a Stanford. Aproveitando minha vinda aos Estados Unidos, resolvi fazer um upgrade na minha máquina, trocando memória RAM, substituindo o HD original por um drive SSD e também trocando o SuperDrive pelo HD original. Esse não é um upgrade inédito, o &lt;a href="http://akitaonrails.com/2011/01/24/off-topic-upgrading-my-macbook-pro-with-an-mce-optibay">Fábio Akita já fez&lt;/a> e o &lt;a href="http://rafaelgimenes.net/2011/09/20/hackeando-macbook-pro-early-2011-memoria-ssd-hd-de-1-tb-e-dvd-externo/">Rafael Gimenez também&lt;/a>.&lt;/p>
+&lt;h3 id="porque-fazer">Porque fazer&lt;/h3>
+&lt;ul>
+&lt;li>Porque não tinha grana para comprar um MacBook Air;&lt;/li>
+&lt;li>Porque ainda que tivesse grana para um MacBook Air, não poder fazer trocar memória era algo que me incomodava;&lt;/li>
+&lt;li>Porque abrir Macs &lt;a href="https://twitter.com/leozera/statuses/14649034669039616">é divertido&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;h3 id="lista-de-compras">Lista de compras&lt;/h3>
+&lt;p>Optei por comprar tudo na Amazon, por ter preços mais baixos. A lista:&lt;/p>
+&lt;ol>
+&lt;li>&lt;a href="http://www.amazon.com/gp/product/B002YUF8ZG/ref=oh_details_o02_s00_i01">8 GB de RAM&lt;/a>: teoricamente seria o máximo suportado pelo MacBook Pro, embora seja possível usar 16 GB&lt;/li>
+&lt;li>&lt;a href="http://www.amazon.com/gp/product/B004Q81CKY/ref=oh_details_o02_s00_i00">Drive SSD&lt;/a>: optei pelo OCZ Vertex 3 por ver muita gente usando em MacBooks semelhantes ao meu&lt;/li>
+&lt;li>&lt;a href="http://www.amazon.com/gp/product/B005RFOJT6/ref=oh_details_o03_s00_i00">Case para Super Drive&lt;/a>: esse case é parecido com o driver externo que a Apple vende para o MacBook Air&lt;/li>
+&lt;li>&lt;a href="http://www.amazon.com/gp/product/B004FM4UGE/ref=oh_details_o01_s00_i00">Data Doubler&lt;/a>: case para acomodar o HD no lugar do antigo drive de CD&lt;/li>
+&lt;li>&lt;a href="http://www.amazon.com/gp/product/B002O95BJK/ref=oh_details_o00_s00_i00">Jogo de ferramentas&lt;/a>: comprei um kit bem bacana ‘especifico para Macs&amp;rsquo;&lt;/li>
+&lt;li>CD ou imagem devidamente montada do instalador do Mac OS.&lt;/li>
+&lt;/ol>
+&lt;h3 id="como-fazer">Como fazer&lt;/h3>
+&lt;p>Antes de abrir a máquina, tenha certeza de que você tem um backup atualizado. O Time Machine é perfeito para isso, pois após instalar o Mac OS no novo disco você pode restaurar sua pasta de usuários e aplicativos instalados no HD antigo.&lt;/p>
+&lt;p>Para abrir o mac, você vai precisar de uma chave &lt;a href="http://www.ifixit.com/Tools/Phillips-00-ScrcF145-006">Phillips 00&lt;/a>, uma &lt;a href="http://www.ifixit.com/Tools/T6-Torx-Screwdriver/IF145-004#.T8TvbplYtG4">chave T6&lt;/a>, e um &lt;a href="http://www.ifixit.com/Tools/Spudger/IF145-002">Spudger&lt;/a>, que no meu caso estavam entre as ferramentas do kit. Ao abrir a máquina, a primeira coisa a ser feita é desligar o conector da bateria. Eu não vou entrar em detalhes sobre esse processo, uma vez que recorri ao &lt;a href="http://www.ifixit.com">iFixit&lt;/a>. Ele explica didaticamente como &lt;a href="http://www.ifixit.com/Guide/Installing-MacBook-Pro-13-Inch-Unibody-Early-2011-RAM/5117/1">trocar os pentes de memória RAM&lt;/a>, como &lt;a href="http://www.ifixit.com/Guide/Installing-MacBook-Pro-13-Inch-Unibody-Early-2011-Dual-Hard-Drive/8529/1">substituir o drive de cd por um segundo HD&lt;/a> e &lt;a href="http://www.ifixit.com/Guide/Installing-MacBook-Pro-13-Inch-Unibody-Early-2011-Hard-Drive-Replacement/5119/1">como trocar o disco rígido&lt;/a>.&lt;/p>
+&lt;p>Após fechar o Mac, é hora de instalar o sistema operacional, usando o cd original ou um pendrive / HD externo com o instalador montado. Para ver o gerenciador de inicialização, segure option imediatamente após ligar o computador. Deverão aparecer a partição que possui o instalador e o seu antigo Macintosh HD. Quando instalar o Mac OS, tenha certeza de que está instalando no disco certo.&lt;/p>
+&lt;p>A restauração do Time Machine é coisa linda de Deus. As únicas coisas que quebraram aqui foram alguns apps da Adobe e alguns arquivos da pasta /etc, que aparentemente não são restaurados.&lt;/p></description></item><item><title>Geração de PDFs indolor no PHP</title><link>https://leonardofaria.net/2012/02/12/geracao-de-pdfs-indolor-no-php/</link><pubDate>Sun, 12 Feb 2012 15:04:44 -0200</pubDate><guid>https://leonardofaria.net/2012/02/12/geracao-de-pdfs-indolor-no-php/</guid><description>&lt;p>Tempos atrás escrevi um artigo sobre como gerar PDF dentro do Rails usando a gem &lt;a href="https://github.com/mileszs/wicked_pdf">wicked_pdf&lt;/a> e o &lt;a href="http://code.google.com/p/wkhtmltopdf">wkhtmltopdf&lt;/a>. Como escrevi no &lt;a href="https://leonardofaria.net/2011/08/31/geracao-de-pdfs-indolor-no-rails-3/">post anterior&lt;/a>, o wkhtmltopdf usa Webkit, a engine de renderização do Safari / Chrome para gerar a visualização do documento. Isso o torna superior se comparado com bibliotecas do PHP como o FPDF, pois, geralmente, essa bibliotecas possuem dificuldades para reproduzir efeitos de CSS.&lt;/p>
+&lt;p>Em um novo projeto, estou usando novamente o wkhtmltopdf, mas agora dentro do PHP. &lt;a href="https://leonardofaria.net/2011/08/31/geracao-de-pdfs-indolor-no-rails-3/">No post anterior&lt;/a>, indiquei que você pode usar o binário disponível no site, entretanto no servidor atual, tive alguns problemas com isso. Então, se possível, compile o wkhtmltopdf direto da fonte.&lt;/p>
+&lt;h3 id="compilação-passo-a-passo">Compilação passo-a-passo&lt;/h3>
+&lt;p>Instale em seu servidor alguns pacotes que irá precisar:&lt;/p>
+&lt;pre>&lt;code>apt-get install openssl build-essential xorg libssl-dev libxrender-dev git-core
+&lt;/code>&lt;/pre>&lt;p>… e obtenha o código fonte recente do wkhtmltopdf:&lt;/p>
+&lt;pre>&lt;code>git clone git://github.com/antialize/wkhtmltopdf.git wkhtmltopdf
+git clone git://gitorious.org/+wkhtml2pdf/qt/wkhtmltopdf-qt.git wkhtmltopdf-qt
+&lt;/code>&lt;/pre>&lt;p>Veja, para usar o wkhtmltopdf você precisará do QT. Nesse caso também vamos compilá-lo manualmente:&lt;/p>
+&lt;pre>&lt;code>cd wkhtmltopdf-qt
+git checkout staging
+QTDIR=. ./bin/syncqt
+./configure -nomake tools,examples,demos,docs,translations -opensource -prefix &amp;quot;../wkqt&amp;quot;
+make -j3 &amp;amp;&amp;amp; make install
+cd ..
+&lt;/code>&lt;/pre>&lt;p>Com o QT gerado, você finalmente poderá compilar o wkhtmltopdf:&lt;/p>
+&lt;pre>&lt;code>cd wkhtmltopdf
+../wkqt/bin/qmake
+make &amp;amp;&amp;amp; make install
+&lt;/code>&lt;/pre>&lt;p>Não inventei a &lt;a href="http://code.google.com/p/wkhtmltopdf/wiki/compilation">receita&lt;/a> acima, mas ela funcionou perfeitamente no Debian. Com a compilação a pasta /usr/bin ganhou 2 novos executáveis: wkhtmltopdf e wkhtmltoimage. Com isso você já pode usar o utilitário pelo shell. Se quiser testá-lo, experimente:&lt;/p>
+&lt;h3 id="php">PHP&lt;/h3>
+&lt;p>Dentro do próprio site do wkhtmltopdf há uma &lt;a href="http://code.google.com/p/wkhtmltopdf/wiki/IntegrationWithPhp">classe em PHP&lt;/a> para utilizar o aplicativo dentro do seu site, entretanto, optei por uma &lt;a href="https://github.com/aur1mas/Wkhtmltopdf">classe disponível&lt;/a> no Github. Um simples exemplo, tirado do próprio repositório:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-php" data-lang="php">&lt;span style="color:#999;font-weight:bold;font-style:italic">&amp;lt;?php&lt;/span>
+&lt;span style="color:#000;font-weight:bold">try&lt;/span> {
+&lt;span style="color:#008080">$wkhtmltopdf&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#000;font-weight:bold">new&lt;/span> Wkhtmltopdf(&lt;span style="color:#000;font-weight:bold">array&lt;/span>(&lt;span style="color:#d14">&amp;#39;path&amp;#39;&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> APPLICATION_PATH &lt;span style="color:#000;font-weight:bold">.&lt;/span> &lt;span style="color:#d14">&amp;#39;/../public/uploads/&amp;#39;&lt;/span>));
+&lt;span style="color:#008080">$wkhtmltopdf&lt;/span>&lt;span style="color:#000;font-weight:bold">-&amp;gt;&lt;/span>&lt;span style="color:#008080">setTitle&lt;/span>(&lt;span style="color:#d14">&amp;#34;Title&amp;#34;&lt;/span>);
+&lt;span style="color:#008080">$wkhtmltopdf&lt;/span>&lt;span style="color:#000;font-weight:bold">-&amp;gt;&lt;/span>&lt;span style="color:#008080">setHtml&lt;/span>(&lt;span style="color:#d14">&amp;#34;Content&amp;#34;&lt;/span>);
+&lt;span style="color:#008080">$wkhtmltopdf&lt;/span>&lt;span style="color:#000;font-weight:bold">-&amp;gt;&lt;/span>&lt;span style="color:#008080">output&lt;/span>(Wkhtmltopdf&lt;span style="color:#000;font-weight:bold">::&lt;/span>&lt;span style="color:#008080">MODE_DOWNLOAD&lt;/span>, &lt;span style="color:#d14">&amp;#34;file.pdf&amp;#34;&lt;/span>);
+} &lt;span style="color:#000;font-weight:bold">catch&lt;/span> (Exception &lt;span style="color:#008080">$e&lt;/span>) {
+&lt;span style="color:#000;font-weight:bold">echo&lt;/span> &lt;span style="color:#008080">$e&lt;/span>&lt;span style="color:#000;font-weight:bold">-&amp;gt;&lt;/span>&lt;span style="color:#008080">getMessage&lt;/span>();
+}
+&lt;span style="color:#999;font-weight:bold;font-style:italic">?&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>O que o exemplo não mostra é como definir uma mensagem de rodapé. Só depois de algum tempo, percebi que o wkhtmltopdf busca um arquivo externo. No meu aplicativo, defino o rodapé dinamicamente:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-php" data-lang="php">$wkhtmltopdf-&amp;gt;setFooterHtml(&amp;#34;footer.php?msg=&amp;#39;Hello World!&amp;#39;&amp;#34;);
+&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>

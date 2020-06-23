@@ -1,44 +1,333 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mac on Leonardo Faria</title><link>https://leonardofaria.net/categories/mac/</link><description>Recent content in mac on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 04 Oct 2015 17:14:16 -0300</lastBuildDate><atom:link href="https://leonardofaria.net/categories/mac/index.xml" rel="self" type="application/rss+xml"/><item><title>Passenger no painel de preferências do Leopard</title><link>https://leonardofaria.net/2008/06/28/passenger-no-painel-de-preferencias-do-leopard/</link><pubDate>Sat, 28 Jun 2008 17:04:01 -0300</pubDate><guid>https://leonardofaria.net/2008/06/28/passenger-no-painel-de-preferencias-do-leopard/</guid><description>Que o mod_rails veio para revolucionar o deployment de Rails, todo mundo já sabe. Agora, me deparei com isso:
-Como no Locomotive, criaram, com RubyCocoa, um painel para gerenciar suas aplicações. Agora, nem é mais preciso declarar cada aplicação no httpd.conf. Virou brincadeira, né?
-Para funcionar, bastar ter Mac OS 10.5.2 e Pessenger 2.0.1 instalados.</description></item><item><title>6 screensavers para seu Mac</title><link>https://leonardofaria.net/2008/06/01/6-screensavers-para-seu-mac/</link><pubDate>Sun, 01 Jun 2008 14:57:06 -0300</pubDate><guid>https://leonardofaria.net/2008/06/01/6-screensavers-para-seu-mac/</guid><description>&lt;p>Particularmente, acho os screensavers do Mac OS mais bonitos do que os do Windows e Linux. Nesse post linko alguns screensavers bem interessantes:&lt;/p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mac on Leonardo Faria</title><link>https://leonardofaria.net/categories/mac/</link><description>Recent content in mac on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 04 Oct 2015 17:14:16 -0300</lastBuildDate><atom:link href="https://leonardofaria.net/categories/mac/index.xml" rel="self" type="application/rss+xml"/><item><title>Passenger no painel de preferências do Leopard</title><link>https://leonardofaria.net/2008/06/28/passenger-no-painel-de-preferencias-do-leopard/</link><pubDate>Sat, 28 Jun 2008 17:04:01 -0300</pubDate><guid>https://leonardofaria.net/2008/06/28/passenger-no-painel-de-preferencias-do-leopard/</guid><description>&lt;p>Que o mod_rails veio para revolucionar o deployment de Rails, todo mundo já sabe. Agora, me deparei com isso:&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/06/passenger.jpg" alt="Passenger" title="passenger" />
+&lt;/center>
+&lt;p>Como no &lt;a href="http://locomotive.raaum.org/">Locomotive&lt;/a>, &lt;a href="http://www.fngtps.com/2008/06/putting-the-pane-back-into-deployment">criaram&lt;/a>, com RubyCocoa, um painel para gerenciar suas aplicações. Agora, nem é mais preciso declarar cada aplicação no httpd.conf. Virou brincadeira, né?&lt;/p>
+&lt;p>Para funcionar, bastar ter Mac OS 10.5.2 e Pessenger 2.0.1 instalados.&lt;/p></description></item><item><title>6 screensavers para seu Mac</title><link>https://leonardofaria.net/2008/06/01/6-screensavers-para-seu-mac/</link><pubDate>Sun, 01 Jun 2008 14:57:06 -0300</pubDate><guid>https://leonardofaria.net/2008/06/01/6-screensavers-para-seu-mac/</guid><description>&lt;p>Particularmente, acho os screensavers do Mac OS mais bonitos do que os do Windows e Linux. Nesse post linko alguns screensavers bem interessantes:&lt;/p>
 &lt;p>O &lt;a href="http://blog.pixelbreaker.com/polarclock">Polar Clock&lt;/a> é escrito com ActionScript 3, e tem versões para Windows e Mac.&lt;/p>
 &lt;center>
 &lt;a href='http://blog.pixelbreaker.com/polarclock/'>&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/05/ss1.png" width="400" alt="" title="polar clock" />&lt;/a>
-&lt;/center></description></item><item><title>Rails, Git, MySQL e mod_rails no Leopard</title><link>https://leonardofaria.net/2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/</link><pubDate>Sat, 24 May 2008 16:53:23 -0300</pubDate><guid>https://leonardofaria.net/2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/</guid><description>&lt;p>Comprou um Mac? Não sabe por onde começar? Esse é um mega-post mostrando como configurar Ruby on Rails, Git, MySQL e mod_rails no Leopard. É tudo &lt;strong>muito-fácil&lt;/strong>!&lt;/p>
+&lt;/center>
+&lt;center>
+&lt;a href='http://www.simonheys.com/2008/05/17/word-clock-in-18-languages/'>&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/05/ss2.jpg" alt="" title="word clock" />&lt;/a>
+&lt;/center>
+&lt;p>O &lt;a href="http://www.simonheys.com/2008/05/17/word-clock-in-18-languages/">Word Clock&lt;/a> mostra a data corrente de forma bem interessante.&lt;/p>
+&lt;center>
+&lt;a href='http://www.9031.com/downloads/screensavers.html'>&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/05/ss3.jpg" alt="" title="Fliqlo" />&lt;/a>
+&lt;/center>
+&lt;p>O &lt;a href="http://www.9031.com/downloads/screensavers.html">FLIQLO&lt;/a> mostra as horas simulando aqueles painéis de aeroporto, onde as plaquinhas vão caindo para mudar os dígitos.&lt;/p>
+&lt;p>O &lt;a href="http://bodysoulspirit.deviantart.com/art/Time-Machine-Saver-Update-80034933">Time Machine screensaver&lt;/a> é uma das mais belas proteções de tela que já vi. Para instalá-lo, basta fazer o &lt;a href="http://www.deviantart.com/download/80034933/Time_Machine_Saver_Update_by_bodysoulspirit.zip">download&lt;/a> e copiar para a pasta ~/Library/Screen Savers.&lt;/p>
+&lt;p>Para pregar peças nos amigos, existe o &lt;a href="http://doomlaser.com/?p=12">KPSaver&lt;/a>, proteção de tela que mostra o Kernel Panic do OS. Mas se o que você quer é fazer piada com a turma que usa Windows, não deixe de ter a &lt;a href="http://mac.softpedia.com/get/Screensavers/Blue-Screen-of-Death-SS.shtml">Blue Screen of Death&lt;/a>&lt;/p></description></item><item><title>Rails, Git, MySQL e mod_rails no Leopard</title><link>https://leonardofaria.net/2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/</link><pubDate>Sat, 24 May 2008 16:53:23 -0300</pubDate><guid>https://leonardofaria.net/2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/</guid><description>&lt;p>Comprou um Mac? Não sabe por onde começar? Esse é um mega-post mostrando como configurar Ruby on Rails, Git, MySQL e mod_rails no Leopard. É tudo &lt;strong>muito-fácil&lt;/strong>!&lt;/p>
 &lt;h3 id="ruby-on-rails">Ruby on Rails&lt;/h3>
-&lt;p>O Leopard já vem com Ruby e Rails já instalados. Então, a única sugestão é a de atualizar todos os gems. O comando &lt;code>gem list&lt;/code> deve apontar os gems instalados. Por padrão, são:&lt;/p></description></item><item><title>Tenha vários Internet Explorer no Mac OS</title><link>https://leonardofaria.net/2008/03/16/tenha-varios-internet-explorer-no-mac-os/</link><pubDate>Sun, 16 Mar 2008 15:19:57 -0300</pubDate><guid>https://leonardofaria.net/2008/03/16/tenha-varios-internet-explorer-no-mac-os/</guid><description>Desenvolver layouts pode ser uma tarefa difícil por causa da compatibilidade entre browsers. Isso significa que nem tudo que fique funcional em um navegador vá funcionar em outro. No Mac a alternativa para testar o Internet Explorer é instalar softwares como o VMware ou Parallels, que emulam o Windows e, a partir daí, usar o I(gnorant) Explorer. Entretanto hoje existe uma alternativa para isso: o ies4osx.
-O ies4osx é baseado no projeto brasileiro ie4linux.</description></item><item><title>UML e MySQL no Mac</title><link>https://leonardofaria.net/2008/03/10/uml-e-mysql-no-mac/</link><pubDate>Mon, 10 Mar 2008 22:53:13 -0300</pubDate><guid>https://leonardofaria.net/2008/03/10/uml-e-mysql-no-mac/</guid><description>Quem não usa Mac às vezes pode pensar que soluções em desenvolvimento são escassas. Mas não são. Hoje vou apresentar duas ferramentas de modelagem de dados para Mac OS e o CocoaMySQL, para manipulação do MySQL.
-O CanonSketch é um software desenvolvido na Universidade de Madeira, em Portugal. É uma ferramenta interessante para modelagem UML 2.0, muito utilizado em times de desenvolvimento.
-Outro software de modelagem que utilizo aqui é o OmniGraffle Pro.</description></item><item><title>Locomotive com Rails 2.0</title><link>https://leonardofaria.net/2007/12/16/locomotive-com-rails-20/</link><pubDate>Sun, 16 Dec 2007 22:06:23 -0200</pubDate><guid>https://leonardofaria.net/2007/12/16/locomotive-com-rails-20/</guid><description>Uma das formas simples de se ter Ruby on Rails no Mac é através do Locomotive, um pacote all-in-one com Ruby, Rails e vários gems importantes para desenvolvimento. Como o Rails 2.0 foi lançado no último dia 7, resolvi atualizar minha máquina.
-Numa janela do terminal rodei o tradicional gem install rails -y --source http://gems.rubyonrails.org, para atualizar a versão do Rails. Eu indiquei o repositório do site oficial, mas não é obrigatório.</description></item><item><title>Review do .Mac Mail</title><link>https://leonardofaria.net/2007/10/30/review-do-mac-mail/</link><pubDate>Tue, 30 Oct 2007 01:56:29 -0200</pubDate><guid>https://leonardofaria.net/2007/10/30/review-do-mac-mail/</guid><description>Nos primórdios tempos que conheci a plataforma mac – no auge dos meus 14 anos e usando um iMac 266 mhz – a Apple possuia o iTools, serviço que fornecia e-mail, servidor de arquivos, página web e outras cositas más. Em setembro de 2002 o iTools virou .Mac e passou a ser pago. Com isso, a conta de email @mac.com que tinha passou a ser cobrada.
-Vender conta de e-mail, servidor de arquivos, página web e espaço para hospedar fotos parece idiotice em tempos de Gmail, Flickr e cia, mas os serviços da Apple possuem um significativo diferencial: interface e integração com o sistema operacional.</description></item><item><title>Tornando o Firefox para Mac mais bonito</title><link>https://leonardofaria.net/2007/10/22/tornando-o-firefox-para-mac-mais-bonito/</link><pubDate>Mon, 22 Oct 2007 13:10:45 -0200</pubDate><guid>https://leonardofaria.net/2007/10/22/tornando-o-firefox-para-mac-mais-bonito/</guid><description>Quem usa maçãs tem diversas alternativas para navegar. O Safari, para mim, é a melhor opção, mas o Firefox com seus plugins faz falta. O Firefox é pesado e a interface dele não incorpora os elementos da interface do Mac OS.
-Para o Firefox 3, prometem a incorporação dos elementos de UI do Mac OS. Isso já pode ser percebido no Bon Echo, versão de desenvolvimento do browser. Para melhorar a aparência do navegador, o iSafari (screenshot ao lado) é uma tema que lembra o software da Apple.</description></item><item><title>Sobre Macs Refurbisheds</title><link>https://leonardofaria.net/2007/07/03/sobre-macs-refurbisheds/</link><pubDate>Tue, 03 Jul 2007 03:08:06 -0300</pubDate><guid>https://leonardofaria.net/2007/07/03/sobre-macs-refurbisheds/</guid><description>Para quem não sabe, um Refurbished é um produto que não passou por todos testes de qualidade da fábrica e é recondicionado, sendo posteriormente vendido. Em sites de leilão como o MercadoLivre, aparecem dezenas de notebooks recondicionados. Não posso falar quanto a PCs, mas posso falar de Macs Refurbisheds.
-A vantagem de um equipamento recondicionado é o preço: existem produtos com descontos expressivos, chegando até a 40%. Além disso, muitos consideram que um produto recondicionado seria até mais confiável que um produto não-recondicionado, já que equipamentos refurbished passariam duas vezes por testes durante sua produção.</description></item><item><title>Safari para Windows</title><link>https://leonardofaria.net/2007/06/11/safari-para-windows/</link><pubDate>Mon, 11 Jun 2007 22:01:20 -0300</pubDate><guid>https://leonardofaria.net/2007/06/11/safari-para-windows/</guid><description>A única novidade relevante da WWDC – Worldwide Developers Conference – é o lançamento do Safari para Windows. O Safari é o browser padrão que vem no Mac OS e a agora a Apple invade o quintal do Windows com um browser rápido, minimalista e que dá ao usuários de PCs o gostinho de experimentar as vantagens de um Mac.</description></item><item><title>Resultado da Pesquisa sobre Mac Users</title><link>https://leonardofaria.net/2007/06/07/resultado-da-pesquisa-sobre-mac-users/</link><pubDate>Thu, 07 Jun 2007 18:07:18 -0300</pubDate><guid>https://leonardofaria.net/2007/06/07/resultado-da-pesquisa-sobre-mac-users/</guid><description>&lt;p>No &lt;a href="https://leonardofaria.net/2007/05/16/pesquisa-sobre-mac-users/">último dia 16 lancei&lt;/a> uma &lt;a href="http://pesquisa.leonardofaria.net">pesquisa&lt;/a> para conhecer o perfil dos usuários de Macintosh no Brasil. A intenção dessa pesquisa, além do óbvio, é servir de background para o lançamento de um novo serviço sobre Macs no Brasil.&lt;/p>
+&lt;p>O Leopard já vem com Ruby e Rails já instalados. Então, a única sugestão é a de atualizar todos os gems. O comando &lt;code>gem list&lt;/code> deve apontar os gems instalados. Por padrão, são:&lt;/p>
+&lt;pre>&lt;code>actionmailer (1.3.6, 1.3.3)
+actionpack (1.13.6, 1.13.3)
+actionwebservice (1.2.6, 1.2.3)
+activerecord (1.15.6, 1.15.3)
+activesupport (1.4.4, 1.4.2)
+acts_as_ferret (0.4.1)
+capistrano (2.0.0)
+cgi_multipart_eof_fix (2.2)
+daemons (1.0.7)
+dnssd (0.6.0)
+fastthread (1.0)
+fcgi (0.8.7)
+ferret (0.11.4)
+gem_plugin (0.2.2)
+highline (1.2.9)
+hpricot (0.6)
+libxml-ruby (0.3.8.4)
+mongrel (1.0.1)
+needle (1.3.0)
+net-sftp (1.1.0)
+net-ssh (1.1.2)
+rails (1.2.6, 1.2.3)
+rake (0.7.3)
+RedCloth (3.0.4)
+ruby-openid (1.1.4)
+ruby-yadis (0.3.4)
+rubynode (0.1.3)
+sources (0.0.1)
+sqlite3-ruby (1.2.1)
+termios (0.9.4)
+&lt;/code>&lt;/pre>&lt;p>Observa-se que o Mac OS vem com Rails 1.2.6 e 1.2.3. Para garantir tudo atualizado, é interessante usar o flag update, do comando gem e instalar o Rails, caso sua versão seja diferente da última versão corrente.&lt;/p>
+&lt;pre>&lt;code>sudo gem update --system
+sudo gem install rails
+&lt;/code>&lt;/pre>&lt;p>Após atualizar o sistema e executar &lt;code>gem list&lt;/code>, tem-se:&lt;/p>
+&lt;pre>&lt;code>actionmailer (2.0.2, 1.3.6, 1.3.3)
+actionpack (2.0.2, 1.13.6, 1.13.3)
+actionwebservice (1.2.6, 1.2.3)
+activerecord (2.0.2, 1.15.6, 1.15.3)
+activeresource (2.0.2)
+activesupport (2.0.2, 1.4.4, 1.4.2)
+acts_as_ferret (0.4.1)
+capistrano (2.0.0)
+cgi_multipart_eof_fix (2.2)
+daemons (1.0.7)
+dnssd (0.6.0)
+fastthread (1.0.1, 1.0)
+fcgi (0.8.7)
+ferret (0.11.4)
+gem_plugin (0.2.2)
+highline (1.2.9)
+hpricot (0.6)
+libxml-ruby (0.3.8.4)
+mongrel (1.0.1)
+needle (1.3.0)
+net-sftp (1.1.0)
+net-ssh (1.1.2)
+passenger (1.0.5)
+rails (2.0.2, 1.2.6, 1.2.3)
+rake (0.8.1, 0.7.3)
+RedCloth (3.0.4)
+ruby-openid (1.1.4)
+ruby-yadis (0.3.4)
+rubygems-update (1.1.1)
+rubynode (0.1.3)
+sources (0.0.1)
+sqlite3-ruby (1.2.1)
+termios (0.9.4)
+&lt;/code>&lt;/pre>&lt;h3 id="git">Git&lt;/h3>
+&lt;p>O suporte ao Git não é bicho de sete cabeças. São duas as formas de instalar: via &lt;strong>GUI&lt;/strong> ou via &lt;strong>shell&lt;/strong>. A instalação via GUI é idêntica as demais instalações de aplicativos do Mac, além de ser mais rápida do que a instalação via shell. Basta &lt;a href="http://code.google.com/p/git-osx-installer/downloads/list?can=3&amp;amp;q=&amp;amp;sort=-uploaded&amp;amp;colspec=Filename+Summary+Uploaded+Size+DownloadCount">fazer o download&lt;/a> do pacote e apertar ‘next&amp;rsquo;, ‘next&amp;rsquo;, ‘finish&amp;rsquo;. Para &lt;a href="http://dysinger.net/2007/12/30/installing-git-on-mac-os-x-105-leopard/">instalação&lt;/a> via &lt;a href="http://blog.kineticweb.com/articles/2007/10/30/compiling-git-for-mac-os-x-leopard-10-5">shell&lt;/a> é necessário compilar o GIT e outras coisinhas mais.&lt;/p>
+&lt;h3 id="mysql">MySQL&lt;/h3>
+&lt;p>Para o MySQL, também existem duas formas de instalação: via GUI e através da compilação dos binários, via Shell. Via Gui basta &lt;a href="http://dev.mysql.com/downloads/mysql/5.0.html#macosx-dmg">copiar o pacote&lt;/a> do site e instalar como qualquer outra aplicação do Mac OS. Para compilação, o melhor é seguir &lt;a href="http://hivelogic.com/articles/2007/11/installing-mysql-on-mac-os-x">esse artigo&lt;/a> do &lt;a href="http://hivelogic.com">Hivelogic&lt;/a>.&lt;/p>
+&lt;h3 id="mod_rails-passenger">mod_rails (Passenger)&lt;/h3>
+&lt;p>A instalação ao Passenger é bem menos complicado do que as antigas formas de se trabalhar com Rails. Inicialmente, copie o gem passenger e execute o instalador:&lt;/p>
+&lt;pre>&lt;code>sudo gem install passenger
+sudo passenger-install-apache2-module
+&lt;/code>&lt;/pre>&lt;p>O instalador é simples e não há configurações a serem feitas. Agora, é necessário alterar o arquivo de configuração do Apache para carregar o suporte a Rails. Abra o arquivo &lt;code>/etc/apache2/httpd.conf&lt;/code> e adicione as seguintes linhas no final do arquivo:&lt;/p>
+&lt;pre>&lt;code>LoadModule passenger_module /opt/local/lib/ruby/gems/1.8/gems/passenger-1.0.1/ext/apache2/mod_passenger.so
+RailsSpawnServer /opt/local/lib/ruby/gems/1.8/gems/passenger-1.0.1/bin/passenger-spawn-server
+RailsRuby /opt/local/bin/ruby
+&lt;/code>&lt;/pre>&lt;p>Além disso, é necessário informar, nesse arquivo, as configurações de sua aplicação&lt;/p>
+&lt;pre>&lt;code>&amp;lt;directory &amp;quot;/Users/leonardofaria/Sites/test/public&amp;quot;&amp;gt;
+Order allow,deny
+Allow from all
+ServerName localhost
+DocumentRoot /Users/leonardofaria/Sites/test/public
+&amp;lt;/directory&amp;gt;
+&amp;lt;virtualhost *&amp;gt;
+ServerName localhost
+DocumentRoot /Users/leonardofaria/Sites/test/public
+&amp;lt;/virtualhost&amp;gt;
+&lt;/code>&lt;/pre>&lt;p>Feita todas as alterações, é hora de reiniciar o Apache. Você pode fazer isso via Preferências do Sistema &amp;gt; Compartilhamento, ou pelo shell:&lt;/p>
+&lt;pre>&lt;code>sudo apachectl start
+&lt;/code>&lt;/pre>&lt;h3 id="notas">Notas&lt;/h3>
+&lt;ul>
+&lt;li>O &lt;a href="http://simplesideias.com.br/">Nando&lt;/a> mostra em &lt;a href="http://simplesideias.com.br/instalando-o-mod_rails-phusion-passenger-no-mac-os-x-leopard/#comments">seu artigo&lt;/a> outra forma de carregar as informações das aplicações.&lt;/li>
+&lt;li>O Passenger possui uma &lt;a href="http://www.modrails.com/documentation/Users%20guide.html">longa documentação&lt;/a> sobre a configuração do Apache&lt;/li>
+&lt;/ul>
+&lt;h3 id="fontes">Fontes&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="http://dysinger.net/2007/12/30/installing-git-on-mac-os-x-105-leopard/">http://dysinger.net/2007/12/30/installing-git-on-mac-os-x-105-leopard/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://developer.apple.com/tools/developonrailsleopard.html">http://developer.apple.com/tools/developonrailsleopard.html&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://simplesideias.com.br/instalando-o-mod_rails-phusion-passenger-no-mac-os-x-leopard/">http://simplesideias.com.br/instalando-o-mod_rails-phusion-passenger-no-mac-os-x-leopard/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.akitaonrails.com/2008/4/16/phusion-passenger-mod_rails-test-drive">http://www.akitaonrails.com/2008/4/16/phusion-passenger-mod_rails-test-drive&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Tenha vários Internet Explorer no Mac OS</title><link>https://leonardofaria.net/2008/03/16/tenha-varios-internet-explorer-no-mac-os/</link><pubDate>Sun, 16 Mar 2008 15:19:57 -0300</pubDate><guid>https://leonardofaria.net/2008/03/16/tenha-varios-internet-explorer-no-mac-os/</guid><description>&lt;p>Desenvolver layouts pode ser uma tarefa difícil por causa da compatibilidade entre browsers. Isso significa que nem tudo que fique funcional em um navegador vá funcionar em outro. No Mac a alternativa para testar o Internet Explorer é instalar softwares como o VMware ou Parallels, que emulam o Windows e, a partir daí, usar o I(gnorant) Explorer. Entretanto hoje existe uma alternativa para isso: o ies4osx.&lt;/p>
+&lt;center>
+&lt;img src='https://leonardofaria.net/wp-content/uploads/2008/03/i_3.jpg' alt='ies4osx no Leopard' />
+&lt;/center>
+&lt;p>O &lt;a href="http://www.kronenberg.org/ies4osx/">ies4osx&lt;/a> é baseado no projeto brasileiro &lt;a href="http://www.tatanka.com.br/ies4linux">ie4linux&lt;/a>. O software nada mais faz do que gerar o IE para ser executado com o Wine. Além disso, ele já instala as principais fontes do Windows e até o plugin do Flash, sem grandes mágicas.&lt;/p>
+&lt;p>PS.: para o ie4osx é preciso ter instalado os pacotes X11 e o Darwine. O X11 está no DVD de instalação do Mac OS e o &lt;a href="http://www.kronenberg.org/darwine/">Darwine&lt;/a> é um fork do Wine para Mac.&lt;/p></description></item><item><title>UML e MySQL no Mac</title><link>https://leonardofaria.net/2008/03/10/uml-e-mysql-no-mac/</link><pubDate>Mon, 10 Mar 2008 22:53:13 -0300</pubDate><guid>https://leonardofaria.net/2008/03/10/uml-e-mysql-no-mac/</guid><description>&lt;p>Quem não usa Mac às vezes pode pensar que soluções em desenvolvimento são escassas. Mas não são. Hoje vou apresentar duas ferramentas de modelagem de dados para Mac OS e o CocoaMySQL, para manipulação do MySQL.&lt;/p>
+&lt;p>O &lt;a href="http://dme.uma.pt/projects/canonsketch/">CanonSketch&lt;/a> é um software desenvolvido na Universidade de Madeira, em Portugal. É uma ferramenta interessante para modelagem UML 2.0, muito utilizado em times de desenvolvimento.&lt;/p>
+&lt;p>Outro software de modelagem que utilizo aqui é o &lt;a href="http://www.omnigroup.com/applications/omnigraffle/">OmniGraffle Pro&lt;/a>. Além de diagramas de UML, o software pode criar vários outros tipos de diagrama. A desvantagem frente ao CanonSketch é que OmniGraffle é pago.&lt;/p>
+&lt;p>Para manipular bancos de dados em MySQL, a pedida é o &lt;a href="http://cocoamysql.sourceforge.net/">CocoaMySQL&lt;/a>. Ele possui a mesma interface ‘bonitinha&amp;rsquo; dos softwares escritos em Cocoa e é bastante eficaz em tarefaz corriqueiras com a linguagem.&lt;/p>
+&lt;p>P.S.: o &lt;a href="http://www.iusethis.com">iUseThis&lt;/a> é mais um site social em Rails, que lista os aplicativos que o pessoal usa. Eu tenho um &lt;a href="http://osx.iusethis.com/user/leozera">perfil&lt;/a> lá com todos apetrechos.&lt;/p>
+&lt;p>P.S.2.: estou a muito tempo sem postar, mas vou voltar às antigas. (Esse post está sendo escrito da sala da facu)&lt;/p></description></item><item><title>Locomotive com Rails 2.0</title><link>https://leonardofaria.net/2007/12/16/locomotive-com-rails-20/</link><pubDate>Sun, 16 Dec 2007 22:06:23 -0200</pubDate><guid>https://leonardofaria.net/2007/12/16/locomotive-com-rails-20/</guid><description>&lt;p>Uma das formas simples de se ter Ruby on Rails no Mac é através do &lt;a href="http://www.locomotive.raaum.org/">Locomotive&lt;/a>, um pacote all-in-one com Ruby, Rails e vários gems importantes para desenvolvimento. Como o Rails 2.0 foi lançado no último dia 7, resolvi atualizar minha máquina.&lt;/p>
+&lt;p>Numa janela do terminal rodei o tradicional &lt;code>gem install rails -y --source http://gems.rubyonrails.org&lt;/code>, para atualizar a versão do Rails. Eu indiquei o repositório do site oficial, mas não é obrigatório. Logo em seguida criei minha primeira aplicação com um &lt;code>rails _2.0.1_ teste&lt;/code>. O “_2.0.1_” gera o projeto com a estrutura já da nova versão.&lt;/p>
+&lt;p>Em seguida, adicionei a aplicação teste a lista de aplicações do Locomotive e a iniciei. A aplicação não pode ser inicializada e observando o &lt;code>server.log&lt;/code> percebi que ainda faltava atualizar o RubyGems. Assim, rodei um &lt;code>gem update --system&lt;/code> e pronto!&lt;/p></description></item><item><title>Review do .Mac Mail</title><link>https://leonardofaria.net/2007/10/30/review-do-mac-mail/</link><pubDate>Tue, 30 Oct 2007 01:56:29 -0200</pubDate><guid>https://leonardofaria.net/2007/10/30/review-do-mac-mail/</guid><description>&lt;p>Nos primórdios tempos que conheci a plataforma mac – no auge dos meus 14 anos e usando um iMac 266 mhz – a Apple possuia o iTools, serviço que fornecia e-mail, servidor de arquivos, página web e outras cositas más. Em setembro de 2002 o iTools virou .Mac e passou a ser pago. Com isso, a conta de email @mac.com que tinha passou a ser cobrada.&lt;/p>
+&lt;center>
+&lt;a href='https://leonardofaria.net/wp-content/uploads/2007/10/dotmac.jpg' title='screenshot do .Mac'>&lt;img src='https://leonardofaria.net/wp-content/uploads/2007/10/dotmac.jpg' width="500" alt='screenshot do .Mac' class='foto' />&lt;/a>
+&lt;/center>
+&lt;p>Vender conta de e-mail, servidor de arquivos, página web e espaço para hospedar fotos parece idiotice em tempos de Gmail, Flickr e cia, mas os serviços da Apple possuem um significativo diferencial: interface e integração com o sistema operacional. Cada um dos serviços merece atenção especial. As galerias de imagens são &lt;a href="http://gallery.mac.com/emily_parker">muito bonitas&lt;/a>, bem feitas – com integração entre Flash e Ajax – e compatíveis com iPhone. O serviço de e-mail leva a mesma experiência do usuário do Mail do Mac OS X para a Internet, mas isso não é tudo.&lt;/p>
+&lt;p>Resolvi criar uma conta para testar o serviço de e-mail, que a priori, é o que me interessa. O webmail definitivamente é um remake do Mail, aplicativo do Mac OS. Isso significa que o usuário leigo não vai ter problemas ao utilizar o serviço. Ponto para a Apple. Entretanto, como usuário do Gmail a três anos, algumas coisas realmente fazem falta. O recurso de conversação, ou seja, mesclar e-mails com mesmo subject, é imprencidível, principalmente para quem assina listas de discussão. Outros recursos interessantes, como a criação de labels – ‘pastas 2.0&amp;rsquo; – e filtros – para melhor organizar novas mensagens – também fazem falta.&lt;/p>
+&lt;p>Para quem está acostumado com o Gmail, o e-mail do .Mac pode não ser a melhor opção e talvez não justifique o preço ($99 para assinatura anual do serviço ou $12 para somente ter a conta de e-mail), mas é uma alternativa de quem quer a mesma organização do Apple-way na Internet.&lt;/p></description></item><item><title>Tornando o Firefox para Mac mais bonito</title><link>https://leonardofaria.net/2007/10/22/tornando-o-firefox-para-mac-mais-bonito/</link><pubDate>Mon, 22 Oct 2007 13:10:45 -0200</pubDate><guid>https://leonardofaria.net/2007/10/22/tornando-o-firefox-para-mac-mais-bonito/</guid><description>&lt;p>Quem usa maçãs tem diversas alternativas para navegar. O Safari, para mim, é a melhor opção, mas o Firefox com seus plugins faz falta. O Firefox é pesado e a interface dele não incorpora os elementos da interface do Mac OS.&lt;/p>
+&lt;p>Para o Firefox 3, prometem a incorporação dos elementos de UI do Mac OS. Isso já pode ser percebido no &lt;a href="http://www.mozilla.org/projects/bonecho/releases/2.0a1.html">Bon Echo&lt;/a>, versão de desenvolvimento do browser. Para melhorar a aparência do navegador, o &lt;a href="https://addons.mozilla.org/en-US/firefox/addon/4927">iSafari&lt;/a> (screenshot ao lado) é uma tema que lembra o software da Apple.&lt;/p>
+&lt;center>
+&lt;a href='https://leonardofaria.net/wp-content/uploads/2007/10/isafaridq6.png' title='isafaridq6.png'>&lt;img src='https://leonardofaria.net/wp-content/uploads/2007/10/isafaridq6.png' alt='The iSafari, para Firefox' class='foto' width="500" />&lt;/a>
+&lt;/center></description></item><item><title>Sobre Macs Refurbisheds</title><link>https://leonardofaria.net/2007/07/03/sobre-macs-refurbisheds/</link><pubDate>Tue, 03 Jul 2007 03:08:06 -0300</pubDate><guid>https://leonardofaria.net/2007/07/03/sobre-macs-refurbisheds/</guid><description>&lt;p>Para quem não sabe, um &lt;strong>&lt;a href="http://en.wikipedia.org/wiki/Refurbished">Refurbished&lt;/a>&lt;/strong> é um produto que não passou por todos testes de qualidade da fábrica e é recondicionado, sendo posteriormente vendido. Em sites de leilão como o &lt;strong>&lt;a href="http://www.mercadolivre.com.br">MercadoLivre&lt;/a>&lt;/strong>, aparecem dezenas de notebooks recondicionados. Não posso falar quanto a PCs, mas posso falar de Macs Refurbisheds.&lt;/p>
+&lt;p>A vantagem de um equipamento recondicionado é o preço: existem produtos com descontos expressivos, chegando até a 40%. Além disso, muitos consideram que um produto recondicionado seria até mais confiável que um produto não-recondicionado, já que equipamentos refurbished passariam duas vezes por testes durante sua produção.&lt;/p>
+&lt;p>Tenho 2 portáteis: um &lt;a href="http://www.apple-history.com/?page=gallery&amp;amp;model=ibook_late_2002&amp;amp;performa=off&amp;amp;sort=date&amp;amp;order=ASC">iBook 700 MHz&lt;/a> e um &lt;a href="http://www.apple-history.com/?page=gallery&amp;amp;model=mb&amp;amp;performa=off&amp;amp;sort=date&amp;amp;order=ASC">MacBook 2 GHz&lt;/a>. O iBook eu comprei ano passado e já era um modelo meio ‘defasado&amp;rsquo;. Após usá-lo por alguns meses, ele teve um &lt;a href="http://www.apple.com/support/ibook/faq/">problema com a logic board&lt;/a> (placa lógica). Esse problema causava grande instalabilidade no sistema, com travamentos aleatórios e barulhos de dar medo – barulhos realmente muito altos. Quase todos iBooks foram afetados. Após ficar alguns meses na Autorizada, hoje ele funciona sem problemas. Está super-estável, para uma máquina de 2002(!).&lt;/p>
+&lt;p>O MacBook é um Refurbished que trouxe dos EUA. Os Refurbisheds da Apple são &lt;a href="http://store.apple.com/1-800-MY-APPLE/WebObjects/AppleStore.woa/wa/RSLID?nnmm=browse&amp;amp;mco=3929D548&amp;amp;node=home/specialdeals/mac">vendidos&lt;/a> somente na Apple Store online. Não adianta querer ser espertinho e tentar comprar online para entregar no Brasil. Obviamente, tem que ter um endereço americano.&lt;/p>
+&lt;p>De toda forma, os equipamentos refurbished são uma alternativa interessante para quem quer uma economia. O único problema é que os produtos recondicionados da Apple vem em uma caixa parda bem feinha, não vindo na mesma caixa dos produtos não recondicionados :(&lt;/p></description></item><item><title>Safari para Windows</title><link>https://leonardofaria.net/2007/06/11/safari-para-windows/</link><pubDate>Mon, 11 Jun 2007 22:01:20 -0300</pubDate><guid>https://leonardofaria.net/2007/06/11/safari-para-windows/</guid><description>&lt;p>A única novidade relevante da &lt;a href="http://developer.apple.com/wwdc/">WWDC&lt;/a> – Worldwide Developers Conference – é o lançamento do &lt;a href="http://www.apple.com/safari/">Safari&lt;/a> para Windows. O Safari é o browser padrão que vem no Mac OS e a agora a Apple invade o quintal do Windows com um browser rápido, minimalista e que dá ao usuários de PCs o gostinho de experimentar as vantagens de um Mac.&lt;/p></description></item><item><title>Resultado da Pesquisa sobre Mac Users</title><link>https://leonardofaria.net/2007/06/07/resultado-da-pesquisa-sobre-mac-users/</link><pubDate>Thu, 07 Jun 2007 18:07:18 -0300</pubDate><guid>https://leonardofaria.net/2007/06/07/resultado-da-pesquisa-sobre-mac-users/</guid><description>&lt;p>No &lt;a href="https://leonardofaria.net/2007/05/16/pesquisa-sobre-mac-users/">último dia 16 lancei&lt;/a> uma &lt;a href="http://pesquisa.leonardofaria.net">pesquisa&lt;/a> para conhecer o perfil dos usuários de Macintosh no Brasil. A intenção dessa pesquisa, além do óbvio, é servir de background para o lançamento de um novo serviço sobre Macs no Brasil.&lt;/p>
 &lt;p>Para a divulgação da pesquisa, convoquei usuários de &lt;a href="http://macpress.uol.com.br/forum/">vários&lt;/a> &lt;a href="http://macmais1.terra.com.br/forum/">fóruns&lt;/a>, &lt;a href="http://www.orkut.com/Community.aspx?cmm=8074736">comunidades&lt;/a> no &lt;a href="http://www.orkut.com">orkut&lt;/a> e pedi a vários blogueiros e &lt;a href="http://applemania.info/">vários&lt;/a> &lt;a href="http://www.macmagazine.com.br/">sites&lt;/a> uma nota sobre a pesquisa. Assim, depois de um tempo, 490 pessoas responderam as 14 questões do questionário.&lt;/p>
 &lt;p>Obrigado a todo mundo que respondeu a pesquisa.&lt;br>
-Os resultados surpreenderam. Vamos lá.&lt;/p></description></item><item><title>Pesquisa sobre Mac Users</title><link>https://leonardofaria.net/2007/05/16/pesquisa-sobre-mac-users/</link><pubDate>Wed, 16 May 2007 22:42:02 -0300</pubDate><guid>https://leonardofaria.net/2007/05/16/pesquisa-sobre-mac-users/</guid><description>Lancei uma pesquisa para conhecer o perfil do Mac User brasileiro. Isso tudo é para aquele projeto 2.0 que estou trabalhando que fala de Macintoshs. Responder é rápido, são apenas 14 questões e o resultado da pesquisa será divulgada aqui no site.
-[upgrade 19/05] Obrigado a todo mundo que está votando. E obrigado ao Caparica, ao MacMagazine e ao AppleMania.info que estão divulgando a pesquisa :)
-[upgrade 24/05] 469 pessoas já responderam a pesquisa.</description></item><item><title>Ruby on Rails on Mac OS X</title><link>https://leonardofaria.net/2007/03/11/ruby-on-rails-on-mac-os-x/</link><pubDate>Sun, 11 Mar 2007 13:58:58 -0300</pubDate><guid>https://leonardofaria.net/2007/03/11/ruby-on-rails-on-mac-os-x/</guid><description>[Estou de fato sumido do blog. Mudei para Piumhi Harbor e fiquei com computador somente na primeira semana. Meu iBook teve problemas e fiquei quase um mês esperando. Enfim, computador novo, finalmente posso brincar com Ruby on Rails. Inclusive já estou começando a trabalhar em um projeto comercial com o uso desse framework.]
-Enfim, estou escrevendo esse post para falar das formas de instalação do Ruby on Rails no Mac OS X.</description></item><item><title>Widgets para seu Dashboard</title><link>https://leonardofaria.net/2006/12/17/widgets-para-seu-dashboard/</link><pubDate>Sun, 17 Dec 2006 17:07:16 -0200</pubDate><guid>https://leonardofaria.net/2006/12/17/widgets-para-seu-dashboard/</guid><description>Um dos recursos mais espetaculares do Mac OS é o Dashboard, que são pequenos widgets em seu Desktop. Estou postando alguns dos meus favoritos:
-Widgetterm: Exibe um terminal sem precisar abrir o aplicativo Terminal. FTP Uploader: widget para enviar arquivos de forma rápida. SeeSS: documentação do CSS. Bloglines Notifier: verifica feeds não lidos de uma conta do Bloglines. Flidget: envio rápido de fotos para o Flickr. Mine Sweeper: campo minado Classic Memory: jogo da Memória, com icones do Mac OS 9.</description></item><item><title>MacStuff</title><link>https://leonardofaria.net/2006/12/10/macstuff/</link><pubDate>Sun, 10 Dec 2006 13:42:34 -0200</pubDate><guid>https://leonardofaria.net/2006/12/10/macstuff/</guid><description>Lançado Creammonkey, uma forma de trabalhar com os scripts do Greasemonkey no Safari. Particularmente, prefiro o Safari com browser default no Macintosh.
-Para quem não tem ainda, vale a pena a instalação do Google Notifier. Ele notifica eventos do Google Calendar e novas mensagens no Gmail.
-Outro programa que vale o download é o HimmelBar, que funciona como que um menu Iniciar. Ele lista todas aplicações da sua pasta “Applications”. Bem útil para quem tem muitos programas mas não quer encher o dock.</description></item><item><title>Vários ícones que valem uma palavra</title><link>https://leonardofaria.net/2006/11/25/varios-icones-que-valem-uma-palavra/</link><pubDate>Sat, 25 Nov 2006 21:45:32 -0200</pubDate><guid>https://leonardofaria.net/2006/11/25/varios-icones-que-valem-uma-palavra/</guid><description/></item><item><title>Trabalhando com imagens no Mac</title><link>https://leonardofaria.net/2006/11/18/trabalhando-com-imagens-no-mac/</link><pubDate>Sat, 18 Nov 2006 00:29:10 -0200</pubDate><guid>https://leonardofaria.net/2006/11/18/trabalhando-com-imagens-no-mac/</guid><description>&lt;p>Muitas vezes você não precisa de um editor de imagens pesado como o Photoshop para fazer pequenos trabalhos. Então, falo de três soluções para trabalhar com imagens no Mac.&lt;/p>
-&lt;p>O primeiro software é o &lt;a href="http://www.kreynet.de/tools.html">DroPic&lt;/a>. Não faz nada de tão especial, só redimenciona imagens para 4 formatos (Pequeno, Médio, Grande e Extra Grande). Como tudo no Mac, é superfácil de usar. E bem didático.&lt;/p></description></item><item><title>Descubra onde seu Mac foi montado</title><link>https://leonardofaria.net/2006/11/18/descubra-onde-seu-mac-foi-montado/</link><pubDate>Sat, 18 Nov 2006 00:28:50 -0200</pubDate><guid>https://leonardofaria.net/2006/11/18/descubra-onde-seu-mac-foi-montado/</guid><description>O coconutIdentityCard é um software que analisa onde e quando seu Mac foi montado, a partir do serial number dele. Vale também para iPods.
-Do mesmo desenvolvedor vem o coconutBattery, software que verifica o estado da bateria do seu notebook. O software analisa a quantidade de cargas dadas e a capacidade atual da bateria. Meu iBook ainda tem uma boa vida útil de bateria ;)</description></item><item><title>Tela azul da Morte. No mac</title><link>https://leonardofaria.net/2006/11/12/tela-azul-da-morte-no-mac/</link><pubDate>Sun, 12 Nov 2006 02:21:51 -0200</pubDate><guid>https://leonardofaria.net/2006/11/12/tela-azul-da-morte-no-mac/</guid><description>Não é nada disso que você está pensando. É apenas uma de dezenas de proteções de telas encontradas aqui. O download das proteções de tela para Mac OS tem 25MB. Para instalar a proteção de tela, basta dar abrir o arquivo correspondente. Simples assim!
-Ah, e tem versão para Linux também (embora muitas distribuições já incluam a maioria dos screensavers desse pacote).</description></item><item><title>Spotlight no Safari</title><link>https://leonardofaria.net/2006/10/29/spotlight-no-safari/</link><pubDate>Sun, 29 Oct 2006 18:33:18 -0300</pubDate><guid>https://leonardofaria.net/2006/10/29/spotlight-no-safari/</guid><description>O Spotlight, para quem não conhece o Mac OS é um sistema de busca muito eficiente que vai mostrando os resultados da consulta conforme as palavras são digitadas. Algo bem parecido com o Google Suggest.
-Bem o software que falo nesse post ativa esse recurso de “live search” no Safari. Inquisitor é grátis e de fácil instalação. Vale o download.
-Para quem quer conhecer mais plugins do Safari fica o link do Pimp My Safari.</description></item><item><title>Acessando seu PC Windows pelo Mac OS</title><link>https://leonardofaria.net/2006/10/28/acessando-seu-pc-windows-pelo-mac-os/</link><pubDate>Sat, 28 Oct 2006 21:24:38 -0300</pubDate><guid>https://leonardofaria.net/2006/10/28/acessando-seu-pc-windows-pelo-mac-os/</guid><description>&lt;p>Esse artigo ensina como logar em sua máquina com Windows a partir do Mac OS. Em redes locais isso é muito prático. O software que iremos utilizar é o &lt;a href="http://www.microsoft.com/mac/otherproducts/otherproducts.aspx?pid=remotedesktopclient">Remote Desktop Connection (RDC)&lt;/a>. &lt;a href="http://www.microsoft.com/mac/downloads.aspx?pid=download&amp;amp;location=/mac/download/misc/rdc_update_103.xml&amp;amp;secid=80&amp;amp;ssid=10&amp;amp;flgnosysreq=True">Faça o download do software&lt;/a> (eu escolhi a versão em .bin) e vamos lá.&lt;/p></description></item><item><title>Browser para Windows com engine do Safari</title><link>https://leonardofaria.net/2006/08/09/browser-para-windows-com-engine-do-safari-2/</link><pubDate>Wed, 09 Aug 2006 11:32:48 -0300</pubDate><guid>https://leonardofaria.net/2006/08/09/browser-para-windows-com-engine-do-safari-2/</guid><description>O Safari é um grande conhecido de quem usa Mac OS. Esse browser usa uma máquina de renderização criada pela própria Apple, a Apple Webkit. Paralelo a tudo isso, descobri na última semana o Swift, um browser para Windows que utiliza a mesma engine do Safari.</description></item><item><title>Browser com Exposé</title><link>https://leonardofaria.net/2006/07/23/browser-com-expose/</link><pubDate>Sun, 23 Jul 2006 19:33:37 -0300</pubDate><guid>https://leonardofaria.net/2006/07/23/browser-com-expose/</guid><description>O Exposé é um recurso encontrado no Mac OS X que permite acessar uma janela aberta com apenas um tecla de atalho. Seria, portanto, um ALT+Tab melhorado (e mais estiloso).
-Estou falando do Exposé do Mac OS para falar de um browser que também conta com esse recurso: o Shiira. Um browser não muito conhecido, o Shiira é leve e bastante eficiente, prometendo manipular, por exemplo, os Favoritos do Safari e Firefox.</description></item><item><title>Migração para Macintosh</title><link>https://leonardofaria.net/2006/07/01/migracao-para-macintosh/</link><pubDate>Sat, 01 Jul 2006 15:04:17 -0300</pubDate><guid>https://leonardofaria.net/2006/07/01/migracao-para-macintosh/</guid><description>Momento Caparica: Muitos que estão habituados a PCs e se migram para o Mac OS apresentam diversas dúvidas.
-Teclas de atalho: maçã mais o quê? Option?
-Solução definitiva de tudo isso.
-Aplicativos no menubar
-Lista com vários. Eu uso e recomendo o Gmail Notifier e o BloglinesMenu. Interessantíssimo.
-Migrando do Linux para o Mac
-Dicas pelo Aurelio.
-Link extra
-Trocentas formas de ejetar um CD :)
-Insatisfeito com o Dashboard?</description></item><item><title>Desenvolvimento web no Macintosh 2</title><link>https://leonardofaria.net/2006/06/15/desenvolvimento-web-no-macintosh-2/</link><pubDate>Thu, 15 Jun 2006 23:31:12 -0300</pubDate><guid>https://leonardofaria.net/2006/06/15/desenvolvimento-web-no-macintosh-2/</guid><description>Apache, PHP e MySQL de forma mais fácil No artigo anterior, configuramos na mão o nosso servidor. Entretanto, há uma forma mais fácil de ter um servidor web em casa.
-Com o XAMPP, você instala tudo de uma só vez. Vantagens? Todas as possíveis: além do feijão com arroz básico, esse superpacote all-in-one traz o gerenciador de banco de dados PHPMyAdmin, o gerenciador de estatísticas Webalizer, dentre outras maravilhas.
-Ruby and Rails Rails é um framework e hype do web2.</description></item><item><title>Desenvolvimento web no Macintosh</title><link>https://leonardofaria.net/2006/06/15/desenvolvimento-web-no-macintosh/</link><pubDate>Thu, 15 Jun 2006 23:20:54 -0300</pubDate><guid>https://leonardofaria.net/2006/06/15/desenvolvimento-web-no-macintosh/</guid><description>&lt;p>Muitos que se migram para o Mac OS se perguntam como trabalhar com desenvolvimento web nele. Well, o Mac OS X já vem com Apache configurado. Falta, portanto, configurar PHP e MySQL.&lt;/p></description></item><item><title>Webdevelopment no Macintosh</title><link>https://leonardofaria.net/2006/04/27/webdevelopment-no-macintosh/</link><pubDate>Thu, 27 Apr 2006 22:38:18 -0300</pubDate><guid>https://leonardofaria.net/2006/04/27/webdevelopment-no-macintosh/</guid><description>Review de alguns clientes FTP para Mac OS. Estou acostumado com o Transmit, pois há uma interação muito interessante com o Mac OS.
-Aproveitando o post, lista de editores HTML para Macintosh. Esse site possui bastante resources para quem desenvolve web. Basta desenterrar seu Español del Paraguay.</description></item><item><title>iBook</title><link>https://leonardofaria.net/2006/04/20/ibook/</link><pubDate>Thu, 20 Apr 2006 22:25:05 -0300</pubDate><guid>https://leonardofaria.net/2006/04/20/ibook/</guid><description>Finalmente chegou meu Mac.
-Comprei um iBook 700MHz, 256MB Ram, 30GB HD, para uma nova vida mobile.</description></item></channel></rss>
+Os resultados surpreenderam. Vamos lá.&lt;/p>
+&lt;h3 id="sobre-o-mac-user">Sobre o Mac User&lt;/h3>
+&lt;p>Realizei perguntas simples sobre quem é o usuário de Mac em terras tupiniquins. Quanto a idade, a maioria dos usuários estão entre os 21 a 40 anos. Sobre escolaridade, percebe-se que grande parte dos usuários já sentou ou cursa o ensino superior. Obtive nessa parte da pesquisa resultados até bem equilibrados quanto a renda(!), onde prevalesce o mito que usuários de Macs são ricos. O resultado da pesquisa “Tempo que usa Mac” foi bem interessante: observa-se um percentual considerável de novos usuários, mas prevalesce usuários antigos, com mais de 6 anos.&lt;/p>
+&lt;center>
+&lt;img src='https://leonardofaria.net/wp-content/uploads/2007/06/chart4.jpg' alt='Idade' />&lt;/p>
+&lt;p>
+&lt;img src='https://leonardofaria.net/wp-content/uploads/2007/06/chart5.jpg' alt='Escolaridade' />
+&lt;/p>
+&lt;p>
+&lt;img src='https://leonardofaria.net/wp-content/uploads/2007/06/chart6.jpg' alt='Renda Salarial' />
+&lt;/p>
+&lt;p>
+&lt;img src='https://leonardofaria.net/wp-content/uploads/2007/06/chart16.jpg' alt='Tempo que usa Mac' />&lt;br /> &lt;/center>
+&lt;/p>
+&lt;h3 class="comments">
+O Mac User e seus equipamentos
+&lt;/h3>
+&lt;p>
+Segundo a pesquisa, tem-se uma rivalidade entre desktops e laptops quanto a equipamento principal – Macs de mesas ganham de 51% a 49%. A maioria das pessoas que responderam a pesquisa possuem apenas um Mac, mas o número de quem possui mais de um equipamento é bem peculiar. Quanto ao uso de iPods, observa-se a preferência pelo Player da Apple: 65% das pessoas que responderam a pesquisa possuem um.&lt;br />
+&lt;center>
+&lt;br /> &lt;img src='https://leonardofaria.net/wp-content/uploads/2007/06/chart7.jpg' alt='Equipamento Principal' />&lt;/p>
+&lt;p>
+&lt;img src='https://leonardofaria.net/wp-content/uploads/2007/06/chart8.jpg' alt='Possui mais de um Mac' />
+&lt;/p>
+&lt;p>
+&lt;img src='https://leonardofaria.net/wp-content/uploads/2007/06/chart10.jpg' alt='Possui iPod' />&lt;br /> &lt;/center>
+&lt;/p>
+&lt;/center>
+&lt;h3 class="comments">
+O Mac User e as compras
+&lt;/h3>
+&lt;p>
+Na minha opinião, sem grandes surpresas para essa parte da pesquisa. 64% das pessoas que responderam essa pesquisa compram frequentemente pela Internet. A pergunta &amp;#8220;Onde compra Mac&amp;#8221; gerou um resultado bem interessante: um considerável número de pessoas compram equipamentos fora do Brasil. Um dos fatores que indicam esse número é o alto preço dos produtos da Apple no país.&lt;br /> Outro resultado interessante foi quanto a compra de equipamentos em sites de leilões, como o MercadoLivre e em fóruns e listas de discussão: 43% das pessoas que responderam a pesquisa já utilizou esses serviços. Esse resultado é bem interessante. Eu mesmo já comprei um iBook via MercadoLivre e pelo visto isso já vem se tornando uma prática comum no Brasil. A nota dada pelos usuários para quem utilizou esses serviços pode ser considerada boa, uma vez que comunidades online criam aproximação entre as pessoas e os serviços de leilões possuem formas seguras de se comprar online.&lt;br />
+&lt;center>
+&lt;br /> &lt;img src='https://leonardofaria.net/wp-content/uploads/2007/06/chart11.jpg' alt='Compras online' />&lt;/p>
+&lt;p>
+&lt;img src='https://leonardofaria.net/wp-content/uploads/2007/06/chart9.jpg' alt='Onde compra seu Mac' />
+&lt;/p>
+&lt;p>
+&lt;img src='https://leonardofaria.net/wp-content/uploads/2007/06/chart12.jpg' alt='Compra Mac em leilões, fóruns ou listas' />
+&lt;/p>
+&lt;p>
+&lt;img src='https://leonardofaria.net/wp-content/uploads/2007/06/chart13.jpg' alt='Nota para serviços de leilões' />&lt;br /> &lt;/center>
+&lt;/p>
+&lt;/center>
+&lt;h3 class="comments">
+Estatísticas de quem acessou a pesquisa
+&lt;/h3>
+&lt;p>
+Para gerar estatísticas de browser, conexão e sistema operacional, usei como base de dados os resultados do &lt;a href="http://www.google.com/analytics/">Google Analytics&lt;/a>.&lt;br />
+&lt;center>
+&lt;img src='https://leonardofaria.net/wp-content/uploads/2007/06/chart1.jpg' alt='Browser' />&lt;/p>
+&lt;p>
+&lt;img src='https://leonardofaria.net/wp-content/uploads/2007/06/chart2.jpg' alt='Sistema Operacional' />
+&lt;/p>
+&lt;p>
+&lt;img src='https://leonardofaria.net/wp-content/uploads/2007/06/chart31.jpg' alt='Browser / Sistema Operacional' />
+&lt;/p>
+&lt;p>
+&lt;img src='https://leonardofaria.net/wp-content/uploads/2007/06/chart15.jpg' alt='Resolução' />
+&lt;/p>
+&lt;p>
+&lt;img src='https://leonardofaria.net/wp-content/uploads/2007/06/chart14.jpg' alt='Conexão' />&lt;/center>
+&lt;/p>
+&lt;/center>
+&lt;h3 class="comments">
+Direitos autorais dessa pesquisa
+&lt;/h3>
+&lt;p>
+O conteúdo desse site (e desse post), está sobre a licença Creative Commons de &lt;a href="http://creativecommons.org/licenses/by-nc-sa/2.5/br/deed.pt">Atribuição-Uso Não-Comercial-Compatilhamento&lt;/a>. Você pode copiar, distribuir, exibir, dando crédito a esse site e deve ser usada sem finalidades comerciais e pode ser alterar desde que distribuida com uma licença igual a atual.
+&lt;/p></description></item><item><title>Pesquisa sobre Mac Users</title><link>https://leonardofaria.net/2007/05/16/pesquisa-sobre-mac-users/</link><pubDate>Wed, 16 May 2007 22:42:02 -0300</pubDate><guid>https://leonardofaria.net/2007/05/16/pesquisa-sobre-mac-users/</guid><description>&lt;p>Lancei uma &lt;a href="http://pesquisa.leonardofaria.net/">pesquisa&lt;/a> para conhecer o perfil do Mac User brasileiro. Isso tudo é para aquele projeto 2.0 que estou trabalhando que fala de Macintoshs. Responder é rápido, são apenas 14 questões e o resultado da pesquisa será divulgada aqui no site.&lt;/p>
+&lt;p>[upgrade 19/05] Obrigado a todo mundo que está votando. E obrigado ao &lt;a href="http://sinistras.aranha.com.br/">Caparica&lt;/a>, ao &lt;a href="http://www.macmagazine.com.br">MacMagazine&lt;/a> e ao &lt;a href="http://applemania.info">AppleMania.info&lt;/a> que estão divulgando a pesquisa :)&lt;/p>
+&lt;p>[upgrade 24/05] 469 pessoas já responderam a pesquisa. E ainda dá tempo de &lt;a href="http://pesquisa.leonardofaria.net">responder&lt;/a>!&lt;/p>
+&lt;p>P.S.: Essa é, de quebra, a primeira aplicação em Rails minha que está no ar e vai servir de pré-análise dos serviços da Dreamhost (que muitos temem não ser boa para RoR).&lt;/p></description></item><item><title>Ruby on Rails on Mac OS X</title><link>https://leonardofaria.net/2007/03/11/ruby-on-rails-on-mac-os-x/</link><pubDate>Sun, 11 Mar 2007 13:58:58 -0300</pubDate><guid>https://leonardofaria.net/2007/03/11/ruby-on-rails-on-mac-os-x/</guid><description>&lt;p>[Estou de fato sumido do blog. &lt;a href="https://leonardofaria.net/2006/12/30/mudanca-e-previsoes/">Mudei&lt;/a> para &lt;a href="http://pt.wikipedia.com/wiki/piumhi">Piumhi Harbor&lt;/a> e fiquei com computador somente na primeira semana. Meu iBook teve problemas e fiquei quase um mês esperando. Enfim, computador novo, finalmente posso brincar com Ruby on Rails. Inclusive já estou começando a trabalhar em um projeto comercial com o uso desse framework.]&lt;/p>
+&lt;p>Enfim, estou escrevendo esse post para falar das formas de instalação do Ruby on Rails no Mac OS X. &lt;a href="http://weblog.rubyonrails.org/2006/8/7/ruby-on-rails-will-ship-with-os-x-10-5-leopard">Vale lembrar&lt;/a> que a próxima do Mac OS, Leopard, &lt;a href="http://www.apple.com/server/macosx/leopard/more.html">virá com Rails já instalado&lt;/a>, mas enquanto o felino não chega, temos um trabalhinho extra.&lt;/p>
+&lt;p>A forma menos trabalhosa de se ter Rails no Tiger é através do &lt;a href="http://locomotive.sourceforge.net/">Locomotive&lt;/a>, que é um pacote all-in-one. Instalação simplificada, basta arrastar a pasta do programa para a Applications&amp;rsquo; folder e pronto!&lt;/p>
+&lt;p>A forma mais disseminada é através &lt;a href="http://hivelogic.com/narrative/articles/ruby_rails_lighttpd_mysql_tiger?status=301">desse artigo&lt;/a> de Dan Benjamin. A instalação é toda feita manualmente e compila os vários itens necessários para o funcionamento do framework. Vale lembrar que para essa instalação é necessário ter o Xcode instalado na máquina. Para quem não sabe, Xcode é um ambiente completo de desenvolvimento da própria Apple. Ele sempre vem em CD ou DVD nos computadores da Apple, mas quem não tem pode &lt;a href="http://developer.apple.com/tools/download/">puxar os 924MB&lt;/a> do site de desenvolvedores da Apple.&lt;/p>
+&lt;p>Outra forma que vi é ter &lt;a href="http://maczealots.com/tutorials/ruby-on-rails/">RoR junto ao Apache&lt;/a>.&lt;/p>
+&lt;p>E por último tem um pacote não tão conhecido chamado &lt;a href="http://www.rbsoftware.net/?page=wsxk">WebServerXKit&lt;/a>, que reúne Apache, MySQL, PHP, PostgreSQL e… RoR!&lt;/p>
+&lt;p>Mais informações sobre instalações no Mac e em outros sistemas podem ser vistas no &lt;a href="http://wiki.rubyonrails.org/rails">wiki&lt;/a> do site oficial.&lt;/p></description></item><item><title>Widgets para seu Dashboard</title><link>https://leonardofaria.net/2006/12/17/widgets-para-seu-dashboard/</link><pubDate>Sun, 17 Dec 2006 17:07:16 -0200</pubDate><guid>https://leonardofaria.net/2006/12/17/widgets-para-seu-dashboard/</guid><description>&lt;p>Um dos recursos mais espetaculares do Mac OS é o &lt;a href="http://www.apple.com/downloads/dashboard/">Dashboard&lt;/a>, que são pequenos widgets em seu Desktop. Estou postando alguns dos meus favoritos:&lt;/p>
+&lt;ol>
+&lt;li>&lt;a href="http://widgetterm.sourceforge.net/">Widgetterm&lt;/a>: Exibe um terminal sem precisar abrir o aplicativo Terminal.&lt;/li>
+&lt;li>&lt;a href="http://www.apple.com/downloads/dashboard/networking_security/ftpuploader.html">FTP Uploader&lt;/a>: widget para enviar arquivos de forma rápida.&lt;/li>
+&lt;li>&lt;a href="http://www.guyd2.com/widget/seess/index.html">SeeSS&lt;/a>: documentação do CSS.&lt;/li>
+&lt;li>&lt;a href="http://www.apple.com/downloads/dashboard/blogs_forums/bloglinesnotifier.html">Bloglines Notifier&lt;/a>: verifica feeds não lidos de uma conta do Bloglines.&lt;/li>
+&lt;li>&lt;a href="http://www.apple.com/downloads/dashboard/blogs_forums/flidget.html">Flidget&lt;/a>: envio rápido de fotos para o Flickr.&lt;/li>
+&lt;li>&lt;a href="http://www.apple.com/downloads/dashboard/games/minesweeper.html">Mine Sweeper&lt;/a>: campo minado&lt;/li>
+&lt;li>&lt;a href="http://www.apple.com/downloads/dashboard/games/classicmemory.html">Classic Memory&lt;/a>: jogo da Memória, com icones do Mac OS 9.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>Para achar widgets:&lt;/strong>&lt;br>
+&lt;a href="http://www.apple.com/downloads/dashboard/">Dashboards&lt;/a> pela Apple e &lt;a href="http://www.dashboardwidgets.com/">DashboardWidgets&lt;/a>.&lt;/p></description></item><item><title>MacStuff</title><link>https://leonardofaria.net/2006/12/10/macstuff/</link><pubDate>Sun, 10 Dec 2006 13:42:34 -0200</pubDate><guid>https://leonardofaria.net/2006/12/10/macstuff/</guid><description>&lt;p>Lançado &lt;a href="http://creammonkey.sourceforge.net/">Creammonkey&lt;/a>, uma forma de trabalhar com os scripts do Greasemonkey no Safari. Particularmente, prefiro o Safari com browser default no Macintosh.&lt;/p>
+&lt;p>Para quem não tem ainda, vale a pena a instalação do &lt;a href="http://mail.google.com/mail/help/notifier/notifier_mac.html">Google Notifier&lt;/a>. Ele notifica eventos do Google Calendar e novas mensagens no Gmail.&lt;/p>
+&lt;p>Outro programa que vale o download é o &lt;a href="http://softbend.free.fr/himmelbar/">HimmelBar&lt;/a>, que funciona como que um menu Iniciar. Ele lista todas aplicações da sua pasta “Applications”. Bem útil para quem tem muitos programas mas não quer encher o dock. Ele faz uma linha parecida com o &lt;a href="http://www.dbachrach.com/opensoft/index.php?page=Todos">Todos&lt;/a>.&lt;/p></description></item><item><title>Vários ícones que valem uma palavra</title><link>https://leonardofaria.net/2006/11/25/varios-icones-que-valem-uma-palavra/</link><pubDate>Sat, 25 Nov 2006 21:45:32 -0200</pubDate><guid>https://leonardofaria.net/2006/11/25/varios-icones-que-valem-uma-palavra/</guid><description>&lt;center>
+&lt;a href="http://www.flickr.com/groups/icon_words/pool/">&lt;img src="https://leonardofaria.net/wp-content/uploads/2006/11/windowzesux.jpg" alt="windowzesux" />&lt;/a>
+&lt;/center></description></item><item><title>Trabalhando com imagens no Mac</title><link>https://leonardofaria.net/2006/11/18/trabalhando-com-imagens-no-mac/</link><pubDate>Sat, 18 Nov 2006 00:29:10 -0200</pubDate><guid>https://leonardofaria.net/2006/11/18/trabalhando-com-imagens-no-mac/</guid><description>&lt;p>Muitas vezes você não precisa de um editor de imagens pesado como o Photoshop para fazer pequenos trabalhos. Então, falo de três soluções para trabalhar com imagens no Mac.&lt;/p>
+&lt;p>O primeiro software é o &lt;a href="http://www.kreynet.de/tools.html">DroPic&lt;/a>. Não faz nada de tão especial, só redimenciona imagens para 4 formatos (Pequeno, Médio, Grande e Extra Grande). Como tudo no Mac, é superfácil de usar. E bem didático.&lt;/p>
+&lt;center>
+&lt;img id="image153" src="https://leonardofaria.net/wp-content/uploads/2006/11/macimg1.jpg" alt="DroPic" />
+&lt;/center>
+&lt;p>O segundo software que cito é o &lt;a href="http://www.stuntsoftware.com/Downsize/">Downsize&lt;/a>. Esse é show! Ele permite gerar imagens de tamanhos customizados e a inclusão de marcas d'água, tudo em processo de lote, ou seja, várias imagens de uma só vez. Esse software é muito bom principalmente para quem precisa gerenciar álbuns de fotos pessoais ou fotos de produtos.&lt;/p>
+&lt;center>
+&lt;img id="image156" src="https://leonardofaria.net/wp-content/uploads/2006/11/macimg2.jpg" alt="Downsize" />
+&lt;/center>
+&lt;p>O terceiro é o &lt;a href="http://xtralean.com/IWOverview.html">ImageWell&lt;/a> que permite o redimencionamento de imagens e o envio dessa para um servidor (bem como uma conta .Mac).&lt;/p></description></item><item><title>Descubra onde seu Mac foi montado</title><link>https://leonardofaria.net/2006/11/18/descubra-onde-seu-mac-foi-montado/</link><pubDate>Sat, 18 Nov 2006 00:28:50 -0200</pubDate><guid>https://leonardofaria.net/2006/11/18/descubra-onde-seu-mac-foi-montado/</guid><description>&lt;p>O &lt;a href="http://coconut-flavour.com/coconutidentitycard/index.html">coconutIdentityCard&lt;/a> é um software que analisa onde e quando seu Mac foi montado, a partir do serial number dele. Vale também para iPods.&lt;/p>
+&lt;center>
+&lt;img id="image158" src="https://leonardofaria.net/wp-content/uploads/2006/11/macbattery.jpg" alt="Made in Taiwan" />
+&lt;/center>
+&lt;p>Do mesmo desenvolvedor vem o &lt;a href="http://coconut-flavour.com/coconutbattery/index.html">coconutBattery&lt;/a>, software que verifica o estado da bateria do seu notebook. O software analisa a quantidade de cargas dadas e a capacidade atual da bateria. Meu iBook ainda tem uma boa vida útil de bateria ;)&lt;/p></description></item><item><title>Tela azul da Morte. No mac</title><link>https://leonardofaria.net/2006/11/12/tela-azul-da-morte-no-mac/</link><pubDate>Sun, 12 Nov 2006 02:21:51 -0200</pubDate><guid>https://leonardofaria.net/2006/11/12/tela-azul-da-morte-no-mac/</guid><description>&lt;p>Não é nada disso que você está pensando. É apenas uma de dezenas de proteções de telas encontradas &lt;a href="http://www.jwz.org/xscreensaver/">aqui&lt;/a>. O &lt;a href="http://www.jwz.org/xscreensaver/xscreensaver-5.01.dmg">download&lt;/a> das proteções de tela para Mac OS tem 25MB. Para instalar a proteção de tela, basta dar abrir o arquivo correspondente. Simples assim!&lt;/p>
+&lt;p>Ah, e tem versão para Linux também (embora muitas distribuições já incluam a maioria dos screensavers desse pacote).&lt;/p></description></item><item><title>Spotlight no Safari</title><link>https://leonardofaria.net/2006/10/29/spotlight-no-safari/</link><pubDate>Sun, 29 Oct 2006 18:33:18 -0300</pubDate><guid>https://leonardofaria.net/2006/10/29/spotlight-no-safari/</guid><description>&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2006/10/inquisitor.jpg" alt="Inquisitor em ação" />
+&lt;/center>
+&lt;p>O &lt;a href="http://en.wikipedia.org/wiki/Spotlight_%28software%29">Spotlight&lt;/a>, para quem não conhece o Mac OS é um sistema de busca muito eficiente que vai mostrando os resultados da consulta conforme as palavras são digitadas. Algo bem parecido com o &lt;a href="http://www.google.com/webhp?hl=en">Google Suggest&lt;/a>.&lt;/p>
+&lt;p>Bem o software que falo nesse post ativa esse recurso de “live search” no Safari. &lt;a href="http://www.inquisitorx.com/safari/">Inquisitor&lt;/a> é grátis e de fácil instalação. Vale o download.&lt;/p>
+&lt;p>Para quem quer conhecer mais plugins do Safari fica o link do &lt;a href="http://pimpmysafari.com/">Pimp My Safari.&lt;/a>&lt;/p></description></item><item><title>Acessando seu PC Windows pelo Mac OS</title><link>https://leonardofaria.net/2006/10/28/acessando-seu-pc-windows-pelo-mac-os/</link><pubDate>Sat, 28 Oct 2006 21:24:38 -0300</pubDate><guid>https://leonardofaria.net/2006/10/28/acessando-seu-pc-windows-pelo-mac-os/</guid><description>&lt;p>Esse artigo ensina como logar em sua máquina com Windows a partir do Mac OS. Em redes locais isso é muito prático. O software que iremos utilizar é o &lt;a href="http://www.microsoft.com/mac/otherproducts/otherproducts.aspx?pid=remotedesktopclient">Remote Desktop Connection (RDC)&lt;/a>. &lt;a href="http://www.microsoft.com/mac/downloads.aspx?pid=download&amp;amp;location=/mac/download/misc/rdc_update_103.xml&amp;amp;secid=80&amp;amp;ssid=10&amp;amp;flgnosysreq=True">Faça o download do software&lt;/a> (eu escolhi a versão em .bin) e vamos lá.&lt;/p>
+&lt;p>Com o download realizado, a instalação é super-simples. Basta arrastar o ícone do RDC para a pasta Aplicativos. Ao executar o RDC pela primeira vez, a tela deve ser algo parecido com a abaixo:&lt;br>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2006/10/rdc1.jpg" alt="Primeira tela do RDC" />&lt;/p>
+&lt;p>“windows”, no caso é o nome da máquina que desejo conectar (nesse campo também cabe o IP da máquina a ser conectada). Mas antes de fazermos a conexão temos que autorizar, no Windows, a conexão remota. Para isso, clique com o botão direito no ícone “Meu computador” e escolha “Propriedades”. Bem, abre-se a janela de Propriedades do sistema. Lá, selecionamos a guia Remoto. Nessa guia, selecionamos “Permitir que usuários se conectem remotamente a esse computador”. É essa opção que permite o RDC funcionar. Após marcar essa opção, clique em “Selecionar usuários remotos”. Na nova janela, escolha o usuário que terá acesso remotamente. Confirme essas alterações e voltemos ao Mac.&lt;/p>
+&lt;p>Agora podemos mandar conectar remotamente. Se tudo der certo, essa será a tela:&lt;/p>
+&lt;p>&lt;a href="https://leonardofaria.net/wp-content/uploads/2006/10/rdc2.jpg" title="RDC em ação - clique para ver maior">&lt;img id="image136" src="https://leonardofaria.net/wp-content/uploads/2006/10/rdc2.jpg" alt="RDC em ação - clique para ver maior" />&lt;/a>&lt;/p>
+&lt;h3 id="considerações">Considerações&lt;/h3>
+&lt;ol>
+&lt;li>A estação com Windows ficará bloqueada enquanto o Remote Desktop estiver sendo usado.&lt;/li>
+&lt;li>O modo padrão de execução do Windows no Remote Desktop é 800×600 com 256 cores. Para alterar isso, vá em “Options”, antes de conectar remotamente&lt;/li>
+&lt;/ol></description></item><item><title>Browser para Windows com engine do Safari</title><link>https://leonardofaria.net/2006/08/09/browser-para-windows-com-engine-do-safari-2/</link><pubDate>Wed, 09 Aug 2006 11:32:48 -0300</pubDate><guid>https://leonardofaria.net/2006/08/09/browser-para-windows-com-engine-do-safari-2/</guid><description>&lt;p>O Safari é um grande conhecido de quem usa Mac OS. Esse browser usa uma máquina de renderização criada pela própria Apple, a Apple &lt;a href="http://en.wikipedia.org/wiki/WebKit">Webkit&lt;/a>. Paralelo a tudo isso, descobri na última semana o &lt;a href="http://www.getwebkit.org/">Swift&lt;/a>, um browser para Windows que utiliza a mesma engine do Safari.&lt;/p></description></item><item><title>Browser com Exposé</title><link>https://leonardofaria.net/2006/07/23/browser-com-expose/</link><pubDate>Sun, 23 Jul 2006 19:33:37 -0300</pubDate><guid>https://leonardofaria.net/2006/07/23/browser-com-expose/</guid><description>&lt;p>&lt;img src="https://leonardofaria.net/wp-content/uploads/2006/07/img_tabExpose.thumbnail.jpg" align="right" />&lt;/p>
+&lt;p>O &lt;a href="http://www.apple.com/macosx/features/expose/">Exposé&lt;/a> é um recurso encontrado no Mac OS X que permite acessar uma janela aberta com apenas um tecla de atalho. Seria, portanto, um ALT+Tab melhorado (e mais estiloso).&lt;/p>
+&lt;p>Estou falando do Exposé do Mac OS para falar de um browser que também conta com esse recurso: o &lt;a href="http://hmdt-web.net/shiira/en">Shiira&lt;/a>. Um browser não muito conhecido, o Shiira é leve e bastante eficiente, prometendo manipular, por exemplo, os Favoritos do Safari e Firefox.&lt;/p>
+&lt;p>Entre &lt;a href="http://hmdt-web.net/shiira/screenshot/en">outros features&lt;/a>, ele tem suporte ao idioma japonês nativamente, um leitor de feed interno (que avisa no dock quantos feeds não lidos!) e um projeto chamado &lt;a href="http://hmdt-web.net/shiira/mini/en">Shiira Mini&lt;/a>, que nada mais é do que um widget para o &lt;a href="http://www.apple.com/macosx/features/dashboard/">dashboard&lt;/a>. Vale a pena experimentá-lo.&lt;/p>
+&lt;p>&lt;strong>Mais do Mesmo:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://mark.alittlenoise.com/blog/?p=22">Um completo review do Shiira&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://creativebits.org/fourth_mac_os_x_browser_test">Comparativo entre browsers do Mac OS&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Migração para Macintosh</title><link>https://leonardofaria.net/2006/07/01/migracao-para-macintosh/</link><pubDate>Sat, 01 Jul 2006 15:04:17 -0300</pubDate><guid>https://leonardofaria.net/2006/07/01/migracao-para-macintosh/</guid><description>&lt;p>&lt;a href="http://sinistras.aranha.com.br">Momento Caparica&lt;/a>: Muitos que estão habituados a PCs e se migram para o Mac OS apresentam diversas dúvidas.&lt;/p>
+&lt;p>&lt;strong>Teclas de atalho: maçã mais o quê? Option?&lt;/strong>&lt;br>
+&lt;a href="http://creativebits.org/keyboard_shortcuts_in_os_x">Solução definitiva de tudo isso.&lt;/a>&lt;/p>
+&lt;p>&lt;strong>Aplicativos no menubar&lt;/strong>&lt;br>
+&lt;a href="http://menu.jeweledplatypus.org/">Lista com vários&lt;/a>. Eu uso e recomendo o &lt;a href="http://mail.google.com/mail/help/notifier/index.html">Gmail Notifier&lt;/a> e o &lt;a href="http://www.runstate.com/proj/blmenu.html">BloglinesMenu&lt;/a>. Interessantíssimo.&lt;/p>
+&lt;p>&lt;strong>Migrando do Linux para o Mac&lt;/strong>&lt;br>
+&lt;a href="http://www.aurelio.net/mac/">Dicas&lt;/a> pelo &lt;a href="http://aurelio.net">Aurelio&lt;/a>.&lt;/p>
+&lt;p>&lt;strong>Link extra&lt;/strong>&lt;br>
+&lt;a href="http://macpress.uol.com.br/forum/viewtopic.php?t=17820&amp;amp;highlight=">Trocentas formas&lt;/a> de ejetar um CD :)&lt;/p>
+&lt;p>&lt;strong>Insatisfeito com o Dashboard?&lt;/strong>&lt;br>
+Removê-lo é fácil. Abra o terminal do Mac OS (está dentro da pasta Aplicativos) e digite:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">defaults write com.apple.dashboard mcx-disabled -boolean YES
+killall Dock
+&lt;/pre>
+&lt;p>Para trazê-lo de volta:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">defaults write com.apple.dashboard mcx-disabled -boolean YES
+killall Dock
+&lt;/pre></description></item><item><title>Desenvolvimento web no Macintosh 2</title><link>https://leonardofaria.net/2006/06/15/desenvolvimento-web-no-macintosh-2/</link><pubDate>Thu, 15 Jun 2006 23:31:12 -0300</pubDate><guid>https://leonardofaria.net/2006/06/15/desenvolvimento-web-no-macintosh-2/</guid><description>&lt;h2 id="apache-php-e-mysql-de-forma-mais-fácil">Apache, PHP e MySQL de forma mais fácil&lt;/h2>
+&lt;p>&lt;a href="https://leonardofaria.net/2006/06/15/desenvolvimento-web-no-macintosh/">No artigo anterior&lt;/a>, configuramos na mão o nosso servidor. Entretanto, há uma forma mais fácil de ter um servidor web em casa.&lt;br>
+Com o &lt;a href="http://www.apachefriends.org/en/xampp-macosx.html">XAMPP&lt;/a>, você instala tudo de uma só vez. Vantagens? Todas as possíveis: além do feijão com arroz básico, esse superpacote all-in-one traz o gerenciador de banco de dados PHPMyAdmin, o gerenciador de estatísticas Webalizer, dentre outras maravilhas.&lt;/p>
+&lt;h2 id="ruby-and-rails">Ruby and Rails&lt;/h2>
+&lt;p>Rails é um framework e hype do web2.0. Na verdade, estou aqui para falar exatamente dele, mas sim de um &lt;a href="http://developer.apple.com/tools/rubyonrails.html">artigo&lt;/a> da Apple, ensinando o caminho das pedras para sua configuração. Se você conseguir instalá-lo, pode ir direto para o &lt;a href="http://beam.to/taq/blog.php?id=263">tutorial&lt;/a> do TaQ, muito interessante, por sinal.&lt;/p>
+&lt;h2 id="editores">Editores&lt;/h2>
+&lt;p>Bem, agora já temos nosso servidor local. Falta escolher agora as melhores ferramentas de produtividade. O &lt;a href="http://www.adobe.com">Dreamweaver&lt;/a> tem recursos interessantes para desenvolvimento. Não estou falando do editor visual, mas sim do editor de código. O problema desse software é que requer muito hardware. Existe também o &lt;a href="http://www.skti.org/">skEdit&lt;/a>, que eu não testei, mas parece ser bem interessante. Porém, o que eu uso no meu Macintosh é o &lt;a href="http://smultron.sourceforge.net/">Smultron&lt;/a>, editor de texto livre.&lt;/p>
+&lt;h2 id="clientes-de-ftp">Clientes de FTP&lt;/h2>
+&lt;p>&lt;a href="http://panic.com/transmit/">Transmit&lt;/a> é uma ótima pedida, mas é shareware. Outro cliente interessante é o &lt;a href="http://www.interarchy.com/">Interarchy&lt;/a> é um cliente que adapta o Safari para conexões FTP.&lt;/p>
+&lt;h2 id="mais-do-mesmo">Mais do Mesmo&lt;/h2>
+&lt;p>&lt;a href="http://www.macdevcenter.com/pub/a/mac/2006/04/13/ftp.html">Continue lendo sobre Clientes FTP do Mac OS&lt;/a>&lt;br>
+&lt;a href="http://coolosxapps.net/">Blog só com aplicativos para Mac&lt;/a>&lt;/p></description></item><item><title>Desenvolvimento web no Macintosh</title><link>https://leonardofaria.net/2006/06/15/desenvolvimento-web-no-macintosh/</link><pubDate>Thu, 15 Jun 2006 23:20:54 -0300</pubDate><guid>https://leonardofaria.net/2006/06/15/desenvolvimento-web-no-macintosh/</guid><description>&lt;p>Muitos que se migram para o Mac OS se perguntam como trabalhar com desenvolvimento web nele. Well, o Mac OS X já vem com Apache configurado. Falta, portanto, configurar PHP e MySQL.&lt;/p>
+&lt;p>Após &lt;a href="http://www.entropy.ch/software/macosx/php/">baixar o PHP&lt;/a> (+- 47MB), você irá descompactá-lo e executar o instalador. Cuidado com a versão. No Mac OS X, o Apache que vem instalado por padrão é o Apache 1.3.&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2006/06/mac01.gif" alt="Instalação do PHP" />
+&lt;/center>
+&lt;p>Agora o MySQL: &lt;a href="http://dev.mysql.com/downloads/mysql/4.0.html#Mac_OS_X">Feito o download&lt;/a> (+-9MB), instale-o (primeiro o MySQL-standard e depois o MySQL Startup Item). Não há grandes tormentos para essa parte. Abra agora o MySQL.prefPane (que está junto com os 2 instaladores do MySQL). Definido quem vai usar o MySQL, você poderá finalmente iniciar o banco de dados. MySQL iniciado, falta somente o Apache:&lt;br>
+No Apple Menu, escolha Compartilhamento (ou Sharing).&lt;br>
+Selecione Compart. Web Pessoal (ou Pessoal Web Sharing) e inicie-o.&lt;br>
+Pronto! Para testar a configuração crie um arquivo teste.php com o seguinte conteúdo:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-php" data-lang="php">&lt;span style="color:#999;font-weight:bold;font-style:italic">&amp;lt;?php&lt;/span>
+phpinfo();
+&lt;span style="color:#999;font-weight:bold;font-style:italic">?&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Salve-o em Biblioteca/Webserver/Documents e vá para o Safari, digitando: http://localhost/teste.php&lt;br>
+Uma tela como a seguinte deve ser esperada:&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2006/06/mac02.gif" alt="PHP configurado" />
+&lt;/center></description></item><item><title>Webdevelopment no Macintosh</title><link>https://leonardofaria.net/2006/04/27/webdevelopment-no-macintosh/</link><pubDate>Thu, 27 Apr 2006 22:38:18 -0300</pubDate><guid>https://leonardofaria.net/2006/04/27/webdevelopment-no-macintosh/</guid><description>&lt;p>&lt;a href="http://www.macdevcenter.com/pub/a/mac/2006/04/13/ftp.html">Review&lt;/a> de alguns clientes FTP para Mac OS. Estou acostumado com o &lt;a href="http://panic.com/transmit/">Transmit&lt;/a>, pois há uma interação muito interessante com o Mac OS.&lt;br>
+Aproveitando o post, &lt;a href="http://www.bitacoradewebmaster.com/index.php?p=659">lista&lt;/a> de editores HTML para Macintosh. Esse site possui bastante resources para quem desenvolve web. Basta desenterrar seu Español del Paraguay.&lt;/p></description></item><item><title>iBook</title><link>https://leonardofaria.net/2006/04/20/ibook/</link><pubDate>Thu, 20 Apr 2006 22:25:05 -0300</pubDate><guid>https://leonardofaria.net/2006/04/20/ibook/</guid><description>&lt;p>&lt;img src="https://leonardofaria.net/wp-content/uploads/2006/05/homeoffice.jpg" class="w-32 mr-3" align="left" alt="Home Office" />&lt;/p>
+&lt;p>Finalmente chegou meu Mac.&lt;/p>
+&lt;p>Comprei um iBook 700MHz, 256MB Ram, 30GB HD, para uma nova vida mobile.&lt;/p></description></item></channel></rss>

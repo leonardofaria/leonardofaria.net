@@ -1,5 +1,79 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>apache on Leonardo Faria</title><link>https://leonardofaria.net/categories/apache/</link><description>Recent content in apache on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 16 Jul 2008 01:48:18 -0300</lastBuildDate><atom:link href="https://leonardofaria.net/categories/apache/index.xml" rel="self" type="application/rss+xml"/><item><title>Protegendo projetos com o .htaccess</title><link>https://leonardofaria.net/2008/07/16/protegendo-projetos-com-o-htaccess/</link><pubDate>Wed, 16 Jul 2008 01:48:18 -0300</pubDate><guid>https://leonardofaria.net/2008/07/16/protegendo-projetos-com-o-htaccess/</guid><description>O Apache pode te ajudar a proteger um projeto com seu sistema de autenticação. E isso é mais fácil do que você pensa. Para tal, crie um arquivo .htaccess com o seguinte conteúdo:
-AuthUserFile /home/leonardo/public_html/project/.htpasswd AuthGroupFile /dev/null AuthName &amp;quot;Restricted Access&amp;quot; AuthType Basic &amp;lt;limit GET&amp;gt; require valid-user &amp;lt;/limit&amp;gt; Após isso, crie um .htpasswd com os dados de usuário e senha (atenção ao caminho do arquivo). A senha é criptografada e o conteúdo do arquivo é algo como o seguinte:</description></item><item><title>Usando ApacheBench para testes: Apache/mod_rails e Nginx/mongrel</title><link>https://leonardofaria.net/2008/07/15/usando-apachebench-para-testes-apachemod_rails-e-nginxmongrel/</link><pubDate>Tue, 15 Jul 2008 00:41:42 -0300</pubDate><guid>https://leonardofaria.net/2008/07/15/usando-apachebench-para-testes-apachemod_rails-e-nginxmongrel/</guid><description>O ApacheBench é um software do Apache usado para fazer testes de perfomance de servidores web, independente do servidor usado. Isso é muito útil para comparar o desempenho de diversas configurações, mas nem sempre pode apresentar a realidade do ambiente.
-O ApacheBench é distribuído nos ambientes Linux pelo pacote apache2-utils – versões para Mac OS e Windows podem ser encontradas no site do software. Em distribuições como o Ubuntu, para instalá-lo basta um apt-get install apache2-utils (como super-usuário).</description></item><item><title>Ocultando a tecnologia de um site usando mod_rewrite</title><link>https://leonardofaria.net/2006/04/05/ocultando-a-tecnologia-de-um-site-usando-mod_rewrite/</link><pubDate>Wed, 05 Apr 2006 22:08:58 -0300</pubDate><guid>https://leonardofaria.net/2006/04/05/ocultando-a-tecnologia-de-um-site-usando-mod_rewrite/</guid><description>&lt;p>No artigo anterior, sugeri a mudança na configuração do httpd.conf para ocultar qual a tecnologia de um site. Isso pode ser útil em dois casos. O primeiro, por uma questão estética (não tão relevante) e a segunda por uma questão de segurança. Já que não se conhece como o site foi feito, ataques com SQL Injection, por exemplo, podem ser atrasados.&lt;/p></description></item><item><title>Editando o httpd.conf para ocultar a tecnologia de um site</title><link>https://leonardofaria.net/2006/04/05/editando-o-httpdconf-para-ocultar-a-tecnologia-de-um-site/</link><pubDate>Wed, 05 Apr 2006 22:00:45 -0300</pubDate><guid>https://leonardofaria.net/2006/04/05/editando-o-httpdconf-para-ocultar-a-tecnologia-de-um-site/</guid><description>&lt;p>Em nosso trabalho, deparamos com arquivos do tipo index.do, index.foo, index.123. Mas como isso é feito?&lt;br>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>apache on Leonardo Faria</title><link>https://leonardofaria.net/categories/apache/</link><description>Recent content in apache on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 16 Jul 2008 01:48:18 -0300</lastBuildDate><atom:link href="https://leonardofaria.net/categories/apache/index.xml" rel="self" type="application/rss+xml"/><item><title>Protegendo projetos com o .htaccess</title><link>https://leonardofaria.net/2008/07/16/protegendo-projetos-com-o-htaccess/</link><pubDate>Wed, 16 Jul 2008 01:48:18 -0300</pubDate><guid>https://leonardofaria.net/2008/07/16/protegendo-projetos-com-o-htaccess/</guid><description>&lt;p>O Apache pode te ajudar a proteger um projeto com seu sistema de autenticação. E isso é mais fácil do que você pensa. Para tal, crie um arquivo .htaccess com o seguinte conteúdo:&lt;/p>
+&lt;pre>&lt;code>AuthUserFile /home/leonardo/public_html/project/.htpasswd
+AuthGroupFile /dev/null
+AuthName &amp;quot;Restricted Access&amp;quot;
+AuthType Basic
+&amp;lt;limit GET&amp;gt;
+require valid-user
+&amp;lt;/limit&amp;gt;
+&lt;/code>&lt;/pre>&lt;p>Após isso, crie um .htpasswd com os dados de usuário e senha (atenção ao caminho do arquivo). A senha é criptografada e o conteúdo do arquivo é algo como o seguinte:&lt;/p>
+&lt;pre>&lt;code>leo:4tHAiRmQ4OpjM
+&lt;/code>&lt;/pre>&lt;p>Para criptografar a senha use um dos &lt;a href="http://www.kxs.net/support/htaccess_pw.html">vários&lt;/a> serviços &lt;a href="http://shop.alterlinks.com/htpasswd/htpasswd.php">por aí&lt;/a> existentes. Para proteger um projeto em Rails, a solução também funciona bem, desde que seu .htaccess esteja na pasta public de sua aplicação&lt;/p></description></item><item><title>Usando ApacheBench para testes: Apache/mod_rails e Nginx/mongrel</title><link>https://leonardofaria.net/2008/07/15/usando-apachebench-para-testes-apachemod_rails-e-nginxmongrel/</link><pubDate>Tue, 15 Jul 2008 00:41:42 -0300</pubDate><guid>https://leonardofaria.net/2008/07/15/usando-apachebench-para-testes-apachemod_rails-e-nginxmongrel/</guid><description>&lt;p>O &lt;a href="http://httpd.apache.org/docs/2.2/programs/ab.html">ApacheBench&lt;/a> é um software do Apache usado para fazer testes de perfomance de servidores web, independente do servidor usado. Isso é muito útil para comparar o desempenho de diversas configurações, mas nem sempre pode apresentar a realidade do ambiente.&lt;/p>
+&lt;p>O ApacheBench é distribuído nos ambientes Linux pelo pacote apache2-utils – versões para Mac OS e Windows podem ser encontradas no &lt;a href="http://httpd.apache.org/docs/2.2/programs/ab.html">site do software&lt;/a>. Em distribuições como o Ubuntu, para instalá-lo basta um apt-get install apache2-utils (como super-usuário). A partir daí, o comando ab fica disponível em seu terminal e é só correr para o abraço!&lt;/p>
+&lt;p>Um teste pode ser feito com o comando:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">ab -n 100 -c 5 http://www.leonardofaria.net/
+&lt;/pre>
+&lt;p>O Flag ‘-n&amp;rsquo; indica o número de requisições, enquanto a opção ‘-c&amp;rsquo; indica a ocorrência de conexões simultâneas. A saída do comando acima é semelhante a:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">This is ApacheBench, Version 2.0.40-dev &lt; $Revision: 1.146 $> apache-2.0
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Copyright 2006 The Apache Software Foundation, http://www.apache.org/
+Benchmarking www.leonardofaria.net (be patient).....done
+Server Software: Apache/2.2.8
+Server Hostname: www.leonardofaria.net
+Server Port: 80
+Document Path: /
+Document Length: 0 bytes
+Concurrency Level: 5
+Time taken for tests: 16.460184 seconds
+Complete requests: 100
+Failed requests: 0
+Write errors: 0
+Non-2xx responses: 100
+Total transferred: 41600 bytes
+HTML transferred: 0 bytes
+Requests per second: 6.08 [#/sec] (mean)
+Time per request: 823.009 [ms] (mean)
+Time per request: 164.602 [ms] (mean, across all concurrent requests)
+Transfer rate: 2.43 [Kbytes/sec] received
+Connection Times (ms)
+min mean[+/-sd] median max
+Connect: 255 291 21.2 287 361
+Processing: 442 506 131.1 485 1732
+Waiting: 438 492 42.9 484 655
+Total: 698 797 137.9 774 2040
+Percentage of the requests served within a certain time (ms)
+50% 774
+66% 804
+75% 812
+80% 818
+90% 878
+95% 925
+98% 982
+99% 2040
+100% 2040 (longest request)
+&lt;/pre>
+&lt;p>Dezenas de possibilidades podem ser traçadas com esses testes.&lt;br>
+Nos meus benchmarks, realizei basicamente 2 testes: a renderização do index.html default do framework e a renderização de um Time.Now do Ruby. Em ambos os testes, o desempenho do nginx + mongrel_cluster foi superior ao Apache + mod_rails. Esse teste também &lt;a href="http://blog.matt-darby.com/2008/07/10/apachepassenger-vs-nginxmongrel/">foi feito&lt;/a> por aí, e com resultados semelhantes ao meu.&lt;/p>
+&lt;p>Desse modo, em uma balança estão Apache/mod_rails e Nginx/mongrel_cluster. De um lado, pesam a facilidade de deployment e o crescente uso em shared hosts. De outro lado pesam a rapidez do servidor e a ‘dificuldade&amp;rsquo; do deployment. E aí? De que lado você vai ficar?&lt;/p></description></item><item><title>Ocultando a tecnologia de um site usando mod_rewrite</title><link>https://leonardofaria.net/2006/04/05/ocultando-a-tecnologia-de-um-site-usando-mod_rewrite/</link><pubDate>Wed, 05 Apr 2006 22:08:58 -0300</pubDate><guid>https://leonardofaria.net/2006/04/05/ocultando-a-tecnologia-de-um-site-usando-mod_rewrite/</guid><description>&lt;p>No artigo anterior, sugeri a mudança na configuração do httpd.conf para ocultar qual a tecnologia de um site. Isso pode ser útil em dois casos. O primeiro, por uma questão estética (não tão relevante) e a segunda por uma questão de segurança. Já que não se conhece como o site foi feito, ataques com SQL Injection, por exemplo, podem ser atrasados.&lt;/p>
+&lt;p>Mas voltando ao conteúdo desse artigo, o Apache oferece outra forma de maquiar uma URL. E isso é através do mod_rewrite. Além de oferecer a segurança em não mostrar a extensão de um arquivo, o mod_rewrite permite a criação de URLS ‘fáceis&amp;rsquo; de entender e não monstros do tipo &lt;code>index.php?id=7&amp;amp;date=05/02/97&amp;amp;page=6&lt;/code>&lt;/p>
+&lt;p>O mod_rewrite não passa de um módulo (que deve estar ativado no httpd.conf) que permite, através de expressões regulares, redirecionar o usuário. Mas, como ele funciona? &lt;!--more-->&lt;/p>
+&lt;p>A configuração das URLs amigáveis envolve a criação de um arquivo .htaccess. Esse arquivo deve estar no diretório no qual deve ser trabalhado. Vamos a configuração:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-apache" data-lang="apache">&lt;span style="color:#0086b3">RewriteEngine&lt;/span> &lt;span style="color:#000;font-weight:bold">On&lt;/span>
+&lt;span style="color:#0086b3">RewriteRule&lt;/span> ^(noticias)/(.+)$ index.php?id=$1&amp;amp;go=$2
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Vamos entender o que faz as linhas acima.&lt;br>
+A primeira aciona o módulo. Já a segunda é marcada por três tabulações:&lt;/p>
+&lt;p>A primeira tabulação traz a palavra RewriteRule, que indica que essa linha possui uma regra de redirecionamento.&lt;/p>
+&lt;p>A segunda tabulação monta a URL virtual. Segundo essa regra, qualquer URL noticias/teste será redirecionado para a terceira tabulação, index.php?id=$1&amp;amp;go=$2. Observe que $1 e $2, usadas na terceira tabulação, são na verdade a primeira (noticias) e a segunda (qualquer palavra) partes da URL virtual.&lt;/p>
+&lt;p>&lt;strong>Mais do mesmo:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://guia-er.sourceforge.net/guia-er.html">Continue lendo sobre expressões regulares.&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.brunotorres.net/web/urls">Gerenciamento de URLs&lt;/a> e &lt;a href="http://www.brunotorres.net/web/urls-again">URLs amigáveis – Esclarecendo dúvidas&lt;/a>, por Bruno Torres&lt;/li>
+&lt;li>&lt;a href="http://httpd.apache.org/docs-2.0/mod/mod_rewrite.html">Documentação do mod_rewrite&lt;/a>, pelo Apache&lt;/li>
+&lt;/ul></description></item><item><title>Editando o httpd.conf para ocultar a tecnologia de um site</title><link>https://leonardofaria.net/2006/04/05/editando-o-httpdconf-para-ocultar-a-tecnologia-de-um-site/</link><pubDate>Wed, 05 Apr 2006 22:00:45 -0300</pubDate><guid>https://leonardofaria.net/2006/04/05/editando-o-httpdconf-para-ocultar-a-tecnologia-de-um-site/</guid><description>&lt;p>Em nosso trabalho, deparamos com arquivos do tipo index.do, index.foo, index.123. Mas como isso é feito?&lt;br>
 O Apache permite alterar o suporte das extensões suportadas por ele.&lt;br>
-O arquivo httpd.conf é o principal gerenciador de configurações do servidor. É nele que vamos trabalhar.&lt;/p></description></item></channel></rss>
+O arquivo httpd.conf é o principal gerenciador de configurações do servidor. É nele que vamos trabalhar.&lt;/p>
+&lt;p>Devemos procurar pela seguinte linha (aproximdamente na linha 220):&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-apache" data-lang="apache">&lt;span style="color:#0086b3">AddType&lt;/span> application/x-httpd-php .php .php4 .php3 .phtml .leo
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Essa é linha responsável por definir quais extensões serão executadas com suporte a PHP. Observe que acrescentei a extensão .leo.&lt;br>
+A partir de agora, index.leo, por exemplo, será processado com PHP. Logo, nele posso escrever toda minha aplicação. Mas lembre-se, o suporte só estará funcionando após a reinicialização do Apache.&lt;/p>
+&lt;p>&lt;strong>[update]&lt;/strong> Isso também pode ser feito em um .htaccess&lt;/p></description></item></channel></rss>

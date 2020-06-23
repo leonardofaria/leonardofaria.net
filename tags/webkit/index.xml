@@ -1,1 +1,171 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>webkit on Leonardo Faria</title><link>https://leonardofaria.net/tags/webkit/</link><description>Recent content in webkit on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 23 Jan 2011 18:52:34 -0200</lastBuildDate><atom:link href="https://leonardofaria.net/tags/webkit/index.xml" rel="self" type="application/rss+xml"/><item><title>Personalizando o scrollbar com WebKit</title><link>https://leonardofaria.net/2011/01/23/personalizando-o-scrollbar-com-webkit/</link><pubDate>Sun, 23 Jan 2011 18:52:34 -0200</pubDate><guid>https://leonardofaria.net/2011/01/23/personalizando-o-scrollbar-com-webkit/</guid><description>&lt;p>Personalizar barras de rolagem é &lt;a href="http://codestacker.com/codes/244-color-scrollbars-for-ie-5-5">algo que vem lá dos tempos&lt;/a> do IE 5.5. Naquele tempo, personalizavam-se as cores da barra, criando efeitos na maioria da vezes cafonas. Já &lt;a href="http://webkit.org/blog/363/styling-scrollbars/">faz algum tempo&lt;/a> que o WebKit suporta scrollbars personalizadas. Você pode personalizar atributos como borda e background, usando até mesmo imagens para criar barras de rolagens bacanas. Esse artigo mostra alguns pseudo-elementos e pseudo-classes para personalizar sua barra.&lt;/p></description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>webkit on Leonardo Faria</title><link>https://leonardofaria.net/tags/webkit/</link><description>Recent content in webkit on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 23 Jan 2011 18:52:34 -0200</lastBuildDate><atom:link href="https://leonardofaria.net/tags/webkit/index.xml" rel="self" type="application/rss+xml"/><item><title>Personalizando o scrollbar com WebKit</title><link>https://leonardofaria.net/2011/01/23/personalizando-o-scrollbar-com-webkit/</link><pubDate>Sun, 23 Jan 2011 18:52:34 -0200</pubDate><guid>https://leonardofaria.net/2011/01/23/personalizando-o-scrollbar-com-webkit/</guid><description>&lt;p>Personalizar barras de rolagem é &lt;a href="http://codestacker.com/codes/244-color-scrollbars-for-ie-5-5">algo que vem lá dos tempos&lt;/a> do IE 5.5. Naquele tempo, personalizavam-se as cores da barra, criando efeitos na maioria da vezes cafonas. Já &lt;a href="http://webkit.org/blog/363/styling-scrollbars/">faz algum tempo&lt;/a> que o WebKit suporta scrollbars personalizadas. Você pode personalizar atributos como borda e background, usando até mesmo imagens para criar barras de rolagens bacanas. Esse artigo mostra alguns pseudo-elementos e pseudo-classes para personalizar sua barra.&lt;/p>
+&lt;h3 id="antes-de-começar">Antes de começar&lt;/h3>
+&lt;p>Antes de começar precisamos alterar algumas propriedades de posicionamento de nossa página, para que a barra do WebKit substitua a barra nativa do browser.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">&lt;span style="color:#000080">body&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">position&lt;/span>: &lt;span style="color:#000;font-weight:bold">absolute&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">top&lt;/span>: &lt;span style="color:#099">0&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">left&lt;/span>: &lt;span style="color:#099">0&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">bottom&lt;/span>: &lt;span style="color:#099">0&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">right&lt;/span>: &lt;span style="color:#099">10&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">overflow-y&lt;/span>: &lt;span style="color:#000;font-weight:bold">scroll&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">overflow-x&lt;/span>: &lt;span style="color:#000;font-weight:bold">hidden&lt;/span>;
+}
+&lt;span style="color:#000080">html&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">overflow-y&lt;/span>: &lt;span style="color:#000;font-weight:bold">auto&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">background-color&lt;/span>: &lt;span style="color:#000;font-weight:bold">transparent&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="os-pseudo-elementos-e-as-pseudo-classes">Os pseudo-elementos e as pseudo-classes&lt;/h3>
+&lt;h4 id="pseudo-elementos">Pseudo-elementos&lt;/h4>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">ul&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;-webkit-scrollbar&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;-webkit-scrollbar-button&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;-webkit-scrollbar-track&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;-webkit-scrollbar-track-piece&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;-webkit-scrollbar-thumb&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;-webkit-scrollbar-corner&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;-webkit-resizer&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">ul&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="pseudo-classes">Pseudo-classes&lt;/h4>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">ul&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:horizontal&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:vertical&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:decrement&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:increment&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:start&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:end&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:double-button&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:single-button&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:no-button&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:corner-present&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:window-inactive&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:enabled&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:disabled&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:hover&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:active&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">ul&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="exemplos">Exemplos&lt;/h3>
+&lt;h4 id="exemplo-1">Exemplo 1&lt;/h4>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2011/01/exemplo1.jpg" />
+&lt;/center>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">width&lt;/span>: &lt;span style="color:#099">10&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">height&lt;/span>: &lt;span style="color:#099">10&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">start&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">decrement&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">increment&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">display&lt;/span>: &lt;span style="color:#000;font-weight:bold">none&lt;/span>;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-track-piece&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-color&lt;/span>: &lt;span style="color:#099">#3b3b3b&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">-webkit-&lt;/span>&lt;span style="color:#000;font-weight:bold">border-radius&lt;/span>: &lt;span style="color:#099">6&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-thumb&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">vertical&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-color&lt;/span>: &lt;span style="color:#099">#666&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">-webkit-&lt;/span>&lt;span style="color:#000;font-weight:bold">border-radius&lt;/span>: &lt;span style="color:#099">6&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Veja no primeiro exemplo que nos elementos &lt;code>-webkit-scrollbar-button:start:decrement&lt;/code> e &lt;code>-webkit-scrollbar-button:end:increment&lt;/code> foram usadas &lt;code>display:none&lt;/code>, para que não seja exibido os botões das extremidades da barra.&lt;/p>
+&lt;h2 id="exemplo-2">Exemplo 2&lt;/h2>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2011/01/exemplo2.jpg" />
+&lt;/center>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">start&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">decrement&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">increment&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">display&lt;/span>: &lt;span style="color:#000;font-weight:bold">block&lt;/span>;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">increment&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_cntrl_dwn.png&amp;#34;&lt;/span>);
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">start&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">decrement&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_cntrl_up.png&amp;#34;&lt;/span>);
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-track-piece&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">vertical&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">start&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_gutter_top.png&amp;#34;&lt;/span>), &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_gutter_mid.png&amp;#34;&lt;/span>);
+&lt;span style="color:#000;font-weight:bold">background-repeat&lt;/span>: &lt;span style="color:#000;font-weight:bold">no-repeat&lt;/span>, &lt;span style="color:#000;font-weight:bold">repeat&lt;/span>&lt;span style="color:#000;font-weight:bold">-&lt;/span>y;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-track-piece&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">vertical&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_gutter_btm.png&amp;#34;&lt;/span>), &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_gutter_mid.png&amp;#34;&lt;/span>);
+&lt;span style="color:#000;font-weight:bold">background-repeat&lt;/span>: &lt;span style="color:#000;font-weight:bold">no-repeat&lt;/span>, &lt;span style="color:#000;font-weight:bold">repeat&lt;/span>&lt;span style="color:#000;font-weight:bold">-&lt;/span>y;
+&lt;span style="color:#000;font-weight:bold">background-position&lt;/span>: &lt;span style="color:#000;font-weight:bold">bottom&lt;/span> &lt;span style="color:#000;font-weight:bold">left&lt;/span>, &lt;span style="color:#099">0&lt;/span> &lt;span style="color:#099">0&lt;/span>;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-thumb&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">vertical&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">height&lt;/span>: &lt;span style="color:#099">56&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">-webkit-&lt;/span>&lt;span style="color:#000;font-weight:bold">border-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_thumb.png&amp;#34;&lt;/span>) &lt;span style="color:#099">8&lt;/span> &lt;span style="color:#099">0&lt;/span> &lt;span style="color:#099">8&lt;/span> &lt;span style="color:#099">0&lt;/span> &lt;span style="color:#000;font-weight:bold">stretch&lt;/span> &lt;span style="color:#000;font-weight:bold">stretch&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">border-width&lt;/span>: &lt;span style="color:#099">8&lt;/span> &lt;span style="color:#099">0&lt;/span> &lt;span style="color:#099">8&lt;/span> &lt;span style="color:#099">0&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>No segundo exemplo, foram usados múltiplos backgrounds para criar uma barra de rolagem arrendondada.&lt;/p>
+&lt;h3 id="exemplo-3">Exemplo 3&lt;/h3>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2011/01/exemplo3.jpg" />
+&lt;/center>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">width&lt;/span>: &lt;span style="color:#099">16&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">height&lt;/span>: &lt;span style="color:#099">16&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">increment&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">decrement&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">display&lt;/span>: &lt;span style="color:#000;font-weight:bold">block&lt;/span>;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">increment&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_cntrl_dwn.png&amp;#34;&lt;/span>);
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">decrement&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_cntrl_up.png&amp;#34;&lt;/span>);
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-track-piece&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">vertical&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">start&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_gutter_top.png&amp;#34;&lt;/span>), &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_gutter_mid.png&amp;#34;&lt;/span>);
+&lt;span style="color:#000;font-weight:bold">background-repeat&lt;/span>: &lt;span style="color:#000;font-weight:bold">no-repeat&lt;/span>, &lt;span style="color:#000;font-weight:bold">repeat&lt;/span>&lt;span style="color:#000;font-weight:bold">-&lt;/span>y;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-track-piece&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">vertical&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_gutter_btm.png&amp;#34;&lt;/span>), &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_gutter_mid.png&amp;#34;&lt;/span>);
+&lt;span style="color:#000;font-weight:bold">background-repeat&lt;/span>: &lt;span style="color:#000;font-weight:bold">no-repeat&lt;/span>, &lt;span style="color:#000;font-weight:bold">repeat&lt;/span>&lt;span style="color:#000;font-weight:bold">-&lt;/span>y;
+&lt;span style="color:#000;font-weight:bold">background-position&lt;/span>: &lt;span style="color:#000;font-weight:bold">bottom&lt;/span> &lt;span style="color:#000;font-weight:bold">left&lt;/span>, &lt;span style="color:#099">0&lt;/span> &lt;span style="color:#099">0&lt;/span>;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-thumb&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">vertical&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">height&lt;/span>: &lt;span style="color:#099">56&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">-webkit-&lt;/span>&lt;span style="color:#000;font-weight:bold">border-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_thumb.png&amp;#34;&lt;/span>) &lt;span style="color:#099">8&lt;/span> &lt;span style="color:#099">0&lt;/span> &lt;span style="color:#099">8&lt;/span> &lt;span style="color:#099">0&lt;/span> &lt;span style="color:#000;font-weight:bold">stretch&lt;/span> &lt;span style="color:#000;font-weight:bold">stretch&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">border-width&lt;/span>: &lt;span style="color:#099">8&lt;/span> &lt;span style="color:#099">0&lt;/span> &lt;span style="color:#099">8&lt;/span> &lt;span style="color:#099">0&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nesse exemplo são usados botões na parte inferior da barra, como no Mac OS.&lt;/p>
+&lt;h3 id="exemplo-4">Exemplo 4&lt;/h3>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2011/01/exemplo41.jpg" />
+&lt;/center>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">&lt;span style="color:#000080">pre&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">border&lt;/span>: &lt;span style="color:#099">1&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span> &lt;span style="color:#000;font-weight:bold">solid&lt;/span> &lt;span style="color:#099">#ccc&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">border-radius&lt;/span>: &lt;span style="color:#099">3&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">white-space&lt;/span>: &lt;span style="color:#000;font-weight:bold">nowrap&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">overflow&lt;/span>: &lt;span style="color:#000;font-weight:bold">scroll&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">padding&lt;/span>: &lt;span style="color:#099">5&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">width&lt;/span>: &lt;span style="color:#099">550&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+}
+&lt;span style="color:#000080">pre&lt;/span>::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">width&lt;/span>: &lt;span style="color:#099">6&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">height&lt;/span>: &lt;span style="color:#099">6&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">padding&lt;/span>: &lt;span style="color:#099">18&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">-webkit-&lt;/span>&lt;span style="color:#000;font-weight:bold">border-radius&lt;/span>: &lt;span style="color:#099">1&lt;/span>&lt;span style="color:#458;font-weight:bold">ex&lt;/span>;
+}
+&lt;span style="color:#000080">pre&lt;/span>::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-thumb&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background&lt;/span>: &lt;span style="color:#099">#ccc&lt;/span> &lt;span style="color:#000;font-weight:bold">-webkit-&lt;/span>&lt;span style="color:#900;font-weight:bold">gradient&lt;/span>(&lt;span style="color:#000;font-weight:bold">linear&lt;/span>, &lt;span style="color:#099">0&lt;/span>&lt;span style="color:#458;font-weight:bold">%&lt;/span> &lt;span style="color:#099">0&lt;/span>&lt;span style="color:#458;font-weight:bold">%&lt;/span>, &lt;span style="color:#099">0&lt;/span>&lt;span style="color:#458;font-weight:bold">%&lt;/span> &lt;span style="color:#099">100&lt;/span>&lt;span style="color:#458;font-weight:bold">%&lt;/span>, &lt;span style="color:#900;font-weight:bold">from&lt;/span>(&lt;span style="color:#0086b3">rgb&lt;/span>(&lt;span style="color:#099">240&lt;/span>, &lt;span style="color:#099">240&lt;/span>, &lt;span style="color:#099">240&lt;/span>)), &lt;span style="color:#900;font-weight:bold">to&lt;/span>(&lt;span style="color:#0086b3">rgb&lt;/span>(&lt;span style="color:#099">210&lt;/span>, &lt;span style="color:#099">210&lt;/span>, &lt;span style="color:#099">210&lt;/span>)));
+&lt;span style="color:#000;font-weight:bold">padding&lt;/span>: &lt;span style="color:#099">8&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">width&lt;/span>: &lt;span style="color:#099">6&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">height&lt;/span>: &lt;span style="color:#099">6&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">-webkit-&lt;/span>&lt;span style="color:#000;font-weight:bold">border-radius&lt;/span>: &lt;span style="color:#099">1&lt;/span>&lt;span style="color:#458;font-weight:bold">ex&lt;/span>;
+}
+&lt;span style="color:#000080">pre&lt;/span>::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">start&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">decrement&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#000080">pre&lt;/span>::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">increment&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">display&lt;/span>: &lt;span style="color:#000;font-weight:bold">none&lt;/span>;
+}
+&lt;span style="color:#000080">pre&lt;/span>::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-thumb&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">vertical&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000080">pre&lt;/span>::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-thumb&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">horizontal&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">height&lt;/span>: &lt;span style="color:#099">3&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">width&lt;/span>: &lt;span style="color:#099">3&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">margin&lt;/span>: &lt;span style="color:#099">3&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Para terminar, foi aplicado em um elemento &lt;code>&amp;lt;pre&amp;gt;&lt;/code>. Todos os exemplos acima estão no meu GitHub, no repositório &lt;a href="https://github.com/leonardofaria/webkit-examples">webkit-examples&lt;/a>. &lt;a href="http://trac.webkit.org/export/41842/trunk/LayoutTests/scrollbars/overflow-scrollbar-combinations.html">Confira outros exemplos no site do WebKit&lt;/a>.&lt;/p>
+&lt;h3 id="extra-detectando-o-webkit">Extra: detectando o WebKit&lt;/h3>
+&lt;p>Você pode detectar se o browser do usuário usa WebKit rapidamente com Javascript:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#000;font-weight:bold">if&lt;/span> (&lt;span style="color:#009926">/webkit/&lt;/span>.test(navigator.userAgent.toLowerCase())) {
+alert(&lt;span style="color:#d14">&amp;#39;hello webkit!&amp;#39;&lt;/span>);
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>… e usar jQuery para carregar uma folha de estilo personalizada:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">$(&lt;span style="color:#d14">&amp;#39;head&amp;#39;&lt;/span>).append(&lt;span style="color:#d14">&amp;#39;&amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;safari.css&amp;#34; type=&amp;#34;text/css&amp;#34; /&amp;gt;&amp;#39;&lt;/span>);
+&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>

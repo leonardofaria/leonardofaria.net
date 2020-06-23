@@ -1,12 +1,175 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mysql on Leonardo Faria</title><link>https://leonardofaria.net/tags/mysql/</link><description>Recent content in mysql on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 04 Oct 2012 00:27:33 -0300</lastBuildDate><atom:link href="https://leonardofaria.net/tags/mysql/index.xml" rel="self" type="application/rss+xml"/><item><title>mytop, para monitorar seu MySQL</title><link>https://leonardofaria.net/2012/10/04/mytop-para-monitorar-seu-mysql/</link><pubDate>Thu, 04 Oct 2012 00:27:33 -0300</pubDate><guid>https://leonardofaria.net/2012/10/04/mytop-para-monitorar-seu-mysql/</guid><description>O mytop é um clone do comando top para o MySQL. Ele é usado para monitorar a performance do seu banco, sem precisar de softwares caros, complexos ou pesados. Ele é escrito em Perl e abaixo está um mini-roteiro de como instalá-lo – no meu caso, Mac OS Mountain Lion.
-Antes de compilar o mytop é necessário instalar o pré-requisito DBD-Mysql. No terminal, digite:
-perl -MCPAN -e 'shell' Em seguida, execute:</description></item><item><title>Rails e cia no Snow Leopard</title><link>https://leonardofaria.net/2009/11/14/rails-e-cia-no-snow-leopard/</link><pubDate>Sat, 14 Nov 2009 20:00:24 -0200</pubDate><guid>https://leonardofaria.net/2009/11/14/rails-e-cia-no-snow-leopard/</guid><description>&lt;p>Fiz uma instalação nova do Snow Leopard no meu MacBook e ao migrar os dados do Time Machine, do Leopard, algumas coisas pararam de funcionar. Resolvi então escrever para complementar meu &lt;a href="https://leonardofaria.net/2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/">post anterior sobre o assunto&lt;/a>.&lt;/p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mysql on Leonardo Faria</title><link>https://leonardofaria.net/tags/mysql/</link><description>Recent content in mysql on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 04 Oct 2012 00:27:33 -0300</lastBuildDate><atom:link href="https://leonardofaria.net/tags/mysql/index.xml" rel="self" type="application/rss+xml"/><item><title>mytop, para monitorar seu MySQL</title><link>https://leonardofaria.net/2012/10/04/mytop-para-monitorar-seu-mysql/</link><pubDate>Thu, 04 Oct 2012 00:27:33 -0300</pubDate><guid>https://leonardofaria.net/2012/10/04/mytop-para-monitorar-seu-mysql/</guid><description>&lt;p>O &lt;a href="http://jeremy.zawodny.com/mysql/mytop/">mytop&lt;/a> é um clone do comando top para o MySQL. Ele é usado para monitorar a performance do seu banco, sem precisar de softwares caros, complexos ou pesados. Ele é escrito em Perl e abaixo está um mini-roteiro de como instalá-lo – no meu caso, Mac OS Mountain Lion.&lt;/p>
+&lt;center>
+&lt;a href="http://jeremy.zawodny.com/mysql/mytop/">&lt;img src="https://leonardofaria.net/wp-content/uploads/2012/10/mytop.jpg" alt="" title="mytop" />&lt;/a>
+&lt;/center>
+&lt;p>Antes de compilar o mytop é necessário &lt;a href="https://discussions.apple.com/thread/3136351?start=0&amp;amp;tstart=0">instalar o pré-requisito DBD-Mysql&lt;/a>. No terminal, digite:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">perl -MCPAN -e 'shell'
+&lt;/pre>
+&lt;p>Em seguida, execute:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">get DBD::mysql
+exit
+&lt;/pre>
+&lt;p>Ao sair do prompt do cpan, digite:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">cd ~/.cpan/build/DBD-mysql-&lt;version>/
+perl Makefile.PL--testuser='mysql_user_name' --testpassword='mysql_passwd'
+make
+make test
+make install
+&lt;/pre>
+&lt;p>Faça o &lt;a href="http://jeremy.zawodny.com/mysql/mytop/mytop-1.6.tar.gz">download do pacote&lt;/a> porque já é hora de compilá-lo:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">tar -zxvf mytop-&lt;version>.tar.gz
+cd mytop-&lt;version>
+perl Makefile.PL
+make
+make test
+make install
+&lt;/pre>
+&lt;p>Execute o mytop pela primeira vez:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">mytop&lt;/pre>
+&lt;p>Pode acontecer o seguinte erro:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">Error in option spec: "long|!"&lt;/pre>
+&lt;p>Caso esse erro aconteça, é necessário editarmos o mytop. Abra o arquivo – aqui instalado em /usr/local/bin e edite a linha 159:&lt;/p>
+&lt;pre class="brush: perl; title: ; notranslate" title="">"long|long_nums|l!" => \$config{long_nums},&lt;/pre>
+&lt;p>Além disso, substitua as linhas 958 e 959 pelas linhas seguintes:&lt;/p>
+&lt;pre class="brush: perl; title: ; notranslate" title="">if ($host)
+{
+$host =~ s/^([^.]+).*/$1/;
+$thread->{Host} = $host;
+}
+&lt;/pre>
+&lt;h2 id="usando-o-mytop">Usando o mytop&lt;/h2>
+&lt;p>Você pode monitorar seu banco passando as configurações de conexão via shell:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">mytop -u 'seuusuario' -p 'suasenha' -h 127.0.0.1 -d 'seubanco'&lt;/pre>
+&lt;p>…ou pode criar um arquivo .mytop em sua pasta de usuários, como o abaixo:&lt;/p>
+&lt;pre class="brush: plain; title: ; notranslate" title="">user=seuusuario
+pass=suasenha
+host=127.0.0.1
+db=seubanco&lt;/pre></description></item><item><title>Rails e cia no Snow Leopard</title><link>https://leonardofaria.net/2009/11/14/rails-e-cia-no-snow-leopard/</link><pubDate>Sat, 14 Nov 2009 20:00:24 -0200</pubDate><guid>https://leonardofaria.net/2009/11/14/rails-e-cia-no-snow-leopard/</guid><description>&lt;p>Fiz uma instalação nova do Snow Leopard no meu MacBook e ao migrar os dados do Time Machine, do Leopard, algumas coisas pararam de funcionar. Resolvi então escrever para complementar meu &lt;a href="https://leonardofaria.net/2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/">post anterior sobre o assunto&lt;/a>.&lt;/p>
 &lt;h3 id="xcode">Xcode&lt;/h3>
 &lt;p>&lt;strong>ANTES DE MAIS NADA&lt;/strong>, instalei o Xcode. Ele está junto no DVD do Snow Leopard, na pasta de Instalações Opcionais.&lt;/p>
 &lt;h3 id="rails">Rails&lt;/h3>
-&lt;p>O Snow Leopard já vem com duas versões do Rails já instaladas: 2.2.2 e 1.13.6. Caso queira atualizar seu ambiente:&lt;/p></description></item><item><title>Alternativas ao PHPMyAdmin</title><link>https://leonardofaria.net/2009/08/22/alternativas-ao-phpmyadmin/</link><pubDate>Sat, 22 Aug 2009 16:32:36 -0300</pubDate><guid>https://leonardofaria.net/2009/08/22/alternativas-ao-phpmyadmin/</guid><description>O PHPMyAdmin é quase uma unanimidade em gerenciadores de banco de dados MySQL. Mas existe vida além dele. Vamos lá:
-SQL Buddy O SQL Buddy é uma alternativa bacana, com bonita interface e traduzido para vários idiomas, incluindo português.
-Adminer Já o Adminer é um app em php feito em 1(!) único arquivo. Possui diversas traduções (nenhuma ainda em português) mas é altamente indicado o mantermos em nossos servidores para uma rápida manutenção.</description></item><item><title>Descubra de onde vem seus usuários com SQL</title><link>https://leonardofaria.net/2009/07/12/descubra-de-onde-vem-seus-usuarios-com-sql/</link><pubDate>Sun, 12 Jul 2009 17:51:44 -0300</pubDate><guid>https://leonardofaria.net/2009/07/12/descubra-de-onde-vem-seus-usuarios-com-sql/</guid><description>Tenho no autosimulado algumas queries para acompanhar a evolução dos usuários do site. Periodicamente, vejo o número de usuários criados dia-a-dia no site e o número de testes realizados por esses usuários.
-Relacionado as essas queries, vi uma interessante consulta para agrupar o número de usuários por domínio de email, através da função substring. Confira:
-SELECT COUNT(*) AS Total, SUBSTRING_INDEX(email, &amp;#39;@&amp;#39;, -1) AS Domain FROM users GROUP BY SUBSTRING_INDEX(email, &amp;#39;@&amp;#39;, -1) ORDER BY COUNT(*) DESC LIMIT 10; O resultado, quando aplicado ao banco de dados do autosimulado:</description></item><item><title>Edge Rails no Windows Vista</title><link>https://leonardofaria.net/2008/09/10/edge-rails-no-windows-vista/</link><pubDate>Wed, 10 Sep 2008 02:26:40 -0300</pubDate><guid>https://leonardofaria.net/2008/09/10/edge-rails-no-windows-vista/</guid><description>Uma das mudanças do Rails 2.2 é não inclusão do bundle do MySQL, responsável por conectar seu projeto ao banco. Mês passado eu postei sobre isso e hoje, ao tentar instalar o gem do MySQL no Windows Vista de um co-worker, me deparei com um problema na DLL libmySQL.dll.
-A solução encontrada foi copiar esse arquivo (geralmente em C:\Program Files\MySQL\MySQL Server 4.1\bin) para a pasta bin do Ruby (por exemplo: C:\ruby\bin).</description></item></channel></rss>
+&lt;p>O Snow Leopard já vem com duas versões do Rails já instaladas: 2.2.2 e 1.13.6. Caso queira atualizar seu ambiente:&lt;/p>
+&lt;pre>&lt;code>sudo gem update --system
+sudo gem update rails
+&lt;/code>&lt;/pre>&lt;h3 id="passenger">Passenger&lt;/h3>
+&lt;pre>&lt;code>sudo gem install passenger
+sudo passenger-install-apache2-module
+&lt;/code>&lt;/pre>&lt;p>Terminada a instalação, do Passenger, você precisa editar o arquivo &lt;code>/etc/apache2/httpd.conf&lt;/code> e acrescentar o seguinte conteúdo:&lt;/p>
+&lt;div class="syntax_hilite">
+&lt;pre class="bash">&lt;code>LoadModule passenger_module /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/ext/apache2/mod_passenger.so
+PassengerRoot /Library/Ruby/Gems/1.8/gems/passenger-2.2.5
+PassengerRuby /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
+&lt;/code>&lt;/pre>
+&lt;/div>
+&lt;p>A configuração dos sites também pode ser feita nesse arquivo, por exemplo:&lt;/p>
+&lt;pre>&lt;code>&amp;lt;VirtualHost *:80&amp;gt;
+ServerName codestacker
+DocumentRoot &amp;quot;/Users/leonardofaria/Sites/codestacker/public&amp;quot;
+&amp;lt;/VirtualHost&amp;gt;
+&lt;/code>&lt;/pre>&lt;h3 id="mysql">MySQL&lt;/h3>
+&lt;p>A instalação do gem do MySQL pode ser feita da mesma forma que &lt;a href="https://leonardofaria.net/2008/08/02/mudancas-no-rails-22/">postei anteriormente&lt;/a>: basta &lt;a href="http://dev.mysql.com/downloads/mysql/5.1.html#macosx-dmg">instalar o pacote do site&lt;/a> e executar a instalação da gem com o comando:&lt;/p>
+&lt;pre>&lt;code>sudo gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
+&lt;/code>&lt;/pre>&lt;h3 id="imagemagick--rmagick">ImageMagick &amp;amp; rmagick&lt;/h3>
+&lt;p>Fiz a instalação do ImageMagick com o &lt;a href="http://github.com/chdorner/magick-installer/blob/master/magick-installer.sh">script do chdorner&lt;/a>:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#999;font-weight:bold;font-style:italic">#!/bin/sh
+&lt;/span>&lt;span style="color:#999;font-weight:bold;font-style:italic">&lt;/span>curl -O http://nongnu.askapache.com/freetype/freetype-2.3.9.tar.gz
+tar xzvf freetype-2.3.9.tar.gz
+&lt;span style="color:#0086b3">cd&lt;/span> freetype-2.3.9
+./configure --prefix&lt;span style="color:#000;font-weight:bold">=&lt;/span>/usr/local
+make
+sudo make install
+&lt;span style="color:#0086b3">cd&lt;/span> ..
+curl -O http://surfnet.dl.sourceforge.net/project/libpng/00-libpng-stable/1.2.39/libpng-1.2.39.tar.gz
+tar xzvf libpng-1.2.39.tar.gz
+&lt;span style="color:#0086b3">cd&lt;/span> libpng-1.2.39
+./configure --prefix&lt;span style="color:#000;font-weight:bold">=&lt;/span>/usr/local
+make
+sudo make install
+&lt;span style="color:#0086b3">cd&lt;/span> ..
+curl -O http://www.ijg.org/files/jpegsrc.v7.tar.gz
+tar xzvf jpegsrc.v7.tar.gz
+&lt;span style="color:#0086b3">cd&lt;/span> jpeg-7
+ln -s &lt;span style="color:#d14">`&lt;/span>which glibtool&lt;span style="color:#d14">`&lt;/span> ./libtool
+&lt;span style="color:#0086b3">export&lt;/span> &lt;span style="color:#008080">MACOSX_DEPLOYMENT_TARGET&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>10.5
+./configure --enable-shared --prefix&lt;span style="color:#000;font-weight:bold">=&lt;/span>/usr/local
+make
+sudo make install
+&lt;span style="color:#0086b3">cd&lt;/span> ..
+curl -O ftp://ftp.remotesensing.org/libtiff/tiff-3.8.2.tar.gz
+tar xzvf tiff-3.8.2.tar.gz
+&lt;span style="color:#0086b3">cd&lt;/span> tiff-3.8.2
+./configure --prefix&lt;span style="color:#000;font-weight:bold">=&lt;/span>/usr/local
+make
+sudo make install
+&lt;span style="color:#0086b3">cd&lt;/span> ..
+curl -O http://voxel.dl.sourceforge.net/project/wvware/libwmf/0.2.8.4/libwmf-0.2.8.4.tar.gz
+tar xzvf libwmf-0.2.8.4.tar.gz
+&lt;span style="color:#0086b3">cd&lt;/span> libwmf-0.2.8.4
+make clean
+./configure
+make
+sudo make install
+&lt;span style="color:#0086b3">cd&lt;/span> ..
+curl -O http://www.littlecms.com/lcms-1.17.tar.gz
+tar xzvf lcms-1.17.tar.gz
+&lt;span style="color:#0086b3">cd&lt;/span> lcms-1.17
+make clean
+./configure
+make
+sudo make install
+&lt;span style="color:#0086b3">cd&lt;/span> ..
+curl -O http://voxel.dl.sourceforge.net/project/ghostscript/GPL%20Ghostscript/8.70/ghostscript-8.70.tar.gz
+tar zxvf ghostscript-8.70.tar.gz
+&lt;span style="color:#0086b3">cd&lt;/span> ghostscript-8.70/
+./configure --prefix&lt;span style="color:#000;font-weight:bold">=&lt;/span>/usr/local
+make
+sudo make install
+&lt;span style="color:#0086b3">cd&lt;/span> ..
+curl -O http://voxel.dl.sourceforge.net/project/gs-fonts/gs-fonts/8.11%20%28base%2035%2C%20GPL%29/ghostscript-fonts-std-8.11.tar.gz
+tar zxvf ghostscript-fonts-std-8.11.tar.gz
+sudo mv fonts /usr/local/share/ghostscript
+curl -O http://image_magick.veidrodis.com/image_magick/ImageMagick-6.4.8-7.tar.gz
+tar xzvf ImageMagick-6.4.8-7.tar.gz
+&lt;span style="color:#0086b3">cd&lt;/span> ImageMagick-6.4.8-7
+&lt;span style="color:#0086b3">export&lt;/span> &lt;span style="color:#008080">CPPFLAGS&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>-I/usr/local/include
+&lt;span style="color:#0086b3">export&lt;/span> &lt;span style="color:#008080">LDFLAGS&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>-L/usr/local/lib
+./configure --prefix&lt;span style="color:#000;font-weight:bold">=&lt;/span>/usr/local --disable-static --with-modules --without-perl --without-magick-plus-plus --with-quantum-depth&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#099">8&lt;/span> --with-gs-font-dir&lt;span style="color:#000;font-weight:bold">=&lt;/span>/usr/local/share/ghostscript/fonts
+make
+sudo make install
+&lt;span style="color:#0086b3">cd&lt;/span> ..
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>A instalação do gem rmagick é como todas as outras instalações de gem:&lt;/p>
+&lt;pre>&lt;code>sudo gem install rmagick
+&lt;/code>&lt;/pre>&lt;h3 id="e-o-resto">E o resto?&lt;/h3>
+&lt;p>O resto é &lt;a href="https://leonardofaria.net/2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/">como na instalação do Leopard&lt;/a>.&lt;/p></description></item><item><title>Alternativas ao PHPMyAdmin</title><link>https://leonardofaria.net/2009/08/22/alternativas-ao-phpmyadmin/</link><pubDate>Sat, 22 Aug 2009 16:32:36 -0300</pubDate><guid>https://leonardofaria.net/2009/08/22/alternativas-ao-phpmyadmin/</guid><description>&lt;p>O &lt;a href="http://www.phpmyadmin.net/">&lt;strong>PHPMyAdmin&lt;/strong>&lt;/a> é quase uma unanimidade em gerenciadores de banco de dados MySQL. Mas existe vida além dele. Vamos lá:&lt;/p>
+&lt;h3 id="sql-buddy">SQL Buddy&lt;/h3>
+&lt;p>O &lt;a href="http://www.sqlbuddy.com/">&lt;strong>SQL Buddy&lt;/strong>&lt;/a> é uma alternativa bacana, com bonita interface e traduzido para vários idiomas, incluindo português.&lt;/p>
+&lt;center>
+&lt;a href="http://www.sqlbuddy.com/">&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/08/sqlbuddy.jpg" alt="sqlbuddy" title="sqlbuddy" />&lt;/a>
+&lt;/center>
+&lt;h3 id="adminer">Adminer&lt;/h3>
+&lt;p>Já o &lt;strong>&lt;a href="http://www.adminer.org/">Adminer&lt;/a>&lt;/strong> é um app em php feito em 1(!) único arquivo. Possui diversas traduções (nenhuma ainda em português) mas é altamente indicado o mantermos em nossos servidores para uma rápida manutenção.&lt;/p>
+&lt;center>
+&lt;a href="http://www.adminer.org/">&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/08/adminer.png" alt="adminer" title="adminer" />&lt;/a>
+&lt;/center></description></item><item><title>Descubra de onde vem seus usuários com SQL</title><link>https://leonardofaria.net/2009/07/12/descubra-de-onde-vem-seus-usuarios-com-sql/</link><pubDate>Sun, 12 Jul 2009 17:51:44 -0300</pubDate><guid>https://leonardofaria.net/2009/07/12/descubra-de-onde-vem-seus-usuarios-com-sql/</guid><description>&lt;p>Tenho no &lt;a href="http://www.autosimulado.com.br">&lt;strong>autosimulado&lt;/strong>&lt;/a> algumas queries para acompanhar a evolução dos usuários do site. Periodicamente, vejo o número de usuários criados dia-a-dia no site e o número de testes realizados por esses usuários.&lt;/p>
+&lt;p>Relacionado as essas queries, &lt;a href="http://www.mendable.com/sql-trick-where-are-your-users-from/">vi uma interessante consulta&lt;/a> para agrupar o número de usuários por domínio de email, através da função &lt;a href="http://dev.mysql.com/doc/refman/5.1/en/string-functions.html#function_substring-index">substring&lt;/a>. Confira:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sql" data-lang="sql">&lt;span style="color:#000;font-weight:bold">SELECT&lt;/span> &lt;span style="color:#000;font-weight:bold">COUNT&lt;/span>(&lt;span style="color:#000;font-weight:bold">*&lt;/span>) &lt;span style="color:#000;font-weight:bold">AS&lt;/span> Total, SUBSTRING_INDEX(email, &lt;span style="color:#d14">&amp;#39;@&amp;#39;&lt;/span>, &lt;span style="color:#000;font-weight:bold">-&lt;/span>&lt;span style="color:#099">1&lt;/span>) &lt;span style="color:#000;font-weight:bold">AS&lt;/span> &lt;span style="color:#000;font-weight:bold">Domain&lt;/span> &lt;span style="color:#000;font-weight:bold">FROM&lt;/span> users
+&lt;span style="color:#000;font-weight:bold">GROUP&lt;/span> &lt;span style="color:#000;font-weight:bold">BY&lt;/span> SUBSTRING_INDEX(email, &lt;span style="color:#d14">&amp;#39;@&amp;#39;&lt;/span>, &lt;span style="color:#000;font-weight:bold">-&lt;/span>&lt;span style="color:#099">1&lt;/span>) &lt;span style="color:#000;font-weight:bold">ORDER&lt;/span> &lt;span style="color:#000;font-weight:bold">BY&lt;/span> &lt;span style="color:#000;font-weight:bold">COUNT&lt;/span>(&lt;span style="color:#000;font-weight:bold">*&lt;/span>) &lt;span style="color:#000;font-weight:bold">DESC&lt;/span> &lt;span style="color:#000;font-weight:bold">LIMIT&lt;/span> &lt;span style="color:#099">10&lt;/span>;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>O resultado, quando aplicado ao banco de dados do &lt;a href="http://www.autosimulado.com.br">&lt;strong>autosimulado&lt;/strong>&lt;/a>:&lt;/p>
+&lt;pre>&lt;code>+-------+----------------+
+| Total | Domain |
++-------+----------------+
+| 644 | hotmail.com |
+| 116 | gmail.com |
+| 98 | yahoo.com.br |
+| 37 | bol.com.br |
+| 33 | ig.com.br |
+| 15 | uol.com.br |
+| 11 | oi.com.br |
+| 10 | yahoo.com |
+| 9 | hotmail.com.br |
+| 8 | terra.com.br |
++-------+----------------+
+10 rows in set (0.00 sec)
+&lt;/code>&lt;/pre></description></item><item><title>Edge Rails no Windows Vista</title><link>https://leonardofaria.net/2008/09/10/edge-rails-no-windows-vista/</link><pubDate>Wed, 10 Sep 2008 02:26:40 -0300</pubDate><guid>https://leonardofaria.net/2008/09/10/edge-rails-no-windows-vista/</guid><description>&lt;p>Uma das mudanças do Rails 2.2 é não inclusão do bundle do MySQL, responsável por conectar seu projeto ao banco. &lt;a href="https://leonardofaria.net/2008/08/02/mudancas-no-rails-22/">Mês passado&lt;/a> eu postei sobre isso e hoje, ao tentar instalar o gem do MySQL no Windows Vista de um co-worker, me deparei com um problema na DLL libmySQL.dll.&lt;/p>
+&lt;p>A solução encontrada foi copiar esse arquivo (geralmente em C:\Program Files\MySQL\MySQL Server 4.1\bin) para a pasta bin do Ruby (por exemplo: C:\ruby\bin).&lt;/p>
+&lt;p>Que fique documentado ;)&lt;/p></description></item></channel></rss>
