@@ -2,8 +2,8 @@
 &lt;p>Hoje foi a apresentação da banca do trabalho de conclusão de curso e anexo abaixo minha &lt;a href="https://leonardofaria.net/pub/monografia.pdf">monografia em PDF&lt;/a> e os &lt;a href="https://leonardofaria.net/pub/monografia-slides.pdf">slides da apresentação&lt;/a>.&lt;/p>
 &lt;iframe src="https://leonardofaria.net/pub/monografia.pdf" class="w-full h-screen" /></description></item><item><title>Syntax Highlight on Rails</title><link>https://leonardofaria.net/2009/12/02/syntax-highlight-on-rails/</link><pubDate>Wed, 02 Dec 2009 20:52:12 -0200</pubDate><guid>https://leonardofaria.net/2009/12/02/syntax-highlight-on-rails/</guid><description>&lt;p>Quer fazer um syntax highlight igual ao do codestacker abaixo, &lt;em>a la Textmate&lt;/em>? É fácil:&lt;/p>
 &lt;p>Faça o download da biblioteca de expressões regulares &lt;a href="http://www.geocities.jp/kosako3/oniguruma/">Oniguruma&lt;/a>. A versão mais recente é a &lt;a href="http://www.geocities.jp/kosako3/oniguruma/archive/onig-5.9.1.tar.gz">5.9.1&lt;/a>. Compile-a:&lt;/p>
-&lt;pre>&lt;code>./configure &amp;amp;&amp;amp; make &amp;amp;&amp;amp; make install
-&lt;/code>&lt;/pre>&lt;p>Após isso instale as gems Oniguruma, Textpow e Ultraviolet e instale o plugin &lt;a href="http://github.com/arya/tm_syntax_highlighting">tm_syntax_highlighting&lt;/a> em seu projeto.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">./configure &lt;span style="color:#000;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> make &lt;span style="color:#000;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> make install
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Após isso instale as gems Oniguruma, Textpow e Ultraviolet e instale o plugin &lt;a href="http://github.com/arya/tm_syntax_highlighting">tm_syntax_highlighting&lt;/a> em seu projeto.&lt;/p>
 &lt;p>Em suas views, utilize:&lt;/p>
 &lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-ruby" data-lang="ruby">code(some_ruby_code, &lt;span style="color:#990073">:theme&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#d14">&amp;#34;twilight&amp;#34;&lt;/span>, &lt;span style="color:#990073">:lang&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#d14">&amp;#34;ruby&amp;#34;&lt;/span>, &lt;span style="color:#990073">:line_numbers&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#000;font-weight:bold">true&lt;/span>)
 &lt;/code>&lt;/pre>&lt;/div></description></item><item><title>IETester</title><link>https://leonardofaria.net/2009/11/30/ietester/</link><pubDate>Mon, 30 Nov 2009 21:14:20 -0200</pubDate><guid>https://leonardofaria.net/2009/11/30/ietester/</guid><description>&lt;p>&lt;a href="http://my-debugbar.com/wiki/IETester/HomePage">IETester&lt;/a> é coisa linda de Deus: um aplicativo que emula as versões 5.5, 6, 7 e 8 do IEca. Ótimo para você perder o dia sofrendo com os bugs de layout!&lt;/p>
@@ -27,27 +27,24 @@ alias_method_chain &lt;span style="color:#990073">:to_label_tag&lt;/span>, &lt;s
 &lt;p>&lt;strong>ANTES DE MAIS NADA&lt;/strong>, instalei o Xcode. Ele está junto no DVD do Snow Leopard, na pasta de Instalações Opcionais.&lt;/p>
 &lt;h3 id="rails">Rails&lt;/h3>
 &lt;p>O Snow Leopard já vem com duas versões do Rails já instaladas: 2.2.2 e 1.13.6. Caso queira atualizar seu ambiente:&lt;/p>
-&lt;pre>&lt;code>sudo gem update --system
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">sudo gem update --system
 sudo gem update rails
-&lt;/code>&lt;/pre>&lt;h3 id="passenger">Passenger&lt;/h3>
-&lt;pre>&lt;code>sudo gem install passenger
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="passenger">Passenger&lt;/h3>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">sudo gem install passenger
 sudo passenger-install-apache2-module
-&lt;/code>&lt;/pre>&lt;p>Terminada a instalação, do Passenger, você precisa editar o arquivo &lt;code>/etc/apache2/httpd.conf&lt;/code> e acrescentar o seguinte conteúdo:&lt;/p>
-&lt;div class="syntax_hilite">
-&lt;pre class="bash">&lt;code>LoadModule passenger_module /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/ext/apache2/mod_passenger.so
-PassengerRoot /Library/Ruby/Gems/1.8/gems/passenger-2.2.5
-PassengerRuby /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
-&lt;/code>&lt;/pre>
-&lt;/div>
-&lt;p>A configuração dos sites também pode ser feita nesse arquivo, por exemplo:&lt;/p>
-&lt;pre>&lt;code>&amp;lt;VirtualHost *:80&amp;gt;
-ServerName codestacker
-DocumentRoot &amp;quot;/Users/leonardofaria/Sites/codestacker/public&amp;quot;
-&amp;lt;/VirtualHost&amp;gt;
-&lt;/code>&lt;/pre>&lt;h3 id="mysql">MySQL&lt;/h3>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Terminada a instalação, do Passenger, você precisa editar o arquivo &lt;code>/etc/apache2/httpd.conf&lt;/code> e acrescentar o seguinte conteúdo:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-apache" data-lang="apache">&lt;span style="color:#0086b3">LoadModule&lt;/span> passenger_module &lt;span style="color:#d14">/Library/Ruby/Gems/1.8/gems/passenger-2.2.5/ext/apache2/mod_passenger.so&lt;/span>
+&lt;span style="color:#0086b3">PassengerRoot&lt;/span> &lt;span style="color:#d14">/Library/Ruby/Gems/1.8/gems/passenger-2.2.5&lt;/span>
+&lt;span style="color:#0086b3">PassengerRuby&lt;/span> &lt;span style="color:#d14">/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>A configuração dos sites também pode ser feita nesse arquivo, por exemplo:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-apache" data-lang="apache">&lt;span style="color:#000080">&amp;lt;VirtualHost&lt;/span> &lt;span style="color:#d14">*:80&lt;/span>&lt;span style="color:#000080">&amp;gt;&lt;/span>
+&lt;span style="color:#0086b3">ServerName&lt;/span> codestacker
+&lt;span style="color:#0086b3">DocumentRoot&lt;/span> &lt;span style="color:#d14">&amp;#34;/Users/leonardofaria/Sites/codestacker/public&amp;#34;&lt;/span>
+&lt;span style="color:#000080">&amp;lt;/VirtualHost&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="mysql">MySQL&lt;/h3>
 &lt;p>A instalação do gem do MySQL pode ser feita da mesma forma que &lt;a href="https://leonardofaria.net/2008/08/02/mudancas-no-rails-22/">postei anteriormente&lt;/a>: basta &lt;a href="http://dev.mysql.com/downloads/mysql/5.1.html#macosx-dmg">instalar o pacote do site&lt;/a> e executar a instalação da gem com o comando:&lt;/p>
-&lt;pre>&lt;code>sudo gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
-&lt;/code>&lt;/pre>&lt;h3 id="imagemagick--rmagick">ImageMagick &amp;amp; rmagick&lt;/h3>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">sudo gem install mysql -- --with-mysql-config&lt;span style="color:#000;font-weight:bold">=&lt;/span>/usr/local/mysql/bin/mysql_config
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="imagemagick--rmagick">ImageMagick &amp;amp; rmagick&lt;/h3>
 &lt;p>Fiz a instalação do ImageMagick com o &lt;a href="http://github.com/chdorner/magick-installer/blob/master/magick-installer.sh">script do chdorner&lt;/a>:&lt;/p>
 &lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#999;font-weight:bold;font-style:italic">#!/bin/sh
 &lt;/span>&lt;span style="color:#999;font-weight:bold;font-style:italic">&lt;/span>curl -O http://nongnu.askapache.com/freetype/freetype-2.3.9.tar.gz
@@ -116,8 +113,8 @@ make
 sudo make install
 &lt;span style="color:#0086b3">cd&lt;/span> ..
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>A instalação do gem rmagick é como todas as outras instalações de gem:&lt;/p>
-&lt;pre>&lt;code>sudo gem install rmagick
-&lt;/code>&lt;/pre>&lt;h3 id="e-o-resto">E o resto?&lt;/h3>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">sudo gem install rmagick
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="e-o-resto">E o resto?&lt;/h3>
 &lt;p>O resto é &lt;a href="https://leonardofaria.net/2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/">como na instalação do Leopard&lt;/a>.&lt;/p></description></item><item><title>O que é Ruby on Rails?</title><link>https://leonardofaria.net/2009/11/09/o-que-e-ruby-on-rails/</link><pubDate>Mon, 09 Nov 2009 21:10:15 -0200</pubDate><guid>https://leonardofaria.net/2009/11/09/o-que-e-ruby-on-rails/</guid><description>&lt;p>A essa altura do campeonato todo mundo já deve saber o que vem a ser o framework Ruby on Rails. Minha monografia e meu trabalho de conclusão de curso da Faculdade foram sobre o &lt;a href="http://www.autosimulado.com.br">&lt;strong>autosimulado&lt;/strong>&lt;/a>. Na monografia fiz uma introdução sobre as características do framework, reproduzido abaixo:&lt;/p>
 &lt;h2 id="ruby-on-rails">Ruby on Rails&lt;/h2>
 &lt;p>O framework Ruby on Rails foi extraído de um sistema para gerenciamento de projetos chamado Basecamp. A primeira versão do framework foi oficialmente lançada em 25 de Julho de 2004 e seu desenvolvimento conta com colaboradores em todo o mundo liderados pelo programador dinamarquês David Heinemeier Hansson.&lt;/p>
@@ -474,12 +471,11 @@ Também teve o &lt;a href="http://live.blogblogs.com.br/railssummit2009/">live s
 &lt;a href="http://github.com/henrik/tasks.tmbundle/">&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/08/textmate_tasks-bundle.png" alt="Tasks" title="Tasks" />&lt;/a>
 &lt;/center>
 &lt;p>A &lt;a href="http://henrik.nyh.se/2007/08/tasks-bundle">instalação&lt;/a> é fácil:&lt;/p>
-&lt;pre class="brush: plain; title: ; notranslate" title="">mkdir -p ~/Library/Application\ Support/TextMate/Bundles
-cd ~/Library/Application\ Support/TextMate/Bundles
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">mkdir -p ~/Library/Application&lt;span style="color:#d14">\ &lt;/span>Support/TextMate/Bundles
+&lt;span style="color:#0086b3">cd&lt;/span> ~/Library/Application&lt;span style="color:#d14">\ &lt;/span>Support/TextMate/Bundles
 git clone git://github.com/henrik/tasks.tmbundle.git Tasks.tmbundle
-osascript -e 'tell app "TextMate" to reload bundles'
-&lt;/pre>
-&lt;p>Depois disso, todos os arquivos .todo, .todolist e .tasks serão formatados de acordo com o bundle.&lt;/p></description></item><item><title>Paperclip validando imagens no IE</title><link>https://leonardofaria.net/2009/08/16/paperclip-validando-imagens-no-ie/</link><pubDate>Sun, 16 Aug 2009 21:47:57 -0300</pubDate><guid>https://leonardofaria.net/2009/08/16/paperclip-validando-imagens-no-ie/</guid><description>&lt;p>No &lt;strong>&lt;a href="http://www.autosimulado.com.br">autosimulado&lt;/a>&lt;/strong>, tive um problema onde o IE (sempre ele) não validava o mime-type de uma imagem. Mesmo tentando enviar uma imagem JPG – imagem permitida – o IEca não aceitava o arquivo. A solução:&lt;/p>
+osascript -e &lt;span style="color:#d14">&amp;#39;tell app &amp;#34;TextMate&amp;#34; to reload bundles&amp;#39;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Depois disso, todos os arquivos &lt;code>.todo&lt;/code>, &lt;code>.todolist&lt;/code> e &lt;code>.tasks&lt;/code> serão formatados de acordo com o bundle.&lt;/p></description></item><item><title>Paperclip validando imagens no IE</title><link>https://leonardofaria.net/2009/08/16/paperclip-validando-imagens-no-ie/</link><pubDate>Sun, 16 Aug 2009 21:47:57 -0300</pubDate><guid>https://leonardofaria.net/2009/08/16/paperclip-validando-imagens-no-ie/</guid><description>&lt;p>No &lt;strong>&lt;a href="http://www.autosimulado.com.br">autosimulado&lt;/a>&lt;/strong>, tive um problema onde o IE (sempre ele) não validava o mime-type de uma imagem. Mesmo tentando enviar uma imagem JPG – imagem permitida – o IEca não aceitava o arquivo. A solução:&lt;/p>
 &lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-ruby" data-lang="ruby">validates_attachment_content_type &lt;span style="color:#990073">:image&lt;/span>,
 &lt;span style="color:#990073">:content_type&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
 &lt;span style="color:#d14">&amp;#39;image/jpeg&amp;#39;&lt;/span>,

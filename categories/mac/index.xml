@@ -1,4 +1,211 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mac on Leonardo Faria</title><link>https://leonardofaria.net/categories/mac/</link><description>Recent content in mac on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 04 Oct 2015 17:14:16 -0300</lastBuildDate><atom:link href="https://leonardofaria.net/categories/mac/index.xml" rel="self" type="application/rss+xml"/><item><title>Passenger no painel de preferências do Leopard</title><link>https://leonardofaria.net/2008/06/28/passenger-no-painel-de-preferencias-do-leopard/</link><pubDate>Sat, 28 Jun 2008 17:04:01 -0300</pubDate><guid>https://leonardofaria.net/2008/06/28/passenger-no-painel-de-preferencias-do-leopard/</guid><description>&lt;p>Que o mod_rails veio para revolucionar o deployment de Rails, todo mundo já sabe. Agora, me deparei com isso:&lt;/p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mac on Leonardo Faria</title><link>https://leonardofaria.net/categories/mac/</link><description>Recent content in mac on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 04 Oct 2015 17:14:16 -0300</lastBuildDate><atom:link href="https://leonardofaria.net/categories/mac/index.xml" rel="self" type="application/rss+xml"/><item><title>eCPF no Mac</title><link>https://leonardofaria.net/2011/10/07/ecpf-no-mac/</link><pubDate>Fri, 07 Oct 2011 22:59:30 -0300</pubDate><guid>https://leonardofaria.net/2011/10/07/ecpf-no-mac/</guid><description>&lt;p>No meu trabalho preciso usar meu cartão eCPF para acessar um determinado sistema que estamos desenvolvendo. Tenho um cartão eCPF, emitido pelo Banco do Brasil e um leitor de cartões OmniKey 3021 e foi uma grande dor de cabeça configurá-lo no Mac. Não era para ser um problema, uma vez que você precisa apenas de um driver e um módulo para o Firefox.&lt;/p>
+&lt;h3 id="driver">Driver&lt;/h3>
+&lt;p>O driver do leitor OmniKey pode ser &lt;a href="http://loja.certificadodigital.com.br/Serasa/Softwares%20e%20Drivers/D102">obtido&lt;/a> pelo site da &lt;a href="http://loja.certificadodigital.com.br/SERASA/Home">Serasa Experian&lt;/a>. Além do driver do meu dispositivo, essa página apresenta drivers de outros devices.&lt;/p>
+&lt;p>Nessa mesma página, copie o Software do Cartão – Safesign. Esse software reconhece o seu cartão e apresenta os dados do certificado, a partir do app tokenadmin.&lt;/p>
+&lt;p>Observação: tudo nesse site está bem documentado, por isso esse post está resumido :)&lt;/p>
+&lt;h3 id="firefox">Firefox&lt;/h3>
+&lt;p>Para que o Firefox leia seu certificado, será necessário a instalação da biblioteca libcmP11.dylib. &lt;a href="http://suporte.digitalsign.pt/faq.php?cid=15&amp;amp;answer=20">Faça o download dessa biblioteca&lt;/a> e copie-a para a pasta /Library/cssi. Em seguida abra as preferências do Firefox e escolha: Advanced &amp;gt; Encryption &amp;gt; Security Devices. Clique no botão Load e na tela que se abre informe o caminho do arquivo (/Library/cssi/libcmP11.dylib). Não tem erro, com o cartão plugado na porta USB do Mac, o Firefox conseguirá autenticar utilizando-se o certificado digital. Para testar, você pode usar o &lt;a href="https://cav.receita.fazenda.gov.br/eCAC/publico/login.aspx">eCAC&lt;/a>, da Receita Federal.&lt;/p>
+&lt;p>Nota: o &lt;a href="http://maneblog.mgate.com.br/">ManéBlog&lt;/a> escreveu um &lt;a href="http://maneblog.mgate.com.br/2010/03/26/como-finalmente-usar-certificados-digitais-e-cpf-por-exemplo-no-mac/">post sobre o assunto&lt;/a>, que me ajudou no processo.&lt;/p></description></item><item><title>Extensões para o Safari 5</title><link>https://leonardofaria.net/2010/07/24/extensoes-para-o-safari-5/</link><pubDate>Sat, 24 Jul 2010 00:09:14 -0300</pubDate><guid>https://leonardofaria.net/2010/07/24/extensoes-para-o-safari-5/</guid><description>&lt;p>&lt;img src="https://leonardofaria.net/wp-content/uploads/2010/07/safari5.jpg" align="right" /> A guerra dos browsers continua: a versão 4 do Firefox já saiu em fase beta – com interface parecida com o Chrome, eu diria – mas o que me motivou escrever esse post foram as extensões do Safari 5. Sim, extensões como as dos outros browser e antes tarde do que nunca. Vamos as preferidas:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://ostrichapp.com/">Ostrich&lt;/a>: um cliente de twitter na sua barra de ferramentas&lt;/li>
+&lt;li>&lt;a href="http://www.newsfirex.com/safari140/">Safari140&lt;/a>: um botão que você adiciona a sua barra de ferramentas para twittar links direto do Safari. Esse existia já no Safari 3&lt;/li>
+&lt;li>&lt;a href="http://rafeed.me/safari-extensions/greader-checker/">Google Reader Checker&lt;/a>: verifica quantos posts você tem para ler no Google Reader&lt;/li>
+&lt;li>&lt;a href="http://mariusth.channelwood.org/SafariExtensions/">Google Reader for Snow Leopard&lt;/a>: um redesign do Google Reader Apple-Like&lt;/li>
+&lt;li>&lt;a href="http://zappatic.net/projects/safarivalidator">Safari Validator&lt;/a>: validação de páginas usando Tidy. Já existia antes do Safari 5&lt;/li>
+&lt;li>&lt;a href="http://extensions.apple.com/">Confira mais no site da Apple.&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Rails e cia no Snow Leopard</title><link>https://leonardofaria.net/2009/11/14/rails-e-cia-no-snow-leopard/</link><pubDate>Sat, 14 Nov 2009 20:00:24 -0200</pubDate><guid>https://leonardofaria.net/2009/11/14/rails-e-cia-no-snow-leopard/</guid><description>&lt;p>Fiz uma instalação nova do Snow Leopard no meu MacBook e ao migrar os dados do Time Machine, do Leopard, algumas coisas pararam de funcionar. Resolvi então escrever para complementar meu &lt;a href="https://leonardofaria.net/2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/">post anterior sobre o assunto&lt;/a>.&lt;/p>
+&lt;h3 id="xcode">Xcode&lt;/h3>
+&lt;p>&lt;strong>ANTES DE MAIS NADA&lt;/strong>, instalei o Xcode. Ele está junto no DVD do Snow Leopard, na pasta de Instalações Opcionais.&lt;/p>
+&lt;h3 id="rails">Rails&lt;/h3>
+&lt;p>O Snow Leopard já vem com duas versões do Rails já instaladas: 2.2.2 e 1.13.6. Caso queira atualizar seu ambiente:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">sudo gem update --system
+sudo gem update rails
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="passenger">Passenger&lt;/h3>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">sudo gem install passenger
+sudo passenger-install-apache2-module
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Terminada a instalação, do Passenger, você precisa editar o arquivo &lt;code>/etc/apache2/httpd.conf&lt;/code> e acrescentar o seguinte conteúdo:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-apache" data-lang="apache">&lt;span style="color:#0086b3">LoadModule&lt;/span> passenger_module &lt;span style="color:#d14">/Library/Ruby/Gems/1.8/gems/passenger-2.2.5/ext/apache2/mod_passenger.so&lt;/span>
+&lt;span style="color:#0086b3">PassengerRoot&lt;/span> &lt;span style="color:#d14">/Library/Ruby/Gems/1.8/gems/passenger-2.2.5&lt;/span>
+&lt;span style="color:#0086b3">PassengerRuby&lt;/span> &lt;span style="color:#d14">/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>A configuração dos sites também pode ser feita nesse arquivo, por exemplo:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-apache" data-lang="apache">&lt;span style="color:#000080">&amp;lt;VirtualHost&lt;/span> &lt;span style="color:#d14">*:80&lt;/span>&lt;span style="color:#000080">&amp;gt;&lt;/span>
+&lt;span style="color:#0086b3">ServerName&lt;/span> codestacker
+&lt;span style="color:#0086b3">DocumentRoot&lt;/span> &lt;span style="color:#d14">&amp;#34;/Users/leonardofaria/Sites/codestacker/public&amp;#34;&lt;/span>
+&lt;span style="color:#000080">&amp;lt;/VirtualHost&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="mysql">MySQL&lt;/h3>
+&lt;p>A instalação do gem do MySQL pode ser feita da mesma forma que &lt;a href="https://leonardofaria.net/2008/08/02/mudancas-no-rails-22/">postei anteriormente&lt;/a>: basta &lt;a href="http://dev.mysql.com/downloads/mysql/5.1.html#macosx-dmg">instalar o pacote do site&lt;/a> e executar a instalação da gem com o comando:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">sudo gem install mysql -- --with-mysql-config&lt;span style="color:#000;font-weight:bold">=&lt;/span>/usr/local/mysql/bin/mysql_config
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="imagemagick--rmagick">ImageMagick &amp;amp; rmagick&lt;/h3>
+&lt;p>Fiz a instalação do ImageMagick com o &lt;a href="http://github.com/chdorner/magick-installer/blob/master/magick-installer.sh">script do chdorner&lt;/a>:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#999;font-weight:bold;font-style:italic">#!/bin/sh
+&lt;/span>&lt;span style="color:#999;font-weight:bold;font-style:italic">&lt;/span>curl -O http://nongnu.askapache.com/freetype/freetype-2.3.9.tar.gz
+tar xzvf freetype-2.3.9.tar.gz
+&lt;span style="color:#0086b3">cd&lt;/span> freetype-2.3.9
+./configure --prefix&lt;span style="color:#000;font-weight:bold">=&lt;/span>/usr/local
+make
+sudo make install
+&lt;span style="color:#0086b3">cd&lt;/span> ..
+curl -O http://surfnet.dl.sourceforge.net/project/libpng/00-libpng-stable/1.2.39/libpng-1.2.39.tar.gz
+tar xzvf libpng-1.2.39.tar.gz
+&lt;span style="color:#0086b3">cd&lt;/span> libpng-1.2.39
+./configure --prefix&lt;span style="color:#000;font-weight:bold">=&lt;/span>/usr/local
+make
+sudo make install
+&lt;span style="color:#0086b3">cd&lt;/span> ..
+curl -O http://www.ijg.org/files/jpegsrc.v7.tar.gz
+tar xzvf jpegsrc.v7.tar.gz
+&lt;span style="color:#0086b3">cd&lt;/span> jpeg-7
+ln -s &lt;span style="color:#d14">`&lt;/span>which glibtool&lt;span style="color:#d14">`&lt;/span> ./libtool
+&lt;span style="color:#0086b3">export&lt;/span> &lt;span style="color:#008080">MACOSX_DEPLOYMENT_TARGET&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>10.5
+./configure --enable-shared --prefix&lt;span style="color:#000;font-weight:bold">=&lt;/span>/usr/local
+make
+sudo make install
+&lt;span style="color:#0086b3">cd&lt;/span> ..
+curl -O ftp://ftp.remotesensing.org/libtiff/tiff-3.8.2.tar.gz
+tar xzvf tiff-3.8.2.tar.gz
+&lt;span style="color:#0086b3">cd&lt;/span> tiff-3.8.2
+./configure --prefix&lt;span style="color:#000;font-weight:bold">=&lt;/span>/usr/local
+make
+sudo make install
+&lt;span style="color:#0086b3">cd&lt;/span> ..
+curl -O http://voxel.dl.sourceforge.net/project/wvware/libwmf/0.2.8.4/libwmf-0.2.8.4.tar.gz
+tar xzvf libwmf-0.2.8.4.tar.gz
+&lt;span style="color:#0086b3">cd&lt;/span> libwmf-0.2.8.4
+make clean
+./configure
+make
+sudo make install
+&lt;span style="color:#0086b3">cd&lt;/span> ..
+curl -O http://www.littlecms.com/lcms-1.17.tar.gz
+tar xzvf lcms-1.17.tar.gz
+&lt;span style="color:#0086b3">cd&lt;/span> lcms-1.17
+make clean
+./configure
+make
+sudo make install
+&lt;span style="color:#0086b3">cd&lt;/span> ..
+curl -O http://voxel.dl.sourceforge.net/project/ghostscript/GPL%20Ghostscript/8.70/ghostscript-8.70.tar.gz
+tar zxvf ghostscript-8.70.tar.gz
+&lt;span style="color:#0086b3">cd&lt;/span> ghostscript-8.70/
+./configure --prefix&lt;span style="color:#000;font-weight:bold">=&lt;/span>/usr/local
+make
+sudo make install
+&lt;span style="color:#0086b3">cd&lt;/span> ..
+curl -O http://voxel.dl.sourceforge.net/project/gs-fonts/gs-fonts/8.11%20%28base%2035%2C%20GPL%29/ghostscript-fonts-std-8.11.tar.gz
+tar zxvf ghostscript-fonts-std-8.11.tar.gz
+sudo mv fonts /usr/local/share/ghostscript
+curl -O http://image_magick.veidrodis.com/image_magick/ImageMagick-6.4.8-7.tar.gz
+tar xzvf ImageMagick-6.4.8-7.tar.gz
+&lt;span style="color:#0086b3">cd&lt;/span> ImageMagick-6.4.8-7
+&lt;span style="color:#0086b3">export&lt;/span> &lt;span style="color:#008080">CPPFLAGS&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>-I/usr/local/include
+&lt;span style="color:#0086b3">export&lt;/span> &lt;span style="color:#008080">LDFLAGS&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>-L/usr/local/lib
+./configure --prefix&lt;span style="color:#000;font-weight:bold">=&lt;/span>/usr/local --disable-static --with-modules --without-perl --without-magick-plus-plus --with-quantum-depth&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#099">8&lt;/span> --with-gs-font-dir&lt;span style="color:#000;font-weight:bold">=&lt;/span>/usr/local/share/ghostscript/fonts
+make
+sudo make install
+&lt;span style="color:#0086b3">cd&lt;/span> ..
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>A instalação do gem rmagick é como todas as outras instalações de gem:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">sudo gem install rmagick
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="e-o-resto">E o resto?&lt;/h3>
+&lt;p>O resto é &lt;a href="https://leonardofaria.net/2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/">como na instalação do Leopard&lt;/a>.&lt;/p></description></item><item><title>MacBook e o caso do topcase rachado</title><link>https://leonardofaria.net/2009/10/11/macbook-e-o-caso-do-topcase-rachado/</link><pubDate>Sun, 11 Oct 2009 14:10:58 -0300</pubDate><guid>https://leonardofaria.net/2009/10/11/macbook-e-o-caso-do-topcase-rachado/</guid><description>&lt;p>Eu era dono de um &lt;em>&lt;s>CrackBook&lt;/s>&lt;/em>, digo, MacBook com o topcase trincado. Sim, a Apple é &lt;em>quase&lt;/em> perfeita, erros de projeto acontecem e &lt;a href="http://macmagazine.uol.com.br/forum/index.php?showtopic=2398">muita&lt;/a> &lt;a href="http://forums.macrumors.com/showthread.php?t=410910">gente&lt;/a> por aí também tinha Mac trincado. Não é falta de cuidado, carrego a máquina em uma &lt;a href="http://www.ebolsas.com.br/sistema/ListaProdutos.asp?IDLoja=2024&amp;amp;Y=2039874215807&amp;amp;Det=True&amp;amp;IDProduto=1528567&amp;amp;q=Luva+%2F+Capa+Notebook+15%2E4%22+Macbook+Pro+%2F+Ibook+Case+logic+Neoprene">luva da Case Logic&lt;/a> de Neoprene e o que se percebe é que o problema está nas travas de fechar do display. Começou com um cantinho quebrado e até semana passada ele já estava trincado em quatro lugares. FAIL.&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/10/topcase.jpg" alt="topcase" title="topcase" />
+&lt;/center>
+&lt;p>Pensei eu mesmo comprar um topcase no ebay e trocá-lo eu mesmo, mas deixei de lado a alternativa nerd e resolvi tentar resolver o problemas por vias normais. A 15 dias atrás procurei a &lt;a href="http://www.tecmania.com.br">Tecmania&lt;/a>, autorizada da Apple de Belo Horizonte. Trocaram o topcase mesmo com o MacBook fora da garantia e com um atendimento bem bacana. Funciona assim: você leva a máquina, eles fazem o pedido em São Paulo e em mais ou menos uma semana o topcase chega. Tudo &lt;strong>sem&lt;/strong> custo.&lt;/p></description></item><item><title>Todo lists para o Textmate</title><link>https://leonardofaria.net/2009/08/22/todo-lists-para-o-textmate/</link><pubDate>Sat, 22 Aug 2009 16:06:36 -0300</pubDate><guid>https://leonardofaria.net/2009/08/22/todo-lists-para-o-textmate/</guid><description>&lt;p>Fica a dica para quem usa o Textmate: &lt;a href="http://github.com/henrik/tasks.tmbundle/">Tasks&lt;/a> é um bundle para o Textmate que permite a criação de Todo lists bonitinhas.&lt;/p>
+&lt;center>
+&lt;a href="http://github.com/henrik/tasks.tmbundle/">&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/08/textmate_tasks-bundle.png" alt="Tasks" title="Tasks" />&lt;/a>
+&lt;/center>
+&lt;p>A &lt;a href="http://henrik.nyh.se/2007/08/tasks-bundle">instalação&lt;/a> é fácil:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">mkdir -p ~/Library/Application&lt;span style="color:#d14">\ &lt;/span>Support/TextMate/Bundles
+&lt;span style="color:#0086b3">cd&lt;/span> ~/Library/Application&lt;span style="color:#d14">\ &lt;/span>Support/TextMate/Bundles
+git clone git://github.com/henrik/tasks.tmbundle.git Tasks.tmbundle
+osascript -e &lt;span style="color:#d14">&amp;#39;tell app &amp;#34;TextMate&amp;#34; to reload bundles&amp;#39;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Depois disso, todos os arquivos &lt;code>.todo&lt;/code>, &lt;code>.todolist&lt;/code> e &lt;code>.tasks&lt;/code> serão formatados de acordo com o bundle.&lt;/p></description></item><item><title>jQuery no Spotlight</title><link>https://leonardofaria.net/2009/05/25/jquery-no-spotlight/</link><pubDate>Mon, 25 May 2009 00:21:40 -0300</pubDate><guid>https://leonardofaria.net/2009/05/25/jquery-no-spotlight/</guid><description>&lt;p>&lt;a href="https://leonardofaria.net/2009/02/08/documentacao-do-rails-e-ruby-no-spotlight/">Anteriormente&lt;/a> eu postei sobre como integrar a documentação do Ruby e do Rails no dicionário do Mac OS, que automaticamente é indexado pelo Spotlight.&lt;/p>
+&lt;center>
+&lt;a href="http://www.appelsiini.net/2009/2/search-jquery-api-docs-from-spotlight">&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/05/jquery_spotlight.png" alt="jquery_spotlight" title="jquery no spotlight" />&lt;/a>
+&lt;/center>
+&lt;p>A dica de hoje é &lt;a href="http://www.appelsiini.net/download/jQuery.dictionary.zip">copiar o ‘dicionário&amp;rsquo;&lt;/a> do &lt;a href="http://www.jquery.com">jQuery&lt;/a> para a pasta de dicionários do seu usuário (&lt;code>~/Library/Dictionaries&lt;/code>) e curtir a documentação do jQuery dentro do Spotlight.&lt;/p>
+&lt;p>PS.: existe também um &lt;a href="http://api.jquery.com/update/jquery-api-browser-2.0.air">aplicativo AIR&lt;/a> com a API do jQuery.&lt;br>
+PS 2.: &lt;a href="http://jplanet.tumblr.com/">jPlanet&lt;/a> é um agregador de conteúdo sobre jQuery. Assine o feed!&lt;/p></description></item><item><title>Lançado Safari 4</title><link>https://leonardofaria.net/2009/02/25/lancado-safari-4/</link><pubDate>Wed, 25 Feb 2009 15:41:27 -0300</pubDate><guid>https://leonardofaria.net/2009/02/25/lancado-safari-4/</guid><description>&lt;p>Andei &lt;a href="http://www.twitter.com/leozera">twitando&lt;/a> a respeito do lançamento do &lt;a href="http://www.apple.com/safari/download/">Safari 4&lt;/a>, lançado ontem, justamente no mesmo dia do aniversário de Steve Jobs.&lt;/p>
+&lt;p>O browser gerou um mimimi profundo por todo lado e não é por pouco: implementou algumas coisinhas vindas do Chrome, mas tudo de forma bem sofisticada, como tudo que vem de Cupertino.&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/02/safari4-1.png" alt="Safari" title="Safari" />
+&lt;/center>
+&lt;p>O Safari traz o “Top Sites”, como no Chrome, e incorpora o Coverflow para favoritos e itens do histórico. As tabs foram alocadas para a barra de título, assim como o browser do Google. A mudança estranha no início, mas depois de algum tempo você se acostuma. Agora, resta saber se essa moda de aba na barra de título pega em outros aplicativos. Eu particularmente gostei desse minimalismo.&lt;/p>
+&lt;p>Para Windows, o browser também evoluiu em passos largos, absorvendo a interface do sistema operacional, assim como já faz o Firefox. O Web Inspector do Safari está fantástico e não perde em nada para o Firebug. Para acioná-lo, aperte command + option + i.&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/02/safari4-2.png" alt="Safari" title="Safari" />
+&lt;/center>
+&lt;p>Enfim, Safari 4 rocks.&lt;/p>
+&lt;p>PS. não deixe de conhecer o &lt;a href="https://developer.apple.com/safari/index.php">Safari Developer Center&lt;/a>.&lt;br>
+PS 2. a instalação do Safari no Leopard depende da atualização de segurança 2009-001. Antes de instalá-lo, atualize seu felino.&lt;/p></description></item><item><title>Documentação do Rails e Ruby no Spotlight</title><link>https://leonardofaria.net/2009/02/08/documentacao-do-rails-e-ruby-no-spotlight/</link><pubDate>Sun, 08 Feb 2009 23:12:35 -0200</pubDate><guid>https://leonardofaria.net/2009/02/08/documentacao-do-rails-e-ruby-no-spotlight/</guid><description>&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/02/imagem1.jpg" />
+&lt;/center>
+&lt;p>Essa é uma dica bem interessante: um cara chamado &lt;a href="http://www.priithaamer.com/">Priit Haamer&lt;/a> migrou as documentações do &lt;a href="http://www.priithaamer.com/blog/ruby-on-rails-dictionary-for-macosx">Rails&lt;/a> e do &lt;a href="http://www.priithaamer.com/blog/ruby-dictionary-for-mac-os-x">Ruby&lt;/a> para o dicionário do Mac OS. Como o Spotlight do sistema busca – além de arquivos, emails, músicas e o que for – as entradas do dicionário, você ganha mais uma forma rápida de acesso a documentação de sua linguagem favorita.&lt;/p></description></item><item><title>Resenha: A cabeça de Steve Jobs</title><link>https://leonardofaria.net/2009/01/31/resenha-a-cabeca-de-steve-jobs/</link><pubDate>Sat, 31 Jan 2009 14:31:16 -0200</pubDate><guid>https://leonardofaria.net/2009/01/31/resenha-a-cabeca-de-steve-jobs/</guid><description>&lt;p>Verdade seja dita, Steve Jobs é um mito e mais do que um CEO, ele é o homem a frente da Apple e a frente do seu tempo. O que esperar de uma biografia de alguém que revolucionou a computação moderna, o cinema de animação, o mercado de música e a telefonia? Acabo de ler “A Cabeça de Steve Jobs”, de Leander Kahney e essa obra pode representar muito para nossas vidas, principalmente se você ter as ações e mantras de Jobs como inspiração para seus trabalhos.&lt;/p>
+&lt;h3 id="foco">Foco&lt;/h3>
+&lt;p>Foco é dizer não. Foco significa especializar naquilo que você é bom e entregar o melhor de si em seus trabalhos. É manter as coisas simples e esquecer o excesso de funções. Não queira dominar o mundo de uma só vez.&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/01/stevejobs1.jpg" alt="Steve Jobs" title="Steve Jobs" />
+&lt;/center>
+&lt;h3 id="despotismo">Despotismo&lt;/h3>
+&lt;p>Alguém tem que dar ordens. Personalidade e alma é fundamental para um negócio, independentemente da espécie. Intrisicamente relacionado com despotismo e foco, simplifique. Não tenha medo de dizer não a opiniões alheiras e tome decisões, inclusive a que aparentam ser as mais simples. Pensar em detalhes, por menores que sejam, revelam a identidade de um produto.&lt;/p>
+&lt;h3 id="perfeccionismo">Perfeccionismo&lt;/h3>
+&lt;p>Perfeccionismo e atenção a pequenas coisas é fundamental. Experimente, gere, teste, reúna, troque idéias. Design é função, e não forma. São com esses mantras que os produtos da Apple são gerados. Veja esse trecho:&lt;/p>
+&lt;blockquote>
+&lt;p>“O pé da base de alumínio do iMac é feito de um material especial não deslizante, para que a máquina não se mexa quando a tela é inclinada. Por que um material especial? Porque [Jonathan] Ive não gosta de pés de borracha”.&lt;/p>
+&lt;/blockquote>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/01/stevejobs2.jpg" alt="Steve Jobs" title="Steve Jobs" />
+&lt;/center>
+&lt;h3 id="elitismo">Elitismo&lt;/h3>
+&lt;p>Busque a mais alta qualidade nas pessoas, nos produtos e na publicidade. Não adianta ter a melhor publicidade com produtos ruins, ou produtos ruins feitos em desarmonia por boas pessoas. Valorize sua equipe, pois eles são uma vantagem competitiva à frente dos seus rivais.&lt;/p>
+&lt;p>O livro-biografia é riquíssimo em lições, como as listadas acima. Não dá para comentar tudo aqui. É ler para se impressionar e apaixonar.&lt;/p>
+&lt;h3 id="update-trecho-online">update: Trecho online&lt;/h3>
+&lt;div align="center">
+&lt;/div></description></item><item><title>Para turbinar o Safari</title><link>https://leonardofaria.net/2009/01/25/para-turbinar-o-safari/</link><pubDate>Sun, 25 Jan 2009 21:28:26 -0200</pubDate><guid>https://leonardofaria.net/2009/01/25/para-turbinar-o-safari/</guid><description>&lt;p>Muitos que migram para o Mac continuam usando o Firefox, graças as suas extensões maravilhosas. Confesso que sou dependente do Firebug, mas uso o Safari como meu default browser e tenho algumas coisinhas que são uma mão na roda para o desenvolvedor. Vamos lá:&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/01/tidy.jpg" />
+&lt;/center>
+&lt;p>&lt;a href="http://www.zappatic.net/safaritidy/">&lt;strong>Safari Tidy&lt;/strong>&lt;/a>: é um plugin que valida as páginas de acordo com o padrão desejado e alerta o que está de errado. Bem útil e minimalista, desprezando outros validadores.&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/01/inquisitor.jpg" />
+&lt;/center>
+&lt;p>&lt;a href="http://www.inquisitorx.com/">&lt;strong>Inquisitor&lt;/strong>&lt;/a>: o Inquisitor é um plugin, inicialmente criado para o Safari, que é um verdadeiro spotlight no browser, organizando e armazenando suas buscas. O software foi adquirido pelo Yahoo e levado a outros browsers, com suporte no Firefox e, pasmem, Internet Explorer.&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/01/websnapper.jpg" />
+&lt;/center>
+&lt;p>&lt;a href="http://www.tastyapps.com/">&lt;strong>Web Snapper&lt;/strong>&lt;/a>: é um app integrado ao Safari para gerar screenshots de sites. Claro, existem dezenas de outras formas de fazer isso, só que gosto do minimalismo do aplicativo.&lt;/p></description></item><item><title>Quer conhecer mais da história da Apple?</title><link>https://leonardofaria.net/2008/11/23/quer-conhecer-mais-da-historia-da-apple/</link><pubDate>Sun, 23 Nov 2008 21:08:43 -0200</pubDate><guid>https://leonardofaria.net/2008/11/23/quer-conhecer-mais-da-historia-da-apple/</guid><description>&lt;p>O &lt;a href="http://www.mactracker.ca/">Mactracker&lt;/a> é um aplicativo que reúne toda a linha de produtos da Apple. Há inclusive uma &lt;a href="http://mactracker.dreamhosters.com/iphone/">versão online&lt;/a> do app para iPhone. Muito interessante! Além desse app, existe também o site &lt;a href="http://www.apple-history.com/">Apple History&lt;/a>, com um banco de dados cheio de informações e a possibilidade de download das informações.&lt;/p>
+&lt;center>
+&lt;a href='http://www.mactracker.ca/'>&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/11/mactracker.png" alt="" title="mactracker" />&lt;/a>
+&lt;/center>
+&lt;p>Se você gosta de publicidade e design, deve conferir os &lt;a href="http://www.macmothership.com/gallery/gallery1.html">anúncios da maçã&lt;/a> desde os primórdios da computação, as &lt;a href="http://www.flickr.com/photos/kernelpanic/sets/283374/">screenshots da homepage&lt;/a> &lt;a href="http://www.apple.com">apple.com&lt;/a> e logicamente, &lt;a href="http://www.iindigo3d.com/blog/?page_id=40">as interfaces&lt;/a> do Mac OS.&lt;/p></description></item><item><title>Backup no Mac OS</title><link>https://leonardofaria.net/2008/10/12/backup-no-mac-os/</link><pubDate>Sun, 12 Oct 2008 16:09:34 -0300</pubDate><guid>https://leonardofaria.net/2008/10/12/backup-no-mac-os/</guid><description>&lt;p>&lt;strong>Felizes são os pessimistas&amp;hellip; porque já fizeram backup hoje!&lt;/strong> Depois do dia que o HD do meu MacBook morreu misteriosamente (sem motivo algum!), fiquei simplesmente viciado em backup. Na busca de um software perfeito, encontrei várias opções e resolvi escrrever sobre isso. No meu caso, buscava um software que fizesse backup da minha partição onde está o Leopard e que também espelhasse minha outra partição de dados, em FAT32 (sim, FAT32, acredite!).&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/10/sync.jpg" alt="sync" title="Sync Professional" />
+&lt;/center>
+&lt;p>&lt;strong>[updated]&lt;/strong> Meu novo aplicativo favorito de backup para o Mac é &lt;strong>&lt;a href="http://decimus.net/synk_professional.php">Sync Professional&lt;/a>&lt;/strong>. Faz a sincronização de uma forma bem amigável&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/10/backup1-tm.jpg" alt="" title="Time Machine" />
+&lt;/center>
+&lt;p>O Time Machine resolve o problema de backup da partição do Leopard. Assim sendo, não tenho muito o que falar sobre ele, além do óbvio: USE.&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/10/backup3-silverkeeper.png" alt="" title="SilverKeeper" />
+&lt;/center>
+&lt;p>O &lt;a href="http://www.lacie.com/silverkeeper/">&lt;strong>SilverKeeper&lt;/strong>&lt;/a> é atualmente o software que estou usando para fazer backup da minha partição FAT32. É um software da Lacie, aquela marca famosa de HDs e é grátis. Além de todas essa vantagens, ele tem um log beeeem completo e dar para acompanhar, em tempo real, qual arquivo ele está copiando no momento (modo neurótico ON).&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/10/backup5-ccc.jpg" alt="" title="Carbon Copy Copier" />
+&lt;/center>
+&lt;p>O &lt;a href="http://www.bombich.com/software/ccc.html">&lt;strong>Carbon Copy Copier&lt;/strong>&lt;/a> é talvez o mais interessante dos softwares. Ele possui tarefas automatizadas e poderia criar uma que, ao conectar meu HD USB, executasse o backup previamente estabelecido. Só parei de usá-lo porque descobri que minha partição de destino do backup não poderia ser diferente de HFS.&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/10/backup2-rsyncx.png" alt="" title="RsyncX" />
+&lt;/center>
+&lt;p>O &lt;a href="http://archive.macosxlabs.org/rsyncx/rsyncx.html">&lt;strong>RsyncX&lt;/strong>&lt;/a>, conforme sugerido pelo nome, é uma interface bonitinha para o Rsync. Eu estava utilizando esse software e do nada ele parou. Foi aí que o substituí pelo SilverKeeper. Mesmo assim, pode funcionar pra você.&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2008/10/backup4-ibackup.gif" alt="" title="iBackup" />
+&lt;/center>
+&lt;p>O &lt;a href="http://www.grapefruit.ch/iBackup/">&lt;strong>iBackup&lt;/strong>&lt;/a> também é um software interessante e faz backup de uma série de coisas, como configurações dos seus aplicativos (Firefox, Adobe, por exemplo), dos seus System Preferences, além de suas pastas de usuário (Sites, Music, Movies…). Para backup de pastas, o achei bem lento.&lt;/p>
+&lt;p>PS: todos os softwares que uso no Mac estão no meu &lt;a href="http://osx.iusethis.com/user/leozera">iUseThis&lt;/a>.&lt;/p></description></item><item><title>Impressione todo mundo com o LiquidMac</title><link>https://leonardofaria.net/2008/09/21/impressione-todo-mundo-com-o-liquidmac/</link><pubDate>Sun, 21 Sep 2008 23:36:57 -0300</pubDate><guid>https://leonardofaria.net/2008/09/21/impressione-todo-mundo-com-o-liquidmac/</guid><description>&lt;p>Tem um Mac? Mate seu amigos (e inimigos) de inveja com o &lt;a href="http://uri.cat/software/LiquidMac/">&lt;strong>LiquidMac&lt;/strong>&lt;/a>.&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/mdVOrJvAWzY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div></description></item><item><title>Passenger no painel de preferências do Leopard</title><link>https://leonardofaria.net/2008/06/28/passenger-no-painel-de-preferencias-do-leopard/</link><pubDate>Sat, 28 Jun 2008 17:04:01 -0300</pubDate><guid>https://leonardofaria.net/2008/06/28/passenger-no-painel-de-preferencias-do-leopard/</guid><description>&lt;p>Que o mod_rails veio para revolucionar o deployment de Rails, todo mundo já sabe. Agora, me deparei com isso:&lt;/p>
 &lt;center>
 &lt;img src="https://leonardofaria.net/wp-content/uploads/2008/06/passenger.jpg" alt="Passenger" title="passenger" />
 &lt;/center>

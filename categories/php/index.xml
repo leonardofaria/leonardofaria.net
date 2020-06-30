@@ -111,34 +111,30 @@ wp_rss(&lt;span style="color:#d14">&amp;#39;http://mysite.com/feed&amp;#39;&lt;/
 &lt;p>Já o &lt;strong>&lt;a href="http://www.adminer.org/">Adminer&lt;/a>&lt;/strong> é um app em php feito em 1(!) único arquivo. Possui diversas traduções (nenhuma ainda em português) mas é altamente indicado o mantermos em nossos servidores para uma rápida manutenção.&lt;/p>
 &lt;center>
 &lt;a href="http://www.adminer.org/">&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/08/adminer.png" alt="adminer" title="adminer" />&lt;/a>
-&lt;/center></description></item><item><title>Para turbinar o Safari</title><link>https://leonardofaria.net/2009/01/25/para-turbinar-o-safari/</link><pubDate>Sun, 25 Jan 2009 21:28:26 -0200</pubDate><guid>https://leonardofaria.net/2009/01/25/para-turbinar-o-safari/</guid><description>&lt;p>Muitos que migram para o Mac continuam usando o Firefox, graças as suas extensões maravilhosas. Confesso que sou dependente do Firebug, mas uso o Safari como meu default browser e tenho algumas coisinhas que são uma mão na roda para o desenvolvedor. Vamos lá:&lt;/p>
-&lt;center>
-&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/01/tidy.jpg" />
-&lt;/center>
-&lt;p>&lt;a href="http://www.zappatic.net/safaritidy/">&lt;strong>Safari Tidy&lt;/strong>&lt;/a>: é um plugin que valida as páginas de acordo com o padrão desejado e alerta o que está de errado. Bem útil e minimalista, desprezando outros validadores.&lt;/p>
-&lt;center>
-&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/01/inquisitor.jpg" />
-&lt;/center>
-&lt;p>&lt;a href="http://www.inquisitorx.com/">&lt;strong>Inquisitor&lt;/strong>&lt;/a>: o Inquisitor é um plugin, inicialmente criado para o Safari, que é um verdadeiro spotlight no browser, organizando e armazenando suas buscas. O software foi adquirido pelo Yahoo e levado a outros browsers, com suporte no Firefox e, pasmem, Internet Explorer.&lt;/p>
-&lt;center>
-&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/01/websnapper.jpg" />
-&lt;/center>
-&lt;p>&lt;a href="http://www.tastyapps.com/">&lt;strong>Web Snapper&lt;/strong>&lt;/a>: é um app integrado ao Safari para gerar screenshots de sites. Claro, existem dezenas de outras formas de fazer isso, só que gosto do minimalismo do aplicativo.&lt;/p></description></item><item><title>PHP junto com o Passenger no Leopard</title><link>https://leonardofaria.net/2008/11/26/php-junto-com-o-passenger-no-leopard/</link><pubDate>Wed, 26 Nov 2008 23:32:30 -0200</pubDate><guid>https://leonardofaria.net/2008/11/26/php-junto-com-o-passenger-no-leopard/</guid><description>&lt;p>Na minha máquina de desenvolvimento uso o Passenger para trabalhar com o Rails e hoje eu precisei fazer alguns testes com PHP. Deixar o PHP junto com o Passenger é tão simples como 2 + 2 são 4. Vamos lá.&lt;/p>
-&lt;p>Abra o arquivo de configuração do Apache (/etc/apache2/httpd.conf) como superusuário e procure a linha que chama o módulo do PHP (linha 114):&lt;/p>
-&lt;pre class="brush: plain; title: ; notranslate" title="">LoadModule php5_module libexec/apache2/libphp5.so
-&lt;/pre>
-&lt;p>Basta descomentar essa linha. Em seguida, no fim desse arquivo, crie um host virtual chamado php:&lt;/p>
-&lt;pre>&lt;code>&amp;lt;virtualhost *:80&amp;gt;
-ServerName php
-DocumentRoot &amp;quot;/Users/leonardofaria/Sites/php&amp;quot;
-&amp;lt;directory &amp;quot;/Users/leonardofaria/Sites/php&amp;quot;&amp;gt;
-Options Indexes MultiViews
-AllowOverride None
-Order allow,deny
-Allow from all
-&amp;lt;/directory&amp;gt;
-&amp;lt;/virtualhost&amp;gt;
-&lt;/code>&lt;/pre>&lt;p>Pronto. Agora a url http://php/ responderá pelo conteúdo da pasta “/Users/leonardofaria/Sites/php”. Lá dentro, você pode criar um index.php e para testar se está tudo ok, use o conhecido phpinfo()&lt;/p>
+&lt;/center></description></item><item><title>URL curta no WordPress</title><link>https://leonardofaria.net/2009/04/26/url-curta-no-wordpress/</link><pubDate>Sun, 26 Apr 2009 14:46:56 -0300</pubDate><guid>https://leonardofaria.net/2009/04/26/url-curta-no-wordpress/</guid><description>&lt;p>As URLs curtas possuem muitas utilizações por aí, principalmente em microblogs como o Twitter.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-php" data-lang="php">&lt;span style="color:#999;font-weight:bold;font-style:italic">&amp;lt;?php&lt;/span>
+&lt;span style="color:#000;font-weight:bold">function&lt;/span> &lt;span style="color:#900;font-weight:bold">getShortUrl&lt;/span>(&lt;span style="color:#008080">$url&lt;/span>) {
+&lt;span style="color:#008080">$tinyurl&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> file_get_contents(&lt;span style="color:#d14">&amp;#34;http://tinyurl.com/api-create.php?url=&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#008080">$url&lt;/span>);
+&lt;span style="color:#000;font-weight:bold">return&lt;/span> &lt;span style="color:#008080">$tinyurl&lt;/span>;
+}
+&lt;span style="color:#999;font-weight:bold;font-style:italic">?&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Use a função acima no arquivo functions.php do seu tema. Para exibir o link, crie a seguinte linha no arquivo do post – single.php:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-php" data-lang="php">&lt;span style="color:#999;font-weight:bold;font-style:italic">&amp;lt;?php&lt;/span> &lt;span style="color:#000;font-weight:bold">echo&lt;/span> &lt;span style="color:#d14">&amp;#39;&amp;lt;a href=&amp;#34;&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>getShortUrl(get_permalink(&lt;span style="color:#008080">$post&lt;/span>&lt;span style="color:#000;font-weight:bold">-&amp;gt;&lt;/span>&lt;span style="color:#008080">ID&lt;/span>))&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#d14">&amp;#39;&amp;#34;&amp;gt;short url&amp;#39;&lt;/span>; &lt;span style="color:#999;font-weight:bold;font-style:italic">?&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>PHP junto com o Passenger no Leopard</title><link>https://leonardofaria.net/2008/11/26/php-junto-com-o-passenger-no-leopard/</link><pubDate>Wed, 26 Nov 2008 23:32:30 -0200</pubDate><guid>https://leonardofaria.net/2008/11/26/php-junto-com-o-passenger-no-leopard/</guid><description>&lt;p>Na minha máquina de desenvolvimento uso o Passenger para trabalhar com o Rails e hoje eu precisei fazer alguns testes com PHP. Deixar o PHP junto com o Passenger é tão simples como 2 + 2 são 4. Vamos lá.&lt;/p>
+&lt;p>Abra o arquivo de configuração do Apache (&lt;code>/etc/apache2/httpd.conf&lt;/code>) como superusuário e procure a linha que chama o módulo do PHP (linha 114):&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-apache" data-lang="apache">&lt;span style="color:#0086b3">LoadModule&lt;/span> php5_module libexec/apache2/libphp5.so
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Basta descomentar essa linha. Em seguida, no fim desse arquivo, crie um host virtual chamado php:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-apache" data-lang="apache">&lt;span style="color:#000080">&amp;lt;virtualhost&lt;/span> &lt;span style="color:#d14">*:80&lt;/span>&lt;span style="color:#000080">&amp;gt;&lt;/span>
+&lt;span style="color:#0086b3">ServerName&lt;/span> php
+&lt;span style="color:#0086b3">DocumentRoot&lt;/span> &lt;span style="color:#d14">&amp;#34;/Users/leonardofaria/Sites/php&amp;#34;&lt;/span>
+&lt;span style="color:#000080">&amp;lt;directory&lt;/span> &lt;span style="color:#d14">&amp;#34;/Users/leonardofaria/Sites/php&amp;#34;&lt;/span>&lt;span style="color:#000080">&amp;gt;&lt;/span>
+&lt;span style="color:#0086b3">Options&lt;/span> Indexes MultiViews
+&lt;span style="color:#0086b3">AllowOverride&lt;/span> &lt;span style="color:#000;font-weight:bold">None&lt;/span>
+&lt;span style="color:#0086b3">Order&lt;/span> allow,deny
+&lt;span style="color:#0086b3">Allow&lt;/span> from &lt;span style="color:#000;font-weight:bold">all&lt;/span>
+&lt;span style="color:#000080">&amp;lt;/directory&amp;gt;&lt;/span>
+&lt;span style="color:#000080">&amp;lt;/virtualhost&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Pronto. Agora a url http://php/ responderá pelo conteúdo da pasta “/Users/leonardofaria/Sites/php”. Lá dentro, você pode criar um index.php e para testar se está tudo ok, use o conhecido phpinfo()&lt;/p>
 &lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-php" data-lang="php">&lt;span style="color:#999;font-weight:bold;font-style:italic">&amp;lt;?php&lt;/span>
 phpinfo();
 &lt;span style="color:#999;font-weight:bold;font-style:italic">?&amp;gt;&lt;/span>

@@ -1,0 +1,11 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>devops on Leonardo Faria</title><link>https://leonardofaria.net/tags/devops/</link><description>Recent content in devops on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 16 Jul 2008 01:48:18 -0300</lastBuildDate><atom:link href="https://leonardofaria.net/tags/devops/index.xml" rel="self" type="application/rss+xml"/><item><title>Protegendo projetos com o .htaccess</title><link>https://leonardofaria.net/2008/07/16/protegendo-projetos-com-o-htaccess/</link><pubDate>Wed, 16 Jul 2008 01:48:18 -0300</pubDate><guid>https://leonardofaria.net/2008/07/16/protegendo-projetos-com-o-htaccess/</guid><description>&lt;p>O Apache pode te ajudar a proteger um projeto com seu sistema de autenticação. E isso é mais fácil do que você pensa. Para tal, crie um arquivo .htaccess com o seguinte conteúdo:&lt;/p>
+&lt;pre>&lt;code>AuthUserFile /home/leonardo/public_html/project/.htpasswd
+AuthGroupFile /dev/null
+AuthName &amp;quot;Restricted Access&amp;quot;
+AuthType Basic
+&amp;lt;limit GET&amp;gt;
+require valid-user
+&amp;lt;/limit&amp;gt;
+&lt;/code>&lt;/pre>&lt;p>Após isso, crie um .htpasswd com os dados de usuário e senha (atenção ao caminho do arquivo). A senha é criptografada e o conteúdo do arquivo é algo como o seguinte:&lt;/p>
+&lt;pre>&lt;code>leo:4tHAiRmQ4OpjM
+&lt;/code>&lt;/pre>&lt;p>Para criptografar a senha use um dos &lt;a href="http://www.kxs.net/support/htaccess_pw.html">vários&lt;/a> serviços &lt;a href="http://shop.alterlinks.com/htpasswd/htpasswd.php">por aí&lt;/a> existentes. Para proteger um projeto em Rails, a solução também funciona bem, desde que seu .htaccess esteja na pasta public de sua aplicação&lt;/p></description></item></channel></rss>
