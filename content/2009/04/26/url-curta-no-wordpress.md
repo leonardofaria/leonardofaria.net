@@ -10,7 +10,8 @@ permalink: /2009/04/26/url-curta-no-wordpress/
 dsq_thread_id:
   - "1000136884"
 categories:
-  - offtropic
+  - php
+  - wordpress
 tags:
   - php
   - wordpress

@@ -10,7 +10,7 @@ permalink: /2009/10/11/macbook-e-o-caso-do-topcase-rachado/
 dsq_thread_id:
   - "1000136040"
 categories:
-  - macintosh
+  - mac
 tags:
   - mac
 ---

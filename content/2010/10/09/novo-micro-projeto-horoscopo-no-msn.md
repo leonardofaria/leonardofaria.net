@@ -10,13 +10,11 @@ permalink: /2010/10/09/novo-micro-projeto-horoscopo-no-msn/
 dsq_thread_id:
   - "1000136952"
 categories:
-  - desenvolvimento
-  - experiment
+  - portfolio
   - rubyonrails
 tags:
-  - empreendorismo
   - portfolio
-  - rails
+  - rubyonrails
 ---
 Chegou mais um serviço de utilidade pública feita por mim. Depois do [**codestacker**](http://codestacker.com), [**autosimulado**](http://autosimulado.com.br) e [**xavecator**](http://xavecator.leonardofaria.net), por acaso tive contato com algumas coisinhas do protocolo do MSN e desse contato saiu o [**Horóscopo por MSN**](http://horoscopo.leonardofaria.net). [**Horóscopo por MSN**](http://horoscopo.leonardofaria.net) foi uma aplicação escrita em algumas noites e seu nome já diz tudo: você recebe o horóscopo do dia em seu MSN.
 

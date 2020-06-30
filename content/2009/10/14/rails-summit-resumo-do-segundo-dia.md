@@ -12,7 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 ## [Richard Kilmer](http://twitter.com/rich_kilmer): MacRuby
 

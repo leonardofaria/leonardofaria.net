@@ -13,20 +13,21 @@ categories:
   - php
   - rubyonrails
 tags:
-  - leopard
+  - mac
   - php
-  - rails
+  - rubyonrails
 ---
 Na minha máquina de desenvolvimento uso o Passenger para trabalhar com o Rails e hoje eu precisei fazer alguns testes com PHP. Deixar o PHP junto com o Passenger é tão simples como 2 + 2 são 4. Vamos lá.
 
-Abra o arquivo de configuração do Apache (/etc/apache2/httpd.conf) como superusuário e procure a linha que chama o módulo do PHP (linha 114):
+Abra o arquivo de configuração do Apache (`/etc/apache2/httpd.conf`) como superusuário e procure a linha que chama o módulo do PHP (linha 114):
 
-<pre class="brush: plain; title: ; notranslate" title="">LoadModule php5_module        libexec/apache2/libphp5.so
-</pre>
+```apache
+LoadModule php5_module        libexec/apache2/libphp5.so
+```
 
 Basta descomentar essa linha. Em seguida, no fim desse arquivo, crie um host virtual chamado php:
 
-```
+```apache
 <virtualhost *:80>
   ServerName php
   DocumentRoot "/Users/leonardofaria/Sites/php"

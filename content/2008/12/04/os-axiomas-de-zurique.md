@@ -10,10 +10,9 @@ permalink: /2008/12/04/os-axiomas-de-zurique/
 dsq_thread_id:
   - "1000136199"
 categories:
-  - opiniao
+  - review
 tags:
-  - economia
-  - empreendorismo
+  - review
 ---
 Num país onde 75% dos carros vendidos são financiados, onde os juros do cheque especial são os maiores dos últimos 5 anos e onde instituições financeiras faturam grandezas de 6 dígitos, a maneira com que você gerencia seu dinheiro pode fazê-lo um vencedor ou apenas mais um endividado do terceiro mundo.
 

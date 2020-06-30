@@ -10,10 +10,9 @@ permalink: /2009/11/22/internacionalizacao-em-labels/
 dsq_thread_id:
   - "1000137222"
 categories:
-  - desenvolvimento
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 Desenvolvendo uma aplicação onde apliquei os recurso de internacionalização do Rails, percebi que o framework [não traduz os valores dos labels](https://rails.lighthouseapp.com/projects/8994/tickets/745-form-label-should-use-i18n) para a tradução do atributo.
 

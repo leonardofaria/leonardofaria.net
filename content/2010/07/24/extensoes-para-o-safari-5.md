@@ -11,11 +11,10 @@ dsq_thread_id:
   - "1251817762"
 categories:
   - browser
-  - macintosh
+  - mac
 tags:
   - browser
   - mac
-  - safari
 ---
 <img src="/wp-content/uploads/2010/07/safari5.jpg" align="right" /> A guerra dos browsers continua: a versão 4 do Firefox já saiu em fase beta – com interface parecida com o Chrome, eu diria – mas o que me motivou escrever esse post foram as extensões do Safari 5. Sim, extensões como as dos outros browser e antes tarde do que nunca. Vamos as preferidas:
 

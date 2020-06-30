@@ -10,11 +10,9 @@ permalink: /2009/06/07/sitemapxml-no-rails/
 dsq_thread_id:
   - "1000137532"
 categories:
-  - desenvolvimento
   - rubyonrails
 tags:
-  - rails
-  - seo
+  - rubyonrails
 ---
 Usado para SEO, [Sitemaps](http://www.sitemaps.org/) servem para informar aos sites de busca como indexar as páginas de um site. Indexadores descobrem páginas com base em links no site e outros sites e o que os Sitemaps fazem é complementar esses dados, para permitir que os indexadores com suporte para Sitemaps peguem todos os URLs no Sitemap e aprendam sobre esses URLs usando os metadados associados.
 

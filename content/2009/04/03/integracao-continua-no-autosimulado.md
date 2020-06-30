@@ -10,13 +10,11 @@ permalink: /2009/04/03/integracao-continua-no-autosimulado/
 dsq_thread_id:
   - "1097946230"
 categories:
-  - desenvolvimento
+  - portfolio
   - rubyonrails
 tags:
-  - autosimulado
-  - empreendorismo
   - portfolio
-  - rails
+  - rubyonrails
 ---
 Assim como no [**codestacker**](http://www.codestacker.com), não lancei o [**autosimulado**](http://www.autosimulado.com.br) com todos os features prontos. Naturalmente, lançar um projeto sem estar com 100% dos recursos completos pode ser um risco, mas é uma gostosa corrida contra o tempo – e mais uma chance para avaliar se essa ou aquela funcionalidade é realmente útil para o aplicativo. Como disse Steve Jobs em uma apresentação sobre a iTunes Music Store, &#8220;Inovação não é dizer sim para tudo. É dizer NÃO para tudo exceto as funcionalidades mais cruciais&#8221;.
 

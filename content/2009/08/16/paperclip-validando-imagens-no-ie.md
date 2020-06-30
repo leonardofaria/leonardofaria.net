@@ -12,7 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 No **[autosimulado](http://www.autosimulado.com.br)**, tive um problema onde o IE (sempre ele) não validava o mime-type de uma imagem. Mesmo tentando enviar uma imagem JPG – imagem permitida – o IEca não aceitava o arquivo. A solução:
 

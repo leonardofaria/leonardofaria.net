@@ -11,9 +11,9 @@ dsq_thread_id:
   - "1397195620"
 categories:
   - javascript
+  - mac
 tags:
   - javascript
-  - jquery
   - mac
 ---
 [Anteriormente](https://leonardofaria.net/2009/02/08/documentacao-do-rails-e-ruby-no-spotlight/) eu postei sobre como integrar a documentação do Ruby e do Rails no dicionário do Mac OS, que automaticamente é indexado pelo Spotlight.

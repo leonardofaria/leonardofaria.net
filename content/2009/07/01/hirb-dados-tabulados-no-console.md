@@ -12,7 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 [**hirb**](http://tagaholic.me/hirb/) é uma gem que, num rápido resumo, tabula e organiza em árvores dados que, entre várias origens, podem vir de um array. A instalação
 

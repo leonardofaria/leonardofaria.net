@@ -10,9 +10,9 @@ permalink: /2009/05/25/o-desafio-de-crescer/
 dsq_thread_id:
   - "1000136204"
 categories:
-  - opiniao
+  - entrepreneurship
 tags:
-  - empreendorismo
+  - entrepreneurship
 ---
 Nos últimos anos, venho programando e criando sites para meia dúzia de pessoas com diferentes perfis: umas com dinheiro, outras sem; umas que precisam de um site como parte estratégica de um modelo de negócio, outras que possuem sites só porque todo mundo tem. Independentemente desses trabalhos, venho registrando meus desvaneios sobre web nesse blog e ultimamente, concentro minha imaginação e pensamentos no [**autosimulado**](http://www.autosimulado.com.br).
 

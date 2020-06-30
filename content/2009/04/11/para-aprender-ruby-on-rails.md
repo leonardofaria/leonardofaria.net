@@ -12,7 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 Esse post é para indicar 2 dicas matadoras que mostram como a comunidade Ruby on Rails é organizada e colaborativa. Essa semana foi finalmente terminado a tradução/edição/revisão d'[O Guia (comovente) de Ruby do Why](http://www.why.nomedojogo.com/). Essa é tradução do livro do [Why the Lucky Stiff](http://www.whytheluckystiff.net/), um cara que ensina fantasticamente bem. 
 

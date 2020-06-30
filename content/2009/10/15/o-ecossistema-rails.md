@@ -10,10 +10,9 @@ permalink: /2009/10/15/o-ecossistema-rails/
 dsq_thread_id:
   - "1000136935"
 categories:
-  - opiniao
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 Escrevo esse artigo dentro do meu voo de São Paulo para Belo Horizonte. Passei 4 dias em São Paulo, participei do Rails Summit, bloguei ao vivo um [resumo](https://leonardofaria.net/2009/10/14/rails-summit-resumo-do-segundo-dia/) das [palestras](https://leonardofaria.net/2009/10/13/rails-summit-resumo-do-primeiro-dia/) e vou expor meus comentários sobre o ecossistema Rails – ou se preferir, o gueto Rails.
 

@@ -10,15 +10,11 @@ permalink: /2009/03/14/nasceu-autosimulado/
 dsq_thread_id:
   - "1000136214"
 categories:
-  - desenvolvimento
-  - faculdade
+  - portfolio
   - rubyonrails
 tags:
-  - acadêmico
-  - empreendorismo
   - portfolio
-  - rails
-  - web2.0
+  - rubyonrails
 ---
 [**autosimulado**](http://www.autosimulado.com.br) é um aplicativo web com simulados de provas de legislação, aquelas que você faz quando vai tirar sua carteira de motorista. A inspiração para o [**autosimulado**](http://www.autosimulado.com.br) apareceu quando minha namorada foi tirar carteira, e ao tentar ajudá-la procurando provas, só encontrei coisas chatas, feias e sem usabilidade. Provas do Detran metem medo em muita gente – eu mesmo só passei da segunda tentativa – e ser simples, rápido, inteligente e grátis é o objetivo do site, que nasceu sobre a concepção do [Getting Real](https://gettingreal.37signals.com/GR_por.php) e da integração contínua.
 

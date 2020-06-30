@@ -11,11 +11,10 @@ dsq_thread_id:
   - "1421148988"
 categories:
   - browser
-  - macintosh
+  - mac
 tags:
   - browser
   - mac
-  - safari
 ---
 Andei [twitando](http://www.twitter.com/leozera) a respeito do lançamento do [Safari 4](http://www.apple.com/safari/download/), lançado ontem, justamente no mesmo dia do aniversário de Steve Jobs.
 

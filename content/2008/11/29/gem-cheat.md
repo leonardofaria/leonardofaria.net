@@ -12,7 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 Essa é uma [gem](http://cheat.errtheblog.com/) do [Chris Wanstrath](http://www.errtheblog.com) que muita gente não conhece e que só hoje me deparei. Para instalar:
 

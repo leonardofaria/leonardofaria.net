@@ -10,7 +10,6 @@ permalink: /2011/04/24/coletanea-de-dicas-sobre-wordpress/
 dsq_thread_id:
   - "1018419045"
 categories:
-  - desenvolvimento
   - php
   - wordpress
 tags:

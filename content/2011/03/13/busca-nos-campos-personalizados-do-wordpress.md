@@ -10,11 +10,9 @@ permalink: /2011/03/13/busca-nos-campos-personalizados-do-wordpress/
 dsq_thread_id:
   - "5339201892"
 categories:
-  - desenvolvimento
   - php
   - wordpress
 tags:
-  - desenvolvimento
   - php
   - wordpress
 ---

@@ -10,15 +10,11 @@ permalink: /2009/11/14/rails-e-cia-no-snow-leopard/
 dsq_thread_id:
   - "1005938579"
 categories:
-  - desenvolvimento
-  - macintosh
   - rubyonrails
-tags:
-  - howto
   - mac
-  - mysql
-  - passenger
-  - rails
+tags:
+  - rubyonrails
+  - mac
 ---
 Fiz uma instalação nova do Snow Leopard no meu MacBook e ao migrar os dados do Time Machine, do Leopard, algumas coisas pararam de funcionar. Resolvi então escrever para complementar meu [post anterior sobre o assunto](https://leonardofaria.net/2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/).
 
@@ -31,30 +27,29 @@ Fiz uma instalação nova do Snow Leopard no meu MacBook e ao migrar os dados do
 O Snow Leopard já vem com duas versões do Rails já instaladas: 2.2.2 e 1.13.6. Caso queira atualizar seu ambiente:  
 <!--more-->
 
-```
+```shell
 sudo gem update --system
 sudo gem update rails
 ```
 
 ### Passenger
 
-```
+```shell
 sudo gem install passenger
 sudo passenger-install-apache2-module
 ```
 
 Terminada a instalação, do Passenger, você precisa editar o arquivo `/etc/apache2/httpd.conf` e acrescentar o seguinte conteúdo:
 
-<div class="syntax_hilite">
-  <pre class="bash"><code>LoadModule passenger_module /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/ext/apache2/mod_passenger.so
+```apache
+LoadModule passenger_module /Library/Ruby/Gems/1.8/gems/passenger-2.2.5/ext/apache2/mod_passenger.so
 PassengerRoot /Library/Ruby/Gems/1.8/gems/passenger-2.2.5
 PassengerRuby /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
-</code></pre>
-</div>
+```
 
 A configuração dos sites também pode ser feita nesse arquivo, por exemplo:
 
-```
+```apache
 <VirtualHost *:80>
   ServerName codestacker
   DocumentRoot "/Users/leonardofaria/Sites/codestacker/public"
@@ -65,7 +60,7 @@ A configuração dos sites também pode ser feita nesse arquivo, por exemplo:
 
 A instalação do gem do MySQL pode ser feita da mesma forma que [postei anteriormente](https://leonardofaria.net/2008/08/02/mudancas-no-rails-22/): basta [instalar o pacote do site](http://dev.mysql.com/downloads/mysql/5.1.html#macosx-dmg) e executar a instalação da gem com o comando:
 
-```
+```shell
 sudo gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
 ```
 
@@ -152,7 +147,7 @@ cd ..
 
 A instalação do gem rmagick é como todas as outras instalações de gem:
 
-```
+```shell
 sudo gem install rmagick
 ```
 

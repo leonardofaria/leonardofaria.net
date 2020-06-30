@@ -10,11 +10,11 @@ permalink: /2009/08/22/todo-lists-para-o-textmate/
 dsq_thread_id:
   - "1002710617"
 categories:
-  - desenvolvimento
-  - macintosh
+  - mac
+  - software
 tags:
-  - desenvolvimento
-  - textmate
+  - mac
+  - software
 ---
 Fica a dica para quem usa o Textmate: [Tasks](http://github.com/henrik/tasks.tmbundle/) é um bundle para o Textmate que permite a criação de Todo lists bonitinhas.
 
@@ -24,10 +24,11 @@ Fica a dica para quem usa o Textmate: [Tasks](http://github.com/henrik/tasks.tmb
 
 A [instalação](http://henrik.nyh.se/2007/08/tasks-bundle) é fácil:
 
-<pre class="brush: plain; title: ; notranslate" title="">mkdir -p ~/Library/Application\ Support/TextMate/Bundles
+```shell
+mkdir -p ~/Library/Application\ Support/TextMate/Bundles
 cd ~/Library/Application\ Support/TextMate/Bundles
 git clone git://github.com/henrik/tasks.tmbundle.git Tasks.tmbundle
 osascript -e 'tell app "TextMate" to reload bundles'
-</pre>
+```
 
-Depois disso, todos os arquivos .todo, .todolist e .tasks serão formatados de acordo com o bundle.
+Depois disso, todos os arquivos `.todo`, `.todolist` e `.tasks` serão formatados de acordo com o bundle.

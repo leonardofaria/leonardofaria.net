@@ -11,13 +11,10 @@ dsq_thread_id:
   - "1002047252"
 categories:
   - browser
-  - macintosh
-  - php
-  - usabilidade
+  - mac
 tags:
   - browser
   - mac
-  - safari
 ---
 Muitos que migram para o Mac continuam usando o Firefox, graças as suas extensões maravilhosas. Confesso que sou dependente do Firebug, mas uso o Safari como meu default browser e tenho algumas coisinhas que são uma mão na roda para o desenvolvedor. Vamos lá:
 

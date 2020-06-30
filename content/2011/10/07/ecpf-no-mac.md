@@ -10,9 +10,11 @@ permalink: /2011/10/07/ecpf-no-mac/
 dsq_thread_id:
   - "1001398643"
 categories:
-  - macintosh
+  - mac
+  - software
 tags:
   - mac
+  - software
 ---
 No meu trabalho preciso usar meu cartão eCPF para acessar um determinado sistema que estamos desenvolvendo. Tenho um cartão eCPF, emitido pelo Banco do Brasil e um leitor de cartões OmniKey 3021 e foi uma grande dor de cabeça configurá-lo no Mac. Não era para ser um problema, uma vez que você precisa apenas de um driver e um módulo para o Firefox.
 

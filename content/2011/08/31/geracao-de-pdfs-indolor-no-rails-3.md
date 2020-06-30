@@ -12,7 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 Em um trabalho recente, precisei gerar relatórios em PDF. Considerei algumas soluções e optei por uma que não me fizesse perder os cabelos e reescrever código: [wicked_pdf](https://github.com/mileszs/wicked_pdf).
 

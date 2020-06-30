@@ -10,12 +10,11 @@ permalink: /2009/01/31/resenha-a-cabeca-de-steve-jobs/
 dsq_thread_id:
   - "5338156306"
 categories:
-  - macintosh
-  - opiniao
+  - mac
+  - review
 tags:
   - mac
-  - resenha
-  - stevejobs
+  - review
 ---
 Verdade seja dita, Steve Jobs é um mito e mais do que um CEO, ele é o homem a frente da Apple e a frente do seu tempo. O que esperar de uma biografia de alguém que revolucionou a computação moderna, o cinema de animação, o mercado de música e a telefonia? Acabo de ler &#8220;A Cabeça de Steve Jobs&#8221;, de Leander Kahney e essa obra pode representar muito para nossas vidas, principalmente se você ter as ações e mantras de Jobs como inspiração para seus trabalhos. 
 

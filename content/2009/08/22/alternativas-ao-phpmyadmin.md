@@ -10,10 +10,9 @@ permalink: /2009/08/22/alternativas-ao-phpmyadmin/
 dsq_thread_id:
   - "1000136615"
 categories:
-  - desenvolvimento
+  - mysql
   - php
 tags:
-  - desenvolvimento
   - mysql
   - php
 ---

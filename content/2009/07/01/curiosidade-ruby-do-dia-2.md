@@ -10,11 +10,9 @@ permalink: /2009/07/01/curiosidade-ruby-do-dia-2/
 dsq_thread_id:
   - "1820831919"
 categories:
-  - desenvolvimento
   - rubyonrails
 tags:
-  - rails
-  - ruby
+  - rubyonrails
 ---
 Em outra curiosidade Ruby do dia, [eu falei do elsif](https://leonardofaria.net/2007/06/28/curiosidade-ruby-do-dia/). Hoje eu lembro do método succ, da classe [String](http://www.ruby-doc.org/core/classes/String.html). Veja os exemplo:
 

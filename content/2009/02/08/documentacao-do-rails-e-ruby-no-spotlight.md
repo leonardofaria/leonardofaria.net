@@ -10,12 +10,11 @@ permalink: /2009/02/08/documentacao-do-rails-e-ruby-no-spotlight/
 dsq_thread_id:
   - "1000136897"
 categories:
-  - macintosh
+  - mac
   - rubyonrails
 tags:
   - mac
-  - rails
-  - ruby
+  - rubyonrails
 ---
 <center>
   <img src="/wp-content/uploads/2009/02/imagem1.jpg" />

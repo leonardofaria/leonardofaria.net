@@ -12,7 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 Essa semana apareceu uma nova IDE para Ruby: a [RubyMine](http://www.jetbrains.com/ruby/index.html), que se auto-denomina com a mais inteligente IDE para Ruby. O software é multiplataforma e parece ser bem interessante. Notei algumas coisinhas numa primeira-impressão:
 

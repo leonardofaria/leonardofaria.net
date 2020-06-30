@@ -10,7 +10,7 @@ permalink: /2008/11/23/quer-conhecer-mais-da-historia-da-apple/
 dsq_thread_id:
   - "1000137406"
 categories:
-  - macintosh
+  - mac
 tags:
   - mac
 ---

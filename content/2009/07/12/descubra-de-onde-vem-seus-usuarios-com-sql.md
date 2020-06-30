@@ -10,12 +10,11 @@ permalink: /2009/07/12/descubra-de-onde-vem-seus-usuarios-com-sql/
 dsq_thread_id:
   - "1000137458"
 categories:
-  - desenvolvimento
   - rubyonrails
-tags:
-  - autosimulado
   - mysql
-  - rails
+tags:
+  - rubyonrails
+  - mysql
 ---
 Tenho no [**autosimulado**](http://www.autosimulado.com.br) algumas queries para acompanhar a evolução dos usuários do site. Periodicamente, vejo o número de usuários criados dia-a-dia no site e o número de testes realizados por esses usuários.
 

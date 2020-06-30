@@ -11,13 +11,9 @@ dsq_thread_id:
   - "1506486675"
 categories:
   - browser
-  - css
-  - desenvolvimento
   - windows
 tags:
   - browser
-  - hack
-  - ie
   - windows
 ---
 [IETester](http://my-debugbar.com/wiki/IETester/HomePage) é coisa linda de Deus: um aplicativo que emula as versões 5.5, 6, 7 e 8 do IEca. Ótimo para você perder o dia sofrendo com os bugs de layout!

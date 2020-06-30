@@ -10,12 +10,11 @@ permalink: /2010/02/21/iphone-e-rails/
 dsq_thread_id:
   - "1069799054"
 categories:
-  - desenvolvimento
-  - macintosh
-  - rubyonrails
+  - iphone
+  - javascript
 tags:
   - iphone
-  - rails
+  - javascript
 ---
 O desenvolvimento de web apps para iPhone requer alguns cuidados especiais. Em nossas aplicações significa pensar em um layout para o gadget. Uma forma rápida de definir o layout para iPhone é através do código abaixo: 
 

@@ -12,7 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 Esse é um rascunho do que foi abordado no primeiro dia do Rails Summit. 
 

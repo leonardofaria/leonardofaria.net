@@ -10,13 +10,11 @@ permalink: /2009/11/09/o-que-e-ruby/
 dsq_thread_id:
   - "1000136928"
 categories:
-  - desenvolvimento
-  - faculdade
+  - academic
   - rubyonrails
 tags:
-  - acadêmico
-  - autosimulado
-  - rails
+  - academic
+  - rubyonrails
 ---
 A essa altura do campeonato todo mundo já deve saber o que vem a ser a linguagem Ruby. Minha monografia e meu trabalho de conclusão de curso da Faculdade foram sobre o [**autosimulado**](http://www.autosimulado.com.br). Na monografia fiz uma introdução sobre as características da linguagem Ruby, reproduzido abaixo:
 

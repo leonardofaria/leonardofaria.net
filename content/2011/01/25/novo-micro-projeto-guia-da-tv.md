@@ -10,12 +10,11 @@ permalink: /2011/01/25/novo-micro-projeto-guia-da-tv/
 dsq_thread_id:
   - "1000136943"
 categories:
-  - desenvolvimento
+  - portfolio
   - rubyonrails
 tags:
-  - empreendedorismo
   - portfolio
-  - rails
+  - rubyonrails
 ---
 Aproveitei algumas horas das minhas férias e lancei um novo micro-projeto: **[Guia da TV](http://guiadatv.divirta.me)**. O **Guia da TV** permite você saber quais programas estão para começar.
 

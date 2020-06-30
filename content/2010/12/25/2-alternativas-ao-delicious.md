@@ -10,10 +10,9 @@ permalink: /2010/12/25/2-alternativas-ao-delicious/
 dsq_thread_id:
   - "1000136239"
 categories:
-  - web2.0
+  - software
 tags:
-  - resenha
-  - web2.0
+  - software
 ---
 Na última semana o Yahoo anunciou a [demissão de centenas de funcionários](http://www.reuters.com/article/idUSN1429093520101215) e o fechamento de alguns serviços, incluindo o <s>del.icio.us</s> [delicious](http://www.delicious.com/), que uso desde muito tempo. Todo mundo ficou surpreso com isso, e já inclusive existem rumores que o serviço continuará, entretanto, a busca para uma alternativa ao delicious começou. Esse post apresenta um mini-review de 2 opções grátis.
 

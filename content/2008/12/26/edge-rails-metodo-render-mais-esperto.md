@@ -12,10 +12,21 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 Quem já está usando o Rails 2.2 já deve estar vendo um warning: no Rails 2.3, o método render está mais esperto e dispensará a instrução sobre qual tipo de renderização ele está fazendo. Confira: 
 
+```ruby
+# currently:
+render :file => '/tmp/random_file.erb'
+render :template => 'other_controller/action'
+render :action => 'show'
 
+# rails 2.3
+render '/tmp/random_file.erb'
+render 'other_controller/action'
+render 'show'
+render :show
+```
 
 Agora, você não precisa especificar se quer renderizar uma action, template ou file. Isso é bem legal e mostra cada vez mais o minimalismo do framework.

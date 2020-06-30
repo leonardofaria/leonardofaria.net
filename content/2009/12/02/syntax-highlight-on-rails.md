@@ -23,7 +23,7 @@ Quer fazer um syntax highlight igual ao do codestacker abaixo, _a la Textmate_? 
 
 Faça o download da biblioteca de expressões regulares [Oniguruma](http://www.geocities.jp/kosako3/oniguruma/). A versão mais recente é a [5.9.1](http://www.geocities.jp/kosako3/oniguruma/archive/onig-5.9.1.tar.gz). Compile-a:
 
-```
+```shell
 ./configure && make && make install
 ```
 

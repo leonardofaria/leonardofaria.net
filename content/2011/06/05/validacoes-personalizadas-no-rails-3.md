@@ -12,7 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 O método [validates](http://api.rubyonrails.org/classes/ActiveModel/Validations/ClassMethods.html#method-i-validates) do Rails 3 [agrupou os antigos métodos](http://lindsaar.net/2010/1/31/validates_rails_3_awesome_is_true) de validação do Rails 2. Na versão 3, usamos o método validates acompanhado do atributo a ser validado e de suas respectivas regras de validação. Trabalhando em um novo projeto necessito validar CPFs e CNPJs, e consequentemente, precisei criar validações adicionais. Esse post mostra como realizei isso.
 

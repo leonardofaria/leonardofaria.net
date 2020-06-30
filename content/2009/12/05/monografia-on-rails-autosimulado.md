@@ -10,11 +10,11 @@ permalink: /2009/12/05/monografia-on-rails-autosimulado/
 dsq_thread_id:
   - "1002853995"
 categories:
-  - faculdade
+  - academic
+  - rubyonrails
 tags:
-  - acadêmico
-  - autosimulado
-  - rails
+  - academic
+  - rubyonrails
 ---
 Para conclusão do meu curso de Sistemas de Informação, dediquei minha monografia e trabalho de conclusão de curso ao [autosimulado](http://www.autosimulado.com.br).
 
