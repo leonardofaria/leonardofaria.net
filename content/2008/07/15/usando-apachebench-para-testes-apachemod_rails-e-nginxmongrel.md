@@ -10,13 +10,10 @@ permalink: /2008/07/15/usando-apachebench-para-testes-apachemod_rails-e-nginxmon
 dsq_thread_id:
   - "5338540697"
 categories:
-  - apache
   - rubyonrails
 tags:
-  - apache
-  - benchmark
-  - desenvolvimento
-  - rails
+  - development
+  - rubyonrails
 ---
 O [ApacheBench](http://httpd.apache.org/docs/2.2/programs/ab.html) é um software do Apache usado para fazer testes de perfomance de servidores web, independente do servidor usado. Isso é muito útil para comparar o desempenho de diversas configurações, mas nem sempre pode apresentar a realidade do ambiente.
 

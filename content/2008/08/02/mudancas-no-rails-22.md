@@ -12,7 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 O Rails 2.2 está chegando e ao baixar o Edge para testar o novo recurso de internacionalização (uma das grandes novidades), me deparei com a primeira diferença da versão: o arquivo de conexão com o MySQL não está mais integrado ao framework. É isso o que diz o log do development.log:
 

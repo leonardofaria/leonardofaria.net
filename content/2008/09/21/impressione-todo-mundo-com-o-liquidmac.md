@@ -10,10 +10,9 @@ permalink: /2008/09/21/impressione-todo-mundo-com-o-liquidmac/
 dsq_thread_id:
   - "3175324463"
 categories:
-  - macintosh
+  - mac
 tags:
   - mac
-  - software
 ---
 Tem um Mac? Mate seu amigos (e inimigos) de inveja com o [**LiquidMac**](http://uri.cat/software/LiquidMac/).
 

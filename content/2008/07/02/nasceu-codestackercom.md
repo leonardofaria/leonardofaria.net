@@ -12,8 +12,8 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - codestacker
-  - rails
+  - rubyonrails
+  - portfolio
 ---
 <center>
   <a href='http://www.codestacker.com'><img src="/wp-content/uploads/2008/07/codestacker.jpg" alt="" title="codestacker" /></a>

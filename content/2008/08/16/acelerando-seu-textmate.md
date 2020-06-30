@@ -13,17 +13,20 @@ categories:
   - rubyonrails
 tags:
   - mac
-  - rails
-  - textmate
+  - rubyonrails
 ---
 Estou trabalhando em um projeto usando o Edge Rails. No Textmate, a tecla de atalho CMD + T é uma mão na roda para localizar e abrir qualquer arquivo, entretanto, com o Edge estando na pasta /vendor/rails, a busca pode se tornar lenta e encontrar, além dos seus arquivos, os arquivos do framework. Foi então que encontrei [essa dica](http://groups.google.com/group/rubyonrails-textmate/browse_thread/thread/8de96ea96d51de59?hl=en) do [Dr. Nic](http://drnicwilliams.com/) (sempre ele): 
 
 É possível mudar a forma default de como funciona os patterns para localizar os arquivos. Para isso, acione as preferências do software, escolha Advanced, depois Folder References e substitua, em Folder Pattern, o valor padrão, pelo seguinte: 
 
-<pre class="brush: plain; title: ; notranslate" title="">!.*/(\.[^/]*|vendor/rails|doc|rails_root|CVS|log|data_dump|build|_darcs|pkg |_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)? |bundle))$ </pre>
+```
+!.*/(\.[^/]*|vendor/rails|doc|rails_root|CVS|log|data_dump|build|_darcs|pkg |_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)? |bundle))$
+```
 
 Caso queira reverter, o valor padrão é:
 
-<pre class="brush: plain; title: ; notranslate" title="">!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</pre>
+```
+!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$
+```
 
-Após isso, alguns diretórios não serão mais &#8216;encontrados' e você terá uma busca mais rápida.
+Após isso, alguns diretórios não serão mais encontrados e você terá uma busca mais rápida.

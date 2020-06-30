@@ -12,8 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - rails
-  - screencast
+  - rubyonrails
 ---
 <center>
   <a href='http://www.flickr.com/photos/belfathus/534214937/'><img src="/wp-content/uploads/2008/07/popcorn.jpg" /></a>

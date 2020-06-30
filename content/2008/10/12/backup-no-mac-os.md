@@ -10,13 +10,12 @@ permalink: /2008/10/12/backup-no-mac-os/
 dsq_thread_id:
   - "1004253959"
 categories:
-  - macintosh
+  - mac
 tags:
-  - backup
   - mac
   - software
 ---
-**Felizes são os pessimistas&#8230; porque já fizeram backup hoje!** Depois do dia que o HD do meu MacBook morreu misteriosamente (sem motivo algum!), fiquei simplesmente viciado em backup. Na busca de um software perfeito, encontrei várias opções e resolvi escrrever sobre isso. No meu caso, buscava um software que fizesse backup da minha partição onde está o Leopard e que também espelhasse minha outra partição de dados, em FAT32 (sim, FAT32, acredite!).
+**Felizes são os pessimistas... porque já fizeram backup hoje!** Depois do dia que o HD do meu MacBook morreu misteriosamente (sem motivo algum!), fiquei simplesmente viciado em backup. Na busca de um software perfeito, encontrei várias opções e resolvi escrrever sobre isso. No meu caso, buscava um software que fizesse backup da minha partição onde está o Leopard e que também espelhasse minha outra partição de dados, em FAT32 (sim, FAT32, acredite!).
 
 <center>
   <img src="/wp-content/uploads/2008/10/sync.jpg" alt="sync" title="Sync Professional" />

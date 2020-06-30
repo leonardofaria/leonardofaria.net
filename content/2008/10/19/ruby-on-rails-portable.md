@@ -12,9 +12,8 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - download
-  - rails
-  - software
+  - rubyonrails
+  - windows
 ---
 Você não precisa mais ficar querendo o novo Macbook para levar suas aplicações Rails para qualquer lugar. Um sujeito chamado [Etienne Savard](http://www.symbiosoft.net) criou o [Ruby on Rails Portable](http://www.symbiosoft.net/?q=node/12). O pacote, com uns trinta e poucos megabytes vem com o [Scite](http://www.scintilla.org/SciTE.html) – um editor de código – também portátil.
 

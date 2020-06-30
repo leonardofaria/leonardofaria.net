@@ -12,8 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - rails
-  - webmobile
+  - rubyonrails
 ---
 <center>
   <a href='http://www.devmedia.com.br/resumo/default.asp?site=5'><img src="/wp-content/uploads/2008/08/webmobile19.jpg" title="Webmobile #19" /></a>

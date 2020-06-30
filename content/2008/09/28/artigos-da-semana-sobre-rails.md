@@ -12,7 +12,7 @@ dsq_thread_id:
 categories:
   - rubyonrails
 tags:
-  - rails
+  - rubyonrails
 ---
 Ando muito sem tempo para postar, basicamente devido aos meus dois trabalhos. Essa semana vi várias coisas interessantes e abaixo um comentário para cada uma delas.
 
