@@ -1,0 +1,162 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>career on Leonardo Faria</title><link>https://leonardofaria.net/categories/career/</link><description>Recent content in career on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://leonardofaria.net/categories/career/index.xml" rel="self" type="application/rss+xml"/><item><title>The Mentoring Framework</title><link>https://leonardofaria.net/2020/06/01/the-mentoring-framework/</link><pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate><guid>https://leonardofaria.net/2020/06/01/the-mentoring-framework/</guid><description>&lt;p>Last October I created a Mentoring Framework at work. The goal was creating a project from scratch using Ruby on Rails and in this journey, learning more about Ruby, Frontend, Project Management and Git, Databases and DevOps.&lt;/p>
+&lt;p>This Mentoring Framework is similar to what bootcamps do but the difference here is I am sharing a list of suggested features / things to learn and the person can focus in what is important for them.&lt;/p>
+&lt;p>&lt;strong>In a nutshell: Goals → Project → Execution → Knowledge (and profit)&lt;/strong>&lt;/p>
+&lt;p>The document is divided into 4 main sections: &lt;a href="#before-start">Before start&lt;/a>, &lt;a href="#project-ideas">Project ideas&lt;/a>, &lt;a href="#execution">Execution&lt;/a>, &lt;a href="#examples">Examples&lt;/a> and &lt;a href="#resources">Resources&lt;/a>.&lt;/p>
+&lt;h2 id="before-start">Before start&lt;/h2>
+&lt;p>What are your main goals? For the following list, pick: &amp;ldquo;basic understanding&amp;rdquo;, &amp;ldquo;intermediate understanding&amp;rdquo;, &amp;ldquo;advanced understanding&amp;rdquo;. This will help to identify where you are going to invest more time and energy.&lt;/p>
+&lt;ul>
+&lt;li>Learn Ruby / Ruby on Rails&lt;/li>
+&lt;li>Learn Frontend&lt;/li>
+&lt;li>Learn Project Management and Git&lt;/li>
+&lt;li>Learn Databases&lt;/li>
+&lt;li>Learn DevOps&lt;/li>
+&lt;/ul>
+&lt;h2 id="project-ideas">Project ideas&lt;/h2>
+&lt;p>Once you know your main goals, you need a project. Check the following two ideas:&lt;/p>
+&lt;h3 id="book-store">Book store&lt;/h3>
+&lt;p>Imagine you want to sell books online. What kind of features does a bookstore have?&lt;/p>
+&lt;ul>
+&lt;li>List books per title&lt;/li>
+&lt;li>List books per authors&lt;/li>
+&lt;li>List books per categories&lt;/li>
+&lt;li>Search books&lt;/li>
+&lt;li>Buy books&lt;/li>
+&lt;li>List your orders&lt;/li>
+&lt;/ul>
+&lt;h3 id="pet-adoption-website">Pet adoption website&lt;/h3>
+&lt;p>Imagine you want to create a website for an organisation that takes care of animals (in British Columbia we have SPCA). What kind of features does a pet adoption website have?&lt;/p>
+&lt;ul>
+&lt;li>List pets per type (dog, cat and others)&lt;/li>
+&lt;li>List pets per size (or breed, or age)&lt;/li>
+&lt;li>List pets per location&lt;/li>
+&lt;li>Search pet per name&lt;/li>
+&lt;li>Request an adoption&lt;/li>
+&lt;li>List your adoption requests&lt;/li>
+&lt;/ul>
+&lt;h2 id="execution">Execution&lt;/h2>
+&lt;p>Once you know your main goals and you have an idea, it is time to work. Check the list of tasks you will be doing:&lt;/p>
+&lt;h3 id="learn-ruby-on-rails">Learn Ruby on Rails&lt;/h3>
+&lt;ul>
+&lt;li>Use scaffolds to create your entities (basic understanding) or create your own controllers, models and views (intermediate)&lt;/li>
+&lt;li>Add authentication with Devise (basic understanding) or create your own (intermediate). Or use Devise with Oauth authentication (Facebook, Google, etc - intermediate)&lt;/li>
+&lt;li>Add friendly URLs with a gem (basic) or create your own solution (intermediate)&lt;/li>
+&lt;li>Add search (intermediate)&lt;/li>
+&lt;li>Add tests for all your code&lt;/li>
+&lt;li>Create seeds for your data so you don&amp;rsquo;t need to create manually data&lt;/li>
+&lt;li>Send email to users (intermediate)&lt;/li>
+&lt;li>Create different user roles (intermediate)&lt;/li>
+&lt;li>Add pagination (basic)&lt;/li>
+&lt;li>Add localization (intermediate)&lt;/li>
+&lt;li>Add a tag system (intermediate)&lt;/li>
+&lt;li>Add images (intermediate)&lt;/li>
+&lt;/ul>
+&lt;h3 id="learn-frontend">Learn Frontend&lt;/h3>
+&lt;ul>
+&lt;li>Use Tailwind CSS (basic) or your own CSS/SASS (intermediate) to create a beautiful layout&lt;/li>
+&lt;li>Use Turbolinks (advanced / optional)&lt;/li>
+&lt;li>Add basic animations - ex.: when adding a book in the cart show some animation (advanced/optional)&lt;/li>
+&lt;li>Add Google Maps in your app (intermediate)&lt;/li>
+&lt;li>Add Google Places in your users&lt;/li>
+&lt;li>Add a carousel with photos&lt;/li>
+&lt;li>Add Pagination with Ajax or endless pagination (advanced)&lt;/li>
+&lt;/ul>
+&lt;h3 id="learn-project-management-and-git">Learn Project Management and Git&lt;/h3>
+&lt;ul>
+&lt;li>Use Github Project to organize your features&lt;/li>
+&lt;li>Use feature branches in Git, create PR for all your features&lt;/li>
+&lt;/ul>
+&lt;h3 id="learn-databases">Learn Databases&lt;/h3>
+&lt;ul>
+&lt;li>Write plain SQL to find relevant information. A few examples:
+&lt;ul>
+&lt;li>Find best-sellers authors in the book store&lt;/li>
+&lt;li>Find the number of orders or pet requests per city&lt;/li>
+&lt;li>Find which day has more sales&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Add charts in your app to expose the data&lt;/li>
+&lt;/ul>
+&lt;h3 id="learn-devops">Learn DevOps&lt;/h3>
+&lt;ul>
+&lt;li>Deploy the website to Heroku (easy/intermediate) or AWS (advanced)&lt;/li>
+&lt;li>Setup CI in Heroku (easy/intermediate)&lt;/li>
+&lt;li>Add Airbrake to monitor errors in your app (easy)&lt;/li>
+&lt;li>Buy a domain, set up Cloudflare (advanced/optional)&lt;/li>
+&lt;/ul>
+&lt;h2 id="examples">Examples&lt;/h2>
+&lt;p>&lt;img src="https://leonardofaria.net/wp-content/uploads/2020/06/the-mentoring-framework.png" alt="Website screenshots">&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://adopt.spca.bc.ca">SPCA&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.petfinder.com/">Petfinder&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="resources">Resources&lt;/h2>
+&lt;ul>
+&lt;li>Courses: &lt;a href="https://www.linkedin.com/learning/ruby-on-rails-5-essential-training">Ruby on Rails 5 Essential Training&lt;/a> and &lt;a href="https://www.linkedin.com/learning/ruby-on-rails-6-essential-training">Ruby on Rails 6 Essential Training&lt;/a> - The first course is longer than the second.&lt;/li>
+&lt;li>Screencasts: &lt;a href="https://rubytapas.com">RubyTapas&lt;/a>, &lt;a href="https://gorails.com">GoRails&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Facing impostor syndrome and time management issues</title><link>https://leonardofaria.net/2020/04/26/facing-impostor-syndrome-and-time-management-issues/</link><pubDate>Sun, 26 Apr 2020 11:41:56 -0300</pubDate><guid>https://leonardofaria.net/2020/04/26/facing-impostor-syndrome-and-time-management-issues/</guid><description>&lt;p>I often hear people talking about impostor syndrome and time management issues. Sometimes I hear about these issues from a friend, a direct report, and occasionally from myself. We are always challenged by them and they can affect our mood, our ability to be productive and our judgement.&lt;/p>
+&lt;p>We have days where everything works great and also we have bad days, where everything seems to go wrong. This emotional roller coaster can make us doubt our accomplishments and can create a persistent fear of being exposed as a fraud.&lt;/p>
+&lt;p>&lt;img src="https://leonardofaria.net/wp-content/uploads/2020/04/roller-coaster.jpg" alt="Roller coaster photo">&lt;/p>
+&lt;p>There a few things that you can do to remember that you are great:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Keep a daily journal&lt;/strong> with notes of achievements: this daily exercise will train your brain to feel more confident;&lt;/li>
+&lt;li>&lt;strong>Focus on your strengths&lt;/strong>, especially when you are new in a role at work, use your natural strengths to add value to your position;&lt;/li>
+&lt;li>&lt;strong>Find quick wins&lt;/strong>, they will help you build a reputation of someone adept in a particular skill.&lt;/li>
+&lt;/ul>
+&lt;p>Issues with time management also impact our feeling of getting the job done. Sometimes the problem starts early on when we are assigned a task that may not make much sense. Let&amp;rsquo;s step back for a moment and think about the levels of uncertainty of a task:&lt;/p>
+&lt;ol>
+&lt;li>Well understood&lt;/li>
+&lt;li>Have a few questions&lt;/li>
+&lt;li>Understood, but unfamiliar with the approach&lt;/li>
+&lt;li>Know the area, but not the direction&lt;/li>
+&lt;li>General unclear&lt;/li>
+&lt;/ol>
+&lt;p>How does uncertainty affect time management? If something is Well understood, it is very unlikely you will get lost in the woods and things will take as long as expected. Starting with the level of Have a few questions, you need to be careful because the uncertainty will affect your time management and your sense of achievement. Good news is, you can always use this problem as an opportunity to improve.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Have a few questions&lt;/strong>: Find the best person to answer your question. If the description is unclear, go to the person who created that task. If the question is technical, talk to a developer on the team that can help you;&lt;/li>
+&lt;li>&lt;strong>Understood, but unfamiliar with the approach&lt;/strong>: If you understand the big picture but you are not confident with the approach, talk to another developer and ask for help. This is a good opportunity for pair programming;&lt;/li>
+&lt;li>&lt;strong>Know the area, but not the direction&lt;/strong>: This is a good opportunity to talk to another developer and hear their initial thoughts. They may have an opinion on how to get the task started or be able to suggest a good resource to review;&lt;/li>
+&lt;li>&lt;strong>General unclear&lt;/strong>: If the problem in the task is generally unclear, ask for clarification. If the technical approach is unclear, talk to other developers, think about having a pair programming session, and speak with other members of your team to understand how they approach their work.&lt;/li>
+&lt;/ul>
+&lt;p>Overall, facing imposter syndrome is something that we all face at some point in our careers. It is an issue that I have certainly struggled with but find that facing these struggles provides an excellent opportunity for me to reflect on my skills and discover new areas of potential learning. With these suggestions in mind, I hope that you are able to improve your sense of confidence and self-efficacy in your professional life.&lt;/p>
+&lt;p>&amp;ndash;&lt;/p>
+&lt;p>Also posted on &lt;a href="https://www.freecodecamp.org/news/facing-impostor-syndrome-and-time-management-issues/">freeCodeCamp&lt;/a>, &lt;a href="https://dev.to/leonardofaria/facing-impostor-syndrome-and-time-management-issues-1mlj">DEV&lt;/a>, &lt;a href="https://www.codementor.io/@leonardofaria/facing-impostor-syndrome-and-time-management-issues-15vpjw3q2x">Codementor&lt;/a>. Photo credit: &lt;a href="https://pixabay.com/photos/roller-coaster-people-thrill-park-1553342/">roller coaster (Pixalbay)&lt;/a>&lt;/p></description></item><item><title>Engineering Manager Readme</title><link>https://leonardofaria.net/2018/06/24/engineering-manager-readme/</link><pubDate>Sun, 24 Jun 2018 20:33:07 -0300</pubDate><guid>https://leonardofaria.net/2018/06/24/engineering-manager-readme/</guid><description>&lt;p>Being a Team Lead requires more than tech skills: you interact daily with people and it is quite challenging building stronger relationships and improving employees onboarding. The following document is my People Lead Readme (sometimes known as Manager Readme), where I talk about me and I share my expectations on people and on the product.&lt;/p>
+&lt;h2 id="what">What?&lt;/h2>
+&lt;p>This document is an extended introduction to what I value and believe in as a team leader and software developer. It is also a quick introduction about myself and how I work.&lt;/p>
+&lt;ul>
+&lt;li>This document doesn&amp;rsquo;t replace getting to know each other through 1:1s and day-to-day chats. As I said before, it is an introduction.&lt;/li>
+&lt;li>This document applies only to me, and in no way should be considered to apply to any other team lead or manager at Thinkific – even though we think in similar ways sometimes.&lt;/li>
+&lt;li>If you feel like I am not acting like I describe here, please let me know.&lt;/li>
+&lt;li>If you are curious why this document exists in the first place: there is a newsletter called &lt;a href="http://softwareleadweekly.com/">SoftwareLeadWeekly&lt;/a> (recommended) and managers &lt;a href="http://softwareleadweekly.com/issues/271">share their own readme&amp;rsquo;s&lt;/a> there. After seeing several documents, I decided to write my own.&lt;/li>
+&lt;/ul>
+&lt;h2 id="my-job">My Job&lt;/h2>
+&lt;p>As a team leader, I work for you and my other direct reports, by:&lt;/p>
+&lt;ul>
+&lt;li>Providing context so you and others can be successful, connecting the dots between the company needs and what the individual needs (career growth);&lt;/li>
+&lt;li>Mentoring individual contributors in technologies or business logic that I am familiar with.&lt;/li>
+&lt;/ul>
+&lt;p>Don&amp;rsquo;t feel like you are stealing my time when you want to talk. Helping you is definitely my job (and one of my top priorities)&lt;/p>
+&lt;h2 id="11s">1:1s&lt;/h2>
+&lt;p>1:1s are your dedicated time and place to ask me anything and everything. It is your time. If you having nothing to ask, you can use this time for guidance, context, venting, feedback or anything you want to discuss.&lt;/p>
+&lt;p>I have a few suggestions on how to have a good 1:1:&lt;/p>
+&lt;ul>
+&lt;li>Take notes about what do you want to talk along the month. It is difficult remembering everything that happened in one month. I may have things to cover but your topics are the priority.&lt;/li>
+&lt;li>If you don&amp;rsquo;t know what to talk, I recommend reading &lt;a href="https://knowyourcompany.com/learn/guides/5-how-to-give-feedback/5-how-to-prepare-for-a-one-on-one-meeting-as-an-employee/">How to Prepare for a One-on-One Meeting as an Employee&lt;/a>. There is no reason for being shy since what we discuss is private.&lt;/li>
+&lt;li>Urgent topics must not wait for a 1:1. Send a message and let&amp;rsquo;s talk.&lt;/li>
+&lt;/ul>
+&lt;h2 id="personal-quirks">Personal Quirks&lt;/h2>
+&lt;ul>
+&lt;li>I am available in the office generally between 9 AM and 5 PM. You will know via the Work From Home calendar if I am working from home (usually on Thursdays). We have an open WFH policy and if you are at home please let us know.&lt;/li>
+&lt;li>I value being on time. We are flexible about when/where you work but attending to events like Town Halls and Stand-ups is not optional. You should be present – unless you have a legitimate reason.&lt;/li>
+&lt;li>I tend to speak a bit louder and it sounds aggressive sometimes. It is not my intention and when you feel I crossed the line, let me know.&lt;/li>
+&lt;li>I work with headphones because it helps me to concentrate and I like to listen to the radio/music/podcasts. Sending me a message is probably better than calling my name / tapping my shoulders.&lt;/li>
+&lt;li>By the way, sending a message with a brief context of what you want to discuss helps me a lot. I help/work with different people/projects/codebases and as many information you give me in advance as easy is for me to provide what you need.&lt;/li>
+&lt;li>I may not have all the answers that you need. Sometimes I need to dig the codebase or go for a walk to give you a better answer.&lt;/li>
+&lt;li>Depending on how do you know a particular area or technology, I really expect that you tell me what is your plan, instead of waiting for me to offer a way for you.&lt;/li>
+&lt;li>I prefer to receive feedback that is actionable and in private.&lt;/li>
+&lt;/ul>
+&lt;h2 id="about-me">About me&lt;/h2>
+&lt;p>I wrote my first lines of HTML when I was 12. For a few years, I coded for fun until finding a way to do it full time. I moved to Vancouver / Canada in 2015. A few random facts:&lt;/p>
+&lt;ul>
+&lt;li>I have a reactive Shih-Tzu called Bento.&lt;/li>
+&lt;li>I have a small collection of Macs / iDevices, including a Macintosh Plus from 1987.&lt;/li>
+&lt;/ul></description></item></channel></rss>

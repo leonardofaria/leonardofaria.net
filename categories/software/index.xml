@@ -1,4 +1,436 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>software on Leonardo Faria</title><link>https://leonardofaria.net/categories/software/</link><description>Recent content in software on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 07 Oct 2011 22:59:30 -0300</lastBuildDate><atom:link href="https://leonardofaria.net/categories/software/index.xml" rel="self" type="application/rss+xml"/><item><title>eCPF no Mac</title><link>https://leonardofaria.net/2011/10/07/ecpf-no-mac/</link><pubDate>Fri, 07 Oct 2011 22:59:30 -0300</pubDate><guid>https://leonardofaria.net/2011/10/07/ecpf-no-mac/</guid><description>&lt;p>No meu trabalho preciso usar meu cartão eCPF para acessar um determinado sistema que estamos desenvolvendo. Tenho um cartão eCPF, emitido pelo Banco do Brasil e um leitor de cartões OmniKey 3021 e foi uma grande dor de cabeça configurá-lo no Mac. Não era para ser um problema, uma vez que você precisa apenas de um driver e um módulo para o Firefox.&lt;/p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>software on Leonardo Faria</title><link>https://leonardofaria.net/categories/software/</link><description>Recent content in software on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 20 Jan 2020 11:41:56 -0300</lastBuildDate><atom:link href="https://leonardofaria.net/categories/software/index.xml" rel="self" type="application/rss+xml"/><item><title>Terminal tips tweets</title><link>https://leonardofaria.net/2020/01/20/terminal-tips-tweets/</link><pubDate>Mon, 20 Jan 2020 11:41:56 -0300</pubDate><guid>https://leonardofaria.net/2020/01/20/terminal-tips-tweets/</guid><description>&lt;p>A while ago I started a &lt;a href="https://twitter.com/leozera/status/1090639374109138946">thread on Twitter&lt;/a> with a few terminal tips. There are lots of CLIs in NPM and they can be very handy in our daily work. Here they are and if you like them, &lt;a href="https://twitter.com/leozera">follow me&lt;/a> :)&lt;/p>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">1. list-scripts and npm-list-scripts give you a list of available npm script including what each script does. Useful for documentation:&lt;br>&lt;br>💻 npm i -g list-scripts npm-list-scripts&lt;br>🌎 &lt;a href="https://t.co/QvvFEpEMeQ">https://t.co/QvvFEpEMeQ&lt;/a> &lt;a href="https://t.co/6MFQXbHPLW">https://t.co/6MFQXbHPLW&lt;/a>&lt;a href="https://twitter.com/hashtag/terminal?src=hash&amp;amp;ref_src=twsrc%5Etfw">#terminal&lt;/a> &lt;a href="https://twitter.com/hashtag/npm?src=hash&amp;amp;ref_src=twsrc%5Etfw">#npm&lt;/a> &lt;a href="https://twitter.com/hashtag/cli?src=hash&amp;amp;ref_src=twsrc%5Etfw">#cli&lt;/a> &lt;a href="https://twitter.com/hashtag/protip?src=hash&amp;amp;ref_src=twsrc%5Etfw">#protip&lt;/a> &lt;a href="https://t.co/84dwGqVviX">pic.twitter.com/84dwGqVviX&lt;/a>&lt;/p>&amp;mdash; Leonardo Faria (@leozera) &lt;a href="https://twitter.com/leozera/status/1090639457118609408?ref_src=twsrc%5Etfw">January 30, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">2. ncu checks the packages in your package.json file and gives you major and minor package updates info&lt;br>&lt;br>💻 npm i -g npm-check-updates&lt;br>🌎 &lt;a href="https://t.co/H9NIGetGKy">https://t.co/H9NIGetGKy&lt;/a>&lt;a href="https://twitter.com/hashtag/terminal?src=hash&amp;amp;ref_src=twsrc%5Etfw">#terminal&lt;/a> &lt;a href="https://twitter.com/hashtag/npm?src=hash&amp;amp;ref_src=twsrc%5Etfw">#npm&lt;/a> &lt;a href="https://twitter.com/hashtag/cli?src=hash&amp;amp;ref_src=twsrc%5Etfw">#cli&lt;/a> &lt;a href="https://twitter.com/hashtag/protip?src=hash&amp;amp;ref_src=twsrc%5Etfw">#protip&lt;/a> &lt;a href="https://t.co/EPmx3YKJwE">pic.twitter.com/EPmx3YKJwE&lt;/a>&lt;/p>&amp;mdash; Leonardo Faria (@leozera) &lt;a href="https://twitter.com/leozera/status/1090639526840549382?ref_src=twsrc%5Etfw">January 30, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">3. npm-scripts-tree is helpful when you have scripts calling other scripts and you are lost trying to understand the dependencies between them. Really handy for documentation:&lt;br>&lt;br>💻 npm i -g npm-scripts-tree&lt;br>🌎 &lt;a href="https://t.co/4NVKocfDuY">https://t.co/4NVKocfDuY&lt;/a>&lt;a href="https://twitter.com/hashtag/terminal?src=hash&amp;amp;ref_src=twsrc%5Etfw">#terminal&lt;/a> &lt;a href="https://twitter.com/hashtag/npm?src=hash&amp;amp;ref_src=twsrc%5Etfw">#npm&lt;/a> &lt;a href="https://twitter.com/hashtag/cli?src=hash&amp;amp;ref_src=twsrc%5Etfw">#cli&lt;/a> &lt;a href="https://twitter.com/hashtag/protip?src=hash&amp;amp;ref_src=twsrc%5Etfw">#protip&lt;/a> &lt;a href="https://t.co/7NWn2FBPBK">pic.twitter.com/7NWn2FBPBK&lt;/a>&lt;/p>&amp;mdash; Leonardo Faria (@leozera) &lt;a href="https://twitter.com/leozera/status/1090639627822628865?ref_src=twsrc%5Etfw">January 30, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">4. space-hogs shows large directories - imagine a better du:&lt;br>&lt;br>💻 npm i -g space-hogs&lt;br>🌎 &lt;a href="https://t.co/xPlGzYjLJk">https://t.co/xPlGzYjLJk&lt;/a>&lt;a href="https://twitter.com/hashtag/terminal?src=hash&amp;amp;ref_src=twsrc%5Etfw">#terminal&lt;/a> &lt;a href="https://twitter.com/hashtag/npm?src=hash&amp;amp;ref_src=twsrc%5Etfw">#npm&lt;/a> &lt;a href="https://twitter.com/hashtag/cli?src=hash&amp;amp;ref_src=twsrc%5Etfw">#cli&lt;/a> &lt;a href="https://twitter.com/hashtag/protip?src=hash&amp;amp;ref_src=twsrc%5Etfw">#protip&lt;/a> &lt;a href="https://t.co/HKZQP9NMgq">pic.twitter.com/HKZQP9NMgq&lt;/a>&lt;/p>&amp;mdash; Leonardo Faria (@leozera) &lt;a href="https://twitter.com/leozera/status/1090639691135610881?ref_src=twsrc%5Etfw">January 30, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">5. see is an improved cat (aka syntax highlight)&lt;br>&lt;br>💻 npm i -g see-cli&lt;br>🌎 &lt;a href="https://t.co/bEAjBJjhGt">https://t.co/bEAjBJjhGt&lt;/a>&lt;a href="https://twitter.com/hashtag/terminal?src=hash&amp;amp;ref_src=twsrc%5Etfw">#terminal&lt;/a> &lt;a href="https://twitter.com/hashtag/npm?src=hash&amp;amp;ref_src=twsrc%5Etfw">#npm&lt;/a> &lt;a href="https://twitter.com/hashtag/cli?src=hash&amp;amp;ref_src=twsrc%5Etfw">#cli&lt;/a> &lt;a href="https://twitter.com/hashtag/protip?src=hash&amp;amp;ref_src=twsrc%5Etfw">#protip&lt;/a> &lt;a href="https://t.co/o6rx8MZbel">pic.twitter.com/o6rx8MZbel&lt;/a>&lt;/p>&amp;mdash; Leonardo Faria (@leozera) &lt;a href="https://twitter.com/leozera/status/1090639798354665472?ref_src=twsrc%5Etfw">January 30, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">6. colorls is a ruby script that changes the ls output with color and icons&lt;br>&lt;br>💻 gem install colorls&lt;br>🌎 &lt;a href="https://t.co/9F3n6v3FnA">https://t.co/9F3n6v3FnA&lt;/a>&lt;a href="https://twitter.com/hashtag/terminal?src=hash&amp;amp;ref_src=twsrc%5Etfw">#terminal&lt;/a> &lt;a href="https://twitter.com/hashtag/ruby?src=hash&amp;amp;ref_src=twsrc%5Etfw">#ruby&lt;/a> &lt;a href="https://twitter.com/hashtag/cli?src=hash&amp;amp;ref_src=twsrc%5Etfw">#cli&lt;/a> &lt;a href="https://twitter.com/hashtag/protip?src=hash&amp;amp;ref_src=twsrc%5Etfw">#protip&lt;/a> &lt;a href="https://t.co/NF675JfdPx">pic.twitter.com/NF675JfdPx&lt;/a>&lt;/p>&amp;mdash; Leonardo Faria (@leozera) &lt;a href="https://twitter.com/leozera/status/1090639885931753475?ref_src=twsrc%5Etfw">January 30, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">7. You can use repeat in zsh and the speed-test cli from &lt;a href="https://twitter.com/sindresorhus?ref_src=twsrc%5Etfw">@sindresorhus&lt;/a> to keep monitoring your internet speed&lt;br>&lt;br>💻 repeat 10000 { date +&amp;quot;%T&amp;quot;; speed-test; sleep 1 }&lt;br>🌎 &lt;a href="https://t.co/BP4Rj4qI5r">https://t.co/BP4Rj4qI5r&lt;/a> &lt;a href="https://t.co/22j1YV6Kf1">pic.twitter.com/22j1YV6Kf1&lt;/a>&lt;/p>&amp;mdash; Leonardo Faria (@leozera) &lt;a href="https://twitter.com/leozera/status/1090640016970117120?ref_src=twsrc%5Etfw">January 30, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">8. You can configure git to push to the current branch:&lt;br>&lt;br>git config --global push.default current&lt;br>&lt;br>So instead of:&lt;br>git push origin your-feature-branch&lt;br>You can just do:&lt;br>git push &lt;a href="https://twitter.com/hashtag/protip?src=hash&amp;amp;ref_src=twsrc%5Etfw">#protip&lt;/a> &lt;a href="https://twitter.com/hashtag/terminal?src=hash&amp;amp;ref_src=twsrc%5Etfw">#terminal&lt;/a> &lt;a href="https://twitter.com/hashtag/git?src=hash&amp;amp;ref_src=twsrc%5Etfw">#git&lt;/a>&lt;/p>&amp;mdash; Leonardo Faria (@leozera) &lt;a href="https://twitter.com/leozera/status/1093949292040019968?ref_src=twsrc%5Etfw">February 8, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">9. Writing a PR? Maybe you want a list of your commits: &lt;br>&lt;br>git log origin/master..HEAD --no-merges --pretty=format:&amp;#39;- %s&amp;#39; --reverse&lt;a href="https://twitter.com/hashtag/protip?src=hash&amp;amp;ref_src=twsrc%5Etfw">#protip&lt;/a> &lt;a href="https://twitter.com/hashtag/terminal?src=hash&amp;amp;ref_src=twsrc%5Etfw">#terminal&lt;/a> &lt;a href="https://twitter.com/hashtag/git?src=hash&amp;amp;ref_src=twsrc%5Etfw">#git&lt;/a> &lt;a href="https://twitter.com/github?ref_src=twsrc%5Etfw">@github&lt;/a> &lt;a href="https://t.co/od8e8LPpPa">pic.twitter.com/od8e8LPpPa&lt;/a>&lt;/p>&amp;mdash; Leonardo Faria (@leozera) &lt;a href="https://twitter.com/leozera/status/1180601156889804801?ref_src=twsrc%5Etfw">October 5, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">10. Running out of space? Maybe too many node_modules folders:&lt;br>&lt;br>💻 npx npkill&lt;br>🌎 &lt;a href="https://t.co/zyj9s6eCj9">https://t.co/zyj9s6eCj9&lt;/a>&lt;br>&lt;br>Saved 10GB+ here ~ &lt;a href="https://twitter.com/hashtag/terminal?src=hash&amp;amp;ref_src=twsrc%5Etfw">#terminal&lt;/a> &lt;a href="https://twitter.com/hashtag/npm?src=hash&amp;amp;ref_src=twsrc%5Etfw">#npm&lt;/a> &lt;a href="https://twitter.com/hashtag/cli?src=hash&amp;amp;ref_src=twsrc%5Etfw">#cli&lt;/a> &lt;a href="https://twitter.com/hashtag/protip?src=hash&amp;amp;ref_src=twsrc%5Etfw">#protip&lt;/a> &lt;a href="https://t.co/y31i7gS9af">pic.twitter.com/y31i7gS9af&lt;/a>&lt;/p>&amp;mdash; Leonardo Faria (@leozera) &lt;a href="https://twitter.com/leozera/status/1215393238720188416?ref_src=twsrc%5Etfw">January 9, 2020&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>My list of GitHub tips and third-party apps</title><link>https://leonardofaria.net/2019/09/03/my-list-of-github-tips-and-third-party-apps/</link><pubDate>Tue, 03 Sep 2019 11:42:19 -0300</pubDate><guid>https://leonardofaria.net/2019/09/03/my-list-of-github-tips-and-third-party-apps/</guid><description>&lt;p>I work at Thinkific with 20+ other developers (we are &lt;a href="http://bit.ly/thnk-eng-team-lead">hiring&lt;/a> &lt;a href="http://bit.ly/thnk-eng-lead">for&lt;/a> &lt;a href="http://bit.ly/thnk-senior-front-end-engineer">multiple&lt;/a> positions) in different codebases. GitHub is part of our toolkit, and I decided to write a post sharing a few Chrome extensions, integrations and third-party apps that help me be productive as an individual contributor and organized as code reviewer and team lead.&lt;/p>
+&lt;h2 id="chrome-extensions">Chrome extensions&lt;/h2>
+&lt;h3 id="refined-githubhttpschromegooglecomwebstoredetailrefined-githubhlepfoohegkhhmjieoechaddaejaokhfhlen">&lt;a href="https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en">Refined GitHub&lt;/a>&lt;/h3>
+&lt;p>&lt;a href="https://sindresorhus.com/">Sindre Sorhus&lt;/a> extension brings a &lt;a href="https://github.com/sindresorhus/refined-github#repositories">massive list of improvements&lt;/a> to GitHub UI and many of them have become part of the product after a bit.&lt;/p>
+&lt;h3 id="better-pull-request-for-githubhttpschromegooglecomwebstoredetailbetter-pull-request-for-gnfhdjopbhlggibjlimhdbogflgmbiahchlen">&lt;a href="https://chrome.google.com/webstore/detail/better-pull-request-for-g/nfhdjopbhlggibjlimhdbogflgmbiahc?hl=en">Better Pull Request for GitHub&lt;/a>&lt;/h3>
+&lt;p>This extension list project files in a tree. This is quite useful when you have a big pull request and you need to go back and forth to understand better what is going on.&lt;figure class="wp-block-image">&lt;/p>
+&lt;p>&lt;img src="https://leonardofaria.net/wp-content/uploads/2019/09/better-pull-request-for-github.jpg" alt="" class="wp-image-1984" /> &lt;/figure>&lt;/p>
+&lt;h3 id="github-hovercardhttpschromegooglecomwebstoredetailgithub-hovercardmmoahbbnojgkclgceahhakhnccimnplkhlen">&lt;a href="https://chrome.google.com/webstore/detail/github-hovercard/mmoahbbnojgkclgceahhakhnccimnplk?hl=en">GitHub Hovercard&lt;/a>&lt;/h3>
+&lt;p>This extension shows info about a user, project, issue or commit. It is a cool UI trick like Facebook does. This extension even works for private repositories, as long as you have a valid token to grab the information of the service.&lt;figure class="wp-block-image">&lt;/p>
+&lt;p>&lt;img src="https://leonardofaria.net/wp-content/uploads/2019/09/hover-cards.jpg" alt="" class="wp-image-1986" /> &lt;/figure>&lt;/p>
+&lt;h3 id="github-repository-sizehttpschromegooglecomwebstoredetailgithub-repository-sizeapnjnioapinblneaedefcnopcjepgkcihlen">&lt;a href="https://chrome.google.com/webstore/detail/github-repository-size/apnjnioapinblneaedefcnopcjepgkci?hl=en">GitHub Repository Size&lt;/a>&lt;/h3>
+&lt;p>This extension automatically adds the repository size and individual files size&lt;/p>
+&lt;h3 id="file-icon-for-github-and-gitlabhttpschromegooglecomwebstoredetailfile-icon-for-github-andficfmibkjjnpogdcfhfokmihanoldbfe">&lt;a href="https://chrome.google.com/webstore/detail/file-icon-for-github-and/ficfmibkjjnpogdcfhfokmihanoldbfe">File Icon for GitHub and GitLab&lt;/a>&lt;/h3>
+&lt;p>Not a lot to say here :)&lt;/p>
+&lt;h2 id="integrations">Integrations&lt;/h2>
+&lt;h3 id="pull-pandahttpspullpandacom">&lt;a href="https://pullpanda.com/">Pull Panda&lt;/a>&lt;/h3>
+&lt;p>Pull Panda is an integration GitHub acquired &lt;a href="https://pullpanda.com/github">a few months ago&lt;/a> and they have added for free in the product. It is very handy because you can map GitHub users to Slack users and then they will get inside Slack all the information about the work they are following in Slack. Pull Panda delivers comments in PRS and even tell you about git conflicts (I love and hate this one).&lt;/p>
+&lt;p>Pull Panda can also spot bottlenecks, show who are the ones most pushing/reviewing code and even assign automatically people to Pull Requests.&lt;/p>
+&lt;h2 id="macos-apps">macOS apps&lt;/h2>
+&lt;h3 id="gitifyhttpswwwgitifyio">&lt;a href="https://www.gitify.io/">Gitify&lt;/a>&lt;/h3>
+&lt;p>Gitify lives in your Mac menu bar and it is quite simple to understand. If the icon is green, you have a notification! It is also cool to mention the app is &lt;a href="https://github.com/manosim/gitify">open-source&lt;/a> (Electron-based, if you are curious).&lt;/p>
+&lt;h3 id="questshttpssteamclockcomquests">&lt;a href="https://steamclock.com/quests/">Quests&lt;/a>&lt;/h3>
+&lt;p>Quests is similar to Gitify but one important difference here is Quest also supports GitLab.&lt;/p>
+&lt;h2 id="ios-apps">iOS apps&lt;/h2>
+&lt;h3 id="githawkhttpgithawkcom">&lt;a href="http://githawk.com/">Githawk&lt;/a>&lt;/h3>
+&lt;p>Gitwalk is my favourite iOS app for GitHub. It lists pull requests in a friendly way and I like how you can see the files affected in the PR and all conversation in place. If you need to take a lot at a pull request when you are not in front of the computer, this app is for you!&lt;/p>
+&lt;p>&lt;em>What are your GitHub tricks? Let me know in the comments :)&lt;/em>&lt;/p></description></item><item><title>Another dotfiles repository</title><link>https://leonardofaria.net/2018/06/16/another-dotfiles-repository/</link><pubDate>Sat, 16 Jun 2018 18:42:55 -0300</pubDate><guid>https://leonardofaria.net/2018/06/16/another-dotfiles-repository/</guid><description>&lt;p>A few days weeks I got a MacBook Air as secondary machine. Since its SSD is smaller than my main Mac I couldn’t use Time Machine. It was definitely a good time to finally create my &lt;a href="https://github.com/leonardofaria/dotfiles">dotfiles&lt;/a> repository. My repository is based in &lt;a href="https://github.com/webpro/dotfiles/">webpro/dotfiles&lt;/a> (you may want to check it out his repo to understand this one if you feel lost).&lt;/p>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/leonardofaria/dotfiles/master/screenshot.jpg" alt="">&lt;/p>
+&lt;h2 id="how-to-use-it">How to use it?&lt;/h2>
+&lt;ul>
+&lt;li>Make sure that you have an updated macOS and Command Line Tools for Xcode: &lt;code>sudo softwareupdate -i -a &amp;amp;&amp;amp; xcode-select --install&lt;/code>&lt;/li>
+&lt;li>Clone the repo in your home directory: &lt;code>cd ~ &amp;amp; git clone git@github.com:leonardofaria/dotfiles.git ~/.dotfiles&lt;/code>&lt;/li>
+&lt;li>Run &lt;code>./install.sh&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="a-idwhat_is_installed_10awhat-is-installed">&lt;a id="What_is_installed_10">&lt;/a>What is installed?&lt;/h2>
+&lt;h3 id="a-idinstalled_via_brew_12ainstalled-via-brew">&lt;a id="Installed_via_brew_12">&lt;/a>Installed via brew&lt;/h3>
+&lt;blockquote>
+&lt;p>Check the description of the less popular apps&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="http://brewformulas.org/Bats">bats&lt;/a> – Bash Automated Testing System&lt;/li>
+&lt;li>&lt;a href="https://github.com/kcrawford/dockutil">dockutil&lt;/a> – Command line tool for managing dock items&lt;/li>
+&lt;li>&lt;a href="https://the.exa.website/">exa&lt;/a> – A modern replacement for &lt;code>ls&lt;/code>&lt;/li>
+&lt;li>ffmpeg&lt;/li>
+&lt;li>git&lt;/li>
+&lt;li>git-extras&lt;/li>
+&lt;li>htop&lt;/li>
+&lt;li>&lt;a href="https://github.com/jakubroztocil/httpie">httpie&lt;/a> – A Modern command line HTTP client&lt;/li>
+&lt;li>hugo&lt;/li>
+&lt;li>imagemagick&lt;/li>
+&lt;li>mysql&lt;/li>
+&lt;li>&lt;a href="https://github.com/dylanaraps/neofetch">neofetch&lt;/a> – A command-line system information tool&lt;/li>
+&lt;li>nginx&lt;/li>
+&lt;li>python3&lt;/li>
+&lt;li>sqlite&lt;/li>
+&lt;li>tree&lt;/li>
+&lt;li>&lt;a href="https://theunarchiver.com/command-line">unar&lt;/a> – A easy way for unarchiving files&lt;/li>
+&lt;li>wget&lt;/li>
+&lt;li>wifi-password&lt;/li>
+&lt;li>yarn&lt;/li>
+&lt;/ul>
+&lt;h3 id="installed-via-brew-cask">Installed via brew cask&lt;/h3>
+&lt;blockquote>
+&lt;p>Using brew cask to install Mac app definitely save you a couple hours of browsing&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>appcleaner&lt;/li>
+&lt;li>atom&lt;/li>
+&lt;li>coconutbattery&lt;/li>
+&lt;li>docker&lt;/li>
+&lt;li>firefox&lt;/li>
+&lt;li>font-meslo-for-powerline&lt;/li>
+&lt;li>geekbench&lt;/li>
+&lt;li>gitify&lt;/li>
+&lt;li>google-chrome&lt;/li>
+&lt;li>iterm2&lt;/li>
+&lt;li>launchrocket&lt;/li>
+&lt;li>sequel-pro&lt;/li>
+&lt;li>slack&lt;/li>
+&lt;li>sourcetree&lt;/li>
+&lt;li>spectacle&lt;/li>
+&lt;li>spotify&lt;/li>
+&lt;li>tableplus&lt;/li>
+&lt;li>the-unarchiver&lt;/li>
+&lt;li>transmission&lt;/li>
+&lt;li>visual-studio-code&lt;/li>
+&lt;li>vlc&lt;/li>
+&lt;/ul>
+&lt;h3 id="a-idquick_look_plugins_63aquick-look-plugins">&lt;a id="Quick_Look_plugins_63">&lt;/a>Quick Look plugins&lt;/h3>
+&lt;ul>
+&lt;li>betterzip&lt;/li>
+&lt;li>qladdict&lt;/li>
+&lt;li>qlcolorcode&lt;/li>
+&lt;li>qlimagesize&lt;/li>
+&lt;li>qlmarkdown&lt;/li>
+&lt;li>qlstephen&lt;/li>
+&lt;li>qlvideo&lt;/li>
+&lt;li>quicklook-csv&lt;/li>
+&lt;li>quicklook-json&lt;/li>
+&lt;li>suspicious-package&lt;/li>
+&lt;li>webpquicklook&lt;/li>
+&lt;/ul>
+&lt;h3 id="other-stuff-also-installed">Other stuff also installed&lt;/h3>
+&lt;ul>
+&lt;li>Node 8 via &lt;code>nvm&lt;/code>, with a few global packages:
+&lt;ul>
+&lt;li>&lt;a href="https://www.npmjs.com/package/dockly">dockly&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.npmjs.com/package/list-scripts">list-scripts&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.npmjs.com/package/npm-check-updates">npm-check-updates&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.npmjs.com/package/npm-scripts-tree">npm-scripts-tree&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.npmjs.com/package/script-list">script-list&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.npmjs.com/package/space-hogs">space-hogs&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.npmjs.com/package/speed-test">speed-test&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Ruby 2.5.1 via &lt;code>rvm&lt;/code>&lt;/li>
+&lt;li>&lt;a href="https://github.com/robbyrussell/oh-my-zsh">Oh my zsh&lt;/a>, with &lt;a href="https://github.com/bhilburn/powerlevel9k">powerlevel9k&lt;/a> theme and git, rails, ruby, npm and osx plugins&lt;/li>
+&lt;/ul>
+&lt;h2 id="mac-defaults">Mac Defaults&lt;/h2>
+&lt;p>There are lots of customizable Mac settings. Check &lt;a href="https://github.com/leonardofaria/dotfiles/blob/master/macos/defaults.sh">&lt;code>macos/defaults.sh&lt;/code>&lt;/a> for all details.&lt;/p>
+&lt;h3 id="dock-items">Dock items&lt;/h3>
+&lt;p>You can update your dock running: &lt;code>dotfiles dock&lt;/code>.&lt;/p>
+&lt;p>Note: this will remove all your current dock items.&lt;/p>
+&lt;h2 id="a-idwhat_is_not_done_automatically_100awhat-is-not-done-automatically">&lt;a id="What_is_not_done_automatically_100">&lt;/a>What is not done automatically&lt;/h2>
+&lt;h3 id="a-idextra_environment_variables_102aextra-environment-variables">&lt;a id="Extra_environment_variables_102">&lt;/a>Extra environment variables&lt;/h3>
+&lt;p>Add your extra information environment variables in &lt;code>system/.custom&lt;/code>.&lt;/p>
+&lt;h3 id="a-iditerm_2_106aiterm-2">&lt;a id="iTerm_2_106">&lt;/a>iTerm 2&lt;/h3>
+&lt;p>Open Preferences and in General, check: “Load Preferences from a custom folder or URL”. Point the folder to &lt;code>macos&lt;/code> – There is a file there called &lt;code>com.googlecode.iterm2.plist&lt;/code> with all setup.&lt;/p></description></item><item><title>Testing tools to track my work activity</title><link>https://leonardofaria.net/2018/05/06/testing-tools-to-track-my-work-activity/</link><pubDate>Sun, 06 May 2018 23:23:30 -0300</pubDate><guid>https://leonardofaria.net/2018/05/06/testing-tools-to-track-my-work-activity/</guid><description>&lt;p>For a few weeks I have been using two tools to map my work activity. Since my work involves &lt;a href="https://www.learningapprentice.com/maker-mode-manager-mode/">manager and maker modes&lt;/a>, I am trying to figure out how much time I spent in each of them and possibly how to remove distractions. A co-worker recommended &lt;a href="https://www.rescuetime.com/ref/1808210">RescueTime&lt;/a> and &lt;a href="https://wakatime.com/i/cbdf18ed-26ac-43b6-936c-d006efa2bec0">WakaTime&lt;/a> and here are my comments.&lt;/p>
+&lt;h3 id="rescuetime">RescueTime&lt;/h3>
+&lt;p>RescueTime home page says &lt;em>“With so many distractions and possibilities in your digital life, it&amp;rsquo;s easy to get scattered”&lt;/em> – yes, I know – and &lt;em>“RescueTime helps you understand your daily habits so you can focus and be more productive”&lt;/em>. Yes, they really helped me understand my daily habits.&lt;/p>
+&lt;p>I am using the Lite version of the app. Every week I get an email like the image below:&lt;/p>
+&lt;p>&lt;a href="https://www.rescuetime.com/ref/1808210">&lt;img src="https://leonardofaria.net/wp-content/uploads/2018/05/rescuetime-1024x854.jpg" alt="">&lt;/a>&lt;/p>
+&lt;p>This email &lt;em>per si&lt;/em> gives me a lot of detailed information. You can schedule when the app tracks your activity – in my case is between 8AM and 6PM, which gives me good coverage of my routine. After a few weeks, you unlock new reports, analyzing communication and most productive vs less productive days.&lt;/p>
+&lt;p>&lt;a href="https://www.rescuetime.com/ref/1808210">&lt;img src="https://leonardofaria.net/wp-content/uploads/2018/05/rescuetime-report-1024x508.png" alt="">&lt;/a>&lt;/p>
+&lt;p>We never know how much time we spend on Slack and similar apps. Now we know the exact impact of these tools in our routines.&lt;/p>
+&lt;h3 id="wakatime">WakaTime&lt;/h3>
+&lt;p>While RescueTime tracks your apps and websites, WakaTime tracks your code activity. You install a plugin in your favourite editor and done! After a while you will receive weekly emails and your data will be organized in a nice dashboard per date/time, project, language, editor and even OS.&lt;/p>
+&lt;p>&lt;a href="https://wakatime.com/i/cbdf18ed-26ac-43b6-936c-d006efa2bec0">&lt;img src="https://leonardofaria.net/wp-content/uploads/2018/05/wakatime-1024x885.jpg" alt="">&lt;/a>&lt;/p>
+&lt;p>I have no information here to change my work but at least it is interesting to see how I spend my time coding.&lt;/p></description></item><item><title>Useful apps that I use daily – 2017 edition</title><link>https://leonardofaria.net/2017/12/14/useful-apps-that-i-use-daily-2017-edition/</link><pubDate>Thu, 14 Dec 2017 05:09:20 -0200</pubDate><guid>https://leonardofaria.net/2017/12/14/useful-apps-that-i-use-daily-2017-edition/</guid><description>&lt;p>2 years ago I wrote a &lt;a href="https://leonardofaria.net/2015/09/17/useful-apps-that-i-use-daily/">post&lt;/a> about my tooling and here I am again, 2017 edition. I decided to write again because I keep listening to podcasts with Sick Picks and I also have my Sick Picks :)&lt;/p>
+&lt;h2 id="dev-tools">Dev tools&lt;/h2>
+&lt;h3 id="editor-atom">Editor: Atom&lt;/h3>
+&lt;p>I have been using Atom for a while. Despite I started testing VS Code in the latest months, I returned to Atom because VS Code doesn&amp;rsquo;t separate &lt;a href="https://github.com/Microsoft/vscode/issues/25986">UI theme from syntax theme&lt;/a> – you may not care about this, but I am a fan of a light UI and a dark code highlight.&lt;/p>
+&lt;p>&lt;a href="https://gist.github.com/leonardofaria/982b8055af2d6d02116b03950bbf0583">&lt;img src="https://leonardofaria.net/wp-content/uploads/2017/12/screenshot-atom.png" alt="My Atom">&lt;/a>&lt;/p>
+&lt;p>Here are the packages that I have installed:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://atom.io/packages/atom-beautify">atom-beautify&lt;/a>: Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, Coldfusion, SQL, and more in Atom&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/atom-ternjs">atom-ternjs&lt;/a>: JavaScript code intelligence for atom with Tern. Adds support for ES5, ES6 (JavaScript 2015), Node.js, jQuery &amp;amp; Angular. Extendable via plugins. Uses suggestion provider by autocomplete-plus.&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/auto-update-packages">auto-update-packages&lt;/a>: Keep your Atom packages up to date.&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/css-declaration-sorter">css-declaration-sorter&lt;/a>: Sorts CSS declarations fast and automatically in a certain order.&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/cobalt2-syntax">cobalt2-syntax&lt;/a>: An Atom theme based on our old blue friend cobalt.&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/custom-title">custom-title&lt;/a>: Set your own template for Atom&amp;rsquo;s title bar.&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/editorconfig">editorconfig&lt;/a>: Helps developers maintain consistent coding styles between different editors&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/emmet">emmet&lt;/a>: Emmet – the essential tool for web developers&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/emmet-jsx-css-modules">emmet-jsx-css-modules&lt;/a>: Extends Emmet&amp;rsquo;s JSX expansions to use CSS modules.&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/file-icons">file-icons&lt;/a>: Assign file extension icons and colours for improved visual grepping&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/fonts">fonts&lt;/a>: Lots of monospace fonts.&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/highlight-selected">highlight-selected&lt;/a>: Highlights the current word selected when double clicking&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/lines">lines&lt;/a>: Add extra operations to lines: Sort, Reverse, Unique and Shuffle&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/markdown-preview-plus">markdown-preview-plus&lt;/a>: Markdown Preview + Community Features&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/merge-conflicts">merge-conflicts&lt;/a>: Resolve git conflicts within Atom&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/native-ui">native-ui&lt;/a>: Experience better coding in macOS Sierra.&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/pigments">pigments&lt;/a>: A package to display colors in project and files.&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/rails-open-rspec">rails-open-rspec&lt;/a>: open rspec file by current file.&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/ruby-test">ruby-test&lt;/a>: Run Ruby tests, Rspec examples, and Cucumber features from Atom&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/sublime-style-column-selection">sublime-style-column-selection&lt;/a>: Enable Sublime style ‘Column Selection&amp;rsquo;. Just hold ‘alt&amp;rsquo; while you select, or select using your middle mouse button. Also similar to Texmate&amp;rsquo;s ‘Multiple Carets&amp;rsquo;, or BBEdit&amp;rsquo;s ‘Block Select&amp;rsquo;&lt;/li>
+&lt;li>&lt;a href="https://atom.io/packages/sync-settings">sync-settings&lt;/a>: Synchronize package settings, keymap and installed packages&lt;/li>
+&lt;/ul>
+&lt;p>Note: I didn&amp;rsquo;t add in the list linters and language support because it depends basically on the devs choice. Also, since I use sync-settings, you can check &lt;a href="https://gist.github.com/leonardofaria/982b8055af2d6d02116b03950bbf0583">my editor settings on Gist&lt;/a>.&lt;/p>
+&lt;h3 id="terminal-iterm2--oh-my-zsh">Terminal: iTerm2 + oh-my-zsh&lt;/h3>
+&lt;p>I am using &lt;strong>&lt;a href="https://www.iterm2.com/">iTerm2&lt;/a>&lt;/strong> for a long time with Zsh and &lt;strong>&lt;a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh&lt;/a>&lt;/strong>. If you are not familiar with these tools, I strongly suggest watching Wes Bos &lt;strong>&lt;a href="https://commandlinepoweruser.com/">Command Line Power User&lt;/a>&lt;/strong> free videos.&lt;/p>
+&lt;h3 id="github-gitify">Github: Gitify&lt;/h3>
+&lt;p>&lt;strong>&lt;a href="http://www.gitify.io">Gitify&lt;/a>&lt;/strong> is an app on the menubar that brings Github notifications. I know, there are email notifications or Chrome extensions but what I like in Gitify: it just works. New notification: icon color change in the menubar.&lt;/p>
+&lt;center>
+&lt;a href="http://www.gitify.io">&lt;img src="https://leonardofaria.net/wp-content/uploads/2017/12/screenshot-gitify.png" alt="" width="500" height="342" class="aligncenter size-full wp-image-1844" srcset="https://leonardofaria.net/wp-content/uploads/2017/12/screenshot-gitify.png 500w, https://leonardofaria.net/wp-content/uploads/2017/12/screenshot-gitify-300x205.png 300w" sizes="(max-width: 500px) 100vw, 500px" />&lt;/a>
+&lt;/center>
+&lt;p>&lt;img src="https://leonardofaria.net/wp-content/uploads/2017/12/screenshot-codehub.png" width="40%" align="right" />&lt;/p>
+&lt;h3 id="github-codehub">Github: Codehub&lt;/h3>
+&lt;p>&lt;strong>&lt;a href="http://codehub-app.com/">CodeHub&lt;/a>&lt;/strong> is how I get connected to my GitHub profile out of computer. Again, I am not a fan of a full inbox and it is easy to browse the Pull Request that I am participating. You may need to in-app buy the Pro version to get access to private repositories.&lt;/p>
+&lt;h2 id="database-related-tools">Database-related tools&lt;/h2>
+&lt;p>&lt;strong>&lt;a href="https://www.sequelpro.com/">Sequel Pro&lt;/a>&lt;/strong> is a beautiful and open-source app to handle MySQL databases. You can save your favourite connections and queries.&lt;/p>
+&lt;p>If you want to handle Postgres you may need &lt;strong>&lt;a href="http://www.psequel.com/">PSequel&lt;/a>&lt;/strong> or &lt;strong>&lt;a href="https://tableplus.io">TablePlus&lt;/a>&lt;/strong>. Why two apps? PSequel gets job done but I noticed that I can&amp;rsquo;t edit PostgreSQL JSON types fields, which is handled by TablePlus. I am probably going to switch to only TablePlus soon since the UI is much better.&lt;/p>
+&lt;p>&lt;a href="https://tableplus.io/">&lt;img src="https://leonardofaria.net/wp-content/uploads/2017/12/screenshot-tableplus.png?ss" alt="">&lt;/a>&lt;/p>
+&lt;p>Last but not least, &lt;strong>&lt;a href="https://www.tadviewer.com/">Tad&lt;/a>&lt;/strong> is useful to deal with CSVs.&lt;/p>
+&lt;h2 id="other-tools">Other tools&lt;/h2>
+&lt;p>&lt;strong>&lt;a href="https://my.cl.ly/r/0f0P0e3g1O0x2k18">CloudApp&lt;/a>&lt;/strong> is one of many apps to store screenshots and short videos. What made choose it is the ability to set a custom domain for your files, which is quite handy.&lt;/p>
+&lt;p>&lt;strong>&lt;a href="https://meetfranz.com">Franz&lt;/a>&lt;/strong> is useful because it groups all your Slacks, Messenger, Whatsapp, Telegram and everything else in one single window.&lt;/p>
+&lt;p>&lt;strong>&lt;a href="https://github.com/jimbojsb/launchrocket">LaunchRocket&lt;/a>&lt;/strong> is definitely an app that you need to install if you install services via Homebrew. It searches services in the Homebrew folder and list them inside the System Preferences.&lt;/p>
+&lt;p>&lt;a href="https://github.com/jimbojsb/launchrocket">&lt;img src="https://leonardofaria.net/wp-content/uploads/2017/12/screenshot-launchrocket.png" alt="launchrocket">&lt;/a>&lt;/p>
+&lt;p>&lt;strong>&lt;a href="https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/">MenuMeters&lt;/a>&lt;/strong> adds in the menubar the CPU usage. &lt;a href="https://bjango.com/mac/istatmenus/">iStat Menus&lt;/a> is probably the most famous and it deliveries much more stuff but I want to keep this simple.&lt;/p>
+&lt;p>&lt;strong>&lt;a href="https://www.spectacleapp.com">Spectacle&lt;/a>&lt;/strong> is an &lt;a href="https://github.com/eczarny/spectacle">open source&lt;/a> window control app via shortcuts. Since I use a 4K display is quite handy having all windows in place.&lt;/p>
+&lt;p>&lt;strong>&lt;a href="https://www.sourcetreeapp.com/">SourceTree&lt;/a>&lt;/strong> is my favourite Git GUI because it is friendly and free. It helps me a lot interacting with my repositories.&lt;/p></description></item><item><title>Cloudready or how to get a Chrome OS in a non-Chromebook laptop</title><link>https://leonardofaria.net/2016/12/29/cloudready-or-how-to-get-a-chrome-os-in-a-non-chromebook-laptop/</link><pubDate>Thu, 29 Dec 2016 16:36:55 -0200</pubDate><guid>https://leonardofaria.net/2016/12/29/cloudready-or-how-to-get-a-chrome-os-in-a-non-chromebook-laptop/</guid><description>&lt;p>Few months ago I saw in The Verge a &lt;a href="http://www.theverge.com/2016/3/7/11173836/neverware-cloudready-how-to-convert-pc-into-chromebook-free">post&lt;/a> about &lt;a href="https://www.neverware.com/">CloudReady&lt;/a>. CloudReady is a remake of Chromium OS ready to go in old PCs or Macs. The company behind the product sells its solutions/support to organizations interested in keeping using their hardware. It&amp;rsquo;s really interesting.&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/NAakr95sLOI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;p>I am writing this post because my wife has an old Samsung laptop and I finally found a time to give a chance to CloudReady. Her laptop was initially running Windows 7 and it was updated to Windows 10. The idea was using CloudReady in another partition and using Grub to handle the boot process like any Linux distribution.&lt;/p>
+&lt;p>Unfortunately, this process was more difficult that I thought. In fact CloudReady supports &lt;a href="https://guide.neverware.com/install-cloudready/#select-dual-boot-or-standalone">dual-boot installation&lt;/a> but there are few details to pay attention:&lt;/p>
+&lt;ul>
+&lt;li>If you are using an old computer, you probably need to convert Windows BIOS (MBR) to UEFI. I am not going to describe this once Microsoft Technet has a &lt;a href="http://social.technet.microsoft.com/wiki/contents/articles/14286.converting-windows-bios-installation-to-uefi.aspx">detailed article&lt;/a> about it.&lt;/li>
+&lt;li>I initially partitioned the HDD in 1 partition for Windows and I left unlocated space for CloudReady. Windows 10 was installed in its partition without problems.&lt;/li>
+&lt;li>The last step was booting CloudReady from a Flash Drive and proceding the installation according to its &lt;a href="https://guide.neverware.com/critical-requirements/">documentation&lt;/a> The dual-boot worked like a charm. &lt;/ul>&lt;/li>
+&lt;/ul>
+&lt;p>My first impression is that CloudReady is faster and smooth than Windows. In addition, there are no infinite updates, malwares and all the crappy things that we are used to seeing in Windows. It is definitely a good way to bring to life again an old computer. One bad thing that happened it that CloudReady stopped working and I needed to redo all the installation process.&lt;/p></description></item><item><title>Excluding folders from indexing in Sublime</title><link>https://leonardofaria.net/2016/05/07/excluding-folders-from-indexing-in-sublime/</link><pubDate>Sat, 07 May 2016 01:07:12 -0300</pubDate><guid>https://leonardofaria.net/2016/05/07/excluding-folders-from-indexing-in-sublime/</guid><description>&lt;p>Sometimes we work in projects with tons of Javascript dependencies. Folders like &lt;code>node_modules&lt;/code> and &lt;code>bower_components&lt;/code> are a pain in the neck because every time that we need to find something in the project the content of these folders will be used in the search.&lt;/p>
+&lt;p>Sublime offers 2 settings to hide these files from the index. First of all, open the User Preferences (Preferences -&amp;gt; Settings – User):&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>binary_file_patterns&lt;/code>: This option excludes files from the index but keep them in the sidebar.&lt;/li>
+&lt;li>&lt;code>folder_exclude_patterns&lt;/code>: This option excludes files from the index and sidebar. This is why, for example, you don&amp;rsquo;t see the &lt;code>.git&lt;/code> folder in a project.&lt;/li>
+&lt;/ul>
+&lt;p>My final setting is:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="color:#d14">&amp;#34;binary_file_patterns&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>
+[
+&lt;span style="color:#d14">&amp;#34;*.jpg&amp;#34;&lt;/span>, &lt;span style="color:#d14">&amp;#34;*.jpeg&amp;#34;&lt;/span>, &lt;span style="color:#d14">&amp;#34;*.png&amp;#34;&lt;/span>, &lt;span style="color:#d14">&amp;#34;*.gif&amp;#34;&lt;/span>, &lt;span style="color:#d14">&amp;#34;*.ttf&amp;#34;&lt;/span>, &lt;span style="color:#d14">&amp;#34;*.tga&amp;#34;&lt;/span>, &lt;span style="color:#d14">&amp;#34;*.dds&amp;#34;&lt;/span>, &lt;span style="color:#d14">&amp;#34;*.ico&amp;#34;&lt;/span>, &lt;span style="color:#d14">&amp;#34;*.eot&amp;#34;&lt;/span>, &lt;span style="color:#d14">&amp;#34;*.pdf&amp;#34;&lt;/span>, &lt;span style="color:#d14">&amp;#34;*.swf&amp;#34;&lt;/span>, &lt;span style="color:#d14">&amp;#34;*.jar&amp;#34;&lt;/span>, &lt;span style="color:#d14">&amp;#34;*.zip&amp;#34;&lt;/span>,
+&lt;span style="color:#d14">&amp;#34;node_modules/**&amp;#34;&lt;/span>,
+&lt;span style="color:#d14">&amp;#34;bower_components/**&amp;#34;&lt;/span>,
+&lt;span style="color:#d14">&amp;#34;tmp/**&amp;#34;&lt;/span>
+]
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>I also decided to add it the tmp folder, which is used by all kind of frameworks.&lt;/p></description></item><item><title>Resolving slow loading of local virtualhosts on Chrome</title><link>https://leonardofaria.net/2016/03/13/resolving-slow-loading-of-local-virtualhosts-on-chrome/</link><pubDate>Sun, 13 Mar 2016 14:38:56 -0300</pubDate><guid>https://leonardofaria.net/2016/03/13/resolving-slow-loading-of-local-virtualhosts-on-chrome/</guid><description>&lt;p>I&amp;rsquo;ve in my development mac different virtualhosts, using .local or .wp TLDs. Opening these address in Chrome are slow – about 3 seconds ‘resolving address&amp;rsquo;. This situation doesn&amp;rsquo;t happen in Safari or Firefox. Here is my typical &lt;code>/etc/hosts&lt;/code> configuration:&lt;/p>
+&lt;pre>&lt;code>127.0.0.1 localhost
+::1 localhost
+255.255.255.255 broadcasthost
+fe80::1%lo0 localhost
+127.0.0.1 website1.local
+127.0.0.1 website2.wp
+&lt;/code>&lt;/pre>&lt;p>Looking for &lt;a href="http://stackoverflow.com/questions/10064581/how-can-i-eliminate-slow-resolving-loading-of-localhost-virtualhost-a-2-3-secon">answers&lt;/a>, I changed my setup for:&lt;/p>
+&lt;pre>&lt;code>127.0.0.1 localhost website1.local website2.wp
+::1 localhost website1.local website2.wp
+255.255.255.255 broadcasthost
+fe80::1%lo0 localhost
+&lt;/code>&lt;/pre>&lt;p>It works like a charm.&lt;/p></description></item><item><title>Shell script para gravar áudio da Web</title><link>https://leonardofaria.net/2016/01/29/shell-script-para-gravar-audio-da-web/</link><pubDate>Fri, 29 Jan 2016 20:06:38 -0200</pubDate><guid>https://leonardofaria.net/2016/01/29/shell-script-para-gravar-audio-da-web/</guid><description>&lt;p>&lt;em>&lt;a href="https://leonardofaria.net/2016/01/26/shell-script-for-audio-recording/">This post is also available in English.&lt;/a>&lt;/em>&lt;/p>
+&lt;p>Um dos meus programas de rádio favoritos é o Central 98, da &lt;a href="http://98live.com.br/">98FM&lt;/a> (de Belo Horizonte). Ele começa às 10h da manhã e devido a diferença de 6h de fuso horário eu não consigo ouví-lo ao vivo. Então, criei um shell script para gravar o programa e assim posso ouvi-lo no meu tempo livre.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#999;font-weight:bold;font-style:italic">#!/bin/bash
+&lt;/span>&lt;span style="color:#999;font-weight:bold;font-style:italic">&lt;/span>
+&lt;span style="color:#998;font-style:italic"># paths&lt;/span>
+&lt;span style="color:#008080">TIMELIMIT&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;timelimit&amp;#34;&lt;/span>
+&lt;span style="color:#008080">LIVESTREAMER&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;livestreamer&amp;#34;&lt;/span>
+&lt;span style="color:#008080">FFMPEG&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;ffmpeg&amp;#34;&lt;/span>
+&lt;span style="color:#998;font-style:italic"># parameters&lt;/span>
+&lt;span style="color:#008080">IN&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#008080">$1&lt;/span>
+&lt;span style="color:#008080">OUT&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#008080">$2&lt;/span>
+&lt;span style="color:#008080">TIME&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#008080">$3&lt;/span>
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">[[&lt;/span> -z &lt;span style="color:#008080">$TIME&lt;/span> &lt;span style="color:#000;font-weight:bold">]]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span> &lt;span style="color:#008080">TIME&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;3600&amp;#34;&lt;/span>; &lt;span style="color:#000;font-weight:bold">fi&lt;/span>
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span> &lt;span style="color:#008080">$#&lt;/span> -lt &lt;span style="color:#099">1&lt;/span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+&lt;span style="color:#0086b3">echo&lt;/span> -n &lt;span style="color:#d14">&amp;#34;Usage: &lt;/span>&lt;span style="color:#008080">$0&lt;/span>&lt;span style="color:#d14"> url output [time]&amp;#34;&lt;/span>
+&lt;span style="color:#0086b3">exit&lt;/span> &lt;span style="color:#099">0&lt;/span>
+&lt;span style="color:#000;font-weight:bold">fi&lt;/span>
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">[[&lt;/span> -z &lt;span style="color:#d14">`&lt;/span>which &lt;span style="color:#008080">$TIMELIMIT&lt;/span>&lt;span style="color:#d14">`&lt;/span> &lt;span style="color:#000;font-weight:bold">]]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+&lt;span style="color:#0086b3">echo&lt;/span> &lt;span style="color:#d14">&amp;#34;timelimit not found&amp;#34;&lt;/span> 1&amp;gt;&amp;amp;&lt;span style="color:#099">2&lt;/span>
+&lt;span style="color:#0086b3">exit&lt;/span> 1;
+&lt;span style="color:#000;font-weight:bold">fi&lt;/span>
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">[[&lt;/span> -z &lt;span style="color:#d14">`&lt;/span>which &lt;span style="color:#008080">$LIVESTREAMER&lt;/span>&lt;span style="color:#d14">`&lt;/span> &lt;span style="color:#000;font-weight:bold">]]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+&lt;span style="color:#0086b3">echo&lt;/span> &lt;span style="color:#d14">&amp;#34;livestreamer not found&amp;#34;&lt;/span> 1&amp;gt;&amp;amp;&lt;span style="color:#099">2&lt;/span>
+&lt;span style="color:#0086b3">exit&lt;/span> 1;
+&lt;span style="color:#000;font-weight:bold">fi&lt;/span>
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">[[&lt;/span> -z &lt;span style="color:#d14">`&lt;/span>which &lt;span style="color:#008080">$FFMPEG&lt;/span>&lt;span style="color:#d14">`&lt;/span> &lt;span style="color:#000;font-weight:bold">]]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+&lt;span style="color:#0086b3">echo&lt;/span> &lt;span style="color:#d14">&amp;#34;ffmpeg not found&amp;#34;&lt;/span> 1&amp;gt;&amp;amp;&lt;span style="color:#099">2&lt;/span>
+&lt;span style="color:#0086b3">exit&lt;/span> 1;
+&lt;span style="color:#000;font-weight:bold">fi&lt;/span>
+&lt;span style="color:#0086b3">echo&lt;/span> &lt;span style="color:#d14">&amp;#34;START STREAMING&amp;#34;&lt;/span>
+&lt;span style="color:#008080">$TIMELIMIT&lt;/span> -t &lt;span style="color:#008080">$TIME&lt;/span> &lt;span style="color:#008080">$LIVESTREAMER&lt;/span> &lt;span style="color:#008080">$IN&lt;/span> best -o &lt;span style="color:#008080">$OUT&lt;/span>.ts
+&lt;span style="color:#0086b3">echo&lt;/span> &lt;span style="color:#d14">&amp;#34;CONVERTING FILE TO MP3&amp;#34;&lt;/span>
+ffmpeg -y -i &lt;span style="color:#008080">$OUT&lt;/span>.ts -c:a libmp3lame -b:a 64k -joint_stereo &lt;span style="color:#099">0&lt;/span> &lt;span style="color:#008080">$OUT&lt;/span>
+rm &lt;span style="color:#008080">$OUT&lt;/span>.ts
+&lt;span style="color:#0086b3">echo&lt;/span> &lt;span style="color:#d14">&amp;#34;DONE&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>O &lt;a href="https://github.com/leonardofaria/audio-recorder">script&lt;/a> usa timelimit, ffmpeg and livestreamer. Você pode criar uma cron task para executar o script de acordo com a necessidade. Por examplo:&lt;/p>
+&lt;pre>&lt;code>00 10 * * 1-5 /Users/leonardo/Sites/audio-recorder/98.sh &amp;quot;hlsvariant://http://stream.izap.com.br/live/98fm.stream/playlist.m3u8&amp;quot; &amp;quot;/Users/leonardo/Downloads/central98.mp3&amp;quot; 3600
+&lt;/code>&lt;/pre>&lt;p>A linha anterior irá gravar o streaming da url por 1 hora (3600 segundos, de segunda à sexta às 10h da manhã. Se você não conhece a sintaxe do cron, use um &lt;a href="http://crontab-generator.org/">Crontab Generator&lt;/a>.&lt;/p>
+&lt;p>&lt;em>Esse post também foi &lt;a href="https://coderwall.com/p/qmlkzg/shell-script-for-audio-recording">publicado no coderwall&lt;/a>.&lt;/em>&lt;/p></description></item><item><title>Shell script for audio recording</title><link>https://leonardofaria.net/2016/01/26/shell-script-for-audio-recording/</link><pubDate>Tue, 26 Jan 2016 18:13:43 -0200</pubDate><guid>https://leonardofaria.net/2016/01/26/shell-script-for-audio-recording/</guid><description>&lt;p>&lt;em>&lt;a href="https://leonardofaria.net/2016/01/29/shell-script-para-gravar-audio-da-web/">Esse artigo está disponível em português.&lt;/a>&lt;/em>&lt;/p>
+&lt;p>One of my favourite radio shows happens every day at 10 AM (Brasilia Timezone). I was unable to listen to it because the time zones. Then, I created the following small shell script to record the show and then I can listen to it in my free time.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#999;font-weight:bold;font-style:italic">#!/bin/bash
+&lt;/span>&lt;span style="color:#999;font-weight:bold;font-style:italic">&lt;/span>
+&lt;span style="color:#998;font-style:italic"># paths&lt;/span>
+&lt;span style="color:#008080">TIMELIMIT&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;timelimit&amp;#34;&lt;/span>
+&lt;span style="color:#008080">LIVESTREAMER&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;livestreamer&amp;#34;&lt;/span>
+&lt;span style="color:#008080">FFMPEG&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;ffmpeg&amp;#34;&lt;/span>
+&lt;span style="color:#998;font-style:italic"># parameters&lt;/span>
+&lt;span style="color:#008080">IN&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#008080">$1&lt;/span>
+&lt;span style="color:#008080">OUT&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#008080">$2&lt;/span>
+&lt;span style="color:#008080">TIME&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#008080">$3&lt;/span>
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">[[&lt;/span> -z &lt;span style="color:#008080">$TIME&lt;/span> &lt;span style="color:#000;font-weight:bold">]]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span> &lt;span style="color:#008080">TIME&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;3600&amp;#34;&lt;/span>; &lt;span style="color:#000;font-weight:bold">fi&lt;/span>
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span> &lt;span style="color:#008080">$#&lt;/span> -lt &lt;span style="color:#099">1&lt;/span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+&lt;span style="color:#0086b3">echo&lt;/span> -n &lt;span style="color:#d14">&amp;#34;Usage: &lt;/span>&lt;span style="color:#008080">$0&lt;/span>&lt;span style="color:#d14"> url output [time]&amp;#34;&lt;/span>
+&lt;span style="color:#0086b3">exit&lt;/span> &lt;span style="color:#099">0&lt;/span>
+&lt;span style="color:#000;font-weight:bold">fi&lt;/span>
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">[[&lt;/span> -z &lt;span style="color:#d14">`&lt;/span>which &lt;span style="color:#008080">$TIMELIMIT&lt;/span>&lt;span style="color:#d14">`&lt;/span> &lt;span style="color:#000;font-weight:bold">]]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+&lt;span style="color:#0086b3">echo&lt;/span> &lt;span style="color:#d14">&amp;#34;timelimit not found&amp;#34;&lt;/span> 1&amp;gt;&amp;amp;&lt;span style="color:#099">2&lt;/span>
+&lt;span style="color:#0086b3">exit&lt;/span> 1;
+&lt;span style="color:#000;font-weight:bold">fi&lt;/span>
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">[[&lt;/span> -z &lt;span style="color:#d14">`&lt;/span>which &lt;span style="color:#008080">$LIVESTREAMER&lt;/span>&lt;span style="color:#d14">`&lt;/span> &lt;span style="color:#000;font-weight:bold">]]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+&lt;span style="color:#0086b3">echo&lt;/span> &lt;span style="color:#d14">&amp;#34;livestreamer not found&amp;#34;&lt;/span> 1&amp;gt;&amp;amp;&lt;span style="color:#099">2&lt;/span>
+&lt;span style="color:#0086b3">exit&lt;/span> 1;
+&lt;span style="color:#000;font-weight:bold">fi&lt;/span>
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">[[&lt;/span> -z &lt;span style="color:#d14">`&lt;/span>which &lt;span style="color:#008080">$FFMPEG&lt;/span>&lt;span style="color:#d14">`&lt;/span> &lt;span style="color:#000;font-weight:bold">]]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+&lt;span style="color:#0086b3">echo&lt;/span> &lt;span style="color:#d14">&amp;#34;ffmpeg not found&amp;#34;&lt;/span> 1&amp;gt;&amp;amp;&lt;span style="color:#099">2&lt;/span>
+&lt;span style="color:#0086b3">exit&lt;/span> 1;
+&lt;span style="color:#000;font-weight:bold">fi&lt;/span>
+&lt;span style="color:#0086b3">echo&lt;/span> &lt;span style="color:#d14">&amp;#34;START STREAMING&amp;#34;&lt;/span>
+&lt;span style="color:#008080">$TIMELIMIT&lt;/span> -t &lt;span style="color:#008080">$TIME&lt;/span> &lt;span style="color:#008080">$LIVESTREAMER&lt;/span> &lt;span style="color:#008080">$IN&lt;/span> best -o &lt;span style="color:#008080">$OUT&lt;/span>.ts
+&lt;span style="color:#0086b3">echo&lt;/span> &lt;span style="color:#d14">&amp;#34;CONVERTING FILE TO MP3&amp;#34;&lt;/span>
+ffmpeg -y -i &lt;span style="color:#008080">$OUT&lt;/span>.ts -c:a libmp3lame -b:a 64k -joint_stereo &lt;span style="color:#099">0&lt;/span> &lt;span style="color:#008080">$OUT&lt;/span>
+rm &lt;span style="color:#008080">$OUT&lt;/span>.ts
+&lt;span style="color:#0086b3">echo&lt;/span> &lt;span style="color:#d14">&amp;#34;DONE&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The &lt;a href="https://github.com/leonardofaria/audio-recorder">script&lt;/a> uses timelimit, ffmpeg and livestreamer. You can create a cron task to run the script according to necessity. For example:&lt;/p>
+&lt;pre>&lt;code>00 10 * * 1-5 /Users/leonardo/Sites/audio-recorder/98.sh &amp;quot;hlsvariant://http://stream.izap.com.br/live/98fm.stream/playlist.m3u8&amp;quot; &amp;quot;/Users/leonardo/Downloads/central98.mp3&amp;quot; 3600
+&lt;/code>&lt;/pre>&lt;p>The previous line will record the m3u8 streaming file by 1 hour (3600 seconds) Monday to Friday at 10 AM. If you are not familiar with crontab syntax, use a &lt;a href="http://crontab-generator.org/">Crontab Generator&lt;/a>.&lt;/p>
+&lt;p>&lt;em>This post is also &lt;a href="https://coderwall.com/p/qmlkzg/shell-script-for-audio-recording">published in coderwall&lt;/a>.&lt;/em>&lt;/p></description></item><item><title>My Sublime Text settings</title><link>https://leonardofaria.net/2015/10/04/my-sublime-text-settings/</link><pubDate>Sun, 04 Oct 2015 17:14:16 -0300</pubDate><guid>https://leonardofaria.net/2015/10/04/my-sublime-text-settings/</guid><description>&lt;p>Almost &lt;a href="https://leonardofaria.net/2012/12/31/configurando-o-sublime-text-2/">3 years ago I wrote&lt;/a> (in Portuguese) a post about my Sublime Text settings. Now, I updated my tips in an English post.&lt;/p>
+&lt;h3 id="1-free-video-course">1. Free video course&lt;/h3>
+&lt;p>If you know nothing about Sublime, please watch &lt;a href="https://code.tutsplus.com/courses/perfect-workflow-in-sublime-text-2">these free videos&lt;/a> from tut+.&lt;/p>
+&lt;h3 id="2-package-control">2. Package Control&lt;/h3>
+&lt;p>First of all, you should install Package Control to manage plugins. Actually, you can install packages just copying the package files to correct folder, however, Package Control is easier than copy &amp;amp; paste. Open Sublime Text console (View &amp;gt; Show Console or &lt;code>ctrl + `&lt;/code>) and paste the following line:&lt;/p>
+&lt;pre>&lt;code>import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
+&lt;/code>&lt;/pre>&lt;h3 id="3-packages">3. Packages&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>&lt;a href="https://github.com/BoundInCode/AutoFileName">AutoFileName&lt;/a>&lt;/strong>: it&amp;rsquo;s a plugin that autocompletes filenames. It saves your time when you are assigned to insert 45 images in one page ;)&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://github.com/facelessuser/BracketHighlighter/">Bracket Highligher&lt;/a>&lt;/strong>: matches a variety of brackets such as: &lt;code>[]&lt;/code>, &lt;code>()&lt;/code>, &lt;code>{}&lt;/code>.&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://github.com/Monnoroch/ColorHighlighter">ColorHighlighter&lt;/a>&lt;/strong>: previews color values by underlaying the selected hex codes in different styles, coloring text or gutter icons.&lt;/li>&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://github.com/jugyo/SublimeColorSchemeSelector">ColorSchemeSelector&lt;/a>&lt;/strong>: select theme quickly via the Quick Panel.&lt;br>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2015/10/colorschemeselector.gif" alt="colorschemeselector">&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://github.com/farcaller/DashDoc">DashDoc&lt;/a>&lt;/strong> (Mac only): &lt;a href="https://kapeli.com/dash">Dash&lt;/a> is an awesome programming documentation browser for Mac and it offers 150+ offline documentation sets. I can press &lt;code>alt + ctrl + h&lt;/code> in a Sublime editor and DashDoc immediately opens Dash to show the appropriate documentation based on the cursor position. The image below shows hot DashDoc works (image via &lt;a href="https://mattbrictson.com/sublime-text-3-recommendations">Matt Bricson&lt;/a>):&lt;br>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2015/10/dash.gif" alt="">&lt;/li>
+&lt;li>&lt;img src="https://leonardofaria.net/wp-content/uploads/2015/10/gitgutter.png" class="right size-full wp-image-1645" /> &lt;strong>&lt;a href="https://github.com/jisaacks/GitGutter">GitGutter&lt;/a>&lt;/strong>: this plugin shows an icon in the gutter area indicating whether a line has been inserted, modified or deleted.&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://packagecontrol.io/packages/SublimeLinter">SublimeLinter&lt;/a>&lt;/strong>: is a linting framework. A linter is a small program that checks code for stylistic or programming errors. You must install this package before install specific linters for specific languages. For example, if you use PHP, you should install &lt;a href="https://packagecontrol.io/packages/SublimeLinter-php">SublimeLinter-php&lt;/a> package. Ruby developers can use &lt;a href="https://packagecontrol.io/packages/SublimeLinter-ruby">SublimeLinter-ruby&lt;/a> and &lt;a href="https://packagecontrol.io/packages/SublimeLinter-rubocop">SublimeLinter-rubocop&lt;/a>&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://packagecontrol.io/packages/JSHint">JSHint&lt;/a>&lt;/strong>: is a JavaScript Linter, which will look over your code and verify it has proper styling, proper syntax, and is free of common errors related to these. You must have jslint installed in your computer (&lt;code>npm install -g jshint&lt;/code>).&lt;/li>
+&lt;li>&lt;strong>&lt;a href="https://packagecontrol.io/packages/JSHint%20Gutter">JSHint Gutter&lt;/a>&lt;/strong>: you can use this package to get more explicit warning as to where the javascript error occurred.&lt;/ul>&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-settings">4. Settings&lt;/h3>
+&lt;p>Many Sublime settings, such as editor&amp;rsquo;s font and colour scheme are stored in a file called &lt;code>Preferences.sublime-settings&lt;/code>. You can open this in Mac pressing &lt;code>command + ,&lt;/code>. This is my settings&amp;rsquo; file:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">{
+&lt;span style="color:#d14">&amp;#34;auto_completecommiton_tab&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">true&lt;/span>,
+&lt;span style="color:#d14">&amp;#34;bold_folder_labels&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">true&lt;/span>,
+&lt;span style="color:#d14">&amp;#34;color_scheme&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;Packages/User/SublimeLinter/Monokai (SL).tmTheme&amp;#34;&lt;/span>,
+&lt;span style="color:#d14">&amp;#34;font_face&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;Meslo LG S Regular for Powerline&amp;#34;&lt;/span>,
+&lt;span style="color:#d14">&amp;#34;font_size&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#099">17.0&lt;/span>,
+&lt;span style="color:#d14">&amp;#34;highlight_line&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">true&lt;/span>,
+&lt;span style="color:#d14">&amp;#34;highlight_modified_tabs&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">true&lt;/span>,
+&lt;span style="color:#d14">&amp;#34;open_files_in_new_window&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">false&lt;/span>,
+&lt;span style="color:#d14">&amp;#34;rulers&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>
+[
+&lt;span style="color:#099">80&lt;/span>
+],
+&lt;span style="color:#d14">&amp;#34;show_full_path&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">true&lt;/span>,
+&lt;span style="color:#d14">&amp;#34;tab_size&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#099">2&lt;/span>,
+&lt;span style="color:#d14">&amp;#34;terminal&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;iterm&amp;#34;&lt;/span>,
+&lt;span style="color:#d14">&amp;#34;theme&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;El Capitan.sublime-theme&amp;#34;&lt;/span>,
+&lt;span style="color:#d14">&amp;#34;trim_trailing_white_space_on_save&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">true&lt;/span>,
+&lt;span style="color:#d14">&amp;#34;word_wrap&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">true&lt;/span>
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="5-theme">5. Theme&lt;/h3>
+&lt;p>My current theme is &lt;a href="https://github.com/iccir/El-Capitan-Theme">El Capitan&lt;/a>. I use the Monokai colour scheme. There are several colours schemes avaliable in &lt;a href="http://colorsublime.com/">Colorsublime&lt;/a>.&lt;/p>
+&lt;p>&lt;a href="https://github.com/iccir/El-Capitan-Theme">&lt;img src="https://leonardofaria.net/wp-content/uploads/2015/10/elcapitan-1024x637.png" alt="">&lt;/a>&lt;/p>
+&lt;h3 id="6-icon-mac-version-only">6. Icon (Mac version only)&lt;/h3>
+&lt;p>There are &lt;a href="https://dribbble.com/search?q=sublime+icon">several alternative Sublime icons&lt;/a> on dribbble. To replace the default icon, just select Sublime Text in a Finder window, press &lt;code>command + I&lt;/code>, and drag the file to the little app icon in the top left.&lt;/p>
+&lt;center>
+&lt;a href="https://dribbble.com/shots/1827862-Yosemite-Sublime-Text-Icon">&lt;img src="https://leonardofaria.net/wp-content/uploads/2015/10/icon6.png" width="200" />&lt;/a> &lt;a href="https://dribbble.com/shots/1582459-Sublime-Text-Icon-for-Yosemite">&lt;img src="https://leonardofaria.net/wp-content/uploads/2015/10/icon5.png" width="200" />&lt;/a> &lt;a href="http://dribbble.com/shots/872166-Sublime-Text-2-Replacement-Icon">&lt;img src="https://leonardofaria.net/wp-content/uploads/2012/12/icon1.png" />&lt;/a> &lt;a href="http://dribbble.com/shots/382465-Sublime-Text-2-update-Replacement-Icon">&lt;img src="https://leonardofaria.net/wp-content/uploads/2012/12/icon2.png" />&lt;/a> &lt;a href="http://dribbble.com/shots/468176-Sublime-Text-2-icon-you-can-actually-see-when-switching-apps">&lt;img src="https://leonardofaria.net/wp-content/uploads/2012/12/icon3.png" />&lt;/a> &lt;a href="http://dribbble.com/shots/382409-Sublime-Text-2-Icon">&lt;img src="https://leonardofaria.net/wp-content/uploads/2012/12/icon4.png" />&lt;/a>&lt;br />
+&lt;/center></description></item><item><title>Useful apps that I use daily</title><link>https://leonardofaria.net/2015/09/17/useful-apps-that-i-use-daily/</link><pubDate>Thu, 17 Sep 2015 12:56:58 -0300</pubDate><guid>https://leonardofaria.net/2015/09/17/useful-apps-that-i-use-daily/</guid><description>&lt;p>I decided write a post describing some tools that I use in my MacBook to enhance my tasks.&lt;/p>
+&lt;h3 id="alfred">Alfred&lt;/h3>
+&lt;p>How awesome is Alfred? It is totally awesome! Alfred is a great tool working as a shortcut to daily tasks. More than that, you can create customized workflows that improve even more your productivity. You must see:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://www.alfredforum.com/topic/3154-yet-another-window-layout-workflow/">Yet another layouter&lt;/a>: you can use keyworks like top left, top right to resize and move windows. This is really useful for people who use multiple displays&lt;/li>
+&lt;li>&lt;a href="http://www.alfredforum.com/topic/1211-battery-view-summary-stats-about-your-laptop-battery/">Battery&lt;/a>: it is a workflow that shows relevant information about battery, such as charge cycles, health and serial number&lt;/li>
+&lt;li>&lt;a href="http://www.alfredforum.com/forum/3-share-your-workflows/">Alfred Workflows Forum&lt;/a>: the community forum where people share their workflows&lt;/li>
+&lt;li>&lt;a href="http://www.packal.org/">Packal&lt;/a>: an unofficial directory of workflows and themes. My currently theme is the &lt;a href="http://www.packal.org/theme/elegant-v4">Elegant v4&lt;/a>, but you can choose your favorite in &lt;a href="http://www.packal.org/theme-list?items_per_page=60">several options&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;h3 id="watts">Watts&lt;/h3>
+&lt;p>&lt;a href="http://binarytricks.com/">Watts&lt;/a> is a calibration tool to keep laptop battery healthy. It shows notifications suggesting you calibrate your battery.&lt;/p>
+&lt;h3 id="vienna">Vienna&lt;/h3>
+&lt;p>&lt;img src="https://leonardofaria.net/wp-content/uploads/2015/07/vienna.jpg" alt="vienna" align="right" />&lt;/p>
+&lt;p>&lt;a href="http://www.vienna-rss.org/">&lt;strong>Vienna&lt;/strong>&lt;/a> is a RSS Reader. It is a minimalist client that runs like a menubar app. I use it because I have few intranet feeds that do not work in Feedly.&lt;/p>
+&lt;h3 id="coconutbattery">coconutBattery&lt;/h3>
+&lt;p>&lt;a href="http://www.coconut-flavour.com/coconutbattery/">coconutBattery&lt;/a> shows a lot of information about laptop and iDevices battery, such as charge cycles and maximum charge. You can store these information to monitor the battery&amp;rsquo;s health.&lt;/p>
+&lt;h3 id="itsycal">Itsycal&lt;/h3>
+&lt;p>&lt;a href="http://www.mowglii.com/itsycal/">&lt;img src="https://leonardofaria.net/wp-content/uploads/2015/07/itsycal2.jpg" alt="Itsycal" align="right" />&lt;/a>&lt;a href="http://www.mowglii.com/itsycal/">Itsycal&lt;/a> is useful to avoid opening Calendar every time that I need to check an appointment. It is actually a free alternative to Fantastical.&lt;/p>
+&lt;h3 id="moom">Moom&lt;/h3>
+&lt;p>&lt;a href="http://manytricks.com/moom/">Moom&lt;/a> is a window layouter app. You can use keyboard shortcuts to resize and move windows. I removed this app after I started using an Alfred workflow described in this post.&lt;/p>
+&lt;h3 id="time-tracker">Time Tracker&lt;/h3>
+&lt;p>&lt;a href="http://rainer.4950.net/timetracker-for-mac/">Time Tracker&lt;/a> is an old free software that just works. You can record time from different projects and tasks. I can say that this app is one of the freelancer&amp;rsquo;s best friend.&lt;/p>
+&lt;center>
+&lt;a href="http://rainer.4950.net/timetracker-for-mac/">&lt;img src="https://leonardofaria.net/wp-content/uploads/2015/07/timetracker.png" alt="timetracker" width="615" height="281" class="alignnone size-full wp-image-1586" srcset="https://leonardofaria.net/wp-content/uploads/2015/07/timetracker.png 615w, https://leonardofaria.net/wp-content/uploads/2015/07/timetracker-300x137.png 300w" sizes="(max-width: 615px) 100vw, 615px" />&lt;/a>
+&lt;/center>
+&lt;h3 id="whatapp-desktop">WhatApp Desktop&lt;/h3>
+&lt;p>There are dozens of WhatsApp Web apps, but I&amp;rsquo;ve been using &lt;a href="https://github.com/Aluxian/WhatsApp-Desktop">this option&lt;/a>, which runs in background as a menubar app. The same developer also created a &lt;a href="http://messengerfordesktop.com/">Facebook Messenger for Desktop&lt;/a>.&lt;/p></description></item><item><title>One line webservers for everybody</title><link>https://leonardofaria.net/2015/08/16/one-line-webservers-for-everybody/</link><pubDate>Sun, 16 Aug 2015 13:38:47 -0300</pubDate><guid>https://leonardofaria.net/2015/08/16/one-line-webservers-for-everybody/</guid><description>&lt;p>Sometimes it is necessary to serve a folder with static resources (images, for example) as a web server. The probably most popular commands to perform these tasks are:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">php -S localhost:9999
+python -m SimpleHTTPServer &lt;span style="color:#099">9999&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The option that uses PHP &lt;a href="http://php.net/manual/en/features.commandline.webserver.php">built-in web server&lt;/a> requires PHP 5.4+. The &lt;a href="https://gist.github.com/willurd/5720255">following gist&lt;/a> provides several other ways to run a webserver locally.&lt;/p>
+&lt;script type="application/javascript" src="https://gist.github.com/willurd/5720255.js">&lt;/script></description></item><item><title>Configurando o Sublime Text 2</title><link>https://leonardofaria.net/2012/12/31/configurando-o-sublime-text-2/</link><pubDate>Mon, 31 Dec 2012 11:30:47 -0200</pubDate><guid>https://leonardofaria.net/2012/12/31/configurando-o-sublime-text-2/</guid><description>&lt;p>Tempos atrás tinha instalado o Sublime, mas não o usei efetivamente. O &lt;a href="http://simplesideias.com.br/">Nando Vieira&lt;/a> fez um &lt;a href="http://simplesideias.com.br/configurando-o-sublime-text-2">ótimo post detalhado&lt;/a> sobre o editor, e após isso, resolvi dar uma olhada mais a fundo. O Sublime é altamente configurável e abaixo cito algumas modificações que fiz.&lt;/p>
+&lt;h2 id="plugins">Plugins&lt;/h2>
+&lt;p>O Sublime possui um gerenciador de plugins que extendem as funcionalidades do editor. O post que citei do Nando mostra como instalá-los. Esses são os plugins que andei testando:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/kemayo/sublime-text-2-git/">Git&lt;/a>: integra funcionalidades do Git a seu projeto;&lt;/li>
+&lt;li>&lt;a href="https://github.com/SublimeText/SideBarGit">SidebarGit&lt;/a>: integrar comandos do Git a sidebar do projeto;&lt;img src="https://leonardofaria.net/wp-content/uploads/2012/12/tree.jpg" class="foto right" align="right" />&lt;/li>
+&lt;li>&lt;a href="https://github.com/afterdesign/MacTerminal">MacTerminal&lt;/a>: integra o iTerm 2 ao Sublime;&lt;/li>
+&lt;li>&lt;a href="https://github.com/facelessuser/BracketHighlighter/">BracketHighlighter&lt;/a>: destaca blocos de código. Útil quando você pega código alheiro e se perde tentando entender onde começam e terminam funções e métodos;&lt;/li>
+&lt;li>&lt;a href="https://github.com/lunixbochs/sublimelint">Sublime Lint&lt;/a>: valida a sintaxe inline de códigos JavaScript, Ruby e PHP. Nunca fui fã desses recursos, mas resolvi instalar para experimentar;&lt;/li>
+&lt;/ul>
+&lt;h2 id="tema">Tema&lt;/h2>
+&lt;p>No Textmate eu usava o esquema de cor All Hallow&amp;rsquo;s Eve. Esse e todos os outros esquemas de cores podem ser usados no Sublime. Para isso você precisará do tema Soda. Criei um &lt;a href="https://github.com/leonardofaria/soda-theme">fork&lt;/a> do &lt;a href="http://buymeasoda.github.com/soda-theme/">tema original&lt;/a> para colocar ícones nas pastas, baseado em um &lt;a href="http://sublimetext.userecho.com/topic/19274-theming-of-the-sidebar/">hack que encontrei&lt;/a>. Para instalar o tema, clona o repositório:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#0086b3">cd&lt;/span> ~/Library/Application&lt;span style="color:#d14">\ &lt;/span>Support/Sublime&lt;span style="color:#d14">\ &lt;/span>Text&lt;span style="color:#d14">\ &lt;/span>2/Packages
+git clone https://github.com/leonardofaria/soda-theme.git &lt;span style="color:#d14">&amp;#34;Theme - Soda&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Para ativá-lo, abra o arquivo de preferências do Sublime (Sublime Text 2 &amp;gt; Preferences &amp;gt; Settings – User ou &lt;code>command + ,&lt;/code>) e adicione:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">{
+&lt;span style="color:#d14">&amp;#34;theme&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;Soda Light.sublime-theme&amp;#34;&lt;/span>,
+&lt;span style="color:#d14">&amp;#34;color_scheme&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;Packages/Color Scheme - User/All Hallow&amp;#39;s Eve Custom.tmTheme&amp;#34;&lt;/span>
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Os temas do Textmate podem ser encontrados &lt;a href="https://github.com/jwhitmire/tm-themes">nesse repositório&lt;/a> do Github. O tema Soda permite a customização das abas, tornando-as semelhantes as abas do Google Chrome.&lt;/p>
+&lt;center>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2012/12/multiple-tab-styles.png" />
+&lt;/center>
+&lt;p>Para usar o estilo clássico de abas, acrescente no seu arquivo de preferências:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="color:#d14">&amp;#34;soda_classic_tabs&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#000;font-weight:bold">true&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ícone">Ícone&lt;/h2>
+&lt;p>Eu particulamente não gosto do ícone padrão do Sublime. No Dribbble, vi alguns designers fazendo releituras do icone original. Uma &lt;a href="http://dribbble.com/search?q=sublime">busca no site&lt;/a> retorna dezenas de boas opções.&lt;/p>
+&lt;center>
+&lt;br /> &lt;a href="http://dribbble.com/shots/872166-Sublime-Text-2-Replacement-Icon">&lt;img src="https://leonardofaria.net/wp-content/uploads/2012/12/icon1.png" />&lt;/a>&lt;a href="http://dribbble.com/shots/382465-Sublime-Text-2-update-Replacement-Icon">&lt;img src="https://leonardofaria.net/wp-content/uploads/2012/12/icon2.png" />&lt;/a>&lt;a href="http://dribbble.com/shots/468176-Sublime-Text-2-icon-you-can-actually-see-when-switching-apps">&lt;img src="https://leonardofaria.net/wp-content/uploads/2012/12/icon3.png" />&lt;/a>&lt;a href="http://dribbble.com/shots/382409-Sublime-Text-2-Icon">&lt;img src="https://leonardofaria.net/wp-content/uploads/2012/12/icon4.png" />&lt;/a>&lt;br />
+&lt;/center>
+&lt;p>Escolhido o ícone, basta &lt;a href="http://dribbble.com/shots/468176-Sublime-Text-2-icon-you-can-actually-see-when-switching-apps">copiá-lo do site&lt;/a> e substituí-lo no Sublime. Vá na pasta Aplicativos do seu Mac OS, clique com o botão direito no ícone do Sublime e escolha “Mostrar Conteúdo do Pacote”. Em seguida, localize a pasta Contents &amp;gt; Resources. O arquivo a ser substituído é o “Sublime Text 2.icns”.&lt;/p></description></item><item><title>eCPF no Mac</title><link>https://leonardofaria.net/2011/10/07/ecpf-no-mac/</link><pubDate>Fri, 07 Oct 2011 22:59:30 -0300</pubDate><guid>https://leonardofaria.net/2011/10/07/ecpf-no-mac/</guid><description>&lt;p>No meu trabalho preciso usar meu cartão eCPF para acessar um determinado sistema que estamos desenvolvendo. Tenho um cartão eCPF, emitido pelo Banco do Brasil e um leitor de cartões OmniKey 3021 e foi uma grande dor de cabeça configurá-lo no Mac. Não era para ser um problema, uma vez que você precisa apenas de um driver e um módulo para o Firefox.&lt;/p>
 &lt;h3 id="driver">Driver&lt;/h3>
 &lt;p>O driver do leitor OmniKey pode ser &lt;a href="http://loja.certificadodigital.com.br/Serasa/Softwares%20e%20Drivers/D102">obtido&lt;/a> pelo site da &lt;a href="http://loja.certificadodigital.com.br/SERASA/Home">Serasa Experian&lt;/a>. Além do driver do meu dispositivo, essa página apresenta drivers de outros devices.&lt;/p>
 &lt;p>Nessa mesma página, copie o Software do Cartão – Safesign. Esse software reconhece o seu cartão e apresenta os dados do certificado, a partir do app tokenadmin.&lt;/p>

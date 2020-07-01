@@ -49,6 +49,87 @@
 &lt;ul>
 &lt;li>&lt;a href="https://developers.google.com/web/tools/chrome-devtools/network/resource-loading#view-network-timing-details-for-a-specific-resource">Measure Resource Loading Times&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://github.com/janodvarko/harviewer">HAR Viewer source code&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Exploring device detection for better user experiences in 2020</title><link>https://leonardofaria.net/2020/01/15/exploring-device-detection-for-better-user-experiences-in-2020/</link><pubDate>Wed, 15 Jan 2020 02:16:54 -0300</pubDate><guid>https://leonardofaria.net/2020/01/15/exploring-device-detection-for-better-user-experiences-in-2020/</guid><description>&lt;p>A few months ago I watched a great talk in Chrome Dev Summit about performance in slow devices.&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/puUPpVrIRkc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;p>It blew my mind all the work done by Facebook in identifying devices to create a better user experience. Fast-forward to now, I decided to study a bit more the topic and see what I could do at Thinkific.&lt;/p>
+&lt;h2 id="user-agents">User agents&lt;/h2>
+&lt;p>User agents are well-known by developers. We use them to detect bots, redirect users to a specific version of our website or append CSS classes on our page so we can create different experiences.&lt;/p>
+&lt;p>At Thinkific we already use the &lt;a href="https://github.com/fnando/browser">browser Ruby gem&lt;/a> to parse the user-agent and get relevant info (bot detection for instance). So, I decided to persist the main info in a visitor_device table – here is the schema:&lt;/p>
+&lt;pre>&lt;code>tenant_id: the course creator school the visitor is checking
+raw: the raw ua
+type: desktop / mobile / tablet / bot / other
+browser_name
+browser_version
+platform_name
+platform_version
+hardware: hstore containing memory, processor, device_model, device_name
+connection: hstore containing downlink_max, connection_type
+&lt;/code>&lt;/pre>&lt;p>You probably noticed that a few things there are not available in the UA string. Time for new JavaScript APIs:&lt;/p>
+&lt;h2 id="getting-hardware-info-using-javascript">Getting hardware info using JavaScript&lt;/h2>
+&lt;p>As covered in the Chrome Dev Summit video, we can use JS to get this info&lt;/p>
+&lt;h3 id="memory">Memory&lt;/h3>
+&lt;p>&lt;code>navigator.deviceMemory&lt;/code> will return a floating-point number. There are things to consider here:&lt;/p>
+&lt;ul>
+&lt;li>It only works over HTTPS&lt;/li>
+&lt;li>Support is quite limited (Chrome only basically)&lt;/li>
+&lt;/ul>
+&lt;p>More about it:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/w3c/device-memory">Spec from W3C&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory">MDN Docs&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://caniuse.com/#feat=mdn-api_navigator_devicememory">Can I use deviceMemory&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="processors">Processors&lt;/h3>
+&lt;p>&lt;code>navigator.hardwareConcurrency&lt;/code> will return the number of logical cores of the user&amp;rsquo;s CPU. Support for this is &lt;a href="https://caniuse.com/#feat=hardwareconcurrency">decent&lt;/a>.&lt;/p>
+&lt;h2 id="detecting-connection-info-using-javascript">Detecting connection info using JavaScript&lt;/h2>
+&lt;p>&lt;code>navigator.connection&lt;/code> is a new API containing information about the system&amp;rsquo;s connection, such as the current bandwidth of the user&amp;rsquo;s device or whether the connection is metered. The support is quite limited (Chrome only basically) but things are promising.&lt;/p>
+&lt;p>More about it:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://googlechrome.github.io/samples/network-information/">Chrome example&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/connection">MDN Docs&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://caniuse.com/#feat=netinfo">Can I use Network Information API&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="detecting-the-device-model">Detecting the device model&lt;/h2>
+&lt;p>The user agent &lt;em>may&lt;/em> return some information about the model name. &lt;a href="https://userstack.com/">userstack&lt;/a> is a service that gives you information based on the user agent. It works well and it is easy to integrate, however, depending on your need, they can&amp;rsquo;t help.&lt;/p>
+&lt;p>Take for instance iDevices. Their user agent is basically the same so you can&amp;rsquo;t differentiate an iPad Pro from an old iPad that runs the last iOS. For these cases, you may need a better detection based on resolution, pixel density and other hardware information exposed in the browser. I did a quick research on this and found 3 products so far: &lt;a href="https://web.wurfl.io/#wurfl-js">WURFL.io&lt;/a>, &lt;a href="https://deviceatlas.com/products/web">DeviceAtlas&lt;/a> and &lt;a href="https://51degrees.com/">51Degrees&lt;/a>. I didn&amp;rsquo;t have time to try their products yet, but I am looking forward to doing it (and post about it)&lt;/p>
+&lt;h2 id="faq">FAQ&lt;/h2>
+&lt;p>&lt;em>Question: Why not using Google Analytics / Mixpanel / Kibana / New Relic / your tool here?&lt;/em>&lt;/p>
+&lt;p>We could get browser info inside other tools however as a SaaS product we don&amp;rsquo;t use our own Google Analytics property (customers add their own). Also, adblockers may block these third-party tools. Last not least, by having this info in our side we can adapter better.&lt;/p>
+&lt;p>&lt;em>Question: Do you have a list of low-end/high-end devices?&lt;/em>&lt;/p>
+&lt;p>No. Maybe this can be built combining the number of processors and memory but I didn&amp;rsquo;t invest much time on this. In this project, my colleague created a Rails helper that would determinate if the user would use the lite or default version of a website based on hardware. On this topic, it is important to mention Facebook has a library for Android called &lt;a href="https://github.com/facebook/device-year-class/">Device Year Class&lt;/a>.&lt;/p></description></item><item><title>Disabling autofill in Chrome</title><link>https://leonardofaria.net/2019/10/02/disabling-autofill-in-chrome/</link><pubDate>Wed, 02 Oct 2019 16:58:52 -0300</pubDate><guid>https://leonardofaria.net/2019/10/02/disabling-autofill-in-chrome/</guid><description>&lt;p>Autofill in form elements is a very useful feature in browsers. Creating new accounts or shopping in an online store are examples of this feature saving us time.&lt;/p>
+&lt;p>However, the autofill feature can be a problem for SaaS products. Imagine that you want to edit the email address of one of your users. You hit edit in one screen and once you get a form with your user data Chrome will replace their email to your email. This is not a good user experience.&lt;/p>
+&lt;p>MDN has an article showing “How to turn off form autocompletion”. The solution is using the autocomplete attribute with an off value. This doesn&amp;rsquo;t work in Chrome.&lt;/p>
+&lt;p>Digging in Stackoverflow and Google results, I found a &lt;a href="https://bugs.chromium.org/p/chromium/issues/detail?id=468153#c164">bug issued in 2015 about the topic&lt;/a>. Here is the TL,DR (from March 2016):&lt;/p>
+&lt;blockquote>
+&lt;p>First off, thanks for everyone&amp;rsquo;s feedback on this. I apologize for our delay in clarifying our stance. We&amp;rsquo;ve been working to finalize our policy regarding Autofill and the autocomplete attribute, and we&amp;rsquo;ve been making changes to this over the past few months (as some of you have noticed).&lt;/p>
+&lt;p>First and foremost, Autofill in Chrome exists to help our everyday users get through common forms (address forms, contact forms, checkout forms, etc) across the web. This has become especially important on mobile devices, where typing on virtual keyboards is both difficult and annoying. Autofill tries to make this experience better, and it&amp;rsquo;s used millions of times per day by Chrome users.&lt;/p>
+&lt;p>The tricky part here is that somewhere along the journey of the web autocomplete=off become a default for many form fields, without any real thought being given as to whether or not that was good for users. This doesn&amp;rsquo;t mean there aren&amp;rsquo;t very valid cases where you don&amp;rsquo;t want the browser autofilling data (e.g. on CRM systems), but by and large, we see those as the minority cases. And as a result, we started ignoring autocomplete=off for Chrome Autofill data [1].&lt;/p>
+&lt;p>We don&amp;rsquo;t just ignore the autocomplete attribute, however. In the WHATWG standard, we defined a series of new autocomplete values that developers can use to better inform the browser about what a particular field is, and we encourage developers to use those types. [2]&lt;/p>
+&lt;p>In cases where you really want to disable autofill, our suggestion at this point is to utilize the autocomplete attribute to give valid, semantic meaning to your fields. If we encounter an autocomplete attribute that we don&amp;rsquo;t recognize, we won&amp;rsquo;t try and fill it.&lt;/p>
+&lt;p>As an example, if you have an address input field in your CRM tool that you don&amp;rsquo;t want Chrome to Autofill, you can give it semantic meaning that makes sense relative to what you&amp;rsquo;re asking for: e.g. autocomplete=”new-user-street-address”. If Chrome encounters that, it won&amp;rsquo;t try and autofill the field.&lt;/p>
+&lt;/blockquote>
+&lt;p>I also found a &lt;a href="https://gist.github.com/niksumeiko/360164708c3b326bd1c8">gist&lt;/a> with a few solutions. Many people reported using &lt;code>autocomplete=&amp;quot;new-password&amp;quot;&lt;/code> fixes this issue but I have no success on this front. Which solved the issue for me is setting the form fields to read only and then removing the attribute once the user focus them.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">input&lt;/span> &lt;span style="color:#008080">readonly&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;readonly&amp;#34;&lt;/span> &lt;span style="color:#008080">onfocus&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;this.removeAttribute(&amp;#39;readonly&amp;#39;);&amp;#34;&lt;/span> &lt;span style="color:#008080">type&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;text&amp;#34;&lt;/span> &lt;span style="color:#008080">value&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;user@email.com&amp;#34;&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Useful Chrome extensions to developers</title><link>https://leonardofaria.net/2015/07/20/useful-chrome-extensions-to-developers/</link><pubDate>Mon, 20 Jul 2015 09:24:03 -0300</pubDate><guid>https://leonardofaria.net/2015/07/20/useful-chrome-extensions-to-developers/</guid><description>&lt;p>First of all, you must see &lt;a href="https://umaar.com/dev-tips/">Dev Tips&lt;/a>: developer tips delivered daily in your email.&lt;/p>
+&lt;p>&lt;a href="https://umaar.com/dev-tips/17-quick-edit-element/">&lt;img src="https://umaar.com/assets/images/dev-tips/quick-edit-element.gif" alt="">&lt;/a>&lt;/p>
+&lt;p>Now, these are some useful extensions that I&amp;rsquo;ve been using in Chrome to help me to develop webapps:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/dimensions/baocaagndhipibgklemoalmkljaimfdj">Dimensions&lt;/a>: A tool for designers to measure screen dimensions&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/full-page-screen-capture/fdpohaocaechififmbbbbbknoalclacl">Full Page Screen Capture&lt;/a>: Screen capture your current page in entirety and reliably!&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/google-analytics-url-buil/gaidpiakchgkapdgbnoglpnbccdepnpk">Google Analytics URL Builder&lt;/a>: This extension is a hyper version of Google Analytics URL Builder and tag URL&amp;rsquo;s to be tracked in Google Analytics Campaign reports. Also, you can create shortlinks using your bit.ly account.&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/http2-and-spdy-indicator/mpbpobfflnpcgagjijhmgnchggcjblin">HTTP/2 and SPDY indicator&lt;/a>: An indicator in the address bar for HTTP/2 and SPDY support by each website.&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc">JSONView&lt;/a>: An useful extension to format JSON files.&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/json-editor/lhkmoheomjbkfloacpgllgjcamhihfaj">JSON Editor&lt;/a>: JSON Editor is a tool to view, edit, and format JSON. It shows your data in an editable treeview and in a code editor.&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/kingsquare-html-validator/anjdemaoejlpgmnmkijdemoiebcddhkc">Kingsquare HTML Validator&lt;/a>: A HTML5 validation library, using a JavaScript port of the TIDY library&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/mobileresponsive-web-desi/elmekokodcohlommfikpmojheggnbelo">Mobile/Responsive Web Design Tester&lt;/a>: Test responsive web designs or mobile pages that detect specific user agents&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm">Postman – REST Client&lt;/a>: Postman helps you be more efficient while working with APIs.&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/railspanel/gjpfobpafnhjhbajcjgccbbdofdckggg">RailsPanel&lt;/a>: Devtools panel for Rails development. It requires &lt;a href="https://github.com/dejan/rails_panel/tree/master/meta_request">meta_request gem&lt;/a>.&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/tabs-saver/kmabfaomlcjlnplkoflgenkmmpilmead">Tabs saver&lt;/a>: It allows to save your opened tabs to future use.&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg">Wappalyzer&lt;/a>: It detects &lt;a href="https://wappalyzer.com/applications">technologies&lt;/a> used on websites. It&amp;rsquo;s very interesting for curious people.&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh">Window Resizer&lt;/a>: Resize browser window to emulate various screen resolutions. It is useful because you can set dimensions without worries like toolbar&amp;rsquo;s height.&lt;/li>
+&lt;li>&lt;a href="http://yslow.org/">YSlow&lt;/a>: Make your pages faster with Yahoo!&amp;lsquo;s page performance tool.&lt;/li>
 &lt;/ul></description></item><item><title>Para agilizar o desenvolvimento do frontend</title><link>https://leonardofaria.net/2012/11/21/para-agilizar-o-desenvolvimento-do-frontend/</link><pubDate>Wed, 21 Nov 2012 22:45:14 -0200</pubDate><guid>https://leonardofaria.net/2012/11/21/para-agilizar-o-desenvolvimento-do-frontend/</guid><description>&lt;p>Uso o Chrome como browser padrão em minha máquina e algumas extensões interessantes para desenvolvedores.&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://chrome.google.com/webstore/detail/kingsquare-html-validator/anjdemaoejlpgmnmkijdemoiebcddhkc">Kingsquare HTML Validator&lt;/a>: faz validação do seu código usando o Tidy. Se você usa o Safari, não deixe de conhecer o &lt;a href="http://zappatic.net/projects/safarivalidator">Tidy Validator&lt;/a>&lt;/li>

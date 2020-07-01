@@ -67,7 +67,256 @@ sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation
 &lt;li>&lt;a href="https://eslint.org/docs/user-guide/configuring">Configuring ESLint&lt;/a>: official ESLint docs. You know, &lt;em>read the docs&lt;/em>&lt;/li>
 &lt;li>&lt;a href="https://medium.com/@bretcameron/how-to-publish-your-first-npm-package-b224296fc57b">How to publish your first NPM package&lt;/a>: quoting the post subtitle&amp;rdquo;, everything you need to know to create a NPM package&amp;rdquo;&lt;/li>
 &lt;li>&lt;a href="https://github.com/wesbos/eslint-config-wesbos">eslint-config-wesbos&lt;/a>: a project by &lt;a href="https://www.wesbos.com/">Wes Bos&lt;/a> that help me doing this work&lt;/li>
-&lt;/ul></description></item><item><title>iPhone e Rails</title><link>https://leonardofaria.net/2010/02/21/iphone-e-rails/</link><pubDate>Sun, 21 Feb 2010 23:36:13 -0300</pubDate><guid>https://leonardofaria.net/2010/02/21/iphone-e-rails/</guid><description>&lt;p>O desenvolvimento de web apps para iPhone requer alguns cuidados especiais. Em nossas aplicações significa pensar em um layout para o gadget. Uma forma rápida de definir o layout para iPhone é através do código abaixo:&lt;/p>
+&lt;/ul></description></item><item><title>Changing node versions automatically per directory</title><link>https://leonardofaria.net/2020/05/20/changing-node-versions-automatically-per-directory/</link><pubDate>Wed, 20 May 2020 07:00:00 -0700</pubDate><guid>https://leonardofaria.net/2020/05/20/changing-node-versions-automatically-per-directory/</guid><description>&lt;p>Working in multiple Node projects sometimes means using different versions of Node. &lt;a href="https://github.com/nvm-sh/nvm">nvm&lt;/a> is one popular solution for Linux, macOS and Windows WSL that handles multiple Node installations. One of its most unknown tricks is the &lt;a href="https://github.com/nvm-sh/nvm#deeper-shell-integration">deeper shell integration&lt;/a>. Check the video:&lt;/p>
+&lt;video class="w-full h-auto" controls autoplay="autoplay">
+&lt;source src="https://leonardofaria.net/wp-content/uploads/2020/05/nvm.mp4" type="video/mp4">
+&lt;/video>
+&lt;p>If you are using macOS Catalina, you are probably using ZSH as default shell. To make the magic happen, paste the following in &lt;code>~/.zshrc&lt;/code> file.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#998;font-style:italic"># place this after nvm initialization!&lt;/span>
+autoload -U add-zsh-hook
+load-nvmrc&lt;span style="color:#000;font-weight:bold">()&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#0086b3">local&lt;/span> &lt;span style="color:#008080">node_version&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">$(&lt;/span>nvm version&lt;span style="color:#000;font-weight:bold">)&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>
+&lt;span style="color:#0086b3">local&lt;/span> &lt;span style="color:#008080">nvmrc_path&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">$(&lt;/span>nvm_find_nvmrc&lt;span style="color:#000;font-weight:bold">)&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span> -n &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#008080">$nvmrc_path&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+&lt;span style="color:#0086b3">local&lt;/span> &lt;span style="color:#008080">nvmrc_node_version&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#000;font-weight:bold">$(&lt;/span>nvm version &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">$(&lt;/span>cat &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#d14">${&lt;/span>&lt;span style="color:#008080">nvmrc_path&lt;/span>&lt;span style="color:#d14">}&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span> &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#008080">$nvmrc_node_version&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">&amp;#34;N/A&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+nvm install
+&lt;span style="color:#000;font-weight:bold">elif&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span> &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#008080">$nvmrc_node_version&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span> !&lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#008080">$node_version&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+nvm use
+&lt;span style="color:#000;font-weight:bold">fi&lt;/span>
+&lt;span style="color:#000;font-weight:bold">elif&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span> &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#008080">$node_version&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span> !&lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">$(&lt;/span>nvm version default&lt;span style="color:#000;font-weight:bold">)&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+&lt;span style="color:#0086b3">echo&lt;/span> &lt;span style="color:#d14">&amp;#34;Reverting to nvm default version&amp;#34;&lt;/span>
+nvm use default
+&lt;span style="color:#000;font-weight:bold">fi&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>After restarting your terminal, nvm will automatically change the version of Node based in the current folder.&lt;/p></description></item><item><title>Using Dependabot to keep your environment up to date</title><link>https://leonardofaria.net/2020/05/02/using-dependabot-to-keep-your-environment-up-to-date/</link><pubDate>Sat, 02 May 2020 11:41:56 -0300</pubDate><guid>https://leonardofaria.net/2020/05/02/using-dependabot-to-keep-your-environment-up-to-date/</guid><description>&lt;p>Adding dependencies in a project is seen as a good way to not reinvent the wheel but at the same time it can be concerning in many different aspects:&lt;/p>
+&lt;ul>
+&lt;li>Versioning: sometimes dependencies can require specific versions of other dependencies and this can cause hiccups in your app;&lt;/li>
+&lt;li>Bundling: you need to be careful here to not bring extra code that will bloat your bundles;&lt;/li>
+&lt;li>Updating: JavaScript moves fast and if you don&amp;rsquo;t update packages regularly, you&amp;rsquo;ll play Jenga in the future.&lt;/li>
+&lt;/ul>
+&lt;p>There are different tools to cover the update part like &lt;a href="https://dependencies.io">Dependencies.io&lt;/a>, &lt;a href="https://snyk.io/">Snyk&lt;/a> and &lt;a href="https://dependabot.com/">Dependabot&lt;/a>. Since I have been using Dependabot for a while, I decided to write about my experience.&lt;/p>
+&lt;p>Dependabot is a tool acquired by GitHub one year ago that checks dependencies files from different languages (Ruby, JavaScript, Python, PHP, Elixir, to name a few) and finds new versions of libraries you are using in your project. Here is the setup:&lt;/p>
+&lt;p>&lt;img src="https://leonardofaria.net/wp-content/uploads/2020/05/dependabot.jpg" alt="Dependabot screenshot">&lt;/p>
+&lt;p>Daily updates can be overwhelming and I think that weekly updates have a better cost/benefit. Also, I assign myself the Pull Requests so I can get notifications as soon they are opened.&lt;/p>
+&lt;h2 id="how-to-use-dependabot-effectively">How to use Dependabot effectively&lt;/h2>
+&lt;p>Dependabot includes in each PR release notes, changelogs, commits links and vulnerability details whenever available. This is useful because you can take a look at the information and decide to proceed or not.&lt;/p>
+&lt;p>However, as pragmatic programmers, we want to ensure things won&amp;rsquo;t break. The PR details are important but more than that, we want a simulation of all (or almost all) deliverables that the project has.&lt;/p>
+&lt;p>&lt;img src="https://leonardofaria.net/wp-content/uploads/2020/05/semaphore.jpg" alt="CI Integration">&lt;/p>
+&lt;p>This screenshot shows what happens every time a PR is opened in the components library codebase of my work.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Tests (Jest / Bundle)&lt;/strong>: the Jest task will test the React components while the Bundle task will simulate the bundling commands we run when we want to update the package in the NPM registry;&lt;/li>
+&lt;li>&lt;strong>Linters (Stylesheets / JavaScript)&lt;/strong>: the stylesheet files follow a custom sass-lint setup and the JS code follows a series of ESLint rules. If a PR introduces a new version of a linter with new rules we will be able to capture that;&lt;/li>
+&lt;li>&lt;strong>Cypress (Screenshot Testing / Accessibility Testing)&lt;/strong>: if a new package introduces changes that may reflect in the look and feel of components, Cypress will capture the difference, screenshot it and store in S3. Since Cypress needs a live version of the documentation website, we also get the Gatsby build process covered.&lt;/li>
+&lt;/ul>
+&lt;p>With all these steps, it is very unlikely an external package will break our master branch. Kudos to my co-worker Grant Lee that also works in this project.&lt;/p></description></item><item><title>Exploring device detection for better user experiences in 2020</title><link>https://leonardofaria.net/2020/01/15/exploring-device-detection-for-better-user-experiences-in-2020/</link><pubDate>Wed, 15 Jan 2020 02:16:54 -0300</pubDate><guid>https://leonardofaria.net/2020/01/15/exploring-device-detection-for-better-user-experiences-in-2020/</guid><description>&lt;p>A few months ago I watched a great talk in Chrome Dev Summit about performance in slow devices.&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/puUPpVrIRkc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;p>It blew my mind all the work done by Facebook in identifying devices to create a better user experience. Fast-forward to now, I decided to study a bit more the topic and see what I could do at Thinkific.&lt;/p>
+&lt;h2 id="user-agents">User agents&lt;/h2>
+&lt;p>User agents are well-known by developers. We use them to detect bots, redirect users to a specific version of our website or append CSS classes on our page so we can create different experiences.&lt;/p>
+&lt;p>At Thinkific we already use the &lt;a href="https://github.com/fnando/browser">browser Ruby gem&lt;/a> to parse the user-agent and get relevant info (bot detection for instance). So, I decided to persist the main info in a visitor_device table – here is the schema:&lt;/p>
+&lt;pre>&lt;code>tenant_id: the course creator school the visitor is checking
+raw: the raw ua
+type: desktop / mobile / tablet / bot / other
+browser_name
+browser_version
+platform_name
+platform_version
+hardware: hstore containing memory, processor, device_model, device_name
+connection: hstore containing downlink_max, connection_type
+&lt;/code>&lt;/pre>&lt;p>You probably noticed that a few things there are not available in the UA string. Time for new JavaScript APIs:&lt;/p>
+&lt;h2 id="getting-hardware-info-using-javascript">Getting hardware info using JavaScript&lt;/h2>
+&lt;p>As covered in the Chrome Dev Summit video, we can use JS to get this info&lt;/p>
+&lt;h3 id="memory">Memory&lt;/h3>
+&lt;p>&lt;code>navigator.deviceMemory&lt;/code> will return a floating-point number. There are things to consider here:&lt;/p>
+&lt;ul>
+&lt;li>It only works over HTTPS&lt;/li>
+&lt;li>Support is quite limited (Chrome only basically)&lt;/li>
+&lt;/ul>
+&lt;p>More about it:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/w3c/device-memory">Spec from W3C&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory">MDN Docs&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://caniuse.com/#feat=mdn-api_navigator_devicememory">Can I use deviceMemory&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="processors">Processors&lt;/h3>
+&lt;p>&lt;code>navigator.hardwareConcurrency&lt;/code> will return the number of logical cores of the user&amp;rsquo;s CPU. Support for this is &lt;a href="https://caniuse.com/#feat=hardwareconcurrency">decent&lt;/a>.&lt;/p>
+&lt;h2 id="detecting-connection-info-using-javascript">Detecting connection info using JavaScript&lt;/h2>
+&lt;p>&lt;code>navigator.connection&lt;/code> is a new API containing information about the system&amp;rsquo;s connection, such as the current bandwidth of the user&amp;rsquo;s device or whether the connection is metered. The support is quite limited (Chrome only basically) but things are promising.&lt;/p>
+&lt;p>More about it:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://googlechrome.github.io/samples/network-information/">Chrome example&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/connection">MDN Docs&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://caniuse.com/#feat=netinfo">Can I use Network Information API&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="detecting-the-device-model">Detecting the device model&lt;/h2>
+&lt;p>The user agent &lt;em>may&lt;/em> return some information about the model name. &lt;a href="https://userstack.com/">userstack&lt;/a> is a service that gives you information based on the user agent. It works well and it is easy to integrate, however, depending on your need, they can&amp;rsquo;t help.&lt;/p>
+&lt;p>Take for instance iDevices. Their user agent is basically the same so you can&amp;rsquo;t differentiate an iPad Pro from an old iPad that runs the last iOS. For these cases, you may need a better detection based on resolution, pixel density and other hardware information exposed in the browser. I did a quick research on this and found 3 products so far: &lt;a href="https://web.wurfl.io/#wurfl-js">WURFL.io&lt;/a>, &lt;a href="https://deviceatlas.com/products/web">DeviceAtlas&lt;/a> and &lt;a href="https://51degrees.com/">51Degrees&lt;/a>. I didn&amp;rsquo;t have time to try their products yet, but I am looking forward to doing it (and post about it)&lt;/p>
+&lt;h2 id="faq">FAQ&lt;/h2>
+&lt;p>&lt;em>Question: Why not using Google Analytics / Mixpanel / Kibana / New Relic / your tool here?&lt;/em>&lt;/p>
+&lt;p>We could get browser info inside other tools however as a SaaS product we don&amp;rsquo;t use our own Google Analytics property (customers add their own). Also, adblockers may block these third-party tools. Last not least, by having this info in our side we can adapter better.&lt;/p>
+&lt;p>&lt;em>Question: Do you have a list of low-end/high-end devices?&lt;/em>&lt;/p>
+&lt;p>No. Maybe this can be built combining the number of processors and memory but I didn&amp;rsquo;t invest much time on this. In this project, my colleague created a Rails helper that would determinate if the user would use the lite or default version of a website based on hardware. On this topic, it is important to mention Facebook has a library for Android called &lt;a href="https://github.com/facebook/device-year-class/">Device Year Class&lt;/a>.&lt;/p></description></item><item><title>Creating a website for my Apple Collection</title><link>https://leonardofaria.net/2019/10/17/creating-a-website-for-my-apple-collection/</link><pubDate>Thu, 17 Oct 2019 00:36:30 -0300</pubDate><guid>https://leonardofaria.net/2019/10/17/creating-a-website-for-my-apple-collection/</guid><description>&lt;p>&lt;img src="https://leonardofaria.net/wp-content/uploads/2019/10/collection.jpg" alt="Part of the collection">&lt;/p>
+&lt;p>A while ago I started an Apple Collection. After a few laptops and a few iDevices, I decided that I should start collecting info about my iThings. In the beginning, I created a gist containing model, serial number, how did I get the device, minimum/maximum OS, etc.&lt;/p>
+&lt;p>The list kept going bigger and bigger and the content started looking messy. The natural way to organize my data would be inside a SQL database, with the information distributed in columns. After organizing the information in tables, I would create a graphQL API (the one cool kids use these days) to give me the data needed to populate my UI – probably written in React, compiled with Babel and packed with webpack.&lt;/p>
+&lt;p>Reading the previous paragraph aloud, you can hear many technologies and I even ignored the backend language and UI details like SASS or styled-components. It sounds a bit overwhelming when the ultimate goal is showing a list of items in a nice design.&lt;/p>
+&lt;p>That&amp;rsquo;s being said, I thought: how can I deliver this content without:&lt;/p>
+&lt;ul>
+&lt;li>An API or any backend work&lt;/li>
+&lt;li>Any JS framework/library&lt;/li>
+&lt;li>Any JS tooling (webpack, babel, etc)&lt;/li>
+&lt;li>Any CSS work&lt;/li>
+&lt;/ul>
+&lt;p>On top of these constraints, I had a few stretch goals:&lt;/p>
+&lt;ul>
+&lt;li>Create a website with good accessibility&lt;/li>
+&lt;li>Create a website that works in old browsers, since I have computers running Mac OS 9.2 and iDevices running iOS 3&lt;/li>
+&lt;/ul>
+&lt;p>Challenge accepted. One index.html, a few vanilla JS files, no custom CSS. TL,DR:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://bit.ly/collection-website">Final website&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://bit.ly/collection-source">Source code&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="no-api-or-any-backend-work">No API or any backend work&lt;/h2>
+&lt;p>A while ago I saw a SaaS product called &lt;a href="https://steinhq.com/">Stein&lt;/a>. You create your data inside a Google Sheets document and they give you an endpoint with your data. Their library works like handlebars and it looks perfect for my use case:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">div&lt;/span> &lt;span style="color:#008080">data-stein-url&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;https://api.steinhq.com/v1/storages/5cc158079ec99a2f484dcb40/Sheet1&amp;#34;&lt;/span> &lt;span style="color:#008080">data-stein-limit&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;2&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">h1&lt;/span>&amp;gt;{{title}}&amp;lt;/&lt;span style="color:#000080">h1&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">h6&lt;/span>&amp;gt;By {{author}}&amp;lt;/&lt;span style="color:#000080">h6&lt;/span>&amp;gt;
+{{content}}
+Read on &amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{link}}&amp;#34;&lt;/span>&amp;gt;Medium&amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="no-js-frameworklibrary-and-tooling">No JS framework/library and tooling&lt;/h2>
+&lt;p>Decided to avoid adding a framework or library in this project since the use case didn&amp;rsquo;t need one. All JS interactions on this page are quite simple (show/hide menus, open a modal screen, handle permalinks).&lt;/p>
+&lt;p>Since I was not using a framework/library, I would avoid adding webpack and babel. No need to dig into presets and loaders.&lt;/p>
+&lt;p>PS. You can argue that I&amp;rsquo;d have chosen create-react-app or Next.js and get all these problems solved, but no.&lt;/p>
+&lt;h2 id="no-css-work">No CSS work&lt;/h2>
+&lt;p>I love writing CSS, especially when I can use SASS but I decided to do not write CSS here. I had a few good reasons to avoid doing it:&lt;/p>
+&lt;ul>
+&lt;li>I had no designs and despite I could do something decent-looking, I didn&amp;rsquo;t want to put time and energy on it;&lt;/li>
+&lt;li>I wanted to use &lt;a href="https://tailwindcss.com">Tailwind CSS&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;p>If you never heard about Tailwind CSS, please don&amp;rsquo;t try to think “it is a Bootstrap option”. Here is a good short explanation, from their website:&lt;/p>
+&lt;blockquote class="wp-block-quote">
+&lt;p>
+Most CSS frameworks do too much.&lt;br />&amp;#8230;&lt;br />Instead of opinionated predesigned components, Tailwind provides low-level utility classes that let you build completely custom designs without ever leaving your HTML.
+&lt;/p>
+&lt;/blockquote>
+&lt;p>This is pretty much true. A quick search gives you many web apps “rebuilt” with Tailwind CSS:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://tailwindcomponents.com/component/whatsapp-web-clone">Whatsapp&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tailwindcomponents.com/component/telegram-desktop-using-tailwindcss">Telegram&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tailwindcomponents.com/component/facebook-clone">Facebook&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tailwindcomponents.com/component/reddit-clone">Reddit&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tailwindcomponents.com/component/youtube-clone">Youtube&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tailwindcomponents.com/component/slack-clone-1">Slack&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tailwindcomponents.com/component/coinbase-clone">Coinbase&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tailwindcomponents.com/component/github-profile-clone">Github&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tailwindcomponents.com/component/trello-panel-clone">Trello&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://codepen.io/drehimself/full/vpeVMx/">Twitter&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.youtube.com/watch?v=_JhTaENzfZQ">Netlify&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="create-a-website-with-good-accessibility">Create a website with good accessibility&lt;/h2>
+&lt;p>Last month I started taking accessibility courses at &lt;a href="https://dequeuniversity.com/curriculum/packages/full">Deque University&lt;/a>. Their content is great and it reminders me that &lt;strong>HTML is accessible by default&lt;/strong>. By using a semantic HTML structure and testing basic things like keyboard navigation and colour contrast you eliminate several barries that move people with disabilities from your content. I am not an accessibility expert but here are a few accessibility-related things I&amp;rsquo;ve worked on this website:&lt;/p>
+&lt;ul>
+&lt;li>Disable stylesheets: by disabling stylesheets you can ensure that your content follows a logical/structural way.&lt;/li>
+&lt;li>VoiceOver: VoiceOver is included in macOS and iOS. It is &lt;a href="https://webaim.org/articles/voiceover/">very simple to use it&lt;/a> and by using it you can have a better understanding of how people use this feature.&lt;/li>
+&lt;li>Modals: modals can be problematic. Decided to follow &lt;a href="https://bitsofco.de/accessible-modal-dialog/">Ire Aderinokun&amp;rsquo;s&lt;/a> approach.&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd">axe&lt;/a>: the extension is an accessibility checker for WCAG 2 and Section 508 accessibility rules.&lt;/li>
+&lt;/ul>
+&lt;p>It is not perfect, there are a few things that I didn&amp;rsquo;t work it, like adding a skip link to the main content. If you are curious, &lt;a href="https://github.com/leonardofaria/collection/pull/1">here is the Pull Request with all the changes&lt;/a>.&lt;/p>
+&lt;h2 id="create-a-website-that-works-in-old-browsers">Create a website that works in old browsers&lt;/h2>
+&lt;p>I couldn&amp;rsquo;t achieve this objective since I had no control over scripts and styles. However, it doesn&amp;rsquo;t seem to be impossible. A few things I noticed:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/SteinHQ/Expedite">Expedite&lt;/a> (Stein client) uses &lt;a href="https://github.com/SteinHQ/Expedite/blob/master/index.js#L51-L54">fetch&lt;/a>, which was only &lt;a href="https://caniuse.com/#feat=fetch">added in Safari 10&lt;/a>. The request to their server could be probably replaced for an XMLHttpRequest.&lt;/li>
+&lt;li>Tailwind uses flexbox in many elements. Safari only started supporting Flexbox in iOS 7. Maybe I could write a few properties to their existing elements to achieve a decent look.&lt;/li>
+&lt;li>SSL Certificates may be an issue to old browsers.&lt;/li>
+&lt;/ul>
+&lt;h2 id="conclusions">Conclusions&lt;/h2>
+&lt;p>Making this website was super fun. The fact I added “constraints” to it made think outside the box. Out of curiosity, I tracked my time using &lt;a href="https://clockify.me">Clockify&lt;/a> and I&amp;rsquo;ve worked 13h on this, between coding, creating the data, testing and writing this post.&lt;/p></description></item><item><title>Forcing the usage of yarn (and at a specific version)</title><link>https://leonardofaria.net/2019/10/11/forcing-the-usage-of-yarn-and-at-a-specific-version/</link><pubDate>Fri, 11 Oct 2019 00:40:46 -0300</pubDate><guid>https://leonardofaria.net/2019/10/11/forcing-the-usage-of-yarn-and-at-a-specific-version/</guid><description>&lt;p>People and organizations often have preferences for a specific package manager. At work, we decided to use Yarn due to emoji support (jk) but how to keep everybody using Yarn? &lt;/p>
+&lt;p>We can use the &lt;a href="https://docs.npmjs.com/misc/scripts">preinstall hook&lt;/a> to check if the user run &lt;code>npm install&lt;/code>or &lt;code>yarn install&lt;/code>. Here is one example:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="color:#d14">&amp;#34;scripts&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> {
+&lt;span style="color:#d14">&amp;#34;preinstall&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;node -e \&amp;#34;if(process.env.npm_execpath.indexOf(&amp;#39;yarn&amp;#39;) === -1) throw new Error(&amp;#39;You must use Yarn to install, not NPM&amp;#39;)\&amp;#34;&amp;#34;&lt;/span>,
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you run &lt;code>npm install&lt;/code>:&lt;figure class="wp-block-image">&lt;/p>
+&lt;p>&lt;img src="https://leonardofaria.net/wp-content/uploads/2019/10/npm-install.jpg" alt="" class="wp-image-2084" /> &lt;/figure>&lt;/p>
+&lt;p>If you want to ignore the checking (CI environment for instance), use the &lt;code>--ignore-scripts&lt;/code> option: &lt;/p>
+&lt;p>&lt;code>npm install --ignore-scripts&lt;/code>&lt;/p>
+&lt;p>Moreover, you can use the &lt;a href="https://docs.npmjs.com/files/package.json#engines">engines option&lt;/a> of NPM to force a specific version of Node, and/or Yarn. Here is an example:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="color:#d14">&amp;#34;engines&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> {
+&lt;span style="color:#d14">&amp;#34;yarn&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;&amp;gt;1.19.1&amp;#34;&lt;/span>,
+&lt;span style="color:#d14">&amp;#34;node&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#34;&amp;gt;12&amp;#34;&lt;/span>
+},
+&lt;/code>&lt;/pre>&lt;/div>&lt;figure class="wp-block-image">
+&lt;p>&lt;img src="https://leonardofaria.net/wp-content/uploads/2019/10/npm-engines.jpg" alt="" class="wp-image-2101" /> &lt;/figure>&lt;/p></description></item><item><title>Disabling autofill in Chrome</title><link>https://leonardofaria.net/2019/10/02/disabling-autofill-in-chrome/</link><pubDate>Wed, 02 Oct 2019 16:58:52 -0300</pubDate><guid>https://leonardofaria.net/2019/10/02/disabling-autofill-in-chrome/</guid><description>&lt;p>Autofill in form elements is a very useful feature in browsers. Creating new accounts or shopping in an online store are examples of this feature saving us time.&lt;/p>
+&lt;p>However, the autofill feature can be a problem for SaaS products. Imagine that you want to edit the email address of one of your users. You hit edit in one screen and once you get a form with your user data Chrome will replace their email to your email. This is not a good user experience.&lt;/p>
+&lt;p>MDN has an article showing “How to turn off form autocompletion”. The solution is using the autocomplete attribute with an off value. This doesn&amp;rsquo;t work in Chrome.&lt;/p>
+&lt;p>Digging in Stackoverflow and Google results, I found a &lt;a href="https://bugs.chromium.org/p/chromium/issues/detail?id=468153#c164">bug issued in 2015 about the topic&lt;/a>. Here is the TL,DR (from March 2016):&lt;/p>
+&lt;blockquote>
+&lt;p>First off, thanks for everyone&amp;rsquo;s feedback on this. I apologize for our delay in clarifying our stance. We&amp;rsquo;ve been working to finalize our policy regarding Autofill and the autocomplete attribute, and we&amp;rsquo;ve been making changes to this over the past few months (as some of you have noticed).&lt;/p>
+&lt;p>First and foremost, Autofill in Chrome exists to help our everyday users get through common forms (address forms, contact forms, checkout forms, etc) across the web. This has become especially important on mobile devices, where typing on virtual keyboards is both difficult and annoying. Autofill tries to make this experience better, and it&amp;rsquo;s used millions of times per day by Chrome users.&lt;/p>
+&lt;p>The tricky part here is that somewhere along the journey of the web autocomplete=off become a default for many form fields, without any real thought being given as to whether or not that was good for users. This doesn&amp;rsquo;t mean there aren&amp;rsquo;t very valid cases where you don&amp;rsquo;t want the browser autofilling data (e.g. on CRM systems), but by and large, we see those as the minority cases. And as a result, we started ignoring autocomplete=off for Chrome Autofill data [1].&lt;/p>
+&lt;p>We don&amp;rsquo;t just ignore the autocomplete attribute, however. In the WHATWG standard, we defined a series of new autocomplete values that developers can use to better inform the browser about what a particular field is, and we encourage developers to use those types. [2]&lt;/p>
+&lt;p>In cases where you really want to disable autofill, our suggestion at this point is to utilize the autocomplete attribute to give valid, semantic meaning to your fields. If we encounter an autocomplete attribute that we don&amp;rsquo;t recognize, we won&amp;rsquo;t try and fill it.&lt;/p>
+&lt;p>As an example, if you have an address input field in your CRM tool that you don&amp;rsquo;t want Chrome to Autofill, you can give it semantic meaning that makes sense relative to what you&amp;rsquo;re asking for: e.g. autocomplete=”new-user-street-address”. If Chrome encounters that, it won&amp;rsquo;t try and autofill the field.&lt;/p>
+&lt;/blockquote>
+&lt;p>I also found a &lt;a href="https://gist.github.com/niksumeiko/360164708c3b326bd1c8">gist&lt;/a> with a few solutions. Many people reported using &lt;code>autocomplete=&amp;quot;new-password&amp;quot;&lt;/code> fixes this issue but I have no success on this front. Which solved the issue for me is setting the form fields to read only and then removing the attribute once the user focus them.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">input&lt;/span> &lt;span style="color:#008080">readonly&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;readonly&amp;#34;&lt;/span> &lt;span style="color:#008080">onfocus&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;this.removeAttribute(&amp;#39;readonly&amp;#39;);&amp;#34;&lt;/span> &lt;span style="color:#008080">type&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;text&amp;#34;&lt;/span> &lt;span style="color:#008080">value&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;user@email.com&amp;#34;&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Thoughts on building components libraries</title><link>https://leonardofaria.net/2018/02/04/thoughts-building-components-libraries/</link><pubDate>Sun, 04 Feb 2018 16:24:53 -0200</pubDate><guid>https://leonardofaria.net/2018/02/04/thoughts-building-components-libraries/</guid><description>&lt;p>A few months ago we started using React at &lt;a href="https://thinkific.com">Thinkific&lt;/a>. One of the challenges of using React is creating reusable components not only from a look and feel perspective but also shareable in different projects.&lt;/p>
+&lt;p>I didn&amp;rsquo;t create this concept of elements (or components) library. To be honest, there are podcasts, courses, and examples everywhere about it but how to even start it? When you start creating a project from scratch you face several questions:&lt;/p>
+&lt;ul>
+&lt;li>How to style components? Sass? Stylus? styled-components?&lt;/li>
+&lt;li>How to show the elements?&lt;/li>
+&lt;li>How to build the library? Babel? Webpack?&lt;/li>
+&lt;li>How to publish the library? To NPM or not NPM?&lt;/li>
+&lt;li>How to use integrations and CI in your favour?&lt;/li>
+&lt;/ul>
+&lt;p>Lots of decisions and you may not know all the answers. Startup Life™ doesn&amp;rsquo;t let you do whatever you want – everything has a cost and a trade-off. Why am I talking all this story? Because I wanted to share my thoughts about it and I created a &lt;a href="https://github.com/leonardofaria/leozera-ui">&lt;strong>repository to document&lt;/strong>&lt;/a> what we are doing.&lt;/p>
+&lt;h2 id="styling">Styling&lt;/h2>
+&lt;p>&lt;a href="https://www.styled-components.com/">styled-components&lt;/a> changed the way we style things however many people still use Sass, especially when they come from Rails (our case for instance).&lt;/p>
+&lt;p>If you have something already done in Sass there is no reason for migrating to styled-components. Also, if you keep everything in Sass you can still export your compiled styling easily – like a bootstrap.css.&lt;/p>
+&lt;h2 id="showing-elements">Showing elements&lt;/h2>
+&lt;p>&lt;a href="https://storybook.js.org/">Storybook&lt;/a> is probably the way to go when the topic is showing a component and its properties. My two cents about Storybook:&lt;/p>
+&lt;ul>
+&lt;li>They have a &lt;a href="https://now-examples-slackin-nqnzoygycp.now.sh/">really good Slack&lt;/a>, which is an endless source of knowledge.&lt;/li>
+&lt;li>&lt;a href="https://storybook.js.org/addons/addon-gallery/">Addons&lt;/a> are pretty useful and it is worth spending a time testing them. &lt;a href="https://github.com/storybooks/storybook/tree/master/addons/knobs">Knobs&lt;/a>, for instance, lets you change props via browser. Quite handy.&lt;/li>
+&lt;li>You can host your Storybook using Github Pages. It&amp;rsquo;s pretty straightforward and projects like &lt;a href="https://github.com/tschaub/gh-pages">gh-pages&lt;/a> or &lt;a href="https://github.com/enriquecaballero/branchsite">branchsite&lt;/a> get job done.&lt;/li>
+&lt;li>You can also host your Storybook using &lt;a href="https://www.netlify.com/">Netlify&lt;/a>. To be honest, this is my favourite approach because you can build the master branch as official documentation and build all additional commits – and get them in &lt;a href="https://github.com/leonardofaria/leozera-ui/pull/1">Pull Requests&lt;/a>!&lt;br>
+&lt;img src="https://leonardofaria.net/wp-content/uploads/2017/12/netlify.png" alt="Netlify hook in PR">&lt;/li>
+&lt;/ul>
+&lt;h2 id="building-the-library">Building the library&lt;/h2>
+&lt;p>There are a few different approaches here. I am using Babel to compile individually the ES6 component and webpack to build everything in one file.&lt;/p>
+&lt;p>At the moment I write this post &lt;a href="https://medium.com/webpack/webpack-4-beta-try-it-today-6b1d27d7d7e2">webpack 4&lt;/a> is beta. The performance improvements are quite stunning.&lt;/p>
+&lt;h2 id="publishing-the-library">Publishing the library&lt;/h2>
+&lt;p>Again, there are different approaches to publish the library in NPM. For now, I have a `yarn run publish` command that will bump the version, build the library and publish the built `dist` directory.&lt;/p>
+&lt;p>This approach is quite manual but packages like &lt;a href="https://github.com/sindresorhus/np">np&lt;/a>, &lt;a href="https://github.com/mgol/npm-bump">npm-bump&lt;/a> and &lt;a href="https://github.com/d4rkr00t/pmm">pmm&lt;/a> can help here. You can also use &lt;code>yarn version&lt;/code> – if you are a yarn person.&lt;/p>
+&lt;h2 id="using-integrations">Using integrations&lt;/h2>
+&lt;p>I added CircleCI in the repository since I used to use on daily basis. It runs tests created by jest and after it uploads to Codecov the code coverage. Both CircleCI and Codecov are free for open source projects. Of course you can use &lt;a href="https://travis-ci.org/">Travis CI&lt;/a>, and &lt;a href="https://coveralls.io/">Coveralls&lt;/a>, also free for open source projects.&lt;/p>
+&lt;p>One project that I just figured out recently is the &lt;a href="https://nodesecurity.io/">Node Security Platform&lt;/a>. Its job is monitoring vulnerability threatens in your repository. Github also &lt;a href="https://help.github.com/articles/about-security-alerts-for-vulnerable-dependencies/">offers&lt;/a> the same.&lt;/p>
+&lt;p>Talking about external dependencies, you may want to consider &lt;a href="https://greenkeeper.io/">Greenkeeper&lt;/a> or &lt;a href="https://www.dependencies.io/">dependencies.io&lt;/a>. They both monitor your package.json and create individuals Pull Requests to update packages in your repository. The other two options you have are: &lt;code>yarn outdated&lt;/code> or &lt;a href="https://www.npmjs.com/package/npm-check-updates">ncu&lt;/a>:&lt;/p>
+&lt;p>&lt;a href="https://www.npmjs.com/package/npm-check-updates">&lt;img src="https://leonardofaria.net/wp-content/uploads/2018/02/ncu.png" alt="ncu">&lt;/a>&lt;/p>
+&lt;p>Last but not least, I like to add a npm script to update the authors file. Here I shoot:&lt;/p>
+&lt;pre>&lt;code>git log --format='%aN &amp;lt;%aE&amp;gt;' | sort -u --ignore-case | grep -v 'users.noreply.github.com' &amp;gt; AUTHORS.txt &amp;amp;&amp;amp; git commit AUTHORS.txt -m 'Update AUTHORS' || true
+&lt;/code>&lt;/pre>&lt;p>If you are curious about the &lt;code>git commit AUTHORS.txt -m 'Update AUTHORS' || true&lt;/code>. Not all the time we will modify the text file so I need the &lt;code>|| true&lt;/code> to ensure that the script continues to run even after git reports an error since there is no changes to commit.&lt;/p>
+&lt;h2 id="extra-resources">Extra resources&lt;/h2>
+&lt;p>I am adding here a few useful links about the topic:&lt;/p>
+&lt;ul>
+&lt;li>Podcast: &lt;a href="http://frontendhappyhour.com/episodes/top-shelf-style-guides/">Top Shelf Style Guides&lt;/a>: lots of thoughts and links here – this podcast is really good by the way&lt;/li>
+&lt;li>Course: &lt;a href="https://www.pluralsight.com/courses/react-creating-reusable-components">Creating Reusable Components&lt;/a>&lt;/li>
+&lt;li>(Mini)-Course: &lt;a href="https://egghead.io/courses/publish-javascript-packages-on-npm">Publish JavaScript packages on NPM&lt;/a> – because this mini-course I found &lt;a href="https://github.com/sindresorhus/np">np&lt;/a>, quoted before.&lt;/li>
+&lt;li>Website: &lt;a href="http://styleguides.io/">Style Guide&lt;/a> – 496 Website Style Guides and counting…&lt;/li>
+&lt;li>Inspiration: &lt;a href="https://ant.design/">Ant Design&lt;/a>&lt;/li>
+&lt;li>Inspiration: &lt;a href="https://atlaskit.atlassian.com/">AtlasKit&lt;/a>&lt;/li>
+&lt;li>Inspiration: &lt;a href="https://nikgraf.github.io/belle/">Belly&lt;/a>&lt;/li>
+&lt;li>Inspiration: &lt;a href="http://grommet.io/">Grommet&lt;/a>&lt;/li>
+&lt;li>Inspiration: &lt;a href="https://react.semantic-ui.com/">Semantic UI&lt;/a>&lt;/li>
+&lt;li>Inspiration: &lt;a href="http://reactsymbols.com/">UI React Kit&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Thanks for my co-worker &lt;a href="https://github.com/akiokio">Akio&lt;/a> for helping on this (and &lt;a href="https://github.com/reactjs/reactjs.org/pull/338#issuecomment-346891946">showing Netlify on reactjs.org repository&lt;/a>) and my other folks from Thinkific.&lt;/p></description></item><item><title>iPhone e Rails</title><link>https://leonardofaria.net/2010/02/21/iphone-e-rails/</link><pubDate>Sun, 21 Feb 2010 23:36:13 -0300</pubDate><guid>https://leonardofaria.net/2010/02/21/iphone-e-rails/</guid><description>&lt;p>O desenvolvimento de web apps para iPhone requer alguns cuidados especiais. Em nossas aplicações significa pensar em um layout para o gadget. Uma forma rápida de definir o layout para iPhone é através do código abaixo:&lt;/p>
 &lt;p>Para quem quer conhecer o desenvolvimento de web apps para iPhone, vale conhecer os projetos &lt;a href="http://www.jqtouch.com">jQTouch&lt;/a> e &lt;a href="http://iwebkit.net/">iWebKit&lt;/a>. O jQTouch é um plugin do jQuery com uma série de recursos de animação semelhantes ao do aparelho e possui inclusive a funcionalidade de &lt;a href="http://www.jqtouch.com/preview/demos/ext_location/">Geo Location&lt;/a>. Já o iWebKit é um framework que não depende de nenhuma biblioteca e que possui também bons recursos para montagem de interfaces.&lt;/p></description></item><item><title>jQuery no Spotlight</title><link>https://leonardofaria.net/2009/05/25/jquery-no-spotlight/</link><pubDate>Mon, 25 May 2009 00:21:40 -0300</pubDate><guid>https://leonardofaria.net/2009/05/25/jquery-no-spotlight/</guid><description>&lt;p>&lt;a href="https://leonardofaria.net/2009/02/08/documentacao-do-rails-e-ruby-no-spotlight/">Anteriormente&lt;/a> eu postei sobre como integrar a documentação do Ruby e do Rails no dicionário do Mac OS, que automaticamente é indexado pelo Spotlight.&lt;/p>
 &lt;center>
 &lt;a href="http://www.appelsiini.net/2009/2/search-jquery-api-docs-from-spotlight">&lt;img src="https://leonardofaria.net/wp-content/uploads/2009/05/jquery_spotlight.png" alt="jquery_spotlight" title="jquery no spotlight" />&lt;/a>
@@ -118,4 +367,6 @@ open(&lt;span style="color:#000;font-weight:bold">this&lt;/span>.href);
 &lt;/ol>
 &lt;p>[tags]script.aculo.us, frameworks, prototype, web2.0, javascript[/tags]&lt;/p></description></item><item><title>Bookmarklets</title><link>https://leonardofaria.net/2006/06/08/bookmarklets/</link><pubDate>Thu, 08 Jun 2006 14:55:37 -0300</pubDate><guid>https://leonardofaria.net/2006/06/08/bookmarklets/</guid><description>&lt;p>&lt;a href="https://leonardofaria.net/wp-content/uploads/2006/06/flickr.jpg">&lt;img src="https://leonardofaria.net/wp-content/uploads/2006/06/flickr.jpg" alt="Revista Webdesign" width="250" align="right" />&lt;/a>Há pelo menos 2 anos, falei dos bookmarklets, Javascripts que modificam o comportamento do navegador. Talvez eles seriam o avó do Greasemonkey, que prometem algo semelhante, mais com uma maior riqueza e poder.&lt;/p>
 &lt;p>Nas versões anteriores do site, sempre divulgava vários desses Javascripts. Na transição de versão do site, havia me esquecido deles. Mais agora, &lt;a href="https://leonardofaria.net/wp-content/uploads/2006/06/bookmarklets.html">separei&lt;/a> a documentação.&lt;/p>
-&lt;p>P.S.: Na &lt;a href="http://www.arteccom.com.br/webdesign">Revista Webdesign&lt;/a> de março desse ano há uma interessante reportagem sobre esses recursos, onde inclusive aparece meu nome.&lt;/p></description></item></channel></rss>
+&lt;p>P.S.: Na &lt;a href="http://www.arteccom.com.br/webdesign">Revista Webdesign&lt;/a> de março desse ano há uma interessante reportagem sobre esses recursos, onde inclusive aparece meu nome.&lt;/p></description></item><item><title>Greasemonkey para orkut na Faculdade</title><link>https://leonardofaria.net/2006/06/01/greasemonkey-para-orkut-na-faculdade/</link><pubDate>Thu, 01 Jun 2006 15:00:32 -0300</pubDate><guid>https://leonardofaria.net/2006/06/01/greasemonkey-para-orkut-na-faculdade/</guid><description>&lt;p>O sysadmin lá da &lt;a href="http://www.fadom.br">faculdade&lt;/a> barrou, no servidor, o acesso à &lt;a href="http://www.orkut.com">http://www.orkut.com&lt;/a>. Coitado, ele esqueceu da URL &lt;a href="https://www.orkut.com">https://www.orkut.com&lt;/a>, via SSL.&lt;/p>
+&lt;p>Aproveitando a deixa, escrevi um pequeno &lt;a href="http://greasemonkey.mozdev.org/">Greasemonkey&lt;/a>, que converte todos os links encontrados na página do orkut para o mesmos respectivos links, só que com o S, do https. Parece tosco, né? E é.&lt;/p>
+&lt;p>&lt;a id="p46" rel="attachment" href="https://leonardofaria.net/2006/06/01/greasemonkey-para-orkut-na-faculdade/orkutuserjs/" title="orkut.user.js">orkut.user.js&lt;/a>&lt;/p></description></item></channel></rss>
