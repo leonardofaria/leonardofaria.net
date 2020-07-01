@@ -10,7 +10,9 @@ permalink: /2016/05/07/excluding-folders-from-indexing-in-sublime/
 dsq_thread_id:
   - "4910934392"
 categories:
-  - desenvolvimento
+  - software
+tags:
+  - software
 ---
 Sometimes we work in projects with tons of Javascript dependencies. Folders like `node_modules` and `bower_components` are a pain in the neck because every time that we need to find something in the project the content of these folders will be used in the search.
 

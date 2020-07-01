@@ -11,6 +11,8 @@ dsq_thread_id:
   - "3952357891"
 categories:
   - browser
+tags:
+  - browser
 ---
 First of all, you must see [Dev Tips](https://umaar.com/dev-tips/): developer tips delivered daily in your email.
 

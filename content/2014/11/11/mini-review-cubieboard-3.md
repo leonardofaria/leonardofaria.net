@@ -11,8 +11,10 @@ dsq_thread_id:
   - "3215362169"
 categories:
   - linux
+  - review
 tags:
   - linux
+  - review
 ---
 <img src="/wp-content/uploads/2014/11/cubieboard1-300x300.jpg" alt="cubieboard" width="300" height="300" align="right" />O [Cubieboard](http://www.cubieboard.org) é uma placa com processador ARM bem pequena que entrega um computador razoável por seu preço. Com essas características, pode ser usada como media center para sala de TV ou até mesmo como um ponto de venda de loja. Já são 3 versões de Cubieboard, comprei recentemente o [modelo mais recente na Amazon](http://www.amazon.com/gp/product/B00GE4YP5C/), que veio com case, fonte USB, cabo SATA e outras coisinhas.
 

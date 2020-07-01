@@ -10,9 +10,11 @@ permalink: /2015/06/10/writing-skills-for-ielts-and-toefl/
 dsq_thread_id:
   - "5337537755"
 categories:
-  - android
-  - app
-  - ios
+  - portfolio
+  - iphone
+tags:
+  - portfolio
+  - iphone
 ---
 I took the TOEFL exam some weeks ago. This is one of most popular tests to prove English skills. It is considered by many people a tough exam because it requires not only English skills, but also time management skills. 
 

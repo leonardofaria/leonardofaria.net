@@ -9,10 +9,6 @@ guid: https://leonardofaria.net/2006/07/06/web2oh/
 permalink: /2006/07/06/web2oh/
 dsq_thread_id:
   - "1000137244"
-categories:
-  - web
-tags:
-  - web
 ---
 Web2.0 é um termo da moda. Hoje, não existem mais sites &#8220;em construção&#8221; mas sim sites &#8220;[beta](http://gmail.com)&#8220;, &#8220;[alpha](http://www.meebo.com/)&#8221; ou até mesmo &#8220;[gamma](http://flickr.com/)&#8220;. Mas o que significa Web2.0?
 

@@ -12,10 +12,8 @@ dsq_thread_id:
 categories:
   - browser
   - css
-  - desenvolvimento
 tags:
   - browser
-  - chrome
   - css
 ---
 Uso o Chrome como browser padrão em minha máquina e algumas extensões interessantes para desenvolvedores.

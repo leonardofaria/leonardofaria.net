@@ -10,9 +10,8 @@ permalink: /2014/09/16/ocultando-versoes-do-nginx-e-php-de-seu-servidor-web/
 dsq_thread_id:
   - "5338930573"
 categories:
-  - desenvolvimento
+  - php
 tags:
-  - nginx
   - php
 ---
 Uma prática comum em administração de servidores é ocultar a versão dos softwares utilizados, o que dificultaria na exploração de falhas específicas de um determinado pacote. Resolvi escrever esse arquivo mostrando como é fácil ocultar tais informações no Nginx e no PHP.

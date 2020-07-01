@@ -11,10 +11,10 @@ dsq_thread_id:
   - "1000135294"
 categories:
   - browser
+  - javascript
 tags:
   - browser
-  - firefox
-  - greasemonkey
+  - javascript
 ---
 O sysadmin lá da [faculdade](http://www.fadom.br) barrou, no servidor, o acesso à http://www.orkut.com. Coitado, ele esqueceu da URL https://www.orkut.com, via SSL.
 

@@ -6,7 +6,9 @@ author: Leonardo Faria
 ogImage: /images/og-images/2203.png
 permalink: /2020/05/20/changing-node-versions-automatically-per-directory
 categories:
-  - protip
+  - javascript
+tags:
+  - javascript
 ---
 
 Working in multiple Node projects sometimes means using different versions of Node. [nvm](https://github.com/nvm-sh/nvm) is one popular solution for Linux, macOS and Windows WSL that handles multiple Node installations. One of its most unknown tricks is the [deeper shell integration](https://github.com/nvm-sh/nvm#deeper-shell-integration). Check the video:

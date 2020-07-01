@@ -10,11 +10,13 @@ permalink: /2015/08/16/one-line-webservers-for-everybody/
 dsq_thread_id:
   - "4051595671"
 categories:
-  - desenvolvimento
+  - software
+tags:
+  - software
 ---
 Sometimes it is necessary to serve a folder with static resources (images, for example) as a web server. The probably most popular commands to perform these tasks are:
 
-```
+```shell
 php -S localhost:9999
 python -m SimpleHTTPServer 9999
 ```

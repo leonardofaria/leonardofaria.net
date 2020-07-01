@@ -11,7 +11,9 @@ dsq_thread_id:
   - "3281229653"
 image: /wp-content/uploads/2014/12/05-gen-db.png
 categories:
-  - desenvolvimento
+  - mysql
+tags:
+  - mysql
 ---
 
 Sempre que você está executando um script automatizado que usa o MySQL você possivelmente se pergunta como aplicará alguma boa prática para evitar a inserção de senha diretamente no shell.

@@ -10,7 +10,9 @@ permalink: /2018/02/04/thoughts-building-components-libraries/
 dsq_thread_id:
   - "6458404438"
 categories:
-  - offtropic
+  - javascript
+tags:
+  - javascript
 ---
 
 A few months ago we started using React at [Thinkific](https://thinkific.com). One of the challenges of using React is creating reusable components not only from a look and feel perspective but also shareable in different projects.

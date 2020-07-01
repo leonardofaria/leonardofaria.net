@@ -10,7 +10,9 @@ permalink: /2016/12/29/cloudready-or-how-to-get-a-chrome-os-in-a-non-chromebook-
 dsq_thread_id:
   - "5420292877"
 categories:
-  - offtropic
+  - software
+tags:
+  - software
 ---
 Few months ago I saw in The Verge a [post](http://www.theverge.com/2016/3/7/11173836/neverware-cloudready-how-to-convert-pc-into-chromebook-free) about [CloudReady](https://www.neverware.com/). CloudReady is a remake of Chromium OS ready to go in old PCs or Macs. The company behind the product sells its solutions/support to organizations interested in keeping using their hardware. It's really interesting.
 

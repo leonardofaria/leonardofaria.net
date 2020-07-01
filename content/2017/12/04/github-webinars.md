@@ -10,7 +10,9 @@ permalink: /2017/12/04/github-webinars/
 dsq_thread_id:
   - "6328868122"
 categories:
-  - offtropic
+  - git
+tags:
+  - git
 ---
 Many of us use Github daily however we usually don't use all its features. On the latest months, its team released a few webinars about how Github uses Github. More than showing the web interface, they talked about their culture and their workflows. In this post, I'm adding the links to the webinars with a few notes.  
 <!--more-->

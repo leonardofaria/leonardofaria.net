@@ -10,9 +10,9 @@ permalink: /2014/09/10/curiosidade-ruby-do-dia-strings/
 dsq_thread_id:
   - "3007024734"
 categories:
-  - ruby
+  - rubyonrails
 tags:
-  - ruby
+  - rubyonrails
 ---
 Strings são, em qualquer linguagem, cadeias de caracteres. Em Ruby, você pode acessar o conteúdo de uma string de forma semelhante a um array, exemplo:
 

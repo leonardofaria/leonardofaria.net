@@ -8,7 +8,11 @@ layout: post
 guid: https://leonardofaria.net/?p=2158
 permalink: /2020/01/15/exploring-device-detection-for-better-user-experiences-in-2020/
 categories:
-  - offtropic
+  - browser
+  - javascript
+tags:
+  - browser
+  - javascript
 ---
 A few months ago I watched a great talk in Chrome Dev Summit about performance in slow devices.
 

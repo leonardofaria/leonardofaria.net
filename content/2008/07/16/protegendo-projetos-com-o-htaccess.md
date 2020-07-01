@@ -11,8 +11,10 @@ dsq_thread_id:
   - "1000137216"
 categories:
   - devops
+  - apache
 tags:
   - devops
+  - apache
 ---
 O Apache pode te ajudar a proteger um projeto com seu sistema de autenticação. E isso é mais fácil do que você pensa. Para tal, crie um arquivo .htaccess com o seguinte conteúdo:
 

@@ -8,7 +8,11 @@ layout: post
 guid: https://leonardofaria.net/?p=1917
 permalink: /2018/05/06/testing-tools-to-track-my-work-activity/
 categories:
-  - offtropic
+  - software
+  - mac
+tags:
+  - software
+  - mac
 ---
 For a few weeks I have been using two tools to map my work activity. Since my work involves [manager and maker modes](https://www.learningapprentice.com/maker-mode-manager-mode/), I am trying to figure out how much time I spent in each of them and possibly how to remove distractions. A co-worker recommended [RescueTime](https://www.rescuetime.com/ref/1808210) and [WakaTime](https://wakatime.com/i/cbdf18ed-26ac-43b6-936c-d006efa2bec0) and here are my comments.
 

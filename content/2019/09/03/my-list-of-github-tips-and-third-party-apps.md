@@ -8,7 +8,11 @@ layout: post
 guid: https://leonardofaria.net/?p=1981
 permalink: /2019/09/03/my-list-of-github-tips-and-third-party-apps/
 categories:
-  - offtropic
+  - git
+  - software
+tags:
+  - git
+  - software
 ---
 I work at Thinkific with 20+ other developers (we are [hiring](http://bit.ly/thnk-eng-team-lead) [for](http://bit.ly/thnk-eng-lead) [multiple](http://bit.ly/thnk-senior-front-end-engineer) positions) in different codebases. GitHub is part of our toolkit, and I decided to write a post sharing a few Chrome extensions, integrations and third-party apps that help me be productive as an individual contributor and organized as code reviewer and team lead.
 

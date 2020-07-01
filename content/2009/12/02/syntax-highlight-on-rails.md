@@ -10,12 +10,11 @@ permalink: /2009/12/02/syntax-highlight-on-rails/
 dsq_thread_id:
   - "1089931967"
 categories:
-  - desenvolvimento
+  - portfolio
   - rubyonrails
 tags:
-  - codestacker
-  - howto
-  - rails
+  - portfolio
+  - rubyonrails
 ---
 Quer fazer um syntax highlight igual ao do codestacker abaixo, _a la Textmate_? É fácil:
 

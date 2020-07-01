@@ -10,7 +10,9 @@ permalink: /2016/08/06/serving-raw-files-directly-from-github/
 dsq_thread_id:
   - "5045995388"
 categories:
-  - offtropic
+  - git
+tags:
+  - git
 ---
 We usually create HTML files in our Github repositories, but how to show this data in the browser? [RawGit](http://rawgit.com) is a solution to serve files with the correct content types.
 

@@ -9,8 +9,6 @@ guid: https://leonardofaria.net/?p=1883
 permalink: /2018/01/23/sick-picks-podcasts/
 dsq_thread_id:
   - "6431956529"
-categories:
-  - offtropic
 ---
 I am huge fan of podcasts. It is always nice to hear people's thoughts, struggles, jokes and sick picks. Here is my short list of development-related podcasts.
 

@@ -7,7 +7,13 @@ ogImage: /images/og-images/2202.png
 layout: post
 permalink: /2020/05/02/using-dependabot-to-keep-your-environment-up-to-date
 categories:
-  - CI
+  - javascript
+  - devops
+  - git
+tags:
+  - javascript
+  - devops
+  - git
 ---
 
 Adding dependencies in a project is seen as a good way to not reinvent the wheel but at the same time it can be concerning in many different aspects:

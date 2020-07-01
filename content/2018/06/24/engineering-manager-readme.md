@@ -8,7 +8,9 @@ layout: post
 guid: https://leonardofaria.net/?p=1939
 permalink: /2018/06/24/engineering-manager-readme/
 categories:
-  - offtropic
+  - career
+tags:
+  - career
 ---
 Being a Team Lead requires more than tech skills: you interact daily with people and it is quite challenging building stronger relationships and improving employees onboarding. The following document is my People Lead Readme (sometimes known as Manager Readme), where I talk about me and I share my expectations on people and on the product.
 

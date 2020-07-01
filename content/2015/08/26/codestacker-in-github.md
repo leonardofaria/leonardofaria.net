@@ -12,6 +12,10 @@ dsq_thread_id:
 image: /wp-content/uploads/2015/08/codestacker.jpg
 categories:
   - rubyonrails
+  - portfolio
+tags:
+  - rubyonrails
+  - portfolio
 ---
 
 ![codestacker](/wp-content/uploads/2015/08/codestacker.jpg)

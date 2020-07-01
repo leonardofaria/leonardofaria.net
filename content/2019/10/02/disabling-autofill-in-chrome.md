@@ -8,7 +8,11 @@ layout: post
 guid: https://leonardofaria.net/?p=1995
 permalink: /2019/10/02/disabling-autofill-in-chrome/
 categories:
-  - offtropic
+  - browser
+  - javascript
+tags:
+  - browser
+  - javascript
 ---
 Autofill in form elements is a very useful feature in browsers. Creating new accounts or shopping in an online store are examples of this feature saving us time.
 

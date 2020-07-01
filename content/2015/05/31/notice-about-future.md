@@ -9,8 +9,6 @@ guid: https://leonardofaria.net/?p=1529
 permalink: /2015/05/31/notice-about-future/
 dsq_thread_id:
   - "3879140824"
-categories:
-  - offtropic
 ---
 I stopped writing in this blog for a while. I have been using this blog since 2005 and my absence is justified by live changes.
 

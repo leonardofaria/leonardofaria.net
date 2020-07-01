@@ -10,7 +10,9 @@ permalink: /2014/11/04/e-recursos-mobile/
 dsq_thread_id:
   - "3192328983"
 categories:
-  - offtropic
+  - portfolio
+tags:
+  - portfolio
 ---
 
 A mais ou menos 1 ano atrás foi publicado a primeira aplicação móvel do Ministério da Previdência Social. Trata-se do e-Recursos, sistema de processo eletrônico de recurso do INSS.

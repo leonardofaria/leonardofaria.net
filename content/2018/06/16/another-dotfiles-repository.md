@@ -8,7 +8,13 @@ layout: post
 guid: https://leonardofaria.net/?p=1931
 permalink: /2018/06/16/another-dotfiles-repository/
 categories:
-  - offtropic
+  - software
+  - git
+  - mac
+tags:
+  - software
+  - git
+  - mac
 ---
 A few days weeks I got a MacBook Air as secondary machine. Since its SSD is smaller than my main Mac I couldn’t use Time Machine. It was definitely a good time to finally create my [dotfiles](https://github.com/leonardofaria/dotfiles) repository. My repository is based in [webpro/dotfiles](https://github.com/webpro/dotfiles/) (you may want to check it out his repo to understand this one if you feel lost).
 

@@ -10,7 +10,7 @@ permalink: /2012/05/29/atualizando-o-macbook-pro/
 dsq_thread_id:
   - "5339293004"
 categories:
-  - macintosh
+  - mac
 tags:
   - mac
 ---

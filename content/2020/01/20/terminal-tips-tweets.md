@@ -8,7 +8,9 @@ layout: post
 guid: https://leonardofaria.net/?p=2165
 permalink: /2020/01/20/terminal-tips-tweets/
 categories:
-  - offtropic
+  - software
+tags:
+  - software
 ---
 
 A while ago I started a [thread on Twitter](https://twitter.com/leozera/status/1090639374109138946) with a few terminal tips. There are lots of CLIs in NPM and they can be very handy in our daily work. Here they are and if you like them, [follow me](https://twitter.com/leozera) :)

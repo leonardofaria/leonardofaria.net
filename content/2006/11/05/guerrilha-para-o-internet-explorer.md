@@ -11,12 +11,8 @@ dsq_thread_id:
   - "1006997266"
 categories:
   - browser
-  - marketing
 tags:
   - browser
-  - guerrilha
-  - ie
-  - viral
 ---
 A Microsoft está usando de publicidade móvel para divulgar a nova versão do Internet Explorer. Veja o que ela andou fazendo nas dez maiores cidades americanas:  
 

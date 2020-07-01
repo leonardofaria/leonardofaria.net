@@ -8,7 +8,9 @@ layout: post
 guid: https://leonardofaria.net/?p=2071
 permalink: /2019/10/11/forcing-the-usage-of-yarn-and-at-a-specific-version/
 categories:
-  - offtropic
+  - javascript
+tags:
+  - javascript
 ---
 People and organizations often have preferences for a specific package manager. At work, we decided to use Yarn due to emoji support (jk) but how to keep everybody using Yarn?&nbsp;
 

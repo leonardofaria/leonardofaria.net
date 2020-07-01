@@ -10,7 +10,11 @@ permalink: /2016/01/26/shell-script-for-audio-recording/
 dsq_thread_id:
   - "5345235410"
 categories:
-  - offtropic
+  - software
+  - linux
+tags:
+  - software
+  - linux
 ---
 _[Esse artigo está disponível em português.](https://leonardofaria.net/2016/01/29/shell-script-para-gravar-audio-da-web/)_
 

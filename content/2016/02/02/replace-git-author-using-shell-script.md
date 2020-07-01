@@ -10,7 +10,9 @@ permalink: /2016/02/02/replace-git-author-using-shell-script/
 dsq_thread_id:
   - "5345234838"
 categories:
-  - offtropic
+  - git
+tags:
+  - git
 ---
 This is an old trick that saved me several times. Sometimes people forget to setup their name and email information. The following script is useful to fix mistakes:
 

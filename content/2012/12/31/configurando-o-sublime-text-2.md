@@ -10,9 +10,9 @@ permalink: /2012/12/31/configurando-o-sublime-text-2/
 dsq_thread_id:
   - "5345235310"
 categories:
-  - desenvolvimento
+  - software
 tags:
-  - editor
+  - software
 ---
 Tempos atrás tinha instalado o Sublime, mas não o usei efetivamente. O [Nando Vieira](http://simplesideias.com.br/) fez um [ótimo post detalhado](http://simplesideias.com.br/configurando-o-sublime-text-2) sobre o editor, e após isso, resolvi dar uma olhada mais a fundo. O Sublime é altamente configurável e abaixo cito algumas modificações que fiz.
 

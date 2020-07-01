@@ -9,8 +9,6 @@ guid: https://leonardofaria.net/?p=1417
 permalink: /2014/08/28/diy-rastreamento-veicular/
 dsq_thread_id:
   - "2968001026"
-categories:
-  - diy
 ---
 Todo dia ouvimos histórias de roubos, que estão cada vez mais violentos. Com toda essa bandidagem solta, resolvi procurar uma forma de rastreamento veicular. Uma amiga sugeriu a empresa [e-novate](http://e-novate.com.br/para-voce), mas acabei encontrando uma solução de baixo custo, que me motivou a escrever esse post.
 

@@ -10,7 +10,9 @@ permalink: /2016/07/26/todo-list-using-sinatra-rest-api/
 dsq_thread_id:
   - "5338692151"
 categories:
-  - ruby
+  - rubyonrails
+tags:
+  - rubyonrails
 ---
 I am attending to a [post-degree program](http://langara.ca/programs-and-courses/programs/web-and-mobile-app/index.html) and one of its courses is Server-Side Scripting. The professor gave us a project which students should create a project and my colleague and I created a [Sinatra REST API](http://sinatra-todo-api.herokuapp.com) for a [todo list application](http://leonardofaria.github.io/todo).
 

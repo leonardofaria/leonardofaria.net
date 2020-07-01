@@ -7,7 +7,7 @@ ogImage: /images/og-images/2201.png
 layout: post
 permalink: /2020/04/26/facing-impostor-syndrome-and-time-management-issues
 categories:
-  - leadership
+  - career
 ---
 
 I often hear people talking about impostor syndrome and time management issues. Sometimes I hear about these issues from a friend, a direct report, and occasionally from myself. We are always challenged by them and they can affect our mood, our ability to be productive and our judgement.

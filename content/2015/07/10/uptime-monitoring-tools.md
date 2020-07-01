@@ -9,8 +9,6 @@ guid: https://leonardofaria.net/?p=1526
 permalink: /2015/07/10/uptime-monitoring-tools/
 dsq_thread_id:
   - "3921279040"
-categories:
-  - howto
 ---
 Sometimes people cann't believe in their infrastructure. This can be easily understood because maintaining complex software integrates several pieces of information. Moreover, people sometimes hire bad IT solutions and as a result, <s>shit</s> accidents happen.
 

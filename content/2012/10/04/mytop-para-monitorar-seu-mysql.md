@@ -10,7 +10,7 @@ permalink: /2012/10/04/mytop-para-monitorar-seu-mysql/
 dsq_thread_id:
   - "1001382849"
 categories:
-  - desenvolvimento
+  - mysql
 tags:
   - mysql
 ---

@@ -10,10 +10,9 @@ permalink: /2013/01/04/migrando-um-repositorio-svn-para-git/
 dsq_thread_id:
   - "1009803688"
 categories:
-  - desenvolvimento
+  - git
 tags:
   - git
-  - subversion
 ---
 Nos últimos dias, pesquisei uma forma de migrar um repositório de SVN para GIT e quando consegui fazer, percebi que era mais fácil que eu imagina. Com isso, resolvi escrever uma receitinha de como fazer isso.
 

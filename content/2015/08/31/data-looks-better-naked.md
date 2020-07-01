@@ -10,7 +10,9 @@ permalink: /2015/08/31/data-looks-better-naked/
 dsq_thread_id:
   - "4085494193"
 categories:
-  - desenvolvimento
+  - usability
+tags:
+  - usability
 ---
 Data is usually explained in tables or charts, but people sometimes commit mistakes when they add in them redundant or boring elements. A good table or chart is worth a thousand words and the following three gifs show how to improve your presentations. [Source](https://darkhorseanalytics.com/blog/data-looks-better-naked/)
 

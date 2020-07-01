@@ -10,7 +10,9 @@ permalink: /2015/12/12/the-ink-magazine/
 dsq_thread_id:
   - "5345235394"
 categories:
-  - offtropic
+  - portfolio
+tags:
+  - portfolio
 ---
 [the ink magazine](http://bit.ly/the-ink-magazine) was an [assignment](http://wrmf.ca/posts/wmdd-4815-assignments/) of my [HTML & CSS classes](http://wrmf.ca/posts/wmadd-4815-outline/) in the [Web and Mobile App Design and Development](http://langara.ca/programs-and-courses/programs/web-and-mobile-app/index.html) program, performed in [Langara College](http://langara.bc.ca).
 

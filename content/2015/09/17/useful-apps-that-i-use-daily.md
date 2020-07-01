@@ -10,7 +10,11 @@ permalink: /2015/09/17/useful-apps-that-i-use-daily/
 dsq_thread_id:
   - "4138723567"
 categories:
-  - macintosh
+  - mac
+  - software
+tags:
+  - mac
+  - software
 ---
 I decided write a post describing some tools that I use in my MacBook to enhance my tasks.
 

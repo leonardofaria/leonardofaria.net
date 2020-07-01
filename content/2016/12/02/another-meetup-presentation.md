@@ -10,7 +10,9 @@ permalink: /2016/12/02/another-meetup-presentation/
 dsq_thread_id:
   - "5440621470"
 categories:
-  - offtropic
+  - canada
+tags:
+  - canada
 ---
 In yesterday [Code & Coffee](https://www.meetup.com/Code-Coffee-Vancouver/events/235583183/) Meetup I talked about how Web APIs can improve User Experience. I watched [Zeno Rocha](http://zenorocha.com) talking about it few months ago then I decided to study/share the subject.
 

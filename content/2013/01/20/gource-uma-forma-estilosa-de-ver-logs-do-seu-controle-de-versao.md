@@ -10,10 +10,9 @@ permalink: /2013/01/20/gource-uma-forma-estilosa-de-ver-logs-do-seu-controle-de-
 dsq_thread_id:
   - "1036959682"
 categories:
-  - desenvolvimento
+  - git
 tags:
   - git
-  - subversion
 ---
 O [Catarse](http://catarse.me/) é uma plataforma brasileira de [crowdfunding](http://pt.wikipedia.org/wiki/Crowdfunding) que em [2 anos já apoiou mais de 700 projetos, movimentando quase 5 milhões de reais](http://blog.catarse.me/2-anos-de-catarse/). São números impressionantes, estão todos de parabéns por fazer acontecer, mas não é essa a razão do meu post :)
 

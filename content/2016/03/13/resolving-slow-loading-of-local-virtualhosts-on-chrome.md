@@ -10,7 +10,11 @@ permalink: /2016/03/13/resolving-slow-loading-of-local-virtualhosts-on-chrome/
 dsq_thread_id:
   - "5345234862"
 categories:
-  - offtropic
+  - software
+  - mac
+tags:
+  - software
+  - mac
 ---
 I've in my development mac different virtualhosts, using .local or .wp TLDs. Opening these address in Chrome are slow – about 3 seconds &#8216;resolving address'. This situation doesn't happen in Safari or Firefox. Here is my typical `/etc/hosts` configuration:  
 <!--more-->

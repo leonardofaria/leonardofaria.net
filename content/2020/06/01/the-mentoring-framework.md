@@ -6,7 +6,9 @@ author: Leonardo Faria
 ogImage: /images/og-images/2204.png
 permalink: /2020/06/01/the-mentoring-framework
 categories:
-  - protip
+  - career
+tags:
+  - career
 ---
 
 Last October I created a Mentoring Framework at work. The goal was creating a project from scratch using Ruby on Rails and in this journey, learning more about Ruby, Frontend, Project Management and Git, Databases and DevOps. 

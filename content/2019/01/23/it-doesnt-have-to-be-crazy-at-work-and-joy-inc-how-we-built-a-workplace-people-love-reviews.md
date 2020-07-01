@@ -9,7 +9,9 @@ guid: https://leonardofaria.net/?p=1953
 permalink: /2019/01/23/it-doesnt-have-to-be-crazy-at-work-and-joy-inc-how-we-built-a-workplace-people-love-reviews/
 image: /wp-content/uploads/2019/01/IMG_4455.jpg
 categories:
-  - offtropic
+  - review
+tags:
+  - review
 ---
 
 ![Book covers](/wp-content/uploads/2019/01/IMG_4455.jpg)

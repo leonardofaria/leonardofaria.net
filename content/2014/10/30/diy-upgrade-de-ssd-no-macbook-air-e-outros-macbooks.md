@@ -10,8 +10,7 @@ permalink: /2014/10/30/diy-upgrade-de-ssd-no-macbook-air-e-outros-macbooks/
 dsq_thread_id:
   - "5339132872"
 categories:
-  - diy
-  - macintosh
+  - mac
 tags:
   - mac
 ---

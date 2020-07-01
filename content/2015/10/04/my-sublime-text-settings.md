@@ -10,7 +10,11 @@ permalink: /2015/10/04/my-sublime-text-settings/
 dsq_thread_id:
   - "5341862479"
 categories:
-  - macintosh
+  - mac
+  - software
+tags:
+  - mac
+  - software
 ---
 Almost [3 years ago I wrote](https://leonardofaria.net/2012/12/31/configurando-o-sublime-text-2/) (in Portuguese) a post about my Sublime Text settings. Now, I updated my tips in an English post.
 

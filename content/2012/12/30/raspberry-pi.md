@@ -13,7 +13,6 @@ categories:
   - linux
 tags:
   - linux
-  - raspberry
 ---
 [<img src="/wp-content/uploads/2012/12/raspberry-300x300.jpg" alt="" title="raspberry" align="right" width="200" height="200" class="foto left" />](http://instagram.com/p/TO-7dfjTU3/) A alguns dias atrás comprei um [Raspberry Pi](http://pt.wikipedia.org/wiki/Raspberry_Pi). Ele é um computador do tamanho de um cartão de crédito, possui um processador de 700 MHz, 512 MB de Ram e você pode usar um cartão de memória como disco de boot. Para alimentação, um carregador de celular basta. Estou usando um [teclado de um iMac capacete](http://en.wikipedia.org/wiki/File:Apple_USB_Keyboard_B.jpg) e um [adaptador wifi xing ling](http://dx.com/p/802-11b-g-54mbps-wifi-wlan-wireless-network-usb-adapter-50856) para acessar a rede sem fio de casa.
 

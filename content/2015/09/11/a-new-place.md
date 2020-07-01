@@ -10,7 +10,9 @@ permalink: /2015/09/11/a-new-place/
 dsq_thread_id:
   - "4120935812"
 categories:
-  - offtropic
+  - canada
+tags:
+  - canada
 ---
 [<img src="/wp-content/uploads/2015/09/11374268_545132382310394_526835071_n-300x300.jpg" align="right" width="300" height="300" style="margin-left: 10px;" />](https://instagram.com/p/7YvAhwDTUUtj6ek4NwiLqLnnxcvmSu8lnkHhE0/?taken-by=leonardofaria) I have just moved this week to Vancouver. I started my [Web and Mobile App Design and Development post-degree](http://langara.ca/programs-and-courses/programs/web-and-mobile-app/index.html) in Langara. 
 

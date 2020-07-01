@@ -10,7 +10,7 @@ permalink: /2013/01/06/dicas-aleatorias-para-gestao-de-codigo/
 dsq_thread_id:
   - "1010950173"
 categories:
-  - desenvolvimento
+  - git
 ---
 No [post anterior mostrei como migrar um repositório de SVN para Git](https://leonardofaria.net/2013/01/04/migrando-um-repositorio-svn-para-git/). No meu caso, eram mais de 2000 commits, 1 GB de código, feito por meia dúzia de programadores. Abaixo compartilho algumas dicas que podem ser úteis na gestão de todo esse código:
 

@@ -10,7 +10,11 @@ permalink: /2017/12/14/useful-apps-that-i-use-daily-2017-edition/
 dsq_thread_id:
   - "6348260621"
 categories:
-  - offtropic
+  - software
+  - mac
+tags:
+  - software
+  - mac
 ---
 2 years ago I wrote a [post](https://leonardofaria.net/2015/09/17/useful-apps-that-i-use-daily/) about my tooling and here I am again, 2017 edition. I decided to write again because I keep listening to podcasts with Sick Picks and I also have my Sick Picks :)
 

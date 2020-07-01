@@ -10,7 +10,9 @@ permalink: /2016/06/24/my-first-meetup-presentation/
 dsq_thread_id:
   - "4935743202"
 categories:
-  - offtropic
+  - canada
+tags:
+  - canada
 ---
 Last week I presented in [Code & Coffee](http://www.meetup.com/Code-Coffee-Vancouver/events/231709823/) about WordPress and Gulp. In my 10 minutes talk, I explained briefly what is Gulp and how its tasks can save our time.
 

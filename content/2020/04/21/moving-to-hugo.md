@@ -6,8 +6,6 @@ author: Leonardo Faria
 ogImage: /images/og-images/2200.png
 layout: post
 permalink: /2020/04/21/moving-to-hugo
-categories:
-  - hugo
 ---
 
 In the last few days, I worked to move this website to [Hugo](https://gohugo.io). I have been using WordPress for years (this domain turned 15 earlier this month) in a dozen projects however it was time to change. Decided to follow a minimalist setup with Hugo.
