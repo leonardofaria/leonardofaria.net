@@ -15,7 +15,7 @@
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.2",
     "@tailwindcss/ui": "^0.3.0",
-    "autoprefixer": "^9.7.6",
+    "autoprefixer": "^9.8.4",
     "fastmatter": "^2.1.1",
     "gh-pages": "^2.2.0",
     "line-replace": "^2.0.1",
