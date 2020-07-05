@@ -19,7 +19,7 @@
     "fastmatter": "^2.1.1",
     "gh-pages": "^2.2.0",
     "line-replace": "^2.0.1",
-    "postcss": "^7.0.28",
+    "postcss": "^7.0.32",
     "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
     "puppeteer-core": "^3.0.2",
