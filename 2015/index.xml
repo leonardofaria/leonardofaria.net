@@ -104,7 +104,7 @@ python -m SimpleHTTPServer &lt;span style="color:#099">9999&lt;/span>
 &lt;li>&lt;a href="https://chrome.google.com/webstore/detail/tabs-saver/kmabfaomlcjlnplkoflgenkmmpilmead">Tabs saver&lt;/a>: It allows to save your opened tabs to future use.&lt;/li>
 &lt;li>&lt;a href="https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg">Wappalyzer&lt;/a>: It detects &lt;a href="https://wappalyzer.com/applications">technologies&lt;/a> used on websites. It&amp;rsquo;s very interesting for curious people.&lt;/li>
 &lt;li>&lt;a href="https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh">Window Resizer&lt;/a>: Resize browser window to emulate various screen resolutions. It is useful because you can set dimensions without worries like toolbar&amp;rsquo;s height.&lt;/li>
-&lt;li>&lt;a href="http://yslow.org/">YSlow&lt;/a>: Make your pages faster with Yahoo!&amp;lsquo;s page performance tool.&lt;/li>
+&lt;li>&lt;a href="http://yslow.org/">YSlow&lt;/a>: Make your pages faster with Yahoo!&amp;rsquo;s page performance tool.&lt;/li>
 &lt;/ul></description></item><item><title>Uptime monitoring tools</title><link>https://leonardofaria.net/2015/07/10/uptime-monitoring-tools/</link><pubDate>Fri, 10 Jul 2015 08:26:05 -0300</pubDate><guid>https://leonardofaria.net/2015/07/10/uptime-monitoring-tools/</guid><description>&lt;p>Sometimes people cann&amp;rsquo;t believe in their infrastructure. This can be easily understood because maintaining complex software integrates several pieces of information. Moreover, people sometimes hire bad IT solutions and as a result, &lt;s>shit&lt;/s> accidents happen.&lt;/p>
 &lt;p>I have been using some tools to report me web server down time. Here we go:&lt;/p>
 &lt;ul>
