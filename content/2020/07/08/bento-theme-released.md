@@ -3,6 +3,7 @@ id: 2207
 title: Bento theme released
 date: 2020-07-08
 author: Leonardo Faria
+ogImage: /images/og-images/2207.png
 permalink: /2020/07/08/bento-theme-released
 categories:
   - hugo
@@ -26,7 +27,9 @@ TailwindCSS is my go-to option for CSS in personal projects. It is easy to use, 
 
 In the theme I used transitions for links colors, a gradient in the bottom of the page and last not least, a cool reading progress bar in the top of the page. 
 
-EMBED VIDEO
+<video class="w-full h-auto" controls autoplay="autoplay">
+  <source src="/wp-content/uploads/2020/07/page-scroll.mp4" type="video/mp4">
+</video>
 
 One of my favourite things in this layout is the backdrop-filter in the sticky header. The  [`backdrop-filter`](https://web.dev/backdrop-filter/) CSS property is very popular in iOS and I wanted to add this touch in the theme instead of having the usual opacity.
 
