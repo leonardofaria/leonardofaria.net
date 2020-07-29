@@ -13,7 +13,7 @@ tags:
 
 [Earlier on April](/2020/04/21/moving-to-hugo/) I moved this website from Wordpress to Hugo. I like how Hugo is minimalist, fast and the fact I don't need to maintain one more JavaScript codebase :) 
 
-I created a theme for this website inspired by Casper (v1), Medium and many other minimalist journal templates. Bento was just released in the [Hugo Themes website](https://themes.gohugo.io/) and I decided to do here a show & tell about the work done.
+I created a theme for this website inspired by Casper (v1), Medium and many other minimalist journal templates. Bento was [just released](https://themes.gohugo.io/bento/) in the [Hugo Themes website](https://themes.gohugo.io/) and I decided to do here a show & tell about the work done.
 
 ## Design
 
@@ -37,11 +37,13 @@ Since I spend lots of my time on GitHub, I chose their color palette for code.
 
 ## Performance
 
-I built Bento with Performance in mind. I wanted to deliver code 
+I built Bento with Performance in mind. I wanted to deliver fast pages and no bloated CSS.
 
 ### Turbolinks
 
-Copying [their README](https://github.com/turbolinks/turbolinks): _Turbolinks® makes navigating your web application faster. Get the performance benefits of a single-page application without the added complexity of a client-side JavaScript framework. Use HTML to render your views on the server side and link to pages as usual. When you follow a link, Turbolinks automatically fetches the page, swaps in its <body>, and merges its `<head>`, all without incurring the cost of a full page load._
+From [their README](https://github.com/turbolinks/turbolinks): 
+
+> _Turbolinks® makes navigating your web application faster. Get the performance benefits of a single-page application without the added complexity of a client-side JavaScript framework. Use HTML to render your views on the server side and link to pages as usual. When you follow a link, Turbolinks automatically fetches the page, swaps in its <body>, and merges its `<head>`, all without incurring the cost of a full page load._
 
 Turbolinks is well-known in the Rails community but it can also be used outside the framework. I saw it first at [Devin Schulz](https://devinschulz.com/) Hugo website and I decided to add it in my theme. The integration is painless: add the JS file from a CDN in your page and there is no step 2. Since I don't have lots of JS interactions here, adding Turbolinks was very straightforward.
 
