@@ -1,10 +1,10 @@
 ---
 id: 2207
 title: Bento theme released
-date: 2020-07-08
+date: 2020-07-29
 author: Leonardo Faria
 ogImage: /images/og-images/2207.png
-permalink: /2020/07/08/bento-theme-released
+permalink: /2020/07/29/bento-theme-released
 categories:
   - hugo
 tags:
