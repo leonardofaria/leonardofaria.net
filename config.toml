@@ -46,5 +46,10 @@ disqusShortname = "leonardofaria"
     url = "/talks"
     weight = 1
 
+[params.fathomAnalytics]
+  siteID = "MBRIL"
+  # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
+  serverURL = "ft.leonardofaria.net"
+
 [permalinks]
   posts = "/:year/:month/:day/:title/"
