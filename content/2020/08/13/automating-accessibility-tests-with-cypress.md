@@ -3,6 +3,7 @@ id: 2220
 title: Automating accessibility tests with Cypress
 date: 2020-08-13
 author: Leonardo Faria
+ogImage: /images/og-images/2220.png
 permalink: /2020/08/13/automating-accessibility-tests-with-cypress/
 categories:
   - javascript
