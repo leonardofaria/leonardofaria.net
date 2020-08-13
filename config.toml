@@ -14,7 +14,7 @@ disqusShortname = "leonardofaria"
 [params]
   intro = true
   headline = "Hi, I'm Leo 👋"
-  description = "I am Leonardo Faria, a Brazillian developer living in Vancouver. This is my blog about software development and more since 2005."
+  description = "I am Leonardo Faria, a Brazilian developer living in Vancouver. This is my blog about software development and more since 2005."
 
   # favicon = "favicon.ico" # TODO: add support
   cover = "images/vancouver.jpg"
