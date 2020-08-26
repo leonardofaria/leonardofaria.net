@@ -51,5 +51,9 @@ disqusShortname = "leonardofaria"
   # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
   serverURL = "ft.leonardofaria.net"
 
+[params.umami]
+  siteID = "ef25ee64-202b-4378-822f-22398533a59c"
+  trackerScript = "//umami.leonardofaria.net/umami.js"
+
 [permalinks]
   posts = "/:year/:month/:day/:title/"
