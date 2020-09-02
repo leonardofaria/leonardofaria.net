@@ -1,7 +1,7 @@
 ---
 id: 2222
 title: 3 privacy-focused open-source Google Analytics alternatives for your next project
-date: 2020-08-13
+date: 2020-09-01
 author: Leonardo Faria
 ogImage: /images/og-images/2222.png
 permalink: /2020/09/01/3-privacy-focused-open-source-google-analytics-alternatives
