@@ -4,7 +4,7 @@ title: 3 privacy-focused open-source Google Analytics alternatives for your next
 date: 2020-09-01
 author: Leonardo Faria
 ogImage: /images/og-images/2222.png
-permalink: /2020/09/01/3-privacy-focused-open-source-google-analytics-alternatives
+permalink: /2020/09/01/three-privacy-focused-open-source-google-analytics-alternatives
 categories:
   - hugo
 tags:
