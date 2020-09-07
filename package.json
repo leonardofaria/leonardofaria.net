@@ -18,7 +18,7 @@
     "fastmatter": "^2.1.1",
     "line-replace": "^2.0.1",
     "postcss": "^7.0.32",
-    "postcss-cli": "^7.1.1",
+    "postcss-cli": "^7.1.2",
     "postcss-import": "^12.0.1",
     "puppeteer-core": "^5.2.1",
     "tailwindcss": "^1.7.6"
