@@ -1,0 +1,106 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: 
+webhook_url: 
+sections:
+- type: directory
+  path: content
+  label: Pages
+  create: all
+  match: "*"
+- type: directory
+  path: content/2020
+  label: '2020'
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/2019
+  label: '2019'
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/2018
+  label: '2018'
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/2017
+  label: '2017'
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/2016
+  label: '2016'
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/2015
+  label: '2015'
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/2014
+  label: '2014'
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/2013
+  label: '2013'
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/2012
+  label: '2012'
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/2011
+  label: '2011'
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/2010
+  label: '2010'
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/2009
+  label: '2009'
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/2008
+  label: '2008'
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/2007
+  label: '2007'
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/2006
+  label: '2006'
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/2005
+  label: '2005'
+  create: all
+  match: "**/*"
+upload_dir: static/uploads
+public_path: "/uploads"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_env:
+  - HUGO_ENV=staging
+  - HUGO_VERSION=0.71.1
+  preview_output_directory: public
+  preview_docker_image: forestryio/hugo:latest
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: hugo server -D -E -F --renderToDisk -d public
+version: 0.71.1
