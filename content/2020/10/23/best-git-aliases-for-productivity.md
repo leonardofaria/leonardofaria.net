@@ -27,7 +27,7 @@ Aliases will be in a section `[alias]`.
 
 Here are the aliases that I have been using:
 
-```bash
+```shell
 [alias]
 	graph = log --oneline --graph --decorate
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
@@ -57,7 +57,7 @@ The list above is quite small, you may think. And it is indeed. The reason why i
 
 Here is an example of the plugin:
 
-```bash
+```shell
 alias gst='git status'
 ```
 
