@@ -1,10 +1,10 @@
 ---
 id: 2223
-title: Best Git aliases for your productivity
+title: How to Use Git Aliases to Increase Your Productivity
 date: 2020-10-27
 author: Leonardo Faria
 ogImage: /images/og-images/2223.png
-permalink: /2020/10/27/best-git-aliases-for-productivity
+permalink: /2020/10/27/how-to-use-git-aliases-to-increase-your-productivity
 categories:
   - git
 tags:
