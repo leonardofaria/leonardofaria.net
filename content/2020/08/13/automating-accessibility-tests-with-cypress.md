@@ -51,7 +51,7 @@ npm install -D cypress cypress-axe
 
 Next, create a `cypress/support/index.js` file containing:
 
-```
+```js
 import 'cypress-axe'
 ```
 
