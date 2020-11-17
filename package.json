@@ -7,7 +7,8 @@
   "author": "Leonardo Faria <leonardofaria@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "hugo server --disableFastRender --buildFuture",
+    "ip": "ifconfig | grep 'inet ' | grep -Fv 127.0.0.1 | awk '{print $2}' | head -n 1",
+    "dev": "export LOCAL_IP=$(yarn --silent ip) && hugo server --disableFastRender --buildFuture --bind=$LOCAL_IP --baseURL=http://$LOCAL_IP:1313",
     "build": "hugo --gc --minify",
     "ogimages-generator": "node ogimages.js"
   },
