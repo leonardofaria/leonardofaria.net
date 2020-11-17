@@ -12,13 +12,13 @@ hideSuggestions: true
 hideComments: true
 hideMetadata: true
 hideAuthorBio: true
-description: Nothing is forever in the www world. Here are a few projects from my past (2006 - 2016).
+description: Nothing is forever in the www world. Here are a few projects from my past.
 ---
 
 <div class="intro mb-16">
 <p>
 Nothing is forever in the www world.<br/>
-Here are a few projects from my past (2006 - 2016).
+Here are a few projects from my past.
 </p>
 </div>
 
@@ -26,7 +26,7 @@ Here are a few projects from my past (2006 - 2016).
 
 <div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
 Project types: <a href="#ruby-on-rails">Ruby on Rails</a>, <a href="#wordpress">WordPress</a>, <a href="#mobile">Mobile</a>, <a href="#flash">Flash</a>.<br/><br/>
-For more recent work, my <a href="/pub/resume.pdf" target="_blank">updated resume</a>.
+On 2016 I joined <a href="https://thinkific.com" target="_blank">Thinkific</a> and I stopped freelancing. My <a href="/pub/resume.pdf" target="_blank">updated resume</a>.
 </div>
 
 ## Ruby on Rails 

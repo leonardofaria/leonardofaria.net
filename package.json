@@ -7,21 +7,22 @@
   "author": "Leonardo Faria <leonardofaria@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "hugo server --disableFastRender --buildFuture",
+    "ip": "ifconfig | grep 'inet ' | grep -Fv 127.0.0.1 | awk '{print $2}' | head -n 1",
+    "dev": "export LOCAL_IP=$(yarn --silent ip) && hugo server --disableFastRender --buildFuture --bind=$LOCAL_IP --baseURL=http://$LOCAL_IP:1313",
     "build": "hugo --gc --minify",
     "ogimages-generator": "node ogimages.js"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@fullhuman/postcss-purgecss": "^3.0.0",
     "@tailwindcss/ui": "^0.5.0",
     "autoprefixer": "^9.8.6",
     "fastmatter": "^2.1.1",
     "line-replace": "^2.0.1",
-    "postcss": "^7.0.32",
-    "postcss-cli": "^7.1.1",
+    "postcss": "^8.1.6",
+    "postcss-cli": "^7.1.2",
     "postcss-import": "^12.0.1",
-    "puppeteer-core": "^5.2.1",
-    "tailwindcss": "^1.7.6"
+    "puppeteer-core": "^5.4.1",
+    "tailwindcss": "^1.9.6"
   },
   "browserslist": [
     "last 1 version",
