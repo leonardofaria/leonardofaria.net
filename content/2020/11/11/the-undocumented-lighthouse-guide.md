@@ -22,12 +22,10 @@ Lighthouse is the go-to tool for improving the quality of web pages. Recently, I
 <ul>
 <li><a href="#quick-lighthouse-intro">Quick Lighthouse intro</a></li>
 <li><a href="#the-lighthouse-node-package">The Lighthouse Node package</a></li>
-<li><a href="#">Getting asset transfered information with Lighthouse</a></li>
-<li><a href="#">Getting Web Vitals information with Lighthouse programatically</a></li>
-<li><a href="#">Generating screenshots with Lighthouse</a></li>
-<li><a href="#">Generating HAR files with Lighthouse</a></li>
-<li><a href="#">Working with authentication Lighthouse</a></li>
-<li><a href="#">Calculating median results with Lighthouse</a></li>
+<li><a href="/2020/11/11/getting-asset-transfered-information-with-lighthouse/">Getting asset transfered information with Lighthouse</a></li>
+<li><a href="/2020/11/11/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse</a></li>
+<li><a href="/2020/11/11/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse programatically</a></li>
+<li><a href="/2020/11/11/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
 </div>
 
 ## Quick Lighthouse intro

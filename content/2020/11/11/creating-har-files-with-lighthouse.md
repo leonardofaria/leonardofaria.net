@@ -14,6 +14,8 @@ tags:
 
 HAR (HTTP Archive) is a JSON file containing all information about a browser’s interactions with a page. This file is often used for performance analysis. [Earlier this year](/2020/06/07/using-har-files-to-analyze-performance-over-time/), I shared which kind of information we can get from it and today we will automate the HAR creation.
 
+![HAR Viewer](/wp-content/uploads/2020/06/har-viewer.jpg)
+
 There are different ways to automate the HAR creation: [puppeteer-har](https://www.npmjs.com/package/puppeteer-har) is a NPM package you can add in your tooling or if you are not from the JavaScript world you can use [Selenium](https://octopus.com/blog/selenium/13-capturing-har-files/capturing-har-files). 
 
 I was using puppeteer-har for a few months but then I noticed that the HAR was missing a few files in specific scenarios (ex. a React app with Loadable and React Router). For that reason I decided to look for another alternative and this is how I found the [chrome-har-capturer](https://www.npmjs.com/package/chrome-har-capturer) package.
@@ -58,8 +60,16 @@ In my other posts, I shared how to use the `lighthouse()` function to get all ki
 
 In the line 12, we use the `fromLog` function to build the HAR object, which we store in the file system in the following line. If you are curious about how the `fromLog` function works, I would recommend reading the package source-code, in special [one of their tests](https://github.com/cyrus-and/chrome-har-capturer/blob/master/test/offline.js).
 
+Next, the content of HAR file is stored in `page.har`. and we can use it in the [HAR Viewer](http://www.softwareishard.com/har/viewer/) for performance analysis. 
+
 ## Why do we need this? 
 
-...
+We can extract many valuable information from HAR files, such as:
+
+- Protocols being used in the page (http 1.1, http 2, h3-29);
+- Compressed/uncompressed asset sizes;
+- Request timing information (ex.: waiting and downloading times);
+
+With this information, we can identify bottlenecks (ex.: what is the slowest request of that URL), find low-hanging fruits (ex.: asset compression is one flag away in your build system tool) and prioritize work to improve performance in our pages.
 
 Can you think of different use cases? Let me know in the comments!
