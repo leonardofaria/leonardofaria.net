@@ -35,7 +35,7 @@ I was using puppeteer-har for a few months but then I noticed that the HAR was m
 
 This package works like a charm: it creates a HAR file following the [HAR 1.2 spec](http://www.softwareishard.com/blog/har-12-spec/) and all that I need to provide is an array of raw events that comes from the [Chrome Debugging Protocol](https://chromedevtools.github.io/devtools-protocol/). Who provides the raw events? Lighthouse!
 
-Let's take a look at the implementation:
+Let's take a look at the implementation (from my [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples)):
 
 {{<highlight js "linenos=inline">}}
 const lighthouse = require('lighthouse');

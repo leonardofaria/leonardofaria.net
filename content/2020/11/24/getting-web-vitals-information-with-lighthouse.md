@@ -55,7 +55,7 @@ The Web Vitals information is very easy to be found in the Lighthouse reports:
 
 ![Web Vitals information in Lighthouse report](/wp-content/uploads/2020/11/lighthouse-web-vitals-report.jpg)
 
-What I want to share today is how to get Web Vitals information from the Lighthouse node package:
+What I want to share today is how to get Web Vitals information from the Lighthouse node package (from my [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples)):
 
 {{<highlight js "linenos=inline">}}
 const lighthouse = require('lighthouse');
