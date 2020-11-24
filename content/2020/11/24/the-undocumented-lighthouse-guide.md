@@ -22,9 +22,9 @@ Lighthouse is the go-to tool for improving the quality of web pages. I have been
 <ul>
 <li><a href="#quick-lighthouse-intro">Quick Lighthouse intro</a></li>
 <li><a href="#the-lighthouse-node-package">The Lighthouse Node package</a></li>
-<li><a href="/2020/11/24/getting-asset-transfered-information-with-lighthouse/">Getting asset transfered information with Lighthouse</a></li>
+<li><a href="/2020/11/24/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse</a></li>
 <li><a href="/2020/11/24/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse</a></li>
-<li><a href="/2020/11/24/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse programatically</a></li>
+<li><a href="/2020/11/24/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse</a></li>
 <li><a href="/2020/11/24/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
 <li><a href="/2020/11/24/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world</a></li>
 </ul>
@@ -32,11 +32,11 @@ Lighthouse is the go-to tool for improving the quality of web pages. I have been
 
 ## Quick Lighthouse intro
 
-Lighthouse is an [open-source](https://github.com/GoogleChrome/lighthouse), automated tool for auditing the quality of web pages. The tool generates scores for performance, accessibility, progressive web apps, SEO, best practices of a specific URL and it also offers recomendations on how to improve the bad items of the audits.
+Lighthouse is an [open-source](https://github.com/GoogleChrome/lighthouse), automated tool for auditing the quality of web pages. The tool generates scores for performance, accessibility, progressive web apps, SEO, best practices of a specific URL and it also offers recommendations on how to improve the bad items of the audits.
 
 ![Lighthouse report for leonardofaria.net](/wp-content/uploads/2020/11/lighthouse-report-leonardofaria-net.jpg)
 
-The recommendations offered by Lighthouse are very important to clarify what can be done to improve the quality of the page or web app. Based on their recommendations, developers can inform Product Managers and other stakeholders and from there prioritize the most important / impactful tasks.
+The recommendations offered by Lighthouse are very important to clarify what can be done to improve the quality of the page or web app. Based on their recommendations, developers can inform Product Managers and other stakeholders and from there prioritize the most important/impactful tasks.
 
 There are different ways to run the Lighthouse audits: 
 
@@ -45,7 +45,7 @@ There are different ways to run the Lighthouse audits:
 - [From the command line](https://developers.google.com/web/tools/lighthouse#cli): Install the `lighthouse` CLI and start testing
 - [As a Node module](https://github.com/GoogleChrome/lighthouse): Add the `lighthouse` module in Node scripts
 
-This serie of posts will cover the usage of Lighthouse as a Node module. At my work, I have created a JavaScript tool running every hour to programatically audit 9 critical parts of our applications. The results are persisted in a Postgres database and in Prometheus (a monitoring system & time series database) so we can follow the reports over time.
+This series of posts will cover the usage of Lighthouse as a Node module. At my work, I have created a JavaScript tool running every hour to programmatically audit 9 critical parts of our applications. The results are persisted in a Postgres database and in Prometheus (a monitoring system & time-series database) so we can follow the reports over time.
 
 ## The Lighthouse Node package
 
@@ -75,7 +75,7 @@ const chromeLauncher = require('chrome-launcher');
 
 The first 3 lines import required packages: `fs` for file system manipulation; `lighthouse`, the main audit package; and `chrome-launcher`, a package used for launching Chrome. Lighthouse needs to know which port has a Chrome instance running, so this audit can happen.
 
-The line 7 surfaces a few Lighthouse options, like `logLevel` (`silent | error | info |verbose`), `output` (`json | html | csv`) and `onlyCategories` (an array filtering the tests you want to run). Their [type definitions file](https://github.com/GoogleChrome/lighthouse/blob/888bd6dc9d927a734a8e20ea8a0248baa5b425ed/typings/externs.d.ts#L82-L119) brings all the offered options.
+Line 7 surfaces a few Lighthouse options, like `logLevel` (`silent | error | info |verbose`), `output` (`json | html | csv`) and `onlyCategories` (an array filtering the tests you want to run). Their [type definitions file](https://github.com/GoogleChrome/lighthouse/blob/888bd6dc9d927a734a8e20ea8a0248baa5b425ed/typings/externs.d.ts#L82-L119) brings all the offered options.
 
 Next, the test is stored in the `runnerResult` variable (line 8). The `runnerResult` is an object that contains an HTML report, which is persisted in the disk (lines 11-12). This result object is the main topic of my next posts. We will learn how to get relevant information of the audits.
 
@@ -85,16 +85,16 @@ Then, the terminal will show the tested URL and its performance score (lines 15-
 
 The HTML report is slightly different from the initial report of the post: only performance is audited as it was defined in the options. 
 
-## Conlusions and up next
+## Conclusions and up next
 
-This post covered what is Lighthouse, why to use it and how to use programatically. 
+This post covered what is Lighthouse, why to use it and how to use programmatically. 
 
 The snippet of this blog post can be found in the [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples). From here you can check it out different recipes in the [Lighthouse docs](https://github.com/GoogleChrome/lighthouse#docs--recipes) or keep reading the ones I created:
 
 <ul>
-<li><a href="/2020/11/24/getting-asset-transfered-information-with-lighthouse/">Getting asset transfered information with Lighthouse</a></li>
+<li><a href="/2020/11/24/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse</a></li>
 <li><a href="/2020/11/24/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse</a></li>
-<li><a href="/2020/11/24/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse programatically</a></li>
+<li><a href="/2020/11/24/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse</a></li>
 <li><a href="/2020/11/24/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
 <li><a href="/2020/11/24/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world</a></li>
 </ul>

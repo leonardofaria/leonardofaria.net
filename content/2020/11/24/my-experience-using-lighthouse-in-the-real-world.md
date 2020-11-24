@@ -12,21 +12,21 @@ tags:
   - lighthouse
 ---
 
-Lighthouse has been part of my daily work for the last few months and I shared some snippets in the last posts. Time to share how I am using Lighthouse in a product used my millions of people and what are my findings.
+Lighthouse has been part of my daily work for the last few months and I shared some snippets in the last posts. Time to share how I am using Lighthouse in a product used by millions of people and what are my findings.
 
 ![Lighthouse photo by Robert Wiedemann](/wp-content/uploads/2020/11/lighthouse.jpg)
 
-_Disclaimers_: 1. This content may be reviewed in the future as I learn more about web performance and Lighthouse; 2. Do not take this post as professional / legal advices; 3. Do not take my comments on tech X or Y as attacks to tech X or Y.
+_Disclaimers_: 1. This content may be reviewed in the future as I learn more about web performance and Lighthouse; 2. Do not take this post as professional/legal advice; 3. Do not take my comments on tech X or Y as attacks to tech X or Y.
 
 <div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
-<strong>Hi, this post is part of a Lighthouse post series. Also check it out:</strong>
+<strong>Hi, this post is part of a Lighthouse post series. Also, check it out:</strong>
 
 <ul>
 <li><a href="/2020/11/24/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro</a></li>
 <li><a href="/2020/11/24/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package</a></li>
-<li><a href="/2020/11/24/getting-asset-transfered-information-with-lighthouse/">Getting asset transfered information with Lighthouse</a></li>
+<li><a href="/2020/11/24/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse</a></li>
 <li><a href="/2020/11/24/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse</a></li>
-<li><a href="/2020/11/24/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse programatically</a></li>
+<li><a href="/2020/11/24/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse</a></li>
 <li><a href="/2020/11/24/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
 </ul>
 </div>
@@ -37,7 +37,7 @@ It sounds obvious but it doesn't hurt to repeat the message: do not reinvent the
 
 If this is not enough, or if you have a complex web app behind authentication or any other scenarios you can start by using a tool listed in the [Lighthouse integrations docs](https://github.com/GoogleChrome/lighthouse#lighthouse-integrations-in-web-perf-services). From that list, I can only speak of [Calibre](https://calibreapp.com) - for the record, I am not affiliated to them.
 
-Using Calibre, you can schedule Lighthouse tests, create performance budgets, see pretty charts and learn what performance looks like in your product. The relevant information is easy to find and their product has a very polished UI, however at certain point you may want more and that means "custom development".
+Using Calibre, you can schedule Lighthouse tests, create performance budgets, see pretty charts and learn what performance looks like in your product. The relevant information is easy to find and their product has a very polished UI, however, at a certain point, you may want more and that means "custom development".
 
 ## The tooling in place
 
@@ -60,22 +60,22 @@ In our case, we run Lighthouse 5 times per URL, calculation a median score. We a
 
 ## Working with Lighthouse results
 
-What do I do when I have Lighthouse reports from 9 different urls?
+What do I do when I have Lighthouse reports from 9 different URLs?
 
 ![Detective wall, from the Isle of Dogs movie](/wp-content/uploads/2020/11/detective-wall.jpg)
 
 FCP, LCP, TTI, TBT, CLS: my work in the last few months is analyzing data and connecting dots. Some times I find low hanging fruits that improve one metric here and there, some times I go down in the rabbit hole.
 
-With data coming from everywhere, I am following the scientific method to focus in what matters:
+With data coming from everywhere, I am following the scientific method to focus on what matters:
 
 1. Make an observation.
 2. Ask a question.
-3. Form a hypothesis, or testable explanation.
+3. Form a hypothesis or testable explanation.
 3. Make a prediction based on the hypothesis.
 4. Test the prediction.
 5. Iterate: use the results to make new hypotheses or predictions.
 
-When it comes to performance, there is no silver bullet. Sometimes images are culpit of bad performance scores, sometimes it is an architecture problem. The goal of my post is not blame X or Y but let me share a few thought on these two topics: 
+When it comes to performance, there is no silver bullet. Sometimes images are culprit of bad performance scores, sometimes it is an architecture problem. The goal of my post is not blaming X or Y but let me share a few thoughts on these two topics: 
 
 ### Image optimization
 
@@ -83,7 +83,7 @@ Images impact page load time since bigger images will take longer to be download
 
 Recently, [Google worked with Next.js](https://github.com/vercel/next.js/discussions/16832) to create an [Image component](https://nextjs.org/docs/basic-features/image-optimization) that delivers optimized images. The framework supports image conversion from via Imgix, Cloudinary, Akamai and as expected, Vercel.
 
-I predict that the conversion on demand, by using third-party services as the mentioned above or by using serveless solutions will become more and more popular. Starting next year, Google [will include Web Vitals metrics](https://developers.google.com/search/blog/2020/11/timing-for-page-experience) in the page ranking algorithms.
+I predict that the conversion on demand, by using third-party services as mentioned above or by using serverless solutions will become more and more popular. Starting next year, Google [will include Web Vitals metrics](https://developers.google.com/search/blog/2020/11/timing-for-page-experience) in the page ranking algorithms.
 ### Old architectures didn't age well
 
 Old SPA architectures don't perform well these days and Lighthouse captures that.

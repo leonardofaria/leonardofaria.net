@@ -1,9 +1,9 @@
 ---
 id: 2226
-title: Getting asset transfered information with Lighthouse
+title: Getting asset transferred information with Lighthouse
 date: 2020-11-24 01:00:00
 author: Leonardo Faria
-permalink: /2020/11/24/getting-asset-transfered-information-with-lighthouse
+permalink: /2020/11/24/getting-asset-transferred-information-with-lighthouse
 categories:
   - javascript
   - lighthouse
@@ -14,24 +14,24 @@ tags:
 
 Have you ever about thought tracking what is added in a page or web app? Didn't know how your website became a 15MB? Time to track this data!
 
-![Chart showing assets transfered by type](/wp-content/uploads/2020/11/asset-transfered-by-type.jpg)
+![Chart showing assets transferred by type](/wp-content/uploads/2020/11/asset-transfered-by-type.jpg)
 
-[Calibre](https://calibreapp.com/), one of my favourite web performance tools, shows the chart above to illustrate what is being transfered to users when they visit your page or use your web app.
+[Calibre](https://calibreapp.com/), one of my favourite web performance tools, shows the chart above to illustrate what is being transferred to users when they visit your page or use your web app.
 
 <div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
-<strong>Hi, this post is part of a Lighthouse post series. Also check it out:</strong>
+<strong>Hi, this post is part of a Lighthouse post series. Also, check it out:</strong>
 
 <ul>
 <li><a href="/2020/11/24/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro</a></li>
 <li><a href="/2020/11/24/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package</a></li>
 <li><a href="/2020/11/24/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse</a></li>
-<li><a href="/2020/11/24/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse programatically</a></li>
+<li><a href="/2020/11/24/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse</a></li>
 <li><a href="/2020/11/24/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
 <li><a href="/2020/11/24/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world</a></li>
 </ul>
 </div>
 
-In this post we will learn how to collect similar data using Lighthouse. Here is the recipe:
+In this post we will learn how to collect similar data using Lighthouse. Here is the recipe (from my [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples)):
 
 {{<highlight js "linenos=inline">}}
 const lighthouse = require('lighthouse');
@@ -62,7 +62,7 @@ The `runnerResult` variable stores 3 main objects:
 - `artifacts`: The data used by the audit
 - `report`: A JSON/HTML/CSV report
 
-The magic starts happening in the line 10: we dig into the audits results and get the information of the resource summary audit (line 16). The output of the script is:
+The magic starts happening in line 10: we dig into the results of the audits and get the information of the resource summary audit (line 16). The output of the script is:
 
 ```js
 {
@@ -87,6 +87,6 @@ The image above shows what is inside the `resource-summary` audit:
 
 ## Why do we need this? 
 
-This script is useful to follow closely what is being sent to user. In my particular case, this data is stored daily and it is used to identify if new features added in the codebase dramatically impacted the page rendering.
+This script is useful to follow closely what is being sent to the user. In my particular case, this data is stored daily and it is used to identify if new features added in the codebase dramatically impacted the page rendering.
 
 Can you think of different use cases? Let me know in the comments!

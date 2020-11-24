@@ -12,19 +12,19 @@ tags:
   - lighthouse
 ---
 
-[Earlier this year](https://webmasters.googleblog.com/2020/05/evaluating-page-experience.html) Google anounced that "page experience" will impact Search ranking. A few weeks ago, they defined that the new page experience signals will roll out in May 2021. But what are these page experience signals?
+[Earlier this year](https://webmasters.googleblog.com/2020/05/evaluating-page-experience.html) Google announced that "page experience" will impact Search ranking. A few weeks ago, they defined that the new page experience signals will roll out in May 2021. But what are these page experience signals?
 
 ![Google's Page experience chart](/wp-content/uploads/2020/11/search-page-experience.jpg)
 
 The [page experience](https://developers.google.com/search/docs/guides/page-experience) signal measures aspects of how users perceive the experience of interacting with a web page. Offering mobile-friendly pages and serving content over HTTPS is something we have been doing for a while but soon slow sites may lose their spot in the Google page ranking algorithm. 
 
 <div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
-<strong>Hi, this post is part of a Lighthouse post series. Also check it out:</strong>
+<strong>Hi, this post is part of a Lighthouse post series. Also, check it out:</strong>
 
 <ul>
 <li><a href="/2020/11/24/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro</a></li>
 <li><a href="/2020/11/24/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package</a></li>
-<li><a href="/2020/11/24/getting-asset-transfered-information-with-lighthouse/">Getting asset transfered information with Lighthouse</a></li>
+<li><a href="/2020/11/24/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse</a></li>
 <li><a href="/2020/11/24/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse</a></li>
 <li><a href="/2020/11/24/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
 <li><a href="/2020/11/24/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world</a></li>
@@ -39,7 +39,7 @@ The [page experience](https://developers.google.com/search/docs/guides/page-expe
 
 The three facets are:
 
-- **Loading**: _how fast is this page?_ [Largest Contentful Paint](https://web.dev/cls/) measures perceived load speed and marks the point in the page load timeline when the page's main content has likely loaded.
+- **Loading**: _how fast is this page?_ [Largest Contentful Paint](https://web.dev/cls/) measures perceived load speed and mark the point in the page load timeline when the page's main content has likely loaded.
 - **Interactivity**: _how fast does the page react to user input?_ [First Input Delay](https://web.dev/fid/) measures responsiveness and quantifies the experience users feel when trying to first interact with the page.
 - **Visual stability**: _does the page layout change while the page is loading?_ [Cumulative Layout Shift](https://web.dev/cls/) measures visual stability and quantifies the amount of unexpected layout shift of visible page content.
 
@@ -47,7 +47,7 @@ The three facets are:
 
 All Google's popular tools for developers support measurement of Core Web Vitals, including [Lighthouse](https://github.com/GoogleChrome/lighthouse), [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/), [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools), [Search Console](https://search.google.com/search-console/about), [web.dev's measure tool](/measure/), the [Web Vitals Chrome extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma) and a new [Chrome UX Report](https://developers.google.com/web/tools/chrome-user-experience-report) API. 
 
-It is important to mention that FID can't be measured in Lighthouse and as an alternative, Google recommends measure the [Total Blocking Time (TBT)](https://web.dev/tbt/). Tools like Lighthouse that load pages in a simulated environment without a user cannot measure FID (there is no user input).
+It is important to mention that FID can't be measured in Lighthouse and as an alternative, Google recommends measure the [Total Blocking Time (TBT)](https://web.dev/tbt/). Tools like Lighthouse that load pages in a simulated environment without a user can not measure FID, since a simulated environment has no user input.
 
 ## Using Lighthouse for Core Web Vitals measurements
 
@@ -102,7 +102,7 @@ For LCP, CLS and TBT, the output is not including a numeric unit, only the value
 }
 ```
 
-The two last properties of the `webVitals` object return strings containing HTML node. The idea of reporting these elements is to facilate the identification of the villans of the page being tested. 
+The two last properties of the `webVitals` object return strings containing HTML node. The idea of reporting these elements is to facilitate the identification of the villans of the page being tested. 
 
 The Largest Contentful Paint metric can be affected for one or more of the following:
 
@@ -111,7 +111,7 @@ The Largest Contentful Paint metric can be affected for one or more of the follo
 - Slow resource load times;
 - Client-side rendering.
 
-In the example, the largest contentful paint element is a header with a hero image. This element contains an external background image and the image is the responsible for the slow time. 
+In the example, the largest contentful paint element is a header with a hero image. This element contains an external background image and the image is the culprit for the slow time. 
 
 The Cumulative Layout Shift metrics can be affect for one or more of the following:
 
@@ -120,7 +120,7 @@ The Cumulative Layout Shift metrics can be affect for one or more of the followi
 - Dynamically injected content;
 - Web fonts causing FOIT/Fout.
 
-The page used in the example uses Google Fonts and there is a tiny layout shift when the font is loaded. The shift may be noticeble by users and it is reported in the layout shift elements property.
+The page used in the example uses Google Fonts and there is a tiny layout shift when the font is loaded. The shift may be noticeable by users and it is reported in the layout shift elements property.
 
 ## Why do we need this? 
 
