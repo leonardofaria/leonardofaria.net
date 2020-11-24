@@ -12,12 +12,12 @@ tags:
   - lighthouse
 ---
 
-Lighthouse is the go-to tool for improving the quality of web pages. Recently, I have been using it a lot to identify performance optimizations and decided to write a serie of post showing how to get the best of it.
+Lighthouse is the go-to tool for improving the quality of web pages. I have been using the tool a lot at [work](https://leonardofaria.net) to identify performance optimizations and I decided to write a post series showing how to get the best of Lighthouse.
 
 ![Lighthouse photo by Robert Wiedemann](/wp-content/uploads/2020/11/lighthouse.jpg)
 
 <div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
-<strong>Table of contents</strong>
+<strong>Lighthouse post series</strong>
 
 <ul>
 <li><a href="#quick-lighthouse-intro">Quick Lighthouse intro</a></li>
@@ -26,13 +26,15 @@ Lighthouse is the go-to tool for improving the quality of web pages. Recently, I
 <li><a href="/2020/11/11/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse</a></li>
 <li><a href="/2020/11/11/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse programatically</a></li>
 <li><a href="/2020/11/11/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
+<li><a href="/2020/11/11/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world</a></li>
+</ul>
 </div>
 
 ## Quick Lighthouse intro
 
 Lighthouse is an [open-source](https://github.com/GoogleChrome/lighthouse), automated tool for auditing the quality of web pages. The tool generates scores for performance, accessibility, progressive web apps, SEO, best practices of a specific URL and it also offers recomendations on how to improve the bad items of the audits.
 
-ADD REPORT FOR LEONARDOFARIA.NET
+![Lighthouse report for leonardofaria.net](/wp-content/uploads/2020/11/lighthouse-report-leonardofaria-net.jpg)
 
 The recommendations offered by Lighthouse are very important to clarify what can be done to improve the quality of the page or web app. Based on their recommendations, developers can inform Product Managers and other stakeholders and from there prioritize the most important / impactful tasks.
 
@@ -85,11 +87,17 @@ The HTML report is slightly different from the initial report of the post: only 
 
 ## Conlusions and up next
 
-This post covered what is Lighthouse, why to use it and how to use programatically. From here you can check it out different recipes in the [Lighthouse docs](https://github.com/GoogleChrome/lighthouse#docs--recipes) or keep reading the ones I created:
+This post covered what is Lighthouse, why to use it and how to use programatically. 
 
-- post 1
-- post 2
-- post 3
+The snippet of this blog post can be found in the [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples). From here you can check it out different recipes in the [Lighthouse docs](https://github.com/GoogleChrome/lighthouse#docs--recipes) or keep reading the ones I created:
+
+<ul>
+<li><a href="/2020/11/11/getting-asset-transfered-information-with-lighthouse/">Getting asset transfered information with Lighthouse</a></li>
+<li><a href="/2020/11/11/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse</a></li>
+<li><a href="/2020/11/11/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse programatically</a></li>
+<li><a href="/2020/11/11/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
+<li><a href="/2020/11/11/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world</a></li>
+</ul>
 
 -- 
 

@@ -21,7 +21,7 @@ There are different ways to automate the HAR creation: [puppeteer-har](https://w
 I was using puppeteer-har for a few months but then I noticed that the HAR was missing a few files in specific scenarios (ex. a React app with Loadable and React Router). For that reason I decided to look for another alternative and this is how I found the [chrome-har-capturer](https://www.npmjs.com/package/chrome-har-capturer) package.
 
 <div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
-<strong>Excuse me: this post is part of a serie on Lighthouse. Check it out:</strong>
+<strong>Hi, this post is part of a Lighthouse post series. Also check it out:</strong>
 
 <ul>
 <li><a href="#quick-lighthouse-intro">Quick Lighthouse intro</a></li>

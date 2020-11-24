@@ -19,16 +19,16 @@ Have you ever about thought tracking what is added in a page or web app? Didn't 
 [Calibre](https://calibreapp.com/), one of my favourite web performance tools, shows the chart above to illustrate what is being transfered to users when they visit your page or use your web app.
 
 <div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
-<strong>Excuse me: this post is part of a serie on Lighthouse. Check it out:</strong>
+<strong>Hi, this post is part of a Lighthouse post series. Also check it out:</strong>
 
 <ul>
-<li><a href="#quick-lighthouse-intro">Quick Lighthouse intro</a></li>
-<li><a href="#the-lighthouse-node-package">The Lighthouse Node package</a></li>
-<li><a href="#">Getting Web Vitals information with Lighthouse programatically</a></li>
-<li><a href="#">Generating screenshots with Lighthouse</a></li>
-<li><a href="#">Generating HAR files with Lighthouse</a></li>
-<li><a href="#">Working with authentication Lighthouse</a></li>
-<li><a href="#">Calculating median results with Lighthouse</a></li>
+<li><a href="/2020/11/11/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro</a></li>
+<li><a href="/2020/11/11/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package</a></li>
+<li><a href="/2020/11/11/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse</a></li>
+<li><a href="/2020/11/11/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse programatically</a></li>
+<li><a href="/2020/11/11/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
+<li><a href="/2020/11/11/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world</a></li>
+</ul>
 </div>
 
 In this post we will learn how to collect similar data using Lighthouse. Here is the recipe:

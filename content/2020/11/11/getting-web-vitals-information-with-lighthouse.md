@@ -16,19 +16,19 @@ tags:
 
 ![Google's Page experience chart](/wp-content/uploads/2020/11/search-page-experience.jpg)
 
-The [page experience](https://developers.google.com/search/docs/guides/page-experience) signal measures aspects of how users perceive the experience of interacting with a web page. Offering mobile-friendly pages and serving content over HTTPS is something we have been doing for a while but 
+The [page experience](https://developers.google.com/search/docs/guides/page-experience) signal measures aspects of how users perceive the experience of interacting with a web page. Offering mobile-friendly pages and serving content over HTTPS is something we have been doing for a while but soon slow sites may lose their spot in the Google page ranking algorithm. 
 
 <div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
-<strong>Excuse me: this post is part of a serie on Lighthouse. Check it out:</strong>
+<strong>Hi, this post is part of a Lighthouse post series. Also check it out:</strong>
 
 <ul>
-<li><a href="#quick-lighthouse-intro">Quick Lighthouse intro</a></li>
-<li><a href="#the-lighthouse-node-package">The Lighthouse Node package</a></li>
-<li><a href="#">Getting Web Vitals information with Lighthouse programatically</a></li>
-<li><a href="#">Generating screenshots with Lighthouse</a></li>
-<li><a href="#">Generating HAR files with Lighthouse</a></li>
-<li><a href="#">Working with authentication Lighthouse</a></li>
-<li><a href="#">Calculating median results with Lighthouse</a></li>
+<li><a href="/2020/11/11/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro</a></li>
+<li><a href="/2020/11/11/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package</a></li>
+<li><a href="/2020/11/11/getting-asset-transfered-information-with-lighthouse/">Getting asset transfered information with Lighthouse</a></li>
+<li><a href="/2020/11/11/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse</a></li>
+<li><a href="/2020/11/11/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
+<li><a href="/2020/11/11/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world</a></li>
+</ul>
 </div>
 
 ## What are Core Web Vitals

@@ -19,16 +19,16 @@ Lighthouse captures the rendering timeline of a page in 10 images. Do you need t
 The filmstrip reveals how a page is rendered in the browser and it gives us a glance of what is slow. For example, blank screenshots in the beginning is a sign that the [First Contentful Paint](https://web.dev/fcp/) is too slow. 
 
 <div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
-<strong>Excuse me: this post is part of a serie on Lighthouse. Check it out:</strong>
+<strong>Hi, this post is part of a Lighthouse post series. Also check it out:</strong>
 
 <ul>
-<li><a href="#quick-lighthouse-intro">Quick Lighthouse intro</a></li>
-<li><a href="#the-lighthouse-node-package">The Lighthouse Node package</a></li>
-<li><a href="#">Getting Web Vitals information with Lighthouse programatically</a></li>
-<li><a href="#">Generating screenshots with Lighthouse</a></li>
-<li><a href="#">Generating HAR files with Lighthouse</a></li>
-<li><a href="#">Working with authentication Lighthouse</a></li>
-<li><a href="#">Calculating median results with Lighthouse</a></li>
+<li><a href="/2020/11/11/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro</a></li>
+<li><a href="/2020/11/11/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package</a></li>
+<li><a href="/2020/11/11/getting-asset-transfered-information-with-lighthouse/">Getting asset transfered information with Lighthouse</a></li>
+<li><a href="/2020/11/11/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse programatically</a></li>
+<li><a href="/2020/11/11/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
+<li><a href="/2020/11/11/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world</a></li>
+</ul>
 </div>
 
 In this post we will find where these images are stored and how to store them in the file system. Here is the script: 

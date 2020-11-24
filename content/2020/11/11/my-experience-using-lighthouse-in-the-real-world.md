@@ -18,6 +18,19 @@ Lighthouse has been part of my daily work for the last few months and I shared s
 
 _Disclaimers_: 1. This content may be reviewed in the future as I learn more about web performance and Lighthouse; 2. Do not take this post as professional / legal advices; 3. Do not take my comments on tech X or Y as attacks to tech X or Y.
 
+<div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
+<strong>Hi, this post is part of a Lighthouse post series. Also check it out:</strong>
+
+<ul>
+<li><a href="/2020/11/11/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro</a></li>
+<li><a href="/2020/11/11/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package</a></li>
+<li><a href="/2020/11/11/getting-asset-transfered-information-with-lighthouse/">Getting asset transfered information with Lighthouse</a></li>
+<li><a href="/2020/11/11/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse</a></li>
+<li><a href="/2020/11/11/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse programatically</a></li>
+<li><a href="/2020/11/11/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
+</ul>
+</div>
+
 ## Use existing tools before creating your own
 
 It sounds obvious but it doesn't hurt to repeat the message: do not reinvent the wheel (until you need). You can start [monitoring Core Web Vitals for free](https://support.google.com/webmasters/answer/9205520) in the Google Search Console. 
@@ -62,23 +75,29 @@ With data coming from everywhere, I am following the scientific method to focus 
 4. Test the prediction.
 5. Iterate: use the results to make new hypotheses or predictions.
 
-When it comes to performance, there is no silver bullet. Sometimes images are culpit of bad performance sometimes is an architecture problem. The goal of my post is not XXXXXXXX but let me share a few points on these two topics: 
+When it comes to performance, there is no silver bullet. Sometimes images are culpit of bad performance scores, sometimes it is an architecture problem. The goal of my post is not blame X or Y but let me share a few thought on these two topics: 
 
-### Images
+### Image optimization
 
-Images impact page load time since bigger images will take longer to be downloaded as a result, it will impact different Lighthouse metrics - usually CLS, LCP. 
+Images impact page load time since bigger images will take longer to be downloaded and as a result, it will impact different Lighthouse metrics - usually CLS, LCP. 
 
-Recently [Google worked with Next.js](https://github.com/vercel/next.js/discussions/16832) to create an [Image component](https://nextjs.org/docs/basic-features/image-optimization) that delivers optimized images. 
+Recently, [Google worked with Next.js](https://github.com/vercel/next.js/discussions/16832) to create an [Image component](https://nextjs.org/docs/basic-features/image-optimization) that delivers optimized images. The framework supports image conversion from via Imgix, Cloudinary, Akamai and as expected, Vercel.
+
+I predict that the conversion on demand, by using third-party services as the mentioned above or by using serveless solutions will become more and more popular. Starting next year, Google [will include Web Vitals metrics](https://developers.google.com/search/blog/2020/11/timing-for-page-experience) in the page ranking algorithms.
 ### Old architectures didn't age well
 
-Old SPA architectures don't perform well these days and Lighthouse will capture that.
+Old SPA architectures don't perform well these days and Lighthouse captures that.
 
-Here is one example: back in the day people (including myself) used to build their JS code into a single file. We wanted to avoid multiple files because HTTP/1.1 didn't support too many concurrent requests, which was improved in HTTP/2. Today, unused JS will be reported in the Lighthouse tests. 
+Here is one example: back in the day, people (including myself) used to build their JS code into a single file. We wanted to avoid multiple files because HTTP/1.1 didn't support too many concurrent requests, which was improved in HTTP/2. Today, unused JS will be caught in the Lighthouse tests. 
 
 ![Code splitting cartoon by Crystallize](/wp-content/uploads/2020/11/codesplitting.png)
 
-Code Splitting is part of any modern JS tech stack using webpack and, in React, it can be maximized with [Loadable Components](https://loadable-components.com/docs/getting-started/) and [`React.lazy`](https://reactjs.org/docs/code-splitting.html#reactlazy).
+Code Splitting is part of any modern JS tech stack using webpack and, in React, it can be combined with [Loadable Components](https://loadable-components.com/docs/getting-started/) and [`React.lazy`](https://reactjs.org/docs/code-splitting.html#reactlazy). Giving the user only what their need is key. 
 
-In the back end, [GraphQL](https://graphql.org/) showed us that we can request data as we go. I know, this can also be done with REST as long we know the boundaries of an UI but the whole point here is: deliver only the data we need.
+In the back end, [GraphQL](https://graphql.org/) showed us that we can request data as we go. I know, this can also be done with REST as long we know the know what is in the UI but the whole point here is: deliver only the data that users need.
 
 ## Conclusions
+
+I hope this series added some light (no pun intended) in your front-end performance skills. Lighthouse is so powerful that people out there are creating full SaaS products to make the web better.
+
+Are you using Lighthouse or planning to start using? Let me know in the comments!
