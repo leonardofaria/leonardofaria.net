@@ -1,9 +1,9 @@
 ---
 id: 2227
 title: Generating screenshots with Lighthouse
-date: 2020-11-11 02:00:00
+date: 2020-11-24 02:00:00
 author: Leonardo Faria
-permalink: /2020/11/11/getting-screenshots-with-lighthouse
+permalink: /2020/11/24/getting-screenshots-with-lighthouse
 categories:
   - javascript
   - lighthouse
@@ -22,12 +22,12 @@ The filmstrip reveals how a page is rendered in the browser and it gives us a gl
 <strong>Hi, this post is part of a Lighthouse post series. Also check it out:</strong>
 
 <ul>
-<li><a href="/2020/11/11/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro</a></li>
-<li><a href="/2020/11/11/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package</a></li>
-<li><a href="/2020/11/11/getting-asset-transfered-information-with-lighthouse/">Getting asset transfered information with Lighthouse</a></li>
-<li><a href="/2020/11/11/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse programatically</a></li>
-<li><a href="/2020/11/11/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
-<li><a href="/2020/11/11/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world</a></li>
+<li><a href="/2020/11/24/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro</a></li>
+<li><a href="/2020/11/24/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package</a></li>
+<li><a href="/2020/11/24/getting-asset-transfered-information-with-lighthouse/">Getting asset transfered information with Lighthouse</a></li>
+<li><a href="/2020/11/24/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse programatically</a></li>
+<li><a href="/2020/11/24/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
+<li><a href="/2020/11/24/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world</a></li>
 </ul>
 </div>
 
