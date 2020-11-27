@@ -8,21 +8,21 @@
   "license": "MIT",
   "scripts": {
     "ip": "ifconfig | grep 'inet ' | grep -Fv 127.0.0.1 | awk '{print $2}' | head -n 1",
-    "dev": "export LOCAL_IP=$(yarn --silent ip) && hugo server --disableFastRender --buildFuture --bind=$LOCAL_IP --baseURL=http://$LOCAL_IP:1313",
-    "build": "hugo --gc --minify",
+    "dev": "export LOCAL_IP=$(yarn --silent ip) && hugo server --verbose --disableFastRender --buildFuture --bind=$LOCAL_IP --baseURL=http://$LOCAL_IP:1313",
+    "build": "hugo --gc --minify --verbose",
     "ogimages-generator": "node ogimages.js"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
-    "@tailwindcss/ui": "^0.5.0",
-    "autoprefixer": "^9.8.6",
+    "@tailwindcss/ui": "^0.7.2",
+    "autoprefixer": "^10.0.3",
     "fastmatter": "^2.1.1",
     "line-replace": "^2.0.1",
-    "postcss": "^8.1.6",
-    "postcss-cli": "^7.1.2",
-    "postcss-import": "^12.0.1",
-    "puppeteer-core": "^5.4.1",
-    "tailwindcss": "^1.9.6"
+    "postcss": "^8.1.10",
+    "postcss-cli": "^8.3.0",
+    "postcss-import": "^13.0.0",
+    "puppeteer-core": "^5.5.0",
+    "tailwindcss": "^2.0.1"
   },
   "browserslist": [
     "last 1 version",
