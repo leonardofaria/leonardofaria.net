@@ -3,6 +3,7 @@ id: 2226
 title: Getting asset transferred information with Lighthouse
 date: 2020-11-24 01:00:00
 author: Leonardo Faria
+ogImage: /images/og-images/2226.png
 permalink: /2020/11/24/getting-asset-transferred-information-with-lighthouse
 categories:
   - javascript

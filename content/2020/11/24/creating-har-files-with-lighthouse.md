@@ -3,6 +3,7 @@ id: 2229
 title: Creating HAR files with Lighthouse
 date: 2020-11-24 04:00:00
 author: Leonardo Faria
+ogImage: /images/og-images/2229.png
 permalink: /2020/11/24/creating-har-files-with-lighthouse
 categories:
   - javascript

@@ -3,6 +3,7 @@ id: 2225
 title: The undocumented Lighthouse guide
 date: 2020-11-24 00:00:00
 author: Leonardo Faria
+ogImage: /images/og-images/2225.png
 permalink: /2020/11/24/the-undocumented-lighthouse-guide
 categories:
   - javascript

@@ -3,6 +3,7 @@ id: 2230
 title: My experience using Lighthouse in the real world
 date: 2020-11-24 05:00:00
 author: Leonardo Faria
+ogImage: /images/og-images/2230.png
 permalink: /2020/11/24/my-experience-using-lighthouse-in-the-real-world
 categories:
   - javascript

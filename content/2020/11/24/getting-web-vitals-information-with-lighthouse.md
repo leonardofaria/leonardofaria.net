@@ -3,6 +3,7 @@ id: 2228
 title: Generating Web Vitals information with Lighthouse
 date: 2020-11-24 03:00:00
 author: Leonardo Faria
+ogImage: /images/og-images/2228.png
 permalink: /2020/11/24/getting-web-vitals-information-with-lighthouse
 categories:
   - javascript

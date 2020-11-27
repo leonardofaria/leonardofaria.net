@@ -3,7 +3,8 @@ id: 2227
 title: Generating screenshots with Lighthouse
 date: 2020-11-24 02:00:00
 author: Leonardo Faria
-permalink: /2020/11/24/getting-screenshots-with-lighthouse
+ogImage: /images/og-images/2227.png
+permalink: /2020/11/24/generating-screenshots-with-lighthouse
 categories:
   - javascript
   - lighthouse
