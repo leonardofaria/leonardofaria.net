@@ -25,6 +25,8 @@ disqusShortname = "leonardofaria"
   linkedin = "https://linkedin.com/in/leonardofariacoelho"
   email = "leonardofaria@gmail.com"
   rss = "/feed"
+  webmention = "leonardofaria.net"
+  productionBaseUrl = "https://leonardofaria.net"
 
   avatar = "images/avatar.jpg"
 
