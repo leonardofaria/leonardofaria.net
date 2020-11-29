@@ -1,10 +1,10 @@
 ---
 id: 2225
 title: The undocumented Lighthouse guide
-date: 2020-11-24 00:00:00
+date: 2020-11-30 00:00:00
 author: Leonardo Faria
 ogImage: /images/og-images/2225.png
-permalink: /2020/11/24/the-undocumented-lighthouse-guide
+permalink: /2020/11/30/the-undocumented-lighthouse-guide
 categories:
   - javascript
   - lighthouse
@@ -23,11 +23,11 @@ Lighthouse is the go-to tool for improving the quality of web pages. I have been
 <ul>
 <li><a href="#quick-lighthouse-intro">Quick Lighthouse intro</a></li>
 <li><a href="#the-lighthouse-node-package">The Lighthouse Node package</a></li>
-<li><a href="/2020/11/24/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse</a></li>
-<li><a href="/2020/11/24/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse</a></li>
-<li><a href="/2020/11/24/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse</a></li>
-<li><a href="/2020/11/24/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
-<li><a href="/2020/11/24/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world</a></li>
+<li><a href="/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse</a></li>
+<li><a href="/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse</a></li>
+<li><a href="/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse</a></li>
+<li><a href="/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
+<li><a href="/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world</a></li>
 </ul>
 </div>
 
@@ -93,11 +93,11 @@ This post covered what is Lighthouse, why to use it and how to use programmatica
 The snippet of this blog post can be found in the [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples). From here you can check it out different recipes in the [Lighthouse docs](https://github.com/GoogleChrome/lighthouse#docs--recipes) or keep reading the ones I created:
 
 <ul>
-<li><a href="/2020/11/24/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse</a></li>
-<li><a href="/2020/11/24/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse</a></li>
-<li><a href="/2020/11/24/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse</a></li>
-<li><a href="/2020/11/24/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
-<li><a href="/2020/11/24/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world</a></li>
+<li><a href="/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse</a></li>
+<li><a href="/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse</a></li>
+<li><a href="/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse</a></li>
+<li><a href="/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
+<li><a href="/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world</a></li>
 </ul>
 
 -- 

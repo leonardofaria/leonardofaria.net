@@ -1,10 +1,10 @@
 ---
 id: 2230
 title: My experience using Lighthouse in the real world
-date: 2020-11-24 05:00:00
+date: 2020-11-30 05:00:00
 author: Leonardo Faria
 ogImage: /images/og-images/2230.png
-permalink: /2020/11/24/my-experience-using-lighthouse-in-the-real-world
+permalink: /2020/11/30/my-experience-using-lighthouse-in-the-real-world
 categories:
   - javascript
   - lighthouse
@@ -23,12 +23,12 @@ _Disclaimers_: 1. This content may be reviewed in the future as I learn more abo
 <strong>Hi, this post is part of a Lighthouse post series. Also, check it out:</strong>
 
 <ul>
-<li><a href="/2020/11/24/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro</a></li>
-<li><a href="/2020/11/24/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package</a></li>
-<li><a href="/2020/11/24/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse</a></li>
-<li><a href="/2020/11/24/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse</a></li>
-<li><a href="/2020/11/24/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse</a></li>
-<li><a href="/2020/11/24/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
+<li><a href="/2020/11/30/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro</a></li>
+<li><a href="/2020/11/30/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package</a></li>
+<li><a href="/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse</a></li>
+<li><a href="/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse</a></li>
+<li><a href="/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse</a></li>
+<li><a href="/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse</a></li>
 </ul>
 </div>
 
