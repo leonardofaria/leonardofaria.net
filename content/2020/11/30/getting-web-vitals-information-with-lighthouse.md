@@ -5,6 +5,7 @@ date: 2020-11-30 03:00:00
 author: Leonardo Faria
 ogImage: /images/og-images/2228.png
 permalink: /2020/11/30/getting-web-vitals-information-with-lighthouse
+description: Earlier this year, Google announced that “page experience” would impact its search ranking. A few weeks ago, they announced that the new page experience signals will roll out in May 2021. But what are these page experience signals?
 categories:
   - javascript
   - lighthouse

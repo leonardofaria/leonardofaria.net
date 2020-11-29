@@ -5,6 +5,7 @@ date: 2020-11-30 04:00:00
 author: Leonardo Faria
 ogImage: /images/og-images/2229.png
 permalink: /2020/11/30/creating-har-files-with-lighthouse
+description: HAR (HTTP Archive) is a JSON file containing all information about a browser’s interactions with a page. This file is often used for performance analysis. Earlier this year, I shared what kind of information we can get from  and today we will automate the HAR creation.
 categories:
   - javascript
   - lighthouse

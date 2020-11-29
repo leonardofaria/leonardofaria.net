@@ -5,6 +5,7 @@ date: 2020-11-30 00:00:00
 author: Leonardo Faria
 ogImage: /images/og-images/2225.png
 permalink: /2020/11/30/the-undocumented-lighthouse-guide
+description: Lighthouse is the go-to tool for improving the quality of web pages. Lately, I have been using Lighthouse a lot at work to identify opportunities for performance optimizations. This post is part of a 6 part series that I have written about how to get the most out of Lighthouse.
 categories:
   - javascript
   - lighthouse
@@ -13,7 +14,7 @@ tags:
   - lighthouse
 ---
 
-Lighthouse is the go-to tool for improving the quality of web pages. Lately, I have been using Lighthouse a lot at [work](https://leonardofaria.net) to identify opportunities for performance optimizations. This post is part of a 6 part series that I have written about how to get the most out of Lighthouse.
+Lighthouse is the go-to tool for improving the quality of web pages. Lately, I have been using Lighthouse a lot at [work](https://thinkific.com) to identify opportunities for performance optimizations. This post is part of a 6 part series that I have written about how to get the most out of Lighthouse.
 
 ![Lighthouse photo by Robert Wiedemann](/wp-content/uploads/2020/11/lighthouse.jpg)
 

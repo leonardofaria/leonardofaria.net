@@ -5,6 +5,7 @@ date: 2020-11-30 02:00:00
 author: Leonardo Faria
 ogImage: /images/og-images/2227.png
 permalink: /2020/11/30/generating-screenshots-with-lighthouse
+description: Lighthouse captures the rendering timeline of a page in 10 images. Do you need to store them? If yes, keep reading in order to learn how to store these images.
 categories:
   - javascript
   - lighthouse

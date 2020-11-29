@@ -5,6 +5,7 @@ date: 2020-11-30 01:00:00
 author: Leonardo Faria
 ogImage: /images/og-images/2226.png
 permalink: /2020/11/30/getting-asset-transferred-information-with-lighthouse
+description: Have you ever about thought tracking what is added to a page or web app? Did not know how your website became 15MB? Sounds like it is time to track this data!
 categories:
   - javascript
   - lighthouse

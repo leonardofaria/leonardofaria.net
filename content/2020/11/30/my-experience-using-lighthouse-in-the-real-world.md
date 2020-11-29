@@ -5,6 +5,7 @@ date: 2020-11-30 05:00:00
 author: Leonardo Faria
 ogImage: /images/og-images/2230.png
 permalink: /2020/11/30/my-experience-using-lighthouse-in-the-real-world
+description: Lighthouse has been part of my daily work for the last few months and I shared some snippets in my last few posts. For this particular post, it is time to share how I am using Lighthouse in a product used by millions of people and what I have discovered during this process. 
 categories:
   - javascript
   - lighthouse
