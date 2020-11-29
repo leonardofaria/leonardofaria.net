@@ -13,14 +13,14 @@ tags:
   - lighthouse
 ---
 
-Have you ever about thought tracking what is added in a page or web app? Didn't know how your website became a 15MB? Time to track this data!
+Have you ever about thought tracking what is added to a page or web app? Did not know how your website became 15MB? Sounds like it is time to track this data!
 
 ![Chart showing assets transferred by type](/wp-content/uploads/2020/11/asset-transfered-by-type.jpg)
 
-[Calibre](https://calibreapp.com/), one of my favourite web performance tools, shows the chart above to illustrate what is being transferred to users when they visit your page or use your web app.
+[Calibre](https://calibreapp.com/), one of my favourite web performance tools, creates charts, such as the one above, to illustrate what is being transferred to users when they visit your page or use your web app.
 
 <div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
-<strong>Hi, this post is part of a Lighthouse post series. Also, check it out:</strong>
+<strong>Hi! This post is part of a Lighthouse post series. Also, check out:</strong>
 
 <ul>
 <li><a href="/2020/11/30/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro</a></li>
@@ -32,7 +32,7 @@ Have you ever about thought tracking what is added in a page or web app? Didn't 
 </ul>
 </div>
 
-In this post we will learn how to collect similar data using Lighthouse. Here is the recipe (from my [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples)):
+In this post you will learn how to collect similar data using Lighthouse. Here is the recipe (from my [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples)):
 
 {{<highlight js "linenos=inline">}}
 const lighthouse = require('lighthouse');
@@ -63,7 +63,7 @@ The `runnerResult` variable stores 3 main objects:
 - `artifacts`: The data used by the audit
 - `report`: A JSON/HTML/CSV report
 
-The magic starts happening in line 10: we dig into the results of the audits and get the information of the resource summary audit (line 16). The output of the script is:
+The magic starts happening in line 10: we dig into the results of the audits and get information from the resource summary audit (line 16). The output of the script is:
 
 ```js
 {
@@ -78,7 +78,7 @@ The magic starts happening in line 10: we dig into the results of the audits and
 }
 ```
 
-If this is not enough information and you also want to include the number of requests, you can just return the `items` object and skip all filter and loop steps: `runnerResult.lhr.audits['resource-summary'].details.items`. 
+If this is not enough information, and you also want to include the number of requests, you can just return the `items` object and skip all filter and loop steps: `runnerResult.lhr.audits['resource-summary'].details.items`. 
 
 The image above shows what is inside the `resource-summary` audit:
 
@@ -88,6 +88,6 @@ The image above shows what is inside the `resource-summary` audit:
 
 ## Why do we need this? 
 
-This script is useful to follow closely what is being sent to the user. In my particular case, this data is stored daily and it is used to identify if new features added in the codebase dramatically impacted the page rendering.
+This script is useful in order to closely follow what is being sent to users. In my case, this data is stored daily and is used to identify if new features added in the codebase dramatically impact the page rendering.
 
-Can you think of different use cases? Let me know in the comments!
+Can you think of different applications of this tool? Let me know in the comments!
