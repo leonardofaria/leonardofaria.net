@@ -22,7 +22,7 @@
     "postcss-cli": "^8.3.0",
     "postcss-import": "^13.0.0",
     "puppeteer-core": "^5.5.0",
-    "tailwindcss": "^2.0.1"
+    "tailwindcss": "^2.0.4"
   },
   "browserslist": [
     "last 1 version",
