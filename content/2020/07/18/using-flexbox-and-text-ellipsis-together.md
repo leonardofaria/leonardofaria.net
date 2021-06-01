@@ -62,5 +62,5 @@ By using `min-width: 0`, we are changing the minimum size of the flexbox contain
 The full example is available in [this Codepen](https://codepen.io/leonardofaria/pen/rNxZJad):
 
 <div class="full-width">
-  <iframe src="https://codepen.io/leonardofaria/pen/rNxZJad" class="w-full h-screen"></iframe>
+  <iframe src="https://codepen.io/leonardofaria/embed/rNxZJad" class="w-full h-screen"></iframe>
 </div>
