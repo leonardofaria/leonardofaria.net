@@ -24,6 +24,10 @@ Here is a list of my talks.
 
 <div class="full-width"><img alt="Talks" src="/images/talks.jpg" /></div>
 
+## The Path to Staff Engineer (Jul 22, 2021)
+
+* [Vancouver Ruby Meetup Group](https://www.meetup.com/vancouver-ruby/events/279344837/)
+* [Slides](https://www.icloud.com/keynote/0QMt12KcWdyuYRlJGBANWQe9g#staff-engineer)
 ## Design Systems: do zero a realidade (Nov 17, 2020)
 
 * [Python MG](https://www.meetup.com/pt-BR/PythonMG/events/274489421/)
