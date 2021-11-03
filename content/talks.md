@@ -24,6 +24,11 @@ Here is a list of my talks.
 
 <div class="full-width"><img alt="Talks" src="/images/talks.jpg" /></div>
 
+## Using Lighthouse in the real world (Nov 3, 2021)
+
+* [CascadiaJS](https://2021.cascadiajs.com/) - videos soon
+* [Slides](https://bit.ly/lighthouse-real-world)
+
 ## The Path to Staff Engineer (Jul 22, 2021)
 
 * [Vancouver Ruby Meetup Group](https://www.meetup.com/vancouver-ruby/events/279344837/)
@@ -33,6 +38,10 @@ Here is a list of my talks.
 * [Python MG](https://www.meetup.com/pt-BR/PythonMG/events/274489421/)
 * [Slides](https://www.icloud.com/keynote/0A1VJ6XTaJ6Nsk1CX9HAKImpg#design-systems)
 * [Video](https://youtu.be/BvuG6DeFN3w?t=2258)
+
+## Screenshot testing with Cypress (Oct 10, 2020)
+
+* [Leo talks dev YouTube channel](https://youtu.be/URQjP1olVtM)
 ## Life Without Frameworks – Creating a website for my Apple Collection (Nov 20, 2019)
 
 * [React Vancouver](https://reactvancouver.com/event/november-2019-meetup)
