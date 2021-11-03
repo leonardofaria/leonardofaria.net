@@ -26,7 +26,7 @@ Here is a list of my talks.
 
 ## Using Lighthouse in the real world (Nov 3, 2021)
 
-* [CascadiaJS](https://2021.cascadiajs.com/) - videos soon
+* [CascadiaJS](https://2021.cascadiajs.com/) - video in the future
 * [Slides](https://bit.ly/lighthouse-real-world)
 
 ## The Path to Staff Engineer (Jul 22, 2021)
