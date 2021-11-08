@@ -11,7 +11,7 @@ tags:
   - career
 ---
 
-You are a Senior Engineer in a startup. What happens after that? How do you align your career goals with what the company you work for needs? In this post, I share my personal experience navigating in this world while I also talk about the [Staff Engineer book](http://staffeng.com).
+What happens after you are a Senior Engineer in a startup? How do you align your career goals with what the company you work for needs? In this post, I share my personal experience while I also talk about the [Staff Engineer book](http://staffeng.com).
 
 ![Architect's Weekly Calendar](/wp-content/uploads/2021/11/staff-eng-cover.png)
 
