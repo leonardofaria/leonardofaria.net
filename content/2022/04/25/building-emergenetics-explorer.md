@@ -3,6 +3,7 @@ id: 2234
 title: Building Emergenetics Explorer
 date: 2022-04-25 01:00:00
 author: Leonardo Faria
+ogImage: /images/og-images/2234.png
 permalink: /2022/04/25/building-emergenetics-explorer
 categories:
   - career
