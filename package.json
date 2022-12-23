@@ -1,28 +1,33 @@
 {
   "name": "leonardofaria.net",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "description": "My personal website",
   "main": "index.js",
   "repository": "https://github.com/leonardofaria/leonardofaria.net",
   "author": "Leonardo Faria <leonardofaria@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "ip": "ifconfig | grep 'inet ' | grep -Fv 127.0.0.1 | awk '{print $2}' | head -n 1",
-    "dev": "export LOCAL_IP=$(yarn --silent ip) && hugo server --verbose --disableFastRender --buildFuture --bind=$LOCAL_IP --baseURL=http://$LOCAL_IP:1313",
-    "build": "NODE_ENV=production hugo --gc --minify --verbose --buildFuture",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "ogimages-generator": "node ogimages.js"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^3.0.0",
-    "@tailwindcss/ui": "^0.7.2",
-    "autoprefixer": "^10.0.3",
+    "@types/node": "18.11.3",
+    "@types/react-dom": "18.0.6",
+    "@types/react": "18.0.21",
+    "autoprefixer": "^10.4.12",
     "fastmatter": "^2.1.1",
     "line-replace": "^2.0.1",
-    "postcss": "^8.1.10",
-    "postcss-cli": "^8.3.0",
-    "postcss-import": "^13.0.0",
+    "postcss": "^8.4.18",
     "puppeteer-core": "^5.5.0",
-    "tailwindcss": "^2.0.1"
+    "tailwindcss": "^3.2.1",
+    "typescript": "4.8.4"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "browserslist": [
     "last 1 version",
