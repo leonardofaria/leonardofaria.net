@@ -2,7 +2,7 @@
 id: 374
 title: Rails, Git, MySQL e mod_rails no Leopard
 date: 2008-05-24T16:53:23-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/374.png
 layout: post
 guid: https://leonardofaria.net/?p=374
@@ -22,7 +22,7 @@ Comprou um Mac? Não sabe por onde começar? Esse é um mega-post mostrando como
 
 O Leopard já vem com Ruby e Rails já instalados. Então, a única sugestão é a de atualizar todos os gems. O comando `gem list` deve apontar os gems instalados. Por padrão, são:
 
-<!--more-->
+<span className="hidden">more</span>
 
 ```
 actionmailer (1.3.6, 1.3.3)
@@ -156,7 +156,7 @@ sudo apachectl start
 
 ### Fontes
 
-* <http://dysinger.net/2007/12/30/installing-git-on-mac-os-x-105-leopard/>
-* <http://developer.apple.com/tools/developonrailsleopard.html>
-* <http://simplesideias.com.br/instalando-o-mod_rails-phusion-passenger-no-mac-os-x-leopard/>
-* <http://www.akitaonrails.com/2008/4/16/phusion-passenger-mod_rails-test-drive>
+* http://dysinger.net/2007/12/30/installing-git-on-mac-os-x-105-leopard/
+* http://developer.apple.com/tools/developonrailsleopard.html
+* http://simplesideias.com.br/instalando-o-mod_rails-phusion-passenger-no-mac-os-x-leopard/
+* http://www.akitaonrails.com/2008/4/16/phusion-passenger-mod_rails-test-drive

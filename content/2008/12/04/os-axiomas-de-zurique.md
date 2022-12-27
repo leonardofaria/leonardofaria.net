@@ -2,7 +2,7 @@
 id: 433
 title: Os axiomas de Zurique
 date: 2008-12-04T12:28:04-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/433.png
 layout: post
 guid: https://leonardofaria.net/?p=433

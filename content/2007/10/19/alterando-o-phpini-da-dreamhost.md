@@ -2,7 +2,7 @@
 id: 319
 title: Alterando o PHP.ini da Dreamhost
 date: 2007-10-19T13:21:42-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/319.png
 layout: post
 guid: https://leonardofaria.net/2007/10/19/alterando-o-phpini-da-dreamhost/

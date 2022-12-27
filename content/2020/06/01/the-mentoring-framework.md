@@ -2,7 +2,7 @@
 id: 2204
 title: The Mentoring Framework
 date: 2020-06-01
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/2204.png
 permalink: /2020/06/01/the-mentoring-framework
 categories:

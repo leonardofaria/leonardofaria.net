@@ -2,7 +2,7 @@
 id: 52
 title: Top plugins para WordPress
 date: 2006-06-04T16:42:15-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/52.png
 layout: post
 guid: https://leonardofaria.net/2006/06/04/top-plugins-para-wordpress/
@@ -17,7 +17,7 @@ tags:
   - wordpress
 ---
 WordPress é unanimidade em solução para blog. Há uns três anos, quando comecei minha vida blogger, eu mesmo escrevia um pequeno gerenciador de notícias, mas isso não se mostrou tão eficiente. Depois disso, adotei o [AJ-Fork](http://ajfork.berlios.de/), mas esse também não se mostrou tão eficiente. Adotei o WordPress e agora relato alguns plugins bastantes interessantes, que uso aqui, ou na extranet da empresa (sim, aonde trabalho estamos desenvolvendo uma extranet).  
-<!--more-->
+<span className="hidden">more</span>
 
 
 - [Browser Sniff](http://priyadi.net/archives/2005/03/29/wordpress-browser-detection-plugin/): exibe informações de browser e sistema operacional de quem comenta.  

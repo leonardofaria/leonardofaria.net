@@ -2,7 +2,7 @@
 id: 239
 title: Você conhece o WebObjects?
 date: 2007-04-20T22:41:09-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/239.png
 layout: post
 guid: https://leonardofaria.net/2007/04/20/voce-conhece-o-webobjects/

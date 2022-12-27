@@ -2,7 +2,7 @@
 id: 836
 title: O que é Ruby?
 date: 2009-11-09T21:09:50-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/836.png
 layout: post
 guid: https://leonardofaria.net/?p=836
@@ -30,7 +30,7 @@ Ruby é uma linguagem orientada a objetos, ou seja, qualquer variável é um obj
 putz "meu exemplo".upcase # imprimirá MEU EXEMPLO
 ```
 
-<!--more-->
+<span className="hidden">more</span>
 
 Acima, aplica-se o método upcase da classe String no objeto “meu exemplo”. Ruby é extensível: um objeto pode receber melhorias e novos métodos em tempo de execução.
 

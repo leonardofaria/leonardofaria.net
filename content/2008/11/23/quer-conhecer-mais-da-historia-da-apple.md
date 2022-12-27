@@ -2,7 +2,7 @@
 id: 428
 title: Quer conhecer mais da história da Apple?
 date: 2008-11-23T21:08:43-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/428.png
 layout: post
 guid: https://leonardofaria.net/?p=428

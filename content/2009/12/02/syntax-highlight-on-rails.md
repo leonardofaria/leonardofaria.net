@@ -2,7 +2,7 @@
 id: 903
 title: Syntax Highlight on Rails
 date: 2009-12-02T20:52:12-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/903.png
 layout: post
 guid: https://leonardofaria.net/?p=903

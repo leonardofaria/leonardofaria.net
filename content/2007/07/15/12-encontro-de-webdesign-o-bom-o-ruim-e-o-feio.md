@@ -2,7 +2,7 @@
 id: 285
 title: '12º Encontro de Webdesign: o bom, o ruim e o feio'
 date: 2007-07-15T19:48:06-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/285.png
 layout: post
 guid: https://leonardofaria.net/2007/07/15/12-encontro-de-webdesign-o-bom-o-ruim-e-o-feio/
@@ -18,7 +18,7 @@ Sábado, levantei às 6h e fui rumo a BH em mais um [Encontro de Webdesign da Ar
 
 Verifiquei nas listas [**arqHP**](http://groups.google.com/group/arqhp) e [**Arquitetura de Informação**](http://www.guilhermo.com/ai_biblioteca/referencialink.asp?referencia=96) se ia ter alguém lá, mas só depois do evento apareceram o [Rafael Apocalypse](http://www.ideiadigital.ppg.br/) e o [Sérgio Jardim](http://www.plasmadesign.com.br/) – ambos que eu já conhecia de troca de e-mails e tal.
 
-<!--more-->
+<span className="hidden">more</span>
 
 ### Organização, pães de queijo e muito mais
 

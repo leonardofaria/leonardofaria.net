@@ -1,17 +1,10 @@
 ---
 id: 2147
 title: Talks
-date: 2019-11-08T22:43:36-03:00
-author: Leonardo Faria
+date: 2022-02-07 01:00:00
+type: Page
 ogImage: /images/talks.jpg
-layout: page
-type: page
 permalink: /talks
-guid: https://leonardofaria.net/?page_id=2147
-hideSuggestions: true
-hideComments: true
-hideMetadata: true
-hideAuthorBio: true
 description: I like to tell stories. Here is a list of my talks.
 ---
 

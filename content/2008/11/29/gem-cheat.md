@@ -2,7 +2,7 @@
 id: 432
 title: gem cheat
 date: 2008-11-29T20:23:04-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/432.png
 layout: post
 guid: https://leonardofaria.net/?p=432

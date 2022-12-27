@@ -2,7 +2,7 @@
 id: 254
 title: Resultado da Pesquisa sobre Mac Users
 date: 2007-06-07T18:07:18-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/254.png
 layout: post
 guid: https://leonardofaria.net/2007/06/07/resultado-da-pesquisa-sobre-mac-users/
@@ -21,14 +21,14 @@ Para a divulgação da pesquisa, convoquei usuários de [vários](http://macpres
 Obrigado a todo mundo que respondeu a pesquisa.  
 Os resultados surpreenderam. Vamos lá.
 
-<!--more-->
+<span className="hidden">more</span>
 
 ### Sobre o Mac User
 
 Realizei perguntas simples sobre quem é o usuário de Mac em terras tupiniquins. Quanto a idade, a maioria dos usuários estão entre os 21 a 40 anos. Sobre escolaridade, percebe-se que grande parte dos usuários já sentou ou cursa o ensino superior. Obtive nessa parte da pesquisa resultados até bem equilibrados quanto a renda(!), onde prevalesce o mito que usuários de Macs são ricos. O resultado da pesquisa &#8220;Tempo que usa Mac&#8221; foi bem interessante: observa-se um percentual considerável de novos usuários, mas prevalesce usuários antigos, com mais de 6 anos.
 
 <center>
-  <img src='/wp-content/uploads/2007/06/chart4.jpg' alt='Idade' /></p>
+  <p><img src='/wp-content/uploads/2007/06/chart4.jpg' alt='Idade' /></p>
 
   <p>
     <img src='/wp-content/uploads/2007/06/chart5.jpg' alt='Escolaridade' />
@@ -39,8 +39,9 @@ Realizei perguntas simples sobre quem é o usuário de Mac em terras tupiniquins
   </p>
 
   <p>
-    <img src='/wp-content/uploads/2007/06/chart16.jpg' alt='Tempo que usa Mac' /><br /> </center>
+    <img src='/wp-content/uploads/2007/06/chart16.jpg' alt='Tempo que usa Mac' /><br />
   </p>
+</center>
 
 <h3 class="comments">
   O Mac User e seus equipamentos
@@ -48,16 +49,16 @@ Realizei perguntas simples sobre quem é o usuário de Mac em terras tupiniquins
 
 <p>
   Segundo a pesquisa, tem-se uma rivalidade entre desktops e laptops quanto a equipamento principal – Macs de mesas ganham de 51% a 49%. A maioria das pessoas que responderam a pesquisa possuem apenas um Mac, mas o número de quem possui mais de um equipamento é bem peculiar. Quanto ao uso de iPods, observa-se a preferência pelo Player da Apple: 65% das pessoas que responderam a pesquisa possuem um.<br />
-
+</p>
 <center>
-  <br /> <img src='/wp-content/uploads/2007/06/chart7.jpg' alt='Equipamento Principal' /></p>
+  <br /> <img src='/wp-content/uploads/2007/06/chart7.jpg' alt='Equipamento Principal' />
 
   <p>
     <img src='/wp-content/uploads/2007/06/chart8.jpg' alt='Possui mais de um Mac' />
   </p>
 
   <p>
-    <img src='/wp-content/uploads/2007/06/chart10.jpg' alt='Possui iPod' /><br /> </center>
+    <img src='/wp-content/uploads/2007/06/chart10.jpg' alt='Possui iPod' /><br />
   </p>
 </center>
 
@@ -67,9 +68,9 @@ Realizei perguntas simples sobre quem é o usuário de Mac em terras tupiniquins
 
 <p>
   Na minha opinião, sem grandes surpresas para essa parte da pesquisa. 64% das pessoas que responderam essa pesquisa compram frequentemente pela Internet. A pergunta &#8220;Onde compra Mac&#8221; gerou um resultado bem interessante: um considerável número de pessoas compram equipamentos fora do Brasil. Um dos fatores que indicam esse número é o alto preço dos produtos da Apple no país.<br /> Outro resultado interessante foi quanto a compra de equipamentos em sites de leilões, como o MercadoLivre e em fóruns e listas de discussão: 43% das pessoas que responderam a pesquisa já utilizou esses serviços. Esse resultado é bem interessante. Eu mesmo já comprei um iBook via MercadoLivre e pelo visto isso já vem se tornando uma prática comum no Brasil. A nota dada pelos usuários para quem utilizou esses serviços pode ser considerada boa, uma vez que comunidades online criam aproximação entre as pessoas e os serviços de leilões possuem formas seguras de se comprar online.<br />
-
+</p>
 <center>
-  <br /> <img src='/wp-content/uploads/2007/06/chart11.jpg' alt='Compras online' /></p>
+  <br /> <img src='/wp-content/uploads/2007/06/chart11.jpg' alt='Compras online' />
 
   <p>
     <img src='/wp-content/uploads/2007/06/chart9.jpg' alt='Onde compra seu Mac' />
@@ -80,7 +81,7 @@ Realizei perguntas simples sobre quem é o usuário de Mac em terras tupiniquins
   </p>
 
   <p>
-    <img src='/wp-content/uploads/2007/06/chart13.jpg' alt='Nota para serviços de leilões' /><br /> </center>
+    <img src='/wp-content/uploads/2007/06/chart13.jpg' alt='Nota para serviços de leilões' /><br />
   </p>
 </center>
 
@@ -90,9 +91,9 @@ Realizei perguntas simples sobre quem é o usuário de Mac em terras tupiniquins
 
 <p>
   Para gerar estatísticas de browser, conexão e sistema operacional, usei como base de dados os resultados do <a href="http://www.google.com/analytics/">Google Analytics</a>.<br />
-
+</p>
 <center>
-  <img src='/wp-content/uploads/2007/06/chart1.jpg' alt='Browser' /></p>
+  <img src='/wp-content/uploads/2007/06/chart1.jpg' alt='Browser' />
 
   <p>
     <img src='/wp-content/uploads/2007/06/chart2.jpg' alt='Sistema Operacional' />
@@ -107,7 +108,7 @@ Realizei perguntas simples sobre quem é o usuário de Mac em terras tupiniquins
   </p>
 
   <p>
-    <img src='/wp-content/uploads/2007/06/chart14.jpg' alt='Conexão' /></center>
+    <img src='/wp-content/uploads/2007/06/chart14.jpg' alt='Conexão' />
   </p>
 </center>
 

@@ -2,7 +2,7 @@
 id: 2228
 title: Generating Web Vitals information with Lighthouse
 date: 2020-11-30 03:00:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/2228.png
 permalink: /2020/11/30/getting-web-vitals-information-with-lighthouse
 description: Earlier this year, Google announced that “page experience” would impact its search ranking. A few weeks ago, they announced that the new page experience signals will roll out in May 2021. But what are these page experience signals?
@@ -59,7 +59,7 @@ The Web Vitals information is very easily found in the Lighthouse reports:
 
 What I want to share today is how to get Web Vitals information from the Lighthouse node package (from my [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples)):
 
-{{<highlight js "linenos=inline">}}
+```js
 const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
 
@@ -80,7 +80,7 @@ const chromeLauncher = require('chrome-launcher');
 
   await chrome.kill();
 })();
-{{</highlight>}}
+```
 
 The information highlighted in the image above can be found in lines 9 - 14. The output of the script:
 

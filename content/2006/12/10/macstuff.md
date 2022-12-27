@@ -2,7 +2,7 @@
 id: 178
 title: MacStuff
 date: 2006-12-10T13:42:34-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/178.png
 layout: post
 guid: https://leonardofaria.net/2006/12/10/macstuff/

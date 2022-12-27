@@ -2,7 +2,7 @@
 id: 379
 title: Sobre Controle de Versão
 date: 2008-05-31T17:38:06-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/379.png
 layout: post
 guid: https://leonardofaria.net/?p=379
@@ -18,7 +18,7 @@ tags:
 ---
 Na disciplina de Engenharia de Software que faço no curso de Sistemas de Informação da Faculdade Pitágoras, fiz um trabalho introdutório sobre Sistemas de Controle de Versão. O trabalho está abaixo e também disponível em [PDF](/wp-content/uploads/2008/05/controle.pdf).
 
-<!--more-->
+<span className="hidden">more</span>
 
 ### Introdução 
 

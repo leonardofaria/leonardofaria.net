@@ -2,7 +2,7 @@
 id: 283
 title: Curiosidade Ruby do dia
 date: 2007-06-28T18:27:44-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/283.png
 layout: post
 guid: https://leonardofaria.net/2007/06/28/curiosidade-ruby-do-dia/

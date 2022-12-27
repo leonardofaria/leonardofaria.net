@@ -2,7 +2,7 @@
 id: 76
 title: Opera 9 lançado
 date: 2006-06-23T13:45:41-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/76.png
 layout: post
 guid: https://leonardofaria.net/2006/06/23/opera-9-lancado/

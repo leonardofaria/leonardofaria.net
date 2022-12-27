@@ -2,7 +2,7 @@
 id: 28
 title: Ocultando a tecnologia de um site usando mod_rewrite
 date: 2006-04-05T22:08:58-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/28.png
 layout: post
 guid: https://leonardofaria.net/2006/05/27/ocultando-a-tecnologia-de-um-site-usando-mod_rewrite/
@@ -15,12 +15,12 @@ tags:
   - apache
 ---
 No artigo anterior, sugeri a mudança na configuração do httpd.conf para ocultar qual a tecnologia de um site. Isso pode ser útil em dois casos. O primeiro, por uma questão estética (não tão relevante) e a segunda por uma questão de segurança. Já que não se conhece como o site foi feito, ataques com SQL Injection, por exemplo, podem ser atrasados.  
-<!--more-->
+<span className="hidden">more</span>
 
 
 Mas voltando ao conteúdo desse artigo, o Apache oferece outra forma de maquiar uma URL. E isso é através do mod\_rewrite. Além de oferecer a segurança em não mostrar a extensão de um arquivo, o mod\_rewrite permite a criação de URLS &#8216;fáceis' de entender e não monstros do tipo `index.php?id=7&date=05/02/97&page=6`
 
-O mod_rewrite não passa de um módulo (que deve estar ativado no httpd.conf) que permite, através de expressões regulares, redirecionar o usuário. Mas, como ele funciona? <!--more-->
+O mod_rewrite não passa de um módulo (que deve estar ativado no httpd.conf) que permite, através de expressões regulares, redirecionar o usuário. Mas, como ele funciona? <span className="hidden">more</span>
 
 A configuração das URLs amigáveis envolve a criação de um arquivo .htaccess. Esse arquivo deve estar no diretório no qual deve ser trabalhado. Vamos a configuração:
 

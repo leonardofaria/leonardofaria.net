@@ -2,7 +2,7 @@
 id: 26
 title: Verificando contas de e-mail POP3 com PHP
 date: 2006-03-20T21:57:54-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/26.png
 layout: post
 guid: https://leonardofaria.net/2006/03/20/verificando-contas-de-e-mail-pop3-com-php/
@@ -18,7 +18,7 @@ Escrevi uma funçãozinha que verifica a existência de emails (e informações 
 
 Na próxima semana, postarei uma revisão desse código. A próxima versão implementará uso de CSS e Javascript, para uma interface mais interativa.
 
-<!--more-->
+<span className="hidden">more</span>
 
 ```php
 <?php

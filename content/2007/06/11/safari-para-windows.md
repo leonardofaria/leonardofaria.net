@@ -2,7 +2,7 @@
 id: 275
 title: Safari para Windows
 date: 2007-06-11T22:01:20-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/275.png
 layout: post
 guid: https://leonardofaria.net/2007/06/11/safari-para-windows/

@@ -2,7 +2,7 @@
 id: 1901
 title: '#deletefacebook and social media effects on me'
 date: 2018-03-28T23:13:28-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1901.png
 layout: post
 guid: https://leonardofaria.net/?p=1901
@@ -15,7 +15,7 @@ I am not deleting my account because I still need Facebook to reach a few people
 ## What can I do?
 
 If I can't delete my Facebook account, I may have some way to undo my friendship with them.  
-<!--more-->
+<span className="hidden">more</span>
 
   * [Download a copy of my Facebook data](https://www.facebook.com/settings): I can see now how deep Facebook knows me. I am not sure if this is useful, but is still worth remove data from there? Maybe.
   * Review apps: 10 years of Facebook and I have 325 apps connected with Facebook. Social login was a good thing until one week ago but now, I don't know how many Cambridge Analytica are around.
@@ -28,6 +28,6 @@ If I can't delete my Facebook account, I may have some way to undo my friendship
 
 Owned by Facebook, Instagram is another social network to [worry about it](https://www.cnn.com/2017/05/19/health/instagram-worst-social-network-app-young-people-mental-health/index.html). We get stuck in its like/followers game and since they <s>copied Snapchat</s> released Stories is even more difficult to do not follow your friends.
 
-{{<youtube JgkvTRz_Alo>}}
+youtube JgkvTRz_Alo>}} -->
 
 I have decided to use Instagram as a photo album. When I was a child, I didn't have Instagram and my family only took pictures during special times. We had a film camera and a few albums of pictures of weddings and school events. Let me exclude the like factor and FOMO here and share online only what my mom would show in her albums. And also, no more stories. I don't want to make my life a soap opera.

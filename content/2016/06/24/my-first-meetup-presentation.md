@@ -2,7 +2,7 @@
 id: 1737
 title: My first Meetup presentation
 date: 2016-06-24T11:41:13-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1737.png
 layout: post
 guid: https://leonardofaria.net/?p=1737
@@ -20,4 +20,4 @@ Here are [my slides](http://leonardofaria.github.io/wordpress-gulp-meetup/) and 
 
 _Update: video_
 
-{{< youtube 5bg9gBWwInQ >}}
+youtube 5bg9gBWwInQ >}} -->

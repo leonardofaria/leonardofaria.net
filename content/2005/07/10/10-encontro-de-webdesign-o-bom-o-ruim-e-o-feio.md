@@ -2,7 +2,7 @@
 id: 18
 title: '10º Encontro de Webdesign: o bom, o ruim e o feio'
 date: 2005-07-10T21:37:22-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/18.png
 layout: post
 guid: https://leonardofaria.net/2006/07/10/10-encontro-de-webdesign-o-bom-o-ruim-e-o-feio/
@@ -18,7 +18,7 @@ Ontem foi realizado o Décimo Encontro de Webdesign, promovido em Belo Horizonte
 
 **O design, a web e a agência digital** abriu o dia. Cristiano D'Alcântara expôs a importância do profissional de design para a nova era digital. O design é primordial para uma empresa, salvando-a do vermelho. Apple, Samsung e BMW (a única empresa do mundo que tem um presidente designer!) seriam empresas que investiam bastante em design, conseguindo um ótimo feedback financeiro. 
 
-<!--more-->
+<span className="hidden">more</span>
 
 Além disso, D'Alcântara pôs em xeque o modelo tradicional de agência, com seus setores e divisórias. Esse tipo de agência estaria ameaçada por um &#8216;novo' tipo de agência, em que todo profissional estaria preocupado com o resultado final. Quer dizer, o diretor de arte não se importaria só com o layout da peça, mas também com o atendimento ao cliente, por exemplo. 
 

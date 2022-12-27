@@ -2,7 +2,7 @@
 id: 214
 title: Flash CS3 e muito mais na área
 date: 2007-03-27T22:52:28-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/214.png
 layout: post
 guid: https://leonardofaria.net/2007/03/27/flash-cs3-na-area/

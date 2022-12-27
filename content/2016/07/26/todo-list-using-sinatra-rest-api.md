@@ -2,7 +2,7 @@
 id: 1746
 title: Todo list using a Sinatra REST API
 date: 2016-07-26T19:01:16-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1746.png
 layout: post
 guid: https://leonardofaria.net/?p=1746
@@ -16,7 +16,7 @@ tags:
 ---
 I am attending to a [post-degree program](http://langara.ca/programs-and-courses/programs/web-and-mobile-app/index.html) and one of its courses is Server-Side Scripting. The professor gave us a project which students should create a project and my colleague and I created a [Sinatra REST API](http://sinatra-todo-api.herokuapp.com) for a [todo list application](http://leonardofaria.github.io/todo).
 
-![](/wp-content/uploads/2016/07/todo.gif) <!--more-->
+![Todo](/wp-content/uploads/2016/07/todo.gif) <span className="hidden">more</span>
 
 The back end is a decent example of how to use Sinatra and Active Record to create simple APIs. In the [repository's readme](https://github.com/leonardofaria/todo-api#todo-api), I show how to install it and use it. In this post, I detail what I coded:
 
@@ -393,4 +393,4 @@ Part of my work was inspired in the following articles:
 * [Create a lightweight REST service using Sinatra](https://www.xplatform.rocks/2014/04/28/create-a-lightweight-rest-service-using-sinatra/)
 * [Deploying REST APIs to Docker Using Ruby and Sinatra](http://blog.cloud66.com/deploying-rest-apis-to-docker-using-ruby-and-sinatra/)
 * [Uno! Use Sinatra to Implement a REST API](https://www.sitepoint.com/uno-use-sinatra-implement-rest-api/)
-* [sinatra-activerecord-heroku](https://github.com/hatboysam/sinatra-activerecord-heroku)</ul>
+* [sinatra-activerecord-heroku](https://github.com/hatboysam/sinatra-activerecord-heroku)

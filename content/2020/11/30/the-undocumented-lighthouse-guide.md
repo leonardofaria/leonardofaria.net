@@ -2,7 +2,7 @@
 id: 2225
 title: The undocumented Lighthouse guide
 date: 2020-11-30 00:00:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/2225.png
 permalink: /2020/11/30/the-undocumented-lighthouse-guide
 description: Lighthouse is the go-to tool for improving the quality of web pages. Lately, I have been using Lighthouse a lot at work to identify opportunities for performance optimizations. This post is part of a 6 part series that I have written about how to get the most out of Lighthouse.
@@ -53,7 +53,7 @@ This series of posts will cover the usage of Lighthouse as a Node module. At my 
 
 The Lighthouse docs present a [basic example of how to start our journey](https://github.com/GoogleChrome/lighthouse/blob/master/docs/readme.md#using-programmatically). Please see below: 
 
-{{<highlight js "linenos=inline">}}
+```js showLineNumbers
 const fs = require('fs');
 const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
@@ -73,7 +73,7 @@ const chromeLauncher = require('chrome-launcher');
 
   await chrome.kill();
 })();
-{{</highlight>}}
+```
 
 The first 3 lines import required packages: `fs` for file system manipulation; `lighthouse`, the main audit package; and `chrome-launcher`, a package used for launching Chrome. Lighthouse needs to know which port has a Chrome instance running, so this audit can happen.
 

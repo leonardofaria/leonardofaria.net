@@ -2,12 +2,11 @@
 id: 1953
 title: "It Doesn't Have to Be Crazy at Work and Joy, Inc.: How We Built a Workplace People Love reviews"
 date: 2019-01-23T04:41:05-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1953.png
 layout: post
 guid: https://leonardofaria.net/?p=1953
 permalink: /2019/01/23/it-doesnt-have-to-be-crazy-at-work-and-joy-inc-how-we-built-a-workplace-people-love-reviews/
-image: /wp-content/uploads/2019/01/IMG_4455.jpg
 categories:
   - review
 tags:

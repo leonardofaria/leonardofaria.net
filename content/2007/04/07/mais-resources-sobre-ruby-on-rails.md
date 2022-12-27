@@ -2,7 +2,7 @@
 id: 220
 title: Mais resources sobre Ruby on Rails
 date: 2007-04-07T22:06:23-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/220.png
 layout: post
 guid: https://leonardofaria.net/2007/04/07/mais-resources-sobre-ruby-on-rails/

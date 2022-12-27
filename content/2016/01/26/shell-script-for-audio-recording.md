@@ -2,7 +2,7 @@
 id: 1693
 title: Shell script for audio recording
 date: 2016-01-26T18:13:43-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1693.png
 layout: post
 guid: https://leonardofaria.net/?p=1693
@@ -19,7 +19,7 @@ tags:
 _[Esse artigo está disponível em português.](https://leonardofaria.net/2016/01/29/shell-script-para-gravar-audio-da-web/)_
 
 One of my favourite radio shows happens every day at 10 AM (Brasilia Timezone). I was unable to listen to it because the time zones. Then, I created the following small shell script to record the show and then I can listen to it in my free time.  
-<!--more-->
+<span className="hidden">more</span>
 
 ```shell
 #!/bin/bash

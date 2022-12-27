@@ -2,7 +2,7 @@
 id: 103
 title: Browser com Exposé
 date: 2006-07-23T19:33:37-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/103.png
 layout: post
 guid: https://leonardofaria.net/2006/07/23/browser-com-expose/

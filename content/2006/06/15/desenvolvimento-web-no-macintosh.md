@@ -2,7 +2,7 @@
 id: 62
 title: Desenvolvimento web no Macintosh
 date: 2006-06-15T23:20:54-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/62.png
 layout: post
 guid: https://leonardofaria.net/2006/06/15/desenvolvimento-web-no-macintosh/
@@ -16,7 +16,7 @@ tags:
 ---
 Muitos que se migram para o Mac OS se perguntam como trabalhar com desenvolvimento web nele. Well, o Mac OS X já vem com Apache configurado. Falta, portanto, configurar PHP e MySQL.
 
-<!--more-->
+<span className="hidden">more</span>
 
 Após [baixar o PHP](http://www.entropy.ch/software/macosx/php/) (+- 47MB), você irá descompactá-lo e executar o instalador. Cuidado com a versão. No Mac OS X, o Apache que vem instalado por padrão é o Apache 1.3.  
 

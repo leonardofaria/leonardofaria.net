@@ -2,7 +2,7 @@
 id: 492
 title: Integração contínua no autosimulado
 date: 2009-04-03T20:31:38-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/492.png
 layout: post
 guid: https://leonardofaria.net/?p=492
@@ -21,5 +21,5 @@ Assim como no [**codestacker**](http://www.codestacker.com), não lancei o [**au
 Hoje eu estou postando para falar de uma nova funcionalidade do [**autosimulado**](http://www.autosimulado.com.br). Agora, o seu desempenho é salvo e você pode acompanhar o resultado dos testes em uma página exclusiva e com gráficos. Para ilustrar:
 
 <center>
-  <a href-"http://www.autosimulado.com.br"><img src="/wp-content/uploads/2009/04/autosimulado1.jpg" alt="autosimulado" title="autosimulado" /></a>
+  <a href="http://www.autosimulado.com.br"><img src="/wp-content/uploads/2009/04/autosimulado1.jpg" alt="autosimulado" title="autosimulado" /></a>
 </center>

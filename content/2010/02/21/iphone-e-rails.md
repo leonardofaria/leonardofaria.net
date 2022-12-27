@@ -2,7 +2,7 @@
 id: 927
 title: iPhone e Rails
 date: 2010-02-21T23:36:13-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/927.png
 layout: post
 guid: https://leonardofaria.net/?p=927

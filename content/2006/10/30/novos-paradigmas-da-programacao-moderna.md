@@ -2,7 +2,7 @@
 id: 139
 title: Novos paradigmas da Programação Moderna
 date: 2006-10-30T21:30:11-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/139.png
 layout: post
 guid: https://leonardofaria.net/2006/10/30/novos-paradigmas-da-programacao-moderna/

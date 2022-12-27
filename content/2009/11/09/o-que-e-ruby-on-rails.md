@@ -2,7 +2,7 @@
 id: 846
 title: O que é Ruby on Rails?
 date: 2009-11-09T21:10:15-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/846.png
 layout: post
 guid: https://leonardofaria.net/?p=846
@@ -32,7 +32,7 @@ A criação de componentes reutilizáveis é uma das técnicas mais exploradas e
 </center>
 
 
-<!--more-->
+<span className="hidden">more</span>
 
 
 O padrão de projeto MVC divide o desenvolvimento de um aplicativo em três camadas: View (Visão), Controller (Controle) e Model (Modelo). A separação das camadas permite o aumento da flexibilidade e reuso do código. Sem essa separação, as funcionalidades podem ficar mescladas, o que acarreta um maior esforço para eventuais manutenções, pois as responsabilidades podem ser difundidas entre as camadas.  

@@ -2,7 +2,7 @@
 id: 2227
 title: Generating screenshots with Lighthouse
 date: 2020-11-30 02:00:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/2227.png
 permalink: /2020/11/30/generating-screenshots-with-lighthouse
 description: Lighthouse captures the rendering timeline of a page in 10 images. Do you need to store them? If yes, keep reading in order to learn how to store these images.
@@ -35,7 +35,7 @@ The filmstrip above reveals how a page is rendered in a browser and gives us an 
 
 In this post you will learn where these images are stored and how to store them in a file system. Here is the script (from my [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples)): 
 
-{{<highlight js "linenos=inline">}}
+```js
 const { writeFileSync } = require('fs');
 const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
@@ -59,7 +59,7 @@ const chromeLauncher = require('chrome-launcher');
 
   await chrome.kill();
 })();
-{{</highlight>}}
+```
 
 Let’s dig into the magic. Starting in line 10, we loop in the screenshot-thumbnails audit the images captured by Lighthouse. Notice that images are encoded in the [Base64 format](https://en.wikipedia.org/wiki/Base64), and along with their content, Lighthouse also stores when they happen. 
 

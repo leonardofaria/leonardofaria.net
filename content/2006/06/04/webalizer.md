@@ -2,7 +2,7 @@
 id: 51
 title: Webalizer
 date: 2006-06-04T15:29:38-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/51.png
 layout: post
 guid: https://leonardofaria.net/2006/06/04/webalizer/
@@ -16,7 +16,7 @@ tags:
 ---
 O Webalizer, para quem não sabe, é um software que mostra as estatísticas de utilização de um site. Seu acesso, na maioria das vezes, é feita pelo cPanel, painel de controle do servidor. Esse acesso só acontece se o usuário estiver logado, o que pode inviabilizar o acesso as estatísticas por pessoas sem a senha.  
 Entretanto, há uma forma de exibir esses dados, publicamente.  
-<!--more-->
+<span className="hidden">more</span>
 
 
 Basta criar um arquivo, por exemplo, stats.php, com o seguinte conteúdo:

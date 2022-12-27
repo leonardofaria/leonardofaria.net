@@ -2,7 +2,7 @@
 id: 35
 title: iBook
 date: 2006-04-20T22:25:05-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/35.png
 layout: post
 guid: https://leonardofaria.net/2006/05/27/ibook/

@@ -2,7 +2,7 @@
 id: 19
 title: Eu testei o Wallop
 date: 2005-07-21T21:40:31-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/19.png
 layout: post
 guid: https://leonardofaria.net/2005/07/21/eu-testei-o-wallop/

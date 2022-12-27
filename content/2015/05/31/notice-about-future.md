@@ -2,7 +2,7 @@
 id: 1529
 title: Notice about future
 date: 2015-05-31T20:29:07-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1529.png
 layout: post
 guid: https://leonardofaria.net/?p=1529

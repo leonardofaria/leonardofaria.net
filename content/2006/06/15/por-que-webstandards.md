@@ -2,7 +2,7 @@
 id: 61
 title: Por que webstandards?
 date: 2006-06-15T21:56:11-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/61.png
 layout: post
 guid: https://leonardofaria.net/2006/06/15/por-que-webstandards/
@@ -15,7 +15,7 @@ tags:
   - webstandards
 ---
 O artigo que vem a seguir foi escrito por mim em fevereiro do ano passado, para o projeto ReclamaSite (que nasceu morto). Naquela época, web2.0 não era [capa de revista](http://info.abril.com.br/) e muita gente ainda tinha desconfiança das vantagens do Tableless.  
-<!--more-->
+<span className="hidden">more</span>
 
 # Por que webstandards?
 

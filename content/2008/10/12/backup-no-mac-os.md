@@ -2,7 +2,7 @@
 id: 410
 title: Backup no Mac OS
 date: 2008-10-12T16:09:34-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/410.png
 layout: post
 guid: https://leonardofaria.net/?p=410

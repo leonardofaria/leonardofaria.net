@@ -2,7 +2,7 @@
 id: 1085
 title: 'Novo micro-projeto: HORÓSCOPO NO MSN'
 date: 2010-10-09T20:16:04-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1085.png
 layout: post
 guid: https://leonardofaria.net/?p=1085

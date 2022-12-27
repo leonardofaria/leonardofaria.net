@@ -2,7 +2,7 @@
 id: 397
 title: Rails Screencasts
 date: 2008-07-11T01:31:43-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/397.png
 layout: post
 guid: https://leonardofaria.net/?p=397

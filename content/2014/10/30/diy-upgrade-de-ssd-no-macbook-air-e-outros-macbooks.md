@@ -2,7 +2,7 @@
 id: 1464
 title: 'DIY: Upgrade de SSD no MacBook Air (e outros MacBooks)'
 date: 2014-10-30T18:16:36-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1464.png
 layout: post
 guid: https://leonardofaria.net/?p=1464
@@ -33,4 +33,4 @@ A instalação é simples. Basicamente consiste em:
 
 O vídeo abaixo explica o processo didaticamente, não tem como errar. Dependendo do modelo de MacBook, pode ser necessário também desconectar a bateria.
 
-{{<youtube gBEf1DDTuAE>}}
+youtube gBEf1DDTuAE>}} -->

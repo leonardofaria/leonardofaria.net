@@ -2,7 +2,7 @@
 id: 1931
 title: Another dotfiles repository
 date: 2018-06-16T18:42:55-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1931.png
 layout: post
 guid: https://leonardofaria.net/?p=1931
@@ -18,7 +18,7 @@ tags:
 ---
 A few days weeks I got a MacBook Air as secondary machine. Since its SSD is smaller than my main Mac I couldn’t use Time Machine. It was definitely a good time to finally create my [dotfiles](https://github.com/leonardofaria/dotfiles) repository. My repository is based in [webpro/dotfiles](https://github.com/webpro/dotfiles/) (you may want to check it out his repo to understand this one if you feel lost).
 
-<!--more-->
+<span className="hidden">more</span>
 
   
 ![](https://raw.githubusercontent.com/leonardofaria/dotfiles/master/screenshot.jpg) 

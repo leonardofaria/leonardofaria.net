@@ -2,12 +2,11 @@
 id: 2017
 title: Creating a website for my Apple Collection
 date: 2019-10-17T00:36:30-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/2017.png
 layout: post
 guid: https://leonardofaria.net/?p=2017
 permalink: /2019/10/17/creating-a-website-for-my-apple-collection/
-image: /wp-content/uploads/2019/10/collection.jpg
 categories:
   - portfolio
   - css
@@ -24,7 +23,7 @@ A while ago I started an Apple Collection. After a few laptops and a few iDevice
 
 The list kept going bigger and bigger and the content started looking messy. The natural way to organize my data would be inside a SQL database, with the information distributed in columns. After organizing the information in tables, I would create a graphQL API (the one cool kids use these days) to give me the data needed to populate my UI – probably written in React, compiled with Babel and packed with webpack.
 
-<!--more-->
+<span className="hidden">more</span>
 
 Reading the previous paragraph aloud, you can hear many technologies and I even ignored the backend language and UI details like SASS or styled-components. It sounds a bit overwhelming when the ultimate goal is showing a list of items in a nice design.
 

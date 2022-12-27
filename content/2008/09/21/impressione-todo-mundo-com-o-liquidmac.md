@@ -2,7 +2,7 @@
 id: 408
 title: Impressione todo mundo com o LiquidMac
 date: 2008-09-21T23:36:57-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/408.png
 layout: post
 guid: https://leonardofaria.net/?p=408
@@ -16,4 +16,4 @@ tags:
 ---
 Tem um Mac? Mate seu amigos (e inimigos) de inveja com o [**LiquidMac**](http://uri.cat/software/LiquidMac/).
 
-{{<youtube mdVOrJvAWzY >}}
+youtube mdVOrJvAWzY >}} -->

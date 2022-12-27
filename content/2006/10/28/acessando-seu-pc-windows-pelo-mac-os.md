@@ -2,7 +2,7 @@
 id: 135
 title: Acessando seu PC Windows pelo Mac OS
 date: 2006-10-28T21:24:38-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/135.png
 layout: post
 guid: https://leonardofaria.net/2006/10/28/acessando-seu-pc-windows-pelo-mac-os/
@@ -16,7 +16,7 @@ tags:
 ---
 Esse artigo ensina como logar em sua máquina com Windows a partir do Mac OS. Em redes locais isso é muito prático. O software que iremos utilizar é o [Remote Desktop Connection (RDC)](http://www.microsoft.com/mac/otherproducts/otherproducts.aspx?pid=remotedesktopclient). [Faça o download do software](http://www.microsoft.com/mac/downloads.aspx?pid=download&location=/mac/download/misc/rdc_update_103.xml&secid=80&ssid=10&flgnosysreq=True) (eu escolhi a versão em .bin) e vamos lá.
 
-<!--more-->
+<span className="hidden">more</span>
 
 
 Com o download realizado, a instalação é super-simples. Basta arrastar o ícone do RDC para a pasta Aplicativos. Ao executar o RDC pela primeira vez, a tela deve ser algo parecido com a abaixo:  

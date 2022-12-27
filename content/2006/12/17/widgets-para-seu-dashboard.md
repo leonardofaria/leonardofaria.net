@@ -2,7 +2,7 @@
 id: 183
 title: Widgets para seu Dashboard
 date: 2006-12-17T17:07:16-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/183.png
 layout: post
 guid: https://leonardofaria.net/2006/12/17/widgets-para-seu-dashboard/

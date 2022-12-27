@@ -2,7 +2,7 @@
 id: 1981
 title: My list of GitHub tips and third-party apps
 date: 2019-09-03T11:42:19-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1981.png
 layout: post
 guid: https://leonardofaria.net/?p=1981
@@ -24,15 +24,15 @@ I work at Thinkific with 20+ other developers (we are [hiring](http://bit.ly/thn
 
 ### [Better Pull Request for GitHub](https://chrome.google.com/webstore/detail/better-pull-request-for-g/nfhdjopbhlggibjlimhdbogflgmbiahc?hl=en)
 
-This extension list project files in a tree. This is quite useful when you have a big pull request and you need to go back and forth to understand better what is going on.<figure class="wp-block-image">
+This extension list project files in a tree. This is quite useful when you have a big pull request and you need to go back and forth to understand better what is going on.
 
-<img src="/wp-content/uploads/2019/09/better-pull-request-for-github.jpg" alt="" class="wp-image-1984" /> </figure> 
+<img src="/wp-content/uploads/2019/09/better-pull-request-for-github.jpg" alt="" class="wp-image-1984" />
 
 ### [GitHub Hovercard](https://chrome.google.com/webstore/detail/github-hovercard/mmoahbbnojgkclgceahhakhnccimnplk?hl=en)
 
-This extension shows info about a user, project, issue or commit. It is a cool UI trick like Facebook does. This extension even works for private repositories, as long as you have a valid token to grab the information of the service.<figure class="wp-block-image">
+This extension shows info about a user, project, issue or commit. It is a cool UI trick like Facebook does. This extension even works for private repositories, as long as you have a valid token to grab the information of the service.
 
-<img src="/wp-content/uploads/2019/09/hover-cards.jpg" alt="" class="wp-image-1986" /> </figure> 
+<img src="/wp-content/uploads/2019/09/hover-cards.jpg" alt="" class="wp-image-1986" />
 
 ### [GitHub Repository Size](https://chrome.google.com/webstore/detail/github-repository-size/apnjnioapinblneaedefcnopcjepgkci?hl=en)
 

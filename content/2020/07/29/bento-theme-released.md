@@ -2,7 +2,7 @@
 id: 2207
 title: Bento theme released
 date: 2020-07-29
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/2207.png
 permalink: /2020/07/29/bento-theme-released
 categories:
@@ -27,8 +27,8 @@ TailwindCSS is my go-to option for CSS in personal projects. It is easy to use, 
 
 In the theme I used transitions for links colors, a gradient in the bottom of the page and last not least, a cool reading progress bar in the top of the page. 
 
-<video class="h-auto" controls autoplay="autoplay">
-  <source src="/wp-content/uploads/2020/07/page-scroll.mp4" type="video/mp4">
+<video class="h-auto" controls autoPlay="autoPlay">
+  <source src="/wp-content/uploads/2020/07/page-scroll.mp4" type="video/mp4" />
 </video>
 
 One of my favourite things in this layout is the backdrop-filter in the sticky header. The  [`backdrop-filter`](https://web.dev/backdrop-filter/) CSS property is very popular in iOS and I wanted to add this touch in the theme instead of having the usual opacity.
@@ -43,7 +43,7 @@ I built Bento with Performance in mind. I wanted to deliver fast pages and no bl
 
 From [their README](https://github.com/turbolinks/turbolinks): 
 
-> _Turbolinks® makes navigating your web application faster. Get the performance benefits of a single-page application without the added complexity of a client-side JavaScript framework. Use HTML to render your views on the server side and link to pages as usual. When you follow a link, Turbolinks automatically fetches the page, swaps in its <body>, and merges its `<head>`, all without incurring the cost of a full page load._
+> _Turbolinks® makes navigating your web application faster. Get the performance benefits of a single-page application without the added complexity of a client-side JavaScript framework. Use HTML to render your views on the server side and link to pages as usual. When you follow a link, Turbolinks automatically fetches the page, swaps in its `<body>`, and merges its `<head>`, all without incurring the cost of a full page load._
 
 Turbolinks is well-known in the Rails community but it can also be used outside the framework. I saw it first at [Devin Schulz](https://devinschulz.com/) Hugo website and I decided to add it in my theme. The integration is painless: add the JS file from a CDN in your page and there is no step 2. Since I don't have lots of JS interactions here, adding Turbolinks was very straightforward.
 

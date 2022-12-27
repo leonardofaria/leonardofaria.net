@@ -2,7 +2,7 @@
 id: 878
 title: Rails e cia no Snow Leopard
 date: 2009-11-14T20:00:24-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/878.png
 layout: post
 guid: https://leonardofaria.net/?p=878
@@ -25,7 +25,7 @@ Fiz uma instalação nova do Snow Leopard no meu MacBook e ao migrar os dados do
 ### Rails
 
 O Snow Leopard já vem com duas versões do Rails já instaladas: 2.2.2 e 1.13.6. Caso queira atualizar seu ambiente:  
-<!--more-->
+<span className="hidden">more</span>
 
 ```shell
 sudo gem update --system

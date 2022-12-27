@@ -2,7 +2,7 @@
 id: 1106
 title: Personalizando o scrollbar com WebKit
 date: 2011-01-23T18:52:34-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1106.png
 layout: post
 guid: https://leonardofaria.net/?p=1106
@@ -17,7 +17,7 @@ tags:
   - browser
 ---
 Personalizar barras de rolagem é [algo que vem lá dos tempos](http://codestacker.com/codes/244-color-scrollbars-for-ie-5-5) do IE 5.5. Naquele tempo, personalizavam-se as cores da barra, criando efeitos na maioria da vezes cafonas. Já [faz algum tempo](http://webkit.org/blog/363/styling-scrollbars/) que o WebKit suporta scrollbars personalizadas. Você pode personalizar atributos como borda e background, usando até mesmo imagens para criar barras de rolagens bacanas. Esse artigo mostra alguns pseudo-elementos e pseudo-classes para personalizar sua barra.  
-<!--more-->
+<span className="hidden">more</span>
 
 ### Antes de começar
 

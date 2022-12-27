@@ -2,7 +2,7 @@
 id: 70
 title: Rádio online é moleza!
 date: 2006-06-23T00:45:29-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/70.png
 layout: post
 guid: https://leonardofaria.net/2006/06/23/radio-online-e-moleza/
@@ -18,7 +18,7 @@ tags:
 
 Escrevi esse artigo no começo do ano para explicar como ocorre a transmissão de áudio para a Internet. (Nas minhas férias de faculdade – mês que vem – vou refazer esse artigo e aproveitar que tenho 2 micros em casa agora)Utilizaremos o SHOUTcast, que é livre e funciona em vários sistemas operacionais. É uma solução pequena, mais interessantíssima.
 
-<!--more-->
+<span className="hidden">more</span>
 
 ### Ingredientes
 
@@ -73,7 +73,8 @@ ATENÇÃO: Cuidado com o volume de sua rádio. Esse é um detalhe que pode compr
 Para ouvir a rádio, basta divulgar o endereço: http://127.0.0.1/listen.pls, substituindo o IP (óbvio). Esse link carregará o Winamp.  
 Para colocar a rádio em uma página HTML, podemos usar o código abaixo:
 
-<pre class="brush: xml; title: ; notranslate" title=""><object id="Player" height="65" width="264" classid="clsid:6BF52A52-394A-11D3-B153-00C04F79FAA6">
+```html
+<object id="Player" height="65" width="264" classid="clsid:6BF52A52-394A-11D3-B153-00C04F79FAA6">
   <param name="url" value="http://127.0.0.1:8000"><!-- URL da rádio -->
   </param><param name="volume" value="50"><!-- Volume padrão -->
   </param><param name="enableContextMenu" value="0"><!-- Habilita/desabilita o bot&atilde;o direito, com funções do Media Player. O valor padrão é TRUE -->
@@ -84,7 +85,8 @@ Para colocar a rádio em uma página HTML, podemos usar o código abaixo:
   </param><param name="uiMode" value="mini"><!-- Modo da interface --> 
   <!-- A linha abaixo reproduz o player em browsers movidos a motor Gecko -->
   <embed type="application/x-mplayer2" pluginspage="http://www.microsoft.com/windows/mediaplayer/download/default.asp" filename="http://127.0.0.1:8000" showstatusbar="1" showpositioncontrols="0" width="264" height="51" enablecontextmenu="0" mute="0"></embed>
-</param></object></pre>
+</param></object>
+```
 
 Podemos ver informações sobre o servidor, como número de ouvintes ao vivo e status da rádio no endereço: http://127.0.0.1:8000/  
 Deve-se carregar uma página como a abaixo:

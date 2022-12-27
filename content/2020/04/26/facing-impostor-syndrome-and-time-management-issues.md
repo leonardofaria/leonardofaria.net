@@ -2,7 +2,7 @@
 id: 2201
 title: Facing impostor syndrome and time management issues
 date: 2020-04-26T11:41:56-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/2201.png
 layout: post
 permalink: /2020/04/26/facing-impostor-syndrome-and-time-management-issues

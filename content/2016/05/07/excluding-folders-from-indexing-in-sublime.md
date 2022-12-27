@@ -2,7 +2,7 @@
 id: 1728
 title: Excluding folders from indexing in Sublime
 date: 2016-05-07T01:07:12-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1728.png
 layout: post
 guid: https://leonardofaria.net/?p=1728
@@ -21,7 +21,7 @@ Sublime offers 2 settings to hide these files from the index. First of all, open
   * `binary_file_patterns`: This option excludes files from the index but keep them in the sidebar.
   * `folder_exclude_patterns`: This option excludes files from the index and sidebar. This is why, for example, you don't see the `.git` folder in a project.
 
-<!--more-->My final setting is:
+<span className="hidden">more</span>My final setting is:
 
 ```js
 "binary_file_patterns":

@@ -2,7 +2,7 @@
 id: 157
 title: 12 efeitos bacanas com script.aculo.us
 date: 2006-11-13T17:17:22-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/157.png
 layout: post
 guid: https://leonardofaria.net/2006/11/13/12-motivos-para-usar-scriptaculous/
@@ -22,7 +22,7 @@ Criar efeitos visuais em Javascript era algo bem complexo. Muitos efeitos da lis
 4) [Auto-Completer](http://www.ajaxcf.com/blog/index.cfm/2006/2/28/Building-a-Local-AutoCompleter) – Estilo Google Suggest  
 5) [Auto-Completer](http://wiki.script.aculo.us/scriptaculous/show/Autocompleter.Local) – Demo do wiki do script.aculo.us  
 
-<!--more-->
+<span className="hidden">more</span>
 
 6) [Slideshow](http://blog.remvee.net/post/17)  
 7) Outro [Slideshow](http://www.bigbold.com/snippets/posts/show/1068)  

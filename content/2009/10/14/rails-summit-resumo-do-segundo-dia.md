@@ -2,7 +2,7 @@
 id: 770
 title: 'Rails Summit: resumo do segundo dia'
 date: 2009-10-14T13:07:05-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/770.png
 layout: post
 guid: https://leonardofaria.net/?p=770
@@ -30,7 +30,7 @@ A primeira palestra do segundo dia trouxe o americano Richard Kilmer que falou s
 ## [Nando Vieira](http://www.twitter.com/fnando): Ruby 1.9
 
 O Nando falou do que há de novo no Ruby 1.9, tema inclusive de um [PDF](http://howtocode.com.br/o-que-mudou-no-ruby-19) de sua série [HOWTO](http://howtocode.com.br/). Sua apresentação, bem bonita, trouxe inúmeras notas sobre as mudanças da linguagem. Alguns pontos:  
-<!--more-->
+<span className="hidden">more</span>
 
 * Lançado em dezembro de 2008, prévia do Ruby 2.0. Mais rápido e com menos memória.
 * m17n (multilingualization): várias formas de fazê-lo: text.encode(&#8220;codificação&#8221;); através de instruções no arquivo; File.open(&#8220;file.txt&#8221;, &#8220;r:utf-8

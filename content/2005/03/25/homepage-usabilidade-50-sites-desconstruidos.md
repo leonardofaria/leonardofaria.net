@@ -2,7 +2,7 @@
 id: 42
 title: 'Homepage – Usabilidade: 50 sites desconstruídos'
 date: 2005-03-25T22:45:50-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/42.png
 layout: post
 guid: https://leonardofaria.net/2005/03/25/homepage-usabilidade-50-sites-desconstruidos/
@@ -16,7 +16,7 @@ tags:
 ---
 [<img src="/wp-content/uploads/2006/05/useit_homepage.jpg" align="right" alt="Capa do Livro" />](http://www.submarino.com.br/books_productdetails.asp?Query=ProductPage&ProdTypeId=1&ProdId=168450&ST=SE)Algo importante visto no livro de [Jacob Nielsen](http://www.useit.com) e Marie Tamir.
 
-### INFORMANDO O OBJETIVO DO SITE</p> 
+### INFORMANDO O OBJETIVO DO SITE
 
 1. Exibir o nome e / ou logotipo, em um tamanho razoável e em um lugar de destaque.  
 2. Incluir um slogan resumindo explicitamente o que o site ou a empresa faz. Deve ser explicativo e pequeno.

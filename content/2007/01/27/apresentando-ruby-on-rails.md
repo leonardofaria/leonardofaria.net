@@ -2,16 +2,11 @@
 id: 208
 title: Apresentando Ruby on Rails
 date: 2007-01-27T00:39:28-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/208.png
 layout: post
 guid: https://leonardofaria.net/2007/01/27/apresentando-ruby-on-rails/
 permalink: /2007/01/27/apresentando-ruby-on-rails/
-enclosure:
-  - |
-    http://media.rubyonrails.org/video/rails_take2_with_sound.mov
-    54364199
-    video/quicktime
 dsq_thread_id:
   - "1000136630"
 categories:

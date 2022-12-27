@@ -2,7 +2,7 @@
 id: 2071
 title: Forcing the usage of yarn (and at a specific version)
 date: 2019-10-11T00:40:46-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/2071.png
 layout: post
 guid: https://leonardofaria.net/?p=2071
@@ -21,11 +21,11 @@ We can use the [preinstall hook](https://docs.npmjs.com/misc/scripts) to check i
     "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\"",
 ```
 
-<!--more-->
+<span className="hidden">more</span>
 
-If you run `npm install`:<figure class="wp-block-image">
+If you run `npm install`:
 
-<img src="/wp-content/uploads/2019/10/npm-install.jpg" alt="" class="wp-image-2084" /> </figure>
+<img src="/wp-content/uploads/2019/10/npm-install.jpg" alt="" class="wp-image-2084" />
 
 If you want to ignore the checking (CI environment for instance), use the `--ignore-scripts` option:&nbsp;
 
@@ -40,6 +40,4 @@ Moreover, you can use the [engines option](https://docs.npmjs.com/files/package.
 },
 ```
 
-<figure class="wp-block-image">
-
-<img src="/wp-content/uploads/2019/10/npm-engines.jpg" alt="" class="wp-image-2101" /> </figure>
+<img src="/wp-content/uploads/2019/10/npm-engines.jpg" alt="" class="wp-image-2101" />

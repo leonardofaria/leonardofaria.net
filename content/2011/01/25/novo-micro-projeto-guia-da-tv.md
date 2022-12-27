@@ -2,7 +2,7 @@
 id: 1125
 title: 'Novo micro-projeto: Guia da TV'
 date: 2011-01-25T18:33:40-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1125.png
 layout: post
 guid: https://leonardofaria.net/?p=1125

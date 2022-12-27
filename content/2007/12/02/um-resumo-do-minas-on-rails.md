@@ -2,7 +2,7 @@
 id: 342
 title: Um resumo do Minas on Rails
 date: 2007-12-02T14:56:00-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/342.png
 layout: post
 guid: https://leonardofaria.net/2007/12/02/um-resumo-do-minas-on-rails/

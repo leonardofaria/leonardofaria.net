@@ -2,7 +2,7 @@
 id: 1556
 title: Useful Chrome extensions to developers
 date: 2015-07-20T09:24:03-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1556.png
 layout: post
 guid: https://leonardofaria.net/?p=1556
@@ -19,7 +19,7 @@ First of all, you must see [Dev Tips](https://umaar.com/dev-tips/): developer ti
 [![](https://umaar.com/assets/images/dev-tips/quick-edit-element.gif)](https://umaar.com/dev-tips/17-quick-edit-element/)
 
 Now, these are some useful extensions that I've been using in Chrome to help me to develop webapps:  
-<!--more-->
+<span className="hidden">more</span>
 
 * [Dimensions](https://chrome.google.com/webstore/detail/dimensions/baocaagndhipibgklemoalmkljaimfdj): A tool for designers to measure screen dimensions
 * [Full Page Screen Capture](https://chrome.google.com/webstore/detail/full-page-screen-capture/fdpohaocaechififmbbbbbknoalclacl): Screen capture your current page in entirety and reliably!

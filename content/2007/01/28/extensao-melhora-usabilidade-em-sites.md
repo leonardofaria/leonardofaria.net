@@ -2,7 +2,7 @@
 id: 209
 title: Extensão melhora usabilidade em sites
 date: 2007-01-28T21:16:36-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/209.png
 layout: post
 guid: https://leonardofaria.net/2007/01/28/extensao-melhora-usabilidade-em-sites/

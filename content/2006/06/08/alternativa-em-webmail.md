@@ -2,7 +2,7 @@
 id: 53
 title: Alternativa em webmail
 date: 2006-06-08T02:25:48-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/53.png
 layout: post
 guid: https://leonardofaria.net/2006/06/08/alternativa-em-webmail/
@@ -19,7 +19,7 @@ tags:
 Quem usa webmail de servidores LAMP provavelmente conhece as sérias limitações do Horde e do SquirelMail, que são instalados juntos no cPanel. Interfaces feias e falta de usabilidade sempre estão ligadas a esses webmails.
 
 Entretando, conheci semana passada o [RoundCube](http://www.roundcube.net/), um cliente de email com código XHTML válido, bonito e altamente personalizável.  
-<!--more-->
+<span className="hidden">more</span>
 
 <center>
   <img src="/wp-content/uploads/2006/06/roundcube.jpg" alt="RoundCube no Safari" />

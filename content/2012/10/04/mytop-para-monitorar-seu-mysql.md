@@ -2,7 +2,7 @@
 id: 1292
 title: mytop, para monitorar seu MySQL
 date: 2012-10-04T00:27:33-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1292.png
 layout: post
 guid: https://leonardofaria.net/?p=1292
@@ -25,64 +25,71 @@ O [mytop](http://jeremy.zawodny.com/mysql/mytop/) é um clone do comando top par
   
 Antes de compilar o mytop é necessário [instalar o pré-requisito DBD-Mysql](https://discussions.apple.com/thread/3136351?start=0&tstart=0). No terminal, digite:
 
-<pre class="brush: plain; title: ; notranslate" title="">perl -MCPAN -e 'shell'
-</pre>
+```
+perl -MCPAN -e 'shell'
+```
 
 Em seguida, execute: 
 
-<pre class="brush: plain; title: ; notranslate" title="">get DBD::mysql
+```
+get DBD::mysql
 exit
-</pre>
+```
 
 Ao sair do prompt do cpan, digite:
 
-<pre class="brush: plain; title: ; notranslate" title="">cd ~/.cpan/build/DBD-mysql-<version>/
+```
+cd ~/.cpan/build/DBD-mysql-<version>/
 perl Makefile.PL--testuser='mysql_user_name' --testpassword='mysql_passwd'
 make
 make test
 make install
-</pre>
+```
 
 Faça o [download do pacote](http://jeremy.zawodny.com/mysql/mytop/mytop-1.6.tar.gz) porque já é hora de compilá-lo: 
 
-<pre class="brush: plain; title: ; notranslate" title="">tar -zxvf mytop-<version>.tar.gz
+```
+tar -zxvf mytop-<version>.tar.gz
 cd mytop-<version>
 perl Makefile.PL
 make
 make test
 make install
-</pre>
+```
 
 Execute o mytop pela primeira vez:
 
-<pre class="brush: plain; title: ; notranslate" title="">mytop</pre>
+```mytop```
 
 Pode acontecer o seguinte erro:
 
-<pre class="brush: plain; title: ; notranslate" title="">Error in option spec: "long|!"</pre>
+```Error in option spec: "long|!"```
 
 Caso esse erro aconteça, é necessário editarmos o mytop. Abra o arquivo – aqui instalado em /usr/local/bin e edite a linha 159:
 
-<pre class="brush: perl; title: ; notranslate" title="">"long|long_nums|l!" => \$config{long_nums},</pre>
+```perl
+long|long_nums|l!" => \$config{long_nums},
+```
 
 Além disso, substitua as linhas 958 e 959 pelas linhas seguintes:
 
-<pre class="brush: perl; title: ; notranslate" title="">if ($host)
+```perl
+if ($host)
 	{
 		$host =~ s/^([^.]+).*/$1/;
 		$thread->{Host} = $host;
 	}
-</pre>
+```
 
 ## Usando o mytop
 
 Você pode monitorar seu banco passando as configurações de conexão via shell:
 
-<pre class="brush: plain; title: ; notranslate" title="">mytop -u 'seuusuario' -p 'suasenha' -h 127.0.0.1 -d 'seubanco'</pre>
+```mytop -u 'seuusuario' -p 'suasenha' -h 127.0.0.1 -d 'seubanco'```
 
 &#8230;ou pode criar um arquivo .mytop em sua pasta de usuários, como o abaixo:
 
-<pre class="brush: plain; title: ; notranslate" title="">user=seuusuario
+```user=seuusuario
 pass=suasenha
 host=127.0.0.1
-db=seubanco</pre>
+db=seubanco```

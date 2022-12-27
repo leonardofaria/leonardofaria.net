@@ -2,7 +2,7 @@
 id: 383
 title: 6 screensavers para seu Mac
 date: 2008-06-01T14:57:06-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/383.png
 layout: post
 guid: https://leonardofaria.net/?p=383
@@ -25,7 +25,7 @@ O [Polar Clock](http://blog.pixelbreaker.com/polarclock) é escrito com ActionSc
   <a href='http://blog.pixelbreaker.com/polarclock/'><img src="/wp-content/uploads/2008/05/ss1.png" width="400" alt="" title="polar clock" /></a>
 </center>
 
-<!--more-->
+<span className="hidden">more</span>
 
   
 

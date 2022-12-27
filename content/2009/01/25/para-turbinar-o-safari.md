@@ -2,7 +2,7 @@
 id: 437
 title: Para turbinar o Safari
 date: 2009-01-25T21:28:26-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/437.png
 layout: post
 guid: https://leonardofaria.net/?p=437

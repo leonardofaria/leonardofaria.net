@@ -2,7 +2,7 @@
 id: 31
 title: 'CSS: Transparências cross-browser'
 date: 2006-02-09T22:18:20-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/31.png
 layout: post
 guid: https://leonardofaria.net/2006/05/27/css-transparencias-cross-browser/

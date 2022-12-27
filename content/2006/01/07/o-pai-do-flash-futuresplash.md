@@ -2,7 +2,7 @@
 id: 24
 title: 'O Pai do Flash: FutureSplash'
 date: 2006-01-07T21:54:15-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/24.png
 layout: post
 guid: https://leonardofaria.net/2006/01/07/o-pai-do-flash-futuresplash/

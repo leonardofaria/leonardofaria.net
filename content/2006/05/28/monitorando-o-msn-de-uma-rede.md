@@ -2,7 +2,7 @@
 id: 45
 title: Monitorando o MSN de uma rede
 date: 2006-05-28T17:57:30-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/45.png
 layout: post
 guid: https://leonardofaria.net/2006/05/28/monitorando-o-msn-de-uma-rede/
@@ -17,7 +17,7 @@ tags:
 Esse artigo não tem tanto a ver com esse site, mas pode ajudar muitos admistradores de rede Linux.
 
 O uso do MSN desenfreado pode acabar com a produtividade do trabalho em uma empresa, por exemplo. Aonde eu trabalho, implementamos uma solução interessante: um sniffer, que gera relatórios das conversas dos funcionários (o que não é tão ético assim) e que está instalado em nosso servidor de Internet (rodando Slackware Linux).  
-<!--more-->
+<span className="hidden">more</span>
 
 
 O software que usamos chama-se [im-snif](http://sourceforge.net/projects/im-snif/). Infelizmente, seu projeto não está documentado. Talvez essa seja a única documentação sobre ele.  

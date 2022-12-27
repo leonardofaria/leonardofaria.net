@@ -2,7 +2,7 @@
 id: 204
 title: Motion Blur no Flash
 date: 2007-01-06T18:37:31-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/204.png
 layout: post
 guid: https://leonardofaria.net/2007/01/06/motion-blur-no-flash/

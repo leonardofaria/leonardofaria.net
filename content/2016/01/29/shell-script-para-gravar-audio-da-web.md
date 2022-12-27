@@ -2,7 +2,7 @@
 id: 1710
 title: Shell script para gravar áudio da Web
 date: 2016-01-29T20:06:38-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1710.png
 layout: post
 guid: https://leonardofaria.net/?p=1710
@@ -20,7 +20,7 @@ _[This post is also available in English.](https://leonardofaria.net/2016/01/26/
 
 Um dos meus programas de rádio favoritos é o Central 98, da [98FM](http://98live.com.br/) (de Belo Horizonte). Ele começa às 10h da manhã e devido a diferença de 6h de fuso horário eu não consigo ouví-lo ao vivo. Então, criei um shell script para gravar o programa e assim posso ouvi-lo no meu tempo livre.
 
-<!--more-->
+<span className="hidden">more</span>
 
 ```shell
 #!/bin/bash

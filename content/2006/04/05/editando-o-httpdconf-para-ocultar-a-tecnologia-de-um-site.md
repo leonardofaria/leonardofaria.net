@@ -2,7 +2,7 @@
 id: 27
 title: Editando o httpd.conf para ocultar a tecnologia de um site
 date: 2006-04-05T22:00:45-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/27.png
 layout: post
 guid: https://leonardofaria.net/2006/04/27/editando-o-httpdconf-para-ocultar-a-tecnologia-de-um-site/
@@ -16,7 +16,7 @@ tags:
 ---
 Em nosso trabalho, deparamos com arquivos do tipo index.do, index.foo, index.123. Mas como isso é feito?  
 O Apache permite alterar o suporte das extensões suportadas por ele.  
-O arquivo httpd.conf é o principal gerenciador de configurações do servidor. É nele que vamos trabalhar. <!--more-->
+O arquivo httpd.conf é o principal gerenciador de configurações do servidor. É nele que vamos trabalhar. <span className="hidden">more</span>
 
   
 Devemos procurar pela seguinte linha (aproximdamente na linha 220): 

@@ -2,7 +2,7 @@
 id: 1450
 title: 'Curiosidade Ruby do dia #3: Strings'
 date: 2014-09-10T23:14:28-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1450.png
 layout: post
 guid: https://leonardofaria.net/?p=1450

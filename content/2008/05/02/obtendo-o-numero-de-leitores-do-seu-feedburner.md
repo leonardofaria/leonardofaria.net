@@ -2,7 +2,7 @@
 id: 368
 title: Obtendo o número de leitores do seu Feedburner
 date: 2008-05-02T05:50:54-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/368.png
 layout: post
 guid: https://leonardofaria.net/?p=368

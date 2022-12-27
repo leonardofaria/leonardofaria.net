@@ -1,17 +1,10 @@
 ---
 id: 2204
 title: Portfolio
-date: 2020-05-20T07:00:00-07:00
-author: Leonardo Faria
+date: 2022-02-07 01:00:00
+type: Page
 ogImage: /images/portfolio.jpg
-layout: page
-type: page
 permalink: /portfolio
-guid: https://leonardofaria.net/?page_id=2147
-hideSuggestions: true
-hideComments: true
-hideMetadata: true
-hideAuthorBio: true
 description: Nothing is forever in the www world. Here are a few projects from my past.
 ---
 
@@ -47,7 +40,7 @@ MVB is a B2B website to connect mall stores and clothes factories from my hometo
 
 Envirosax has been the leader in design-led reusable shopping bags. In this store, business owners can buy Envirosax bags to re-sell in their physical stores. Above is a 5-min video showing the features of the store.
 
-{{<youtube Ymh1VRPEJm0>}}
+youtube Ymh1VRPEJm0>}} -->
 
 <div class="mb-16"></div>
 
@@ -107,7 +100,7 @@ I have used Phonegap in the past for creating iOS and Android mobile apps.
 
 IELTS and Toefl are two international tests required for admission in universities / immigration in English-speaking countries. While I was studying for the tests, I decided to create an app with writing questions and tips, to help people like me.
 
-<center><img alt="Writing for IELTS and Toefl" screenshot" src="/images/portfolio/writing-skills.jpg" loading="lazy" class="mb-16" /></center>
+<center><img alt="Writing for IELTS and Toefl screenshot" src="/images/portfolio/writing-skills.jpg" loading="lazy" class="mb-16" /></center>
 
 ### e-Recursos App
 

@@ -2,7 +2,7 @@
 id: 2233
 title: Building TypeScript definitions on demand
 date: 2022-02-07 01:00:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/2233.png
 permalink: /2022/02/07/building-typescript-definitions-on-demand
 categories:

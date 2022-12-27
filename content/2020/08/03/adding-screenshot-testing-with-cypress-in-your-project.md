@@ -2,7 +2,7 @@
 id: 2209
 title: Adding screenshot testing with Cypress in your project
 date: 2020-08-03
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/2209.png
 permalink: /2020/08/03/adding-screenshot-testing-with-cypress-in-your-project/
 categories:
@@ -207,7 +207,7 @@ In the `test` script, we are adding the `CYPRESS_baseUrl` environment variable. 
 
 We are ready for Semaphore. Create the `.semaphore/semaphore.yml` file with the following content:
 
-{{<highlight yml "linenos=inline">}}
+```yml
 version: v1.0
 name: Cypress example
 agent:
@@ -236,7 +236,7 @@ blocks:
           commands:
             - export CYPRESS_baseUrl="http://$(ip route | grep -E '(default|docker0)' | grep -Eo '([0-9]+\.){3}[0-9]+' | tail -1):8000"
             - npm run test:ci
-{{</highlight>}}
+```
 
 Breaking the configuration in details:
 
@@ -264,8 +264,8 @@ Earlier I have mentioned we would be using Cypress inside Docker but here we are
 
 Inside Cypress, let's go the Runs tab, click in "Set up project to record", choose a name and visibility. We will get a `projectId` that is automatically added in the `cypress.json` file and a private record key. Here is a video of the steps:
 
-<video class="h-auto" controls loop autoplay="autoplay">
-  <source src="/wp-content/uploads/2020/08/cypress-adding-integration.mp4" type="video/mp4">
+<video class="h-auto" controls loop autoPlay="autoPlay">
+  <source src="/wp-content/uploads/2020/08/cypress-adding-integration.mp4" type="video/mp4" />
 </video>
 
 In Semaphore, I added the record key as an environment variable called `CYPRESS_recordKey`. Next let's update our test script to use the variable:
@@ -278,8 +278,8 @@ In Semaphore, I added the record key as an environment variable called `CYPRESS_
 
 That is pretty much all that needs to be done. In the [Pull request](https://github.com/leonardofaria/cypress-example/pull/8) we can see the cypress.io integration in the comments. There is even a deep link that takes us to their dashboard and shows all the screenshots. Check the video below: 
 
-<video class="h-auto" controls loop autoplay="autoplay">
-  <source src="/wp-content/uploads/2020/08/cypress-io-test-dashboard.mp4" type="video/mp4">
+<video class="h-auto" controls loop autoPlay="autoPlay">
+  <source src="/wp-content/uploads/2020/08/cypress-io-test-dashboard.mp4" type="video/mp4" />
 </video>
 
 Time to merge our work and that is the end of our integration.
@@ -292,8 +292,8 @@ In the example website, let's double the horizontal padding from 16px to 32px. T
 
 As we could expect, Cypress captured that the button doesn't match the screenshots. Visiting the page, we can check the screenshot of the broken test:
 
-<video class="h-auto" controls loop autoplay="autoplay">
-  <source src="/wp-content/uploads/2020/08/cypress-io-broken-test.mp4" type="video/mp4">
+<video class="h-auto" controls loop autoPlay="autoPlay">
+  <source src="/wp-content/uploads/2020/08/cypress-io-broken-test.mp4" type="video/mp4" />
 </video>
 
 The diff file shows the original screenshot on the left, the current result on the right and they are combined in the middle. We also have the option to download the image so we can see the issue better:

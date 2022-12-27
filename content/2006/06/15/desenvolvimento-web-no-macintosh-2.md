@@ -2,7 +2,7 @@
 id: 66
 title: Desenvolvimento web no Macintosh 2
 date: 2006-06-15T23:31:12-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/66.png
 layout: post
 guid: https://leonardofaria.net/2006/06/15/desenvolvimento-web-no-macintosh-2/

@@ -2,7 +2,7 @@
 id: 1801
 title: Another Meetup presentation
 date: 2016-12-02T16:41:57-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1801.png
 layout: post
 guid: https://leonardofaria.net/?p=1801

@@ -2,7 +2,7 @@
 id: 2226
 title: Getting asset transferred information with Lighthouse
 date: 2020-11-30 01:00:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/2226.png
 permalink: /2020/11/30/getting-asset-transferred-information-with-lighthouse
 description: Have you ever about thought tracking what is added to a page or web app? Did not know how your website became 15MB? Sounds like it is time to track this data!
@@ -35,7 +35,7 @@ Have you ever about thought tracking what is added to a page or web app? Did not
 
 In this post you will learn how to collect similar data using Lighthouse. Here is the recipe (from my [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples)):
 
-{{<highlight js "linenos=inline">}}
+```js
 const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
 
@@ -55,7 +55,7 @@ const chromeLauncher = require('chrome-launcher');
   
   await chrome.kill();
 })();
-{{</highlight>}}
+```
 
 The script is very straightforward: we import Lighthouse and Chrome Launcher (lines 1-2) and run the audit against the URL, storing its results in the `runnerResult` variable.
 
