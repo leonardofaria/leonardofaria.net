@@ -8,11 +8,11 @@ permalink: /portfolio
 description: Nothing is forever in the www world. Here are a few projects from my past.
 ---
 
+import YouTube from '../components/Embed/YouTube';
+
 <div class="intro mb-16">
-<p>
 Nothing is forever in the www world.<br/>
 Here are a few projects from my past.
-</p>
 </div>
 
 <div class="full-width"><img alt="Portfolio" src="/images/portfolio.jpg" /></div>
@@ -40,7 +40,7 @@ MVB is a B2B website to connect mall stores and clothes factories from my hometo
 
 Envirosax has been the leader in design-led reusable shopping bags. In this store, business owners can buy Envirosax bags to re-sell in their physical stores. Above is a 5-min video showing the features of the store.
 
-youtube Ymh1VRPEJm0>}} -->
+<YouTube id="Ymh1VRPEJm0" />  
 
 <div class="mb-16"></div>
 

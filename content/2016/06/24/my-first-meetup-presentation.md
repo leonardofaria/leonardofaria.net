@@ -14,10 +14,11 @@ categories:
 tags:
   - canada
 ---
+
+import YouTube from '../../../../components/Embed/YouTube';
+
 Last week I presented in [Code & Coffee](http://www.meetup.com/Code-Coffee-Vancouver/events/231709823/) about WordPress and Gulp. In my 10 minutes talk, I explained briefly what is Gulp and how its tasks can save our time.
 
 Here are [my slides](http://leonardofaria.github.io/wordpress-gulp-meetup/) and the [example repository](http://github.com/leonardofaria/meetup-gulp) that I created for the event.
 
-_Update: video_
-
-youtube 5bg9gBWwInQ >}} -->
+<YouTube id="5bg9gBWwInQ" /> 
