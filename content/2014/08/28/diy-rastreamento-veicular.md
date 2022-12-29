@@ -2,7 +2,7 @@
 id: 1417
 title: 'DIY: Rastreamento veicular'
 date: 2014-08-28T18:53:18-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1417.png
 layout: post
 guid: https://leonardofaria.net/?p=1417

@@ -2,7 +2,7 @@
 id: 1883
 title: 'Sick Picks: Podcasts'
 date: 2018-01-23T02:46:07-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1883.png
 layout: post
 guid: https://leonardofaria.net/?p=1883

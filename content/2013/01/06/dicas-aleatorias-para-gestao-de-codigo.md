@@ -2,7 +2,7 @@
 id: 1360
 title: Dicas aleatórias para gestão de código
 date: 2013-01-06T12:02:56-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1360.png
 layout: post
 guid: https://leonardofaria.net/?p=1360

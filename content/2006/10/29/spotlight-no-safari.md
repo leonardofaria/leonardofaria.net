@@ -2,7 +2,7 @@
 id: 137
 title: Spotlight no Safari
 date: 2006-10-29T18:33:18-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/137.png
 layout: post
 guid: https://leonardofaria.net/2006/10/29/spotlight-no-safari/

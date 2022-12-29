@@ -2,7 +2,7 @@
 id: 436
 title: 'Resenha: A cabeça de Steve Jobs'
 date: 2009-01-31T14:31:16-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/436.png
 layout: post
 guid: https://leonardofaria.net/?p=436

@@ -2,7 +2,7 @@
 id: 1841
 title: 'Useful apps that I use daily – 2017 edition'
 date: 2017-12-14T05:09:20-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1841.png
 layout: post
 guid: https://leonardofaria.net/?p=1841
@@ -27,7 +27,7 @@ I have been using Atom for a while. Despite I started testing VS Code in the lat
 [![My Atom](/wp-content/uploads/2017/12/screenshot-atom.png)](https://gist.github.com/leonardofaria/982b8055af2d6d02116b03950bbf0583)
 
 Here are the packages that I have installed:  
-<!--more-->
+<span className="hidden">more</span>
 
 * [atom-beautify](https://atom.io/packages/atom-beautify): Beautify HTML, CSS, JavaScript, PHP, Python, Ruby, Java, C, C++, C#, Objective-C, CoffeeScript, TypeScript, Coldfusion, SQL, and more in Atom
 * [atom-ternjs](https://atom.io/packages/atom-ternjs): JavaScript code intelligence for atom with Tern. Adds support for ES5, ES6 (JavaScript 2015), Node.js, jQuery & Angular. Extendable via plugins. Uses suggestion provider by autocomplete-plus.

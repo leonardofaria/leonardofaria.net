@@ -2,7 +2,7 @@
 id: 859
 title: 'Monografia on Rails: autosimulado'
 date: 2009-12-05T21:00:36-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/859.png
 layout: post
 guid: https://leonardofaria.net/?p=859
@@ -20,6 +20,6 @@ Para conclusão do meu curso de Sistemas de Informação, dediquei minha monogra
 
 Hoje foi a apresentação da banca do trabalho de conclusão de curso e anexo abaixo minha [monografia em PDF](/pub/monografia.pdf) e os [slides da apresentação](/pub/monografia-slides.pdf).
 
-<!--more-->
+<span className="hidden">more</span>
 
 <iframe src="/pub/monografia.pdf" class="w-full h-screen" />

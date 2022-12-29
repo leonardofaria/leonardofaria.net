@@ -2,7 +2,7 @@
 id: 5
 title: 'Internet Explorer: porque não contar com ele'
 date: 2005-03-26T21:06:39-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/5.png
 layout: post
 guid: https://leonardofaria.net/2006/05/27/internet-explorer-porque-nao-contar-com-ele/

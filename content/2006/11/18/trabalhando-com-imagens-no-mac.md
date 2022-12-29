@@ -2,7 +2,7 @@
 id: 154
 title: Trabalhando com imagens no Mac
 date: 2006-11-18T00:29:10-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/154.png
 layout: post
 guid: https://leonardofaria.net/2006/11/18/trabalhando-com-imagens-no-mac/
@@ -18,7 +18,7 @@ Muitas vezes você não precisa de um editor de imagens pesado como o Photoshop 
 
 O primeiro software é o [DroPic](http://www.kreynet.de/tools.html). Não faz nada de tão especial, só redimenciona imagens para 4 formatos (Pequeno, Médio, Grande e Extra Grande). Como tudo no Mac, é superfácil de usar. E bem didático.
 
-<!--more-->
+<span className="hidden">more</span>
 
 <center>
   <img id="image153" src="/wp-content/uploads/2006/11/macimg1.jpg" alt="DroPic" />

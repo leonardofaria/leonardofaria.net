@@ -2,7 +2,7 @@
 id: 1643
 title: My Sublime Text settings
 date: 2015-10-04T17:14:16-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1643.png
 layout: post
 guid: https://leonardofaria.net/?p=1643
@@ -25,7 +25,7 @@ If you know nothing about Sublime, please watch [these free videos](https://code
 ### 2. Package Control
 
 First of all, you should install Package Control to manage plugins. Actually, you can install packages just copying the package files to correct folder, however, Package Control is easier than copy & paste. Open Sublime Text console (View > Show Console or `` ctrl + ` ``) and paste the following line:  
-<!--more-->
+<span className="hidden">more</span>
 
 ```
 import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
@@ -35,7 +35,7 @@ import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc5
 
 * **[AutoFileName](https://github.com/BoundInCode/AutoFileName)**: it's a plugin that autocompletes filenames. It saves your time when you are assigned to insert 45 images in one page ;)
 * **[Bracket Highligher](https://github.com/facelessuser/BracketHighlighter/)**: matches a variety of brackets such as: `[]`, `()`, `{}`.
-* **[ColorHighlighter](https://github.com/Monnoroch/ColorHighlighter)**: previews color values by underlaying the selected hex codes in different styles, coloring text or gutter icons.</li>
+* **[ColorHighlighter](https://github.com/Monnoroch/ColorHighlighter)**: previews color values by underlaying the selected hex codes in different styles, coloring text or gutter icons.
 * **[ColorSchemeSelector](https://github.com/jugyo/SublimeColorSchemeSelector)**: select theme quickly via the Quick Panel.  
 ![colorschemeselector](/wp-content/uploads/2015/10/colorschemeselector.gif)
 * **[DashDoc](https://github.com/farcaller/DashDoc)** (Mac only): [Dash](https://kapeli.com/dash) is an awesome programming documentation browser for Mac and it offers 150+ offline documentation sets. I can press `alt + ctrl + h` in a Sublime editor and DashDoc immediately opens Dash to show the appropriate documentation based on the cursor position. The image below shows hot DashDoc works (image via [Matt Bricson](https://mattbrictson.com/sublime-text-3-recommendations)):  
@@ -43,7 +43,7 @@ import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc5
 * <img src="/wp-content/uploads/2015/10/gitgutter.png" class="right size-full wp-image-1645" /> **[GitGutter](https://github.com/jisaacks/GitGutter)**: this plugin shows an icon in the gutter area indicating whether a line has been inserted, modified or deleted.
 * **[SublimeLinter](https://packagecontrol.io/packages/SublimeLinter)**: is a linting framework. A linter is a small program that checks code for stylistic or programming errors. You must install this package before install specific linters for specific languages. For example, if you use PHP, you should install [SublimeLinter-php](https://packagecontrol.io/packages/SublimeLinter-php) package. Ruby developers can use [SublimeLinter-ruby](https://packagecontrol.io/packages/SublimeLinter-ruby) and [SublimeLinter-rubocop](https://packagecontrol.io/packages/SublimeLinter-rubocop)
 * **[JSHint](https://packagecontrol.io/packages/JSHint)**: is a JavaScript Linter, which will look over your code and verify it has proper styling, proper syntax, and is free of common errors related to these. You must have jslint installed in your computer (`npm install -g jshint`).
-* **[JSHint Gutter](https://packagecontrol.io/packages/JSHint%20Gutter)**: you can use this package to get more explicit warning as to where the javascript error occurred.</ul>
+* **[JSHint Gutter](https://packagecontrol.io/packages/JSHint%20Gutter)**: you can use this package to get more explicit warning as to where the javascript error occurred.
 
 ### 4. Settings
 

@@ -2,7 +2,7 @@
 id: 1526
 title: Uptime monitoring tools
 date: 2015-07-10T08:26:05-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1526.png
 layout: post
 guid: https://leonardofaria.net/?p=1526

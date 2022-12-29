@@ -2,7 +2,7 @@
 id: 407
 title: Edge Rails no Windows Vista
 date: 2008-09-10T02:26:40-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/407.png
 layout: post
 guid: https://leonardofaria.net/?p=407

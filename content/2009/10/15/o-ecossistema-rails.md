@@ -2,7 +2,7 @@
 id: 805
 title: O ecossistema Rails
 date: 2009-10-15T23:32:07-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/805.png
 layout: post
 guid: https://leonardofaria.net/?p=805

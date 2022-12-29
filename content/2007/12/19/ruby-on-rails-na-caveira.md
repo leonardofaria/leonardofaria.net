@@ -2,7 +2,7 @@
 id: 348
 title: Ruby on Rails na caveira!
 date: 2007-12-19T01:47:38-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/348.png
 layout: post
 guid: https://leonardofaria.net/2007/12/19/ruby-on-rails-na-caveira/

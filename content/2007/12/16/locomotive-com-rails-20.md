@@ -2,7 +2,7 @@
 id: 347
 title: Locomotive com Rails 2.0
 date: 2007-12-16T22:06:23-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/347.png
 layout: post
 guid: https://leonardofaria.net/2007/12/16/locomotive-com-rails-20/

@@ -2,7 +2,7 @@
 id: 106
 title: Browser para Windows com engine do Safari
 date: 2006-08-09T11:32:48-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/106.png
 layout: post
 guid: https://leonardofaria.net/2006/08/09/browser-para-windows-com-engine-do-safari-2/

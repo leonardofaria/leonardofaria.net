@@ -2,7 +2,7 @@
 id: 1566
 title: Useful apps that I use daily
 date: 2015-09-17T12:56:58-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1566.png
 layout: post
 guid: https://leonardofaria.net/?p=1566
@@ -27,7 +27,7 @@ How awesome is Alfred? It is totally awesome! Alfred is a great tool working as 
 * [Alfred Workflows Forum](http://www.alfredforum.com/forum/3-share-your-workflows/): the community forum where people share their workflows
 * [Packal](http://www.packal.org/): an unofficial directory of workflows and themes. My currently theme is the [Elegant v4](http://www.packal.org/theme/elegant-v4), but you can choose your favorite in [several options](http://www.packal.org/theme-list?items_per_page=60).
 
-<!--more-->
+<span className="hidden">more</span>
 
 ### Watts
 

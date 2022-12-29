@@ -2,7 +2,7 @@
 id: 898
 title: IETester
 date: 2009-11-30T21:14:20-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/898.png
 layout: post
 guid: https://leonardofaria.net/?p=898

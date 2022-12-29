@@ -2,7 +2,7 @@
 id: 165
 title: Vários ícones que valem uma palavra
 date: 2006-11-25T21:45:32-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/165.png
 layout: post
 guid: https://leonardofaria.net/2006/11/25/varios-icones-que-valem-uma-palavra/

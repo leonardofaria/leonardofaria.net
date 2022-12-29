@@ -2,7 +2,7 @@
 id: 14
 title: A guerra dos browsers esquenta
 date: 2005-04-30T21:28:34-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/14.png
 layout: post
 guid: https://leonardofaria.net/2005/04/30/a-guerra-dos-browsers-esquenta/

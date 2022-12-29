@@ -2,7 +2,7 @@
 id: 1271
 title: Atualizando o MacBook Pro
 date: 2012-05-29T15:56:24-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1271.png
 layout: post
 guid: https://leonardofaria.net/?p=1271

@@ -2,7 +2,7 @@
 id: 2232
 title: The path to Staff Engineer
 date: 2021-11-08 01:00:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/2232.png
 permalink: /2021/11/08/the-path-to-staff-engineer
 categories:

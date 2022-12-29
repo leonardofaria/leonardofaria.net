@@ -2,7 +2,7 @@
 id: 1483
 title: e-Recursos mobile
 date: 2014-11-04T20:50:19-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1483.png
 layout: post
 guid: https://leonardofaria.net/?p=1483

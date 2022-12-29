@@ -2,7 +2,7 @@
 id: 2202
 title: Using Dependabot to keep your environment up to date
 date: 2020-05-02T11:41:56-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/2202.png
 layout: post
 permalink: /2020/05/02/using-dependabot-to-keep-your-environment-up-to-date

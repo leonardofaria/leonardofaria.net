@@ -2,7 +2,7 @@
 id: 1995
 title: Disabling autofill in Chrome
 date: 2019-10-02T16:58:52-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1995.png
 layout: post
 guid: https://leonardofaria.net/?p=1995
@@ -22,7 +22,7 @@ MDN has an article showing &#8220;How to turn off form autocompletion&#8221;. Th
 
 Digging in Stackoverflow and Google results, I found a [bug issued in 2015 about the topic](https://bugs.chromium.org/p/chromium/issues/detail?id=468153#c164). Here is the TL,DR (from March 2016):
 
-<!--more-->
+<span className="hidden">more</span>
 
 > First off, thanks for everyone's feedback on this. I apologize for our delay in clarifying our stance. We've been working to finalize our policy regarding Autofill and the autocomplete attribute, and we've been making changes to this over the past few months (as some of you have noticed).
 >

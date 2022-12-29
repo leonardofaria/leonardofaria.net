@@ -2,7 +2,7 @@
 id: 678
 title: 'Curiosidade Ruby do dia #2'
 date: 2009-07-01T21:03:22-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/678.png
 layout: post
 guid: https://leonardofaria.net/?p=678

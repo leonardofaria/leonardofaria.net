@@ -2,7 +2,7 @@
 id: 375
 title: 'Novo trabalho interativo: is®'
 date: 2008-05-26T20:59:26-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/375.png
 layout: post
 guid: https://leonardofaria.net/?p=375

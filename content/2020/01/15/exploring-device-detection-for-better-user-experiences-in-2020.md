@@ -2,7 +2,7 @@
 id: 2158
 title: Exploring device detection for better user experiences in 2020
 date: 2020-01-15T02:16:54-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/2158.png
 layout: post
 guid: https://leonardofaria.net/?p=2158
@@ -14,13 +14,16 @@ tags:
   - browser
   - javascript
 ---
+
+import YouTube from '../../../../components/Embed/YouTube';
+
 A few months ago I watched a great talk in Chrome Dev Summit about performance in slow devices.
 
-{{< youtube puUPpVrIRkc >}}
+<YouTube id="puUPpVrIRkc" />  
 
 It blew my mind all the work done by Facebook in identifying devices to create a better user experience. Fast-forward to now, I decided to study a bit more the topic and see what I could do at Thinkific.
 
-## User agents {#user-agents}
+## User agents
 
 User agents are well-known by developers. We use them to detect bots, redirect users to a specific version of our website or append CSS classes on our page so we can create different experiences.
 
@@ -40,11 +43,11 @@ connection: hstore containing downlink_max, connection_type
 
 You probably noticed that a few things there are not available in the UA string. Time for new JavaScript APIs:
 
-## Getting hardware info using JavaScript {#getting-hardware-info-using-javascript}
+## Getting hardware info using JavaScript
 
 As covered in the Chrome Dev Summit video, we can use JS to get this info
 
-### Memory {#memory}
+### Memory
 
 `navigator.deviceMemory` will return a floating-point number. There are things to consider here:
 
@@ -57,11 +60,11 @@ More about it:
   * [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory)
   * [Can I use deviceMemory](https://caniuse.com/#feat=mdn-api_navigator_devicememory)
 
-### Processors {#processors}
+### Processors
 
 `navigator.hardwareConcurrency` will return the number of logical cores of the user's CPU. Support for this is [decent](https://caniuse.com/#feat=hardwareconcurrency).
 
-## Detecting connection info using JavaScript {#detecting-connection-info-using-javascript}
+## Detecting connection info using JavaScript
 
 `navigator.connection` is a new API containing information about the system's connection, such as the current bandwidth of the user's device or whether the connection is metered. The support is quite limited (Chrome only basically) but things are promising.
 
@@ -71,13 +74,13 @@ More about it:
   * [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/connection)
   * [Can I use Network Information API](https://caniuse.com/#feat=netinfo)
 
-## Detecting the device model {#detecting-the-device-model}
+## Detecting the device model
 
 The user agent _may_ return some information about the model name. [userstack](https://userstack.com/) is a service that gives you information based on the user agent. It works well and it is easy to integrate, however, depending on your need, they can't help.
 
 Take for instance iDevices. Their user agent is basically the same so you can't differentiate an iPad Pro from an old iPad that runs the last iOS. For these cases, you may need a better detection based on resolution, pixel density and other hardware information exposed in the browser. I did a quick research on this and found 3 products so far: [WURFL.io](https://web.wurfl.io/#wurfl-js), [DeviceAtlas](https://deviceatlas.com/products/web) and [51Degrees](https://51degrees.com/). I didn't have time to try their products yet, but I am looking forward to doing it (and post about it)
 
-## FAQ {#faq}
+## FAQ
 
 _Question: Why not using Google Analytics / Mixpanel / Kibana / New Relic / your tool here?_
 

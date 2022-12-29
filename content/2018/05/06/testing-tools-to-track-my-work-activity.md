@@ -2,7 +2,7 @@
 id: 1917
 title: Testing tools to track my work activity
 date: 2018-05-06T23:23:30-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1917.png
 layout: post
 guid: https://leonardofaria.net/?p=1917
@@ -19,7 +19,7 @@ For a few weeks I have been using two tools to map my work activity. Since my wo
 ### RescueTime
 
 RescueTime home page says _&#8220;With so many distractions and possibilities in your digital life, it's easy to get scattered&#8221;_ – yes, I know – and _&#8220;RescueTime helps you understand your daily habits so you can focus and be more productive&#8221;_. Yes, they really helped me understand my daily habits.  
-<!--more-->
+<span className="hidden">more</span>
 
 
 I am using the Lite version of the app. Every week I get an email like the image below:

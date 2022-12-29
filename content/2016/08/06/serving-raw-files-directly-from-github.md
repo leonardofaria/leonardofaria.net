@@ -2,7 +2,7 @@
 id: 1692
 title: Serving raw files directly from Github
 date: 2016-08-06T20:49:30-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1692.png
 layout: post
 guid: https://leonardofaria.net/?p=1692

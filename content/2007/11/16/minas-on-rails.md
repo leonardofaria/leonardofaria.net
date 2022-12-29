@@ -2,7 +2,7 @@
 id: 339
 title: Minas on Rails
 date: 2007-11-16T13:53:30-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/339.png
 layout: post
 guid: https://leonardofaria.net/2007/11/16/minas-on-rails/

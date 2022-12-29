@@ -2,7 +2,7 @@
 id: 2229
 title: Creating HAR files with Lighthouse
 date: 2020-11-30 04:00:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/2229.png
 permalink: /2020/11/30/creating-har-files-with-lighthouse
 description: HAR (HTTP Archive) is a JSON file containing all information about a browser’s interactions with a page. This file is often used for performance analysis. Earlier this year, I shared what kind of information we can get from  and today we will automate the HAR creation.
@@ -39,7 +39,7 @@ This package works like a charm; it creates a HAR file following the [HAR 1.2 sp
 
 Let's take a look at the implementation (from my [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples)):
 
-{{<highlight js "linenos=inline">}}
+```js
 const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
 const { fromLog } = require('chrome-har-capturer');
@@ -56,7 +56,7 @@ const { writeFileSync } = require('fs');
 
   await chrome.kill();
 })();
-{{</highlight>}}
+```
 
 In my other posts, I shared how to use the `lighthouse()` function to get all kinds of information: from web vitals metrics to page screenshots. What I didn't mention was the function also keeps the artifacts created by the DevTools protocols. This is what we are storing in line 10 and this is the array of raw events that chrome-har-capturer needs to generate a HAR file.
 

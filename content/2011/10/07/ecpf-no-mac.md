@@ -2,7 +2,7 @@
 id: 1249
 title: eCPF no Mac
 date: 2011-10-07T22:59:30-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1249.png
 layout: post
 guid: https://leonardofaria.net/?p=1249

@@ -2,7 +2,7 @@
 id: 49
 title: Hacks para Internet Explorer
 date: 2006-06-04T14:58:35-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/49.png
 layout: post
 guid: https://leonardofaria.net/2006/06/04/hacks-para-internet-explorer/
@@ -17,7 +17,7 @@ tags:
 ---
 Escrever uma página 100% idêntica para vários browsers pode parecer impossível. Mas não é.  
 Para contornar isso, hacks são usados, para tentar uma aproximação entre browsers.  
-<!--more-->
+<span className="hidden">more</span>
 
 
 A primeira forma de esquivar o CSS para diferentes browsers é uma instrução dentro do `<head>`:  

@@ -2,7 +2,7 @@
 id: 399
 title: 'Usando ApacheBench para testes: Apache/mod_rails e Nginx/mongrel'
 date: 2008-07-15T00:41:42-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/399.png
 layout: post
 guid: https://leonardofaria.net/?p=399
@@ -21,12 +21,12 @@ O ApacheBench é distribuído nos ambientes Linux pelo pacote apache2-utils – 
 
 Um teste pode ser feito com o comando:
 
-<pre class="brush: plain; title: ; notranslate" title="">ab -n 100 -c 5 http://www.leonardofaria.net/
-</pre>
+```ab -n 100 -c 5 http://www.leonardofaria.net/
+```
 
 O Flag &#8216;-n' indica o número de requisições, enquanto a opção &#8216;-c' indica a ocorrência de conexões simultâneas. A saída do comando acima é semelhante a: 
 
-<pre class="brush: plain; title: ; notranslate" title="">This is ApacheBench, Version 2.0.40-dev < $Revision: 1.146 $> apache-2.0
+```This is ApacheBench, Version 2.0.40-dev < $Revision: 1.146 $> apache-2.0
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Copyright 2006 The Apache Software Foundation, http://www.apache.org/
 
@@ -70,7 +70,7 @@ Percentage of the requests served within a certain time (ms)
   98%    982
   99%   2040
  100%   2040 (longest request)
-</pre>
+```
 
 Dezenas de possibilidades podem ser traçadas com esses testes.  
 Nos meus benchmarks, realizei basicamente 2 testes: a renderização do index.html default do framework e a renderização de um Time.Now do Ruby. Em ambos os testes, o desempenho do nginx + mongrel\_cluster foi superior ao Apache + mod\_rails. Esse teste também [foi feito](http://blog.matt-darby.com/2008/07/10/apachepassenger-vs-nginxmongrel/) por aí, e com resultados semelhantes ao meu.

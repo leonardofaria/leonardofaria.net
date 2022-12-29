@@ -2,7 +2,7 @@
 id: 341
 title: UML e MySQL no Mac
 date: 2008-03-10T22:53:13-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/341.png
 layout: post
 guid: https://leonardofaria.net/2008/03/10/uml-e-mysql-no-mac/

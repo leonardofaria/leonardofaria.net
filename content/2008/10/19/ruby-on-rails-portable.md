@@ -2,7 +2,7 @@
 id: 416
 title: Ruby on Rails Portable
 date: 2008-10-19T23:49:26-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/416.png
 layout: post
 guid: https://leonardofaria.net/?p=416

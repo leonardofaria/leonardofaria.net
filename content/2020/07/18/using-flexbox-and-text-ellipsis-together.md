@@ -2,7 +2,7 @@
 id: 2208
 title: Using Flexbox and text ellipsis together
 date: 2020-07-18
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/2208.png
 permalink: /2020/07/18/using-flexbox-and-text-ellipsis-together/
 categories:

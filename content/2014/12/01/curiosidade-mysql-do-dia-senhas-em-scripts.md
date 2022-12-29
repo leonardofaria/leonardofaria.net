@@ -2,14 +2,13 @@
 id: 1517
 title: 'Curiosidade MySQL do dia: senhas em scripts'
 date: 2014-12-01T21:46:07-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1517.png
 layout: post
 guid: https://leonardofaria.net/?p=1517
 permalink: /2014/12/01/curiosidade-mysql-do-dia-senhas-em-scripts/
 dsq_thread_id:
   - "3281229653"
-image: /wp-content/uploads/2014/12/05-gen-db.png
 categories:
   - mysql
 tags:

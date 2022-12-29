@@ -2,7 +2,7 @@
 id: 326
 title: Review do .Mac Mail
 date: 2007-10-30T01:56:29-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/326.png
 layout: post
 guid: https://leonardofaria.net/2007/10/30/review-do-mac-mail/

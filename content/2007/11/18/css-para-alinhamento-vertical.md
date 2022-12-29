@@ -2,7 +2,7 @@
 id: 340
 title: CSS para alinhamento vertical
 date: 2007-11-18T14:24:32-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/340.png
 layout: post
 guid: https://leonardofaria.net/2007/11/18/css-para-alinhamento-vertical/

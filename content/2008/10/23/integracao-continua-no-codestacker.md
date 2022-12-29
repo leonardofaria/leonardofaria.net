@@ -2,7 +2,7 @@
 id: 420
 title: Integração contínua no codestacker
 date: 2008-10-23T00:17:40-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/420.png
 layout: post
 guid: https://leonardofaria.net/?p=420

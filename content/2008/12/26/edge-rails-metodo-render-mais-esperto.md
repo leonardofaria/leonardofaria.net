@@ -2,7 +2,7 @@
 id: 435
 title: 'Edge Rails: método render mais esperto'
 date: 2008-12-26T16:02:10-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/435.png
 layout: post
 guid: https://leonardofaria.net/?p=435

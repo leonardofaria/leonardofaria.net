@@ -2,7 +2,7 @@
 id: 1939
 title: Engineering Manager Readme
 date: 2018-06-24T20:33:07-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1939.png
 layout: post
 guid: https://leonardofaria.net/?p=1939
@@ -23,7 +23,7 @@ This document is an extended introduction to what I value and believe in as a te
   * If you feel like I am not acting like I describe here, please let me know.
   * If you are curious why this document exists in the first place: there is a newsletter called [SoftwareLeadWeekly](http://softwareleadweekly.com/) (recommended) and managers [share their own readme's](http://softwareleadweekly.com/issues/271) there. After seeing several documents, I decided to write my own.
 
-<!--more-->
+<span className="hidden">more</span>
 
 ## My Job
 

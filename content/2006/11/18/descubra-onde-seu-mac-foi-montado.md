@@ -2,7 +2,7 @@
 id: 159
 title: Descubra onde seu Mac foi montado
 date: 2006-11-18T00:28:50-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/159.png
 layout: post
 guid: https://leonardofaria.net/2006/11/18/descubra-onde-seu-mac-foi-montado/

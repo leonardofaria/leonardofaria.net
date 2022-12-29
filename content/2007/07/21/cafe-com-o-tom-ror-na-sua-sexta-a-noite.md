@@ -2,7 +2,7 @@
 id: 290
 title: Café com o TOM, RoR na sua sexta a noite
 date: 2007-07-21T16:25:44-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/290.png
 layout: post
 guid: https://leonardofaria.net/2007/07/21/cafe-com-o-tom-ror-na-sua-sexta-a-noite/

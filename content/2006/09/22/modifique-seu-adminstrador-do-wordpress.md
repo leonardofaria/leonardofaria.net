@@ -2,7 +2,7 @@
 id: 128
 title: Modifique seu adminstrador do WordPress
 date: 2006-09-22T15:33:55-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/128.png
 layout: post
 guid: https://leonardofaria.net/2006/10/22/modifique-seu-adminstrador-do-wordpress/

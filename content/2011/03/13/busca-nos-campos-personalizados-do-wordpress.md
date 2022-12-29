@@ -2,7 +2,7 @@
 id: 1132
 title: Busca nos campos personalizados do WordPress
 date: 2011-03-13T12:33:57-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1132.png
 layout: post
 guid: https://leonardofaria.net/?p=1132

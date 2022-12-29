@@ -2,7 +2,7 @@
 id: 9
 title: Web Essentials 2004
 date: 2005-03-27T21:14:56-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/9.png
 layout: post
 guid: https://leonardofaria.net/2005/03/27/web-essentials-2004/

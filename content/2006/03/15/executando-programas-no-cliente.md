@@ -2,7 +2,7 @@
 id: 25
 title: Executando programas no cliente
 date: 2006-03-15T21:56:16-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/25.png
 layout: post
 guid: https://leonardofaria.net/2006/03/15/executando-programas-no-cliente/

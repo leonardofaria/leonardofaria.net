@@ -2,7 +2,7 @@
 id: 278
 title: Novas janelas em Javascript não-obstrusivo
 date: 2007-06-23T00:49:44-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/278.png
 layout: post
 guid: https://leonardofaria.net/2007/06/23/novas-janelas-em-javascript-nao-obstrusivo/

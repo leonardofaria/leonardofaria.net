@@ -2,7 +2,7 @@
 id: 130
 title: Pseudo-seletores são legais
 date: 2006-10-28T01:52:29-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/130.png
 layout: post
 guid: https://leonardofaria.net/2006/10/28/pseudo-seletores-sao-legais/

@@ -2,7 +2,7 @@
 id: 20
 title: Macromedia Studio 8
 date: 2005-08-09T21:43:59-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/20.png
 layout: post
 guid: https://leonardofaria.net/2005/08/09/macromedia-studio-8/

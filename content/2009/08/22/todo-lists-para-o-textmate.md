@@ -2,7 +2,7 @@
 id: 694
 title: Todo lists para o Textmate
 date: 2009-08-22T16:06:36-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/694.png
 layout: post
 guid: https://leonardofaria.net/?p=694

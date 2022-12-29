@@ -2,7 +2,7 @@
 id: 1354
 title: Migrando um repositório SVN para GIT
 date: 2013-01-04T12:39:33-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1354.png
 layout: post
 guid: https://leonardofaria.net/?p=1354
@@ -29,7 +29,7 @@ Nota: caso você não queira manualmente escrever esse arquivo, vasculhe o log d
 svn log -q | awk -F '|' '/^r/ {sub("^ ", "", $2); sub(" $", "", $2); print $2" = "$2" <"$2">"}' | sort -u > authors.txt
 ```
 
-<!--more-->
+<span className="hidden">more</span>
 
 
 A seguir, crie um novo repositório e defina os autores dos commits de acordo com o criado no arquivo acima.

@@ -2,7 +2,7 @@
 id: 672
 title: hirb, dados tabulados no console
 date: 2009-07-01T20:21:22-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/672.png
 layout: post
 guid: https://leonardofaria.net/?p=672

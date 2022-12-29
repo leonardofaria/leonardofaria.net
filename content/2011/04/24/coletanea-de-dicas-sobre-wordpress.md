@@ -2,7 +2,7 @@
 id: 1164
 title: Coletânea de dicas sobre WordPress
 date: 2011-04-24T15:58:32-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1164.png
 layout: post
 guid: https://leonardofaria.net/?p=1164
@@ -27,7 +27,7 @@ Também é interessante uma leitura sobre o [desenvolvimento de temas](http://co
 ### Rascunhos de posts
 
 O WordPress salva automaticamente seus posts, o que pode aumentar o tamanho de seu banco de dados. Para desabilitar esse recurso, você pode editar o arquivo `/wp-config.php`:  
-<!--more-->
+<span className="hidden">more</span>
 
 ```php
 <?php  

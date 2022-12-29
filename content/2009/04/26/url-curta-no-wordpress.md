@@ -2,7 +2,7 @@
 id: 634
 title: URL curta no WordPress
 date: 2009-04-26T14:46:56-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/634.png
 layout: post
 guid: https://leonardofaria.net/?p=634

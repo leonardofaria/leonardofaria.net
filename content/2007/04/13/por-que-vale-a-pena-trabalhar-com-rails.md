@@ -2,16 +2,11 @@
 id: 221
 title: Por que vale a pena trabalhar com Rails
 date: 2007-04-13T22:36:09-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/221.png
 layout: post
 guid: https://leonardofaria.net/2007/04/13/por-que-vale-a-pena-trabalhar-com-rails/
 permalink: /2007/04/13/por-que-vale-a-pena-trabalhar-com-rails/
-enclosure:
-  - |
-    http://media.rubyonrails.org/video/rails_take2_with_sound.mov
-    54364199
-    video/quicktime
 dsq_thread_id:
   - "1000136375"
 categories:
@@ -19,13 +14,12 @@ categories:
 tags:
   - rubyonrails
 ---
-<img src='/wp-content/uploads/2007/04/rails.gif' align='right' style="margin-right: 7px" class='white' /> Resolvi escrever esse post após um amigo me perguntar se compensava aprender/trabalhar com Ruby e com Rails, já que é demasiadamente recente e sem apoio de grandes empresas, como acontece com o PHP e Python.
+<img src='/wp-content/uploads/2007/04/rails.gif' align='right' /> Resolvi escrever esse post após um amigo me perguntar se compensava aprender/trabalhar com Ruby e com Rails, já que é demasiadamente recente e sem apoio de grandes empresas, como acontece com o PHP e Python.
 
 Minha curiosidade de trabalhar com Rails veio após todo o hype envolvido no framework e particularmente, depois que conheci o [Orkurioso](http://www.orkurioso.com) (serviço todo hypado para monitorar scraps do [orkut](http://www.orkut.com)) e vi o [screencast](http://media.rubyonrails.org/video/rails_take2_with_sound.mov) (51MB, .mov) do [David Heinemeier](http://www.loudthinking.com/about.html), junto a todas as aplicações da [37signals](http://www.37signals.com/).
 
-<!--more-->
+<span className="hidden">more</span>
 
-  
 O screencast é realmente algo bem fantástico. Para quem não viu, é a montagem de um blog em 15 minutos, ou 58 linhas. O screencast mostra as várias caracteristicas do framework, com o modelo de [MVC](http://pt.wikipedia.org/wiki/MVC) de desenvolvimento, a fácil configuração de banco de dados (aliás, que configuração?) e a &#8216;humanização' da linguagem, que não se parece com aquelas monstruosidades da sintaxes de outras linguagens.
 
 Em um rápido resumo, MVC é um padrão de arquitetura de aplicações que visa separar a lógica da aplicação (Model), da interface do usuário (View) e do fluxo da aplicação (Controller). Isso garante uma maior organização da aplicação e uma maior facilidade em manutenção do código. A configuração de banco de dados no Rails é simples. Primeiro, porque se basea em um único arquivo e por convenção, as entidades possuem o mesmo nome da sua tabela, mas no singular. Desse modo, se você tem uma tabela articles, deverá ter uma classe Article. A humanização da linguagem também merece destaque. Característica do Ruby, a humanização garante códigos mais legíveis. Exemplo: &#8220;The quick brown fox&#8221;.length retorna o tamanho de uma string. &#8220;The quick brown fox&#8221;.upcase retorna THE QUICK BROWN FOX. Simples assim.  

@@ -2,7 +2,7 @@
 id: 244
 title: Manipulando datas no Rails
 date: 2007-05-06T18:20:44-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/244.png
 layout: post
 guid: https://leonardofaria.net/2007/05/06/manipulando-datas-no-rails/

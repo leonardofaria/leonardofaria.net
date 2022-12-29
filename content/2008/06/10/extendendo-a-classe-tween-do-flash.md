@@ -2,7 +2,7 @@
 id: 389
 title: Extendendo a classe Tween do Flash
 date: 2008-06-10T17:58:21-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/389.png
 layout: post
 guid: https://leonardofaria.net/?p=389

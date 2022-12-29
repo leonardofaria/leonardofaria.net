@@ -2,7 +2,7 @@
 id: 394
 title: annotate_model, gem útil da semana
 date: 2008-06-30T02:27:05-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/394.png
 layout: post
 guid: https://leonardofaria.net/?p=394

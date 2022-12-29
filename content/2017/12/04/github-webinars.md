@@ -2,7 +2,7 @@
 id: 1822
 title: Github webinars
 date: 2017-12-04T15:44:53-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1822.png
 layout: post
 guid: https://leonardofaria.net/?p=1822
@@ -15,7 +15,7 @@ tags:
   - git
 ---
 Many of us use Github daily however we usually don't use all its features. On the latest months, its team released a few webinars about how Github uses Github. More than showing the web interface, they talked about their culture and their workflows. In this post, I'm adding the links to the webinars with a few notes.  
-<!--more-->
+<span className="hidden">more</span>
 
 ### [Communicating with Issues](https://resources.github.com/webcasts/GitHub-communicating-with-issues/)
 

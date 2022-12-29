@@ -2,7 +2,7 @@
 id: 230
 title: Criando RSS com Rails
 date: 2007-04-12T22:27:15-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/230.png
 layout: post
 guid: https://leonardofaria.net/2007/04/12/criando-rss-com-rails/
@@ -18,7 +18,7 @@ tags:
 
 Não sou o maior especialista em padrões de distribuição de conteúdo. Existe gente melhor para isso, mas em um projeto meu, precisei da criação de feeds. O primeiro passo é mapear o arquivos routes.rb (config/routes.rb) do seu projeto.
 
-<!--more-->
+<span className="hidden">more</span>
 
 ```ruby
 map.resources :articles, :collections => {:rss => :get}

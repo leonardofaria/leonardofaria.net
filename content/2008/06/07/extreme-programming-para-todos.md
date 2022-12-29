@@ -2,7 +2,7 @@
 id: 390
 title: Extreme Programming para todos
 date: 2008-06-07T20:21:15-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/390.png
 layout: post
 guid: https://leonardofaria.net/?p=390
@@ -22,7 +22,7 @@ Naturalmente, essa não é a maior referência sobre XP, apenas uma boa introdu�
 
 Extreme Programming é uma metodologia de desenvolvimento de software que visa a criação de sistemas de melhor qualidade, produzidos em menos tempo e com menores custos. Criada por Kent Beck no fim da década de 90, o desenvolvimento ágil é atingido através de alguns valores e práticas que muito divergem dos conceitos tradicionais.
 
-<!--more-->
+<span className="hidden">more</span>
 
 ### Valores
 

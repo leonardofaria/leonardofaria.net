@@ -2,7 +2,7 @@
 id: 660
 title: sitemap.xml no Rails
 date: 2009-06-07T14:30:52-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/660.png
 layout: post
 guid: https://leonardofaria.net/?p=660
@@ -18,7 +18,7 @@ Usado para SEO, [Sitemaps](http://www.sitemaps.org/) servem para informar aos si
 
 Existem [sites](http://www.xml-sitemaps.com/) para gerar o arquivo, mas fazer isso no Rails não é complicado e faremos isso em 4 passos. A dica vem do [Tony](http://tonycode.com/wiki/index.php?title=Ruby_on_Rails_Sitemap_Generator) no livro [Advanced Rails Recipes](http://www.pragprog.com/titles/fr_arr/advanced-rails-recipes).
 
-<!--more-->
+<span className="hidden">more</span>
 
 ### 1. Controller
 

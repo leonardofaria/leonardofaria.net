@@ -2,7 +2,7 @@
 id: 305
 title: Endless Pageless
 date: 2007-08-11T03:41:55-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/305.png
 layout: post
 guid: https://leonardofaria.net/2007/08/11/endless-pageless/

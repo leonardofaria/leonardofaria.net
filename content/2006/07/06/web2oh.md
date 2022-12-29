@@ -2,7 +2,7 @@
 id: 93
 title: Web2.Oh
 date: 2006-07-06T00:36:48-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/93.png
 layout: post
 guid: https://leonardofaria.net/2006/07/06/web2oh/

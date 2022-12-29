@@ -2,7 +2,7 @@
 id: 1034
 title: Extensões para o Safari 5
 date: 2010-07-24T00:09:14-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1034.png
 layout: post
 guid: https://leonardofaria.net/?p=1034

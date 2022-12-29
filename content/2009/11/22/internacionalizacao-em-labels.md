@@ -2,7 +2,7 @@
 id: 892
 title: Internacionalização em labels
 date: 2009-11-22T19:49:16-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/892.png
 layout: post
 guid: https://leonardofaria.net/?p=892

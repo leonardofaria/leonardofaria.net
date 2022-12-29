@@ -2,7 +2,7 @@
 id: 2206
 title: Creating your own ESLint config package
 date: 2020-06-16
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/2206.png
 permalink: /2020/06/16/creating-your-own-eslint-config-package
 categories:
@@ -111,10 +111,9 @@ I have a functional GitHub project showing the setup of this post: [eslint-confi
 <div class="full-width">
   <iframe
      src="https://codesandbox.io/embed/github/leonardofaria/eslint-config-leozera/tree/master/?fontsize=14&theme=dark"
-     style="width:100%; height:600px; border:0;overflow:hidden;"
      title="leonardofaria/eslint-config-leozera"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+     sandbox="allow-autoPlay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
 </div>
 

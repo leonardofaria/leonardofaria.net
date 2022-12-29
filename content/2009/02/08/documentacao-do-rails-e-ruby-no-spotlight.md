@@ -2,7 +2,7 @@
 id: 452
 title: Documentação do Rails e Ruby no Spotlight
 date: 2009-02-08T23:12:35-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/452.png
 layout: post
 guid: https://leonardofaria.net/?p=452

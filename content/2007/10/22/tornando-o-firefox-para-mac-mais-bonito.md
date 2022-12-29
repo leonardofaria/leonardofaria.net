@@ -2,7 +2,7 @@
 id: 322
 title: Tornando o Firefox para Mac mais bonito
 date: 2007-10-22T13:10:45-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/322.png
 layout: post
 guid: https://leonardofaria.net/2007/10/22/tornando-o-firefox-para-mac-mais-bonito/

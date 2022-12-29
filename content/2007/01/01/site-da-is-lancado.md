@@ -2,7 +2,7 @@
 id: 193
 title: Site da is® lançado!
 date: 2007-01-01T22:59:25-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/193.png
 layout: post
 guid: https://leonardofaria.net/2007/01/01/site-da-is-lancado/

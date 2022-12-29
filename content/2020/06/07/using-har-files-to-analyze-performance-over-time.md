@@ -2,7 +2,7 @@
 id: 2205
 title: Using HAR files to analyze performance over time
 date: 2020-06-07
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/2205.png
 permalink: /2020/06/07/using-har-files-to-analyze-performance-over-time
 categories:

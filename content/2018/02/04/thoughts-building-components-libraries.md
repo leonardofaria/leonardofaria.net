@@ -2,7 +2,7 @@
 id: 1815
 title: Thoughts on building components libraries
 date: 2018-02-04T16:24:53-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1815.png
 layout: post
 guid: https://leonardofaria.net/?p=1815
@@ -26,7 +26,7 @@ I didn't create this concept of elements (or components) library. To be honest, 
   * How to use integrations and CI in your favour?
 
 Lots of decisions and you may not know all the answers. Startup Life™ doesn't let you do whatever you want – everything has a cost and a trade-off. Why am I talking all this story? Because I wanted to share my thoughts about it and I created a [**repository to document**](https://github.com/leonardofaria/leozera-ui) what we are doing.  
-<!--more-->
+<span className="hidden">more</span>
 
 ## Styling
 

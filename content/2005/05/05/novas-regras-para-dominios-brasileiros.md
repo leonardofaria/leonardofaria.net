@@ -2,7 +2,7 @@
 id: 15
 title: Novas regras para domínios brasileiros
 date: 2005-05-05T21:31:04-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/15.png
 layout: post
 guid: https://leonardofaria.net/2005/05/05/novas-regras-para-dominios-brasileiros/

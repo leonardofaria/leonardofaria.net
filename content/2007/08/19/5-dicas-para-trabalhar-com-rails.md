@@ -2,7 +2,7 @@
 id: 309
 title: 5 dicas para trabalhar com Rails
 date: 2007-08-19T20:29:51-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/309.png
 layout: post
 guid: https://leonardofaria.net/2007/08/19/5-dicas-para-trabalhar-com-rails/

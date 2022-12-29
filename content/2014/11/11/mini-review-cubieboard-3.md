@@ -2,7 +2,7 @@
 id: 1469
 title: 'Mini-review: Cubieboard 3'
 date: 2014-11-11T20:14:06-02:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/1469.png
 layout: post
 guid: https://leonardofaria.net/?p=1469

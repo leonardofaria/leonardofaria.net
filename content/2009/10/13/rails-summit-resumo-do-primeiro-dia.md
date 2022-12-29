@@ -2,7 +2,7 @@
 id: 726
 title: 'Rails Summit: resumo do primeiro dia'
 date: 2009-10-13T12:46:10-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/726.png
 layout: post
 guid: https://leonardofaria.net/?p=726
@@ -40,7 +40,7 @@ Gregg Pollack, o cara dos screencasts do [RailsEnvy](http://www.RailsEnvy.com/),
   * Don't pre-optimize: 99% of the time you'll need 0%
   * Don't abuse your database
 
-<!--more-->
+<span className="hidden">more</span>
 
 Trouxe também um monte de plugins interessantes. Alguns deles:
 
@@ -84,18 +84,11 @@ Foi uma palestra altamente conceitual, uma verdadeira viagem envolvendo psicolog
   * Sucesso não vem de um plano. Vem da adaptabilidade ao ambiente.
   * Quebre as regras!
   * Agilidade é importante. Mas não é o último passo
-
-<center>
-  </p> 
   
   <p>
     <a href="http://vimeo.com/7099091">Além do Caos – Pensamentos Aleatórios sobre Agilidade</a> from <a href="http://vimeo.com/locaweb">Locaweb</a> on <a href="http://vimeo.com">Vimeo</a>.
   </p>
-  
-  <p>
-    </center>
-  </p>
-  
+    
   <h2>
     <a href="http://twitter.com/mattetti">Matt Aimonetti</a>: O futuro do Ruby & Rails
   </h2>

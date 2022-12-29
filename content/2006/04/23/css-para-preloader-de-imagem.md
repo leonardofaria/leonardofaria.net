@@ -2,7 +2,7 @@
 id: 37
 title: CSS para preloader de imagem
 date: 2006-04-23T22:33:02-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/37.png
 layout: post
 guid: https://leonardofaria.net/2006/04/23/css-para-preloader-de-imagem/

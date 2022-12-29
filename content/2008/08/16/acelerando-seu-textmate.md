@@ -2,7 +2,7 @@
 id: 406
 title: Acelerando seu Textmate
 date: 2008-08-16T16:42:25-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/406.png
 layout: post
 guid: https://leonardofaria.net/?p=406

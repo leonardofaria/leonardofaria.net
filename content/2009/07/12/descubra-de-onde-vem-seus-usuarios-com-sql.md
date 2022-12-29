@@ -2,7 +2,7 @@
 id: 683
 title: Descubra de onde vem seus usuários com SQL
 date: 2009-07-12T17:51:44-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/683.png
 layout: post
 guid: https://leonardofaria.net/?p=683

@@ -2,7 +2,7 @@
 id: 91
 title: Migração para Macintosh
 date: 2006-07-01T15:04:17-03:00
-author: Leonardo Faria
+type: Post
 ogImage: /images/og-images/91.png
 layout: post
 guid: https://leonardofaria.net/2006/07/01/migracao-para-macintosh/
@@ -31,12 +31,12 @@ tags:
 **Insatisfeito com o Dashboard?**  
 Removê-lo é fácil. Abra o terminal do Mac OS (está dentro da pasta Aplicativos) e digite:
 
-<pre class="brush: plain; title: ; notranslate" title="">defaults write com.apple.dashboard mcx-disabled -boolean YES
+```defaults write com.apple.dashboard mcx-disabled -boolean YES
 killall Dock 
-</pre>
+```
 
 Para trazê-lo de volta:
 
-<pre class="brush: plain; title: ; notranslate" title="">defaults write com.apple.dashboard mcx-disabled -boolean YES
+```defaults write com.apple.dashboard mcx-disabled -boolean YES
 killall Dock 
-</pre>
+```
