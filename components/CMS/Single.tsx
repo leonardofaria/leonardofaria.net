@@ -25,17 +25,40 @@ export default function Single({
     // TODO: check if dsq_thread_id is really needed
     // dsq_thread_id: disqusIds,
   } = post;
-  const url = `${BASE_URL}${permalink}`;
+  const url = `${BASE_URL}/${permalink}`;
   const MDXContent = useMDXComponent(code);
   const createdAt = new Date(publishedTime);
   // const disqusId = disqusIds?.[0];
   const isPost = type === 'post';
 
-  console.log({ type, isPost });
+  let additionalMetaTags: any = [];
+  if (isPost) {
+    additionalMetaTags = [
+      {
+        name: 'twitter:label1',
+        content: 'Reading time',
+      },
+      {
+        name: 'twitter:data1',
+        content: (post as Post).readingTime.text,
+      },
+      {
+        name: 'twitter:label2',
+        content: 'Published',
+      },
+      {
+        name: 'twitter:data2',
+        content: createdAt.toLocaleDateString('en-US', {
+          dateStyle: 'medium',
+        }),
+      },
+    ];
+  }
 
   return (
     <>
       <NextSeo
+        additionalMetaTags={additionalMetaTags}
         description={description}
         openGraph={{
           title: `${title} · ${WEBSITE_TITLE}`,
@@ -49,7 +72,7 @@ export default function Single({
           },
           images: [
             {
-              url: `${BASE_URL}${ogImage}`,
+              url: `${BASE_URL}/${ogImage}`,
               width: 1800,
               height: 945,
               alt: `Cover photo of ${title}`,

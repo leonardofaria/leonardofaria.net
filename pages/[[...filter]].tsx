@@ -17,8 +17,6 @@ export const getStaticPaths = () => {
     })),
   ];
 
-  // console.log(JSON.stringify(paths, null, 2));
-
   return {
     paths,
     fallback: 'blocking',

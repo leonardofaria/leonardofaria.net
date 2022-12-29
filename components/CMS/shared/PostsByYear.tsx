@@ -26,9 +26,13 @@ export function PostsByYear({ year, posts }: { year: string; posts: Post[] }) {
 
               <small className="m-2 text-sm">
                 <time className="text-gray-500" dateTime={post.date}>
-                  {createdAt.toLocaleDateString('en-US', {
-                    dateStyle: 'medium',
-                  })}
+                  {
+                    createdAt
+                      .toLocaleDateString('en-US', {
+                        dateStyle: 'medium',
+                      })
+                      .split(',')[0]
+                  }
                 </time>
 
                 {post.tags?.map((tag) => (
