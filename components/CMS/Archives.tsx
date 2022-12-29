@@ -27,15 +27,14 @@ export default function Archives({ posts }: { posts: Post[] }) {
           </header>
 
           <p className="intro">
-            I like to talk about:
-            {allTags.map((tag) => (
-              <span key={`tag-${tag}`}>
-                &nbsp;
-                <Link className="no-underline" href={`/tags/${tag}`}>
-                  {tag}
+            <span>I like to talk about:</span>
+            <span>
+              {allTags.map((tag) => (
+                <Link className="no-underline" href={`/tags/${tag}`} key={tag}>
+                  &nbsp;{tag}
                 </Link>
-              </span>
-            ))}
+              ))}
+            </span>
           </p>
 
           {Object.keys(postsByYears)

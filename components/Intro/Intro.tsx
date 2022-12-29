@@ -1,14 +1,13 @@
+import { WEBSITE_DESCRIPTION, WEBSITE_SUBHEADING } from 'lib/constants';
+
 export default function Intro() {
   return (
     <div className="intro">
       <h1 className="relative">
         <div aria-hidden="true" className="dots" />
-        Hi, I&apos;m Leo 👋
+        {WEBSITE_SUBHEADING}
       </h1>
-      <p>
-        I am Leonardo Faria, a Brazilian developer living in Vancouver. This is
-        my blog about software development and more since 2005.
-      </p>
+      <p>{WEBSITE_DESCRIPTION}</p>
     </div>
   );
 }

@@ -8,6 +8,7 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
     './lib/**/*.{js,ts,jsx,tsx}',
     './content/**/*.mdx',
+    './content/*.mdx',
   ],
   theme: {
     extend: {

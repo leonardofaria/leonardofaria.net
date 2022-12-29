@@ -1,48 +1,45 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import useScrollPosition from 'lib/hooks/useScrollPosition';
+import useWindowSize from 'lib/hooks/useWindowSize';
+import { LARGE_SCREEN_BREAKPOINT } from 'lib/constants';
+import { BiMenu } from 'react-icons/bi';
+import { MdClose } from 'react-icons/md';
+import Image from 'next/image';
 import PageNav from './PageNav';
 import SocialNav from './SocialNav';
 
+function ToggleButton({
+  setShowMenu,
+  showMenu,
+}: {
+  setShowMenu: any;
+  showMenu: boolean;
+}) {
+  return (
+    <button
+      className="nav-button w-10 h-10 justify-center flex items-center opacity-75 hover:opacity-100 transition duration-300 ease-in-out"
+      type="button"
+      onClick={() => {
+        setShowMenu(!showMenu);
+      }}
+    >
+      {showMenu ? (
+        <MdClose className="fill-current h-6 w-6" />
+      ) : (
+        <BiMenu className="fill-current h-6 w-6" />
+      )}
+    </button>
+  );
+}
+
+// TODO: this can be probably refactored
 export default function Header({ showHero }: { showHero?: boolean }) {
   const [showMenu, setShowMenu] = useState(false);
   const scrollPosition = useScrollPosition();
-
-  // eslint-disable-next-line react/no-unstable-nested-components
-  function ToggleButton() {
-    return (
-      <button
-        className="nav-button w-10 h-10 justify-center flex items-center opacity-75 hover:opacity-100 transition duration-300 ease-in-out"
-        type="button"
-        onClick={() => {
-          setShowMenu(!showMenu);
-        }}
-      >
-        {showMenu ? (
-          <svg
-            className="fill-current h-4 w-4"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Close menu</title>
-            <polygon
-              points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
-              transform="rotate(45 10 10)"
-            />
-          </svg>
-        ) : (
-          <svg
-            className="fill-current h-4 w-4"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
-        )}
-      </button>
-    );
-  }
+  const { width } = useWindowSize();
+  const isDesktop = width >= LARGE_SCREEN_BREAKPOINT;
+  const pageNavClasses = showMenu || isDesktop ? 'lg:block' : 'hidden';
 
   if (showHero) {
     return (
@@ -55,11 +52,13 @@ export default function Header({ showHero }: { showHero?: boolean }) {
       >
         <div className="max-w-7xl mx-auto p-6 flex flex-col items-center w-full relative">
           <div className="block lg:hidden text-white self-end mx-2">
-            <ToggleButton />
+            <ToggleButton setShowMenu={setShowMenu} showMenu={showMenu} />
           </div>
 
-          {showMenu ? (
-            <div className="absolute lg:p-6 hidden lg:block self-end text-white rounded-md bg-black shadow lg:bg-transparent lg:shadow-none">
+          {showMenu || isDesktop ? (
+            <div
+              className={`${pageNavClasses} absolute lg:p-6  self-end text-white rounded-md bg-black shadow lg:bg-transparent lg:shadow-none`}
+            >
               <nav>
                 <PageNav />
               </nav>
@@ -67,10 +66,12 @@ export default function Header({ showHero }: { showHero?: boolean }) {
           ) : null}
 
           <div className="flex-grow w-full flex flex-col justify-center items-center">
-            <img
+            <Image
               alt="Leonardo Faria"
               className="w-24 h-24 lg:w-32 lg:h-32 rounded-full mb-3"
+              height="128"
               src="/images/avatar.jpg"
+              width="128"
             />
 
             <Link
@@ -109,23 +110,25 @@ export default function Header({ showHero }: { showHero?: boolean }) {
         </Link>
 
         <div className="block lg:hidden mx-2">
-          <ToggleButton />
+          <ToggleButton setShowMenu={setShowMenu} showMenu={showMenu} />
         </div>
 
         <div className="absolute right-8 top-16 lg:relative lg:right-0 lg:top-0 flex flex-col lg:flex-row items-center rounded-md bg-white shadow lg:bg-transparent lg:shadow-none">
-          <nav
-            className="p-4 lg:p-0 text-gray-600 hidden lg:block lg:order-last w-full lg:w-auto lg:ml-3"
-            id="nav-social-links"
-          >
-            <SocialNav />
-          </nav>
+          {showMenu || isDesktop ? (
+            <>
+              <nav
+                className={`${pageNavClasses} p-4 lg:p-0 text-gray-600 lg:order-last w-full lg:w-auto lg:ml-3`}
+              >
+                <SocialNav />
+              </nav>
 
-          <nav
-            className="p-4 lg:p-0 hidden lg:block w-full lg:w-auto text-gray-600"
-            id="nav-menu"
-          >
-            <PageNav />
-          </nav>
+              <nav
+                className={`${pageNavClasses} p-4 lg:p-0 w-full lg:w-auto text-gray-600`}
+              >
+                <PageNav />
+              </nav>
+            </>
+          ) : null}
         </div>
       </div>
     </header>

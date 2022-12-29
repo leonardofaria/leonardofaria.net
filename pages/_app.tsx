@@ -3,6 +3,8 @@ import type { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
 import { Inter } from '@next/font/google';
 import SEO from 'lib/next-seo.config';
+import Script from 'next/script';
+import { UMAMI_SITEID, UMAMI_URL } from 'lib/constants';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -16,6 +18,12 @@ function MyApp({ Component, pageProps }: AppProps) {
     >
       <DefaultSeo {...SEO} />
       <Component {...pageProps} />
+
+      <Script
+        data-website-id={UMAMI_SITEID}
+        src={UMAMI_URL}
+        strategy="lazyOnload"
+      />
     </div>
   );
 }

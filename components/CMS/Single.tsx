@@ -29,6 +29,9 @@ export default function Single({
   const MDXContent = useMDXComponent(code);
   const createdAt = new Date(publishedTime);
   // const disqusId = disqusIds?.[0];
+  const isPost = type === 'post';
+
+  console.log({ type, isPost });
 
   return (
     <>
@@ -60,8 +63,8 @@ export default function Single({
 
       <main className="flex-1 mt-12 max-w-3xl mt-32 mx-auto text-gray-700 w-full">
         <article className="article">
-          <header className="text-center pt-10 pb-6">
-            {type === 'page' && (
+          <header className={isPost ? 'pt-10 pb-6 text-center' : ''}>
+            {isPost && (
               <small className="text-center text-sm">
                 <time className="text-gray-500" dateTime={publishedTime}>
                   {createdAt.toLocaleDateString('en-US', {
@@ -81,15 +84,12 @@ export default function Single({
               </small>
             )}
 
-            <h1
-              className={
-                type === 'post' ? 'leading-9 text-center' : 'leading-9'
-              }
-            >
+            <h1 className={isPost ? 'leading-9 text-center' : 'leading-9'}>
               <Link
                 className="no-underline inline-block text-black relative"
                 href={permalink}
               >
+                {isPost && <div className="dots" aria-hidden />}
                 {title}
               </Link>
             </h1>
