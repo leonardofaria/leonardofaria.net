@@ -51,6 +51,17 @@ export const getStaticProps: GetStaticProps<{
     currentFilters = { type: 'archives' };
   }
 
+  if (currentFilters.type === 'home') {
+    posts = posts.filter((p) => {
+      const date = new Date(p.date);
+      const year = date.getFullYear();
+      if (year >= 2018) {
+        return true;
+      }
+      return false;
+    });
+  }
+
   return { props: { posts, currentFilters } };
 };
 
