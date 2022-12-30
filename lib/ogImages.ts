@@ -5,7 +5,8 @@ import lineReplace from 'line-replace';
 
 import path from 'path';
 import matter from 'gray-matter';
-import { BASE_URL } from './constants';
+
+const BASE_URL = 'http://localhost:3000';
 
 /* eslint-disable no-console */
 
