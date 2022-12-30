@@ -7,6 +7,7 @@ import {
   type Page,
   type Post,
 } from 'contentlayer/generated';
+import generateFeed from 'lib/rss';
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
 
 export const getStaticPaths = () => {
@@ -30,7 +31,7 @@ type CurrentFilters = {
 export const getStaticProps: GetStaticProps<{
   currentFilters: CurrentFilters;
   posts: (Post | Page)[];
-}> = ({ params }) => {
+}> = async ({ params }) => {
   let posts = [...allPosts, ...allPages].sort(
     (a, b) => Number(new Date(b.date)) - Number(new Date(a.date))
   );
@@ -60,6 +61,8 @@ export const getStaticProps: GetStaticProps<{
       }
       return false;
     });
+
+    await generateFeed();
   }
 
   return { props: { posts, currentFilters } };

@@ -9,7 +9,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "rss": "ts-node --esm lib/rss.ts",
     "start": "next start",
     "lint": "next lint --fix",
     "build:ogImages": "ts-node --esm lib/ogImages.ts"
