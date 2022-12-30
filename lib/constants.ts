@@ -37,10 +37,10 @@ export const SOCIAL_LINKS = [
     name: 'E-mail',
     url: 'mailto:leonardofaria@gmail.com',
   },
-  // {
-  //   name: 'RSS',
-  //   url: `${BASE_URL}/rss.xml`,
-  // },
+  {
+    name: 'RSS',
+    url: `${BASE_URL}/rss.xml`,
+  },
 ];
 
 export const UMAMI_URL = 'https://umami.leonardofaria.net/umami.js';
