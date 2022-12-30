@@ -43,7 +43,6 @@ const Post = defineDocumentType(() => ({
     },
     ogImage: {
       type: 'string',
-      required: true,
     },
     permalink: {
       type: 'string',
@@ -169,7 +168,6 @@ const Page = defineDocumentType(() => ({
     },
     ogImage: {
       type: 'string',
-      required: true,
     },
     permalink: {
       type: 'string',
