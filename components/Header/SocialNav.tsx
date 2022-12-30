@@ -37,6 +37,8 @@ export default function SocialNav() {
           <a
             className="block p-2 opacity-75 hover:opacity-100 transition duration-300 ease-in-out"
             href={social.url}
+            // rel="me" is used for IndieWeb sign-in
+            rel={social.name === 'GitHub' ? 'me' : undefined}
             title={social.name}
           >
             <Icon name={social.name} />
