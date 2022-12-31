@@ -4,3 +4,6 @@
 
 My personal website, powered by Hugo and Netlify (and Vercel).
 
+## IMPORTANT
+
+This branch contains the last version of this website with Hugo. It can be viewed at https://leonardofaria.github.io/leonardofaria.net
