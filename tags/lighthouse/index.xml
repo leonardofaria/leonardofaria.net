@@ -1,15 +1,15 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>lighthouse on Leonardo Faria</title><link>https://leonardofaria.github.io/leonardofaria.net/tags/lighthouse/</link><description>Recent content in lighthouse on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 30 Nov 2020 05:00:00 +0000</lastBuildDate><atom:link href="https://leonardofaria.github.io/leonardofaria.net/tags/lighthouse/index.xml" rel="self" type="application/rss+xml"/><item><title>My experience using Lighthouse in the real world</title><link>https://leonardofaria.github.io/leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/</link><pubDate>Mon, 30 Nov 2020 05:00:00 +0000</pubDate><guid>https://leonardofaria.github.io/leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/</guid><description>&lt;p>Lighthouse has been part of my daily work for the last few months and I shared some snippets in my last few posts. For this particular post, it is time to share how I am using Lighthouse in a product used by millions of people and what I have discovered during this process.&lt;/p>
-&lt;p>&lt;img src="https://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/lighthouse.jpg" alt="Lighthouse photo by Robert Wiedemann">&lt;/p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>lighthouse on Leonardo Faria</title><link>https://hugo.leonardofaria.net/tags/lighthouse/</link><description>Recent content in lighthouse on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 30 Nov 2020 05:00:00 +0000</lastBuildDate><atom:link href="https://hugo.leonardofaria.net/tags/lighthouse/index.xml" rel="self" type="application/rss+xml"/><item><title>My experience using Lighthouse in the real world</title><link>https://hugo.leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/</link><pubDate>Mon, 30 Nov 2020 05:00:00 +0000</pubDate><guid>https://hugo.leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/</guid><description>&lt;p>Lighthouse has been part of my daily work for the last few months and I shared some snippets in my last few posts. For this particular post, it is time to share how I am using Lighthouse in a product used by millions of people and what I have discovered during this process.&lt;/p>
+&lt;p>&lt;img src="https://hugo.leonardofaria.net/wp-content/uploads/2020/11/lighthouse.jpg" alt="Lighthouse photo by Robert Wiedemann">&lt;/p>
 &lt;p>&lt;em>Disclaimers&lt;/em>: 1. This content may be reviewed in the future as I learn more about web performance and Lighthouse; 2. Do not take this post as professional/legal advice; 3. Do not take my comments on tech X or Y as attacks to tech X or Y.&lt;/p>
 &lt;div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
 &lt;strong>Hi! This post is part of a Lighthouse post series. Also, check out:&lt;/strong>
 &lt;ul>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/div>
 &lt;h2 id="use-existing-tools-before-creating-your-own">Use existing tools before creating your own&lt;/h2>
@@ -31,7 +31,7 @@
 &lt;p>In our case, we run Lighthouse 5 times per URL, calculating a median score. We also store the min/max values in case we want to investigate one-off results.&lt;/p>
 &lt;h2 id="working-with-lighthouse-results">Working with Lighthouse results&lt;/h2>
 &lt;p>What do I do when I have Lighthouse reports from 9 different URLs?&lt;/p>
-&lt;p>&lt;img src="https://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/detective-wall.jpg" alt="Detective wall, from the Isle of Dogs movie">&lt;/p>
+&lt;p>&lt;img src="https://hugo.leonardofaria.net/wp-content/uploads/2020/11/detective-wall.jpg" alt="Detective wall, from the Isle of Dogs movie">&lt;/p>
 &lt;p>FCP, LCP, TTI, TBT, CLS: my work in the last few months is analyzing data and connecting dots. Sometimes I find low hanging fruit that improves one metric here and there, sometimes I go down the rabbit hole.&lt;/p>
 &lt;p>With data coming from everywhere, I am following the scientific method to focus on what matters:&lt;/p>
 &lt;ol>
@@ -50,24 +50,24 @@
 &lt;h3 id="old-architectures-didnt-age-well">Old architectures didn&amp;rsquo;t age well&lt;/h3>
 &lt;p>Old SPA architectures doesn&amp;rsquo;t perform well these days and Lighthouse captures that.&lt;/p>
 &lt;p>Here is one example: back in the day, people (including myself) used to build their JS code into a single file. We wanted to avoid multiple files because HTTP/1.1 didn&amp;rsquo;t support too many concurrent requests, which was improved in HTTP/2. Today, unused JS will be caught in the Lighthouse tests.&lt;/p>
-&lt;p>&lt;img src="https://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/codesplitting.png" alt="Code splitting cartoon by Crystallize">&lt;/p>
+&lt;p>&lt;img src="https://hugo.leonardofaria.net/wp-content/uploads/2020/11/codesplitting.png" alt="Code splitting cartoon by Crystallize">&lt;/p>
 &lt;p>Code Splitting is part of any modern JS tech stack using webpack and, in React, it can be combined with &lt;a href="https://loadable-components.com/docs/getting-started/">Loadable Components&lt;/a> and &lt;a href="https://reactjs.org/docs/code-splitting.html#reactlazy">&lt;code>React.lazy&lt;/code>&lt;/a>. Giving the user only what they need is key.&lt;/p>
 &lt;p>In the back end, &lt;a href="https://graphql.org/">GraphQL&lt;/a> showed us that we can request data as we go. I know this can also be done with REST as long we know what is in the UI but the whole point here is to deliver only the data that users need.&lt;/p>
 &lt;h2 id="conclusions">Conclusions&lt;/h2>
 &lt;p>I hope this series shed some light (no pun intended) on your front-end performance skills. Lighthouse is so powerful that people out there are creating full SaaS products to make the web better.&lt;/p>
-&lt;p>Are you using Lighthouse or planning to start using? Let me know in the comments!&lt;/p></description></item><item><title>Creating HAR files with Lighthouse</title><link>https://leonardofaria.github.io/leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/</link><pubDate>Mon, 30 Nov 2020 04:00:00 +0000</pubDate><guid>https://leonardofaria.github.io/leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/</guid><description>&lt;p>HAR (HTTP Archive) is a JSON file containing all information about a browser’s interactions with a page. This file is often used for performance analysis. &lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/06/07/using-har-files-to-analyze-performance-over-time/">Earlier this year&lt;/a>, I shared what kind of information we can get from and today we will automate the HAR creation.&lt;/p>
-&lt;p>&lt;img src="https://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/06/har-viewer.jpg" alt="HAR Viewer">&lt;/p>
+&lt;p>Are you using Lighthouse or planning to start using? Let me know in the comments!&lt;/p></description></item><item><title>Creating HAR files with Lighthouse</title><link>https://hugo.leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/</link><pubDate>Mon, 30 Nov 2020 04:00:00 +0000</pubDate><guid>https://hugo.leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/</guid><description>&lt;p>HAR (HTTP Archive) is a JSON file containing all information about a browser’s interactions with a page. This file is often used for performance analysis. &lt;a href="https://hugo.leonardofaria.net/2020/06/07/using-har-files-to-analyze-performance-over-time/">Earlier this year&lt;/a>, I shared what kind of information we can get from and today we will automate the HAR creation.&lt;/p>
+&lt;p>&lt;img src="https://hugo.leonardofaria.net/wp-content/uploads/2020/06/har-viewer.jpg" alt="HAR Viewer">&lt;/p>
 &lt;p>There are different ways to automate the HAR creation: &lt;a href="https://www.npmjs.com/package/puppeteer-har">puppeteer-har&lt;/a> is a NPM package you can add in your tooling or if you are not from the JavaScript world you can use &lt;a href="https://octopus.com/blog/selenium/13-capturing-har-files/capturing-har-files">Selenium&lt;/a>.&lt;/p>
 &lt;p>I was using puppeteer-har for a few months but then I noticed that the HAR was missing a few files in specific scenarios (ex. a React app with Loadable and React Router). For this reason, I decided to look for analternative and this is how I found the &lt;a href="https://www.npmjs.com/package/chrome-har-capturer">chrome-har-capturer&lt;/a> package.&lt;/p>
 &lt;div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
 &lt;strong>Hi! This post is part of a Lighthouse post series. Also, check out:&lt;/strong>
 &lt;ul>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/div>
 &lt;p>This package works like a charm; it creates a HAR file following the &lt;a href="http://www.softwareishard.com/blog/har-12-spec/">HAR 1.2 spec&lt;/a> and all that I need to provide is an array of raw events that comes from the &lt;a href="https://chromedevtools.github.io/devtools-protocol/">Chrome Debugging Protocol&lt;/a>. Who provides the raw events? Lighthouse!&lt;/p>
@@ -100,18 +100,18 @@
 &lt;li>Request timing information (ex.: waiting and downloading times);&lt;/li>
 &lt;/ul>
 &lt;p>With this information, we can identify bottlenecks (ex.what is the slowest request of that URL), find low-hanging fruit (ex.asset compression is one flag away in your build system tool) and prioritize tasks in order to improve performance on our pages.&lt;/p>
-&lt;p>Can you think of different uses? Let me know in the comments!&lt;/p></description></item><item><title>Generating Web Vitals information with Lighthouse</title><link>https://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/</link><pubDate>Mon, 30 Nov 2020 03:00:00 +0000</pubDate><guid>https://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/</guid><description>&lt;p>&lt;a href="https://webmasters.googleblog.com/2020/05/evaluating-page-experience.html">Earlier this year&lt;/a>, Google announced that “page experience” would impact its search ranking. A few weeks ago, they announced that the new page experience signals will roll out in May 2021. But what are these page experience signals?&lt;/p>
-&lt;p>&lt;img src="https://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/search-page-experience.jpg" alt="Google&amp;rsquo;s Page experience chart">&lt;/p>
+&lt;p>Can you think of different uses? Let me know in the comments!&lt;/p></description></item><item><title>Generating Web Vitals information with Lighthouse</title><link>https://hugo.leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/</link><pubDate>Mon, 30 Nov 2020 03:00:00 +0000</pubDate><guid>https://hugo.leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/</guid><description>&lt;p>&lt;a href="https://webmasters.googleblog.com/2020/05/evaluating-page-experience.html">Earlier this year&lt;/a>, Google announced that “page experience” would impact its search ranking. A few weeks ago, they announced that the new page experience signals will roll out in May 2021. But what are these page experience signals?&lt;/p>
+&lt;p>&lt;img src="https://hugo.leonardofaria.net/wp-content/uploads/2020/11/search-page-experience.jpg" alt="Google&amp;rsquo;s Page experience chart">&lt;/p>
 &lt;p>The &lt;a href="https://developers.google.com/search/docs/guides/page-experience">page experience&lt;/a> signal measures aspects of how users perceive the experience of interacting with a web page. Offering mobile-friendly pages and serving content over HTTPS is something we have been doing for a while but soon slow sites may lose their spot in the Google page ranking algorithm.&lt;/p>
 &lt;div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
 &lt;strong>Hi! This post is part of a Lighthouse post series. Also, check out:&lt;/strong>
 &lt;ul>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/div>
 &lt;h2 id="what-are-core-web-vitals">What are Core Web Vitals&lt;/h2>
@@ -125,12 +125,12 @@
 &lt;li>&lt;strong>Interactivity&lt;/strong>: &lt;em>how fast does the page react to user input?&lt;/em> &lt;a href="https://web.dev/fid/">First Input Delay&lt;/a> measures responsiveness and quantifies the experience users feel when trying to first interact with the page.&lt;/li>
 &lt;li>&lt;strong>Visual stability&lt;/strong>: &lt;em>does the page layout change while the page is loading?&lt;/em> &lt;a href="https://web.dev/cls/">Cumulative Layout Shift&lt;/a> measures visual stability and quantifies the amount of unexpected layout shift of visible page content.&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/core-web-vitals.png" alt="Core Web Vitals">&lt;/p>
-&lt;p>All of Google&amp;rsquo;s popular tools for developers support measurement of Core Web Vitals, including &lt;a href="https://github.com/GoogleChrome/lighthouse">Lighthouse&lt;/a>, &lt;a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights&lt;/a>, &lt;a href="https://developers.google.com/web/tools/chrome-devtools">Chrome DevTools&lt;/a>, &lt;a href="https://search.google.com/search-console/about">Search Console&lt;/a>, &lt;a href="https://leonardofaria.github.io/leonardofaria.net/measure/">web.dev&amp;rsquo;s measure tool&lt;/a>, the &lt;a href="https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma">Web Vitals Chrome extension&lt;/a> and the new &lt;a href="https://developers.google.com/web/tools/chrome-user-experience-report">Chrome UX Report&lt;/a> API.&lt;/p>
+&lt;p>&lt;img src="https://hugo.leonardofaria.net/wp-content/uploads/2020/11/core-web-vitals.png" alt="Core Web Vitals">&lt;/p>
+&lt;p>All of Google&amp;rsquo;s popular tools for developers support measurement of Core Web Vitals, including &lt;a href="https://github.com/GoogleChrome/lighthouse">Lighthouse&lt;/a>, &lt;a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights&lt;/a>, &lt;a href="https://developers.google.com/web/tools/chrome-devtools">Chrome DevTools&lt;/a>, &lt;a href="https://search.google.com/search-console/about">Search Console&lt;/a>, &lt;a href="https://hugo.leonardofaria.net/measure/">web.dev&amp;rsquo;s measure tool&lt;/a>, the &lt;a href="https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma">Web Vitals Chrome extension&lt;/a> and the new &lt;a href="https://developers.google.com/web/tools/chrome-user-experience-report">Chrome UX Report&lt;/a> API.&lt;/p>
 &lt;p>It is important to mention that FID can&amp;rsquo;t be measured in Lighthouse and as an alternative, Google recommends measuring the &lt;a href="https://web.dev/tbt/">Total Blocking Time (TBT)&lt;/a>. Tools like Lighthouse that load pages in a simulated environment without a user can not measure FID, since a simulated environment has no user input.&lt;/p>
 &lt;h2 id="using-lighthouse-for-core-web-vitals-measurements">Using Lighthouse for Core Web Vitals measurements&lt;/h2>
 &lt;p>The Web Vitals information is very easily found in the Lighthouse reports:&lt;/p>
-&lt;p>&lt;img src="https://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/lighthouse-web-vitals-report.jpg" alt="Web Vitals information in Lighthouse report">&lt;/p>
+&lt;p>&lt;img src="https://hugo.leonardofaria.net/wp-content/uploads/2020/11/lighthouse-web-vitals-report.jpg" alt="Web Vitals information in Lighthouse report">&lt;/p>
 &lt;p>What I want to share today is how to get Web Vitals information from the Lighthouse node package (from my &lt;a href="https://github.com/leonardofaria/lighthouse-examples">lighthouse-examples GitHub repository&lt;/a>):&lt;/p>
 &lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1&lt;/span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> lighthouse &lt;span style="color:#000;font-weight:bold">=&lt;/span> require(&lt;span style="color:#d14">&amp;#39;lighthouse&amp;#39;&lt;/span>);
 &lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2&lt;/span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> chromeLauncher &lt;span style="color:#000;font-weight:bold">=&lt;/span> require(&lt;span style="color:#d14">&amp;#39;chrome-launcher&amp;#39;&lt;/span>);
@@ -186,18 +186,18 @@ totalBlockingTime&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;sp
 &lt;p>The page used in the example uses Google Fonts and there is a tiny layout shift when the font is loaded. The shift may be noticeable by users and it is reported in the layout shift elements property.&lt;/p>
 &lt;h2 id="why-do-we-need-this">Why do we need this?&lt;/h2>
 &lt;p>This script is useful in order to closely follow what is changing in the web vitals metrics of a page. In my case, I store the LCP, TBT and CLS numeric values in a database and use this information in a Gauge dashboard. I am not tracking the largest contentful paint element or layout shift elements yet.&lt;/p>
-&lt;p>Can you think of different use cases? Let me know in the comments!&lt;/p></description></item><item><title>Generating screenshots with Lighthouse</title><link>https://leonardofaria.github.io/leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/</link><pubDate>Mon, 30 Nov 2020 02:00:00 +0000</pubDate><guid>https://leonardofaria.github.io/leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/</guid><description>&lt;p>Lighthouse captures the rendering timeline of a page in 10 images. Do you need to store them? If yes, keep reading in order to learn how to store these images.&lt;/p>
-&lt;p>&lt;img src="https://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/lighthouse-screenshots.jpg" alt="Lighthouse screenshots">&lt;/p>
+&lt;p>Can you think of different use cases? Let me know in the comments!&lt;/p></description></item><item><title>Generating screenshots with Lighthouse</title><link>https://hugo.leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/</link><pubDate>Mon, 30 Nov 2020 02:00:00 +0000</pubDate><guid>https://hugo.leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/</guid><description>&lt;p>Lighthouse captures the rendering timeline of a page in 10 images. Do you need to store them? If yes, keep reading in order to learn how to store these images.&lt;/p>
+&lt;p>&lt;img src="https://hugo.leonardofaria.net/wp-content/uploads/2020/11/lighthouse-screenshots.jpg" alt="Lighthouse screenshots">&lt;/p>
 &lt;p>The filmstrip above reveals how a page is rendered in a browser and gives us an opportunity to understand what is slow. For example, blank screenshots in the beginning is a sign that the &lt;a href="https://web.dev/fcp/">First Contentful Paint&lt;/a> is too slow.&lt;/p>
 &lt;div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
 &lt;strong>Hi! This post is part of a Lighthouse post series. Also, check out:&lt;/strong>
 &lt;ul>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/div>
 &lt;p>In this post you will learn where these images are stored and how to store them in a file system. Here is the script (from my &lt;a href="https://github.com/leonardofaria/lighthouse-examples">lighthouse-examples GitHub repository&lt;/a>):&lt;/p>
@@ -227,24 +227,24 @@ totalBlockingTime&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;sp
 &lt;/code>&lt;/pre>&lt;/div>
 &lt;p>Let’s dig into the magic. Starting in line 10, we loop in the screenshot-thumbnails audit the images captured by Lighthouse. Notice that images are encoded in the &lt;a href="https://en.wikipedia.org/wiki/Base64">Base64 format&lt;/a>, and along with their content, Lighthouse also stores when they happen.&lt;/p>
 &lt;p>The script will create 11 image files as shown below.&lt;/p>
-&lt;p>&lt;img src="https://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/lighthouse-screenshots-finder.jpg" alt="Screenshots created by Lighthouse">&lt;/p>
+&lt;p>&lt;img src="https://hugo.leonardofaria.net/wp-content/uploads/2020/11/lighthouse-screenshots-finder.jpg" alt="Screenshots created by Lighthouse">&lt;/p>
 &lt;h3 id="desktop-dimensions">Desktop dimensions&lt;/h3>
 &lt;p>By default, the device emulated in Lighthouse is a Moto G4, with a 5.5 inches screen (1920 x 1080). We can tweak that and emulate a Desktop by setting the &lt;code>emulatedFormFactor&lt;/code> to &lt;code>desktop&lt;/code>. The options variable will look like this:&lt;/p>
 &lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="color:#000;font-weight:bold">const&lt;/span> options &lt;span style="color:#000;font-weight:bold">=&lt;/span> {port&lt;span style="color:#000;font-weight:bold">:&lt;/span> chrome.port, emulatedFormFactor&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#39;desktop&amp;#39;&lt;/span>};
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="why-do-we-need-this">Why do we need this?&lt;/h2>
 &lt;p>This script is useful in order to closely follow what is being rendered on a page or web app. In my particular case, I am storing only the final screenshot for future reference (ex. is this the right page?).&lt;/p>
-&lt;p>Can you think of different uses? Let me know in the comments!&lt;/p></description></item><item><title>Getting asset transferred information with Lighthouse</title><link>https://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/</link><pubDate>Mon, 30 Nov 2020 01:00:00 +0000</pubDate><guid>https://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/</guid><description>&lt;p>Have you ever about thought tracking what is added to a page or web app? Did not know how your website became 15MB? Sounds like it is time to track this data!&lt;/p>
-&lt;p>&lt;img src="https://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/asset-transfered-by-type.jpg" alt="Chart showing assets transferred by type">&lt;/p>
+&lt;p>Can you think of different uses? Let me know in the comments!&lt;/p></description></item><item><title>Getting asset transferred information with Lighthouse</title><link>https://hugo.leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/</link><pubDate>Mon, 30 Nov 2020 01:00:00 +0000</pubDate><guid>https://hugo.leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/</guid><description>&lt;p>Have you ever about thought tracking what is added to a page or web app? Did not know how your website became 15MB? Sounds like it is time to track this data!&lt;/p>
+&lt;p>&lt;img src="https://hugo.leonardofaria.net/wp-content/uploads/2020/11/asset-transfered-by-type.jpg" alt="Chart showing assets transferred by type">&lt;/p>
 &lt;p>&lt;a href="https://calibreapp.com/">Calibre&lt;/a>, one of my favourite web performance tools, creates charts, such as the one above, to illustrate what is being transferred to users when they visit your page or use your web app.&lt;/p>
 &lt;div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
 &lt;strong>Hi! This post is part of a Lighthouse post series. Also, check out:&lt;/strong>
 &lt;ul>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/div>
 &lt;p>In this post you will learn how to collect similar data using Lighthouse. Here is the recipe (from my &lt;a href="https://github.com/leonardofaria/lighthouse-examples">lighthouse-examples GitHub repository&lt;/a>):&lt;/p>
@@ -288,29 +288,29 @@ other&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="co
 }
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>If this is not enough information, and you also want to include the number of requests, you can just return the &lt;code>items&lt;/code> object and skip all filter and loop steps: &lt;code>runnerResult.lhr.audits['resource-summary'].details.items&lt;/code>.&lt;/p>
 &lt;p>The image above shows what is inside the &lt;code>resource-summary&lt;/code> audit:&lt;/p>
-&lt;p>&lt;img src="https://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/lighthouse-audit-object.jpg" alt="audit object">&lt;/p>
+&lt;p>&lt;img src="https://hugo.leonardofaria.net/wp-content/uploads/2020/11/lighthouse-audit-object.jpg" alt="audit object">&lt;/p>
 &lt;blockquote>
 &lt;p>Curious to know how the JSON is shown in the image? This is how Firefox renders JSON files by default. I really wish other browsers implemented this by default.&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="why-do-we-need-this">Why do we need this?&lt;/h2>
 &lt;p>This script is useful in order to closely follow what is being sent to users. In my case, this data is stored daily and is used to identify if new features added in the codebase dramatically impact the page rendering.&lt;/p>
-&lt;p>Can you think of different applications of this tool? Let me know in the comments!&lt;/p></description></item><item><title>The undocumented Lighthouse guide</title><link>https://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide/</link><pubDate>Mon, 30 Nov 2020 00:00:00 +0000</pubDate><guid>https://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide/</guid><description>&lt;p>Lighthouse is the go-to tool for improving the quality of web pages. Lately, I have been using Lighthouse a lot at &lt;a href="https://thinkific.com">work&lt;/a> to identify opportunities for performance optimizations. This post is part of a 6 part series that I have written about how to get the most out of Lighthouse.&lt;/p>
-&lt;p>&lt;img src="https://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/lighthouse.jpg" alt="Lighthouse photo by Robert Wiedemann">&lt;/p>
+&lt;p>Can you think of different applications of this tool? Let me know in the comments!&lt;/p></description></item><item><title>The undocumented Lighthouse guide</title><link>https://hugo.leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide/</link><pubDate>Mon, 30 Nov 2020 00:00:00 +0000</pubDate><guid>https://hugo.leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide/</guid><description>&lt;p>Lighthouse is the go-to tool for improving the quality of web pages. Lately, I have been using Lighthouse a lot at &lt;a href="https://thinkific.com">work&lt;/a> to identify opportunities for performance optimizations. This post is part of a 6 part series that I have written about how to get the most out of Lighthouse.&lt;/p>
+&lt;p>&lt;img src="https://hugo.leonardofaria.net/wp-content/uploads/2020/11/lighthouse.jpg" alt="Lighthouse photo by Robert Wiedemann">&lt;/p>
 &lt;div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
 &lt;strong>Lighthouse Post Series&lt;/strong>
 &lt;ul>
 &lt;li>&lt;a href="#quick-lighthouse-intro">Quick Lighthouse intro&lt;/a>&lt;/li>
 &lt;li>&lt;a href="#the-lighthouse-node-package">The Lighthouse Node package&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/div>
 &lt;h2 id="quick-lighthouse-intro">Quick Lighthouse intro&lt;/h2>
 &lt;p>Lighthouse is an &lt;a href="https://github.com/GoogleChrome/lighthouse">open-source&lt;/a> automated tool for auditing the quality of web pages. This tool generates scores for performance, accessibility, progressive web apps, SEO, and best practices of a specific URL. Lighthouse also offers recommendations on how to improve the inefficient items of the audits.&lt;/p>
-&lt;p>&lt;img src="https://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/lighthouse-report-leonardofaria-net.jpg" alt="Lighthouse report for leonardofaria.net">&lt;/p>
+&lt;p>&lt;img src="https://hugo.leonardofaria.net/wp-content/uploads/2020/11/lighthouse-report-leonardofaria-net.jpg" alt="Lighthouse report for leonardofaria.net">&lt;/p>
 &lt;p>The recommendations offered by Lighthouse are invaluable in helping to clarify what can be done to improve the quality of a page or web app. Based on their recommendations, developers can inform Product Managers, as well as other stakeholders, and prioritize the most important/impactful tasks from there.&lt;/p>
 &lt;p>There are different ways to run Lighthouse audits:&lt;/p>
 &lt;ul>
@@ -346,17 +346,17 @@ other&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="co
 &lt;p>Line 7 surfaces a few Lighthouse options, like &lt;code>logLevel&lt;/code> (&lt;code>silent | error | info |verbose&lt;/code>), &lt;code>output&lt;/code> (&lt;code>json | html | csv&lt;/code>) and &lt;code>onlyCategories&lt;/code> (an array filtering the tests you want to run). Their &lt;a href="https://github.com/GoogleChrome/lighthouse/blob/888bd6dc9d927a734a8e20ea8a0248baa5b425ed/typings/externs.d.ts#L82-L119">type definitions file&lt;/a> showcase all the offered options.&lt;/p>
 &lt;p>Next, the test is stored in the &lt;code>runnerResult&lt;/code> variable (line 8). The &lt;code>runnerResult&lt;/code> is an object that contains an HTML report, which is stored in the disk (lines 11-12). This result object is the main topic of my next few posts. There we will learn how to get relevant information from the audits.&lt;/p>
 &lt;p>Afterwards, the terminal will show the tested URL and its performance score (lines 15-16) and lastly, the Chrome instance will be closed.&lt;/p>
-&lt;p>&lt;img src="https://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/lighthouse-example-com-report.jpg" alt="Lighthouse report">&lt;/p>
+&lt;p>&lt;img src="https://hugo.leonardofaria.net/wp-content/uploads/2020/11/lighthouse-example-com-report.jpg" alt="Lighthouse report">&lt;/p>
 &lt;p>The HTML report is slightly different from the initial report of the post: only performance is audited as it was defined in the options.&lt;/p>
 &lt;h2 id="conclusions-and-up-next">Conclusions and up next&lt;/h2>
 &lt;p>This post covered what Lighthouse is, why to use it, and how to use it programmatically.&lt;/p>
 &lt;p>The snippet from this blog post can be found in the &lt;a href="https://github.com/leonardofaria/lighthouse-examples">lighthouse-examples GitHub repository&lt;/a>. From here you can check out different recipes in the &lt;a href="https://github.com/GoogleChrome/lighthouse#docs--recipes">Lighthouse docs&lt;/a> or keep reading the ones I have created:&lt;/p>
 &lt;ul>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://leonardofaria.github.io/leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hugo.leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>&amp;ndash;&lt;/p>
 &lt;p>Photo by &lt;a href="https://unsplash.com/@antilumen?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText">Robert Wiedemann&lt;/a> on &lt;a href="https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText">Unsplash&lt;/a>&lt;/p></description></item></channel></rss>
