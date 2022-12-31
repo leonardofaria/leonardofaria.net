@@ -1,0 +1,311 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>git on Leonardo Faria</title><link>http://leonardofaria.github.io/leonardofaria.net/tags/git/</link><description>Recent content in git on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 27 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://leonardofaria.github.io/leonardofaria.net/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>How to use Git aliases to increase your productivity</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/10/27/how-to-use-git-aliases-to-increase-your-productivity/</link><pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/10/27/how-to-use-git-aliases-to-increase-your-productivity/</guid><description>&lt;p>Git is a very powerful tool, and it can be a little scary sometimes. It doesn&amp;rsquo;t matter how long you&amp;rsquo;ve used it, you will find yourself searching for &amp;ldquo;how to do X&amp;rdquo;.&lt;/p>
+&lt;p>Today I want to talk about aliases. Aliases are short, custom made commands that translate into other commands. Aside from saving keystrokes, aliases help you avoiding memorizing command options or digging in your shell history to find the command you need.&lt;/p>
+&lt;p>There are 2 types of aliases: &lt;a href="https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases">Git aliases&lt;/a> and shell aliases, controlled by bash, zsh, etc. Let&amp;rsquo;s start by Git aliases:&lt;/p>
+&lt;h2 id="how-to-create-git-aliases">How to create Git aliases&lt;/h2>
+&lt;p>Git aliases can be stored globally or in individual repositories. Unless you have a very specific reason to keep an alias scoped to a project, I would recommend editing the global config file, which is located at &lt;code>~/.gitconfig&lt;/code>.&lt;/p>
+&lt;p>Aliases will live in the section &lt;code>[alias]&lt;/code>. They are available in your terminal as Git options the same way &lt;code>add&lt;/code>, &lt;code>commit&lt;/code> and other options work. Let&amp;rsquo;s see how to add an alias, step-by-step:&lt;/p>
+&lt;p>First, open your Git config file. In my case, I&amp;rsquo;ll use VS Code:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">code ~/.gitconfig
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Next, let&amp;rsquo;s add our first Git alias:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#000;font-weight:bold">[&lt;/span>alias&lt;span style="color:#000;font-weight:bold">]&lt;/span>
+&lt;span style="color:#008080">graph&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> log --oneline --graph --decorate
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>After saving the file, go to an existing Git project and execute &lt;code>git graph&lt;/code>. The result is similar to the image below:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/10/git-graph.jpg" alt="git graph example in the Tailwind CSS repository">&lt;/p>
+&lt;p>Instead of typing &lt;code>git log --oneline --graph --decorate&lt;/code> and remembering all three flags, now you can use &lt;code>git graph&lt;/code> and get the same result.&lt;/p>
+&lt;h2 id="my-favourite-git-aliases">My favourite Git aliases&lt;/h2>
+&lt;p>Here are some aliases that I have been using a lot lately:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#000;font-weight:bold">[&lt;/span>alias&lt;span style="color:#000;font-weight:bold">]&lt;/span>
+&lt;span style="color:#008080">graph&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> log --oneline --graph --decorate
+&lt;span style="color:#008080">ls&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> log --pretty&lt;span style="color:#000;font-weight:bold">=&lt;/span>format:&lt;span style="color:#d14">&amp;#34;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span> --decorate
+&lt;span style="color:#008080">ll&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> log --pretty&lt;span style="color:#000;font-weight:bold">=&lt;/span>format:&lt;span style="color:#d14">&amp;#34;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span> --decorate --numstat
+&lt;span style="color:#008080">lds&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> log --pretty&lt;span style="color:#000;font-weight:bold">=&lt;/span>format:&lt;span style="color:#d14">&amp;#34;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span> --decorate --date&lt;span style="color:#000;font-weight:bold">=&lt;/span>short
+&lt;span style="color:#008080">conflicts&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> diff --name-only --diff-filter&lt;span style="color:#000;font-weight:bold">=&lt;/span>U
+local-branches &lt;span style="color:#000;font-weight:bold">=&lt;/span> !git branch -vv | cut -c 3- | awk &lt;span style="color:#d14">&amp;#39;$3 !~/\\[/ { print $1 }&amp;#39;&lt;/span>
+recent-branches &lt;span style="color:#000;font-weight:bold">=&lt;/span> !git branch --sort&lt;span style="color:#000;font-weight:bold">=&lt;/span>-committerdate | head
+&lt;span style="color:#008080">authors&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> !git log --format&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#39;%aN &amp;lt;%aE&amp;gt;&amp;#39;&lt;/span> | grep -v &lt;span style="color:#d14">&amp;#39;users.noreply.github.com&amp;#39;&lt;/span> | sort -u --ignore-case
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>graph&lt;/code>, &lt;code>ls&lt;/code>, &lt;code>ll&lt;/code> and &lt;code>lds&lt;/code> are useful for history visualization. I use &lt;code>git ll&lt;/code> a lot since it gives me the commit, the changed files, and how many lines were modified, as shown below:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/10/git-ll.jpg" alt="git ll example in the Tailwind CSS repository">&lt;/p>
+&lt;p>&lt;code>conflicts&lt;/code> returns a list of conflicts which you can just copy and paste in your editor.&lt;/p>
+&lt;p>&lt;code>local-branches&lt;/code> returns a list of branches available locally and not in origin (GitHub for example). This can be useful if, for example, you need to double-check if your team has access to your branches.&lt;/p>
+&lt;p>&lt;code>recent-branches&lt;/code> is probably the one I use the most in this list. If you are working in different features at the same time and jumping from branch to branch, this is a must-have.&lt;/p>
+&lt;p>&lt;code>authors&lt;/code> is handy for open-source work. You can run &lt;code>git authors &amp;gt; AUTHORS.txt&lt;/code> and see a list of people who have worked in the repository.&lt;/p>
+&lt;h2 id="shell-aliases-with-oh-my-zsh-git-plugin">Shell aliases with Oh My Zsh Git plugin&lt;/h2>
+&lt;p>The list above is quite small, you may think. And it is indeed. This is because I also use the aliases created by the &lt;a href="https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh">Oh My Zsh Git plugin&lt;/a>.&lt;/p>
+&lt;blockquote>
+&lt;p>If you don&amp;rsquo;t what is Oh My Zsh: Oh My Zsh is a framework for managing your zsh configuration. With this tool, you can customize the shell prompt, use different themes and add plugins that offer aliases to increase your productivity.&lt;/p>
+&lt;/blockquote>
+&lt;p>Shell aliases are created in a slightly different way. They live inside the shell config files (usually &lt;code>~/.bashrc&lt;/code> or &lt;code>~/.zshrc&lt;/code>, if you use Bash and Zsh respectively).&lt;/p>
+&lt;p>Here is an example created by the plugin:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#0086b3">alias&lt;/span> &lt;span style="color:#008080">gst&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#39;git status&amp;#39;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you don&amp;rsquo;t use Oh My Zsh, you can still copy the line above and paste it in the end of the &lt;code>~/.bashrc&lt;/code> or &lt;code>~/.zshrc&lt;/code> files – the shell alias will work fine.&lt;/p>
+&lt;p>Instead of setting up a Git alias &lt;code>st&lt;/code> for status, I use the shell alias &lt;code>gst&lt;/code> which gives me the same result.&lt;/p>
+&lt;p>I prefer shell aliases over Git aliases for 2 reasons:&lt;/p>
+&lt;ol>
+&lt;li>Shell aliases don&amp;rsquo;t need to be prefixed by the command &lt;code>git&lt;/code>.&lt;/li>
+&lt;li>I don&amp;rsquo;t need to maintain a list of aliases since I can just learn the ones maintained by the Oh My Zsh community.&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>Protip: If you are using the default shell without any customization, I do recommend checking out the &lt;a href="https://github.com/ohmyzsh/ohmyzsh/">Oh My Zsh&lt;/a> project and &lt;a href="https://wesbos.com/">Wes Bos&lt;/a>&amp;rsquo; &lt;a href="https://commandlinepoweruser.com/">Command Line Power User&lt;/a>.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>Aliases are shortcuts you can create or use to increase your productivity. Today I showed two ways to use them in Git.&lt;/p>
+&lt;p>I hope this post inspires you to re-imagine how you use the terminal. What about starting to create your own aliases?&lt;/p></description></item><item><title>Using Dependabot to keep your environment up to date</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/05/02/using-dependabot-to-keep-your-environment-up-to-date/</link><pubDate>Sat, 02 May 2020 11:41:56 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/05/02/using-dependabot-to-keep-your-environment-up-to-date/</guid><description>&lt;p>Adding dependencies in a project is seen as a good way to not reinvent the wheel but at the same time it can be concerning in many different aspects:&lt;/p>
+&lt;ul>
+&lt;li>Versioning: sometimes dependencies can require specific versions of other dependencies and this can cause hiccups in your app;&lt;/li>
+&lt;li>Bundling: you need to be careful here to not bring extra code that will bloat your bundles;&lt;/li>
+&lt;li>Updating: JavaScript moves fast and if you don&amp;rsquo;t update packages regularly, you&amp;rsquo;ll play Jenga in the future.&lt;/li>
+&lt;/ul>
+&lt;p>There are different tools to cover the update part like &lt;a href="https://dependencies.io">Dependencies.io&lt;/a>, &lt;a href="https://snyk.io/">Snyk&lt;/a> and &lt;a href="https://dependabot.com/">Dependabot&lt;/a>. Since I have been using Dependabot for a while, I decided to write about my experience.&lt;/p>
+&lt;p>Dependabot is a tool acquired by GitHub one year ago that checks dependencies files from different languages (Ruby, JavaScript, Python, PHP, Elixir, to name a few) and finds new versions of libraries you are using in your project. Here is the setup:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/05/dependabot.jpg" alt="Dependabot screenshot">&lt;/p>
+&lt;p>Daily updates can be overwhelming and I think that weekly updates have a better cost/benefit. Also, I assign myself the Pull Requests so I can get notifications as soon they are opened.&lt;/p>
+&lt;h2 id="how-to-use-dependabot-effectively">How to use Dependabot effectively&lt;/h2>
+&lt;p>Dependabot includes in each PR release notes, changelogs, commits links and vulnerability details whenever available. This is useful because you can take a look at the information and decide to proceed or not.&lt;/p>
+&lt;p>However, as pragmatic programmers, we want to ensure things won&amp;rsquo;t break. The PR details are important but more than that, we want a simulation of all (or almost all) deliverables that the project has.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/05/semaphore.jpg" alt="CI Integration">&lt;/p>
+&lt;p>This screenshot shows what happens every time a PR is opened in the components library codebase of my work.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Tests (Jest / Bundle)&lt;/strong>: the Jest task will test the React components while the Bundle task will simulate the bundling commands we run when we want to update the package in the NPM registry;&lt;/li>
+&lt;li>&lt;strong>Linters (Stylesheets / JavaScript)&lt;/strong>: the stylesheet files follow a custom sass-lint setup and the JS code follows a series of ESLint rules. If a PR introduces a new version of a linter with new rules we will be able to capture that;&lt;/li>
+&lt;li>&lt;strong>Cypress (Screenshot Testing / Accessibility Testing)&lt;/strong>: if a new package introduces changes that may reflect in the look and feel of components, Cypress will capture the difference, screenshot it and store in S3. Since Cypress needs a live version of the documentation website, we also get the Gatsby build process covered.&lt;/li>
+&lt;/ul>
+&lt;p>With all these steps, it is very unlikely an external package will break our master branch. Kudos to my co-worker Grant Lee that also works in this project.&lt;/p></description></item><item><title>My list of GitHub tips and third-party apps</title><link>http://leonardofaria.github.io/leonardofaria.net/2019/09/03/my-list-of-github-tips-and-third-party-apps/</link><pubDate>Tue, 03 Sep 2019 11:42:19 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2019/09/03/my-list-of-github-tips-and-third-party-apps/</guid><description>&lt;p>I work at Thinkific with 20+ other developers (we are &lt;a href="http://bit.ly/thnk-eng-team-lead">hiring&lt;/a> &lt;a href="http://bit.ly/thnk-eng-lead">for&lt;/a> &lt;a href="http://bit.ly/thnk-senior-front-end-engineer">multiple&lt;/a> positions) in different codebases. GitHub is part of our toolkit, and I decided to write a post sharing a few Chrome extensions, integrations and third-party apps that help me be productive as an individual contributor and organized as code reviewer and team lead.&lt;/p>
+&lt;h2 id="chrome-extensions">Chrome extensions&lt;/h2>
+&lt;h3 id="refined-githubhttpschromegooglecomwebstoredetailrefined-githubhlepfoohegkhhmjieoechaddaejaokhfhlen">&lt;a href="https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en">Refined GitHub&lt;/a>&lt;/h3>
+&lt;p>&lt;a href="https://sindresorhus.com/">Sindre Sorhus&lt;/a> extension brings a &lt;a href="https://github.com/sindresorhus/refined-github#repositories">massive list of improvements&lt;/a> to GitHub UI and many of them have become part of the product after a bit.&lt;/p>
+&lt;h3 id="better-pull-request-for-githubhttpschromegooglecomwebstoredetailbetter-pull-request-for-gnfhdjopbhlggibjlimhdbogflgmbiahchlen">&lt;a href="https://chrome.google.com/webstore/detail/better-pull-request-for-g/nfhdjopbhlggibjlimhdbogflgmbiahc?hl=en">Better Pull Request for GitHub&lt;/a>&lt;/h3>
+&lt;p>This extension list project files in a tree. This is quite useful when you have a big pull request and you need to go back and forth to understand better what is going on.&lt;figure class="wp-block-image">&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2019/09/better-pull-request-for-github.jpg" alt="" class="wp-image-1984" /> &lt;/figure>&lt;/p>
+&lt;h3 id="github-hovercardhttpschromegooglecomwebstoredetailgithub-hovercardmmoahbbnojgkclgceahhakhnccimnplkhlen">&lt;a href="https://chrome.google.com/webstore/detail/github-hovercard/mmoahbbnojgkclgceahhakhnccimnplk?hl=en">GitHub Hovercard&lt;/a>&lt;/h3>
+&lt;p>This extension shows info about a user, project, issue or commit. It is a cool UI trick like Facebook does. This extension even works for private repositories, as long as you have a valid token to grab the information of the service.&lt;figure class="wp-block-image">&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2019/09/hover-cards.jpg" alt="" class="wp-image-1986" /> &lt;/figure>&lt;/p>
+&lt;h3 id="github-repository-sizehttpschromegooglecomwebstoredetailgithub-repository-sizeapnjnioapinblneaedefcnopcjepgkcihlen">&lt;a href="https://chrome.google.com/webstore/detail/github-repository-size/apnjnioapinblneaedefcnopcjepgkci?hl=en">GitHub Repository Size&lt;/a>&lt;/h3>
+&lt;p>This extension automatically adds the repository size and individual files size&lt;/p>
+&lt;h3 id="file-icon-for-github-and-gitlabhttpschromegooglecomwebstoredetailfile-icon-for-github-andficfmibkjjnpogdcfhfokmihanoldbfe">&lt;a href="https://chrome.google.com/webstore/detail/file-icon-for-github-and/ficfmibkjjnpogdcfhfokmihanoldbfe">File Icon for GitHub and GitLab&lt;/a>&lt;/h3>
+&lt;p>Not a lot to say here :)&lt;/p>
+&lt;h2 id="integrations">Integrations&lt;/h2>
+&lt;h3 id="pull-pandahttpspullpandacom">&lt;a href="https://pullpanda.com/">Pull Panda&lt;/a>&lt;/h3>
+&lt;p>Pull Panda is an integration GitHub acquired &lt;a href="https://pullpanda.com/github">a few months ago&lt;/a> and they have added for free in the product. It is very handy because you can map GitHub users to Slack users and then they will get inside Slack all the information about the work they are following in Slack. Pull Panda delivers comments in PRS and even tell you about git conflicts (I love and hate this one).&lt;/p>
+&lt;p>Pull Panda can also spot bottlenecks, show who are the ones most pushing/reviewing code and even assign automatically people to Pull Requests.&lt;/p>
+&lt;h2 id="macos-apps">macOS apps&lt;/h2>
+&lt;h3 id="gitifyhttpswwwgitifyio">&lt;a href="https://www.gitify.io/">Gitify&lt;/a>&lt;/h3>
+&lt;p>Gitify lives in your Mac menu bar and it is quite simple to understand. If the icon is green, you have a notification! It is also cool to mention the app is &lt;a href="https://github.com/manosim/gitify">open-source&lt;/a> (Electron-based, if you are curious).&lt;/p>
+&lt;h3 id="questshttpssteamclockcomquests">&lt;a href="https://steamclock.com/quests/">Quests&lt;/a>&lt;/h3>
+&lt;p>Quests is similar to Gitify but one important difference here is Quest also supports GitLab.&lt;/p>
+&lt;h2 id="ios-apps">iOS apps&lt;/h2>
+&lt;h3 id="githawkhttpgithawkcom">&lt;a href="http://githawk.com/">Githawk&lt;/a>&lt;/h3>
+&lt;p>Gitwalk is my favourite iOS app for GitHub. It lists pull requests in a friendly way and I like how you can see the files affected in the PR and all conversation in place. If you need to take a lot at a pull request when you are not in front of the computer, this app is for you!&lt;/p>
+&lt;p>&lt;em>What are your GitHub tricks? Let me know in the comments :)&lt;/em>&lt;/p></description></item><item><title>Another dotfiles repository</title><link>http://leonardofaria.github.io/leonardofaria.net/2018/06/16/another-dotfiles-repository/</link><pubDate>Sat, 16 Jun 2018 18:42:55 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2018/06/16/another-dotfiles-repository/</guid><description>&lt;p>A few days weeks I got a MacBook Air as secondary machine. Since its SSD is smaller than my main Mac I couldn’t use Time Machine. It was definitely a good time to finally create my &lt;a href="https://github.com/leonardofaria/dotfiles">dotfiles&lt;/a> repository. My repository is based in &lt;a href="https://github.com/webpro/dotfiles/">webpro/dotfiles&lt;/a> (you may want to check it out his repo to understand this one if you feel lost).&lt;/p>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/leonardofaria/dotfiles/master/screenshot.jpg" alt="">&lt;/p>
+&lt;h2 id="how-to-use-it">How to use it?&lt;/h2>
+&lt;ul>
+&lt;li>Make sure that you have an updated macOS and Command Line Tools for Xcode: &lt;code>sudo softwareupdate -i -a &amp;amp;&amp;amp; xcode-select --install&lt;/code>&lt;/li>
+&lt;li>Clone the repo in your home directory: &lt;code>cd ~ &amp;amp; git clone git@github.com:leonardofaria/dotfiles.git ~/.dotfiles&lt;/code>&lt;/li>
+&lt;li>Run &lt;code>./install.sh&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="a-idwhat_is_installed_10awhat-is-installed">&lt;a id="What_is_installed_10">&lt;/a>What is installed?&lt;/h2>
+&lt;h3 id="a-idinstalled_via_brew_12ainstalled-via-brew">&lt;a id="Installed_via_brew_12">&lt;/a>Installed via brew&lt;/h3>
+&lt;blockquote>
+&lt;p>Check the description of the less popular apps&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="http://brewformulas.org/Bats">bats&lt;/a> – Bash Automated Testing System&lt;/li>
+&lt;li>&lt;a href="https://github.com/kcrawford/dockutil">dockutil&lt;/a> – Command line tool for managing dock items&lt;/li>
+&lt;li>&lt;a href="https://the.exa.website/">exa&lt;/a> – A modern replacement for &lt;code>ls&lt;/code>&lt;/li>
+&lt;li>ffmpeg&lt;/li>
+&lt;li>git&lt;/li>
+&lt;li>git-extras&lt;/li>
+&lt;li>htop&lt;/li>
+&lt;li>&lt;a href="https://github.com/jakubroztocil/httpie">httpie&lt;/a> – A Modern command line HTTP client&lt;/li>
+&lt;li>hugo&lt;/li>
+&lt;li>imagemagick&lt;/li>
+&lt;li>mysql&lt;/li>
+&lt;li>&lt;a href="https://github.com/dylanaraps/neofetch">neofetch&lt;/a> – A command-line system information tool&lt;/li>
+&lt;li>nginx&lt;/li>
+&lt;li>python3&lt;/li>
+&lt;li>sqlite&lt;/li>
+&lt;li>tree&lt;/li>
+&lt;li>&lt;a href="https://theunarchiver.com/command-line">unar&lt;/a> – A easy way for unarchiving files&lt;/li>
+&lt;li>wget&lt;/li>
+&lt;li>wifi-password&lt;/li>
+&lt;li>yarn&lt;/li>
+&lt;/ul>
+&lt;h3 id="installed-via-brew-cask">Installed via brew cask&lt;/h3>
+&lt;blockquote>
+&lt;p>Using brew cask to install Mac app definitely save you a couple hours of browsing&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>appcleaner&lt;/li>
+&lt;li>atom&lt;/li>
+&lt;li>coconutbattery&lt;/li>
+&lt;li>docker&lt;/li>
+&lt;li>firefox&lt;/li>
+&lt;li>font-meslo-for-powerline&lt;/li>
+&lt;li>geekbench&lt;/li>
+&lt;li>gitify&lt;/li>
+&lt;li>google-chrome&lt;/li>
+&lt;li>iterm2&lt;/li>
+&lt;li>launchrocket&lt;/li>
+&lt;li>sequel-pro&lt;/li>
+&lt;li>slack&lt;/li>
+&lt;li>sourcetree&lt;/li>
+&lt;li>spectacle&lt;/li>
+&lt;li>spotify&lt;/li>
+&lt;li>tableplus&lt;/li>
+&lt;li>the-unarchiver&lt;/li>
+&lt;li>transmission&lt;/li>
+&lt;li>visual-studio-code&lt;/li>
+&lt;li>vlc&lt;/li>
+&lt;/ul>
+&lt;h3 id="a-idquick_look_plugins_63aquick-look-plugins">&lt;a id="Quick_Look_plugins_63">&lt;/a>Quick Look plugins&lt;/h3>
+&lt;ul>
+&lt;li>betterzip&lt;/li>
+&lt;li>qladdict&lt;/li>
+&lt;li>qlcolorcode&lt;/li>
+&lt;li>qlimagesize&lt;/li>
+&lt;li>qlmarkdown&lt;/li>
+&lt;li>qlstephen&lt;/li>
+&lt;li>qlvideo&lt;/li>
+&lt;li>quicklook-csv&lt;/li>
+&lt;li>quicklook-json&lt;/li>
+&lt;li>suspicious-package&lt;/li>
+&lt;li>webpquicklook&lt;/li>
+&lt;/ul>
+&lt;h3 id="other-stuff-also-installed">Other stuff also installed&lt;/h3>
+&lt;ul>
+&lt;li>Node 8 via &lt;code>nvm&lt;/code>, with a few global packages:
+&lt;ul>
+&lt;li>&lt;a href="https://www.npmjs.com/package/dockly">dockly&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.npmjs.com/package/list-scripts">list-scripts&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.npmjs.com/package/npm-check-updates">npm-check-updates&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.npmjs.com/package/npm-scripts-tree">npm-scripts-tree&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.npmjs.com/package/script-list">script-list&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.npmjs.com/package/space-hogs">space-hogs&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.npmjs.com/package/speed-test">speed-test&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Ruby 2.5.1 via &lt;code>rvm&lt;/code>&lt;/li>
+&lt;li>&lt;a href="https://github.com/robbyrussell/oh-my-zsh">Oh my zsh&lt;/a>, with &lt;a href="https://github.com/bhilburn/powerlevel9k">powerlevel9k&lt;/a> theme and git, rails, ruby, npm and osx plugins&lt;/li>
+&lt;/ul>
+&lt;h2 id="mac-defaults">Mac Defaults&lt;/h2>
+&lt;p>There are lots of customizable Mac settings. Check &lt;a href="https://github.com/leonardofaria/dotfiles/blob/master/macos/defaults.sh">&lt;code>macos/defaults.sh&lt;/code>&lt;/a> for all details.&lt;/p>
+&lt;h3 id="dock-items">Dock items&lt;/h3>
+&lt;p>You can update your dock running: &lt;code>dotfiles dock&lt;/code>.&lt;/p>
+&lt;p>Note: this will remove all your current dock items.&lt;/p>
+&lt;h2 id="a-idwhat_is_not_done_automatically_100awhat-is-not-done-automatically">&lt;a id="What_is_not_done_automatically_100">&lt;/a>What is not done automatically&lt;/h2>
+&lt;h3 id="a-idextra_environment_variables_102aextra-environment-variables">&lt;a id="Extra_environment_variables_102">&lt;/a>Extra environment variables&lt;/h3>
+&lt;p>Add your extra information environment variables in &lt;code>system/.custom&lt;/code>.&lt;/p>
+&lt;h3 id="a-iditerm_2_106aiterm-2">&lt;a id="iTerm_2_106">&lt;/a>iTerm 2&lt;/h3>
+&lt;p>Open Preferences and in General, check: “Load Preferences from a custom folder or URL”. Point the folder to &lt;code>macos&lt;/code> – There is a file there called &lt;code>com.googlecode.iterm2.plist&lt;/code> with all setup.&lt;/p></description></item><item><title>Github webinars</title><link>http://leonardofaria.github.io/leonardofaria.net/2017/12/04/github-webinars/</link><pubDate>Mon, 04 Dec 2017 15:44:53 -0200</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2017/12/04/github-webinars/</guid><description>&lt;p>Many of us use Github daily however we usually don&amp;rsquo;t use all its features. On the latest months, its team released a few webinars about how Github uses Github. More than showing the web interface, they talked about their culture and their workflows. In this post, I&amp;rsquo;m adding the links to the webinars with a few notes.&lt;/p>
+&lt;h3 id="communicating-with-issueshttpsresourcesgithubcomwebcastsgithub-communicating-with-issues">&lt;a href="https://resources.github.com/webcasts/GitHub-communicating-with-issues/">Communicating with Issues&lt;/a>&lt;/h3>
+&lt;ul>
+&lt;li>They don’t send email internally and they use repositories for everything&lt;/li>
+&lt;li>They have 688 people and 829 teams – the concept of team here is: by organizational team, by project, by affinity and by location&lt;/li>
+&lt;li>Their projects always have: &lt;code>README.md&lt;/code>, &lt;code>CONTRIBUTING.md&lt;/code>, &lt;code>ROADMAP.md&lt;/code>, &lt;code>ISSUE_TEMPLATE.md&lt;/code> and &lt;code>PULL_REQUEST_TEMPLATE.md&lt;/code>&lt;/li>
+&lt;li>In PRs they include a TL,DR (I also do this)&lt;/li>
+&lt;li>It is possible to create accordions / dropdown in Markdown – &lt;a href="https://speakerdeck.com/crichid/how-github-uses-github-communicating-with-issues?slide=38">example&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="communicating-with-remote-teamshttpsresourcesgithubcomwebcastsgithub-communicating-with-remote-teams">&lt;a href="https://resources.github.com/webcasts/GitHub-communicating-with-remote-teams/">Communicating with remote teams&lt;/a>&lt;/h3>
+&lt;ul>
+&lt;li>“Remote” is not a good word and they prefer using the term “Distributed” – which I also like. Like &lt;a href="https://www.thinkific.com">Thinkific&lt;/a>, they have weekly radars and team stand-ups. It is interesting to mention they use their own Github to handle projects, instead of using a project-specific tool like Jira or Asana. Even their one-on-ones are stored in repositories&lt;/li>
+&lt;li>They mentioned &lt;a href="https://github.com/topics/hubot">Hubot&lt;/a> – a bot system with several plugins&lt;/li>
+&lt;li>For video calls, they use zoom – for all meetings they book they also add a zoom link (we kind of do the same with Google Meet)&lt;/li>
+&lt;/ul>
+&lt;h3 id="managing-your-teamshttpsresourcesgithubcomwebcastsgithub-managing-your-teams">&lt;a href="https://resources.github.com/webcasts/GitHub-managing-your-teams/">Managing your teams&lt;/a>&lt;/h3>
+&lt;ul>
+&lt;li>They show the project&amp;rsquo;s functionality inside Github. It is a Kanban/Trello style project tool with the advantage of being integrated with Github. To be honest, I never noticed the Project feature but after this webinar, I started using in a pet-project&lt;/li>
+&lt;li>They show &lt;a href="https://probot.github.io/">Probot&lt;/a> – it’s an open-source bot created by GH employees&lt;/li>
+&lt;li>They show &lt;a href="https://help.github.com/articles/about-task-lists/#creating-task-lists">Task Lists&lt;/a> (markdown trick)&lt;/li>
+&lt;/ul>
+&lt;h3 id="managing-your-projectshttpsresourcesgithubcomwebcastsgithub-managing-your-projects">&lt;a href="https://resources.github.com/webcasts/GitHub-managing-your-projects/">Managing your projects&lt;/a>&lt;/h3>
+&lt;ul>
+&lt;li>This one covers pretty much the project feature that Github offers (similar to the previous one). It is cool because projects are connected to the repo and they show how to use Issues, PRs and Milestones together. For one moment I thought why we don’t use Github in the company but I remembered how much would cost per user so I am not sure if it is a good idea.&lt;/li>
+&lt;li>Github has &lt;a href="https://github.com/blog/2135-saved-replies">saved replies&lt;/a> that can be used in PR’s and Issues. Pretty handy.&lt;/li>
+&lt;/ul>
+&lt;h3 id="writing-documentation-for-your-projectshttpsresourcesgithubcomwebcastsgithub-writing-documentation-for-your-projects">&lt;a href="https://resources.github.com/webcasts/GitHub-writing-documentation-for-your-projects/">Writing documentation for your projects&lt;/a>&lt;/h3>
+&lt;ul>
+&lt;li>They show &lt;a href="https://docs.readthedocs.io/en/latest/index.html">Read the Docs&lt;/a>&lt;/li>
+&lt;li>They remember that documentation is part of a process, don&amp;rsquo;t give this to only one person.&lt;/li>
+&lt;li>They share some thoughts about how to write good documentation.&lt;/li>
+&lt;/ul>
+&lt;p>If you like my notes you may want to watch the videos :)&lt;/p></description></item><item><title>Serving raw files directly from Github</title><link>http://leonardofaria.github.io/leonardofaria.net/2016/08/06/serving-raw-files-directly-from-github/</link><pubDate>Sat, 06 Aug 2016 20:49:30 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2016/08/06/serving-raw-files-directly-from-github/</guid><description>&lt;p>We usually create HTML files in our Github repositories, but how to show this data in the browser? &lt;a href="http://rawgit.com">RawGit&lt;/a> is a solution to serve files with the correct content types.&lt;/p>
+&lt;p>Example: The WordPress &lt;code>readme.html&lt;/code> file can be shown in the following URL:&lt;/p>
+&lt;pre>&lt;code>https://rawgit.com/WordPress/WordPress/master/readme.html
+&lt;/code>&lt;/pre>&lt;p>You only need to follow the formula:&lt;/p>
+&lt;pre>&lt;code>https://rawgit.com/USER/REPOSITORY/BRANCH/file.html
+&lt;/code>&lt;/pre>&lt;p>The advantage of using RawGit over Github Pages is that RawGit works with all branches, while Github Pages requires a gh-pages branch. Last not the least, the &lt;a href="https://github.com/rgrove/rawgit">source code&lt;/a> of this solution is also available in Github.&lt;/p></description></item><item><title>Replace git author using shell script</title><link>http://leonardofaria.github.io/leonardofaria.net/2016/02/02/replace-git-author-using-shell-script/</link><pubDate>Tue, 02 Feb 2016 02:22:56 -0200</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2016/02/02/replace-git-author-using-shell-script/</guid><description>&lt;p>This is an old trick that saved me several times. Sometimes people forget to setup their name and email information. The following script is useful to fix mistakes:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#999;font-weight:bold;font-style:italic">#!/bin/sh
+&lt;/span>&lt;span style="color:#999;font-weight:bold;font-style:italic">&lt;/span>
+git filter-branch -f --env-filter &lt;span style="color:#d14">&amp;#39;
+&lt;/span>&lt;span style="color:#d14">
+&lt;/span>&lt;span style="color:#d14">an=&amp;#34;$GIT_AUTHOR_NAME&amp;#34;
+&lt;/span>&lt;span style="color:#d14">am=&amp;#34;$GIT_AUTHOR_EMAIL&amp;#34;
+&lt;/span>&lt;span style="color:#d14">cn=&amp;#34;$GIT_COMMITTER_NAME&amp;#34;
+&lt;/span>&lt;span style="color:#d14">cm=&amp;#34;$GIT_COMMITTER_EMAIL&amp;#34;
+&lt;/span>&lt;span style="color:#d14">
+&lt;/span>&lt;span style="color:#d14">if [ &amp;#34;$GIT_COMMITTER_EMAIL&amp;#34; = &amp;#34;old@email.com&amp;#34; ]
+&lt;/span>&lt;span style="color:#d14">then
+&lt;/span>&lt;span style="color:#d14"> cn=&amp;#34;New author name&amp;#34;
+&lt;/span>&lt;span style="color:#d14"> cm=&amp;#34;new@email.com&amp;#34;
+&lt;/span>&lt;span style="color:#d14">fi
+&lt;/span>&lt;span style="color:#d14">
+&lt;/span>&lt;span style="color:#d14">export GIT_AUTHOR_NAME=&amp;#34;$an&amp;#34;
+&lt;/span>&lt;span style="color:#d14">export GIT_AUTHOR_EMAIL=&amp;#34;$am&amp;#34;
+&lt;/span>&lt;span style="color:#d14">export GIT_COMMITTER_NAME=&amp;#34;$cn&amp;#34;
+&lt;/span>&lt;span style="color:#d14">export GIT_COMMITTER_EMAIL=&amp;#34;$cm&amp;#34;
+&lt;/span>&lt;span style="color:#d14">&amp;#39;&lt;/span>
+&lt;span style="color:#0086b3">echo&lt;/span> &lt;span style="color:#d14">&amp;#34;Run after&amp;#34;&lt;/span>
+&lt;span style="color:#0086b3">echo&lt;/span> &lt;span style="color:#d14">&amp;#34;git push origin +master:master&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Gource, uma forma estilosa de ver logs do seu controle de versão</title><link>http://leonardofaria.github.io/leonardofaria.net/2013/01/20/gource-uma-forma-estilosa-de-ver-logs-do-seu-controle-de-versao/</link><pubDate>Sun, 20 Jan 2013 18:53:58 -0200</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2013/01/20/gource-uma-forma-estilosa-de-ver-logs-do-seu-controle-de-versao/</guid><description>&lt;p>O &lt;a href="http://catarse.me/">Catarse&lt;/a> é uma plataforma brasileira de &lt;a href="http://pt.wikipedia.org/wiki/Crowdfunding">crowdfunding&lt;/a> que em &lt;a href="http://blog.catarse.me/2-anos-de-catarse/">2 anos já apoiou mais de 700 projetos, movimentando quase 5 milhões de reais&lt;/a>. São números impressionantes, estão todos de parabéns por fazer acontecer, mas não é essa a razão do meu post :)&lt;/p>
+&lt;p>Ao me deparar com seu &lt;a href="http://blog.catarse.me/2-anos-de-catarse/">post de estatísticas&lt;/a>, o &lt;a href="http://vimeo.com/57631568">vídeo da evolução do código-fonte&lt;/a> do app deles me chamou a atenção. Ele foi feito com o &lt;a href="http://code.google.com/p/gource/">Gource&lt;/a>, que até o momento não conhecia. Esse aplicativo lê os logs do sistema de controle de versão (Git, Mercurial, Bazaar, Subversion) do seu projeto e gera a visualização gráfica da evolução do desenvolvimento. Por exemplo, o vídeo abaixo mostra a &lt;a href="http://www.youtube.com/embed/r0ji8FDNTj0">evolução dos commits de 2004 a 2009 do Rails&lt;/a>:&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/r0ji8FDNTj0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;p>O Youtube está &lt;a href="http://www.youtube.com/results?search_query=gource">cheio de vídeos desse tipo&lt;/a>. Se você usa Mac OS, pode instalar o gource via port:&lt;/p>
+&lt;pre>&lt;code>port install gource
+&lt;/code>&lt;/pre></description></item><item><title>Migrando um repositório SVN para GIT</title><link>http://leonardofaria.github.io/leonardofaria.net/2013/01/04/migrando-um-repositorio-svn-para-git/</link><pubDate>Fri, 04 Jan 2013 12:39:33 -0200</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2013/01/04/migrando-um-repositorio-svn-para-git/</guid><description>&lt;p>Nos últimos dias, pesquisei uma forma de migrar um repositório de SVN para GIT e quando consegui fazer, percebi que era mais fácil que eu imagina. Com isso, resolvi escrever uma receitinha de como fazer isso.&lt;/p>
+&lt;p>Inicialmente você deve criar um arquivo mapeando seus usuários do SVN para o GIT. Ele deverá ter o formato abaixo:&lt;/p>
+&lt;pre>&lt;code>leonardo = Leonardo Faria &amp;lt;leonardo@email.com&amp;gt;
+autor2 = Autor &amp;lt;autor@email.com&amp;gt;
+&lt;/code>&lt;/pre>&lt;p>Nota: caso você não queira manualmente escrever esse arquivo, vasculhe o log do seu projeto SVN e obtenha a lista de autores automaticamente:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">svn log -q | awk -F &lt;span style="color:#d14">&amp;#39;|&amp;#39;&lt;/span> &lt;span style="color:#d14">&amp;#39;/^r/ {sub(&amp;#34;^ &amp;#34;, &amp;#34;&amp;#34;, $2); sub(&amp;#34; $&amp;#34;, &amp;#34;&amp;#34;, $2); print $2&amp;#34; = &amp;#34;$2&amp;#34; &amp;lt;&amp;#34;$2&amp;#34;&amp;gt;&amp;#34;}&amp;#39;&lt;/span> | sort -u &amp;gt; authors.txt
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>A seguir, crie um novo repositório e defina os autores dos commits de acordo com o criado no arquivo acima.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">mkdir repo &lt;span style="color:#000;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#0086b3">cd&lt;/span> repo
+git svn init http://server/svn/project/trunk --no-metadata
+git config svn.authorsfile ~/authors.txt
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Lembre-se que todos os autores de commits devem constar no arquivo, caso contrário o processo não irá funcionar. Em seguida, execute:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">git svn fetch
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Dependendo do tamanho do seu repositório, isso pode demorar um pouco.&lt;br>
+Em seguida, é só adicionar as configurações do servidor e pronto!&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">git remote add origin git@server:path/repo.git
+git push -u origin master
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="uma-coisa-mais">Uma coisa mais&lt;/h3>
+&lt;p>Você também pode converter as propriedades do svn:ignore para um arquivo .gitignore. Para isso:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">git svn show-ignore &amp;gt; .gitignore
+git add .gitignore
+git commit -m &lt;span style="color:#d14">&amp;#39;Convert svn:ignore properties to .gitignore.&amp;#39;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Sobre Controle de Versão</title><link>http://leonardofaria.github.io/leonardofaria.net/2008/05/31/sobre-controle-de-versao/</link><pubDate>Sat, 31 May 2008 17:38:06 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2008/05/31/sobre-controle-de-versao/</guid><description>&lt;p>Na disciplina de Engenharia de Software que faço no curso de Sistemas de Informação da Faculdade Pitágoras, fiz um trabalho introdutório sobre Sistemas de Controle de Versão. O trabalho está abaixo e também disponível em &lt;a href="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2008/05/controle.pdf">PDF&lt;/a>.&lt;/p>
+&lt;h3 id="introdução">Introdução&lt;/h3>
+&lt;p>O desenvolvimento de software envolve um processo contínuo de evolução de código e baseado nesse paradigma, surgiu a necessidade do desenvolvimento de uma solução que gerenciasse o controle de versões dos códigos-fonte, da documentação e do compartilhamento de trabalho. Assim, surgiram os softwares responsáveis de controle de versão.&lt;/p>
+&lt;p>Entre suas funções, os Sistemas de Controle de Versão se destacam por possibilitar:&lt;/p>
+&lt;ul>
+&lt;li>Controle do histórico: possibilidade de se ter um histórico do desenvolvimento, bem como a possibilidade de rastrear as alterações feitas durante um projeto.&lt;/li>
+&lt;li>Trabalho em equipe: oportunidade de possibilitar a divisão de tarefas de forma que não comprometa a integridade total do projeto. Desse modo, pode-se dividir uma equipe de programadores sem que nenhum atrapalhe o projeto do outro, tudo isso sem problemas de sincronização de arquivos.&lt;/li>
+&lt;li>Marcação e resgate de versões estáveis: a utilização dos Sistemas de Controle de Versão facilita a restauração de versões funcionais. Desse modo, é possível trabalhar com segurança o desenvolvimento de uma versão de software sem o comprometimento da versão estável.&lt;/li>
+&lt;li>Apresentando todo essas vantagens, o Controle de Versão é amplamente usado no desenvolvimento de sistemas. Seja em times pequenos ou grandes, softwares livres ou fechados, o Controle de Versão organiza e centraliza decisões.&lt;/li>
+&lt;/ul>
+&lt;h3 id="funcionamento">Funcionamento&lt;/h3>
+&lt;p>Existem diversas soluções para Controle de Versão, gratuitas e pagas. Entre as opções pagas, destacam-se o SourceSafe (Microsoft) e ClearCase (IBM). Entre as opções gratuitas, estão o CVS, o SVN e o Git.&lt;br>
+Todas essas ferramentas tem em comum a forma de funcionamento. Em um rápido resumo:&lt;/p>
+&lt;ol>
+&lt;li>Existe um repositório em um servidor qualquer. Esse servidor armazena todas as versões do software.&lt;/li>
+&lt;li>Os desenvolvedores (clientes) acessam o repositório e trabalham nos arquivos do projeto, em seus respectivos computadores.&lt;/li>
+&lt;li>Periodicamente, os desenvolvedores enviam o código atualizado para o repositório (commit).&lt;/li>
+&lt;/ol>
+&lt;h3 id="comparativo-svn-e-sourcesafe">Comparativo: SVN e SourceSafe&lt;/h3>
+&lt;p>Para um comparativo, escolhemos dois sistemas bastante antagônicos: o SVN, solução livre e o SourceSafe, da Microsoft. O SVN funciona apenas com a arquitetura cliente-servidor, enquanto o SourceSafe possibilita a utilização de repositórios distribuídos, além de também trabalhar no&lt;br>
+modo cliente-servidor.&lt;br>
+Outra diferença significativa está que o SourceSafe funciona apenas em plataforma Windows, e que surgiu de uma demanda interna da própria Microsoft. Já o SVN é multi-plataforma e livre.&lt;br>
+Além disso, é importante ressaltar outra diferença entre os dois: facilidade de utilização. O SVN funciona a partir do terminal (e através de ferramentas de frontend) e é bem mais simples de instalar e gerenciar do que a ferramenta de controle de versões da empresa de Redmond.&lt;/p>
+&lt;h3 id="conclusão">Conclusão&lt;/h3>
+&lt;p>Para um desenvolvimento profissional de aplicações, é imprescindível o Controle de Versão. É ele que garante a integridade do projeto e é, além de ter todas as vantagens apresentadas nesse trabalho, outra forma de previnir acidentes de percurso no desenvolvimento, como estações que podem parar de funcionar por causas diversas.&lt;/p></description></item></channel></rss>

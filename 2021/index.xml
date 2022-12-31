@@ -1,0 +1,62 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2021s on Leonardo Faria</title><link>http://leonardofaria.github.io/leonardofaria.net/2021/</link><description>Recent content in 2021s on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 08 Nov 2021 01:00:00 +0000</lastBuildDate><atom:link href="http://leonardofaria.github.io/leonardofaria.net/2021/index.xml" rel="self" type="application/rss+xml"/><item><title>The path to Staff Engineer</title><link>http://leonardofaria.github.io/leonardofaria.net/2021/11/08/the-path-to-staff-engineer/</link><pubDate>Mon, 08 Nov 2021 01:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2021/11/08/the-path-to-staff-engineer/</guid><description>&lt;p>What happens after you are a Senior Engineer in a startup? How do you align your career goals with what the company you work for needs? In this post, I share my personal experience while I also talk about the &lt;a href="http://staffeng.com">Staff Engineer book&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2021/11/staff-eng-cover.png" alt="Architect&amp;rsquo;s Weekly Calendar">&lt;/p>
+&lt;p>In the last five years, I have worked in different roles at Thinkific (by the way, &lt;a href="http://bit.ly/thnk-careers">we are hiring&lt;/a>): I started as a Full-stack Developer, and then I was Team Lead for three years. The Team Lead role was great, and I had great support from the organization, but it was not for me.&lt;/p>
+&lt;p>Moving back to a Technical track of my career, I found the Staff Engineer book written by Wilson Larson, which helped me a lot how to see my role and my potential. The book covers the different types of Staff+ titles we see in this industry (Staff Engineer, Principal Engineer, Architect, and others) and contains interviews with fourteen professionals who share their career trajectories.&lt;/p>
+&lt;p>You can &lt;a href="https://staffeng.com/book">buy Staff Engineer&lt;/a> as an ebook, audiobook, or physical copy, and if my post doesn&amp;rsquo;t convince you, listen to these &lt;a href="https://linearb.io/blog/will-larson-staff-engineer/">two&lt;/a> &lt;a href="https://open.spotify.com/episode/5U878ZRPNhh9dwBfyuABn1?si=It4Vaa6TTWOVHCKF3UA6Tg&amp;amp;nd=1">podcasts&lt;/a> about the content of the book.&lt;/p>
+&lt;p>Next, I will share a few topics of the book along with my personal experiences.&lt;/p>
+&lt;h2 id="archetypes">Archetypes&lt;/h2>
+&lt;p>The book starts by identifying the different archetypes of Staff Engineers. I previously noticed how my colleagues act in different ways in their projects and teams:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Tech Lead&lt;/strong> guides the approach and execution of a particular team;&lt;/li>
+&lt;li>&lt;strong>Architect&lt;/strong> is responsible for the direction, quality, and strategy within an area;&lt;/li>
+&lt;li>&lt;strong>Solver&lt;/strong> dips deep into complex problems and finds an appropriate path forward;&lt;/li>
+&lt;li>&lt;strong>Right-Hand&lt;/strong> borrows executive scope and authority to operate particularly complex organizations.&lt;/li>
+&lt;/ul>
+&lt;p>The archetypes do not necessarily reflect a job title, but the Architect one sounded like what I was doing at work. The book has a &amp;ldquo;typical calendar example&amp;rdquo; for each role, and his Architect&amp;rsquo;s Weekly Calendar looked pretty similar to mine.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2021/11/staff-eng-architect-calendar.png" alt="Architect&amp;rsquo;s Weekly Calendar">&lt;/p>
+&lt;p>The calendar looks very busy compared to an Individual Contributor calendar. It reflects that Staff Engineers are in a leadership position. They influence people, not like a Team Lead or Engineer Manager, but differently: with technology.&lt;/p>
+&lt;h2 id="getting-the-title">Getting the title&lt;/h2>
+&lt;p>The book also covers how to &amp;ldquo;get there&amp;rdquo;. It is a combination of different factors, and I will comment on some of the mentioned in the book, starting with Staff Project.&lt;/p>
+&lt;h3 id="staff-projects">Staff projects&lt;/h3>
+&lt;p>This is not a promotion requirement, but delivering a Staff project is a popular step around reaching a Staff+ role. Staff projects are typically:&lt;/p>
+&lt;ul>
+&lt;li>Complex and ambiguous: the project might start with only one unclear statement, and from there, you&amp;rsquo;ll have to identify a concrete approach that works;&lt;/li>
+&lt;li>Numerous and divided stakeholders: the complexity can also happen in the organizational alignment around both the problem and the solution;&lt;/li>
+&lt;li>Highly visible: the kind of project that leadership talks about it in their all-company meetings. Any failure or success will be visible.&lt;/li>
+&lt;/ul>
+&lt;p>I didn&amp;rsquo;t have a Staff project to move to an architecture role; however, I delivered a complex project with the characteristics above during my Team Lead years.&lt;/p>
+&lt;h3 id="promotion-packet">Promotion packet&lt;/h3>
+&lt;p>Once you identify why you want the role - &lt;em>&amp;ldquo;this is not a faster Senior Engineer&amp;rdquo;&lt;/em> - the next step is writing a promotion packet. Organizations will do this in different ways, but mainly the outcome is mapping your impact as a professional and identifying areas or skills that you can develop in the next while.&lt;/p>
+&lt;p>The promotion packet is a living document. Review it with your manager once you have the first version, and periodically check/update it to follow your progress towards a career change.&lt;/p>
+&lt;h3 id="finding-your-sponsor">Finding your sponsor&lt;/h3>
+&lt;p>&lt;em>&amp;ldquo;The most important member of the team guiding your promotion is you yourself&amp;rdquo;&lt;/em> is a quote I couldn&amp;rsquo;t agree more. Nobody will drive your career for you, but it is crucial to find people that will support your journey.&lt;/p>
+&lt;p>Your direct manager will be the person to advocate for your promotion and the one having honest conversations about the gaps you need to fill to become a better professional. They may/may not have worked with someone aspiring to the same careers goals that you have, and for that, invest in other relationships.&lt;/p>
+&lt;h3 id="get-in-the-room-and-stay-there">Get in the room, and stay there&lt;/h3>
+&lt;p>This chapter is great no matter the area you work or the title you have. The content is &lt;a href="https://staffeng.com/guides/getting-in-the-room">available online&lt;/a> and here is a short summary of the main points:&lt;/p>
+&lt;p>&lt;strong>There is no single &amp;ldquo;room&amp;rdquo; to enter&lt;/strong>: entering rooms will be an ongoing, iterative careers challenge. It might be a sprint pre-planning with your tech lead, a quarterly planning meeting, or an architecture review.&lt;/p>
+&lt;p>There are some strategies to increase your value &amp;ldquo;to the room&amp;rdquo;:&lt;/p>
+&lt;ul>
+&lt;li>Stay aligned with your manager: being on the same page as your manager is something that many take a while to comprehend;&lt;/li>
+&lt;li>Optimize for the group: optimize your message for others build trust and confidence in your judgment;&lt;/li>
+&lt;li>Speak clearly and concisely: good advice no matter what occasion you are interacting with other human beings;&lt;/li>
+&lt;li>Be low friction: learn how to navigate difficult conversations effectively, and you&amp;rsquo;re more likely to be involved;&lt;/li>
+&lt;li>Come prepared: good advice no matter what occasion you are interacting with other human beings;&lt;/li>
+&lt;li>Focus and be present: good advice no matter what occasion you are interacting with other human beings;&lt;/li>
+&lt;li>Volunteer for low-status tasks: being helpful, especially for not exciting tasks, is an underestimated skill.&lt;/li>
+&lt;/ul>
+&lt;h3 id="being-visible">Being visible&lt;/h3>
+&lt;p>The last topic about the book I want to highlight here is visibility. Visibility is crucial in this type of role, and there are ways to improve visibility in the workspace:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Executive visibility:&lt;/strong> develop relationships beyond your manager;&lt;/li>
+&lt;li>&lt;strong>External visibility:&lt;/strong> have a blog/podcast and speak in a meetup/conference creates visibility for yourself and your work;&lt;/li>
+&lt;li>&lt;strong>Internal visibility:&lt;/strong> work on things that matter is the best way to create internal visibility, however a few other things that can help you, including writing long-lived documents (ex. architecture docs), leading company events (ex. architecture reviews, company all-hands), contributing to your company&amp;rsquo;s blog and attending/hosting office hours for your team or organization.&lt;/li>
+&lt;/ul>
+&lt;p>I am a true believer in external visibility; otherwise, I wouldn&amp;rsquo;t be writing about development here since 2005 or speaking at meetups (even without a polished English) since 2016. In different organizations I worked with, I had written docs, led company events, and attended/hosted events.&lt;/p>
+&lt;h2 id="stories">Stories&lt;/h2>
+&lt;p>Each story of a Staff or Principal is fascinating to read. My favourite snippet, which is very similar to what I was doing before reading the book, is from &lt;a href="https://sylormiller.com">Katie Sylor-Miller&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;ldquo;I&amp;rsquo;m a frontend architect, but by far the main thing I&amp;rsquo;ve been writing lately is SQL, because I&amp;rsquo;m doing a lot of data analysis. I&amp;rsquo;ve been looking at our performance metrics to figure out where the areas for improvement are, and what would be the most impactful issues to fix to improve performance and business metrics. I will write little bits of JS or PHP here and there, but it&amp;rsquo;s mostly to help unblock teams or to run small performance-related experiments.&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="conclusions">Conclusions&lt;/h2>
+&lt;p>Figuring out what to do in our careers is hard, but there is help out there. For a while, I stayed in the &amp;ldquo;manager path&amp;rdquo; then I returned to the &amp;ldquo;technical path&amp;rdquo; with the support of my [great] manager and research.&lt;/p>
+&lt;p>I hope that the experience I shared here and Larson&amp;rsquo;s book can help you identify how to navigate your career development. Share your thoughts in the comments!&lt;/p></description></item></channel></rss>

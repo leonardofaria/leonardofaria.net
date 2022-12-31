@@ -1,0 +1,127 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>usability on Leonardo Faria</title><link>http://leonardofaria.github.io/leonardofaria.net/tags/usability/</link><description>Recent content in usability on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 31 Aug 2015 17:29:46 -0300</lastBuildDate><atom:link href="http://leonardofaria.github.io/leonardofaria.net/tags/usability/index.xml" rel="self" type="application/rss+xml"/><item><title>Data looks better naked</title><link>http://leonardofaria.github.io/leonardofaria.net/2015/08/31/data-looks-better-naked/</link><pubDate>Mon, 31 Aug 2015 17:29:46 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2015/08/31/data-looks-better-naked/</guid><description>&lt;p>Data is usually explained in tables or charts, but people sometimes commit mistakes when they add in them redundant or boring elements. A good table or chart is worth a thousand words and the following three gifs show how to improve your presentations. &lt;a href="https://darkhorseanalytics.com/blog/data-looks-better-naked/">Source&lt;/a>&lt;/p>
+&lt;p>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2015/07/ClearOffPieChart.gif">&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2015/07/ClearOffPieChart.gif" alt="Remove to improve - the pie chart edition">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2015/07/ClearOffBarGraph.gif">&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2015/07/ClearOffBarGraph.gif" alt="Remove to improve - the pie chart edition" width="640" height="460" class="alignnone size-full wp-image-1596" />&lt;/a>&lt;/p>
+&lt;p>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2015/07/ClearOffTheTableMd.gif">&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2015/07/ClearOffTheTableMd.gif" alt="Remove to improve - the table edition" width="800" height="600" class="alignnone size-full wp-image-1597" />&lt;/a>&lt;/p></description></item><item><title>Novas janelas em Javascript não-obstrusivo</title><link>http://leonardofaria.github.io/leonardofaria.net/2007/06/23/novas-janelas-em-javascript-nao-obstrusivo/</link><pubDate>Sat, 23 Jun 2007 00:49:44 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2007/06/23/novas-janelas-em-javascript-nao-obstrusivo/</guid><description>&lt;p>A newsletter dessa semana do &lt;a href="http://www.sitepoint.com/">SitePoint&lt;/a> mostrou uma forma bem interessante de abrir novas janelas com javascript não-obstrusivo e validando XHTML Strict (para quem não sabe, o atributo ‘target&amp;rsquo; da tag ‘a&amp;rsquo; não passa na validação).&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;http://example.com/&amp;#34;&lt;/span> &lt;span style="color:#008080">onclick&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;
+&lt;/span>&lt;span style="color:#d14"> if (confirm(&amp;#39;Open this link in a new window?&amp;#39;)) {
+&lt;/span>&lt;span style="color:#d14"> open(&amp;#39;http://example.com/&amp;#39;);
+&lt;/span>&lt;span style="color:#d14"> return false;
+&lt;/span>&lt;span style="color:#d14"> }
+&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>&amp;gt;external link&amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Basicamente, emprega-se o uso de uma caixa de diálogo. Bem simples. Uma alternativa mais sofisticada é criar uma função e ativá-la através do uso de uma classe. Veja:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;http://example.com/&amp;#34;&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;ext&amp;#34;&lt;/span>&amp;gt;external link&amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">script&lt;/span> &lt;span style="color:#008080">type&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;text/javascript&amp;#34;&lt;/span>&amp;gt;
+&lt;span style="color:#000;font-weight:bold">var&lt;/span> links &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#0086b3">document&lt;/span>.getElementsByTagName(&lt;span style="color:#d14">&amp;#34;a&amp;#34;&lt;/span>);
+&lt;span style="color:#000;font-weight:bold">for&lt;/span> (&lt;span style="color:#000;font-weight:bold">var&lt;/span> i &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#099">0&lt;/span>; i &lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span> links.length; i&lt;span style="color:#000;font-weight:bold">++&lt;/span>) {
+&lt;span style="color:#000;font-weight:bold">var&lt;/span> link &lt;span style="color:#000;font-weight:bold">=&lt;/span> links[i];
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> (link.className &lt;span style="color:#000;font-weight:bold">==&lt;/span> &lt;span style="color:#d14">&amp;#34;ext&amp;#34;&lt;/span>) {
+link.onclick &lt;span style="color:#000;font-weight:bold">=&lt;/span> clickHandler;
+}
+}
+&lt;span style="color:#000;font-weight:bold">function&lt;/span> clickHandler() {
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> (confirm(&lt;span style="color:#d14">&amp;#34;Open this link in a new window?&amp;#34;&lt;/span>)) {
+open(&lt;span style="color:#000;font-weight:bold">this&lt;/span>.href);
+&lt;span style="color:#000;font-weight:bold">return&lt;/span> &lt;span style="color:#000;font-weight:bold">false&lt;/span>;
+}
+}
+&amp;lt;/&lt;span style="color:#000080">script&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Extensão melhora usabilidade em sites</title><link>http://leonardofaria.github.io/leonardofaria.net/2007/01/28/extensao-melhora-usabilidade-em-sites/</link><pubDate>Sun, 28 Jan 2007 21:16:36 -0200</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2007/01/28/extensao-melhora-usabilidade-em-sites/</guid><description>&lt;p>Uma extensão que venho utilizando no &lt;a href="http://pagead2.googlesyndication.com/pagead/iclk?sa=l&amp;amp;num=0&amp;amp;client=ca-ref-pub-6265317430549220&amp;amp;adurl=http://tools.google.com/firefox/toolbar/bundle/intl/pt-BR/%3Fai%3DBFpF7DBG9RbKYBIvuqgLS9tDTA9Ge8hfJ4pacAsWNtwEAEAEgp8SXBFCS0I6PB2DNgICA_AKYAdmRBqABtZXI_QOyARFsZW9uYXJkb2ZhcmlhLm5ldMgBAtoBGWh0dHA6Ly9sZW9uYXJkb2ZhcmlhLm5ldC-AAgGoAwM&amp;amp;ai=Bq0j3DBG9RbKYBIvuqgLS9tDTA9Ge8hfJ4pacAsWNtwEAEAEgp8SXBFCjn-P7-f____8BYM2AgID8ApgB2ZEGoAG1lcj9A7IBEWxlb25hcmRvZmFyaWEubmV0yAEC2gEZaHR0cDovL2xlb25hcmRvZmFyaWEubmV0L4ACAagDAw">Firefox&lt;/a> ultimamente é a &lt;a href="http://userstyles.org/stylish">Stylish&lt;/a>. Ela permite carregar folhas de estilo personalizadas dos sites, algo parecido com o &lt;a href="http://greasemonkey.mozdev.org/">Greasemonkey&lt;/a> faz. Aliás, quem não possui a Stylish instalada pode usar o Greasemonkey para personalizar as páginas.&lt;/p>
+&lt;p>Você entra no site &lt;a href="http://userstyles.org/">userstyles.org&lt;/a> e pega suas personalizações favoritas. Estou usando, por exemplo, para o Gmail uma personalização que &lt;a href="http://userstyles.org/style/show/1478">aumenta os botões da interface e cria mouse over em vários elementos&lt;/a> e outra que &lt;a href="http://userstyles.org/style/show/226">modifica o ícone de arquivo anexado genérico para o ícone certo&lt;/a>.&lt;/p>
+&lt;p>Parece geek demais, mas é bem útil!&lt;/p></description></item><item><title>Fixando o botão voltar em projetos em Flash</title><link>http://leonardofaria.github.io/leonardofaria.net/2006/10/28/fixando-o-botao-voltar-em-projetos-em-flash/</link><pubDate>Sat, 28 Oct 2006 20:55:55 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2006/10/28/fixando-o-botao-voltar-em-projetos-em-flash/</guid><description>&lt;p>Um problema dos hotsites em Flash é a falta da implementação do botão Voltar do navegador. Achar um conteúdo garante uma boa garimpada. O &lt;a href="http://www.asual.com/swfaddress">SWFAddress&lt;/a> garante, com a ajuda de Javascript, a solução desse problema. No site existe inclusive um &lt;a href="http://www.asual.com/swfaddress">demo&lt;/a> do projeto, bem interessante.&lt;/p></description></item><item><title>Ajax a seu favor. E não contra</title><link>http://leonardofaria.github.io/leonardofaria.net/2006/10/28/ajax-a-seu-favor-e-nao-contra/</link><pubDate>Sat, 28 Oct 2006 20:36:26 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2006/10/28/ajax-a-seu-favor-e-nao-contra/</guid><description>&lt;p>Usar Ajax desenfreamente por aí pode causar dependência química. O &lt;a href="http://www.ajaxonline.com.br">Ajaxonline&lt;/a> é um portal sobre o assunto e apresenta uma séria falha, que muitos sites que também usam XMLHttpRequest também apresentam: links obstrusivos.&lt;/p>
+&lt;p>A ‘agilidade&amp;rsquo; do uso do Ajax está em re-aproveitar camadas e iframes para substituição de conteúdo, requisitando URLs e enviando formulários, enfim, interagindo com o usuário. O problema está na hora de chamar essas requisições. Ao chamar uma dessa funções pelo atributo href da tag a do HTML (ou simplesmente setando o valor desse atributo para ‘#'), o desenvolvedor esquece que os usuários possuem diferentes formas de interação com o sites.&lt;/p>
+&lt;p>Eu, por exemplo, ao me deparar com um site com vários links interessantes, saio clicando nesses links com a tecla command selecionada. Isso, no meu navegador, vai fazer com que os links simplesmente se abram em novas abas. No Ajaxonline eu não consigo fazer isso, pois na nova aba, ao invés de encontrar o conteúdo da página com um assunto do link, me deparo com a home do site, novamente.&lt;/p>
+&lt;p>Escrevi esse post para lembrar que links não-obstrusivos são muito importantes no desenvolvimento de qualquer aplicação web. Sabem por que? Porque eu não sei prever a interação do usuário com o meu projeto!&lt;/p></description></item><item><title>Homepage – Usabilidade: 50 sites desconstruídos</title><link>http://leonardofaria.github.io/leonardofaria.net/2005/03/25/homepage-usabilidade-50-sites-desconstruidos/</link><pubDate>Fri, 25 Mar 2005 22:45:50 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2005/03/25/homepage-usabilidade-50-sites-desconstruidos/</guid><description>&lt;p>&lt;a href="http://www.submarino.com.br/books_productdetails.asp?Query=ProductPage&amp;amp;ProdTypeId=1&amp;amp;ProdId=168450&amp;amp;ST=SE">&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2006/05/useit_homepage.jpg" align="right" alt="Capa do Livro" />&lt;/a>Algo importante visto no livro de &lt;a href="http://www.useit.com">Jacob Nielsen&lt;/a> e Marie Tamir.&lt;/p>
+&lt;h3 id="informando-o-objetivo-do-sitep">INFORMANDO O OBJETIVO DO SITE&lt;/p>&lt;/h3>
+&lt;ol>
+&lt;li>Exibir o nome e / ou logotipo, em um tamanho razoável e em um lugar de destaque.&lt;/li>
+&lt;li>Incluir um slogan resumindo explicitamente o que o site ou a empresa faz. Deve ser explicativo e pequeno.&lt;/li>
+&lt;/ol>
+&lt;h3 id="transmitindo-informações-sobre-sua-empresa">TRANSMITINDO INFORMAÇÕES SOBRE SUA EMPRESA&lt;/h3>
+&lt;ol start="3">
+&lt;li>Incluir um link “Sobre Nós” que apresente aos usuários em visão geral da empresa e link para todos detalhes relevantes como produtos, serviços, valores da empresa, proposta de negócios e equipe. O nome indicado do link deve ser: Sobre .&lt;/li>
+&lt;li>Incluir um link “Fale Conosco” na homepage, que acessa um página com todas as informações de contato da empresa.&lt;/li>
+&lt;/ol>
+&lt;h3 id="criação-do-conteúdo">CRIAÇÃO DO CONTEÚDO&lt;/h3>
+&lt;ol start="5">
+&lt;li>Evitar conteúdo redundante. Repetir na homepage links idênticos congestionam a página. Coloque o link em uma área nitidamente em local específico.&lt;/li>
+&lt;li>Não utilizar frases eruditas que fazem com que as pessoas tenham um trabalhão para descobrir o que é.&lt;/li>
+&lt;li>Evitar as categorias e as listas de marcadores de um único item.&lt;br>
+Usar somente o discurso imperativo, como em “Insira uma cidade ou CEP” nas tarefas obrigatórias ou qualificar a declaração adequadamente. Por exemplo, você poderia dizer “Para saber o tempo local, insira uma cidade ou CEP”. As pessoas acompanham naturalmente o texto que informa o que devemos fazer em um site, principalmente se estiver em algo conhecido, como uma caixa de entrada ou em menu drop-down, e com certeza seguem as instruções porque acham que devem fazer o que as instruções indicam.&lt;/li>
+&lt;li>Evitar pontos de exclamação. Eles não fazem parte da grafia profissional e não têm nada a ver com Homepages.&lt;/li>
+&lt;li>Empregar raramente todas as letras maiúsculas e nunca como estilo de formatação. As palavras com todas as letras maiúsculas não são tão fáceis de ler.&lt;/li>
+&lt;li>Evitar usar inadequadamente espaços e pontuações. A pontuação incomum reduz a legibilidade.&lt;/li>
+&lt;/ol>
+&lt;h3 id="links">LINKS&lt;/h3>
+&lt;ol start="11">
+&lt;li>Diferenciar os links e torná-los fácil de visualizar. Inicie o link com a palavra que transmite a informação, porque geralmente os usuários “batem os olhos” em uma ou duas palavras dos links para compará-los. Não inclua informações obvias ou redundantes em todo link.&lt;/li>
+&lt;li>Não usar instruções genéricas, como “Clique Aqui” como nome de link. Em vez disto use um texto significativo nos nomes de link para informar aos usuários o que obterão quando clicarem. Por exemplo, em vez de dizer “Clique aqui para obter os itens da Layette”, basta dizer “Itens da Layette”.&lt;/li>
+&lt;li>Não use também link genéricos , como “Mais”.&lt;/li>
+&lt;li>Se um link não fizer nada mais do que ir para outra página da Web, como vincular a um arquivo PDF ou acionar um equipamento de áudio e vídeo, aplicativo de mensagens de e-mail ou outro aplicativo, certificar-se de que o link indique explicitamente o que acontecerá. É interessante o uso de ícones para fazer tal explicação.&lt;/li>
+&lt;/ol>
+&lt;h3 id="navegação">NAVEGAÇÃO&lt;/h3>
+&lt;ol start="15">
+&lt;li>Agrupar itens na área de navegação, de modo que os itens semelhantes fiquem próximos de si.&lt;/li>
+&lt;li>Não disponibilizar diversa áreas de navegação para o mesmo tipo de links. Grupos muito semelhantes podem fragmentar e complicar a interface.&lt;/li>
+&lt;li>Não inclui um link ativo para a homepage na homepage.&lt;/li>
+&lt;li>Não inventar termos para as opções de navegação de categorias. As categorias devem ser diferenciáveis entre si. Se os usuários não entenderem sua terminologia inventada, não conseguirão distinguir as categorias.&lt;/li>
+&lt;li>Usar ícones de navegação somente se ajudarem aos usuários a reconhecer imediatamente uma classe de itens, como novos itens, itens em liquidação ou conteúdo do vídeo.&lt;/li>
+&lt;/ol>
+&lt;h3 id="pesquisa">PESQUISA&lt;/h3>
+&lt;ol start="20">
+&lt;li>Disponibilizar para os usuários uma caixa de entrada na homepage para inserir consultas de pesquisa, em vez de oferecer apenas um link para uma página de pesquisa.&lt;/li>
+&lt;li>As caixas de entrada devem ser suficientemente grandes para os usuários verem e editares consulta padrão no site. Coloque, pelo menos, entre 25 e 30 caracteres.&lt;/li>
+&lt;li>Não rotular a área de pesquisa com um título, em vez disso, usar um botão “Search” (Busca/Pesquisa), à direita da caixa. Coloque na área superior direita, fora da área dos banners.&lt;/li>
+&lt;li>Não oferecer o recurso “Pesquisar na Web”. Para isso, os usuários irão utilizar seu buscador predileto.&lt;/li>
+&lt;/ol>
+&lt;h3 id="ferramentas-e-atalhos-para-tarefas">FERRAMENTAS E ATALHOS PARA TAREFAS&lt;/h3>
+&lt;ol start="24">
+&lt;li>Oferecer aos usuários acesso direto às áreas de alta prioridade na homepage.&lt;/li>
+&lt;li>Não incluir ferramentas que não estejam relacionadas com as tarefas que os usuários costumam fazer no site. Por exemplo, não coloque previsão do tempo em um site que não tem nada a ver com notícias de meteorologia.&lt;/li>
+&lt;li>Não oferecer ferramentas que reproduzem funções do navegador.&lt;/li>
+&lt;/ol>
+&lt;h3 id="gráficos-e-animaçâo">GRÁFICOS E ANIMAÇÂO&lt;/h3>
+&lt;ol start="27">
+&lt;li>Usar gráficos para apresentar o conteúdo real, não somente para decorar a homepage.&lt;/li>
+&lt;li>Rotular gráficos e fotos se os respectivos significados não estiverem claros no contexto da história que complementam.&lt;/li>
+&lt;li>Editar fotos e diagramas adequadamente, segundo o tamanho de exibição. As fotos e desenhos com muito detalhes não transmitem as informações e parecem superlotados.&lt;/li>
+&lt;li>Evitar gráficos de marca d&amp;rsquo;água (imagens de plano de fundo com texto sobreposto).&lt;/li>
+&lt;li>Não usar a animação para o único propósito de chamar a atenção para um item na homepage. Raramente, a animação tem um local na página porque distrai a atenção voltada para outros elementos. A animação exige a atenção do usuário e deve ser apresentada isoladamente, uma vez que a homepage tem muitos elementos que também exigem atenção&lt;/li>
+&lt;li>Jamais animar elementos críticos da página, como logotipo, slogan ou título principal.&lt;/li>
+&lt;li>Permitir que os usuários decidam se desejam ver uma introdução animada de se site – não deixar a opção de animação predefinida. Se você realmente carregar automaticamente uma animação sem a solicitação do usuário, ofereça um método fácil e destacado para desativá-la.&lt;/li>
+&lt;/ol>
+&lt;h3 id="design-gráfico">DESIGN GRÁFICO&lt;/h3>
+&lt;ol start="34">
+&lt;li>Limitar os estilos de fonte e outros atributos de formatação de texto, como tamanhos, cores, etc. na página, porque o texto com design muito pesado pode desviar o significado das palavras.&lt;/li>
+&lt;li>Usar texto com muito contraste e cores de plano de fundo, para que os caracteres fiquem o mais legíveis possível.&lt;/li>
+&lt;li>Evitar rolagem horizontal a 800 x 600.&lt;/li>
+&lt;li>Os elementos mais críticos da página devem estar visíveis “acima da dobra” (na primeira tela de conteúdo, sem rolar).&lt;/li>
+&lt;li>Usar um layout fluido para permitir o ajuste do tamanho da homepage a diversas resoluções de tela.&lt;/li>
+&lt;/ol>
+&lt;h3 id="componentes-da-interface-com-o-usuário">COMPONENTES DA INTERFACE COM O USUÁRIO&lt;/h3>
+&lt;ol start="39">
+&lt;li>Nunca utilizar componentes da interface como partes da tela que as pessoas não deverão clicar.&lt;/li>
+&lt;li>Evitar utilizar diversas caixas de texto na homepage, principalmente na parte superior da página em que as pessoas geralmente procuram o recurso de pesquisa.&lt;/li>
+&lt;li>Usar raramente menus suspensos, principalmente se os itens neles contidos não forem auto-explicativos.&lt;/li>
+&lt;/ol>
+&lt;h3 id="títulos-de-janela">TÍTULOS DE JANELA&lt;/h3>
+&lt;ol start="42">
+&lt;li>Iniciar o título da janela com a palavra que resume a informação (geralmente o nome da empresa).&lt;/li>
+&lt;li>Não incluir o nome de domínio de nível superior, como “.com”, no título da janela, a menos que faça realmente parte do nome da empresa, como em “Amazon.com”. Sufixos como “.com” acrescentam uma palavra desnecessária ao título da janela e geram uma diferença artificial entre a presença de uma empresa na ou fora da Web. Os usuários sabem que estão na Web quando entram em um Website, de modo que não necessidade de um “.com” para dar essa informação.&lt;/li>
+&lt;li>Incluir uma descrição resumida do site no título da janela. Experimente usar o slogan do site, se existir, mas somente se for significativo e em linguagem direta.&lt;/li>
+&lt;li>Limitar os títulos das janelas a não mais do que sete ou oito palavras e a mento de 64 caracteres.&lt;/li>
+&lt;/ol>
+&lt;h3 id="janelas-pop-up-e-páginas-intermediárias">JANELAS POP-UP E PÁGINAS INTERMEDIÁRIAS&lt;/h3>
+&lt;ol start="46">
+&lt;li>Conduzir os usuários à verdadeira homepage quando digitarem o URL principal ou clicarem em um link para seu site. As telas de abertura devem morrer.&lt;/li>
+&lt;li>Evitar janelas pop-up. As janelas adicionais impedem que os usuários acessem o conteúdo do site e, se essas janelas contiverem informações importantes, é provável que os usuários as ignorem, supondo que se trata de anúncios.&lt;/li>
+&lt;/ol>
+&lt;h3 id="publicidade">PUBLICIDADE&lt;/h3>
+&lt;ol start="48">
+&lt;li>Manter os anúncios de empresas externas nas bordas da página.&lt;/li>
+&lt;li>Manter os anúncios de empresas diferentes da sua pequenos e mais discretos possíveis em relação ao conteúdo central da homepage&lt;/li>
+&lt;li>Se você posiciona anúncios fora da área de banner padrão, no início da página, rotule-os como publicidade.&lt;/li>
+&lt;/ol>
+&lt;h3 id="boas-vindas">BOAS-VINDAS&lt;/h3>
+&lt;ol start="51">
+&lt;li>Não dê.&lt;/li>
+&lt;/ol></description></item></channel></rss>

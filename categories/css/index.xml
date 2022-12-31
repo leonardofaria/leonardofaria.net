@@ -1,0 +1,406 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>css on Leonardo Faria</title><link>http://leonardofaria.github.io/leonardofaria.net/categories/css/</link><description>Recent content in css on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 18 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://leonardofaria.github.io/leonardofaria.net/categories/css/index.xml" rel="self" type="application/rss+xml"/><item><title>Using Flexbox and text ellipsis together</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/07/18/using-flexbox-and-text-ellipsis-together/</link><pubDate>Sat, 18 Jul 2020 00:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/07/18/using-flexbox-and-text-ellipsis-together/</guid><description>&lt;p>Another day I was asked to build a table containing a list of files uploaded by the users. Imagine a table similar to the list of files in Finder:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/07/finder.jpg" alt="Finder">&lt;/p>
+&lt;p>The second item of the table is &lt;code>mobile-phone-screenshot-long-fine-name.png&lt;/code>, however the column is not big enough to show the complete filename. Instead, we see &lt;code>mobile-phone-sc...g-fine-name.png&lt;/code>. In this project, we decided to cut part of the end of the filename and keeping the extension, as shown above:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/07/filename.gif" alt="Finder">&lt;/p>
+&lt;h3 id="html-markup">HTML markup:&lt;/h3>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">div&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;filename&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">span&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;filename__base&amp;#34;&lt;/span>&amp;gt;this-file-has-a-really-really-really-long-filename.&amp;lt;/&lt;span style="color:#000080">span&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">span&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;filename__extension&amp;#34;&lt;/span>&amp;gt;pdf&amp;lt;/&lt;span style="color:#000080">span&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="css">CSS:&lt;/h3>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">.&lt;span style="color:#458;font-weight:bold">filename&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">display&lt;/span>: &lt;span style="color:#000;font-weight:bold">flex&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">min-width&lt;/span>: &lt;span style="color:#099">0&lt;/span>;
+}
+.&lt;span style="color:#458;font-weight:bold">filename__base&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">text-overflow&lt;/span>: &lt;span style="color:#000;font-weight:bold">ellipsis&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">white-space&lt;/span>: &lt;span style="color:#000;font-weight:bold">nowrap&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">overflow&lt;/span>: &lt;span style="color:#000;font-weight:bold">hidden&lt;/span>;
+}
+.&lt;span style="color:#458;font-weight:bold">filename__extension&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">flex-shrink&lt;/span>: &lt;span style="color:#099">0&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The ellipsis effect can be done by combining &lt;code>text-overflow&lt;/code>, &lt;code>white-space&lt;/code> and &lt;code>overflow&lt;/code> properties, however, we still need to figure out the relation between the filename base and its parent, which also contains the file extension.&lt;/p>
+&lt;p>The trick is using the property &lt;code>min-width&lt;/code>, as covered in this pen by &lt;a href="https://codepen.io/aj-foster/pen/emBYPW">AJ Foster&lt;/a> and &lt;a href="https://css-tricks.com/flexbox-truncated-text/">CSS Tricks&lt;/a>. From the &lt;a href="https://drafts.csswg.org/css-flexbox/#min-size-auto">Flexbox spec&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>Note: The auto keyword, representing an automatic minimum size, is the new initial value of the min-width and min-height properties. The keyword was previously defined in this specification, but is now defined in the CSS Sizing module.&lt;/p>
+&lt;p>&amp;hellip;&lt;/p>
+&lt;p>In general, the content-based minimum size of a &lt;strong>flex item is the smaller of its content size&lt;/strong> suggestion and its specified size suggestion.&lt;/p>
+&lt;/blockquote>
+&lt;p>By using &lt;code>min-width: 0&lt;/code>, we are changing the minimum size of the flexbox container, which will resize the child elements of the container that don&amp;rsquo;t use the &lt;code>flex-shrink&lt;/code> attribute. Since the filename base element has the &lt;code>text-overflow&lt;/code>, &lt;code>white-space&lt;/code> and &lt;code>overflow&lt;/code> properties, the ellipsis will be rendered properly.&lt;/p>
+&lt;p>The full example is available in &lt;a href="https://codepen.io/leonardofaria/pen/rNxZJad">this Codepen&lt;/a>:&lt;/p>
+&lt;div class="full-width">
+&lt;iframe src="https://codepen.io/leonardofaria/embed/rNxZJad" class="w-full h-screen">&lt;/iframe>
+&lt;/div></description></item><item><title>Creating a website for my Apple Collection</title><link>http://leonardofaria.github.io/leonardofaria.net/2019/10/17/creating-a-website-for-my-apple-collection/</link><pubDate>Thu, 17 Oct 2019 00:36:30 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2019/10/17/creating-a-website-for-my-apple-collection/</guid><description>&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2019/10/collection.jpg" alt="Part of the collection">&lt;/p>
+&lt;p>A while ago I started an Apple Collection. After a few laptops and a few iDevices, I decided that I should start collecting info about my iThings. In the beginning, I created a gist containing model, serial number, how did I get the device, minimum/maximum OS, etc.&lt;/p>
+&lt;p>The list kept going bigger and bigger and the content started looking messy. The natural way to organize my data would be inside a SQL database, with the information distributed in columns. After organizing the information in tables, I would create a graphQL API (the one cool kids use these days) to give me the data needed to populate my UI – probably written in React, compiled with Babel and packed with webpack.&lt;/p>
+&lt;p>Reading the previous paragraph aloud, you can hear many technologies and I even ignored the backend language and UI details like SASS or styled-components. It sounds a bit overwhelming when the ultimate goal is showing a list of items in a nice design.&lt;/p>
+&lt;p>That&amp;rsquo;s being said, I thought: how can I deliver this content without:&lt;/p>
+&lt;ul>
+&lt;li>An API or any backend work&lt;/li>
+&lt;li>Any JS framework/library&lt;/li>
+&lt;li>Any JS tooling (webpack, babel, etc)&lt;/li>
+&lt;li>Any CSS work&lt;/li>
+&lt;/ul>
+&lt;p>On top of these constraints, I had a few stretch goals:&lt;/p>
+&lt;ul>
+&lt;li>Create a website with good accessibility&lt;/li>
+&lt;li>Create a website that works in old browsers, since I have computers running Mac OS 9.2 and iDevices running iOS 3&lt;/li>
+&lt;/ul>
+&lt;p>Challenge accepted. One index.html, a few vanilla JS files, no custom CSS. TL,DR:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://bit.ly/collection-website">Final website&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://bit.ly/collection-source">Source code&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="no-api-or-any-backend-work">No API or any backend work&lt;/h2>
+&lt;p>A while ago I saw a SaaS product called &lt;a href="https://steinhq.com/">Stein&lt;/a>. You create your data inside a Google Sheets document and they give you an endpoint with your data. Their library works like handlebars and it looks perfect for my use case:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">div&lt;/span> &lt;span style="color:#008080">data-stein-url&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;https://api.steinhq.com/v1/storages/5cc158079ec99a2f484dcb40/Sheet1&amp;#34;&lt;/span> &lt;span style="color:#008080">data-stein-limit&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;2&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">h1&lt;/span>&amp;gt;{{title}}&amp;lt;/&lt;span style="color:#000080">h1&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">h6&lt;/span>&amp;gt;By {{author}}&amp;lt;/&lt;span style="color:#000080">h6&lt;/span>&amp;gt;
+{{content}}
+Read on &amp;lt;&lt;span style="color:#000080">a&lt;/span> &lt;span style="color:#008080">href&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;{{link}}&amp;#34;&lt;/span>&amp;gt;Medium&amp;lt;/&lt;span style="color:#000080">a&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="no-js-frameworklibrary-and-tooling">No JS framework/library and tooling&lt;/h2>
+&lt;p>Decided to avoid adding a framework or library in this project since the use case didn&amp;rsquo;t need one. All JS interactions on this page are quite simple (show/hide menus, open a modal screen, handle permalinks).&lt;/p>
+&lt;p>Since I was not using a framework/library, I would avoid adding webpack and babel. No need to dig into presets and loaders.&lt;/p>
+&lt;p>PS. You can argue that I&amp;rsquo;d have chosen create-react-app or Next.js and get all these problems solved, but no.&lt;/p>
+&lt;h2 id="no-css-work">No CSS work&lt;/h2>
+&lt;p>I love writing CSS, especially when I can use SASS but I decided to do not write CSS here. I had a few good reasons to avoid doing it:&lt;/p>
+&lt;ul>
+&lt;li>I had no designs and despite I could do something decent-looking, I didn&amp;rsquo;t want to put time and energy on it;&lt;/li>
+&lt;li>I wanted to use &lt;a href="https://tailwindcss.com">Tailwind CSS&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;p>If you never heard about Tailwind CSS, please don&amp;rsquo;t try to think “it is a Bootstrap option”. Here is a good short explanation, from their website:&lt;/p>
+&lt;blockquote class="wp-block-quote">
+&lt;p>
+Most CSS frameworks do too much.&lt;br />&amp;#8230;&lt;br />Instead of opinionated predesigned components, Tailwind provides low-level utility classes that let you build completely custom designs without ever leaving your HTML.
+&lt;/p>
+&lt;/blockquote>
+&lt;p>This is pretty much true. A quick search gives you many web apps “rebuilt” with Tailwind CSS:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://tailwindcomponents.com/component/whatsapp-web-clone">Whatsapp&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tailwindcomponents.com/component/telegram-desktop-using-tailwindcss">Telegram&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tailwindcomponents.com/component/facebook-clone">Facebook&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tailwindcomponents.com/component/reddit-clone">Reddit&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tailwindcomponents.com/component/youtube-clone">Youtube&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tailwindcomponents.com/component/slack-clone-1">Slack&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tailwindcomponents.com/component/coinbase-clone">Coinbase&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tailwindcomponents.com/component/github-profile-clone">Github&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tailwindcomponents.com/component/trello-panel-clone">Trello&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://codepen.io/drehimself/full/vpeVMx/">Twitter&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.youtube.com/watch?v=_JhTaENzfZQ">Netlify&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="create-a-website-with-good-accessibility">Create a website with good accessibility&lt;/h2>
+&lt;p>Last month I started taking accessibility courses at &lt;a href="https://dequeuniversity.com/curriculum/packages/full">Deque University&lt;/a>. Their content is great and it reminders me that &lt;strong>HTML is accessible by default&lt;/strong>. By using a semantic HTML structure and testing basic things like keyboard navigation and colour contrast you eliminate several barries that move people with disabilities from your content. I am not an accessibility expert but here are a few accessibility-related things I&amp;rsquo;ve worked on this website:&lt;/p>
+&lt;ul>
+&lt;li>Disable stylesheets: by disabling stylesheets you can ensure that your content follows a logical/structural way.&lt;/li>
+&lt;li>VoiceOver: VoiceOver is included in macOS and iOS. It is &lt;a href="https://webaim.org/articles/voiceover/">very simple to use it&lt;/a> and by using it you can have a better understanding of how people use this feature.&lt;/li>
+&lt;li>Modals: modals can be problematic. Decided to follow &lt;a href="https://bitsofco.de/accessible-modal-dialog/">Ire Aderinokun&amp;rsquo;s&lt;/a> approach.&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd">axe&lt;/a>: the extension is an accessibility checker for WCAG 2 and Section 508 accessibility rules.&lt;/li>
+&lt;/ul>
+&lt;p>It is not perfect, there are a few things that I didn&amp;rsquo;t work it, like adding a skip link to the main content. If you are curious, &lt;a href="https://github.com/leonardofaria/collection/pull/1">here is the Pull Request with all the changes&lt;/a>.&lt;/p>
+&lt;h2 id="create-a-website-that-works-in-old-browsers">Create a website that works in old browsers&lt;/h2>
+&lt;p>I couldn&amp;rsquo;t achieve this objective since I had no control over scripts and styles. However, it doesn&amp;rsquo;t seem to be impossible. A few things I noticed:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/SteinHQ/Expedite">Expedite&lt;/a> (Stein client) uses &lt;a href="https://github.com/SteinHQ/Expedite/blob/master/index.js#L51-L54">fetch&lt;/a>, which was only &lt;a href="https://caniuse.com/#feat=fetch">added in Safari 10&lt;/a>. The request to their server could be probably replaced for an XMLHttpRequest.&lt;/li>
+&lt;li>Tailwind uses flexbox in many elements. Safari only started supporting Flexbox in iOS 7. Maybe I could write a few properties to their existing elements to achieve a decent look.&lt;/li>
+&lt;li>SSL Certificates may be an issue to old browsers.&lt;/li>
+&lt;/ul>
+&lt;h2 id="conclusions">Conclusions&lt;/h2>
+&lt;p>Making this website was super fun. The fact I added “constraints” to it made think outside the box. Out of curiosity, I tracked my time using &lt;a href="https://clockify.me">Clockify&lt;/a> and I&amp;rsquo;ve worked 13h on this, between coding, creating the data, testing and writing this post.&lt;/p></description></item><item><title>Para agilizar o desenvolvimento do frontend</title><link>http://leonardofaria.github.io/leonardofaria.net/2012/11/21/para-agilizar-o-desenvolvimento-do-frontend/</link><pubDate>Wed, 21 Nov 2012 22:45:14 -0200</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2012/11/21/para-agilizar-o-desenvolvimento-do-frontend/</guid><description>&lt;p>Uso o Chrome como browser padrão em minha máquina e algumas extensões interessantes para desenvolvedores.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/kingsquare-html-validator/anjdemaoejlpgmnmkijdemoiebcddhkc">Kingsquare HTML Validator&lt;/a>: faz validação do seu código usando o Tidy. Se você usa o Safari, não deixe de conhecer o &lt;a href="http://zappatic.net/projects/safarivalidator">Tidy Validator&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo">Secure Shell&lt;/a>: um terminal em seu browser – atualmente prefiro o &lt;a href="http://iterm2.com/">iTerm&lt;/a> ligado em um monitor extra e com várias telas divididas.&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/pagespeed-insights-by-goo/gplegfbjlmmehdoakndmohflojccocli">PageSpeed Insights&lt;/a>: uma espécie de &lt;a href="https://chrome.google.com/webstore/detail/yslow/ninejjcohidippngpapiilnmkgllmakh">YSlow&lt;/a> do Google. Descobri em um &lt;a href="https://www.youtube.com/watch?v=BaneWEqNcpE">vídeo&lt;/a> (&lt;a href="http://www.igvita.com/slides/2012/devtools-tips-and-tricks/#1">slides&lt;/a>) do &lt;a href="http://www.igvita.com/">Ilka Grigorik&lt;/a>.&lt;/li>
+&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh">Window Resizer&lt;/a> e &lt;a href="https://chrome.google.com/webstore/detail/resizer/gekhbemhcekbaodnijabeajoeolfplbp?hl=en-US&amp;amp;gl=US">Resizer&lt;/a>: uso o primeiro para testar o layout em diferentes resoluções do desktop; enquanto o segundo trás as resoluções de celulares e tablets.&lt;/li>
+&lt;/ul></description></item><item><title>Personalizando o scrollbar com WebKit</title><link>http://leonardofaria.github.io/leonardofaria.net/2011/01/23/personalizando-o-scrollbar-com-webkit/</link><pubDate>Sun, 23 Jan 2011 18:52:34 -0200</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2011/01/23/personalizando-o-scrollbar-com-webkit/</guid><description>&lt;p>Personalizar barras de rolagem é &lt;a href="http://codestacker.com/codes/244-color-scrollbars-for-ie-5-5">algo que vem lá dos tempos&lt;/a> do IE 5.5. Naquele tempo, personalizavam-se as cores da barra, criando efeitos na maioria da vezes cafonas. Já &lt;a href="http://webkit.org/blog/363/styling-scrollbars/">faz algum tempo&lt;/a> que o WebKit suporta scrollbars personalizadas. Você pode personalizar atributos como borda e background, usando até mesmo imagens para criar barras de rolagens bacanas. Esse artigo mostra alguns pseudo-elementos e pseudo-classes para personalizar sua barra.&lt;/p>
+&lt;h3 id="antes-de-começar">Antes de começar&lt;/h3>
+&lt;p>Antes de começar precisamos alterar algumas propriedades de posicionamento de nossa página, para que a barra do WebKit substitua a barra nativa do browser.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">&lt;span style="color:#000080">body&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">position&lt;/span>: &lt;span style="color:#000;font-weight:bold">absolute&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">top&lt;/span>: &lt;span style="color:#099">0&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">left&lt;/span>: &lt;span style="color:#099">0&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">bottom&lt;/span>: &lt;span style="color:#099">0&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">right&lt;/span>: &lt;span style="color:#099">10&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">overflow-y&lt;/span>: &lt;span style="color:#000;font-weight:bold">scroll&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">overflow-x&lt;/span>: &lt;span style="color:#000;font-weight:bold">hidden&lt;/span>;
+}
+&lt;span style="color:#000080">html&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">overflow-y&lt;/span>: &lt;span style="color:#000;font-weight:bold">auto&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">background-color&lt;/span>: &lt;span style="color:#000;font-weight:bold">transparent&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="os-pseudo-elementos-e-as-pseudo-classes">Os pseudo-elementos e as pseudo-classes&lt;/h3>
+&lt;h4 id="pseudo-elementos">Pseudo-elementos&lt;/h4>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">ul&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;-webkit-scrollbar&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;-webkit-scrollbar-button&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;-webkit-scrollbar-track&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;-webkit-scrollbar-track-piece&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;-webkit-scrollbar-thumb&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;-webkit-scrollbar-corner&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;-webkit-resizer&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">ul&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="pseudo-classes">Pseudo-classes&lt;/h4>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">ul&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:horizontal&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:vertical&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:decrement&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:increment&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:start&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:end&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:double-button&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:single-button&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:no-button&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:corner-present&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:window-inactive&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:enabled&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:disabled&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:hover&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">li&lt;/span>&amp;gt;:active&amp;lt;/&lt;span style="color:#000080">li&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">ul&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="exemplos">Exemplos&lt;/h3>
+&lt;h4 id="exemplo-1">Exemplo 1&lt;/h4>
+&lt;center>
+&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2011/01/exemplo1.jpg" />
+&lt;/center>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">width&lt;/span>: &lt;span style="color:#099">10&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">height&lt;/span>: &lt;span style="color:#099">10&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">start&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">decrement&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">increment&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">display&lt;/span>: &lt;span style="color:#000;font-weight:bold">none&lt;/span>;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-track-piece&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-color&lt;/span>: &lt;span style="color:#099">#3b3b3b&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">-webkit-&lt;/span>&lt;span style="color:#000;font-weight:bold">border-radius&lt;/span>: &lt;span style="color:#099">6&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-thumb&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">vertical&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-color&lt;/span>: &lt;span style="color:#099">#666&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">-webkit-&lt;/span>&lt;span style="color:#000;font-weight:bold">border-radius&lt;/span>: &lt;span style="color:#099">6&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Veja no primeiro exemplo que nos elementos &lt;code>-webkit-scrollbar-button:start:decrement&lt;/code> e &lt;code>-webkit-scrollbar-button:end:increment&lt;/code> foram usadas &lt;code>display:none&lt;/code>, para que não seja exibido os botões das extremidades da barra.&lt;/p>
+&lt;h2 id="exemplo-2">Exemplo 2&lt;/h2>
+&lt;center>
+&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2011/01/exemplo2.jpg" />
+&lt;/center>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">start&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">decrement&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">increment&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">display&lt;/span>: &lt;span style="color:#000;font-weight:bold">block&lt;/span>;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">increment&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_cntrl_dwn.png&amp;#34;&lt;/span>);
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">start&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">decrement&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_cntrl_up.png&amp;#34;&lt;/span>);
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-track-piece&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">vertical&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">start&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_gutter_top.png&amp;#34;&lt;/span>), &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_gutter_mid.png&amp;#34;&lt;/span>);
+&lt;span style="color:#000;font-weight:bold">background-repeat&lt;/span>: &lt;span style="color:#000;font-weight:bold">no-repeat&lt;/span>, &lt;span style="color:#000;font-weight:bold">repeat&lt;/span>&lt;span style="color:#000;font-weight:bold">-&lt;/span>y;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-track-piece&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">vertical&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_gutter_btm.png&amp;#34;&lt;/span>), &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_gutter_mid.png&amp;#34;&lt;/span>);
+&lt;span style="color:#000;font-weight:bold">background-repeat&lt;/span>: &lt;span style="color:#000;font-weight:bold">no-repeat&lt;/span>, &lt;span style="color:#000;font-weight:bold">repeat&lt;/span>&lt;span style="color:#000;font-weight:bold">-&lt;/span>y;
+&lt;span style="color:#000;font-weight:bold">background-position&lt;/span>: &lt;span style="color:#000;font-weight:bold">bottom&lt;/span> &lt;span style="color:#000;font-weight:bold">left&lt;/span>, &lt;span style="color:#099">0&lt;/span> &lt;span style="color:#099">0&lt;/span>;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-thumb&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">vertical&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">height&lt;/span>: &lt;span style="color:#099">56&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">-webkit-&lt;/span>&lt;span style="color:#000;font-weight:bold">border-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_thumb.png&amp;#34;&lt;/span>) &lt;span style="color:#099">8&lt;/span> &lt;span style="color:#099">0&lt;/span> &lt;span style="color:#099">8&lt;/span> &lt;span style="color:#099">0&lt;/span> &lt;span style="color:#000;font-weight:bold">stretch&lt;/span> &lt;span style="color:#000;font-weight:bold">stretch&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">border-width&lt;/span>: &lt;span style="color:#099">8&lt;/span> &lt;span style="color:#099">0&lt;/span> &lt;span style="color:#099">8&lt;/span> &lt;span style="color:#099">0&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>No segundo exemplo, foram usados múltiplos backgrounds para criar uma barra de rolagem arrendondada.&lt;/p>
+&lt;h3 id="exemplo-3">Exemplo 3&lt;/h3>
+&lt;center>
+&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2011/01/exemplo3.jpg" />
+&lt;/center>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">width&lt;/span>: &lt;span style="color:#099">16&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">height&lt;/span>: &lt;span style="color:#099">16&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">increment&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">decrement&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">display&lt;/span>: &lt;span style="color:#000;font-weight:bold">block&lt;/span>;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">increment&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_cntrl_dwn.png&amp;#34;&lt;/span>);
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">decrement&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_cntrl_up.png&amp;#34;&lt;/span>);
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-track-piece&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">vertical&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">start&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_gutter_top.png&amp;#34;&lt;/span>), &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_gutter_mid.png&amp;#34;&lt;/span>);
+&lt;span style="color:#000;font-weight:bold">background-repeat&lt;/span>: &lt;span style="color:#000;font-weight:bold">no-repeat&lt;/span>, &lt;span style="color:#000;font-weight:bold">repeat&lt;/span>&lt;span style="color:#000;font-weight:bold">-&lt;/span>y;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-track-piece&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">vertical&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_gutter_btm.png&amp;#34;&lt;/span>), &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_gutter_mid.png&amp;#34;&lt;/span>);
+&lt;span style="color:#000;font-weight:bold">background-repeat&lt;/span>: &lt;span style="color:#000;font-weight:bold">no-repeat&lt;/span>, &lt;span style="color:#000;font-weight:bold">repeat&lt;/span>&lt;span style="color:#000;font-weight:bold">-&lt;/span>y;
+&lt;span style="color:#000;font-weight:bold">background-position&lt;/span>: &lt;span style="color:#000;font-weight:bold">bottom&lt;/span> &lt;span style="color:#000;font-weight:bold">left&lt;/span>, &lt;span style="color:#099">0&lt;/span> &lt;span style="color:#099">0&lt;/span>;
+}
+::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-thumb&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">vertical&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">height&lt;/span>: &lt;span style="color:#099">56&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">-webkit-&lt;/span>&lt;span style="color:#000;font-weight:bold">border-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">&amp;#34;images/scroll_thumb.png&amp;#34;&lt;/span>) &lt;span style="color:#099">8&lt;/span> &lt;span style="color:#099">0&lt;/span> &lt;span style="color:#099">8&lt;/span> &lt;span style="color:#099">0&lt;/span> &lt;span style="color:#000;font-weight:bold">stretch&lt;/span> &lt;span style="color:#000;font-weight:bold">stretch&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">border-width&lt;/span>: &lt;span style="color:#099">8&lt;/span> &lt;span style="color:#099">0&lt;/span> &lt;span style="color:#099">8&lt;/span> &lt;span style="color:#099">0&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nesse exemplo são usados botões na parte inferior da barra, como no Mac OS.&lt;/p>
+&lt;h3 id="exemplo-4">Exemplo 4&lt;/h3>
+&lt;center>
+&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2011/01/exemplo41.jpg" />
+&lt;/center>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">&lt;span style="color:#000080">pre&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">border&lt;/span>: &lt;span style="color:#099">1&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span> &lt;span style="color:#000;font-weight:bold">solid&lt;/span> &lt;span style="color:#099">#ccc&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">border-radius&lt;/span>: &lt;span style="color:#099">3&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">white-space&lt;/span>: &lt;span style="color:#000;font-weight:bold">nowrap&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">overflow&lt;/span>: &lt;span style="color:#000;font-weight:bold">scroll&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">padding&lt;/span>: &lt;span style="color:#099">5&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">width&lt;/span>: &lt;span style="color:#099">550&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+}
+&lt;span style="color:#000080">pre&lt;/span>::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">width&lt;/span>: &lt;span style="color:#099">6&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">height&lt;/span>: &lt;span style="color:#099">6&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">padding&lt;/span>: &lt;span style="color:#099">18&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">-webkit-&lt;/span>&lt;span style="color:#000;font-weight:bold">border-radius&lt;/span>: &lt;span style="color:#099">1&lt;/span>&lt;span style="color:#458;font-weight:bold">ex&lt;/span>;
+}
+&lt;span style="color:#000080">pre&lt;/span>::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-thumb&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">background&lt;/span>: &lt;span style="color:#099">#ccc&lt;/span> &lt;span style="color:#000;font-weight:bold">-webkit-&lt;/span>&lt;span style="color:#900;font-weight:bold">gradient&lt;/span>(&lt;span style="color:#000;font-weight:bold">linear&lt;/span>, &lt;span style="color:#099">0&lt;/span>&lt;span style="color:#458;font-weight:bold">%&lt;/span> &lt;span style="color:#099">0&lt;/span>&lt;span style="color:#458;font-weight:bold">%&lt;/span>, &lt;span style="color:#099">0&lt;/span>&lt;span style="color:#458;font-weight:bold">%&lt;/span> &lt;span style="color:#099">100&lt;/span>&lt;span style="color:#458;font-weight:bold">%&lt;/span>, &lt;span style="color:#900;font-weight:bold">from&lt;/span>(&lt;span style="color:#0086b3">rgb&lt;/span>(&lt;span style="color:#099">240&lt;/span>, &lt;span style="color:#099">240&lt;/span>, &lt;span style="color:#099">240&lt;/span>)), &lt;span style="color:#900;font-weight:bold">to&lt;/span>(&lt;span style="color:#0086b3">rgb&lt;/span>(&lt;span style="color:#099">210&lt;/span>, &lt;span style="color:#099">210&lt;/span>, &lt;span style="color:#099">210&lt;/span>)));
+&lt;span style="color:#000;font-weight:bold">padding&lt;/span>: &lt;span style="color:#099">8&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">width&lt;/span>: &lt;span style="color:#099">6&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">height&lt;/span>: &lt;span style="color:#099">6&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">-webkit-&lt;/span>&lt;span style="color:#000;font-weight:bold">border-radius&lt;/span>: &lt;span style="color:#099">1&lt;/span>&lt;span style="color:#458;font-weight:bold">ex&lt;/span>;
+}
+&lt;span style="color:#000080">pre&lt;/span>::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">start&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">decrement&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#000080">pre&lt;/span>::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-button&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">end&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">increment&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">display&lt;/span>: &lt;span style="color:#000;font-weight:bold">none&lt;/span>;
+}
+&lt;span style="color:#000080">pre&lt;/span>::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-thumb&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">vertical&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#000080">pre&lt;/span>::&lt;span style="color:#3c5d5d;font-weight:bold">-webkit-scrollbar-thumb&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">horizontal&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">height&lt;/span>: &lt;span style="color:#099">3&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">width&lt;/span>: &lt;span style="color:#099">3&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">margin&lt;/span>: &lt;span style="color:#099">3&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Para terminar, foi aplicado em um elemento &lt;code>&amp;lt;pre&amp;gt;&lt;/code>. Todos os exemplos acima estão no meu GitHub, no repositório &lt;a href="https://github.com/leonardofaria/webkit-examples">webkit-examples&lt;/a>. &lt;a href="http://trac.webkit.org/export/41842/trunk/LayoutTests/scrollbars/overflow-scrollbar-combinations.html">Confira outros exemplos no site do WebKit&lt;/a>.&lt;/p>
+&lt;h3 id="extra-detectando-o-webkit">Extra: detectando o WebKit&lt;/h3>
+&lt;p>Você pode detectar se o browser do usuário usa WebKit rapidamente com Javascript:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#000;font-weight:bold">if&lt;/span> (&lt;span style="color:#009926">/webkit/&lt;/span>.test(navigator.userAgent.toLowerCase())) {
+alert(&lt;span style="color:#d14">&amp;#39;hello webkit!&amp;#39;&lt;/span>);
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>… e usar jQuery para carregar uma folha de estilo personalizada:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">$(&lt;span style="color:#d14">&amp;#39;head&amp;#39;&lt;/span>).append(&lt;span style="color:#d14">&amp;#39;&amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;safari.css&amp;#34; type=&amp;#34;text/css&amp;#34; /&amp;gt;&amp;#39;&lt;/span>);
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>CSS para alinhamento vertical</title><link>http://leonardofaria.github.io/leonardofaria.net/2007/11/18/css-para-alinhamento-vertical/</link><pubDate>Sun, 18 Nov 2007 14:24:32 -0200</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2007/11/18/css-para-alinhamento-vertical/</guid><description>&lt;p>O &lt;a href="http://www.brunofernandes.com.br/">Bruno Fernandes&lt;/a> e eu estávamos no MSN ontem discutindo uma forma de fazer alinhamento vertical, para uma imagem da qual não se sabe a altura.&lt;/p>
+&lt;p>Pensamos em uma &lt;a href="http://desciclo.pedia.ws/wiki/POG">POG&lt;/a> de usar imagemagick no ruby para dar um resize na imagem e fixar a altura no tamanho da div. Mas não foi preciso nada disso. Via CSS:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">.&lt;span style="color:#458;font-weight:bold">product1&lt;/span> {&lt;span style="color:#000;font-weight:bold">display&lt;/span>: &lt;span style="color:#000;font-weight:bold">table&lt;/span>; &lt;span style="color:#000;font-weight:bold">height&lt;/span>: &lt;span style="color:#099">120&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>; &lt;span style="color:#000;font-weight:bold">width&lt;/span>:&lt;span style="color:#099">120&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>; &lt;span style="color:#a61717;background-color:#e3d2d2">#&lt;/span>&lt;span style="color:#000;font-weight:bold">position&lt;/span>: &lt;span style="color:#000;font-weight:bold">relative&lt;/span>; &lt;span style="color:#000;font-weight:bold">overflow&lt;/span>: &lt;span style="color:#000;font-weight:bold">hidden&lt;/span>; &lt;span style="color:#000;font-weight:bold">background-color&lt;/span>:&lt;span style="color:#099">#fff&lt;/span>;}
+.&lt;span style="color:#458;font-weight:bold">product2&lt;/span> {&lt;span style="color:#000;font-weight:bold">position&lt;/span>: &lt;span style="color:#000;font-weight:bold">absolute&lt;/span>; &lt;span style="color:#000;font-weight:bold">top&lt;/span>: &lt;span style="color:#099">50&lt;/span>&lt;span style="color:#458;font-weight:bold">%&lt;/span>; &lt;span style="color:#000;font-weight:bold">left&lt;/span>: &lt;span style="color:#099">50&lt;/span>&lt;span style="color:#458;font-weight:bold">%&lt;/span>; &lt;span style="color:#000;font-weight:bold">display&lt;/span>: &lt;span style="color:#000;font-weight:bold">table&lt;/span>&lt;span style="color:#000;font-weight:bold">-&lt;/span>&lt;span style="color:#000;font-weight:bold">cell&lt;/span>; &lt;span style="color:#000;font-weight:bold">vertical-align&lt;/span>: &lt;span style="color:#000;font-weight:bold">middle&lt;/span>; &lt;span style="color:#000;font-weight:bold">text-align&lt;/span>:&lt;span style="color:#000;font-weight:bold">center&lt;/span>;}
+.&lt;span style="color:#458;font-weight:bold">product3&lt;/span> {&lt;span style="color:#000;font-weight:bold">position&lt;/span>: &lt;span style="color:#000;font-weight:bold">relative&lt;/span>; &lt;span style="color:#000;font-weight:bold">top&lt;/span>: &lt;span style="color:#099">-50&lt;/span>&lt;span style="color:#458;font-weight:bold">%&lt;/span>; &lt;span style="color:#000;font-weight:bold">left&lt;/span>: &lt;span style="color:#099">-50&lt;/span>&lt;span style="color:#458;font-weight:bold">%&lt;/span>;}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>  &lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">div&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;product1&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">div&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;product2&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">div&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;product3&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">img&lt;/span> &lt;span style="color:#008080">src&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;imagem.jpg&amp;#34;&lt;/span>/&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;a href="http://www.jakpsatweb.cz/css/css-vertical-center-solution.html">Fonte&lt;/a>&lt;/p></description></item><item><title>Pseudo-seletores são legais</title><link>http://leonardofaria.github.io/leonardofaria.net/2006/10/28/pseudo-seletores-sao-legais/</link><pubDate>Sat, 28 Oct 2006 01:52:29 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2006/10/28/pseudo-seletores-sao-legais/</guid><description>&lt;p>Todo mundo lembra do pseudo-seletor :hover, quando quer fazer um simples efeito rollover em um link. Well, o que pouco sabe é que existe outros dois seletores muito bacanas: o :after e o :before.&lt;/p>
+&lt;p>Veja o exemplos:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">&lt;span style="color:#000080">input&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">before&lt;/span> { &lt;span style="color:#000;font-weight:bold">content&lt;/span>:&lt;span style="color:#d14">&amp;#34;&amp;amp;nbsp;&amp;#34;&lt;/span>;}
+&lt;span style="color:#000080">a&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">before&lt;/span> { &lt;span style="color:#000;font-weight:bold">content&lt;/span>:&lt;span style="color:#d14">&amp;#34;&amp;gt;&amp;#34;&lt;/span>;}
+&lt;span style="color:#000080">a&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">after&lt;/span> { &lt;span style="color:#000;font-weight:bold">content&lt;/span>: &lt;span style="color:#d14">&amp;#34; (link externo) &amp;#34;&lt;/span>; }
+&lt;span style="color:#000080">a&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">after&lt;/span> { &lt;span style="color:#000;font-weight:bold">content&lt;/span>: &lt;span style="color:#d14">&amp;#34; (&amp;#34;&lt;/span> &lt;span style="color:#0086b3">attr&lt;/span>(href) &lt;span style="color:#d14">&amp;#34;)&amp;#34;&lt;/span>; }
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>O primeiro exemplo coloca um espaço (entidade  ) antes do conteúdo do botão. O segundo exemplo, coloca um marcador para cada link. Já o terceiro exemplo adiciona o texto “link externo” a todo link da página. Bem, e a última linha? Note o uso do attr(href). O que ele faz é simplesmente retornar o valor href do tag a. Ao invés do attr(href), você também pode usar outros atributos. Veja esse exemplo:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">&lt;span style="color:#000080">img&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">before&lt;/span> { &lt;span style="color:#000;font-weight:bold">content&lt;/span>: &lt;span style="color:#d14">&amp;#34;Descrição da imagem: &amp;#34;&lt;/span> &lt;span style="color:#0086b3">attr&lt;/span>(alt) }
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Toda imagem será antecidida de: Descrição da imagem: (valor do atributo da imagem)&lt;/p></description></item><item><title>Por que webstandards?</title><link>http://leonardofaria.github.io/leonardofaria.net/2006/06/15/por-que-webstandards/</link><pubDate>Thu, 15 Jun 2006 21:56:11 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2006/06/15/por-que-webstandards/</guid><description>&lt;p>O artigo que vem a seguir foi escrito por mim em fevereiro do ano passado, para o projeto ReclamaSite (que nasceu morto). Naquela época, web2.0 não era &lt;a href="http://info.abril.com.br/">capa de revista&lt;/a> e muita gente ainda tinha desconfiança das vantagens do Tableless.&lt;/p>
+&lt;h1 id="por-que-webstandards">Por que webstandards?&lt;/h1>
+&lt;p>Com toda a guerra de navegadores na última década, Netscape e Microsoft criaram uma série de recursos proprietários, que só funcionavam em seus respectivos aplicativos. Esses recursos excluiam os usuários do produto concorrente, colocando-os entre a cruz e a espada, digo, entre um browser e outro.&lt;/p>
+&lt;p>Os padrões web tentam acabar com essa festa de scrollbars coloridas (aliás, um recurso usado no Internet Explorer) e cia. Através de uma série de ‘regras&amp;rsquo;, escrevemos um documento válido, e são essas regras que nos garantem um site de qualidade.&lt;/p>
+&lt;p>&lt;strong>Mas o que eu ganho trabalhando com os padrões web?&lt;/strong>&lt;/p>
+&lt;p>Entre as vantagens do desenvolvimento web compatível com padrões web, podemos enumerar, páginas mais rápidas, compatíveis com dispositivos móveis, com redesigns mais eficientes e rápidos, e custos menores com hospedagem, além de uma mehor colocação nos rankings de sites de busca.&lt;/p>
+&lt;p>As páginas são mais rápidas graças principalmente à formatação com folhas de estilo. As folhas de estilo acabam com todos aqueles &lt;code>&amp;lt;font face=&amp;quot;arial&amp;quot; size=&amp;quot;2&amp;quot;&amp;gt;&lt;/code> do seu documento. Além de sumir com todas essas tags, as folhas de estilo podem ser vinculadas à vários arquivos HTML simultaneamente, mantendo a consistência visual entre todos os seus sites. Isso sem contar em outra vantagem: as folhas de estilo ficam no cache do navegador, permitindo um menor tráfego de transferência. Um menor tráfego de transferência gera um menor custo com hospedagem.&lt;br>
+A compatibilidade com diversos dispositivos é outra vantagem da adesão dos padrões web + CSS. Podemos definir folhas de estilos distintas: uma para ser exibida na hora da impressão, outra para ser exibida na tela, outra para PDA.&lt;br>
+Os redesigns são mais eficientes, justamente por não ter que editar dezenas de arquivos. Edite somente os arquivos de folha de estilo!&lt;br>
+Além disso, há melhores resultados nas ferramentas de busca, usando um código válido: as engines de busca não ignoram aquelas tabelas que compõem o layout do site. As search engines se baseiam no conteúdo. Com o webstandart, a relação código/conteúdo aumenta bastante. Há até &lt;a href="http://www.holovaty.com/tools/getcontentsize/">um site&lt;/a> que mede essa relação . Falando em tabelas, é importante resaltar que, elas só surgiram para formatar dados tabelados. Em algum momento jurássico da história da WWW, alguém as utilizou para modelar layouts e alinhar imagens fatiadas. Aí, a tendência pegou, ficou fortalecida pelos editores WYSIWYG (como o Macromedia Dreamweaver) e hoje a maioria dos sites a utilizam.&lt;/p>
+&lt;p>&lt;strong>Algumas referências&lt;/strong>&lt;/p>
+&lt;p>Deixo algumas sugestões de links úteis sobre o assunto. Aliás, eu não escrevi esse artigo unicamente da minha imaginação.&lt;/p>
+&lt;p>&lt;a href="http://www.zeldman.com">Zeldman&lt;/a>: autor do livro Designing with webstandarts, um dos gurus dessa área&lt;br>
+&lt;a href="http://www.alistapart.com">A List Apart&lt;/a>: um site com muita informação útil para desenvolvedores&lt;br>
+&lt;a href="http://www.tableless.com.br">Tableless&lt;/a>: ‘Versão brasileira&amp;rsquo; da A List Apart. Possui uma série de tutoriais sobre o assunto, além de ter um fórum muito bom&lt;br>
+&lt;a href="http://www.brunotorres.net">Bruno Torres&lt;/a>: desenvolvedor carioca e entusiasta do software livre (assim como eu)&lt;br>
+&lt;a href="http://groups.google.com/group/arqhp">arqHP&lt;/a>: não é um site, mas sim uma lista de discussão. Aliás, é talvez a mais importante lista de discussão do país quando o assunto é desenvolvimento web.&lt;/p>
+&lt;p>Leonardo Faria Coelho (colaboraram Bruno Torres e Irapuan Martinez)&lt;/p></description></item><item><title>Hacks para Internet Explorer</title><link>http://leonardofaria.github.io/leonardofaria.net/2006/06/04/hacks-para-internet-explorer/</link><pubDate>Sun, 04 Jun 2006 14:58:35 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2006/06/04/hacks-para-internet-explorer/</guid><description>&lt;p>Escrever uma página 100% idêntica para vários browsers pode parecer impossível. Mas não é.&lt;br>
+Para contornar isso, hacks são usados, para tentar uma aproximação entre browsers.&lt;/p>
+&lt;p>A primeira forma de esquivar o CSS para diferentes browsers é uma instrução dentro do &lt;code>&amp;lt;head&amp;gt;&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#998;font-style:italic">&amp;lt;!--[if IE]&amp;gt;
+&lt;/span>&lt;span style="color:#998;font-style:italic">&amp;lt;link rel=&amp;#34;stylesheet&amp;#34; type=&amp;#34;text/css&amp;#34; href=&amp;#34;all-ie.css&amp;#34; /&amp;gt;
+&lt;/span>&lt;span style="color:#998;font-style:italic">&amp;lt;![endif]--&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nesse caso, todos estilos especificados para o I(gnorant) Explorer estariam no arquivo all-ie.&lt;/p>
+&lt;p>Mas também é possível escrever folhas de estilos para versões distintas do browser da Microsoft, bastando especificar a versão:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#998;font-style:italic">&amp;lt;!--[if IE 5.0]&amp;gt;
+&lt;/span>&lt;span style="color:#998;font-style:italic">&amp;lt;link rel=&amp;#34;stylesheet&amp;#34; type=&amp;#34;text/css&amp;#34; href=&amp;#34;ie-5.0.css&amp;#34; /&amp;gt;
+&lt;/span>&lt;span style="color:#998;font-style:italic">&amp;lt;![endif]--&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Para IE 5&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#998;font-style:italic">&amp;lt;!--[if IE 5.5]&amp;gt;
+&lt;/span>&lt;span style="color:#998;font-style:italic">&amp;lt;link rel=&amp;#34;stylesheet&amp;#34; type=&amp;#34;text/css&amp;#34; href=&amp;#34;ie-5.5.css&amp;#34; /&amp;gt;
+&lt;/span>&lt;span style="color:#998;font-style:italic">&amp;lt;![endif]--&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Para IE 5.5&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#998;font-style:italic">&amp;lt;!--[if IE 6]&amp;gt;
+&lt;/span>&lt;span style="color:#998;font-style:italic">&amp;lt;link rel=&amp;#34;stylesheet&amp;#34; type=&amp;#34;text/css&amp;#34; href=&amp;#34;ie-6.0.css&amp;#34; /&amp;gt;
+&lt;/span>&lt;span style="color:#998;font-style:italic">&amp;lt;![endif]--&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Para IE 6&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#998;font-style:italic">&amp;lt;!--[if IE lt 6]&amp;gt;
+&lt;/span>&lt;span style="color:#998;font-style:italic">&amp;lt;link rel=&amp;#34;stylesheet&amp;#34; type=&amp;#34;text/css&amp;#34; href=&amp;#34;ie-5.0+5.5.css&amp;#34; /&amp;gt;
+&lt;/span>&lt;span style="color:#998;font-style:italic">&amp;lt;![endif]--&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>O “lt 6” significa later 6, ou seja, anteriores a versão 6.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">style&lt;/span> &lt;span style="color:#008080">type&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;text/css&amp;#34;&lt;/span>&amp;gt;
+@&lt;span style="color:#000;font-weight:bold">import&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#d14">&amp;#34;ie51.css&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>;
+&amp;lt;/&lt;span style="color:#000080">style&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Somente para IE for Macintosh&lt;br>
+Outras formas de fazer algo funcionar somente no IE:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">&lt;span style="color:#000;font-weight:bold">*&lt;/span> &lt;span style="color:#000080">html&lt;/span> #&lt;span style="color:#555">test-span&lt;/span> { &lt;span style="color:#000;font-weight:bold">color&lt;/span>:&lt;span style="color:#000;font-weight:bold">green&lt;/span>; }
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Nesse caso, #test-span será verde, somente no IE&lt;/p>
+&lt;p>&lt;strong>Mais do mesmo:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://virtuelvis.com/archives/2004/02/css-ie-only">Hack-free CSS for IE&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://www.positioniseverything.net/explorer.html">Explorer Exposed!&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://en.wikipedia.org/wiki/Acid2">Acid2&lt;/a>, teste do W3C para testar a renderização dos browsers&lt;/li>
+&lt;li>&lt;a href="http://css-discuss.incutio.com/?page=CssHack">CSS Hack – wiki&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://groups.google.com/group/arqhp/browse_thread/thread/b5e08d9554b07d7f/d2c326fa390380f1?q=deposit%C3%B3rio+hacks&amp;amp;rnum=1#d2c326fa390380f1">arqHP&lt;/a>, onde tudo começou&lt;/li>
+&lt;/ul></description></item><item><title>CSS para preloader de imagem</title><link>http://leonardofaria.github.io/leonardofaria.net/2006/04/23/css-para-preloader-de-imagem/</link><pubDate>Sun, 23 Apr 2006 22:33:02 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2006/04/23/css-para-preloader-de-imagem/</guid><description>&lt;p>&lt;a href="http://specere.net/?webtips">Pescado&lt;/a> do &lt;a href="http://www.digg.com">digg&lt;/a>:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">#&lt;span style="color:#555">preloadedImages&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">width&lt;/span>: &lt;span style="color:#099">0&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">height&lt;/span>: &lt;span style="color:#099">0&lt;/span>&lt;span style="color:#458;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">display&lt;/span>: &lt;span style="color:#000;font-weight:bold">inline&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">path/to/image1.png&lt;/span>);
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">path/to/image2.png&lt;/span>);
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">path/to/image3.png&lt;/span>);
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>(&lt;span style="color:#d14">path/to/image4.png&lt;/span>);
+&lt;span style="color:#000;font-weight:bold">background-image&lt;/span>: &lt;span style="color:#0086b3">url&lt;/span>();
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Depois de configurar o CSS, basta chamar uma div, com seu respectivo id.&lt;/p></description></item><item><title>CSS: Transparências cross-browser</title><link>http://leonardofaria.github.io/leonardofaria.net/2006/02/09/css-transparencias-cross-browser/</link><pubDate>Thu, 09 Feb 2006 22:18:20 -0200</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2006/02/09/css-transparencias-cross-browser/</guid><description>&lt;p>Existem formas distintas para fazer efeitos de transparência, via CSS. Cada browser reconhece um atributo nas folhas de estilo. Vamos lá então:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">&lt;span style="color:#000080">filter&lt;/span>:&lt;span style="color:#3c5d5d;font-weight:bold">alpha&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000080">opacity&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#000080">25&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Para o flamigerado IE.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">&lt;span style="color:#000080">-moz-opacity&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>.&lt;span style="color:#458;font-weight:bold">25&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Usado no browser Mozilla&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">&lt;span style="color:#000080">opacity&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>.&lt;span style="color:#458;font-weight:bold">25&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Usado no Opera&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">&lt;span style="color:#000080">-khtml-opacity&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span>.&lt;span style="color:#458;font-weight:bold">25&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Usado em navegadores com engine KHTML (Safari e Konqueror)&lt;/p>
+&lt;p>Para o Internet Explorer, os valores variam entre 0 a 100. Para os outros browsers, variam entre 0 e 1.&lt;br>
+&lt;strong>[update]&lt;/strong> O Opera, não sei porque cargas d&amp;rsquo;água, não suporta transparência;&lt;/p></description></item><item><title>Ajax</title><link>http://leonardofaria.github.io/leonardofaria.net/2005/04/19/ajax/</link><pubDate>Tue, 19 Apr 2005 21:27:12 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2005/04/19/ajax/</guid><description>&lt;p>Ajax é mais uma das palavras da moda (assim como tableless).&lt;br>
+Para quem não sabe, é um label para um trabalho envolvendo:&lt;/p>
+&lt;ol>
+&lt;li>Apresentação webstandard (XHTML e CSS);&lt;/li>
+&lt;li>Interação e exibição dinâmica com DOM;&lt;/li>
+&lt;li>Interação e manipulação de dados com XML;&lt;/li>
+&lt;li>Interatividade de dados usando XMLHTTPRequest;&lt;/li>
+&lt;li>Javascript resolvido os outros problemas.&lt;/li>
+&lt;/ol>
+&lt;h2 id="mais-do-mesmo">Mais do mesmo:&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="http://www.adaptivepath.com/publications/essays/archives/000385.php">Artigo&lt;/a> esclarecedor de ‘conceituação&amp;rsquo; do Ajax&lt;/li>
+&lt;li>&lt;a href="http://www.fiftyfoureleven.com/resources/programming/xmlhttprequest">Links&lt;/a> com exemplos e artigos. Em um desses links, encontrei um &lt;a href="http://www.plasticshore.com/viewEntry.php?id=205" title="Anúncio do projeto">batepapo&lt;/a> que &lt;a href="http://www.plasticshore.com/projects/chat/index.html" title="Veja o chat">utiliza&lt;/a> da abordagem.&lt;/li>
+&lt;/ul></description></item><item><title>O que esperar com o CSS3</title><link>http://leonardofaria.github.io/leonardofaria.net/2005/03/27/o-que-esperar-com-o-css3/</link><pubDate>Sun, 27 Mar 2005 21:11:57 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2005/03/27/o-que-esperar-com-o-css3/</guid><description>&lt;p>Bem, um dia desses, a versão 3 do CSS deve sair. Mesmo ainda que vários browsers não suportam sequer a versão 2, o W3C soltou uma lista de features. O que deveremos ter:&lt;/p>
+&lt;ul>
+&lt;li>Border: cantos arredondados; sombras; bordas complexas feitas de várias imagens ladrilhadas;&lt;/li>
+&lt;li>Comportamento CSS: adição de comportamentos aos estilos, ou seja mudanças dinâmicas ao estilo ou ao documento em resposta a cliques e/ou teclas pressionadas;&lt;/li>
+&lt;li>Layout multi-colunas: novas propriedades para criar layouts de colunas mais flexíveis;&lt;/li>
+&lt;li>Perfil móvel 1.0: inclui um subgrupo de propriedades CSS1 e CSS2 apropriadas para dispositivos portáveis;&lt;/li>
+&lt;li>Fontes: propriedades para “decoração” e efeitos, como contorno e AA (anti-aliasing = anti-serrilhado);&lt;/li>
+&lt;li>Audio: possibilidade de prender sons de fundo a elementos e transições de elementos, como ativação de links ou flutuar (hover) o cursor sobre um elemento.&lt;/li>
+&lt;/ul></description></item></channel></rss>

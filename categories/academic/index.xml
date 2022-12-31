@@ -1,0 +1,200 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>academic on Leonardo Faria</title><link>http://leonardofaria.github.io/leonardofaria.net/categories/academic/</link><description>Recent content in academic on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 05 Dec 2009 21:00:36 -0200</lastBuildDate><atom:link href="http://leonardofaria.github.io/leonardofaria.net/categories/academic/index.xml" rel="self" type="application/rss+xml"/><item><title>Monografia on Rails: autosimulado</title><link>http://leonardofaria.github.io/leonardofaria.net/2009/12/05/monografia-on-rails-autosimulado/</link><pubDate>Sat, 05 Dec 2009 21:00:36 -0200</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2009/12/05/monografia-on-rails-autosimulado/</guid><description>&lt;p>Para conclusão do meu curso de Sistemas de Informação, dediquei minha monografia e trabalho de conclusão de curso ao &lt;a href="http://www.autosimulado.com.br">autosimulado&lt;/a>.&lt;/p>
+&lt;p>Hoje foi a apresentação da banca do trabalho de conclusão de curso e anexo abaixo minha &lt;a href="http://leonardofaria.github.io/leonardofaria.net/pub/monografia.pdf">monografia em PDF&lt;/a> e os &lt;a href="http://leonardofaria.github.io/leonardofaria.net/pub/monografia-slides.pdf">slides da apresentação&lt;/a>.&lt;/p>
+&lt;iframe src="http://leonardofaria.github.io/leonardofaria.net/pub/monografia.pdf" class="w-full h-screen" /></description></item><item><title>O que é Ruby on Rails?</title><link>http://leonardofaria.github.io/leonardofaria.net/2009/11/09/o-que-e-ruby-on-rails/</link><pubDate>Mon, 09 Nov 2009 21:10:15 -0200</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2009/11/09/o-que-e-ruby-on-rails/</guid><description>&lt;p>A essa altura do campeonato todo mundo já deve saber o que vem a ser o framework Ruby on Rails. Minha monografia e meu trabalho de conclusão de curso da Faculdade foram sobre o &lt;a href="http://www.autosimulado.com.br">&lt;strong>autosimulado&lt;/strong>&lt;/a>. Na monografia fiz uma introdução sobre as características do framework, reproduzido abaixo:&lt;/p>
+&lt;h2 id="ruby-on-rails">Ruby on Rails&lt;/h2>
+&lt;p>O framework Ruby on Rails foi extraído de um sistema para gerenciamento de projetos chamado Basecamp. A primeira versão do framework foi oficialmente lançada em 25 de Julho de 2004 e seu desenvolvimento conta com colaboradores em todo o mundo liderados pelo programador dinamarquês David Heinemeier Hansson.&lt;/p>
+&lt;h3 id="mvc">MVC&lt;/h3>
+&lt;p>Um padrão de projeto descreve e provê uma solução para um problema freqüente, sendo genérico e reusável. São criados a partir de problemas de problemas comuns enfrentados no desenvolvimento de projetos de software.&lt;br>
+A criação de componentes reutilizáveis é uma das técnicas mais exploradas em Engenharia de Software. O uso de componentes diminui o tempo de desenvolvimento e a taxa de erros de codificação. Um padrão pode ser entendido como a abstração de detalhes sobre a implementação de um software.&lt;/p>
+&lt;center>
+&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2009/11/imagem20.jpg" alt="MVC" title="MVC" />
+&lt;/center>
+&lt;p>O padrão de projeto MVC divide o desenvolvimento de um aplicativo em três camadas: View (Visão), Controller (Controle) e Model (Modelo). A separação das camadas permite o aumento da flexibilidade e reuso do código. Sem essa separação, as funcionalidades podem ficar mescladas, o que acarreta um maior esforço para eventuais manutenções, pois as responsabilidades podem ser difundidas entre as camadas.&lt;/p>
+&lt;p>A camada Modelo representa o estado da aplicação. É responsável por fazer a interação da aplicação com a fonte de dados, muito freqüentemente um banco de dados. Quando existe a necessidade de se guardar o estado da aplicação, é através dessa camada que as informações manipuladas pelo sistema podem ser armazenadas na base de dados. É na camada Modelo que são incorporadas as regras de negócio de um aplicativo.&lt;/p>
+&lt;p>A camada Controle é responsável por receber os dados do usuário e definir o fluxo da aplicação, invocando alterações dos dados da camada Modelo.&lt;/p>
+&lt;p>A camada Visão é responsável por apresentar a aplicação ao usuário. Nas aplicações Web, essa camada é construída com HTML, CSS e Javascript.&lt;/p>
+&lt;h3 id="recursos-e-características">Recursos e características&lt;/h3>
+&lt;p>DRY – Don’t Repeat Yourself, em português, Não Se Repita é um conceito intrínseco do Ruby on Rails. Não é preciso copiar trechos de código por todo aplicativo. Para reaproveitamento de código, o desenvolvedor conta com os métodos helpers e com as partials, arquivos que podem ser incluídos no seu aplicativo reduzindo redundâncias.&lt;/p>
+&lt;p>Helpers são uma importante funcionalidade do framework. Um helper é um módulo que contém funções para auxiliar a camada View do aplicativo, retirando lógicas complexas do código da apresentação. Ruby on Rails conta com helpers para diversas funções, incluindo formatação de datas, moedas, números, formulários HTML, Javascript, entre outros. Alguns exemplos da aplicação de helpers:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-ruby" data-lang="ruby">distance_of_time_in_words(&lt;span style="color:#008080">Time&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>now, &lt;span style="color:#008080">Time&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>now &lt;span style="color:#000;font-weight:bold">+&lt;/span> &lt;span style="color:#099">33&lt;/span>, &lt;span style="color:#000;font-weight:bold">false&lt;/span>)
+&lt;span style="color:#099">1&lt;/span> minute
+human_size(&lt;span style="color:#099">123_456&lt;/span>)
+&lt;span style="color:#099">120&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#099">6&lt;/span> &lt;span style="color:#008080">KB&lt;/span>
+number_to_currency(&lt;span style="color:#099">234&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#099">56&lt;/span>, &lt;span style="color:#990073">:unit&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#d14">&amp;#34;R$ &amp;#34;&lt;/span>, &lt;span style="color:#990073">:precision&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#099">2&lt;/span>)
+R&lt;span style="color:#a61717;background-color:#e3d2d2">$&lt;/span> &lt;span style="color:#099">235&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#099">56&lt;/span>
+number_to_percentage(&lt;span style="color:#099">33&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#099">66666&lt;/span>)
+&lt;span style="color:#099">33&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#099">667&lt;/span>&lt;span style="color:#000;font-weight:bold">%&lt;/span>
+number_to_phone(&lt;span style="color:#099">2125551212&lt;/span>, &lt;span style="color:#990073">:area_code&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#000;font-weight:bold">true&lt;/span>, &lt;span style="color:#990073">:delimiter&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#d14">&amp;#34; &amp;#34;&lt;/span>)
+(&lt;span style="color:#099">212&lt;/span>) &lt;span style="color:#099">555&lt;/span> &lt;span style="color:#099">1212&lt;/span>
+truncate(&lt;span style="color:#008080">@text&lt;/span>, &lt;span style="color:#099">9&lt;/span>)
+&lt;span style="color:#008080">Hello&lt;/span> wor&lt;span style="color:#000;font-weight:bold">...&lt;/span>
+pluralize(&lt;span style="color:#099">1&lt;/span>, &lt;span style="color:#d14">&amp;#34;person&amp;#34;&lt;/span>) &lt;span style="color:#000;font-weight:bold">and&lt;/span> pluralize(&lt;span style="color:#099">2&lt;/span>, &lt;span style="color:#d14">&amp;#34;person&amp;#34;&lt;/span>)
+&lt;span style="color:#099">1&lt;/span> person &lt;span style="color:#000;font-weight:bold">and&lt;/span> &lt;span style="color:#099">2&lt;/span> people
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Além dos helpers, existem ainda os plugins, pequenas bibliotecas que adicionam novas funcionalidades ao framework sem que haja necessidade da alteração do seu núcleo e que permitem ser reaproveitados em diferentes projetos.&lt;br>
+O framework Ruby on Rails possui suporte aos mais comuns banco de dados do mercado, como IBM DB2, Microsoft SQL Server, Oracle OCL8, PostgreSQL, MySQL e SQLite. Para definir qual banco utilizar, é necessário apenas especificar os dados de conexão em um único arquivo.&lt;/p>
+&lt;p>Outra característica interessante são os perfis de execução do aplicativo: desenvolvimento, produção e teste. No perfil desenvolvimento, o programador encontra mensagens de log detalhadas para cada requisição no aplicativo. Além disso, erros são apresentados com mensagens claras das inconsistências. O modo teste é utilizado para testes funcionais do aplicativo e produção é o modo utilizado para quando o aplicativo estiver pronto e estável. Para cada um desses perfis é possível utilizar um banco de dados diferente, evitando conflitos entre dados de testes, desenvolvimento e produção.&lt;/p>
+&lt;p>Além disso, o framework já foi criado com suporte integrado a duas bibliotecas Javascript bastante conhecidas: Prototype, que manipula as interações dos objetos do documento, e Script.aculo.us, responsável por criação de efeitos visuais com Javascript.&lt;/p>
+&lt;center>
+&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2009/11/imagem21.jpg" alt="Ciclo de requisições" title="Ciclo de requisições" />
+&lt;/center>
+&lt;p>A figura acima exemplifica o ciclo de requisições no Ruby on Rails. Ao fazer uma requisição de uma página, o navegador faz uma chamada ao servidor – normalmente Apache – que é encaminhada para o dispatcher. O dispatcher é o responsável por transformar a URL do browser em uma URL que é entendida pelo framework. Em seguida, o Action Controller é invocado para decidir o que fazer com a requisição. Caso seja necessária alguma interação com o banco de dados, o Active Record entra em ação. Também é possível que o Action Mailer seja invocado, caso seja necessário enviar algum email e a resposta da requisição é processada pelo Action View.&lt;/p>
+&lt;p>Ruby on Rails é composto por 5 módulos independentes:&lt;/p>
+&lt;ul>
+&lt;li>O módulo Active Record conecta objetos de negócio com tabelas do banco de dados para criar um modelo de domínio onde lógica e dados se encontram presentes em conjunto. Trata-se portanto de uma implementação de um padrão de mapeamento objeto-relacional (ORM), baseado em convenções. Por exemplo, para uma classe Book espera-se a existência de uma tabela Books. Cada linha dessa tabela corresponde a um objeto da classe Book. Atributos da classe representarão as colunas da tabela Books, com os mesmos nomes, por padrão.&lt;/li>
+&lt;li>O módulo Action Pack compreende o Action Controller e o Action View. O Action Controller coordena a interação entre o usuário, as visões e o modelo. Ele é responsável por rotear URLs para ações internas dos controllers, gerenciando URLs de fácil leitura para as pessoas; por responder o usuário exibindo uma view ou um arquivo qualquer e por gerenciar cookies e sessões. Já o Action View é responsável por compor toda a funcionalidade necessária para renderizar views, mais comumente gerando código HTML e XML para o usuário.&lt;/li>
+&lt;li>O módulo Action Support agrupa várias classes úteis e extensões de bibliotecas padrão, que foram consideradas relevantes para aplicações com Ruby on Rails.&lt;/li>
+&lt;li>O módulo Action Mailer é um framework poderoso para serviços de entrega e recebimento de emails.&lt;/li>
+&lt;li>O módulo Action WebServices provê uma maneira de criar APIs inter-operáveis com Rails. Na versão 2.0 do framework esse módulo foi retirado, devido a implementação do modelo Rest no Rails.&lt;/li>
+&lt;/ul>
+&lt;h3 id="estrutura-de-um-aplicativo-ruby-on-rails">Estrutura de um aplicativo Ruby on Rails&lt;/h3>
+&lt;center>
+&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2009/11/imagem24.jpg" />
+&lt;/center>
+&lt;p>A estrutura de um projeto Rails compreende a criação dos diretórios especificados na acima.&lt;/p>
+&lt;ul>
+&lt;li>A pasta “app” possui subdiretórios que armazenam controllers, helpers, models e views.&lt;/li>
+&lt;li>A pasta “config” abriga diversos arquivos de configuração, incluindo o responsável por determinar qual o banco de dados será utilizado.&lt;/li>
+&lt;li>A pasta “db” possui as migrations. Migrations são um recurso do Rails onde o desenvolvedor escreve arquivos Ruby em uma DSL exclusiva para manipular o banco de dados. Desse modo, é possível criar tabelas, campos e modificar a estrutura de banco de dados sem precisar escrever uma linha de SQL ou utilizar outro aplicativo.&lt;/li>
+&lt;li>A pasta “lib” é usada para que o desenvolvedor salve nesse local suas bibliotecas externas do projeto.&lt;/li>
+&lt;li>A pasta “log” é utilizada para salvar os logs gerados em tempo de execução do aplicativo. As ações executadas no aplicativos são salvas nos arquivos de log dessa pasta.&lt;/li>
+&lt;li>A pasta “public” é usada para armazenar as imagens, folhas de estilo e documentos Javascript do aplicativo.&lt;/li>
+&lt;li>A pasta “script” possui scripts usados para auxiliar o desenvolvedor. Com esses scripts, o programador pode gerar novos controllers e models pela linha de comando. Além disso, essa pasta possui um programa server, que é um servidor web para desenvolvimento.&lt;/li>
+&lt;li>A pasta “test” possui arquivos para realização de testes unitários, funcionais e de integração.&lt;/li>
+&lt;li>A pasta “vendor” é usada para armazenar os plugins do projeto e em alguns casos, armazenar o próprio framework.&lt;/li>
+&lt;/ul></description></item><item><title>O que é Ruby?</title><link>http://leonardofaria.github.io/leonardofaria.net/2009/11/09/o-que-e-ruby/</link><pubDate>Mon, 09 Nov 2009 21:09:50 -0200</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2009/11/09/o-que-e-ruby/</guid><description>&lt;p>A essa altura do campeonato todo mundo já deve saber o que vem a ser a linguagem Ruby. Minha monografia e meu trabalho de conclusão de curso da Faculdade foram sobre o &lt;a href="http://www.autosimulado.com.br">&lt;strong>autosimulado&lt;/strong>&lt;/a>. Na monografia fiz uma introdução sobre as características da linguagem Ruby, reproduzido abaixo:&lt;/p>
+&lt;h2 id="ruby">Ruby&lt;/h2>
+&lt;p>A linguagem Ruby foi criada em 1993 pelo japonês Yukihiro “Matz” Matsumoto, com sua primeira versão pública lançada em 1995. Para Matz, o primeiro desejo é de Ruby tornar os programadores felizes, reduzindo o trabalho manual que precisasse ser feito. Segundo ele, o desenvolvimento de sistemas deveria enfatizar as necessidades do homem e não da máquina:&lt;/p>
+&lt;blockquote>
+&lt;p>Muitas pessoas, especialmente engenheiros de computação, focam nas máquinas. Eles pensam, “Fazendo isso, a máquina será mais rápida. Fazendo isso, a máquina será mais eficiente. Fazendo isso, a máquina irá fazer determinada coisa melhor”. Eles estão focando nas máquinas. Mas de fato nós precisamos focar nos humanos, em como os humanos lidam com programação ou operação das aplicações das máquinas. Nós somos os mestres. Elas são as escravas. (VENNERS, 2003).&lt;/p>
+&lt;/blockquote>
+&lt;p>Ruby é uma linguagem orientada a objetos, ou seja, qualquer variável é um objeto, mesmo classes e tipos que em muitas linguagens são designadas como primitivos. Por exemplo:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-ruby" data-lang="ruby">putz &lt;span style="color:#d14">&amp;#34;meu exemplo&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>upcase &lt;span style="color:#998;font-style:italic"># imprimirá MEU EXEMPLO&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Acima, aplica-se o método upcase da classe String no objeto “meu exemplo”. Ruby é extensível: um objeto pode receber melhorias e novos métodos em tempo de execução.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="color:#000;font-weight:bold">class&lt;/span> &lt;span style="color:#458;font-weight:bold">Fixnum&lt;/span>
+&lt;span style="color:#000;font-weight:bold">def&lt;/span> &lt;span style="color:#900;font-weight:bold">+&lt;/span>(numero)
+&lt;span style="color:#099">10&lt;/span>
+&lt;span style="color:#000;font-weight:bold">end&lt;/span>
+&lt;span style="color:#000;font-weight:bold">end&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>No exemplo anterior, o método +() da classe Fixnum foi sobrescrito e retornará sempre 10. A linguagem apresenta tipagem dinâmica, conforme no exemplo abaixo:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#d14">&amp;#34;meu exemplo&amp;#34;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">&amp;gt;&amp;gt;&lt;/span> minhavariavel&lt;span style="color:#000;font-weight:bold">.&lt;/span>class
+&lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#0086b3">String&lt;/span>
+&lt;span style="color:#000;font-weight:bold">&amp;gt;&amp;gt;&lt;/span> minhavariavel &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#099">4&lt;/span> &lt;span style="color:#000;font-weight:bold">*&lt;/span> &lt;span style="color:#099">4&lt;/span>
+&lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#099">16&lt;/span>
+&lt;span style="color:#000;font-weight:bold">&amp;gt;&amp;gt;&lt;/span> minhavariavel&lt;span style="color:#000;font-weight:bold">.&lt;/span>class
+&lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#008080">Fixnum&lt;/span>
+&lt;span style="color:#000;font-weight:bold">&amp;gt;&amp;gt;&lt;/span> minhavariavel &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#099">1000000&lt;/span> &lt;span style="color:#000;font-weight:bold">*&lt;/span> &lt;span style="color:#099">1000000&lt;/span>
+&lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#099">1000000000000&lt;/span>
+&lt;span style="color:#000;font-weight:bold">&amp;gt;&amp;gt;&lt;/span> minhavariavel&lt;span style="color:#000;font-weight:bold">.&lt;/span>class
+&lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#008080">Bignum&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>No exemplo acima, ela recebeu alterações em sua tipagem em tempo de execução. São tipos de variáveis em Ruby:&lt;/p>
+&lt;ul>
+&lt;li>Fixnum: inteiros com até o tamanho da palavra binária do processador menos 1 bit. Exemplos: 1, 81, 6589, 100;&lt;/li>
+&lt;li>Bignum: inteiros maiores que Fixnum. Exemplo: 1234567890;&lt;/li>
+&lt;li>Float: números decimais. Exemplos: 1.41, 1.0;&lt;/li>
+&lt;li>String: corresponde a uma cadeia de caracteres. Exemplo: “teste”;&lt;/li>
+&lt;li>Range: representa intervalos entre valores. Exemplos: 1..10 e a..z;&lt;/li>
+&lt;li>Expressão regular: representa uma expressão regular. Exemplos: /a/ ou /^\s*[a-z]/.&lt;/li>
+&lt;/ul>
+&lt;p>Ruby é uma linguagem simples e elegante: nela não é obrigatório o uso de parênteses, colchetes e chaves e além disso a sintaxe da linguagem é humana e intuitiva, refletindo o minimalismo descrito por Matz. Em um comparativo entre as sintaxes das linguagens Java e Ruby:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-java" data-lang="java">&lt;span style="color:#998;font-style:italic">// java
+&lt;/span>&lt;span style="color:#998;font-style:italic">&lt;/span>l &lt;span style="color:#000;font-weight:bold">=&lt;/span> list&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#008080">get&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>list&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#008080">size&lt;/span>&lt;span style="color:#000;font-weight:bold">()&lt;/span> &lt;span style="color:#000;font-weight:bold">-&lt;/span> 1&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+l &lt;span style="color:#000;font-weight:bold">=&lt;/span> list&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#008080">get&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>0&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;span style="color:#000;font-weight:bold">for&lt;/span> &lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#458;font-weight:bold">int&lt;/span> i&lt;span style="color:#000;font-weight:bold">=&lt;/span>0&lt;span style="color:#000;font-weight:bold">;&lt;/span> i&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>10&lt;span style="color:#000;font-weight:bold">;&lt;/span> i&lt;span style="color:#000;font-weight:bold">++)&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+System&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#008080">out&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#008080">println&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>i &lt;span style="color:#000;font-weight:bold">+&lt;/span> &lt;span style="color:#d14">&amp;#34;times&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="color:#998;font-style:italic"># ruby&lt;/span>
+l &lt;span style="color:#000;font-weight:bold">=&lt;/span> list&lt;span style="color:#000;font-weight:bold">.&lt;/span>last
+l &lt;span style="color:#000;font-weight:bold">=&lt;/span> list&lt;span style="color:#000;font-weight:bold">.&lt;/span>first
+&lt;span style="color:#099">10&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>times &lt;span style="color:#000;font-weight:bold">do&lt;/span> &lt;span style="color:#000;font-weight:bold">|&lt;/span>i&lt;span style="color:#000;font-weight:bold">|&lt;/span>
+&lt;span style="color:#0086b3">puts&lt;/span> &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#d14">#{&lt;/span>i&lt;span style="color:#d14">}&lt;/span>&lt;span style="color:#d14"> times&amp;#34;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">end&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>No Ruby, também é possível criar DSLs – linguagens específicas de domínio – uma espécie de sub-linguagem onde o programador pode criar a sintaxe a sua necessidade. Desse modo, um algoritmo que fizesse uma receita de bolo poderia ser programado da seguinte forma:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-ruby" data-lang="ruby">receita &lt;span style="color:#d14">&amp;#34;Bola de Fubá&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">do&lt;/span>
+ingrediente &lt;span style="color:#d14">&amp;#34;Farinha&amp;#34;&lt;/span>, &lt;span style="color:#d14">&amp;#34;1 quilo&amp;#34;&lt;/span>
+ingrediente &lt;span style="color:#d14">&amp;#34;Açúcar&amp;#34;&lt;/span>, &lt;span style="color:#d14">&amp;#34;200 gramas&amp;#34;&lt;/span>
+ingrediente &lt;span style="color:#d14">&amp;#34;Ovos&amp;#34;&lt;/span>, &lt;span style="color:#d14">&amp;#34;2 unidades&amp;#34;&lt;/span>
+preparo &lt;span style="color:#d14">&amp;#34;Misture todos ingredientes&amp;#34;&lt;/span>
+preparo &lt;span style="color:#d14">&amp;#34;Leve ao forno&amp;#34;&lt;/span>
+preparo &lt;span style="color:#d14">&amp;#34;Sirva&amp;#34;&lt;/span>
+tempo &lt;span style="color:#d14">&amp;#34;2 horas&amp;#34;&lt;/span>
+porcoes &lt;span style="color:#099">3&lt;/span>
+&lt;span style="color:#000;font-weight:bold">end&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Além disso, Ruby é portável e livre. É possível executar Ruby em ambientes Windows e Unix e não é preciso pagar para usá-lo, copiá-lo, modificá-lo ou distribuí-lo.&lt;/p>
+&lt;h3 id="frameworks-ruby">Frameworks Ruby&lt;/h3>
+&lt;p>Desenvolvedores de software constantemente se deparam com situações em que os problemas começam a se repetir em diversas partes do sistema. Para resolvê-los, rotinas são criadas e replicadas por todo o sistema, o que pode tornar o código facilmente suscetível a erros e demasiadamente replicado.&lt;/p>
+&lt;p>Os frameworks são soluções semi-prontas, para agilizar e tornar mais rápido o desenvolvimento de projetos. Eles seguem padrões de projeto bem definidos, que permitem que suas soluções sejam reutilizadas para problemas que outros desenvolvedores já enfrentaram. Dessa forma, os frameworks tornam-se recursos altamente confiáveis.&lt;/p>
+&lt;p>A linguagem Ruby possui vários frameworks web: Merb, Ruby on Rails, Sinatra. A adoção do Ruby on Rails deu-se a sua riqueza de funcionalidades e ampla documentação.&lt;/p></description></item><item><title>Extreme Programming para todos</title><link>http://leonardofaria.github.io/leonardofaria.net/2008/06/07/extreme-programming-para-todos/</link><pubDate>Sat, 07 Jun 2008 20:21:15 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2008/06/07/extreme-programming-para-todos/</guid><description>&lt;p>Esse é outro post &lt;a href="http://www.leonardofaria.net/tag/academico">acadêmico&lt;/a> e novamente um artigo para a disciplina de Engenharia de Software. O artigo está abaixo e dessa vez há também &lt;a href="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2008/06/XP.pdf">slides&lt;/a> (PDF, 2 MB) da apresentação feita na &lt;a href="http://www.faculdadepitagoras.com.br/">Faculdade Pitágoras&lt;/a>.&lt;/p>
+&lt;p>Naturalmente, essa não é a maior referência sobre XP, apenas uma boa introdução sobre o tema. Especialistas mesmo são o &lt;a href="http://www.improveit.com.br/vinicius">Vinícius Teles&lt;/a> e o time da &lt;a href="http://www.improveit.com.br">Improve It&lt;/a>, que possuem um &lt;a href="http://www.improveit.com.br/xp">ótimo conteúdo&lt;/a> sobre o assunto. Vamos lá:&lt;/p>
+&lt;h3 id="introdução">Introdução&lt;/h3>
+&lt;p>Extreme Programming é uma metodologia de desenvolvimento de software que visa a criação de sistemas de melhor qualidade, produzidos em menos tempo e com menores custos. Criada por Kent Beck no fim da década de 90, o desenvolvimento ágil é atingido através de alguns valores e práticas que muito divergem dos conceitos tradicionais.&lt;/p>
+&lt;h3 id="valores">Valores&lt;/h3>
+&lt;p>O XP, como também é chamado o Extreme Programming, estabelece alguns valores para que a empresa de desenvolvimento não se perca em seu projeto e para que o cliente tenha um acompanhamento real do que está pedindo (e pagando). Entre os valores estão: comunicação, coragem, feedback e simplicidade.&lt;/p>
+&lt;p>&lt;strong>Comunicação&lt;/strong>&lt;/p>
+&lt;p>A comunicação é um importante fator no processo de criação e é privilegiada no Extreme Programming, como premissa para garantir o sucesso do desenvolvimento. No XP, cliente e equipe de desenvolvimento ficam cara-a-cara, o que evita mal entendidos e especulações. Essa comunicação é muito positiva para ambos, pois, além de possibilitar o enriquecimento das relações pessoais, faz com o que o cliente faça parte de todo um processo de criação, além de dar a ele um entendimento e domínio cada vez maior do que está querendo.&lt;/p>
+&lt;p>&lt;strong>Coragem&lt;/strong>&lt;/p>
+&lt;p>Outro mandamento do XP é a coragem, no que diz respeito a quebra de paradigmas tradicionais no desenvolvimento. Isso significa que menos é mais: menos documentação, menos modelagem e menos testes manuais. Além disso, é possibilitar o cliente a definir prioridades e manter o sistema sempre simples.&lt;/p>
+&lt;p>&lt;strong>Feedback&lt;/strong>&lt;/p>
+&lt;p>Um dos alicerces mais importantes do Extreme Programming é o Feedback imediato. No feedback, o cliente tem a oportunidade de corrigir falhas que surgem no desenvolvimento e aprender em etapas o funcionamento do seu software – o que é bem mais sútil que o modelo tradicional de desenvolvimento. Além disso, dá ao desenvolvedor a oportunidade de apontar problemas e alternativas do que está sendo solicitado em tempo real.&lt;/p>
+&lt;p>&lt;strong>Simplicidade&lt;/strong>&lt;/p>
+&lt;p>O conceito de simplicidade do XP possui certa relação com o Just in Time, sistema de produção criado pela Toyota na década de 50. Assim como no Toyotismo, o XP prega a simplicidade como máxima. Isso significa escrever somente o necessário para que um requisito funcione e evitar suposições para o futuro.&lt;/p>
+&lt;h3 id="práticas">Práticas&lt;/h3>
+&lt;p>Valores podem ser simples palavras caso não se tenha uma postura condizente com o que se prega. O Extreme Programming têm interessantes práticas. As principais são:&lt;/p>
+&lt;p>&lt;strong>Desenvolvimento Orientado a Testes&lt;/strong>&lt;/p>
+&lt;p>Cria os testes unitários (unit tests) e depois cria o código para que os testes funcionem. Esta abordagem é complexa no início, pois vai contra o processo de desenvolvimento de muitos anos. Entretanto, os testes unitários são essenciais para que a qualidade do projeto seja mantida.&lt;/p>
+&lt;p>&lt;strong>Integração Contínua&lt;/strong>&lt;/p>
+&lt;p>Nunca espera para integrar à versão atual do sistema uma nova funcionalidade. Integrar de forma contínua permite saber o real status do desenvolvimento.&lt;/p>
+&lt;p>&lt;strong>Jogo de Planejamento&lt;/strong>&lt;/p>
+&lt;p>O desenvolvimento é feito em iterações semanais. A cada começo de semana, desenvolvedores e cliente se reúnem para priorizar as funcionalidades. Ao longo da semana, o projeto é desenvolvido para que, ao final de cada semana, o cliente receba as novas funcionalidades, teste-as e caso aprove, sejam colocada em produção.&lt;/p>
+&lt;p>&lt;strong>Pequenas Versões&lt;/strong>&lt;/p>
+&lt;p>A liberação de pequenas versões funcionais auxilia o processo de aceitação e absorção do software por parte do cliente.&lt;/p>
+&lt;p>&lt;strong>Programação em pares&lt;/strong>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2008/06/xp1.jpg" title="Programação em par" width="300" align="right" class="photo white" />&lt;/p>
+&lt;p>A programação em pares é um dos principais diferenciais do XP. Dois profissionais trabalhando juntos produzem códigos mais limpos, funcionais, revisados e sujeito a menos falhas.&lt;/p>
+&lt;p>&lt;strong>Projeto Simples&lt;/strong>&lt;/p>
+&lt;p>A simplicidade de um projeto está em fazer apenas o que o cliente solicita, não se preocupando em atender a requisitos não pedidos. Por exemplo: caso o cliente tenha pedido que na primeira versão apenas o usuário “teste” possa entrar no sistema com a senha “123” e assim ter acesso a todo o sistema, você vai fazer o código exato para que esta funcionalidade seja implementada, sem se preocupar com sistemas de autenticação e restrições de acesso.&lt;/p>
+&lt;p>&lt;strong>Refatoração&lt;/strong>&lt;/p>
+&lt;p>A refatoração é um processo continuamente feito. Significa melhorara a clareza do cógido, dividindo-o em módulos coesos e de maior aproveitamento, baseando-se no conceito DRY (don&amp;rsquo;t repeat yourself – não se repita).&lt;/p>
+&lt;p>&lt;strong>Reuniões em pé&lt;/strong>&lt;/p>
+&lt;p>Reuniões em pé para não se perder o foco nos assuntos, produzindo reuniões rápidas, apenas abordando tarefas realizadas e tarefas a realizar pela equipe.&lt;/p>
+&lt;p>&lt;strong>Ritmo Sustentável&lt;/strong>&lt;/p>
+&lt;p>Ritmo Sustentável significa trabalhar com qualidade, buscando ter ritmo de trabalho saudável (40 horas/semana, 8 horas/dia), sem horas extras. Horas extras, ao contrário do que parece, pode não trazer a produtividade esperada. Outra prática que se verifica neste processo é a prática de trabalho energizado, onde se busca trabalho motivado sempre. Para isto o ambiente de trabalho e a motivação da equipe devem estar sempre em harmonia.&lt;/p>
+&lt;p>&lt;strong>Time Coeso&lt;/strong>&lt;/p>
+&lt;p>A equipe de desenvolvimento é formada pelo cliente e pela equipe de desenvolvimento. Isso significa que o cliente deve ter disponibilidade e boa vontade para um trabalho satisfatório.&lt;/p>
+&lt;h3 id="equipe">Equipe&lt;/h3>
+&lt;p>Uma equipe de Extreme Programming possui desenvolvedores que desempenham diferentes papéis. São eles:&lt;/p>
+&lt;p>&lt;strong>Gerente de Projeto&lt;/strong>&lt;/p>
+&lt;p>Principal responsável pelo relacionamento com o cliente, além de ser responsável também por filtrar assuntos e requisitos desnecessários.&lt;/p>
+&lt;p>&lt;strong>Coach&lt;/strong>&lt;/p>
+&lt;p>Responsável pelas questões técnicas do projeto. Recomenda-se que o coach seja a pessoa com maior conhecimento do processo de desenvolvimento, dos valores e práticas do XP, para que possa verificar o desenvolvimento e apontar eventuais erros da equipe.&lt;/p>
+&lt;p>&lt;strong>Analista de Teste&lt;/strong>&lt;/p>
+&lt;p>Responsável em garantir a qualidade do sistema através dos testes escritos. Ele deve ajudar o cliente a escrever os casos de testes e no final de cada iteração verificar se o software atende todos os casos de testes. Em muitos casos, o Analista em Teste também escreve a documentação.&lt;/p>
+&lt;p>&lt;strong>Redator Técnico&lt;/strong>&lt;/p>
+&lt;p>Responsável por escrever a documentação mínima necessária do projeto, tirando dos desenvolvedores essa tarefa.&lt;/p>
+&lt;p>&lt;strong>Desenvolvedor&lt;/strong>&lt;/p>
+&lt;p>Responsável em analisar, projetar e codificar o sistema. No XP não existe diferença entre analista, projetista e programador uma vez que em vários momentos do projeto o desenvolvedor estará exercendo alguma destas atividades.&lt;/p>
+&lt;h3 id="conclusão">Conclusão&lt;/h3>
+&lt;p>Existem várias formas de se conduzir um processo de desenvolvimento de software. O sucesso da aplicação independe do processo de desenvolvimento escolhido, desde que essa seja seguido corretamente com o comprometimento do cliente e da equipe de desenvolvedores. O Extreme Programming está entre as melhores metodologias por acreditar em um fator fundamental: a comunicação entre todos os participantes.&lt;/p></description></item><item><title>Sobre Controle de Versão</title><link>http://leonardofaria.github.io/leonardofaria.net/2008/05/31/sobre-controle-de-versao/</link><pubDate>Sat, 31 May 2008 17:38:06 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2008/05/31/sobre-controle-de-versao/</guid><description>&lt;p>Na disciplina de Engenharia de Software que faço no curso de Sistemas de Informação da Faculdade Pitágoras, fiz um trabalho introdutório sobre Sistemas de Controle de Versão. O trabalho está abaixo e também disponível em &lt;a href="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2008/05/controle.pdf">PDF&lt;/a>.&lt;/p>
+&lt;h3 id="introdução">Introdução&lt;/h3>
+&lt;p>O desenvolvimento de software envolve um processo contínuo de evolução de código e baseado nesse paradigma, surgiu a necessidade do desenvolvimento de uma solução que gerenciasse o controle de versões dos códigos-fonte, da documentação e do compartilhamento de trabalho. Assim, surgiram os softwares responsáveis de controle de versão.&lt;/p>
+&lt;p>Entre suas funções, os Sistemas de Controle de Versão se destacam por possibilitar:&lt;/p>
+&lt;ul>
+&lt;li>Controle do histórico: possibilidade de se ter um histórico do desenvolvimento, bem como a possibilidade de rastrear as alterações feitas durante um projeto.&lt;/li>
+&lt;li>Trabalho em equipe: oportunidade de possibilitar a divisão de tarefas de forma que não comprometa a integridade total do projeto. Desse modo, pode-se dividir uma equipe de programadores sem que nenhum atrapalhe o projeto do outro, tudo isso sem problemas de sincronização de arquivos.&lt;/li>
+&lt;li>Marcação e resgate de versões estáveis: a utilização dos Sistemas de Controle de Versão facilita a restauração de versões funcionais. Desse modo, é possível trabalhar com segurança o desenvolvimento de uma versão de software sem o comprometimento da versão estável.&lt;/li>
+&lt;li>Apresentando todo essas vantagens, o Controle de Versão é amplamente usado no desenvolvimento de sistemas. Seja em times pequenos ou grandes, softwares livres ou fechados, o Controle de Versão organiza e centraliza decisões.&lt;/li>
+&lt;/ul>
+&lt;h3 id="funcionamento">Funcionamento&lt;/h3>
+&lt;p>Existem diversas soluções para Controle de Versão, gratuitas e pagas. Entre as opções pagas, destacam-se o SourceSafe (Microsoft) e ClearCase (IBM). Entre as opções gratuitas, estão o CVS, o SVN e o Git.&lt;br>
+Todas essas ferramentas tem em comum a forma de funcionamento. Em um rápido resumo:&lt;/p>
+&lt;ol>
+&lt;li>Existe um repositório em um servidor qualquer. Esse servidor armazena todas as versões do software.&lt;/li>
+&lt;li>Os desenvolvedores (clientes) acessam o repositório e trabalham nos arquivos do projeto, em seus respectivos computadores.&lt;/li>
+&lt;li>Periodicamente, os desenvolvedores enviam o código atualizado para o repositório (commit).&lt;/li>
+&lt;/ol>
+&lt;h3 id="comparativo-svn-e-sourcesafe">Comparativo: SVN e SourceSafe&lt;/h3>
+&lt;p>Para um comparativo, escolhemos dois sistemas bastante antagônicos: o SVN, solução livre e o SourceSafe, da Microsoft. O SVN funciona apenas com a arquitetura cliente-servidor, enquanto o SourceSafe possibilita a utilização de repositórios distribuídos, além de também trabalhar no&lt;br>
+modo cliente-servidor.&lt;br>
+Outra diferença significativa está que o SourceSafe funciona apenas em plataforma Windows, e que surgiu de uma demanda interna da própria Microsoft. Já o SVN é multi-plataforma e livre.&lt;br>
+Além disso, é importante ressaltar outra diferença entre os dois: facilidade de utilização. O SVN funciona a partir do terminal (e através de ferramentas de frontend) e é bem mais simples de instalar e gerenciar do que a ferramenta de controle de versões da empresa de Redmond.&lt;/p>
+&lt;h3 id="conclusão">Conclusão&lt;/h3>
+&lt;p>Para um desenvolvimento profissional de aplicações, é imprescindível o Controle de Versão. É ele que garante a integridade do projeto e é, além de ter todas as vantagens apresentadas nesse trabalho, outra forma de previnir acidentes de percurso no desenvolvimento, como estações que podem parar de funcionar por causas diversas.&lt;/p></description></item></channel></rss>

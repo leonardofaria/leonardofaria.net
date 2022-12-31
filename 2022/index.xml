@@ -1,0 +1,130 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2022s on Leonardo Faria</title><link>http://leonardofaria.github.io/leonardofaria.net/2022/</link><description>Recent content in 2022s on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 25 Apr 2022 01:00:00 +0000</lastBuildDate><atom:link href="http://leonardofaria.github.io/leonardofaria.net/2022/index.xml" rel="self" type="application/rss+xml"/><item><title>Building Emergenetics Explorer</title><link>http://leonardofaria.github.io/leonardofaria.net/2022/04/25/building-emergenetics-explorer/</link><pubDate>Mon, 25 Apr 2022 01:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2022/04/25/building-emergenetics-explorer/</guid><description>&lt;p>Last year I built a tool to visualize data from Emergenetics Profile. In this post, you will learn what is Emergenetics, why and how I built &lt;a href="https://emergenetics-explorer.leonardofaria.net">Emergenetics Explorer&lt;/a>, a data visualization tool in my spare time.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2022/04/emergenetics-explorer-intro.png" alt="Screenshot of Emergenetics Explorer">&lt;/p>
+&lt;p>&lt;strong>TL, DR&lt;/strong>: See the application live at &lt;strong>&lt;a href="https://emergenetics-explorer.leonardofaria.net">https://emergenetics-explorer.leonardofaria.net&lt;/a>&lt;/strong> and keep reading the post for details. The post is good, I promise.&lt;/p>
+&lt;p>&lt;strong>Disclaimer&lt;/strong>: I am not affiliated with Emergenetics. I am genuinely curious about psychology and how we interact with each other, at work and outside work.&lt;/p>
+&lt;h2 id="what-is-emergenetics">What is Emergenetics&lt;/h2>
+&lt;p>My previous company uses Emergenetics assessments as a way to learn how to work better. According to &lt;a href="https://en.wikipedia.org/wiki/Emergenetics_International">Wikipedia&lt;/a>, &lt;em>Emergenetics International uses psychometric research and behavioral studies to advise and consult with businesses and individuals on how to assess human capital&lt;/em>. Their Emergenetics Profile is an &lt;em>assessment test to designate individuals by four thinking attributes, analytical, structural, social and conceptual, and three behavioral attributes, expressiveness, assertiveness and flexibility.&lt;/em>&lt;/p>
+&lt;p>An Emergenetics Profile looks like this (&lt;a href="http://leonardofaria.github.io/leonardofaria.net/pub/emergenetics-sample-profile.pdf">full width&lt;/a>):&lt;/p>
+&lt;div class="full-width">
+&lt;iframe src="http://leonardofaria.github.io/leonardofaria.net/pub/emergenetics-sample-profile.pdf" class="w-full" style="height: 60vh">&lt;/iframe>
+&lt;/div>
+&lt;p>From what I understand (from an analytical/structural brain), there is no right or wrong profile. People are different and as more diverse they are, the better. With the information of the profile, you can understand better your signs of brilliance, challenges and how you prefer others to communicate with you.&lt;/p>
+&lt;h2 id="idea">Idea&lt;/h2>
+&lt;p>Since Emergenetics is very present in the company&amp;rsquo;s culture, people started building charts showing where their team members fit in the analytical, structural, social and conceptual spectrums. Something like this:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2022/04/emergenetics-explorer-chart.png" alt="Chart">&lt;/p>
+&lt;p>After seeing the second manually-made chart I decided to create my dynamically-made Emergenetics chart. After talking to a few people to get the data (the company doesn&amp;rsquo;t have an API), I started coding.&lt;/p>
+&lt;h2 id="execution">Execution&lt;/h2>
+&lt;p>My initial idea was to list all people&amp;rsquo;s profiles and then the user could select the profiles of their interest. People should be able to see all profiles of a specific manager and have an option to download the chart for future use (team introductions for example).&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2022/04/emergenetics-explorer.jpg" alt="Emergenetics Explorer">&lt;/p>
+&lt;p>The data came from a CSV file, updated once a month after more employees took the Emergenetics assessment. I persisted the results in a database synced with BambooHR data. Using the BambooHR API here was very important because I could present the employee Emergenetics results along with their other data (profile photo and manager).&lt;/p>
+&lt;h2 id="the-non-emergenetics-portion-of-the-emergenetics-explorer">The non-Emergenetics portion of the Emergenetics Explorer&lt;/h2>
+&lt;p>After I finished this MVP version of the application, I thought it would be cool to add new features to the &amp;ldquo;product&amp;rdquo;. The first of them was a &lt;a href="https://emergenetics-explorer.leonardofaria.net/directory">Directory page&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2022/04/emergenetics-explorer-directory.jpg" alt="Directory page">&lt;/p>
+&lt;p>The Directory page lists all employees and their basic info (title, division, department, location, manager). You can also check their individual Emergenetics profiles.&lt;/p>
+&lt;h3 id="map">Map&lt;/h3>
+&lt;p>Since I also had the name of the city, state and country of employees, I thought it would be cool to show where employees live in a &lt;a href="https://emergenetics-explorer.leonardofaria.net/world">map&lt;/a>. Since the company became remote-first, people liked this a lot to get to know where their colleagues live.&lt;/p>
+&lt;video class="h-auto" controls autoplay="autoplay">
+&lt;source src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2022/04/emergenetics-explorer-world.mp4" type="video/mp4">
+&lt;/video>
+&lt;h3 id="radar">Radar&lt;/h3>
+&lt;p>A designer created a radar version of the Emergenetics data in Figma (I have no idea how) and I added similar visualization in the application.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2022/04/emergenetics-explorer-radar.png" alt="Radar">&lt;/p>
+&lt;p>This radar chart was quite interesting to see with live data: it showed how people with specific job titles had similar profiles (too social or too analytical).&lt;/p>
+&lt;h2 id="technical-details">Technical details&lt;/h2>
+&lt;p>This project was also a good excuse to work with tech that I was not working with at my job. Generally speaking, it is a Next.js TypeScript project deployed to Vercel. To make this project reality, I wrote a small API parser in Ruby and played with Google Maps and data visualization tools. I also implemented UI elements (buttons, modals, etc) with the same company&amp;rsquo;s look and feel in Tailwind CSS.&lt;/p>
+&lt;h2 id="live">Live&lt;/h2>
+&lt;p>You can see the application live at &lt;strong>&lt;a href="https://emergenetics-explorer.leonardofaria.net">https://emergenetics-explorer.leonardofaria.net&lt;/a>&lt;/strong>. This environment uses sample data created with Faker. To see the data, you need to authenticate with any Google account (in the real environment, only users of a specific domain can see the real data).&lt;/p></description></item><item><title>Building TypeScript definitions on demand</title><link>http://leonardofaria.github.io/leonardofaria.net/2022/02/07/building-typescript-definitions-on-demand/</link><pubDate>Mon, 07 Feb 2022 01:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2022/02/07/building-typescript-definitions-on-demand/</guid><description>&lt;p>I recently came across an interesting problem: is it possible to dynamically create TypeScript definitions for a React component library that doesn&amp;rsquo;t use TypeScript at all? Something like a &lt;a href="https://github.com/DefinitelyTyped/DefinitelyTyped">DefinitelyTyped package&lt;/a> for a private NPM package?&lt;/p>
+&lt;h2 id="the-problem">The problem&lt;/h2>
+&lt;p>Let me detail the problem a bit better. Consider the Button component below:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-jsx" data-lang="jsx">&lt;span style="color:#000;font-weight:bold">import&lt;/span> PropTypes from &lt;span style="color:#d14">&amp;#34;prop-types&amp;#34;&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">const&lt;/span> Button &lt;span style="color:#000;font-weight:bold">=&lt;/span> ({ appearance, children, ...props }) =&amp;gt; {
+&lt;span style="color:#000;font-weight:bold">return&lt;/span> (
+&amp;lt;&lt;span style="color:#000080">button&lt;/span> &lt;span style="color:#008080">className&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>{&lt;span style="color:#d14">`button--&lt;/span>&lt;span style="color:#d14">${&lt;/span>appearance&lt;span style="color:#d14">}&lt;/span>&lt;span style="color:#d14">`&lt;/span>} {&lt;span style="color:#008080">...props&lt;/span>}&amp;gt;
+{children}
+&amp;lt;/&lt;span style="color:#000080">button&lt;/span>&amp;gt;
+);
+};
+Button.propTypes &lt;span style="color:#000;font-weight:bold">=&lt;/span> {
+&lt;span style="color:#998;font-style:italic">/** Type of the button */&lt;/span>
+appearance&lt;span style="color:#000;font-weight:bold">:&lt;/span> PropTypes.oneOf([&lt;span style="color:#d14">&amp;#34;primary&amp;#34;&lt;/span>, &lt;span style="color:#d14">&amp;#34;secondary&amp;#34;&lt;/span>]),
+&lt;span style="color:#998;font-style:italic">/** Content for the button */&lt;/span>
+children&lt;span style="color:#000;font-weight:bold">:&lt;/span> PropTypes.node.isRequired
+};
+Button.displayName &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">&amp;#39;Button&amp;#39;&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">export&lt;/span> &lt;span style="color:#000;font-weight:bold">default&lt;/span> Button;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>This component is very straightforward: a &lt;code>&amp;lt;button&amp;gt;&lt;/code> that will be accordingly styled with the value of appearance.&lt;/p>
+&lt;p>Now imagine that a new developer joined the company and they shipped their very first feature with the following Button:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-jsx" data-lang="jsx">&amp;lt;&lt;span style="color:#000080">Button&lt;/span> &lt;span style="color:#008080">variant&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;link&amp;#34;&lt;/span>&amp;gt;Buy now&amp;lt;/&lt;span style="color:#000080">Button&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The new developer used to work with &lt;a href="https://mui.com/components/buttons/">Material UI&lt;/a> and &lt;code>variant=&amp;quot;link&amp;quot;&lt;/code> came from their old days. No one noticed that the Button didn&amp;rsquo;t look like the others in the application.&lt;/p>
+&lt;p>It would be great to have a warning in our editor mentioning that &lt;code>variant&lt;/code> is not a valid prop for &lt;code>&amp;lt;Button&amp;gt;&lt;/code>. It would be great to have an autocomplete feature in our editor, so the developer could learn the component API as they work in the codebase. TypeScript solves these problems; however, the codebase doesn&amp;rsquo;t use TS.&lt;/p>
+&lt;p>In addition, the Button is imported from a private NPM package. If the repository and packages were public, probably someone would create definitions and add them in the &lt;a href="https://github.com/DefinitelyTyped/DefinitelyTyped">DefinitelyTyped&lt;/a> repository.&lt;/p>
+&lt;p>Going back to the initial question of this post: is it possible to dynamically create TypeScript definitions for a React component library that doesn&amp;rsquo;t use TypeScript at all? YES!&lt;/p>
+&lt;h2 id="the-solution">The solution&lt;/h2>
+&lt;p>I am using the &lt;a href="https://www.npmjs.com/package/react-to-typescript-definitions">react-to-typescript-definitions&lt;/a> package to create definitions from the compiled files. The tool can map most PropTypes (&lt;code>any&lt;/code>, &lt;code>array&lt;/code>, &lt;code>bool&lt;/code>, &lt;code>func&lt;/code>, &lt;code>number&lt;/code>, &lt;code>object&lt;/code>, &lt;code>string&lt;/code>, &lt;code>node&lt;/code>, &lt;code>element&lt;/code>, &lt;code>oneOfType&lt;/code>, &lt;code>arrayOf&lt;/code>, &lt;code>symbol&lt;/code>, &lt;code>shape&lt;/code>) and identify the required ones. The package partially support &lt;code>oneOf&lt;/code> PropType and can even re-use your comments.&lt;/p>
+&lt;p>You can create definitions from the command line or import the functionality into a script with this tool. Here is one example:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="color:#000;font-weight:bold">import&lt;/span> { generateFromFile } from &lt;span style="color:#d14">&amp;#34;react-to-typescript-definitions&amp;#34;&lt;/span>;
+generateFromFile(&lt;span style="color:#000;font-weight:bold">null&lt;/span>, &lt;span style="color:#d14">&amp;#34;Button.js&amp;#34;&lt;/span>, {}, &lt;span style="color:#d14">&amp;#34;react&amp;#34;&lt;/span>);
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The function &lt;code>generateFromFile&lt;/code> will return something like:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="color:#000;font-weight:bold">export&lt;/span> type ButtonAppearance &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">&amp;#34;primary&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">|&lt;/span> &lt;span style="color:#d14">&amp;#34;secondary&amp;#34;&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">export&lt;/span> &lt;span style="color:#000;font-weight:bold">interface&lt;/span> ButtonProps {
+&lt;span style="color:#998;font-style:italic">// All other props
+&lt;/span>&lt;span style="color:#998;font-style:italic">&lt;/span> [x&lt;span style="color:#000;font-weight:bold">:&lt;/span>string]&lt;span style="color:#000;font-weight:bold">:&lt;/span> any;
+&lt;span style="color:#998;font-style:italic">/**
+&lt;/span>&lt;span style="color:#998;font-style:italic"> * Type of the button
+&lt;/span>&lt;span style="color:#998;font-style:italic"> */&lt;/span>
+appearance&lt;span style="color:#000;font-weight:bold">?:&lt;/span> ButtonAppearance;
+&lt;span style="color:#998;font-style:italic">/**
+&lt;/span>&lt;span style="color:#998;font-style:italic"> * Content for the button
+&lt;/span>&lt;span style="color:#998;font-style:italic"> */&lt;/span>
+children&lt;span style="color:#000;font-weight:bold">:&lt;/span> React.ReactNode;
+}
+&lt;span style="color:#000;font-weight:bold">export&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> Button&lt;span style="color:#000;font-weight:bold">:&lt;/span> React.FC&lt;span style="color:#000;font-weight:bold">&amp;lt;&lt;/span>ButtonProps&lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span>;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>A few highlights:
+The tool reused the comments (&amp;ldquo;Type of the button&amp;rdquo;, &amp;ldquo;Content for the button&amp;rdquo;) from the original component;
+The tool identified appearance as optional and children as required props;
+The tool created a variable with the possible values of appearance;&lt;/p>
+&lt;h3 id="in-real-life">In real life&lt;/h3>
+&lt;p>We have two options of usage of this package.&lt;/p>
+&lt;h4 id="cli">CLI&lt;/h4>
+&lt;p>CLI can be helpful for one-off scenarios or for when you want to test things out. The example that I posted above could be created by running:&lt;/p>
+&lt;pre>&lt;code>cat src/components/Button/Button.js | yarn --silent react2dts --top-level-module Button
+&lt;/code>&lt;/pre>&lt;h4 id="node-module">Node module&lt;/h4>
+&lt;p>Importing the package into your toolbox scripts gives you the flexibility to customize what needs definitions and define what to do with the data. Here is what I am doing:&lt;/p>
+&lt;p>I created a script that imports all components from my main &lt;code>index.js&lt;/code> file (&lt;code>import * as componentLibrary from './src/index.js';&lt;/code>). This &lt;code>index.js&lt;/code> looks like this:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="color:#000;font-weight:bold">export&lt;/span> { &lt;span style="color:#000;font-weight:bold">default&lt;/span> as Avatar } from &lt;span style="color:#d14">&amp;#39;./components/Avatar&amp;#39;&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">export&lt;/span> { &lt;span style="color:#000;font-weight:bold">default&lt;/span> as Badge } from &lt;span style="color:#d14">&amp;#39;./components/Badge&amp;#39;&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">export&lt;/span> { &lt;span style="color:#000;font-weight:bold">default&lt;/span> as Button } from &lt;span style="color:#d14">&amp;#39;./components/Button&amp;#39;&lt;/span>;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>For each of these components, I call the &lt;code>generateFromFile&lt;/code> function:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="color:#000;font-weight:bold">import&lt;/span> &lt;span style="color:#000;font-weight:bold">*&lt;/span> as componentLibrary from &lt;span style="color:#d14">&amp;#39;./src/index.js&amp;#39;&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">let&lt;/span> definitionsContent &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">&amp;#39;&amp;#39;&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">const&lt;/span> components &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#0086b3">Object&lt;/span>.keys(componentLibrary);
+components.forEach((component) =&amp;gt; {
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> (
+&lt;span style="color:#000;font-weight:bold">typeof&lt;/span> componentLibrary[component] &lt;span style="color:#000;font-weight:bold">===&lt;/span> &lt;span style="color:#d14">&amp;#39;function&amp;#39;&lt;/span> &lt;span style="color:#000;font-weight:bold">&amp;amp;&amp;amp;&lt;/span>
+componentLibrary[component].filename &lt;span style="color:#000;font-weight:bold">!==&lt;/span> &lt;span style="color:#000;font-weight:bold">undefined&lt;/span>
+) {
+&lt;span style="color:#000;font-weight:bold">const&lt;/span> definitions &lt;span style="color:#000;font-weight:bold">=&lt;/span> generateFromFile(
+&lt;span style="color:#000;font-weight:bold">null&lt;/span>,
+componentLibrary[component].filename,
+{},
+&lt;span style="color:#d14">&amp;#39;react&amp;#39;&lt;/span>
+);
+definitionsContent &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">`&lt;/span>&lt;span style="color:#d14">${&lt;/span>definitionsContent&lt;span style="color:#d14">}${&lt;/span>definitions&lt;span style="color:#d14">}&lt;/span>&lt;span style="color:#d14">`&lt;/span>;
+}
+});
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The &lt;code>definitionsContent&lt;/code> variable might have some duplicated content, for example, multiple &lt;code>import * as React from 'react';&lt;/code>. After cleaning this, I store the content of this variable in the &lt;code>dist/es/index.d.ts&lt;/code>. Finally, in the &lt;code>package.json&lt;/code>, I mention the location of the types:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;span style="color:#000080">&amp;#34;module&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;dist/es/index.js&amp;#34;&lt;/span>,
+&lt;span style="color:#000080">&amp;#34;types&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;dist/es/index.d.ts&amp;#34;&lt;/span>,
+&lt;span style="color:#000080">&amp;#34;files&amp;#34;&lt;/span>: [
+&lt;span style="color:#d14">&amp;#34;dist/*&amp;#34;&lt;/span>
+]
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>This script is executed in CI environmnent. When someone publishes a new version of the component library:&lt;/p>
+&lt;ol>
+&lt;li>We build the package using rollup, saving the files in the &lt;code>dist&lt;/code> folder;&lt;/li>
+&lt;li>We execute the script to create the TypeScript definitions;&lt;/li>
+&lt;li>We run &lt;code>npm publish&lt;/code> (currently with Lerna)&lt;/li>
+&lt;li>We make release notes with Lerna&lt;/li>
+&lt;/ol>
+&lt;p>What do you think of this solution? Let me know in the comments.&lt;/p></description></item></channel></rss>

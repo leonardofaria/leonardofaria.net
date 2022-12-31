@@ -1,0 +1,1236 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2020s on Leonardo Faria</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/</link><description>Recent content in 2020s on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 30 Nov 2020 05:00:00 +0000</lastBuildDate><atom:link href="http://leonardofaria.github.io/leonardofaria.net/2020/index.xml" rel="self" type="application/rss+xml"/><item><title>My experience using Lighthouse in the real world</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/</link><pubDate>Mon, 30 Nov 2020 05:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/</guid><description>&lt;p>Lighthouse has been part of my daily work for the last few months and I shared some snippets in my last few posts. For this particular post, it is time to share how I am using Lighthouse in a product used by millions of people and what I have discovered during this process.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/lighthouse.jpg" alt="Lighthouse photo by Robert Wiedemann">&lt;/p>
+&lt;p>&lt;em>Disclaimers&lt;/em>: 1. This content may be reviewed in the future as I learn more about web performance and Lighthouse; 2. Do not take this post as professional/legal advice; 3. Do not take my comments on tech X or Y as attacks to tech X or Y.&lt;/p>
+&lt;div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
+&lt;strong>Hi! This post is part of a Lighthouse post series. Also, check out:&lt;/strong>
+&lt;ul>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;h2 id="use-existing-tools-before-creating-your-own">Use existing tools before creating your own&lt;/h2>
+&lt;p>It sounds obvious but it doesn’t hurt to repeat the message: do not reinvent the wheel (until you absolutely need to). You can start &lt;a href="https://support.google.com/webmasters/answer/9205520">monitoring Core Web Vitals for free&lt;/a> in the Google Search Console.&lt;/p>
+&lt;p>If this is not enough, or if you have a complex web app behind authentication, or any other scenarios, you can start by using a tool listed in the &lt;a href="https://github.com/GoogleChrome/lighthouse#lighthouse-integrations-in-web-perf-services">Lighthouse integrations docs&lt;/a>. From that list, I can only speak of &lt;a href="https://calibreapp.com">Calibre&lt;/a> as I have not used the others. I am not affiliated with them.&lt;/p>
+&lt;p>Using Calibre, you can schedule Lighthouse tests, create performance budgets, see pretty charts, and learn what performance looks like in your product. The relevant information is easy to find and their product has a very polished UI, however, at a certain point, you may want more and that means ‘custom development’.&lt;/p>
+&lt;h2 id="the-tooling-in-place">The tooling in place&lt;/h2>
+&lt;p>We have decided to create our own tool at &lt;a href="https://thinkific.com">Thinkific&lt;/a> in order to run Lighthouse tests to be aligned with the monitoring stack and give us more flexibility. Here are some details:&lt;/p>
+&lt;ul>
+&lt;li>We run tests every hour;&lt;/li>
+&lt;li>We run tests in our Critical User Journeys: these are important routes of our application used by different types of users;&lt;/li>
+&lt;li>The report files (JSON, HTML), along with the page screenshot and HAR file are stored in S3 for future reference;&lt;/li>
+&lt;li>The numbers (Lighthouse scores, assets file sizes, Web Vitals) are sent to a relational database (Postgres) and &lt;a href="https://prometheus.io/">Promotheus&lt;/a>, a monitoring system and time series database. Postgres empowers the creation of custom reports as we need and Prometheus is used with Grafana to create custom dashboards.&lt;/li>
+&lt;/ul>
+&lt;p>Comparing to open-source solutions, our tool is similar to &lt;a href="https://github.com/Verivox/lighthouse-monitor/">lighthouse-monitor&lt;/a>.&lt;/p>
+&lt;h3 id="understanding-variability">Understanding variability&lt;/h3>
+&lt;p>Running Lighthouse in our tool, we noticed the performance score changed due to inherent variability in web and network technologies, even when there hadn&amp;rsquo;t been a code change.&lt;/p>
+&lt;p>Network, client hardware, and web server variabilities are some examples of how the score can trick you. &lt;a href="https://github.com/GoogleChrome/lighthouse/blob/master/docs/variability.md">Lighthouse documentation&lt;/a> clarifies all the different sources of variability and how to deal with them.&lt;/p>
+&lt;p>In our case, we run Lighthouse 5 times per URL, calculating a median score. We also store the min/max values in case we want to investigate one-off results.&lt;/p>
+&lt;h2 id="working-with-lighthouse-results">Working with Lighthouse results&lt;/h2>
+&lt;p>What do I do when I have Lighthouse reports from 9 different URLs?&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/detective-wall.jpg" alt="Detective wall, from the Isle of Dogs movie">&lt;/p>
+&lt;p>FCP, LCP, TTI, TBT, CLS: my work in the last few months is analyzing data and connecting dots. Sometimes I find low hanging fruit that improves one metric here and there, sometimes I go down the rabbit hole.&lt;/p>
+&lt;p>With data coming from everywhere, I am following the scientific method to focus on what matters:&lt;/p>
+&lt;ol>
+&lt;li>Make an observation.&lt;/li>
+&lt;li>Ask a question.&lt;/li>
+&lt;li>Form a hypothesis or testable explanation.&lt;/li>
+&lt;li>Make a prediction based on the hypothesis.&lt;/li>
+&lt;li>Test the prediction.&lt;/li>
+&lt;li>Iterate: use the results to make new hypotheses or predictions.&lt;/li>
+&lt;/ol>
+&lt;p>When it comes to performance, there is no silver bullet. Sometimes images are the culprits of bad performance scores, sometimes it is an architecture problem. The goal of my post is not blaming X or Y. In saying this, let me share a few thoughts on these two topics:&lt;/p>
+&lt;h3 id="image-optimization">Image optimization&lt;/h3>
+&lt;p>Images impact page load time since bigger images will take longer to be downloaded and as a result, it will impact different Lighthouse metrics - usually CLS, LCP.&lt;/p>
+&lt;p>Recently, &lt;a href="https://github.com/vercel/next.js/discussions/16832">Google worked with Next.js&lt;/a> to create an &lt;a href="https://nextjs.org/docs/basic-features/image-optimization">Image component&lt;/a> that delivers optimized images. The framework supports image conversion from via Imgix, Cloudinary, Akamai and as expected, Vercel.&lt;/p>
+&lt;p>I predict that the conversion on demand, by using third-party services as mentioned above or by using serverless solutions will become more and more popular. Starting next year, Google &lt;a href="https://developers.google.com/search/blog/2020/11/timing-for-page-experience">will include Web Vitals metrics&lt;/a> in the page ranking algorithms.&lt;/p>
+&lt;h3 id="old-architectures-didnt-age-well">Old architectures didn&amp;rsquo;t age well&lt;/h3>
+&lt;p>Old SPA architectures doesn&amp;rsquo;t perform well these days and Lighthouse captures that.&lt;/p>
+&lt;p>Here is one example: back in the day, people (including myself) used to build their JS code into a single file. We wanted to avoid multiple files because HTTP/1.1 didn&amp;rsquo;t support too many concurrent requests, which was improved in HTTP/2. Today, unused JS will be caught in the Lighthouse tests.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/codesplitting.png" alt="Code splitting cartoon by Crystallize">&lt;/p>
+&lt;p>Code Splitting is part of any modern JS tech stack using webpack and, in React, it can be combined with &lt;a href="https://loadable-components.com/docs/getting-started/">Loadable Components&lt;/a> and &lt;a href="https://reactjs.org/docs/code-splitting.html#reactlazy">&lt;code>React.lazy&lt;/code>&lt;/a>. Giving the user only what they need is key.&lt;/p>
+&lt;p>In the back end, &lt;a href="https://graphql.org/">GraphQL&lt;/a> showed us that we can request data as we go. I know this can also be done with REST as long we know what is in the UI but the whole point here is to deliver only the data that users need.&lt;/p>
+&lt;h2 id="conclusions">Conclusions&lt;/h2>
+&lt;p>I hope this series shed some light (no pun intended) on your front-end performance skills. Lighthouse is so powerful that people out there are creating full SaaS products to make the web better.&lt;/p>
+&lt;p>Are you using Lighthouse or planning to start using? Let me know in the comments!&lt;/p></description></item><item><title>Creating HAR files with Lighthouse</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/</link><pubDate>Mon, 30 Nov 2020 04:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/</guid><description>&lt;p>HAR (HTTP Archive) is a JSON file containing all information about a browser’s interactions with a page. This file is often used for performance analysis. &lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/06/07/using-har-files-to-analyze-performance-over-time/">Earlier this year&lt;/a>, I shared what kind of information we can get from and today we will automate the HAR creation.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/06/har-viewer.jpg" alt="HAR Viewer">&lt;/p>
+&lt;p>There are different ways to automate the HAR creation: &lt;a href="https://www.npmjs.com/package/puppeteer-har">puppeteer-har&lt;/a> is a NPM package you can add in your tooling or if you are not from the JavaScript world you can use &lt;a href="https://octopus.com/blog/selenium/13-capturing-har-files/capturing-har-files">Selenium&lt;/a>.&lt;/p>
+&lt;p>I was using puppeteer-har for a few months but then I noticed that the HAR was missing a few files in specific scenarios (ex. a React app with Loadable and React Router). For this reason, I decided to look for analternative and this is how I found the &lt;a href="https://www.npmjs.com/package/chrome-har-capturer">chrome-har-capturer&lt;/a> package.&lt;/p>
+&lt;div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
+&lt;strong>Hi! This post is part of a Lighthouse post series. Also, check out:&lt;/strong>
+&lt;ul>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>This package works like a charm; it creates a HAR file following the &lt;a href="http://www.softwareishard.com/blog/har-12-spec/">HAR 1.2 spec&lt;/a> and all that I need to provide is an array of raw events that comes from the &lt;a href="https://chromedevtools.github.io/devtools-protocol/">Chrome Debugging Protocol&lt;/a>. Who provides the raw events? Lighthouse!&lt;/p>
+&lt;p>Let&amp;rsquo;s take a look at the implementation (from my &lt;a href="https://github.com/leonardofaria/lighthouse-examples">lighthouse-examples GitHub repository&lt;/a>):&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1&lt;/span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> lighthouse &lt;span style="color:#000;font-weight:bold">=&lt;/span> require(&lt;span style="color:#d14">&amp;#39;lighthouse&amp;#39;&lt;/span>);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2&lt;/span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> chromeLauncher &lt;span style="color:#000;font-weight:bold">=&lt;/span> require(&lt;span style="color:#d14">&amp;#39;chrome-launcher&amp;#39;&lt;/span>);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3&lt;/span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> { fromLog } &lt;span style="color:#000;font-weight:bold">=&lt;/span> require(&lt;span style="color:#d14">&amp;#39;chrome-har-capturer&amp;#39;&lt;/span>);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4&lt;/span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> { writeFileSync } &lt;span style="color:#000;font-weight:bold">=&lt;/span> require(&lt;span style="color:#d14">&amp;#39;fs&amp;#39;&lt;/span>);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6&lt;/span>(async () =&amp;gt; {
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> chrome &lt;span style="color:#000;font-weight:bold">=&lt;/span> await chromeLauncher.launch({chromeFlags&lt;span style="color:#000;font-weight:bold">:&lt;/span> [&lt;span style="color:#d14">&amp;#39;--headless&amp;#39;&lt;/span>]});
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> options &lt;span style="color:#000;font-weight:bold">=&lt;/span> {port&lt;span style="color:#000;font-weight:bold">:&lt;/span> chrome.port, emulatedFormFactor&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#39;desktop&amp;#39;&lt;/span>};
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> url &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">&amp;#39;https://leonardofaria.net&amp;#39;&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> { artifacts&lt;span style="color:#000;font-weight:bold">:&lt;/span> { devtoolsLogs&lt;span style="color:#000;font-weight:bold">:&lt;/span> { defaultPass } } } &lt;span style="color:#000;font-weight:bold">=&lt;/span> await lighthouse(url, options);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> har &lt;span style="color:#000;font-weight:bold">=&lt;/span> await fromLog(url, defaultPass);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13&lt;/span> writeFileSync(&lt;span style="color:#d14">&amp;#39;page.har&amp;#39;&lt;/span>, JSON.stringify(har));
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15&lt;/span> await chrome.kill();
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16&lt;/span>})();
+&lt;/code>&lt;/pre>&lt;/div>
+&lt;p>In my other posts, I shared how to use the &lt;code>lighthouse()&lt;/code> function to get all kinds of information: from web vitals metrics to page screenshots. What I didn&amp;rsquo;t mention was the function also keeps the artifacts created by the DevTools protocols. This is what we are storing in line 10 and this is the array of raw events that chrome-har-capturer needs to generate a HAR file.&lt;/p>
+&lt;p>In line 12, we use the &lt;code>fromLog&lt;/code> function to build the HAR object, which we store in the file system in the following line. If you are curious about how the &lt;code>fromLog&lt;/code> function works, I would recommend reading the package source-code, in special &lt;a href="https://github.com/cyrus-and/chrome-har-capturer/blob/master/test/offline.js">one of their tests&lt;/a>.&lt;/p>
+&lt;p>Next, the generated HAR is stored in &lt;code>page.har&lt;/code>. and we can use it in the &lt;a href="http://www.softwareishard.com/har/viewer/">HAR Viewer&lt;/a> for performance analysis.&lt;/p>
+&lt;h2 id="why-do-we-need-this">Why do we need this?&lt;/h2>
+&lt;p>We can extract a lot of valuable information from HAR files, such as:&lt;/p>
+&lt;ul>
+&lt;li>Protocols being used in the page (http 1.1, http 2, h3-29);&lt;/li>
+&lt;li>Compressed/uncompressed asset sizes;&lt;/li>
+&lt;li>Request timing information (ex.: waiting and downloading times);&lt;/li>
+&lt;/ul>
+&lt;p>With this information, we can identify bottlenecks (ex.what is the slowest request of that URL), find low-hanging fruit (ex.asset compression is one flag away in your build system tool) and prioritize tasks in order to improve performance on our pages.&lt;/p>
+&lt;p>Can you think of different uses? Let me know in the comments!&lt;/p></description></item><item><title>Generating Web Vitals information with Lighthouse</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/</link><pubDate>Mon, 30 Nov 2020 03:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/</guid><description>&lt;p>&lt;a href="https://webmasters.googleblog.com/2020/05/evaluating-page-experience.html">Earlier this year&lt;/a>, Google announced that “page experience” would impact its search ranking. A few weeks ago, they announced that the new page experience signals will roll out in May 2021. But what are these page experience signals?&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/search-page-experience.jpg" alt="Google&amp;rsquo;s Page experience chart">&lt;/p>
+&lt;p>The &lt;a href="https://developers.google.com/search/docs/guides/page-experience">page experience&lt;/a> signal measures aspects of how users perceive the experience of interacting with a web page. Offering mobile-friendly pages and serving content over HTTPS is something we have been doing for a while but soon slow sites may lose their spot in the Google page ranking algorithm.&lt;/p>
+&lt;div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
+&lt;strong>Hi! This post is part of a Lighthouse post series. Also, check out:&lt;/strong>
+&lt;ul>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;h2 id="what-are-core-web-vitals">What are Core Web Vitals&lt;/h2>
+&lt;p>&lt;a href="https://web.dev/vitals/#core-web-vitals">From Google&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>Core Web Vitals are the subset of Web Vitals that apply to all web pages, should be measured by all site owners, and will be surfaced across all Google tools. &lt;strong>Each of the Core Web Vitals represents a distinct facet of the user experience&lt;/strong>, is measurable in the field, and reflects the real-world experience of a critical user-centric outcome.&lt;/p>
+&lt;/blockquote>
+&lt;p>The three facets are:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Loading&lt;/strong>: &lt;em>how fast is this page?&lt;/em> &lt;a href="https://web.dev/cls/">Largest Contentful Paint&lt;/a> measures perceived load speed and marks the point on the page load timeline when the page’s main content has likely loaded.&lt;/li>
+&lt;li>&lt;strong>Interactivity&lt;/strong>: &lt;em>how fast does the page react to user input?&lt;/em> &lt;a href="https://web.dev/fid/">First Input Delay&lt;/a> measures responsiveness and quantifies the experience users feel when trying to first interact with the page.&lt;/li>
+&lt;li>&lt;strong>Visual stability&lt;/strong>: &lt;em>does the page layout change while the page is loading?&lt;/em> &lt;a href="https://web.dev/cls/">Cumulative Layout Shift&lt;/a> measures visual stability and quantifies the amount of unexpected layout shift of visible page content.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/core-web-vitals.png" alt="Core Web Vitals">&lt;/p>
+&lt;p>All of Google&amp;rsquo;s popular tools for developers support measurement of Core Web Vitals, including &lt;a href="https://github.com/GoogleChrome/lighthouse">Lighthouse&lt;/a>, &lt;a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights&lt;/a>, &lt;a href="https://developers.google.com/web/tools/chrome-devtools">Chrome DevTools&lt;/a>, &lt;a href="https://search.google.com/search-console/about">Search Console&lt;/a>, &lt;a href="http://leonardofaria.github.io/leonardofaria.net/measure/">web.dev&amp;rsquo;s measure tool&lt;/a>, the &lt;a href="https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma">Web Vitals Chrome extension&lt;/a> and the new &lt;a href="https://developers.google.com/web/tools/chrome-user-experience-report">Chrome UX Report&lt;/a> API.&lt;/p>
+&lt;p>It is important to mention that FID can&amp;rsquo;t be measured in Lighthouse and as an alternative, Google recommends measuring the &lt;a href="https://web.dev/tbt/">Total Blocking Time (TBT)&lt;/a>. Tools like Lighthouse that load pages in a simulated environment without a user can not measure FID, since a simulated environment has no user input.&lt;/p>
+&lt;h2 id="using-lighthouse-for-core-web-vitals-measurements">Using Lighthouse for Core Web Vitals measurements&lt;/h2>
+&lt;p>The Web Vitals information is very easily found in the Lighthouse reports:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/lighthouse-web-vitals-report.jpg" alt="Web Vitals information in Lighthouse report">&lt;/p>
+&lt;p>What I want to share today is how to get Web Vitals information from the Lighthouse node package (from my &lt;a href="https://github.com/leonardofaria/lighthouse-examples">lighthouse-examples GitHub repository&lt;/a>):&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1&lt;/span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> lighthouse &lt;span style="color:#000;font-weight:bold">=&lt;/span> require(&lt;span style="color:#d14">&amp;#39;lighthouse&amp;#39;&lt;/span>);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2&lt;/span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> chromeLauncher &lt;span style="color:#000;font-weight:bold">=&lt;/span> require(&lt;span style="color:#d14">&amp;#39;chrome-launcher&amp;#39;&lt;/span>);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4&lt;/span>(async () =&amp;gt; {
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> chrome &lt;span style="color:#000;font-weight:bold">=&lt;/span> await chromeLauncher.launch({chromeFlags&lt;span style="color:#000;font-weight:bold">:&lt;/span> [&lt;span style="color:#d14">&amp;#39;--headless&amp;#39;&lt;/span>]});
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> options &lt;span style="color:#000;font-weight:bold">=&lt;/span> {port&lt;span style="color:#000;font-weight:bold">:&lt;/span> chrome.port, emulatedFormFactor&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#39;desktop&amp;#39;&lt;/span>};
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> { lhr&lt;span style="color:#000;font-weight:bold">:&lt;/span> { audits } } &lt;span style="color:#000;font-weight:bold">=&lt;/span> await lighthouse(&lt;span style="color:#d14">&amp;#39;https://leonardofaria.net&amp;#39;&lt;/span>, options);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> webVitals &lt;span style="color:#000;font-weight:bold">=&lt;/span> {
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10&lt;/span> largestContentfulPaint&lt;span style="color:#000;font-weight:bold">:&lt;/span> audits[&lt;span style="color:#d14">&amp;#39;largest-contentful-paint&amp;#39;&lt;/span>].numericValue,
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11&lt;/span> cumulativeLayoutShift&lt;span style="color:#000;font-weight:bold">:&lt;/span> audits[&lt;span style="color:#d14">&amp;#39;cumulative-layout-shift&amp;#39;&lt;/span>].numericValue,
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12&lt;/span> totalBlockingTime&lt;span style="color:#000;font-weight:bold">:&lt;/span> audits[&lt;span style="color:#d14">&amp;#39;total-blocking-time&amp;#39;&lt;/span>].numericValue,
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13&lt;/span> largestContentfulPaintElement&lt;span style="color:#000;font-weight:bold">:&lt;/span> audits[&lt;span style="color:#d14">&amp;#39;largest-contentful-paint-element&amp;#39;&lt;/span>].details.items[&lt;span style="color:#099">0&lt;/span>].node.snippet,
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14&lt;/span> layoutShiftElements&lt;span style="color:#000;font-weight:bold">:&lt;/span> audits[&lt;span style="color:#d14">&amp;#39;layout-shift-elements&amp;#39;&lt;/span>].details.items.map(({ node }) =&amp;gt; node.snippet).toString(),
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15&lt;/span> };
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17&lt;/span> console.log(webVitals);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19&lt;/span> await chrome.kill();
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20&lt;/span>})();
+&lt;/code>&lt;/pre>&lt;/div>
+&lt;p>The information highlighted in the image above can be found in lines 9 - 14. The output of the script:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">{
+largestContentfulPaint&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#099">3429.8639999999996&lt;/span>,
+cumulativeLayoutShift&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#099">0.0002832719606426758&lt;/span>,
+totalBlockingTime&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#099">0&lt;/span>,
+largestContentfulPaintElement&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#39;&amp;lt;header id=&amp;#34;header&amp;#34; class=&amp;#34;header flex w-full m-0 bg-cover bg-top-center&amp;#34; style=&amp;#34;background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.55))…&amp;#34;&amp;gt;&amp;#39;&lt;/span>,
+layoutShiftElements&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#39;&amp;lt;div id=&amp;#34;nav-menu&amp;#34; class=&amp;#34;absolute lg:p-6 hidden lg:block self-end text-white rounded-md bg-black sh…&amp;#34;&amp;gt;,&amp;lt;a href=&amp;#34;https://leonardofaria.net/&amp;#34; class=&amp;#34;tracking-tighter text-4xl font-semibold flex flex-shrink-0 text-center px-…&amp;#34;&amp;gt;&amp;#39;&lt;/span>
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>For LCP, CLS and TBT, the output is not including a numeric unit, only the value. The goal here is to get a numeric value so we can manipulate data; for example, sorting or finding minimum / maximum values. If data manipulation is not the main goal, using the displayValue property instead of numericValue may work better. Example:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">{
+largestContentfulPaint&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#39;2.4 s&amp;#39;&lt;/span>,
+cumulativeLayoutShift&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#39;0&amp;#39;&lt;/span>,
+totalBlockingTime&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#39;30 ms&amp;#39;&lt;/span>,
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The two last properties of the webVitals object return strings containing HTML node. The intention of reporting these elements is to facilitate the identification of the villains of the page being tested.&lt;/p>
+&lt;p>Bad Largest Contentful Paint metric can be caused for one or more of the following:&lt;/p>
+&lt;ul>
+&lt;li>Slow server response times;&lt;/li>
+&lt;li>Render-blocking JavaScript and CSS;&lt;/li>
+&lt;li>Slow resource load times;&lt;/li>
+&lt;li>Client-side rendering.&lt;/li>
+&lt;/ul>
+&lt;p>In the example, the largest contentful paint element is a header with a hero image. This element contains an external background image and the image is the culprit causing the slow rendering? time.&lt;/p>
+&lt;p>Bad Cumulative Layout Shift metrics can be caused for one or more of the following:&lt;/p>
+&lt;ul>
+&lt;li>Images without dimensions;&lt;/li>
+&lt;li>Ads, embeds, iframes without dimensions;&lt;/li>
+&lt;li>Dynamically injected content;&lt;/li>
+&lt;li>Web fonts causing FOIT/Fout.&lt;/li>
+&lt;/ul>
+&lt;p>The page used in the example uses Google Fonts and there is a tiny layout shift when the font is loaded. The shift may be noticeable by users and it is reported in the layout shift elements property.&lt;/p>
+&lt;h2 id="why-do-we-need-this">Why do we need this?&lt;/h2>
+&lt;p>This script is useful in order to closely follow what is changing in the web vitals metrics of a page. In my case, I store the LCP, TBT and CLS numeric values in a database and use this information in a Gauge dashboard. I am not tracking the largest contentful paint element or layout shift elements yet.&lt;/p>
+&lt;p>Can you think of different use cases? Let me know in the comments!&lt;/p></description></item><item><title>Generating screenshots with Lighthouse</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/</link><pubDate>Mon, 30 Nov 2020 02:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/</guid><description>&lt;p>Lighthouse captures the rendering timeline of a page in 10 images. Do you need to store them? If yes, keep reading in order to learn how to store these images.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/lighthouse-screenshots.jpg" alt="Lighthouse screenshots">&lt;/p>
+&lt;p>The filmstrip above reveals how a page is rendered in a browser and gives us an opportunity to understand what is slow. For example, blank screenshots in the beginning is a sign that the &lt;a href="https://web.dev/fcp/">First Contentful Paint&lt;/a> is too slow.&lt;/p>
+&lt;div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
+&lt;strong>Hi! This post is part of a Lighthouse post series. Also, check out:&lt;/strong>
+&lt;ul>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>In this post you will learn where these images are stored and how to store them in a file system. Here is the script (from my &lt;a href="https://github.com/leonardofaria/lighthouse-examples">lighthouse-examples GitHub repository&lt;/a>):&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1&lt;/span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> { writeFileSync } &lt;span style="color:#000;font-weight:bold">=&lt;/span> require(&lt;span style="color:#d14">&amp;#39;fs&amp;#39;&lt;/span>);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2&lt;/span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> lighthouse &lt;span style="color:#000;font-weight:bold">=&lt;/span> require(&lt;span style="color:#d14">&amp;#39;lighthouse&amp;#39;&lt;/span>);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3&lt;/span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> chromeLauncher &lt;span style="color:#000;font-weight:bold">=&lt;/span> require(&lt;span style="color:#d14">&amp;#39;chrome-launcher&amp;#39;&lt;/span>);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5&lt;/span>(async () =&amp;gt; {
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> chrome &lt;span style="color:#000;font-weight:bold">=&lt;/span> await chromeLauncher.launch({chromeFlags&lt;span style="color:#000;font-weight:bold">:&lt;/span> [&lt;span style="color:#d14">&amp;#39;--headless&amp;#39;&lt;/span>]});
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> options &lt;span style="color:#000;font-weight:bold">=&lt;/span> {port&lt;span style="color:#000;font-weight:bold">:&lt;/span> chrome.port};
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> { lhr&lt;span style="color:#000;font-weight:bold">:&lt;/span> { audits } } &lt;span style="color:#000;font-weight:bold">=&lt;/span> await lighthouse(&lt;span style="color:#d14">&amp;#39;https://leonardofaria.net&amp;#39;&lt;/span>, options);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10&lt;/span> audits[&lt;span style="color:#d14">&amp;#39;screenshot-thumbnails&amp;#39;&lt;/span>].details.items
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11&lt;/span> .forEach(({ timing, data }) =&amp;gt; {
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12&lt;/span> &lt;span style="color:#000;font-weight:bold">debugger&lt;/span>;
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> screenshot &lt;span style="color:#000;font-weight:bold">=&lt;/span> data.split(&lt;span style="color:#d14">&amp;#39;;base64,&amp;#39;&lt;/span>).pop();
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> screenshotFile &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">`screenshot-&lt;/span>&lt;span style="color:#d14">${&lt;/span>timing&lt;span style="color:#d14">}&lt;/span>&lt;span style="color:#d14">ms.jpg`&lt;/span>;
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15&lt;/span> writeFileSync(screenshotFile, screenshot, { encoding&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#39;base64&amp;#39;&lt;/span> });
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16&lt;/span> });
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> finalScreenshotFile &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">`screenshot-final.jpg`&lt;/span>;
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> finalScreenshot &lt;span style="color:#000;font-weight:bold">=&lt;/span> audits[&lt;span style="color:#d14">&amp;#39;final-screenshot&amp;#39;&lt;/span>].details.data.split(&lt;span style="color:#d14">&amp;#39;;base64,&amp;#39;&lt;/span>).pop();
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20&lt;/span> writeFileSync(finalScreenshotFile, finalScreenshot, { encoding&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#39;base64&amp;#39;&lt;/span> });
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22&lt;/span> await chrome.kill();
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23&lt;/span>})();
+&lt;/code>&lt;/pre>&lt;/div>
+&lt;p>Let’s dig into the magic. Starting in line 10, we loop in the screenshot-thumbnails audit the images captured by Lighthouse. Notice that images are encoded in the &lt;a href="https://en.wikipedia.org/wiki/Base64">Base64 format&lt;/a>, and along with their content, Lighthouse also stores when they happen.&lt;/p>
+&lt;p>The script will create 11 image files as shown below.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/lighthouse-screenshots-finder.jpg" alt="Screenshots created by Lighthouse">&lt;/p>
+&lt;h3 id="desktop-dimensions">Desktop dimensions&lt;/h3>
+&lt;p>By default, the device emulated in Lighthouse is a Moto G4, with a 5.5 inches screen (1920 x 1080). We can tweak that and emulate a Desktop by setting the &lt;code>emulatedFormFactor&lt;/code> to &lt;code>desktop&lt;/code>. The options variable will look like this:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="color:#000;font-weight:bold">const&lt;/span> options &lt;span style="color:#000;font-weight:bold">=&lt;/span> {port&lt;span style="color:#000;font-weight:bold">:&lt;/span> chrome.port, emulatedFormFactor&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#39;desktop&amp;#39;&lt;/span>};
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="why-do-we-need-this">Why do we need this?&lt;/h2>
+&lt;p>This script is useful in order to closely follow what is being rendered on a page or web app. In my particular case, I am storing only the final screenshot for future reference (ex. is this the right page?).&lt;/p>
+&lt;p>Can you think of different uses? Let me know in the comments!&lt;/p></description></item><item><title>Getting asset transferred information with Lighthouse</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/</link><pubDate>Mon, 30 Nov 2020 01:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/</guid><description>&lt;p>Have you ever about thought tracking what is added to a page or web app? Did not know how your website became 15MB? Sounds like it is time to track this data!&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/asset-transfered-by-type.jpg" alt="Chart showing assets transferred by type">&lt;/p>
+&lt;p>&lt;a href="https://calibreapp.com/">Calibre&lt;/a>, one of my favourite web performance tools, creates charts, such as the one above, to illustrate what is being transferred to users when they visit your page or use your web app.&lt;/p>
+&lt;div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
+&lt;strong>Hi! This post is part of a Lighthouse post series. Also, check out:&lt;/strong>
+&lt;ul>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#quick-lighthouse-intro">Quick Lighthouse intro&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide#the-lighthouse-node-package">The Lighthouse Node package&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>In this post you will learn how to collect similar data using Lighthouse. Here is the recipe (from my &lt;a href="https://github.com/leonardofaria/lighthouse-examples">lighthouse-examples GitHub repository&lt;/a>):&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1&lt;/span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> lighthouse &lt;span style="color:#000;font-weight:bold">=&lt;/span> require(&lt;span style="color:#d14">&amp;#39;lighthouse&amp;#39;&lt;/span>);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2&lt;/span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> chromeLauncher &lt;span style="color:#000;font-weight:bold">=&lt;/span> require(&lt;span style="color:#d14">&amp;#39;chrome-launcher&amp;#39;&lt;/span>);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4&lt;/span>(async () =&amp;gt; {
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> chrome &lt;span style="color:#000;font-weight:bold">=&lt;/span> await chromeLauncher.launch({chromeFlags&lt;span style="color:#000;font-weight:bold">:&lt;/span> [&lt;span style="color:#d14">&amp;#39;--headless&amp;#39;&lt;/span>]});
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> options &lt;span style="color:#000;font-weight:bold">=&lt;/span> {port&lt;span style="color:#000;font-weight:bold">:&lt;/span> chrome.port};
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> runnerResult &lt;span style="color:#000;font-weight:bold">=&lt;/span> await lighthouse(&lt;span style="color:#d14">&amp;#39;https://leonardofaria.net&amp;#39;&lt;/span>, options);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> assets &lt;span style="color:#000;font-weight:bold">=&lt;/span> {};
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10&lt;/span> runnerResult.lhr.audits[&lt;span style="color:#d14">&amp;#39;resource-summary&amp;#39;&lt;/span>].details.items
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11&lt;/span> .filter(({ transferSize }) =&amp;gt; transferSize &lt;span style="color:#000;font-weight:bold">&amp;gt;&lt;/span> &lt;span style="color:#099">0&lt;/span>)
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12&lt;/span> .forEach(({ resourceType, transferSize }) =&amp;gt; {
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13&lt;/span> assets[resourceType] &lt;span style="color:#000;font-weight:bold">=&lt;/span> transferSize;
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14&lt;/span> });
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16&lt;/span> console.log(assets);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18&lt;/span> await chrome.kill();
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19&lt;/span>})();
+&lt;/code>&lt;/pre>&lt;/div>
+&lt;p>The script is very straightforward: we import Lighthouse and Chrome Launcher (lines 1-2) and run the audit against the URL, storing its results in the &lt;code>runnerResult&lt;/code> variable.&lt;/p>
+&lt;p>The &lt;code>runnerResult&lt;/code> variable stores 3 main objects:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>lhr&lt;/code>: Lighthouse Result Object contains run metadata (Lighthouse version, fetch time) and the audit results&lt;/li>
+&lt;li>&lt;code>artifacts&lt;/code>: The data used by the audit&lt;/li>
+&lt;li>&lt;code>report&lt;/code>: A JSON/HTML/CSV report&lt;/li>
+&lt;/ul>
+&lt;p>The magic starts happening in line 10: we dig into the results of the audits and get information from the resource summary audit (line 16). The output of the script is:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">{
+total&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#099">400584&lt;/span>,
+image&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#099">321981&lt;/span>,
+font&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#099">36954&lt;/span>,
+script&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#099">27788&lt;/span>,
+&lt;span style="color:#0086b3">document&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#099">7912&lt;/span>,
+stylesheet&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#099">5274&lt;/span>,
+other&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#099">675&lt;/span>,
+&lt;span style="color:#d14">&amp;#39;third-party&amp;#39;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#099">66493&lt;/span>
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>If this is not enough information, and you also want to include the number of requests, you can just return the &lt;code>items&lt;/code> object and skip all filter and loop steps: &lt;code>runnerResult.lhr.audits['resource-summary'].details.items&lt;/code>.&lt;/p>
+&lt;p>The image above shows what is inside the &lt;code>resource-summary&lt;/code> audit:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/lighthouse-audit-object.jpg" alt="audit object">&lt;/p>
+&lt;blockquote>
+&lt;p>Curious to know how the JSON is shown in the image? This is how Firefox renders JSON files by default. I really wish other browsers implemented this by default.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="why-do-we-need-this">Why do we need this?&lt;/h2>
+&lt;p>This script is useful in order to closely follow what is being sent to users. In my case, this data is stored daily and is used to identify if new features added in the codebase dramatically impact the page rendering.&lt;/p>
+&lt;p>Can you think of different applications of this tool? Let me know in the comments!&lt;/p></description></item><item><title>The undocumented Lighthouse guide</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide/</link><pubDate>Mon, 30 Nov 2020 00:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/11/30/the-undocumented-lighthouse-guide/</guid><description>&lt;p>Lighthouse is the go-to tool for improving the quality of web pages. Lately, I have been using Lighthouse a lot at &lt;a href="https://thinkific.com">work&lt;/a> to identify opportunities for performance optimizations. This post is part of a 6 part series that I have written about how to get the most out of Lighthouse.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/lighthouse.jpg" alt="Lighthouse photo by Robert Wiedemann">&lt;/p>
+&lt;div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
+&lt;strong>Lighthouse Post Series&lt;/strong>
+&lt;ul>
+&lt;li>&lt;a href="#quick-lighthouse-intro">Quick Lighthouse intro&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#the-lighthouse-node-package">The Lighthouse Node package&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;h2 id="quick-lighthouse-intro">Quick Lighthouse intro&lt;/h2>
+&lt;p>Lighthouse is an &lt;a href="https://github.com/GoogleChrome/lighthouse">open-source&lt;/a> automated tool for auditing the quality of web pages. This tool generates scores for performance, accessibility, progressive web apps, SEO, and best practices of a specific URL. Lighthouse also offers recommendations on how to improve the inefficient items of the audits.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/lighthouse-report-leonardofaria-net.jpg" alt="Lighthouse report for leonardofaria.net">&lt;/p>
+&lt;p>The recommendations offered by Lighthouse are invaluable in helping to clarify what can be done to improve the quality of a page or web app. Based on their recommendations, developers can inform Product Managers, as well as other stakeholders, and prioritize the most important/impactful tasks from there.&lt;/p>
+&lt;p>There are different ways to run Lighthouse audits:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://developers.google.com/speed/pagespeed/insights/">From a web UI&lt;/a>: Run Lighthouse via PageSpeed Insights&lt;/li>
+&lt;li>&lt;a href="https://developers.google.com/web/tools/lighthouse#devtools">In Chrome DevTools&lt;/a>: Open the tab Audit in the Chrome DevTools - a quick way to audit pages behind authentication&lt;/li>
+&lt;li>&lt;a href="https://developers.google.com/web/tools/lighthouse#cli">From the command line&lt;/a>: Install the &lt;code>lighthouse&lt;/code> CLI and start testing&lt;/li>
+&lt;li>&lt;a href="https://github.com/GoogleChrome/lighthouse">As a Node module&lt;/a>: Add the &lt;code>lighthouse&lt;/code> module in Node scripts&lt;/li>
+&lt;/ul>
+&lt;p>This series of posts will cover the usage of Lighthouse as a Node module. At my workplsvr, I have created a JavaScript tool which runs every hour to programmatically audit 9 critical parts of our applications. The results are stored in a Postgres database and in Prometheus (a monitoring system &amp;amp; time-series database) so we can follow the reports over time.&lt;/p>
+&lt;h2 id="the-lighthouse-node-package">The Lighthouse Node package&lt;/h2>
+&lt;p>The Lighthouse docs present a &lt;a href="https://github.com/GoogleChrome/lighthouse/blob/master/docs/readme.md#using-programmatically">basic example of how to start our journey&lt;/a>. Please see below:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1&lt;/span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> fs &lt;span style="color:#000;font-weight:bold">=&lt;/span> require(&lt;span style="color:#d14">&amp;#39;fs&amp;#39;&lt;/span>);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2&lt;/span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> lighthouse &lt;span style="color:#000;font-weight:bold">=&lt;/span> require(&lt;span style="color:#d14">&amp;#39;lighthouse&amp;#39;&lt;/span>);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3&lt;/span>&lt;span style="color:#000;font-weight:bold">const&lt;/span> chromeLauncher &lt;span style="color:#000;font-weight:bold">=&lt;/span> require(&lt;span style="color:#d14">&amp;#39;chrome-launcher&amp;#39;&lt;/span>);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5&lt;/span>(async () =&amp;gt; {
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> chrome &lt;span style="color:#000;font-weight:bold">=&lt;/span> await chromeLauncher.launch({chromeFlags&lt;span style="color:#000;font-weight:bold">:&lt;/span> [&lt;span style="color:#d14">&amp;#39;--headless&amp;#39;&lt;/span>]});
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> options &lt;span style="color:#000;font-weight:bold">=&lt;/span> {logLevel&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#39;info&amp;#39;&lt;/span>, output&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#39;html&amp;#39;&lt;/span>, onlyCategories&lt;span style="color:#000;font-weight:bold">:&lt;/span> [&lt;span style="color:#d14">&amp;#39;performance&amp;#39;&lt;/span>], port&lt;span style="color:#000;font-weight:bold">:&lt;/span> chrome.port};
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> runnerResult &lt;span style="color:#000;font-weight:bold">=&lt;/span> await lighthouse(&lt;span style="color:#d14">&amp;#39;https://example.com&amp;#39;&lt;/span>, options);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10&lt;/span> &lt;span style="color:#998;font-style:italic">// `.report` is the HTML report as a string
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11&lt;/span>&lt;span style="color:#998;font-style:italic">&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> reportHtml &lt;span style="color:#000;font-weight:bold">=&lt;/span> runnerResult.report;
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12&lt;/span> fs.writeFileSync(&lt;span style="color:#d14">&amp;#39;lhreport.html&amp;#39;&lt;/span>, reportHtml);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14&lt;/span> &lt;span style="color:#998;font-style:italic">// `.lhr` is the Lighthouse Result as a JS object
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15&lt;/span>&lt;span style="color:#998;font-style:italic">&lt;/span> console.log(&lt;span style="color:#d14">&amp;#39;Report is done for&amp;#39;&lt;/span>, runnerResult.lhr.finalUrl);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16&lt;/span> console.log(&lt;span style="color:#d14">&amp;#39;Performance score was&amp;#39;&lt;/span>, runnerResult.lhr.categories.performance.score &lt;span style="color:#000;font-weight:bold">*&lt;/span> &lt;span style="color:#099">100&lt;/span>);
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17&lt;/span>
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18&lt;/span> await chrome.kill();
+&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19&lt;/span>})();
+&lt;/code>&lt;/pre>&lt;/div>
+&lt;p>The first 3 lines import required packages: &lt;code>fs&lt;/code> for file system manipulation; &lt;code>lighthouse&lt;/code>, the main audit package; and &lt;code>chrome-launcher&lt;/code>, a package used for launching Chrome. Lighthouse needs to know which port has a Chrome instance running, so this audit can happen.&lt;/p>
+&lt;p>Line 7 surfaces a few Lighthouse options, like &lt;code>logLevel&lt;/code> (&lt;code>silent | error | info |verbose&lt;/code>), &lt;code>output&lt;/code> (&lt;code>json | html | csv&lt;/code>) and &lt;code>onlyCategories&lt;/code> (an array filtering the tests you want to run). Their &lt;a href="https://github.com/GoogleChrome/lighthouse/blob/888bd6dc9d927a734a8e20ea8a0248baa5b425ed/typings/externs.d.ts#L82-L119">type definitions file&lt;/a> showcase all the offered options.&lt;/p>
+&lt;p>Next, the test is stored in the &lt;code>runnerResult&lt;/code> variable (line 8). The &lt;code>runnerResult&lt;/code> is an object that contains an HTML report, which is stored in the disk (lines 11-12). This result object is the main topic of my next few posts. There we will learn how to get relevant information from the audits.&lt;/p>
+&lt;p>Afterwards, the terminal will show the tested URL and its performance score (lines 15-16) and lastly, the Chrome instance will be closed.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/11/lighthouse-example-com-report.jpg" alt="Lighthouse report">&lt;/p>
+&lt;p>The HTML report is slightly different from the initial report of the post: only performance is audited as it was defined in the options.&lt;/p>
+&lt;h2 id="conclusions-and-up-next">Conclusions and up next&lt;/h2>
+&lt;p>This post covered what Lighthouse is, why to use it, and how to use it programmatically.&lt;/p>
+&lt;p>The snippet from this blog post can be found in the &lt;a href="https://github.com/leonardofaria/lighthouse-examples">lighthouse-examples GitHub repository&lt;/a>. From here you can check out different recipes in the &lt;a href="https://github.com/GoogleChrome/lighthouse#docs--recipes">Lighthouse docs&lt;/a> or keep reading the ones I have created:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/generating-screenshots-with-lighthouse/">Generating screenshots with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/getting-web-vitals-information-with-lighthouse/">Getting Web Vitals information with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/creating-har-files-with-lighthouse/">Generating HAR files with Lighthouse&lt;/a>&lt;/li>
+&lt;li>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/11/30/my-experience-using-lighthouse-in-the-real-world/">My experience using Lighthouse in the real world&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>&amp;ndash;&lt;/p>
+&lt;p>Photo by &lt;a href="https://unsplash.com/@antilumen?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText">Robert Wiedemann&lt;/a> on &lt;a href="https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText">Unsplash&lt;/a>&lt;/p></description></item><item><title>Enfrentando a síndrome do impostor e problemas de gerenciamento de tempo</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/11/27/enfrentando-a-sindrome-do-impostor-e-problemas-de-gerenciamento-de-tempo/</link><pubDate>Fri, 27 Nov 2020 00:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/11/27/enfrentando-a-sindrome-do-impostor-e-problemas-de-gerenciamento-de-tempo/</guid><description>&lt;div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
+This is the Portuguese version of the post &lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/04/26/facing-impostor-syndrome-and-time-management-issues">Facing importor syndrome and time management issues&lt;/a> that I wrote back on April. A few weeks after sharing my thoughts, Glaucio Oliveira translated the post and shared it on &lt;a href="https://www.linkedin.com/pulse/como-lidar-com-s%C3%ADndrome-do-impostor-e-problemas-de-tempo-oliveira/">his Linkedin&lt;/a>. Now, I am including the translation here.
+&lt;/div>
+&lt;p>Frequentemente ouço pessoas falando sobre síndrome do impostor e problemas de gerenciamento de tempo. Às vezes ouço sobre esses problemas por parte de um amigo, um subordinado, e ocasionalmente de mim mesmo. Somos sempre desafiados por esses problemas, e eles podem afetar nosso ânimo, nossa capacidade de ser produtivo, e nosso julgamento.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/04/roller-coaster.jpg" alt="Roller coaster photo">&lt;/p>
+&lt;p>Temos dias onde tudo funciona bem, e também temos dias ruins, onde tudo parece dar errado. Essa montanha-russa emocional pode nos fazer duvidar de nossas realizações e pode criar um medo persistente de sermos expostos como uma fraude.&lt;/p>
+&lt;p>Existem algumas coisas que você pode fazer para se lembrar de que você é incrível:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Mantenha um diário&lt;/strong> com registros de realizações: esse exercício diário treinará seu cérebro para se sentir mais confiante.&lt;/li>
+&lt;li>&lt;strong>Foque em seus pontos fortes&lt;/strong>, especialmente quando você está em uma nova função no trabalho, use seus talentos naturais para agregar valor a sua função.&lt;/li>
+&lt;li>&lt;strong>Busque vitórias rápidas&lt;/strong>, pois elas o ajudarão a construir uma reputação de alguém adepto de uma habilidade específica.&lt;/li>
+&lt;/ul>
+&lt;p>Problemas com gerenciamento de tempo também afetam nosso senso de ter o trabalho concluído. Às vezes, o problema começa no início, quando nos é atribuída uma tarefa que pode não fazer muito sentido. Vamos para por um momento e pensar nos níveis de incerteza de uma tarefa:&lt;/p>
+&lt;ol>
+&lt;li>Bem esclarecido&lt;/li>
+&lt;li>Com algumas dúvidas&lt;/li>
+&lt;li>Entendido, porém não familiarizado com a abordagem&lt;/li>
+&lt;li>Conhece a área, mas não a direção&lt;/li>
+&lt;li>Pouco claro no geral&lt;/li>
+&lt;/ol>
+&lt;p>Como a incerteza afeta o gerenciamento do tempo? Se algo é bem compreendido, é muito improvável que você fique confuso e as coisas naturalmente tomarão o tempo inicialmente estimado. Começando a fase “com algumas dúvidas”, você precisa ter cuidado, pois a incerteza afetará tanto seu gerenciamento de tempo, quanto seu senso de conquistas. A boa notícia é que você sempre pode usar esse problema como uma oportunidade para melhorar.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Com algumas dúvidas&lt;/strong>: Encontre a melhor pessoa qualificada para responder suas perguntas. Se a descrição da tarefa não for clara o suficiente, vá até a pessoa que a criou. Se a questão é técnica, fale com um desenvolvedor da equipe que pode ajudá-lo.&lt;/li>
+&lt;li>&lt;strong>Entendido, porém não familiarizado com a abordagem&lt;/strong>: Se você entendeu o panorama geral, mas não está confiante com a abordagem, fale com outro desenvolvedor e peça ajuda. Essa é uma boa oportunidade para “programação em par”.&lt;/li>
+&lt;li>&lt;strong>Conhece a área, mas não a direção&lt;/strong>: Essa é uma boa oportunidade para conversar com outra pessoa desenvolvedora e ouvir seus pensamentos iniciais. Elas podem ter uma opinião de como começar a atividade, ou serão capazes de sugerir boas referências para consultar.&lt;/li>
+&lt;li>&lt;strong>Pouco claro&lt;/strong>: Se o problema na atividade não está claro, esclareça. Se a abordagem técnica não está clara, converse com outras pessoas desenvolvedores, considere ter uma sessão de programação em par, e fale com outras pessoas de sua equipe para entender sua abordagem nesse trabalho.&lt;/li>
+&lt;/ul>
+&lt;p>Em geral, síndrome do impostor é algo que todos veremos em algum momento de nossas carreiras. É algo que já lidei, mas acho que enfrentar essa luta oferece uma excelente oportunidade para refletir sobre minhas habilidades e descobrir novas áreas de potencial aprendizado. Com essas sugestões em mente, espero que você consiga melhorar seu senso de confiança e auto-eficácia em sua vida profissional.&lt;/p>
+&lt;p>&amp;ndash;&lt;/p>
+&lt;p>Photo credit: &lt;a href="https://pixabay.com/photos/roller-coaster-people-thrill-park-1553342/">roller coaster (Pixalbay)&lt;/a>&lt;/p></description></item><item><title>How to use Git aliases to increase your productivity</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/10/27/how-to-use-git-aliases-to-increase-your-productivity/</link><pubDate>Tue, 27 Oct 2020 00:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/10/27/how-to-use-git-aliases-to-increase-your-productivity/</guid><description>&lt;p>Git is a very powerful tool, and it can be a little scary sometimes. It doesn&amp;rsquo;t matter how long you&amp;rsquo;ve used it, you will find yourself searching for &amp;ldquo;how to do X&amp;rdquo;.&lt;/p>
+&lt;p>Today I want to talk about aliases. Aliases are short, custom made commands that translate into other commands. Aside from saving keystrokes, aliases help you avoiding memorizing command options or digging in your shell history to find the command you need.&lt;/p>
+&lt;p>There are 2 types of aliases: &lt;a href="https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases">Git aliases&lt;/a> and shell aliases, controlled by bash, zsh, etc. Let&amp;rsquo;s start by Git aliases:&lt;/p>
+&lt;h2 id="how-to-create-git-aliases">How to create Git aliases&lt;/h2>
+&lt;p>Git aliases can be stored globally or in individual repositories. Unless you have a very specific reason to keep an alias scoped to a project, I would recommend editing the global config file, which is located at &lt;code>~/.gitconfig&lt;/code>.&lt;/p>
+&lt;p>Aliases will live in the section &lt;code>[alias]&lt;/code>. They are available in your terminal as Git options the same way &lt;code>add&lt;/code>, &lt;code>commit&lt;/code> and other options work. Let&amp;rsquo;s see how to add an alias, step-by-step:&lt;/p>
+&lt;p>First, open your Git config file. In my case, I&amp;rsquo;ll use VS Code:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">code ~/.gitconfig
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Next, let&amp;rsquo;s add our first Git alias:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#000;font-weight:bold">[&lt;/span>alias&lt;span style="color:#000;font-weight:bold">]&lt;/span>
+&lt;span style="color:#008080">graph&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> log --oneline --graph --decorate
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>After saving the file, go to an existing Git project and execute &lt;code>git graph&lt;/code>. The result is similar to the image below:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/10/git-graph.jpg" alt="git graph example in the Tailwind CSS repository">&lt;/p>
+&lt;p>Instead of typing &lt;code>git log --oneline --graph --decorate&lt;/code> and remembering all three flags, now you can use &lt;code>git graph&lt;/code> and get the same result.&lt;/p>
+&lt;h2 id="my-favourite-git-aliases">My favourite Git aliases&lt;/h2>
+&lt;p>Here are some aliases that I have been using a lot lately:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#000;font-weight:bold">[&lt;/span>alias&lt;span style="color:#000;font-weight:bold">]&lt;/span>
+&lt;span style="color:#008080">graph&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> log --oneline --graph --decorate
+&lt;span style="color:#008080">ls&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> log --pretty&lt;span style="color:#000;font-weight:bold">=&lt;/span>format:&lt;span style="color:#d14">&amp;#34;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span> --decorate
+&lt;span style="color:#008080">ll&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> log --pretty&lt;span style="color:#000;font-weight:bold">=&lt;/span>format:&lt;span style="color:#d14">&amp;#34;%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span> --decorate --numstat
+&lt;span style="color:#008080">lds&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> log --pretty&lt;span style="color:#000;font-weight:bold">=&lt;/span>format:&lt;span style="color:#d14">&amp;#34;%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]&amp;#34;&lt;/span> --decorate --date&lt;span style="color:#000;font-weight:bold">=&lt;/span>short
+&lt;span style="color:#008080">conflicts&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> diff --name-only --diff-filter&lt;span style="color:#000;font-weight:bold">=&lt;/span>U
+local-branches &lt;span style="color:#000;font-weight:bold">=&lt;/span> !git branch -vv | cut -c 3- | awk &lt;span style="color:#d14">&amp;#39;$3 !~/\\[/ { print $1 }&amp;#39;&lt;/span>
+recent-branches &lt;span style="color:#000;font-weight:bold">=&lt;/span> !git branch --sort&lt;span style="color:#000;font-weight:bold">=&lt;/span>-committerdate | head
+&lt;span style="color:#008080">authors&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> !git log --format&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#39;%aN &amp;lt;%aE&amp;gt;&amp;#39;&lt;/span> | grep -v &lt;span style="color:#d14">&amp;#39;users.noreply.github.com&amp;#39;&lt;/span> | sort -u --ignore-case
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>graph&lt;/code>, &lt;code>ls&lt;/code>, &lt;code>ll&lt;/code> and &lt;code>lds&lt;/code> are useful for history visualization. I use &lt;code>git ll&lt;/code> a lot since it gives me the commit, the changed files, and how many lines were modified, as shown below:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/10/git-ll.jpg" alt="git ll example in the Tailwind CSS repository">&lt;/p>
+&lt;p>&lt;code>conflicts&lt;/code> returns a list of conflicts which you can just copy and paste in your editor.&lt;/p>
+&lt;p>&lt;code>local-branches&lt;/code> returns a list of branches available locally and not in origin (GitHub for example). This can be useful if, for example, you need to double-check if your team has access to your branches.&lt;/p>
+&lt;p>&lt;code>recent-branches&lt;/code> is probably the one I use the most in this list. If you are working in different features at the same time and jumping from branch to branch, this is a must-have.&lt;/p>
+&lt;p>&lt;code>authors&lt;/code> is handy for open-source work. You can run &lt;code>git authors &amp;gt; AUTHORS.txt&lt;/code> and see a list of people who have worked in the repository.&lt;/p>
+&lt;h2 id="shell-aliases-with-oh-my-zsh-git-plugin">Shell aliases with Oh My Zsh Git plugin&lt;/h2>
+&lt;p>The list above is quite small, you may think. And it is indeed. This is because I also use the aliases created by the &lt;a href="https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh">Oh My Zsh Git plugin&lt;/a>.&lt;/p>
+&lt;blockquote>
+&lt;p>If you don&amp;rsquo;t what is Oh My Zsh: Oh My Zsh is a framework for managing your zsh configuration. With this tool, you can customize the shell prompt, use different themes and add plugins that offer aliases to increase your productivity.&lt;/p>
+&lt;/blockquote>
+&lt;p>Shell aliases are created in a slightly different way. They live inside the shell config files (usually &lt;code>~/.bashrc&lt;/code> or &lt;code>~/.zshrc&lt;/code>, if you use Bash and Zsh respectively).&lt;/p>
+&lt;p>Here is an example created by the plugin:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#0086b3">alias&lt;/span> &lt;span style="color:#008080">gst&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#39;git status&amp;#39;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you don&amp;rsquo;t use Oh My Zsh, you can still copy the line above and paste it in the end of the &lt;code>~/.bashrc&lt;/code> or &lt;code>~/.zshrc&lt;/code> files – the shell alias will work fine.&lt;/p>
+&lt;p>Instead of setting up a Git alias &lt;code>st&lt;/code> for status, I use the shell alias &lt;code>gst&lt;/code> which gives me the same result.&lt;/p>
+&lt;p>I prefer shell aliases over Git aliases for 2 reasons:&lt;/p>
+&lt;ol>
+&lt;li>Shell aliases don&amp;rsquo;t need to be prefixed by the command &lt;code>git&lt;/code>.&lt;/li>
+&lt;li>I don&amp;rsquo;t need to maintain a list of aliases since I can just learn the ones maintained by the Oh My Zsh community.&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>Protip: If you are using the default shell without any customization, I do recommend checking out the &lt;a href="https://github.com/ohmyzsh/ohmyzsh/">Oh My Zsh&lt;/a> project and &lt;a href="https://wesbos.com/">Wes Bos&lt;/a>&amp;rsquo; &lt;a href="https://commandlinepoweruser.com/">Command Line Power User&lt;/a>.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>Aliases are shortcuts you can create or use to increase your productivity. Today I showed two ways to use them in Git.&lt;/p>
+&lt;p>I hope this post inspires you to re-imagine how you use the terminal. What about starting to create your own aliases?&lt;/p></description></item><item><title>3 privacy-focused open-source Google Analytics alternatives for your next project</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/09/01/three-privacy-focused-open-source-google-analytics-alternatives/</link><pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/09/01/three-privacy-focused-open-source-google-analytics-alternatives/</guid><description>&lt;p>As a content creator, I like to know page analytics of my website. Overall, I am curious to learn how many people are reading my content, where they came from (referrer and countries) and what are the most popular pages.&lt;/p>
+&lt;p>20 years ago, tools like &lt;a href="http://www.webalizer.org/">Webalizer&lt;/a> were all that we could count on. This tool parses the Apache logs and create static pages with the processed data. Another way to get page analytics would be inserting an image - often invisible - in your website. By using the request headers sent to the server, people could count visitors and get a little bit more information such as origin IP, browser, operational system. The technique is old but services like &lt;a href="https://statcounter.com/">statcounter&lt;/a> are still around providing this functionality.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/09/webalizer.jpg" alt="Webalizer screenshot">&lt;/p>
+&lt;p>In 2005 Google launched Google Analytics after acquiring &lt;a href="https://en.wikipedia.org/wiki/Urchin_(software)">Urchin&lt;/a>, a company which also analyzed server logs. Its presence has been growing since the early days and it is far from any competitor. There are a few reasons &lt;a href="https://plausible.io/blog/remove-google-analytics">why you should stop using Google Analytics on your website&lt;/a>:&lt;/p>
+&lt;ol>
+&lt;li>It is owned by Google: Google uses Analytics in their benefit.&lt;/li>
+&lt;li>It affects site&amp;rsquo;s speed, by adding 45KB in page requests.&lt;/li>
+&lt;li>It is too invasive, collecting lots of personal data that you don&amp;rsquo;t need.&lt;/li>
+&lt;li>It is blocked by many plugins and browsers, creating inaccurate data.&lt;/li>
+&lt;/ol>
+&lt;p>With all of this in mind, I want to share a few open-source alternatives I have been looking at in the last few months.&lt;/p>
+&lt;h2 id="fathom">Fathom&lt;/h2>
+&lt;p>&lt;a href="https://usefathom.com/">Fathom&lt;/a> (&lt;a href="https://app.usefathom.com/share/sqqvo/chimp+essentials">demo&lt;/a>) is a light golang app to collect analytics. They have different paid plans, starting at $14/month and a lite version that you can install in your server or Heroku for free.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/09/fathom.jpg" alt="Fathom screenshot">&lt;/p>
+&lt;p>The lite version uses cookies and it gives you information about unique visitors, page views, average time on site, bounce rate, top pages and top referrers. Fathom stores data in SQLite, MySQL or Postgresql databases.&lt;/p>
+&lt;h2 id="umami">umami&lt;/h2>
+&lt;p>&lt;a href="https://umami.is/">umami&lt;/a> (&lt;a href="https://app.umami.is/share/ISgW2qz8/flightphp.com">demo&lt;/a>) is a solution created with Next.js. I did like how easy it is to deploy it - in my case, I am using Vercel.&lt;/p>
+&lt;p>umami shows the same data available in the lite version of Fathom &lt;em>plus&lt;/em> information about countries, browsers, operational system and device data.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/09/umami.jpg" alt="Umami screenshot">&lt;/p>
+&lt;h2 id="plausible">Plausible&lt;/h2>
+&lt;p>I think I first heard about &lt;a href="https://plausible.io/">Plausible&lt;/a> (&lt;a href="https://plausible.io/plausible.io">demo&lt;/a>) in the &amp;ldquo;&lt;a href="https://changelog.com/podcast/396">De-Google-ing your website analytics&lt;/a>&amp;rdquo; Changelog podcast. From a product perspective, it is nice to see a &lt;a href="https://plausible.io/roadmap">public roadmap&lt;/a> out in the wild so customers can learn what is coming next.&lt;/p>
+&lt;p>Their plans start at $6/month and go up according to your page views - like Fathom. They have an &lt;em>alpha&lt;/em> self-hosted option (I didn&amp;rsquo;t have a chance to test it)&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/09/plausible.jpg" alt="Plausible screenshot">&lt;/p>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;p>There are alternatives out there and you don&amp;rsquo;t need to worry about privacy or big corp looking at your users with these options. Their setup time is very similar among themselves and once you have it done, you can add multiple sites, as you do with Google Analytics.&lt;/p>
+&lt;p>I don&amp;rsquo;t have a favourite here. Feature-wise, umami gives all the basic information you may be curious about it for free and it is very easy to setup in services like Vercel or Netlify. Both Fathom and Plausible offer free trials so you can easily test their solutions before deciding it.&lt;/p>
+&lt;p>&lt;em>Do you know another minimalist, open-source alternative to Google Analytics? Let me know in the comments.&lt;/em>&lt;/p></description></item><item><title>Automating accessibility tests with Cypress</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/08/13/automating-accessibility-tests-with-cypress/</link><pubDate>Thu, 13 Aug 2020 00:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/08/13/automating-accessibility-tests-with-cypress/</guid><description>&lt;p>In my &lt;a href="https://leonardofaria.net/2020/08/03/adding-screenshot-testing-with-cypress-in-your-project/">previous post&lt;/a>, I covered how to add screenshot testing in Cypress to ensure components unintentionally change over time. Now, I will share how to automate accessibility tests with Cypress.&lt;/p>
+&lt;h2 id="why-should-we-care-about-accessibility">Why should we care about accessibility?&lt;/h2>
+&lt;p>Short answer: because it is the right thing to do.&lt;/p>
+&lt;p>Long answer: an accessible web can help people with disabilities improve their lives. There are different kinds of disabilities, including auditory, cognitive, neurological, physical, speech and visual and our goal as product creators, engineers, designers is creating experiences that can include all people.&lt;/p>
+&lt;p>It is also important to mention that web accessibility also benefits people &lt;em>without&lt;/em> disabilities, for example, someone changing abilities due to ageing or people with slow Internet connections or using devices with small screens. Last not least, disability can also be temporary, for example, someone with a broken arm can&amp;rsquo;t type and use a mouse at the same time.&lt;/p>
+&lt;p>If you want to educate yourself about the topic, I can recommend the &lt;a href="https://www.w3.org/WAI/">W3C Web Accessibility Initiative (W3C WAI)&lt;/a> and &lt;a href="https://www.a11yproject.com/">The A11Y Project&lt;/a>.&lt;/p>
+&lt;h2 id="accessibility-testing-techniques">Accessibility testing techniques&lt;/h2>
+&lt;p>There are different ways to test if your website/app is accessible. The W3C WAI has a &lt;a href="https://www.w3.org/WAI/ER/tools/">list of 140+ tools&lt;/a> to help you determine if your website/app meets accessibility guidelines. You can also add in your strategy:&lt;/p>
+&lt;ul>
+&lt;li>Real users testing: companies like &lt;a href="https://www.makeitfable.com/">Fable&lt;/a> connect you and people with disabilities in research and user testing to meet your compliance goals.&lt;/li>
+&lt;li>Browser extensions: &lt;a href="https://www.deque.com/axe/browser-extensions/">axe&lt;/a> is a recommended extension for Chrome, Firefox, Edge that help identify and resolve common accessibility issues.&lt;/li>
+&lt;/ul>
+&lt;p>The &lt;a href="https://github.com/dequelabs/axe-core">accessibility engine of axe is open-source&lt;/a> and it can be used in different ways, as this post will show.&lt;/p>
+&lt;h2 id="before-we-start">Before we start&lt;/h2>
+&lt;p>I created a &lt;a href="https://cypress-accessibility-example.vercel.app/">sample website&lt;/a> to mimic a Component Library. It is a very simple website created with Tailwind CSS and hosted in Vercel and it documents 2 components: &lt;a href="https://cypress-accessibility-example.vercel.app/badge.html">badge&lt;/a> and &lt;a href="https://cypress-accessibility-example.vercel.app/button.html">button&lt;/a>.&lt;/p>
+&lt;p>You can check the &lt;a href="https://github.com/leonardofaria/cypress-accessibility-example">source code&lt;/a> in GitHub. The website is static and it is inside the &lt;code>public&lt;/code> folder. You can see the website locally by running &lt;code>npm run serve&lt;/code> and checking in the browser &lt;a href="http://localhost:8000">http://localhost:8000&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/08/cypress-sample-website.png" alt="Sample website">&lt;/p>
+&lt;h2 id="adding-cypress-and-cypress-axe">Adding Cypress and cypress-axe&lt;/h2>
+&lt;p>Start by cloning the &lt;a href="https://github.com/leonardofaria/cypress-example">example repository&lt;/a>. Next, create a new branch and install &lt;a href="https://www.npmjs.com/package/cypress-axe">cypress-axe&lt;/a>, the package responsible for tieing the axe engine to Cypress.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git checkout -b add-cypress
+npm install -D cypress cypress-axe
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Next, create a &lt;code>cypress/support/index.js&lt;/code> file containing:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="color:#000;font-weight:bold">import&lt;/span> &lt;span style="color:#d14">&amp;#39;cypress-axe&amp;#39;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>This import will inject all the functions needed for tests.&lt;/p>
+&lt;h2 id="creating-the-accessibility-test">Creating the accessibility test&lt;/h2>
+&lt;p>Time to create the accessibility test. Here is the plan:&lt;/p>
+&lt;ol>
+&lt;li>Cypress will visit each page (badge and button) of the project.&lt;/li>
+&lt;li>Cypress will test each example in the page. The &lt;a href="https://cypress-example.vercel.app/badge.html">Badge page&lt;/a> has 2 examples (Default and Pill), while the &lt;a href="https://cypress-example.vercel.app/badge.html">Button page&lt;/a> has 3 examples (Default, Pill and Outline). All these examples are inside an &lt;code>&amp;lt;div&amp;gt;&lt;/code> element with a &lt;code>cypress-wrapper&lt;/code>. This class was added with the only intention to identify what needs to be tested.&lt;/li>
+&lt;/ol>
+&lt;p>The first step is creating Cypress configuration file (&lt;code>cypress.json&lt;/code>):&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;span style="color:#000080">&amp;#34;baseUrl&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;http://localhost:8000/&amp;#34;&lt;/span>,
+&lt;span style="color:#000080">&amp;#34;video&amp;#34;&lt;/span>: &lt;span style="color:#000;font-weight:bold">false&lt;/span>
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The &lt;code>baseUrl&lt;/code> is the website running locally. As I mentioned before, &lt;code>npm run serve&lt;/code> will serve the content of the &lt;code>public&lt;/code> folder. The second option, &lt;code>video&lt;/code> disables Cypress video recording, which won&amp;rsquo;t be used in the project.&lt;/p>
+&lt;p>Time to create the test. In &lt;code>cypress/integration/accessibility.spec.js&lt;/code>, add:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="color:#000;font-weight:bold">const&lt;/span> routes &lt;span style="color:#000;font-weight:bold">=&lt;/span> [&lt;span style="color:#d14">&amp;#39;badge.html&amp;#39;&lt;/span>, &lt;span style="color:#d14">&amp;#39;button.html&amp;#39;&lt;/span>];
+describe(&lt;span style="color:#d14">&amp;#39;Component accessibility test&amp;#39;&lt;/span>, () =&amp;gt; {
+routes.forEach((route) =&amp;gt; {
+&lt;span style="color:#000;font-weight:bold">const&lt;/span> componentName &lt;span style="color:#000;font-weight:bold">=&lt;/span> route.replace(&lt;span style="color:#d14">&amp;#39;.html&amp;#39;&lt;/span>, &lt;span style="color:#d14">&amp;#39;&amp;#39;&lt;/span>);
+&lt;span style="color:#000;font-weight:bold">const&lt;/span> testName &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">`&lt;/span>&lt;span style="color:#d14">${&lt;/span>componentName&lt;span style="color:#d14">}&lt;/span>&lt;span style="color:#d14"> has no detectable accessibility violations on load`&lt;/span>;
+it(testName, () =&amp;gt; {
+cy.visit(route);
+cy.injectAxe();
+cy.get(&lt;span style="color:#d14">&amp;#39;.cypress-wrapper&amp;#39;&lt;/span>).each((element, index) =&amp;gt; {
+cy.checkA11y(
+&lt;span style="color:#d14">&amp;#39;.cypress-wrapper&amp;#39;&lt;/span>,
+{
+runOnly&lt;span style="color:#000;font-weight:bold">:&lt;/span> {
+type&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#39;tag&amp;#39;&lt;/span>,
+values&lt;span style="color:#000;font-weight:bold">:&lt;/span> [&lt;span style="color:#d14">&amp;#39;wcag2a&amp;#39;&lt;/span>],
+},
+}
+);
+});
+});
+});
+});
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>In the code above, I am creating dynamically tests based in the &lt;code>routes&lt;/code> array. The test will check each &lt;code>.cypress-wrapper&lt;/code> element against WCAG 2.0 Level A rules. There are different standards / purposes, as the table above shows:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Tag Name&lt;/th>
+&lt;th>Accessibility Standard / Purpose&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>wcag2a&lt;/code>&lt;/td>
+&lt;td>WCAG 2.0 Level A&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>wcag2aa&lt;/code>&lt;/td>
+&lt;td>WCAG 2.0 Level AA&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>wcag21a&lt;/code>&lt;/td>
+&lt;td>WCAG 2.1 Level A&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>wcag21aa&lt;/code>&lt;/td>
+&lt;td>WCAG 2.1 Level AA&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>best-practice&lt;/code>&lt;/td>
+&lt;td>Common accessibility best practices&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>wcag***&lt;/code>&lt;/td>
+&lt;td>WCAG success criterion e.g. wcag111 maps to SC 1.1.1&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>ACT&lt;/code>&lt;/td>
+&lt;td>W3C approved Accessibility Conformance Testing rules&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>section508&lt;/code>&lt;/td>
+&lt;td>Old Section 508 rules&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>section508.*.*&lt;/code>&lt;/td>
+&lt;td>Requirement in old Section 508&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>You can find more information about it in the &lt;a href="https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#axe-core-tags">axe-core docs&lt;/a>.&lt;/p>
+&lt;p>Last, let&amp;rsquo;s create inside the &lt;code>package.json&lt;/code> the command to trigger the tests:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;span style="color:#000080">&amp;#34;test&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;cypress&amp;#34;&lt;/span>
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>From here, there are 2 options: run Cypress in headless mode with &lt;code>npm run cypress run&lt;/code> or use the Cypress Test Runner with &lt;code>npm run cypress open&lt;/code>.&lt;/p>
+&lt;h3 id="headless-option">Headless option&lt;/h3>
+&lt;p>Using &lt;code>npm run test run&lt;/code>, the output should be similar to the next image:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/08/cypress-accessibility-first-test.jpg" alt="Output of first test">&lt;/p>
+&lt;p>The tests will pass since the components have no accessibility issues.&lt;/p>
+&lt;h3 id="test-runner-option">Test Runner option&lt;/h3>
+&lt;p>Using &lt;code>npm run test open&lt;/code>, Cypress Test Runner will be opened and you can follow step by step the tests.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/08/cypress-accessibility-test-runner.jpg" alt="Cypress Test Runner screenshot">&lt;/p>
+&lt;p>Our first milestone is done, let&amp;rsquo;s merge this branch to master. If you want to see the work done so far, jump in my &lt;a href="https://github.com/leonardofaria/cypress-accessility-example/pull/1/files">Pull Request&lt;/a>.&lt;/p>
+&lt;h2 id="testing-in-real-life">Testing in real life&lt;/h2>
+&lt;p>Imagine we are updating the website and we want to identify the buttons with ids. The &lt;code>id&lt;/code> property must be unique in the document, we can&amp;rsquo;t have 2 elements with the same one, however, we forgot about that and 3 buttons have the same id.&lt;/p>
+&lt;p>Cypress will fail and the output will look something like this:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/08/cypress-accessibility-failed-test.jpg" alt="Output of failed test">&lt;/p>
+&lt;p>Let&amp;rsquo;s improve the output of our tests by showing a table of found issues. First, let&amp;rsquo;s create a new branch:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git checkout -b improve-cypress-tests
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Next, create the &lt;code>cypress/plugins/index.js&lt;/code> file with the following content:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">module.exports &lt;span style="color:#000;font-weight:bold">=&lt;/span> (on, config) =&amp;gt; {
+on(&lt;span style="color:#d14">&amp;#39;task&amp;#39;&lt;/span>, {
+log(message) {
+console.log(message)
+&lt;span style="color:#000;font-weight:bold">return&lt;/span> &lt;span style="color:#000;font-weight:bold">null&lt;/span>
+},
+table(message) {
+console.table(message)
+&lt;span style="color:#000;font-weight:bold">return&lt;/span> &lt;span style="color:#000;font-weight:bold">null&lt;/span>
+}
+})
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>This will execute code in Node via the &lt;code>task&lt;/code> plugin event of Cypress. Next, let&amp;rsquo;s go back to the &lt;code>accessibility.spec.js&lt;/code> file and add the following function in the top of the file:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="color:#000;font-weight:bold">const&lt;/span> terminalLog &lt;span style="color:#000;font-weight:bold">=&lt;/span> (violations) =&amp;gt; {
+cy.task(
+&lt;span style="color:#d14">&amp;#39;log&amp;#39;&lt;/span>,
+&lt;span style="color:#d14">`&lt;/span>&lt;span style="color:#d14">${&lt;/span>violations.length&lt;span style="color:#d14">}&lt;/span>&lt;span style="color:#d14"> accessibility violation&lt;/span>&lt;span style="color:#d14">${&lt;/span>
+violations.length &lt;span style="color:#000;font-weight:bold">===&lt;/span> &lt;span style="color:#099">1&lt;/span> &lt;span style="color:#000;font-weight:bold">?&lt;/span> &lt;span style="color:#d14">&amp;#39;&amp;#39;&lt;/span> &lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#39;s&amp;#39;&lt;/span>
+&lt;span style="color:#d14">}&lt;/span>&lt;span style="color:#d14"> &lt;/span>&lt;span style="color:#d14">${&lt;/span>violations.length &lt;span style="color:#000;font-weight:bold">===&lt;/span> &lt;span style="color:#099">1&lt;/span> &lt;span style="color:#000;font-weight:bold">?&lt;/span> &lt;span style="color:#d14">&amp;#39;was&amp;#39;&lt;/span> &lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#39;were&amp;#39;&lt;/span>&lt;span style="color:#d14">}&lt;/span>&lt;span style="color:#d14"> detected`&lt;/span>
+)
+&lt;span style="color:#998;font-style:italic">// pluck specific keys to keep the table readable
+&lt;/span>&lt;span style="color:#998;font-style:italic">&lt;/span> &lt;span style="color:#000;font-weight:bold">const&lt;/span> violationData &lt;span style="color:#000;font-weight:bold">=&lt;/span> violations.map(
+({ id, impact, description, nodes }) =&amp;gt; ({
+id,
+impact,
+description,
+nodes&lt;span style="color:#000;font-weight:bold">:&lt;/span> nodes.length
+})
+)
+cy.task(&lt;span style="color:#d14">&amp;#39;table&amp;#39;&lt;/span>, violationData)
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The &lt;code>violations&lt;/code> array contains all information about the failing elements. You can tweak this code to include, for instance, the element source code in the test output.&lt;/p>
+&lt;p>Last, lets call the function inside the tests. Modify the &lt;code>checkA11y&lt;/code> function to:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">cy.checkA11y(
+&lt;span style="color:#d14">&amp;#39;.cypress-wrapper&amp;#39;&lt;/span>,
+{
+runOnly&lt;span style="color:#000;font-weight:bold">:&lt;/span> {
+type&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#d14">&amp;#39;tag&amp;#39;&lt;/span>,
+values&lt;span style="color:#000;font-weight:bold">:&lt;/span> [&lt;span style="color:#d14">&amp;#39;wcag2a&amp;#39;&lt;/span>],
+},
+},
+terminalLog,
+);
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>When you run the test again, you&amp;rsquo;ll a table containing the issues reported by axe:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/08/cypress-accessibility-failed-test-table.jpg" alt="Output of failed test with a nice table">&lt;/p>
+&lt;p>If you have any questions, please check the &lt;a href="https://github.com/leonardofaria/cypress-accessibility-example/pull/2/files">Pull request&lt;/a> in Github.&lt;/p>
+&lt;h2 id="next-steps">Next steps&lt;/h2>
+&lt;p>From here, you can continue your journey making products more accessible. As next steps, I would recommend:&lt;/p>
+&lt;ul>
+&lt;li>Adding these tests in your CI solution - I wrote about &lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/08/03/adding-screenshot-testing-with-cypress-in-your-project/#adding-ci">integrating Cypress inside Semaphore&lt;/a> before;&lt;/li>
+&lt;li>Finding the best way to customize the output of tests to improve troubleshooting issues;&lt;/li>
+&lt;li>Learning more about how axe works.&lt;/li>
+&lt;/ul>
+&lt;p>I hope that you have learned that accessibility testing is not difficult and it doesn&amp;rsquo;t require much to start. Automation powered by axe can definitely help us to create better user experiences to all people.&lt;/p></description></item><item><title>Adding screenshot testing with Cypress in your project</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/08/03/adding-screenshot-testing-with-cypress-in-your-project/</link><pubDate>Mon, 03 Aug 2020 00:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/08/03/adding-screenshot-testing-with-cypress-in-your-project/</guid><description>&lt;p>Developers are usually concerned about the quality of their code. There are different kinds of tests to avoid breaking code when a new feature is added in a project, however, what can be done to ensure that components don&amp;rsquo;t look different over time?&lt;/p>
+&lt;p>In this post, you will learn how to use Cypress to capture parts of pages of a website and after that, you will integrate the testing tool in CI to ensure that in the future no one will bring unwanted changes in the project.&lt;/p>
+&lt;p>My motivation for creating this testing strategy came from work. At &lt;a href="https://www.thinkific.com">Thinkific&lt;/a> we have an internal Design System and we added Cypress to avoid surprises when working in CSS/JS files.&lt;/p>
+&lt;p>By the end of this post we will have PRs with Cypress tests:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/08/cypress-bot-comment.jpg" alt="Cypress bot">&lt;/p>
+&lt;h2 id="before-we-start">Before we start&lt;/h2>
+&lt;p>I created a &lt;a href="https://cypress-example.vercel.app/">sample website&lt;/a> to mimic a Component Library. It is a very simple website created with TailwindCSS and hosted in Vercel and it documents 2 components: &lt;a href="https://cypress-example.vercel.app/badge.html">badge&lt;/a> and &lt;a href="https://cypress-example.vercel.app/button.html">button&lt;/a>.&lt;/p>
+&lt;p>You can check the &lt;a href="https://github.com/leonardofaria/cypress-example">source code&lt;/a> in GitHub. The website is static and it is inside the &lt;code>public&lt;/code> folder. You can see the website locally by running &lt;code>npm run serve&lt;/code> and checking in the browser &lt;a href="http://localhost:8000">http://localhost:8000&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/08/cypress-sample-website.png" alt="Sample website">&lt;/p>
+&lt;h2 id="adding-cypress-and-cypress-image-snapshot">Adding Cypress and Cypress Image Snapshot&lt;/h2>
+&lt;p>Start by cloning the &lt;a href="https://github.com/leonardofaria/cypress-example">example repository&lt;/a>. Next, create a new branch and install &lt;a href="https://www.npmjs.com/package/cypress-image-snapshot">Cypress Image Snapshot&lt;/a>, the package responsible for capturing/comparing screenshots.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git checkout -b add-cypress
+npm install -D cypress cypress-image-snapshot
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>After adding the packages, a few extra steps are needed to add Cypress Image Snapshot in Cypress.&lt;/p>
+&lt;p>Create a &lt;code>cypress/plugins/index.js&lt;/code> file with the following content:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="color:#000;font-weight:bold">const&lt;/span> { addMatchImageSnapshotPlugin } &lt;span style="color:#000;font-weight:bold">=&lt;/span> require(&lt;span style="color:#d14">&amp;#39;cypress-image-snapshot/plugin&amp;#39;&lt;/span>);
+module.exports &lt;span style="color:#000;font-weight:bold">=&lt;/span> (on, config) =&amp;gt; {
+addMatchImageSnapshotPlugin(on, config);
+};
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Next, create a &lt;code>cypress/support/index.js&lt;/code> file containing:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="color:#000;font-weight:bold">import&lt;/span> { addMatchImageSnapshotCommand } from &lt;span style="color:#d14">&amp;#39;cypress-image-snapshot/command&amp;#39;&lt;/span>;
+addMatchImageSnapshotCommand();
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="creating-the-screenshot-test">Creating the screenshot test&lt;/h2>
+&lt;p>Time to create the screenshot test. Here is the plan:&lt;/p>
+&lt;ol>
+&lt;li>Cypress will visit each page (badge and button) of the project.&lt;/li>
+&lt;li>Cypress will take a screenshot of each example in the page. The &lt;a href="https://cypress-example.vercel.app/badge.html">Badge page&lt;/a> has 2 examples (Default and Pill), while the &lt;a href="https://cypress-example.vercel.app/badge.html">Button page&lt;/a> has 3 examples (Default, Pill and Outline). All these examples are inside an &lt;code>&amp;lt;div&amp;gt;&lt;/code> element with a &lt;code>cypress-wrapper&lt;/code>. This class was added with the only intention to identify what needs to be tested.&lt;/li>
+&lt;/ol>
+&lt;p>The first step is creating Cypress configuration file (&lt;code>cypress.json&lt;/code>):&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;span style="color:#000080">&amp;#34;baseUrl&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;http://localhost:8000/&amp;#34;&lt;/span>,
+&lt;span style="color:#000080">&amp;#34;video&amp;#34;&lt;/span>: &lt;span style="color:#000;font-weight:bold">false&lt;/span>
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The &lt;code>baseUrl&lt;/code> is the website running locally. As I mentioned before, &lt;code>npm run serve&lt;/code> will serve the content of the &lt;code>public&lt;/code> folder. The second option, &lt;code>video&lt;/code> disables Cypress video recording, which won&amp;rsquo;t be used in the project.&lt;/p>
+&lt;p>Time to create the test. In &lt;code>cypress/integration/screenshot.spec.js&lt;/code>, add:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="color:#000;font-weight:bold">const&lt;/span> routes &lt;span style="color:#000;font-weight:bold">=&lt;/span> [&lt;span style="color:#d14">&amp;#39;badge.html&amp;#39;&lt;/span>, &lt;span style="color:#d14">&amp;#39;button.html&amp;#39;&lt;/span>];
+describe(&lt;span style="color:#d14">&amp;#39;Component screenshot&amp;#39;&lt;/span>, () =&amp;gt; {
+routes.forEach((route) =&amp;gt; {
+&lt;span style="color:#000;font-weight:bold">const&lt;/span> componentName &lt;span style="color:#000;font-weight:bold">=&lt;/span> route.replace(&lt;span style="color:#d14">&amp;#39;.html&amp;#39;&lt;/span>, &lt;span style="color:#d14">&amp;#39;&amp;#39;&lt;/span>);
+&lt;span style="color:#000;font-weight:bold">const&lt;/span> testName &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">`&lt;/span>&lt;span style="color:#d14">${&lt;/span>componentName&lt;span style="color:#d14">}&lt;/span>&lt;span style="color:#d14"> should match previous screenshot`&lt;/span>;
+it(testName, () =&amp;gt; {
+cy.visit(route);
+cy.get(&lt;span style="color:#d14">&amp;#39;.cypress-wrapper&amp;#39;&lt;/span>).each((element, index) =&amp;gt; {
+&lt;span style="color:#000;font-weight:bold">const&lt;/span> name &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">`&lt;/span>&lt;span style="color:#d14">${&lt;/span>componentName&lt;span style="color:#d14">}&lt;/span>&lt;span style="color:#d14">-&lt;/span>&lt;span style="color:#d14">${&lt;/span>index&lt;span style="color:#d14">}&lt;/span>&lt;span style="color:#d14">`&lt;/span>;
+cy.wrap(element).matchImageSnapshot(name);
+});
+});
+});
+});
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>In the code above, I am creating dynamically tests based in the &lt;code>routes&lt;/code> array. The test will create one image per &lt;code>.cypress-wrapper&lt;/code> element that the page has.&lt;/p>
+&lt;p>Last, let&amp;rsquo;s create inside the &lt;code>package.json&lt;/code> the command to trigger the tests:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;span style="color:#000080">&amp;#34;test&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;cypress&amp;#34;&lt;/span>
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>From here, there are 2 options: run Cypress in headless mode with &lt;code>npm run cypress run&lt;/code> or use the Cypress Test Runner with &lt;code>npm run cypress open&lt;/code>.&lt;/p>
+&lt;h3 id="headless-option">Headless option&lt;/h3>
+&lt;p>Using &lt;code>npm run cypress run&lt;/code>, the output should be similar to the next image:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/08/cypress-first-test.jpg" alt="Output of first test">&lt;/p>
+&lt;p>The tests will pass and 5 images will be created under &lt;code>/snapshots/screenshot.spec.js&lt;/code> folder.&lt;/p>
+&lt;h3 id="test-runner-option">Test Runner option&lt;/h3>
+&lt;p>Using &lt;code>npm run cypress open&lt;/code>, Cypress Test Runner will be opened and you can follow step by step the tests.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/08/cypress-test-runner.jpg" alt="Cypress Test Runner screenshot">&lt;/p>
+&lt;p>Our first milestone is done, let&amp;rsquo;s merge this branch to master. If you want to see the work done so far, jump in my &lt;a href="https://github.com/leonardofaria/cypress-example/pull/1">Pull Request&lt;/a>.&lt;/p>
+&lt;h2 id="using-cypress-inside-docker">Using Cypress inside Docker&lt;/h2>
+&lt;p>If you run the test above alternating between headless and Test Runner, you may notice that screenshot will vary. Using the Test Runner with a retina display computer, you may get retina images (2x), while the headless mode doesn&amp;rsquo;t give you high-quality screenshots.&lt;/p>
+&lt;p>Also, it is important to say the screenshots may vary according to the Operational System. Linux and Windows, for instance, have apps with visible scrollbars, while macOS hides the scrollbar. If the content captured in the screenshot doesn&amp;rsquo;t fit a component, you may or may not have a scrollbar. If your project relies on OS default fonts, screenshots will also be different according to the environment.&lt;/p>
+&lt;p>In order to avoid these inconsistencies, tests will run inside Docker so the developer computer won&amp;rsquo;t affect in the screenshots captures.&lt;/p>
+&lt;p>Let&amp;rsquo;s start by creating a new branch:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git checkout -b add-docker
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Cypress offers different Docker images - you can check details in &lt;a href="https://docs.cypress.io/examples/examples/docker.html">their documentation&lt;/a> and &lt;a href="https://www.cypress.io/blog/2019/05/02/run-cypress-with-a-single-docker-command/">their blog&lt;/a>. For this example, I will use the &lt;code>cypress/included&lt;/code> image, which includes Electron and it is ready to be used.&lt;/p>
+&lt;p>Two changes will be needed: change the &lt;code>baseUrl&lt;/code> in the &lt;code>cypress.json&lt;/code> file:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;span style="color:#000080">&amp;#34;baseUrl&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;http://host.docker.internal:8000/&amp;#34;&lt;/span>,
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>and the &lt;code>test&lt;/code> command in the &lt;code>package.json&lt;/code> file:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;span style="color:#000080">&amp;#34;test&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;docker run -it -e CYPRESS_updateSnapshots=$CYPRESS_updateSnapshots --ipc=host -v $PWD:/e2e -w /e2e cypress/included:4.11.0&amp;#34;&lt;/span>
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Running &lt;code>npm run test&lt;/code> will bring us a problem:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/08/cypress-docker.jpg" alt="Output of test">&lt;/p>
+&lt;p>The images are slightly different but why? Let&amp;rsquo;s see what is inside the &lt;code>__diff_output__&lt;/code> folder:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/08/cypress-button-diff.png" alt="Button&amp;rsquo;s difference">&lt;/p>
+&lt;p>As I mentioned earlier, typography inconsistencies! The Button component uses the OS default font. Since Docker is running inside Linux, the rendered font won&amp;rsquo;t be the same that I have installed on macOS.&lt;/p>
+&lt;p>Since now we moved to Docker, these screenshots are outdated. Time to update the snapshots:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#008080">CYPRESS_updateSnapshots&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#0086b3">true&lt;/span> npm run &lt;span style="color:#0086b3">test&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Please notice that I am prefixing the test command with the environment variable &lt;code>CYPRESS_updateSnapshots&lt;/code>.&lt;/p>
+&lt;p>The second milestone is done. In case you need help, check my &lt;a href="https://github.com/leonardofaria/cypress-example/pull/2">pull request&lt;/a>.&lt;/p>
+&lt;p>Let&amp;rsquo;s merge this branch and move forward.&lt;/p>
+&lt;h2 id="adding-ci">Adding CI&lt;/h2>
+&lt;p>Our next step is adding the tests in CI. There are different CI solutions in the market but for this tutorial, I will use Semaphore. I am not affiliated to them and I use their product at work, so it was for me a natural choice. The configuration is straightforward and it can be adapted to other solutions like CircleCI or Github Actions.&lt;/p>
+&lt;p>Before we create our Semaphore configuration file, let&amp;rsquo;s prepare our project to run in CI.&lt;/p>
+&lt;p>The first step is installing &lt;a href="https://www.npmjs.com/package/start-server-and-test">start-server-and-test&lt;/a>. As the package name says, it will start a server, waits for URL, then runs a test command:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install -D start-server-and-test
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Second, edit the &lt;code>package.json&lt;/code> file:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;span style="color:#000080">&amp;#34;test&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;docker run -it -e CYPRESS_baseUrl=$CYPRESS_baseUrl -e CYPRESS_updateSnapshots=$CYPRESS_updateSnapshots --ipc=host -v $PWD:/e2e -w /e2e cypress/included:4.11.0&amp;#34;&lt;/span>,
+&lt;span style="color:#000080">&amp;#34;test:ci&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;start-server-and-test serve http://localhost:8000 test&amp;#34;&lt;/span>
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>In the &lt;code>test&lt;/code> script, we are adding the &lt;code>CYPRESS_baseUrl&lt;/code> environment variable. This will allow us to change the base URL used by Cypress dynamically. Also, we are adding the &lt;code>test:ci&lt;/code> script, which will run the package we just installed.&lt;/p>
+&lt;p>We are ready for Semaphore. Create the &lt;code>.semaphore/semaphore.yml&lt;/code> file with the following content:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yml" data-lang="yml">&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1&lt;/span>&lt;span style="color:#000;font-weight:bold">version&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>v1&lt;span style="color:#099">.0&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2&lt;/span>&lt;span style="color:#bbb">&lt;/span>&lt;span style="color:#000;font-weight:bold">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Cypress&lt;span style="color:#bbb"> &lt;/span>example&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3&lt;/span>&lt;span style="color:#bbb">&lt;/span>&lt;span style="color:#000;font-weight:bold">agent&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000;font-weight:bold">machine&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000;font-weight:bold">type&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>e1-standard&lt;span style="color:#099">-2&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000;font-weight:bold">os_image&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>ubuntu1804&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7&lt;/span>&lt;span style="color:#bbb">&lt;/span>&lt;span style="color:#000;font-weight:bold">blocks&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#000;font-weight:bold">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Build&lt;span style="color:#bbb"> &lt;/span>Dependencies&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000;font-weight:bold">dependencies&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>[]&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000;font-weight:bold">task&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000;font-weight:bold">jobs&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#000;font-weight:bold">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>NPM&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000;font-weight:bold">commands&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- sem-version&lt;span style="color:#bbb"> &lt;/span>node&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#099">12&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- checkout&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- npm&lt;span style="color:#bbb"> &lt;/span>install&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#000;font-weight:bold">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Tests&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000;font-weight:bold">dependencies&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>[&lt;span style="color:#d14">&amp;#39;Build Dependencies&amp;#39;&lt;/span>]&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000;font-weight:bold">task&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000;font-weight:bold">prologue&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000;font-weight:bold">commands&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- sem-version&lt;span style="color:#bbb"> &lt;/span>node&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#099">12&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- checkout&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000;font-weight:bold">jobs&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#000;font-weight:bold">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Cypress&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#000;font-weight:bold">commands&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- export&lt;span style="color:#bbb"> &lt;/span>CYPRESS_baseUrl=&lt;span style="color:#d14">&amp;#34;http://$(ip route | grep -E &amp;#39;(default|docker0)&amp;#39; | grep -Eo &amp;#39;([0-9]+\.){3}[0-9]+&amp;#39; | tail -1):8000&amp;#34;&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28&lt;/span>&lt;span style="color:#bbb"> &lt;/span>- npm&lt;span style="color:#bbb"> &lt;/span>run&lt;span style="color:#bbb"> &lt;/span>test:ci&lt;/code>&lt;/pre>&lt;/div>
+&lt;p>Breaking the configuration in details:&lt;/p>
+&lt;ul>
+&lt;li>The lines 1-6 defines which kind of instance we will use in their environment;&lt;/li>
+&lt;li>The lines 8 and 16 create 2 blocks: the first block, &amp;ldquo;Build Dependencies&amp;rdquo; will run &lt;code>npm install&lt;/code>, downloading the dependencies we need. The second block, &amp;ldquo;Tests&amp;rdquo; will run Cypress, with a few differences.&lt;/li>
+&lt;li>In line 27, we are dynamically setting the &lt;code>CYPRESS_baseUrl&lt;/code> environment variable based in the IP Docker is using at the moment. This will replace &lt;code>http://host.docker.internal:8000/&lt;/code>, which may not work in all environments.&lt;/li>
+&lt;li>In line 28, we finally run the test using &lt;code>start-server-and-test&lt;/code>: once the server is ready for connections, Cypress will run the test suite.&lt;/li>
+&lt;/ul>
+&lt;p>Another milestone is done, time to merge our branch! You can check the &lt;a href="https://github.com/leonardofaria/cypress-example/pull/6/files">Pull request&lt;/a> that contains all the files from this section and check the &lt;a href="https://leonardofaria.semaphoreci.com/workflows/061f6c9f-8f2d-4351-8a25-e5bc1568f67e">build inside Semaphore&lt;/a>.&lt;/p>
+&lt;h2 id="recording-the-tests-in-cypressio">Recording the tests in cypress.io&lt;/h2>
+&lt;p>Reading the output of tests in CI is not very friendly. In this step, we will integrate our project with &lt;a href="https://www.cypress.io/">cypress.io&lt;/a>.&lt;/p>
+&lt;p>The following steps are based on &lt;a href="https://docs.cypress.io/guides/dashboard/projects.html#Setup">Cypress documentation&lt;/a>.&lt;/p>
+&lt;p>Let&amp;rsquo;s start by getting a project ID and a record key. In the terminal, create a new branch and run:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git checkout -b add-cypress-recording
+&lt;span style="color:#008080">CYPRESS_baseUrl&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>http://localhost:8000 ./node_modules/.bin/cypress open
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Earlier I have mentioned we would be using Cypress inside Docker but here we are opening Cypress locally since this is the only way to integrate with the website dashboard.&lt;/p>
+&lt;p>Inside Cypress, let&amp;rsquo;s go the Runs tab, click in &amp;ldquo;Set up project to record&amp;rdquo;, choose a name and visibility. We will get a &lt;code>projectId&lt;/code> that is automatically added in the &lt;code>cypress.json&lt;/code> file and a private record key. Here is a video of the steps:&lt;/p>
+&lt;video class="h-auto" controls loop autoplay="autoplay">
+&lt;source src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/08/cypress-adding-integration.mp4" type="video/mp4">
+&lt;/video>
+&lt;p>In Semaphore, I added the record key as an environment variable called &lt;code>CYPRESS_recordKey&lt;/code>. Next let&amp;rsquo;s update our test script to use the variable:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;span style="color:#000080">&amp;#34;test:ci&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;start-server-and-test &amp;#39;serve&amp;#39; 8000 &amp;#39;npm run test -- run --record --key $CYPRESS_recordKey&amp;#39;&amp;#34;&lt;/span>
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>That is pretty much all that needs to be done. In the &lt;a href="https://github.com/leonardofaria/cypress-example/pull/8">Pull request&lt;/a> we can see the cypress.io integration in the comments. There is even a deep link that takes us to their dashboard and shows all the screenshots. Check the video below:&lt;/p>
+&lt;video class="h-auto" controls loop autoplay="autoplay">
+&lt;source src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/08/cypress-io-test-dashboard.mp4" type="video/mp4">
+&lt;/video>
+&lt;p>Time to merge our work and that is the end of our integration.&lt;/p>
+&lt;h2 id="testing-in-real-life">Testing in real life&lt;/h2>
+&lt;p>Imagine we are working on a change that affects the padding of the buttons: time to test if Cypress will capture the difference.&lt;/p>
+&lt;p>In the example website, let&amp;rsquo;s double the horizontal padding from 16px to 32px. This change is quite simple since we are using Tailwind CSS: &lt;code>px-4&lt;/code> gets replaced by &lt;code>px-8&lt;/code>. Here is &lt;a href="https://github.com/leonardofaria/cypress-example/pull/9">Pull request&lt;/a>.&lt;/p>
+&lt;p>As we could expect, Cypress captured that the button doesn&amp;rsquo;t match the screenshots. Visiting the page, we can check the screenshot of the broken test:&lt;/p>
+&lt;video class="h-auto" controls loop autoplay="autoplay">
+&lt;source src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/08/cypress-io-broken-test.mp4" type="video/mp4">
+&lt;/video>
+&lt;p>The diff file shows the original screenshot on the left, the current result on the right and they are combined in the middle. We also have the option to download the image so we can see the issue better:&lt;/p>
+&lt;div class="full-width">&lt;img alt="Button before and after" src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/08/cypress-io-broken-test.png" />&lt;/div>
+&lt;p>If this is not an issue, update the screenshots:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#008080">CYPRESS_updateSnapshots&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#0086b3">true&lt;/span> npm run &lt;span style="color:#0086b3">test&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="the-end">The end&lt;/h2>
+&lt;p>That&amp;rsquo;s it for today. I hope you have learned how Cypress can be useful to ensure no one is adding unexpected changes in a project.&lt;/p></description></item><item><title>Bento theme released</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/07/29/bento-theme-released/</link><pubDate>Wed, 29 Jul 2020 00:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/07/29/bento-theme-released/</guid><description>&lt;p>&lt;a href="http://leonardofaria.github.io/leonardofaria.net/2020/04/21/moving-to-hugo/">Earlier on April&lt;/a> I moved this website from Wordpress to Hugo. I like how Hugo is minimalist, fast and the fact I don&amp;rsquo;t need to maintain one more JavaScript codebase :)&lt;/p>
+&lt;p>I created a theme for this website inspired by Casper (v1), Medium and many other minimalist journal templates. Bento was &lt;a href="https://themes.gohugo.io/bento/">just released&lt;/a> in the &lt;a href="https://themes.gohugo.io/">Hugo Themes website&lt;/a> and I decided to do here a show &amp;amp; tell about the work done.&lt;/p>
+&lt;h2 id="design">Design&lt;/h2>
+&lt;p>I have decided to use the OS default typography and lots of gray and blue colors. The color palette is the default TailwindCSS &lt;a href="https://tailwindcss.com/docs/customizing-colors/#default-color-palette">color palette&lt;/a>.&lt;/p>
+&lt;h3 id="tailwindcss">TailwindCSS&lt;/h3>
+&lt;p>TailwindCSS is my go-to option for CSS in personal projects. It is easy to use, customizable (if I have to) and I just don&amp;rsquo;t need to reinvent the wheel. I did write a few CSS code in the theme (ex: styles of the articles) but even for that I use TailwindCSS &lt;a href="https://tailwindcss.com/docs/extracting-components/#extracting-css-components-with-apply">&lt;code>@apply&lt;/code>&lt;/a> technique.&lt;/p>
+&lt;h3 id="little-big-details">Little big details&lt;/h3>
+&lt;p>In the theme I used transitions for links colors, a gradient in the bottom of the page and last not least, a cool reading progress bar in the top of the page.&lt;/p>
+&lt;video class="h-auto" controls autoplay="autoplay">
+&lt;source src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/07/page-scroll.mp4" type="video/mp4">
+&lt;/video>
+&lt;p>One of my favourite things in this layout is the backdrop-filter in the sticky header. The &lt;a href="https://web.dev/backdrop-filter/">&lt;code>backdrop-filter&lt;/code>&lt;/a> CSS property is very popular in iOS and I wanted to add this touch in the theme instead of having the usual opacity.&lt;/p>
+&lt;p>Since I spend lots of my time on GitHub, I chose their color palette for code.&lt;/p>
+&lt;h2 id="performance">Performance&lt;/h2>
+&lt;p>I built Bento with Performance in mind. I wanted to deliver fast pages and no bloated CSS.&lt;/p>
+&lt;h3 id="turbolinks">Turbolinks&lt;/h3>
+&lt;p>From &lt;a href="https://github.com/turbolinks/turbolinks">their README&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>Turbolinks® makes navigating your web application faster. Get the performance benefits of a single-page application without the added complexity of a client-side JavaScript framework. Use HTML to render your views on the server side and link to pages as usual. When you follow a link, Turbolinks automatically fetches the page, swaps in its &lt;body>, and merges its &lt;code>&amp;lt;head&amp;gt;&lt;/code>, all without incurring the cost of a full page load.&lt;/em>&lt;/p>
+&lt;/blockquote>
+&lt;p>Turbolinks is well-known in the Rails community but it can also be used outside the framework. I saw it first at &lt;a href="https://devinschulz.com/">Devin Schulz&lt;/a> Hugo website and I decided to add it in my theme. The integration is painless: add the JS file from a CDN in your page and there is no step 2. Since I don&amp;rsquo;t have lots of JS interactions here, adding Turbolinks was very straightforward.&lt;/p>
+&lt;h3 id="postcss">PostCSS&lt;/h3>
+&lt;p>CSS libraries like Bootstrap and TailwindCSS are often critized for their weight. Offering modular styles has its tradeoff however packages like &lt;a href="https://www.npmjs.com/package/@fullhuman/postcss-purgecss">postcss-purgecss&lt;/a> can avoid the big CSS files.&lt;/p>
+&lt;p>The setup I used here came from the &lt;a href="https://github.com/budparr/hugopipes-tailwindcss">hugopipes-tailwindcss&lt;/a>, in case you are curious.&lt;/p>
+&lt;h2 id="future">Future&lt;/h2>
+&lt;p>I am quite happy with Bento right now but I may work in some features in the future, like adding search or subtle animations for images. Talking about images, adding neumorphism shadows would also be a nice touch.&lt;/p></description></item><item><title>Using Flexbox and text ellipsis together</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/07/18/using-flexbox-and-text-ellipsis-together/</link><pubDate>Sat, 18 Jul 2020 00:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/07/18/using-flexbox-and-text-ellipsis-together/</guid><description>&lt;p>Another day I was asked to build a table containing a list of files uploaded by the users. Imagine a table similar to the list of files in Finder:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/07/finder.jpg" alt="Finder">&lt;/p>
+&lt;p>The second item of the table is &lt;code>mobile-phone-screenshot-long-fine-name.png&lt;/code>, however the column is not big enough to show the complete filename. Instead, we see &lt;code>mobile-phone-sc...g-fine-name.png&lt;/code>. In this project, we decided to cut part of the end of the filename and keeping the extension, as shown above:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/07/filename.gif" alt="Finder">&lt;/p>
+&lt;h3 id="html-markup">HTML markup:&lt;/h3>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#000080">div&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;filename&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">span&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;filename__base&amp;#34;&lt;/span>&amp;gt;this-file-has-a-really-really-really-long-filename.&amp;lt;/&lt;span style="color:#000080">span&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#000080">span&lt;/span> &lt;span style="color:#008080">class&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;filename__extension&amp;#34;&lt;/span>&amp;gt;pdf&amp;lt;/&lt;span style="color:#000080">span&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#000080">div&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="css">CSS:&lt;/h3>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">.&lt;span style="color:#458;font-weight:bold">filename&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">display&lt;/span>: &lt;span style="color:#000;font-weight:bold">flex&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">min-width&lt;/span>: &lt;span style="color:#099">0&lt;/span>;
+}
+.&lt;span style="color:#458;font-weight:bold">filename__base&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">text-overflow&lt;/span>: &lt;span style="color:#000;font-weight:bold">ellipsis&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">white-space&lt;/span>: &lt;span style="color:#000;font-weight:bold">nowrap&lt;/span>;
+&lt;span style="color:#000;font-weight:bold">overflow&lt;/span>: &lt;span style="color:#000;font-weight:bold">hidden&lt;/span>;
+}
+.&lt;span style="color:#458;font-weight:bold">filename__extension&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">flex-shrink&lt;/span>: &lt;span style="color:#099">0&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The ellipsis effect can be done by combining &lt;code>text-overflow&lt;/code>, &lt;code>white-space&lt;/code> and &lt;code>overflow&lt;/code> properties, however, we still need to figure out the relation between the filename base and its parent, which also contains the file extension.&lt;/p>
+&lt;p>The trick is using the property &lt;code>min-width&lt;/code>, as covered in this pen by &lt;a href="https://codepen.io/aj-foster/pen/emBYPW">AJ Foster&lt;/a> and &lt;a href="https://css-tricks.com/flexbox-truncated-text/">CSS Tricks&lt;/a>. From the &lt;a href="https://drafts.csswg.org/css-flexbox/#min-size-auto">Flexbox spec&lt;/a>:&lt;/p>
+&lt;blockquote>
+&lt;p>Note: The auto keyword, representing an automatic minimum size, is the new initial value of the min-width and min-height properties. The keyword was previously defined in this specification, but is now defined in the CSS Sizing module.&lt;/p>
+&lt;p>&amp;hellip;&lt;/p>
+&lt;p>In general, the content-based minimum size of a &lt;strong>flex item is the smaller of its content size&lt;/strong> suggestion and its specified size suggestion.&lt;/p>
+&lt;/blockquote>
+&lt;p>By using &lt;code>min-width: 0&lt;/code>, we are changing the minimum size of the flexbox container, which will resize the child elements of the container that don&amp;rsquo;t use the &lt;code>flex-shrink&lt;/code> attribute. Since the filename base element has the &lt;code>text-overflow&lt;/code>, &lt;code>white-space&lt;/code> and &lt;code>overflow&lt;/code> properties, the ellipsis will be rendered properly.&lt;/p>
+&lt;p>The full example is available in &lt;a href="https://codepen.io/leonardofaria/pen/rNxZJad">this Codepen&lt;/a>:&lt;/p>
+&lt;div class="full-width">
+&lt;iframe src="https://codepen.io/leonardofaria/embed/rNxZJad" class="w-full h-screen">&lt;/iframe>
+&lt;/div></description></item><item><title>Creating your own ESLint config package</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/06/16/creating-your-own-eslint-config-package/</link><pubDate>Tue, 16 Jun 2020 00:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/06/16/creating-your-own-eslint-config-package/</guid><description>&lt;p>ESLint is a powerful tool to enforce consistent coding conventions and ensure quality in your JavaScript codebase. Coding conventions are sometimes difficult to decide and having a tool to automate enforcement is great to avoid unnecessary discussions. Ensuring quality is also a welcoming feature: linters are excellent tools for catching bugs, such as those related to variable scope.&lt;/p>
+&lt;p>ESLint is designed to be completely configurable, giving you the option of enabling/disabling each rule, or mixing the rules to match your needs. With this in mind, the JavaScript community and companies who use JavaScript can extend the original ESLint config. There are &lt;a href="https://www.npmjs.com/search?q=eslint-config">several examples&lt;/a> in the npm registry: &lt;a href="https://www.npmjs.com/package/eslint-config-airbnb">eslint-config-airbnb&lt;/a> is one of the most famous.&lt;/p>
+&lt;p>In your daily basis, you will probably combine more than one config, since there is no one-config-fits-all. This post will show how to create your repository of configurations, giving you the option to centralize all your rule definitions.&lt;/p>
+&lt;p>The first step is creating a new folder and creating an npm project. &lt;a href="https://eslint.org/docs/developer-guide/shareable-configs">By convention&lt;/a>, the module name begins with &lt;code>eslint-config-&lt;/code>, such as &lt;code>eslint-config-test&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">mkdir eslint-config-test
+&lt;span style="color:#0086b3">cd&lt;/span> eslint-config-test
+npm init
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>You will have a package.json file that will look like the following snippet:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;span style="color:#000080">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;eslint-config-test&amp;#34;&lt;/span>,
+&lt;span style="color:#000080">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;1.0.0&amp;#34;&lt;/span>,
+&lt;span style="color:#000080">&amp;#34;description&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;&amp;#34;&lt;/span>,
+&lt;span style="color:#000080">&amp;#34;main&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;index.js&amp;#34;&lt;/span>,
+&lt;span style="color:#000080">&amp;#34;scripts&amp;#34;&lt;/span>: {
+&lt;span style="color:#000080">&amp;#34;test&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;echo \&amp;#34;Error: no test specified\&amp;#34; &amp;amp;&amp;amp; exit 1&amp;#34;&lt;/span>
+},
+&lt;span style="color:#000080">&amp;#34;author&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;&amp;#34;&lt;/span>,
+&lt;span style="color:#000080">&amp;#34;license&amp;#34;&lt;/span>: &lt;span style="color:#d14">&amp;#34;ISC&amp;#34;&lt;/span>
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Next, time to add your ESLint dependencies:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install -D eslint eslint-config-airbnb eslint-config-prettier eslint-plugin-import eslint-plugin-jsx eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The packages will change according to your needs. In this case, I work with React codebases and I use &lt;a href="https://prettier.io/">Prettier&lt;/a> to format my code. The &lt;a href="https://eslint.org/docs/developer-guide/shareable-configs#publishing-a-shareable-config">documentation&lt;/a> mentions that if your shareable config depends on a plugin, you should also specify it as a &lt;code>peerDependency&lt;/code>.&lt;/p>
+&lt;p>Next, I will create a &lt;code>.eslintrc.js&lt;/code> with my configuration - this is similar to what you already do in your apps:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">module.exports &lt;span style="color:#000;font-weight:bold">=&lt;/span> {
+&lt;span style="color:#000;font-weight:bold">extends&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> [
+&lt;span style="color:#d14">&amp;#39;airbnb&amp;#39;&lt;/span>,
+&lt;span style="color:#d14">&amp;#39;eslint:recommended&amp;#39;&lt;/span>,
+&lt;span style="color:#d14">&amp;#39;plugin:import/errors&amp;#39;&lt;/span>,
+&lt;span style="color:#d14">&amp;#39;plugin:react/recommended&amp;#39;&lt;/span>,
+&lt;span style="color:#d14">&amp;#39;plugin:jsx-a11y/recommended&amp;#39;&lt;/span>,
+&lt;span style="color:#d14">&amp;#39;plugin:prettier/recommended&amp;#39;&lt;/span>,
+&lt;span style="color:#d14">&amp;#39;prettier/react&amp;#39;&lt;/span>,
+],
+plugins&lt;span style="color:#000;font-weight:bold">:&lt;/span> [
+&lt;span style="color:#d14">&amp;#39;react-hooks&amp;#39;&lt;/span>,
+],
+rules&lt;span style="color:#000;font-weight:bold">:&lt;/span> {
+},
+};
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The &lt;code>rules&lt;/code> object stores any rule that you want to override. In the snippet above &lt;code>rules&lt;/code> is empty but feel free to check &lt;a href="https://github.com/leonardofaria/eslint-config-leozera/blob/master/.eslintrc.js#L14:L58">my overrides&lt;/a>. In the airbnb/javascript repository you can &lt;a href="https://github.com/airbnb/javascript/issues/1089">find a list of overridden rules&lt;/a> by the community.&lt;/p>
+&lt;p>Time to create a &lt;code>.prettierrc&lt;/code> with your custom rules - this is a tricky part since Prettier and ESLint can conflict in a few rules:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;span style="color:#000080">&amp;#34;tabWidth&amp;#34;&lt;/span>: &lt;span style="color:#099">2&lt;/span>
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>It is important to mention that the &lt;code>.prettierrc&lt;/code> file should live in the root of the project that is using your package. Right now, I am manually copying it. Next step is exporting your config in the &lt;code>index.js&lt;/code> file:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-js" data-lang="js">&lt;span style="color:#000;font-weight:bold">const&lt;/span> eslintrc &lt;span style="color:#000;font-weight:bold">=&lt;/span> require(&lt;span style="color:#d14">&amp;#39;./.eslintrc.js&amp;#39;&lt;/span>);
+module.exports &lt;span style="color:#000;font-weight:bold">=&lt;/span> eslintrc;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>It is technically possible to create all configuration in the &lt;code>index.js&lt;/code> file however you wouldn&amp;rsquo;t get the config object linted (insert your &lt;a href="https://www.imdb.com/title/tt1375666/">Inception&lt;/a> joke here).&lt;/p>
+&lt;p>&lt;em>Voilà!&lt;/em> That&amp;rsquo;s all you need to start your own package of configurations. You can test locally your config package by running, in a JavaScript project:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm install /Users/leonardo/path/to/eslint-config-test
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Keep in mind that the dependencies of your configuration package may also be installed.&lt;/p>
+&lt;p>If everything looks fine, you can publish to the npm registry:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">npm publish
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="full-example">Full example&lt;/h2>
+&lt;p>I have a functional GitHub project showing the setup of this post: &lt;a href="https://github.com/leonardofaria/eslint-config-leozera">eslint-config-leozera&lt;/a>. You can also see it below:&lt;/p>
+&lt;div class="full-width">
+&lt;iframe
+src="https://codesandbox.io/embed/github/leonardofaria/eslint-config-leozera/tree/master/?fontsize=14&amp;theme=dark"
+style="width:100%; height:600px; border:0;overflow:hidden;"
+title="leonardofaria/eslint-config-leozera"
+allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+>&lt;/iframe>
+&lt;/div>
+&lt;h2 id="more-about-it">More about it&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://eslint.org/docs/user-guide/configuring">Configuring ESLint&lt;/a>: official ESLint docs. You know, &lt;em>read the docs&lt;/em>&lt;/li>
+&lt;li>&lt;a href="https://medium.com/@bretcameron/how-to-publish-your-first-npm-package-b224296fc57b">How to publish your first NPM package&lt;/a>: quoting the post subtitle&amp;rdquo;, everything you need to know to create a NPM package&amp;rdquo;&lt;/li>
+&lt;li>&lt;a href="https://github.com/wesbos/eslint-config-wesbos">eslint-config-wesbos&lt;/a>: a project by &lt;a href="https://www.wesbos.com/">Wes Bos&lt;/a> that help me doing this work&lt;/li>
+&lt;/ul></description></item><item><title>Using HAR files to analyze performance over time</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/06/07/using-har-files-to-analyze-performance-over-time/</link><pubDate>Sun, 07 Jun 2020 00:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/06/07/using-har-files-to-analyze-performance-over-time/</guid><description>&lt;p>When I consider the performance of a website, the first things that come to mind are; looking at the requests of a page, understanding what resources are being loaded, and how long these resources take to be available to users.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/06/chrome-network.jpg" alt="Chrome Network tab">&lt;/p>
+&lt;p>The network tab will give you a table containing all assets loaded on the page, as well as relevant information about their origin (domain, HTTP status code, size), who initiated the request, and the order in which they were loaded in a waterfall representation. You can add more information to this table by right-clicking one of the table headers and choosing other columns.&lt;/p>
+&lt;p>The size, time and waterfall columns will be crucial to understanding the performance of a page. The size value will present the gzipped size of the resource (when applicable), while the time column shows the total duration from the start of the request to the receipt of the final byte in the response. Last, but not least, the waterfall column demonstrates when the asset is loaded along with the other requests.&lt;/p>
+&lt;p>Performance improvements are noticeable by changes in your code/environment. So how do we keep track of what is being analyzed by the Network tab? By exporting the page in HAR format.&lt;/p>
+&lt;h2 id="what-is-a-har-file">What is a HAR file?&lt;/h2>
+&lt;p>A HAR (short for HTTP Archive) file is a JSON file containing all information about a browser&amp;rsquo;s interactions with a page. It will contain the HTML document and its respective JS and CSS files. Along with this content, a HAR file will also contain all headers&amp;rsquo; information and the browser metadata (i.e. the time of each request).&lt;/p>
+&lt;p>It is important to mention here that cookies and form data will also be logged in the file, so be careful to not include sensitive information (personal details, passwords, credit card numbers) while auditing pages. Also, it is preferable to audit pages in private windows, which avoids browsers&amp;rsquo; extensions. It is invaluable to avoid a browser&amp;rsquo;s extensions since they may modify the loading times of a page.&lt;/p>
+&lt;h2 id="generating-har-files">Generating HAR files&lt;/h2>
+&lt;h3 id="google-chrome">Google Chrome&lt;/h3>
+&lt;ul>
+&lt;li>Close all incognito windows in Google Chrome.&lt;/li>
+&lt;li>Open a new incognito window in Google Chrome.&lt;/li>
+&lt;li>Go to View &amp;gt; Developer &amp;gt; Developers Tools.&lt;/li>
+&lt;li>In the Developer Tools panel, choose the Network tab.&lt;/li>
+&lt;li>Check the Preserve Log and Disable cache checkboxes to record all interactions.&lt;/li>
+&lt;li>Refresh the page.&lt;/li>
+&lt;li>Click the Export HAR (down arrow icon) to export the HAR file.&lt;/li>
+&lt;li>Save the HAR file.&lt;/li>
+&lt;/ul>
+&lt;h3 id="firefox">Firefox&lt;/h3>
+&lt;ul>
+&lt;li>Close all private windows in Firefox.&lt;/li>
+&lt;li>Open a new private window in Firefox.&lt;/li>
+&lt;li>Go to Tools &amp;gt; Developer &amp;gt; Network or ctrl-shift-E.&lt;/li>
+&lt;li>Refresh the page.&lt;/li>
+&lt;li>In the Cog icon (upper right side of the page), choose Save All As Har.&lt;/li>
+&lt;li>Save the HAR file.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/06/firefox-network.jpg" alt="Firefox Network tab">&lt;/p>
+&lt;h3 id="safari">Safari&lt;/h3>
+&lt;ul>
+&lt;li>Ensure that Show Develop menu in menu bar checkbox is checked under Safari &amp;gt; Preferences &amp;gt; Advanced.&lt;/li>
+&lt;li>Choose File &amp;gt; Open New Private Window.&lt;/li>
+&lt;li>Visit the web page where the issue occurs.&lt;/li>
+&lt;li>Choose Develop &amp;gt; Show Web Inspector. The Web Inspector window appears.&lt;/li>
+&lt;li>Refresh the page.&lt;/li>
+&lt;li>Click Export on the upper right side of the pane.&lt;/li>
+&lt;li>Save the HAR file.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/06/safari-network.jpg" alt="Safari Network tab">&lt;/p>
+&lt;h2 id="reading-har-files">Reading HAR files&lt;/h2>
+&lt;p>Once you have a HAR file, you can try a few HAR viewers online. My personal favourite is the &lt;a href="http://www.softwareishard.com/har/viewer/">one created by Jan Odavarko&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/06/har-viewer.jpg" alt="HAR Viewer">&lt;/p>
+&lt;p>What I like about this viewer in particular is the fact you can have multiple files open at the same time, which makes it easier to compare them.&lt;/p>
+&lt;h2 id="using-har-files-to-analyze-the-performance-of-a-page">Using HAR files to analyze the performance of a page&lt;/h2>
+&lt;p>HAR files can be useful to collect information about the assets of a page. Since you have detailed information about their content, you can compare what has improved (or in some cases, not improved) after a new feature is launched or a redesign is completed, for example. During my workflow, I like to keep track of the final size/time values of a few pages of the product that I am working on.&lt;/p>
+&lt;h2 id="more-information">More information&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://developers.google.com/web/tools/chrome-devtools/network/resource-loading#view-network-timing-details-for-a-specific-resource">Measure Resource Loading Times&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/janodvarko/harviewer">HAR Viewer source code&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>The Mentoring Framework</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/06/01/the-mentoring-framework/</link><pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/06/01/the-mentoring-framework/</guid><description>&lt;p>Last October I created a Mentoring Framework at work. The goal was creating a project from scratch using Ruby on Rails and in this journey, learning more about Ruby, Frontend, Project Management and Git, Databases and DevOps.&lt;/p>
+&lt;p>This Mentoring Framework is similar to what bootcamps do but the difference here is I am sharing a list of suggested features / things to learn and the person can focus in what is important for them.&lt;/p>
+&lt;p>&lt;strong>In a nutshell: Goals → Project → Execution → Knowledge (and profit)&lt;/strong>&lt;/p>
+&lt;p>The document is divided into 4 main sections: &lt;a href="#before-start">Before start&lt;/a>, &lt;a href="#project-ideas">Project ideas&lt;/a>, &lt;a href="#execution">Execution&lt;/a>, &lt;a href="#examples">Examples&lt;/a> and &lt;a href="#resources">Resources&lt;/a>.&lt;/p>
+&lt;h2 id="before-start">Before start&lt;/h2>
+&lt;p>What are your main goals? For the following list, pick: &amp;ldquo;basic understanding&amp;rdquo;, &amp;ldquo;intermediate understanding&amp;rdquo;, &amp;ldquo;advanced understanding&amp;rdquo;. This will help to identify where you are going to invest more time and energy.&lt;/p>
+&lt;ul>
+&lt;li>Learn Ruby / Ruby on Rails&lt;/li>
+&lt;li>Learn Frontend&lt;/li>
+&lt;li>Learn Project Management and Git&lt;/li>
+&lt;li>Learn Databases&lt;/li>
+&lt;li>Learn DevOps&lt;/li>
+&lt;/ul>
+&lt;h2 id="project-ideas">Project ideas&lt;/h2>
+&lt;p>Once you know your main goals, you need a project. Check the following two ideas:&lt;/p>
+&lt;h3 id="book-store">Book store&lt;/h3>
+&lt;p>Imagine you want to sell books online. What kind of features does a bookstore have?&lt;/p>
+&lt;ul>
+&lt;li>List books per title&lt;/li>
+&lt;li>List books per authors&lt;/li>
+&lt;li>List books per categories&lt;/li>
+&lt;li>Search books&lt;/li>
+&lt;li>Buy books&lt;/li>
+&lt;li>List your orders&lt;/li>
+&lt;/ul>
+&lt;h3 id="pet-adoption-website">Pet adoption website&lt;/h3>
+&lt;p>Imagine you want to create a website for an organisation that takes care of animals (in British Columbia we have SPCA). What kind of features does a pet adoption website have?&lt;/p>
+&lt;ul>
+&lt;li>List pets per type (dog, cat and others)&lt;/li>
+&lt;li>List pets per size (or breed, or age)&lt;/li>
+&lt;li>List pets per location&lt;/li>
+&lt;li>Search pet per name&lt;/li>
+&lt;li>Request an adoption&lt;/li>
+&lt;li>List your adoption requests&lt;/li>
+&lt;/ul>
+&lt;h2 id="execution">Execution&lt;/h2>
+&lt;p>Once you know your main goals and you have an idea, it is time to work. Check the list of tasks you will be doing:&lt;/p>
+&lt;h3 id="learn-ruby-on-rails">Learn Ruby on Rails&lt;/h3>
+&lt;ul>
+&lt;li>Use scaffolds to create your entities (basic understanding) or create your own controllers, models and views (intermediate)&lt;/li>
+&lt;li>Add authentication with Devise (basic understanding) or create your own (intermediate). Or use Devise with Oauth authentication (Facebook, Google, etc - intermediate)&lt;/li>
+&lt;li>Add friendly URLs with a gem (basic) or create your own solution (intermediate)&lt;/li>
+&lt;li>Add search (intermediate)&lt;/li>
+&lt;li>Add tests for all your code&lt;/li>
+&lt;li>Create seeds for your data so you don&amp;rsquo;t need to create manually data&lt;/li>
+&lt;li>Send email to users (intermediate)&lt;/li>
+&lt;li>Create different user roles (intermediate)&lt;/li>
+&lt;li>Add pagination (basic)&lt;/li>
+&lt;li>Add localization (intermediate)&lt;/li>
+&lt;li>Add a tag system (intermediate)&lt;/li>
+&lt;li>Add images (intermediate)&lt;/li>
+&lt;/ul>
+&lt;h3 id="learn-frontend">Learn Frontend&lt;/h3>
+&lt;ul>
+&lt;li>Use Tailwind CSS (basic) or your own CSS/SASS (intermediate) to create a beautiful layout&lt;/li>
+&lt;li>Use Turbolinks (advanced / optional)&lt;/li>
+&lt;li>Add basic animations - ex.: when adding a book in the cart show some animation (advanced/optional)&lt;/li>
+&lt;li>Add Google Maps in your app (intermediate)&lt;/li>
+&lt;li>Add Google Places in your users&lt;/li>
+&lt;li>Add a carousel with photos&lt;/li>
+&lt;li>Add Pagination with Ajax or endless pagination (advanced)&lt;/li>
+&lt;/ul>
+&lt;h3 id="learn-project-management-and-git">Learn Project Management and Git&lt;/h3>
+&lt;ul>
+&lt;li>Use Github Project to organize your features&lt;/li>
+&lt;li>Use feature branches in Git, create PR for all your features&lt;/li>
+&lt;/ul>
+&lt;h3 id="learn-databases">Learn Databases&lt;/h3>
+&lt;ul>
+&lt;li>Write plain SQL to find relevant information. A few examples:
+&lt;ul>
+&lt;li>Find best-sellers authors in the book store&lt;/li>
+&lt;li>Find the number of orders or pet requests per city&lt;/li>
+&lt;li>Find which day has more sales&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Add charts in your app to expose the data&lt;/li>
+&lt;/ul>
+&lt;h3 id="learn-devops">Learn DevOps&lt;/h3>
+&lt;ul>
+&lt;li>Deploy the website to Heroku (easy/intermediate) or AWS (advanced)&lt;/li>
+&lt;li>Setup CI in Heroku (easy/intermediate)&lt;/li>
+&lt;li>Add Airbrake to monitor errors in your app (easy)&lt;/li>
+&lt;li>Buy a domain, set up Cloudflare (advanced/optional)&lt;/li>
+&lt;/ul>
+&lt;h2 id="examples">Examples&lt;/h2>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/06/the-mentoring-framework.png" alt="Website screenshots">&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://adopt.spca.bc.ca">SPCA&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.petfinder.com/">Petfinder&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="resources">Resources&lt;/h2>
+&lt;ul>
+&lt;li>Courses: &lt;a href="https://www.linkedin.com/learning/ruby-on-rails-5-essential-training">Ruby on Rails 5 Essential Training&lt;/a> and &lt;a href="https://www.linkedin.com/learning/ruby-on-rails-6-essential-training">Ruby on Rails 6 Essential Training&lt;/a> - The first course is longer than the second.&lt;/li>
+&lt;li>Screencasts: &lt;a href="https://rubytapas.com">RubyTapas&lt;/a>, &lt;a href="https://gorails.com">GoRails&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Changing node versions automatically per directory</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/05/20/changing-node-versions-automatically-per-directory/</link><pubDate>Wed, 20 May 2020 07:00:00 -0700</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/05/20/changing-node-versions-automatically-per-directory/</guid><description>&lt;p>Working in multiple Node projects sometimes means using different versions of Node. &lt;a href="https://github.com/nvm-sh/nvm">nvm&lt;/a> is one popular solution for Linux, macOS and Windows WSL that handles multiple Node installations. One of its most unknown tricks is the &lt;a href="https://github.com/nvm-sh/nvm#deeper-shell-integration">deeper shell integration&lt;/a>. Check the video:&lt;/p>
+&lt;video class="h-auto" controls autoplay="autoplay">
+&lt;source src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/05/nvm.mp4" type="video/mp4">
+&lt;/video>
+&lt;p>If you are using macOS Catalina, you are probably using ZSH as default shell. To make the magic happen, paste the following in &lt;code>~/.zshrc&lt;/code> file.&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#998;font-style:italic"># place this after nvm initialization!&lt;/span>
+autoload -U add-zsh-hook
+load-nvmrc&lt;span style="color:#000;font-weight:bold">()&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#0086b3">local&lt;/span> &lt;span style="color:#008080">node_version&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">$(&lt;/span>nvm version&lt;span style="color:#000;font-weight:bold">)&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>
+&lt;span style="color:#0086b3">local&lt;/span> &lt;span style="color:#008080">nvmrc_path&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">$(&lt;/span>nvm_find_nvmrc&lt;span style="color:#000;font-weight:bold">)&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span> -n &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#008080">$nvmrc_path&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+&lt;span style="color:#0086b3">local&lt;/span> &lt;span style="color:#008080">nvmrc_node_version&lt;/span>&lt;span style="color:#000;font-weight:bold">=&lt;/span>&lt;span style="color:#000;font-weight:bold">$(&lt;/span>nvm version &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">$(&lt;/span>cat &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#d14">${&lt;/span>&lt;span style="color:#008080">nvmrc_path&lt;/span>&lt;span style="color:#d14">}&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">)&lt;/span>
+&lt;span style="color:#000;font-weight:bold">if&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span> &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#008080">$nvmrc_node_version&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">&amp;#34;N/A&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+nvm install
+&lt;span style="color:#000;font-weight:bold">elif&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span> &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#008080">$nvmrc_node_version&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span> !&lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#008080">$node_version&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+nvm use
+&lt;span style="color:#000;font-weight:bold">fi&lt;/span>
+&lt;span style="color:#000;font-weight:bold">elif&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span> &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#008080">$node_version&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span> !&lt;span style="color:#000;font-weight:bold">=&lt;/span> &lt;span style="color:#d14">&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">$(&lt;/span>nvm version default&lt;span style="color:#000;font-weight:bold">)&lt;/span>&lt;span style="color:#d14">&amp;#34;&lt;/span> &lt;span style="color:#000;font-weight:bold">]&lt;/span>; &lt;span style="color:#000;font-weight:bold">then&lt;/span>
+&lt;span style="color:#0086b3">echo&lt;/span> &lt;span style="color:#d14">&amp;#34;Reverting to nvm default version&amp;#34;&lt;/span>
+nvm use default
+&lt;span style="color:#000;font-weight:bold">fi&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>After restarting your terminal, nvm will automatically change the version of Node based in the current folder.&lt;/p></description></item><item><title>Using Dependabot to keep your environment up to date</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/05/02/using-dependabot-to-keep-your-environment-up-to-date/</link><pubDate>Sat, 02 May 2020 11:41:56 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/05/02/using-dependabot-to-keep-your-environment-up-to-date/</guid><description>&lt;p>Adding dependencies in a project is seen as a good way to not reinvent the wheel but at the same time it can be concerning in many different aspects:&lt;/p>
+&lt;ul>
+&lt;li>Versioning: sometimes dependencies can require specific versions of other dependencies and this can cause hiccups in your app;&lt;/li>
+&lt;li>Bundling: you need to be careful here to not bring extra code that will bloat your bundles;&lt;/li>
+&lt;li>Updating: JavaScript moves fast and if you don&amp;rsquo;t update packages regularly, you&amp;rsquo;ll play Jenga in the future.&lt;/li>
+&lt;/ul>
+&lt;p>There are different tools to cover the update part like &lt;a href="https://dependencies.io">Dependencies.io&lt;/a>, &lt;a href="https://snyk.io/">Snyk&lt;/a> and &lt;a href="https://dependabot.com/">Dependabot&lt;/a>. Since I have been using Dependabot for a while, I decided to write about my experience.&lt;/p>
+&lt;p>Dependabot is a tool acquired by GitHub one year ago that checks dependencies files from different languages (Ruby, JavaScript, Python, PHP, Elixir, to name a few) and finds new versions of libraries you are using in your project. Here is the setup:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/05/dependabot.jpg" alt="Dependabot screenshot">&lt;/p>
+&lt;p>Daily updates can be overwhelming and I think that weekly updates have a better cost/benefit. Also, I assign myself the Pull Requests so I can get notifications as soon they are opened.&lt;/p>
+&lt;h2 id="how-to-use-dependabot-effectively">How to use Dependabot effectively&lt;/h2>
+&lt;p>Dependabot includes in each PR release notes, changelogs, commits links and vulnerability details whenever available. This is useful because you can take a look at the information and decide to proceed or not.&lt;/p>
+&lt;p>However, as pragmatic programmers, we want to ensure things won&amp;rsquo;t break. The PR details are important but more than that, we want a simulation of all (or almost all) deliverables that the project has.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/05/semaphore.jpg" alt="CI Integration">&lt;/p>
+&lt;p>This screenshot shows what happens every time a PR is opened in the components library codebase of my work.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Tests (Jest / Bundle)&lt;/strong>: the Jest task will test the React components while the Bundle task will simulate the bundling commands we run when we want to update the package in the NPM registry;&lt;/li>
+&lt;li>&lt;strong>Linters (Stylesheets / JavaScript)&lt;/strong>: the stylesheet files follow a custom sass-lint setup and the JS code follows a series of ESLint rules. If a PR introduces a new version of a linter with new rules we will be able to capture that;&lt;/li>
+&lt;li>&lt;strong>Cypress (Screenshot Testing / Accessibility Testing)&lt;/strong>: if a new package introduces changes that may reflect in the look and feel of components, Cypress will capture the difference, screenshot it and store in S3. Since Cypress needs a live version of the documentation website, we also get the Gatsby build process covered.&lt;/li>
+&lt;/ul>
+&lt;p>With all these steps, it is very unlikely an external package will break our master branch. Kudos to my co-worker Grant Lee that also works in this project.&lt;/p></description></item><item><title>Facing impostor syndrome and time management issues</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/04/26/facing-impostor-syndrome-and-time-management-issues/</link><pubDate>Sun, 26 Apr 2020 11:41:56 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/04/26/facing-impostor-syndrome-and-time-management-issues/</guid><description>&lt;p>I often hear people talking about impostor syndrome and time management issues. Sometimes I hear about these issues from a friend, a direct report, and occasionally from myself. We are always challenged by them and they can affect our mood, our ability to be productive and our judgement.&lt;/p>
+&lt;p>We have days where everything works great and also we have bad days, where everything seems to go wrong. This emotional roller coaster can make us doubt our accomplishments and can create a persistent fear of being exposed as a fraud.&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/04/roller-coaster.jpg" alt="Roller coaster photo">&lt;/p>
+&lt;p>There a few things that you can do to remember that you are great:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Keep a daily journal&lt;/strong> with notes of achievements: this daily exercise will train your brain to feel more confident;&lt;/li>
+&lt;li>&lt;strong>Focus on your strengths&lt;/strong>, especially when you are new in a role at work, use your natural strengths to add value to your position;&lt;/li>
+&lt;li>&lt;strong>Find quick wins&lt;/strong>, they will help you build a reputation of someone adept in a particular skill.&lt;/li>
+&lt;/ul>
+&lt;p>Issues with time management also impact our feeling of getting the job done. Sometimes the problem starts early on when we are assigned a task that may not make much sense. Let&amp;rsquo;s step back for a moment and think about the levels of uncertainty of a task:&lt;/p>
+&lt;ol>
+&lt;li>Well understood&lt;/li>
+&lt;li>Have a few questions&lt;/li>
+&lt;li>Understood, but unfamiliar with the approach&lt;/li>
+&lt;li>Know the area, but not the direction&lt;/li>
+&lt;li>General unclear&lt;/li>
+&lt;/ol>
+&lt;p>How does uncertainty affect time management? If something is Well understood, it is very unlikely you will get lost in the woods and things will take as long as expected. Starting with the level of Have a few questions, you need to be careful because the uncertainty will affect your time management and your sense of achievement. Good news is, you can always use this problem as an opportunity to improve.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Have a few questions&lt;/strong>: Find the best person to answer your question. If the description is unclear, go to the person who created that task. If the question is technical, talk to a developer on the team that can help you;&lt;/li>
+&lt;li>&lt;strong>Understood, but unfamiliar with the approach&lt;/strong>: If you understand the big picture but you are not confident with the approach, talk to another developer and ask for help. This is a good opportunity for pair programming;&lt;/li>
+&lt;li>&lt;strong>Know the area, but not the direction&lt;/strong>: This is a good opportunity to talk to another developer and hear their initial thoughts. They may have an opinion on how to get the task started or be able to suggest a good resource to review;&lt;/li>
+&lt;li>&lt;strong>General unclear&lt;/strong>: If the problem in the task is generally unclear, ask for clarification. If the technical approach is unclear, talk to other developers, think about having a pair programming session, and speak with other members of your team to understand how they approach their work.&lt;/li>
+&lt;/ul>
+&lt;p>Overall, facing imposter syndrome is something that we all face at some point in our careers. It is an issue that I have certainly struggled with but find that facing these struggles provides an excellent opportunity for me to reflect on my skills and discover new areas of potential learning. With these suggestions in mind, I hope that you are able to improve your sense of confidence and self-efficacy in your professional life.&lt;/p>
+&lt;p>&amp;ndash;&lt;/p>
+&lt;p>Also posted on &lt;a href="https://www.freecodecamp.org/news/facing-impostor-syndrome-and-time-management-issues/">freeCodeCamp&lt;/a>, &lt;a href="https://dev.to/leonardofaria/facing-impostor-syndrome-and-time-management-issues-1mlj">DEV&lt;/a>, &lt;a href="https://www.codementor.io/@leonardofaria/facing-impostor-syndrome-and-time-management-issues-15vpjw3q2x">Codementor&lt;/a>. Photo credit: &lt;a href="https://pixabay.com/photos/roller-coaster-people-thrill-park-1553342/">roller coaster (Pixalbay)&lt;/a>&lt;/p></description></item><item><title>Moving to Hugo</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/04/21/moving-to-hugo/</link><pubDate>Tue, 21 Apr 2020 11:41:56 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/04/21/moving-to-hugo/</guid><description>&lt;p>In the last few days, I worked to move this website to &lt;a href="https://gohugo.io">Hugo&lt;/a>. I have been using WordPress for years (this domain turned 15 earlier this month) in a dozen projects however it was time to change. Decided to follow a minimalist setup with Hugo.&lt;/p>
+&lt;h2 id="about-the-stack">About the stack&lt;/h2>
+&lt;p>I decided to use Hugo here because I wanted something simple. KISS. I like Gatsby and Next.js however I didn&amp;rsquo;t want to choose a JavaScript solution. To achieve similar setup, I would have to add too many dependencies and they would become outdated quickly (rephasing &lt;a href="https://wesbos.com/new-wesbos-website/#Serverless-Functions">Wes Bos&lt;/a>). That&amp;rsquo;s being said, I need to mention that I am using JS to strip the extra classes from Tailwind CSS.&lt;/p>
+&lt;h2 id="about-the-design">About the design&lt;/h2>
+&lt;p>My previous site used a theme called &lt;a href="http://lacymorrow.com/casper/">Casper&lt;/a>, which is inspired in &lt;a href="https://ghost.org/">Ghost&amp;rsquo;s default theme&lt;/a>. I decided to build the theme from scratch inspired by Casper, Medium and many other minimalist blogs. I still have a feel things to fix/improve but designwise I am quite happy with the result.&lt;/p>
+&lt;p>As I mentioned before, I used &lt;a href="https://tailwindcss.com/">Tailwind CSS&lt;/a> in this project. The utility-first approach definitely makes prototying faster. To avoid a bloated CSS file I am using a &lt;a href="https://www.npmjs.com/package/@fullhuman/postcss-purgecss">purgecss package&lt;/a> to remove all the classes I am not using in the site. The final result is a 2.5KB CSS file.&lt;/p>
+&lt;p>The previous WordPress had a good score in Lighthouse tests, and I was able to make it even better:&lt;/p>
+&lt;p>&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2020/04/lighthouse.jpg" alt="Lighthouse results">&lt;/p>
+&lt;p>The theme is called &lt;a href="http://bento-hugo-theme.netlify.com/">Bento&lt;/a> and it is &lt;a href="https://github.com/leonardofaria/bento">open-source&lt;/a>.&lt;/p></description></item><item><title>Terminal tips tweets</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/01/20/terminal-tips-tweets/</link><pubDate>Mon, 20 Jan 2020 11:41:56 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/01/20/terminal-tips-tweets/</guid><description>&lt;p>A while ago I started a &lt;a href="https://twitter.com/leozera/status/1090639374109138946">thread on Twitter&lt;/a> with a few terminal tips. There are lots of CLIs in NPM and they can be very handy in our daily work. Here they are and if you like them, &lt;a href="https://twitter.com/leozera">follow me&lt;/a> :)&lt;/p>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">1. list-scripts and npm-list-scripts give you a list of available npm script including what each script does. Useful for documentation:&lt;br>&lt;br>💻 npm i -g list-scripts npm-list-scripts&lt;br>🌎 &lt;a href="https://t.co/QvvFEpEMeQ">https://t.co/QvvFEpEMeQ&lt;/a> &lt;a href="https://t.co/6MFQXbHPLW">https://t.co/6MFQXbHPLW&lt;/a>&lt;a href="https://twitter.com/hashtag/terminal?src=hash&amp;amp;ref_src=twsrc%5Etfw">#terminal&lt;/a> &lt;a href="https://twitter.com/hashtag/npm?src=hash&amp;amp;ref_src=twsrc%5Etfw">#npm&lt;/a> &lt;a href="https://twitter.com/hashtag/cli?src=hash&amp;amp;ref_src=twsrc%5Etfw">#cli&lt;/a> &lt;a href="https://twitter.com/hashtag/protip?src=hash&amp;amp;ref_src=twsrc%5Etfw">#protip&lt;/a> &lt;a href="https://t.co/84dwGqVviX">pic.twitter.com/84dwGqVviX&lt;/a>&lt;/p>&amp;mdash; @leonardo@indieweb.social (@leozera) &lt;a href="https://twitter.com/leozera/status/1090639457118609408?ref_src=twsrc%5Etfw">January 30, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">2. ncu checks the packages in your package.json file and gives you major and minor package updates info&lt;br>&lt;br>💻 npm i -g npm-check-updates&lt;br>🌎 &lt;a href="https://t.co/H9NIGetGKy">https://t.co/H9NIGetGKy&lt;/a>&lt;a href="https://twitter.com/hashtag/terminal?src=hash&amp;amp;ref_src=twsrc%5Etfw">#terminal&lt;/a> &lt;a href="https://twitter.com/hashtag/npm?src=hash&amp;amp;ref_src=twsrc%5Etfw">#npm&lt;/a> &lt;a href="https://twitter.com/hashtag/cli?src=hash&amp;amp;ref_src=twsrc%5Etfw">#cli&lt;/a> &lt;a href="https://twitter.com/hashtag/protip?src=hash&amp;amp;ref_src=twsrc%5Etfw">#protip&lt;/a> &lt;a href="https://t.co/EPmx3YKJwE">pic.twitter.com/EPmx3YKJwE&lt;/a>&lt;/p>&amp;mdash; @leonardo@indieweb.social (@leozera) &lt;a href="https://twitter.com/leozera/status/1090639526840549382?ref_src=twsrc%5Etfw">January 30, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">3. npm-scripts-tree is helpful when you have scripts calling other scripts and you are lost trying to understand the dependencies between them. Really handy for documentation:&lt;br>&lt;br>💻 npm i -g npm-scripts-tree&lt;br>🌎 &lt;a href="https://t.co/4NVKocfDuY">https://t.co/4NVKocfDuY&lt;/a>&lt;a href="https://twitter.com/hashtag/terminal?src=hash&amp;amp;ref_src=twsrc%5Etfw">#terminal&lt;/a> &lt;a href="https://twitter.com/hashtag/npm?src=hash&amp;amp;ref_src=twsrc%5Etfw">#npm&lt;/a> &lt;a href="https://twitter.com/hashtag/cli?src=hash&amp;amp;ref_src=twsrc%5Etfw">#cli&lt;/a> &lt;a href="https://twitter.com/hashtag/protip?src=hash&amp;amp;ref_src=twsrc%5Etfw">#protip&lt;/a> &lt;a href="https://t.co/7NWn2FBPBK">pic.twitter.com/7NWn2FBPBK&lt;/a>&lt;/p>&amp;mdash; @leonardo@indieweb.social (@leozera) &lt;a href="https://twitter.com/leozera/status/1090639627822628865?ref_src=twsrc%5Etfw">January 30, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">4. space-hogs shows large directories - imagine a better du:&lt;br>&lt;br>💻 npm i -g space-hogs&lt;br>🌎 &lt;a href="https://t.co/xPlGzYjLJk">https://t.co/xPlGzYjLJk&lt;/a>&lt;a href="https://twitter.com/hashtag/terminal?src=hash&amp;amp;ref_src=twsrc%5Etfw">#terminal&lt;/a> &lt;a href="https://twitter.com/hashtag/npm?src=hash&amp;amp;ref_src=twsrc%5Etfw">#npm&lt;/a> &lt;a href="https://twitter.com/hashtag/cli?src=hash&amp;amp;ref_src=twsrc%5Etfw">#cli&lt;/a> &lt;a href="https://twitter.com/hashtag/protip?src=hash&amp;amp;ref_src=twsrc%5Etfw">#protip&lt;/a> &lt;a href="https://t.co/HKZQP9NMgq">pic.twitter.com/HKZQP9NMgq&lt;/a>&lt;/p>&amp;mdash; @leonardo@indieweb.social (@leozera) &lt;a href="https://twitter.com/leozera/status/1090639691135610881?ref_src=twsrc%5Etfw">January 30, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">5. see is an improved cat (aka syntax highlight)&lt;br>&lt;br>💻 npm i -g see-cli&lt;br>🌎 &lt;a href="https://t.co/bEAjBJjhGt">https://t.co/bEAjBJjhGt&lt;/a>&lt;a href="https://twitter.com/hashtag/terminal?src=hash&amp;amp;ref_src=twsrc%5Etfw">#terminal&lt;/a> &lt;a href="https://twitter.com/hashtag/npm?src=hash&amp;amp;ref_src=twsrc%5Etfw">#npm&lt;/a> &lt;a href="https://twitter.com/hashtag/cli?src=hash&amp;amp;ref_src=twsrc%5Etfw">#cli&lt;/a> &lt;a href="https://twitter.com/hashtag/protip?src=hash&amp;amp;ref_src=twsrc%5Etfw">#protip&lt;/a> &lt;a href="https://t.co/o6rx8MZbel">pic.twitter.com/o6rx8MZbel&lt;/a>&lt;/p>&amp;mdash; @leonardo@indieweb.social (@leozera) &lt;a href="https://twitter.com/leozera/status/1090639798354665472?ref_src=twsrc%5Etfw">January 30, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">6. colorls is a ruby script that changes the ls output with color and icons&lt;br>&lt;br>💻 gem install colorls&lt;br>🌎 &lt;a href="https://t.co/9F3n6v3FnA">https://t.co/9F3n6v3FnA&lt;/a>&lt;a href="https://twitter.com/hashtag/terminal?src=hash&amp;amp;ref_src=twsrc%5Etfw">#terminal&lt;/a> &lt;a href="https://twitter.com/hashtag/ruby?src=hash&amp;amp;ref_src=twsrc%5Etfw">#ruby&lt;/a> &lt;a href="https://twitter.com/hashtag/cli?src=hash&amp;amp;ref_src=twsrc%5Etfw">#cli&lt;/a> &lt;a href="https://twitter.com/hashtag/protip?src=hash&amp;amp;ref_src=twsrc%5Etfw">#protip&lt;/a> &lt;a href="https://t.co/NF675JfdPx">pic.twitter.com/NF675JfdPx&lt;/a>&lt;/p>&amp;mdash; @leonardo@indieweb.social (@leozera) &lt;a href="https://twitter.com/leozera/status/1090639885931753475?ref_src=twsrc%5Etfw">January 30, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">7. You can use repeat in zsh and the speed-test cli from &lt;a href="https://twitter.com/sindresorhus?ref_src=twsrc%5Etfw">@sindresorhus&lt;/a> to keep monitoring your internet speed&lt;br>&lt;br>💻 repeat 10000 { date +&amp;quot;%T&amp;quot;; speed-test; sleep 1 }&lt;br>🌎 &lt;a href="https://t.co/BP4Rj4qI5r">https://t.co/BP4Rj4qI5r&lt;/a> &lt;a href="https://t.co/22j1YV6Kf1">pic.twitter.com/22j1YV6Kf1&lt;/a>&lt;/p>&amp;mdash; @leonardo@indieweb.social (@leozera) &lt;a href="https://twitter.com/leozera/status/1090640016970117120?ref_src=twsrc%5Etfw">January 30, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">8. You can configure git to push to the current branch:&lt;br>&lt;br>git config --global push.default current&lt;br>&lt;br>So instead of:&lt;br>git push origin your-feature-branch&lt;br>You can just do:&lt;br>git push &lt;a href="https://twitter.com/hashtag/protip?src=hash&amp;amp;ref_src=twsrc%5Etfw">#protip&lt;/a> &lt;a href="https://twitter.com/hashtag/terminal?src=hash&amp;amp;ref_src=twsrc%5Etfw">#terminal&lt;/a> &lt;a href="https://twitter.com/hashtag/git?src=hash&amp;amp;ref_src=twsrc%5Etfw">#git&lt;/a>&lt;/p>&amp;mdash; @leonardo@indieweb.social (@leozera) &lt;a href="https://twitter.com/leozera/status/1093949292040019968?ref_src=twsrc%5Etfw">February 8, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">9. Writing a PR? Maybe you want a list of your commits: &lt;br>&lt;br>git log origin/master..HEAD --no-merges --pretty=format:&amp;#39;- %s&amp;#39; --reverse&lt;a href="https://twitter.com/hashtag/protip?src=hash&amp;amp;ref_src=twsrc%5Etfw">#protip&lt;/a> &lt;a href="https://twitter.com/hashtag/terminal?src=hash&amp;amp;ref_src=twsrc%5Etfw">#terminal&lt;/a> &lt;a href="https://twitter.com/hashtag/git?src=hash&amp;amp;ref_src=twsrc%5Etfw">#git&lt;/a> &lt;a href="https://twitter.com/github?ref_src=twsrc%5Etfw">@github&lt;/a> &lt;a href="https://t.co/od8e8LPpPa">pic.twitter.com/od8e8LPpPa&lt;/a>&lt;/p>&amp;mdash; @leonardo@indieweb.social (@leozera) &lt;a href="https://twitter.com/leozera/status/1180601156889804801?ref_src=twsrc%5Etfw">October 5, 2019&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;blockquote class="twitter-tweet">&lt;p lang="en" dir="ltr">10. Running out of space? Maybe too many node_modules folders:&lt;br>&lt;br>💻 npx npkill&lt;br>🌎 &lt;a href="https://t.co/zyj9s6eCj9">https://t.co/zyj9s6eCj9&lt;/a>&lt;br>&lt;br>Saved 10GB+ here ~ &lt;a href="https://twitter.com/hashtag/terminal?src=hash&amp;amp;ref_src=twsrc%5Etfw">#terminal&lt;/a> &lt;a href="https://twitter.com/hashtag/npm?src=hash&amp;amp;ref_src=twsrc%5Etfw">#npm&lt;/a> &lt;a href="https://twitter.com/hashtag/cli?src=hash&amp;amp;ref_src=twsrc%5Etfw">#cli&lt;/a> &lt;a href="https://twitter.com/hashtag/protip?src=hash&amp;amp;ref_src=twsrc%5Etfw">#protip&lt;/a> &lt;a href="https://t.co/y31i7gS9af">pic.twitter.com/y31i7gS9af&lt;/a>&lt;/p>&amp;mdash; @leonardo@indieweb.social (@leozera) &lt;a href="https://twitter.com/leozera/status/1215393238720188416?ref_src=twsrc%5Etfw">January 9, 2020&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script></description></item><item><title>Exploring device detection for better user experiences in 2020</title><link>http://leonardofaria.github.io/leonardofaria.net/2020/01/15/exploring-device-detection-for-better-user-experiences-in-2020/</link><pubDate>Wed, 15 Jan 2020 02:16:54 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2020/01/15/exploring-device-detection-for-better-user-experiences-in-2020/</guid><description>&lt;p>A few months ago I watched a great talk in Chrome Dev Summit about performance in slow devices.&lt;/p>
+&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+&lt;iframe src="https://www.youtube.com/embed/puUPpVrIRkc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>
+&lt;p>It blew my mind all the work done by Facebook in identifying devices to create a better user experience. Fast-forward to now, I decided to study a bit more the topic and see what I could do at Thinkific.&lt;/p>
+&lt;h2 id="user-agents">User agents&lt;/h2>
+&lt;p>User agents are well-known by developers. We use them to detect bots, redirect users to a specific version of our website or append CSS classes on our page so we can create different experiences.&lt;/p>
+&lt;p>At Thinkific we already use the &lt;a href="https://github.com/fnando/browser">browser Ruby gem&lt;/a> to parse the user-agent and get relevant info (bot detection for instance). So, I decided to persist the main info in a visitor_device table – here is the schema:&lt;/p>
+&lt;pre>&lt;code>tenant_id: the course creator school the visitor is checking
+raw: the raw ua
+type: desktop / mobile / tablet / bot / other
+browser_name
+browser_version
+platform_name
+platform_version
+hardware: hstore containing memory, processor, device_model, device_name
+connection: hstore containing downlink_max, connection_type
+&lt;/code>&lt;/pre>&lt;p>You probably noticed that a few things there are not available in the UA string. Time for new JavaScript APIs:&lt;/p>
+&lt;h2 id="getting-hardware-info-using-javascript">Getting hardware info using JavaScript&lt;/h2>
+&lt;p>As covered in the Chrome Dev Summit video, we can use JS to get this info&lt;/p>
+&lt;h3 id="memory">Memory&lt;/h3>
+&lt;p>&lt;code>navigator.deviceMemory&lt;/code> will return a floating-point number. There are things to consider here:&lt;/p>
+&lt;ul>
+&lt;li>It only works over HTTPS&lt;/li>
+&lt;li>Support is quite limited (Chrome only basically)&lt;/li>
+&lt;/ul>
+&lt;p>More about it:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/w3c/device-memory">Spec from W3C&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory">MDN Docs&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://caniuse.com/#feat=mdn-api_navigator_devicememory">Can I use deviceMemory&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="processors">Processors&lt;/h3>
+&lt;p>&lt;code>navigator.hardwareConcurrency&lt;/code> will return the number of logical cores of the user&amp;rsquo;s CPU. Support for this is &lt;a href="https://caniuse.com/#feat=hardwareconcurrency">decent&lt;/a>.&lt;/p>
+&lt;h2 id="detecting-connection-info-using-javascript">Detecting connection info using JavaScript&lt;/h2>
+&lt;p>&lt;code>navigator.connection&lt;/code> is a new API containing information about the system&amp;rsquo;s connection, such as the current bandwidth of the user&amp;rsquo;s device or whether the connection is metered. The support is quite limited (Chrome only basically) but things are promising.&lt;/p>
+&lt;p>More about it:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://googlechrome.github.io/samples/network-information/">Chrome example&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/connection">MDN Docs&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://caniuse.com/#feat=netinfo">Can I use Network Information API&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="detecting-the-device-model">Detecting the device model&lt;/h2>
+&lt;p>The user agent &lt;em>may&lt;/em> return some information about the model name. &lt;a href="https://userstack.com/">userstack&lt;/a> is a service that gives you information based on the user agent. It works well and it is easy to integrate, however, depending on your need, they can&amp;rsquo;t help.&lt;/p>
+&lt;p>Take for instance iDevices. Their user agent is basically the same so you can&amp;rsquo;t differentiate an iPad Pro from an old iPad that runs the last iOS. For these cases, you may need a better detection based on resolution, pixel density and other hardware information exposed in the browser. I did a quick research on this and found 3 products so far: &lt;a href="https://web.wurfl.io/#wurfl-js">WURFL.io&lt;/a>, &lt;a href="https://deviceatlas.com/products/web">DeviceAtlas&lt;/a> and &lt;a href="https://51degrees.com/">51Degrees&lt;/a>. I didn&amp;rsquo;t have time to try their products yet, but I am looking forward to doing it (and post about it)&lt;/p>
+&lt;h2 id="faq">FAQ&lt;/h2>
+&lt;p>&lt;em>Question: Why not using Google Analytics / Mixpanel / Kibana / New Relic / your tool here?&lt;/em>&lt;/p>
+&lt;p>We could get browser info inside other tools however as a SaaS product we don&amp;rsquo;t use our own Google Analytics property (customers add their own). Also, adblockers may block these third-party tools. Last not least, by having this info in our side we can adapter better.&lt;/p>
+&lt;p>&lt;em>Question: Do you have a list of low-end/high-end devices?&lt;/em>&lt;/p>
+&lt;p>No. Maybe this can be built combining the number of processors and memory but I didn&amp;rsquo;t invest much time on this. In this project, my colleague created a Rails helper that would determinate if the user would use the lite or default version of a website based on hardware. On this topic, it is important to mention Facebook has a library for Android called &lt;a href="https://github.com/facebook/device-year-class/">Device Year Class&lt;/a>.&lt;/p></description></item></channel></rss>
