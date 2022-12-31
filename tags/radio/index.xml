@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>radio on Leonardo Faria</title><link>http://leonardofaria.github.io/leonardofaria.net/tags/radio/</link><description>Recent content in radio on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 23 Jun 2006 00:45:29 -0300</lastBuildDate><atom:link href="http://leonardofaria.github.io/leonardofaria.net/tags/radio/index.xml" rel="self" type="application/rss+xml"/><item><title>Rádio online é moleza!</title><link>http://leonardofaria.github.io/leonardofaria.net/2006/06/23/radio-online-e-moleza/</link><pubDate>Fri, 23 Jun 2006 00:45:29 -0300</pubDate><guid>http://leonardofaria.github.io/leonardofaria.net/2006/06/23/radio-online-e-moleza/</guid><description>&lt;p>&lt;strong>[update] Esse artigo foi escrito em 2006 e atualmente pode não ser a melhor opção para streaming.&lt;/strong>&lt;/p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>radio on Leonardo Faria</title><link>https://leonardofaria.github.io/leonardofaria.net/tags/radio/</link><description>Recent content in radio on Leonardo Faria</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 23 Jun 2006 00:45:29 -0300</lastBuildDate><atom:link href="https://leonardofaria.github.io/leonardofaria.net/tags/radio/index.xml" rel="self" type="application/rss+xml"/><item><title>Rádio online é moleza!</title><link>https://leonardofaria.github.io/leonardofaria.net/2006/06/23/radio-online-e-moleza/</link><pubDate>Fri, 23 Jun 2006 00:45:29 -0300</pubDate><guid>https://leonardofaria.github.io/leonardofaria.net/2006/06/23/radio-online-e-moleza/</guid><description>&lt;p>&lt;strong>[update] Esse artigo foi escrito em 2006 e atualmente pode não ser a melhor opção para streaming.&lt;/strong>&lt;/p>
 &lt;p>Escrevi esse artigo no começo do ano para explicar como ocorre a transmissão de áudio para a Internet. (Nas minhas férias de faculdade – mês que vem – vou refazer esse artigo e aproveitar que tenho 2 micros em casa agora)Utilizaremos o SHOUTcast, que é livre e funciona em vários sistemas operacionais. É uma solução pequena, mais interessantíssima.&lt;/p>
 &lt;h3 id="ingredientes">Ingredientes&lt;/h3>
 &lt;p>Um computador (de preferência, dedicado para essa função) com conexão banda larga (de preferência, rápida e dedicada)&lt;br>
@@ -10,13 +10,13 @@
 Depois, inicie o Winamp e abra a janela de Preferências (CTRL + P).&lt;br>
 Acione Plug-ins &amp;gt; DSP/Effect, e selecione ‘Nullsoft SHOUTcast Source DSP v.1.9.0&amp;rsquo;. Essa é a janela de configuração em que trabalharemos.&lt;/p>
 &lt;center>
-&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2006/06/shoutcast1.jpg" alt="Configuração do SHOUTcast" />
+&lt;img src="https://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2006/06/shoutcast1.jpg" alt="Configuração do SHOUTcast" />
 &lt;/center>
 &lt;p>Mas antes de usá-la, vamos configurar o servidor.&lt;br>
 Abra o SHOUTcast DNA (GUI), dentro de Iniciar &amp;gt; Programas &amp;gt; SHOUTcast DNAS.&lt;br>
 Esse é o servidor do SHOUTcast. Vamos configurá-lo.&lt;/p>
 &lt;center>
-&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2006/06/shoutcast2.jpg" alt="O servidor do SHOUTcast" />
+&lt;img src="https://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2006/06/shoutcast2.jpg" alt="O servidor do SHOUTcast" />
 &lt;/center>
 &lt;p>O botão ‘Edit config&amp;rsquo; abre o arquivo de configuração.&lt;br>
 As principais mudanças estão nas linhas 21 (Número máximo de usuários) e 29 (Senha de acesso).&lt;br>
@@ -26,7 +26,7 @@ ATENÇÃO: Para o número máximo de usuários divida sua velocidade de upload p
 Na guia Output, configure o Address, a porta (a padrão é 8000), a senha (a mesma que você modificou no SHOUTcast Server Monitor).&lt;br>
 Nessa mesma guia, temos o botão Yellowpages, que permite o cadastro de nossa rádio no site do Winamp.&lt;/p>
 &lt;center>
-&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2006/06/shoutcast3.jpg" alt="Definindo configurações" />
+&lt;img src="https://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2006/06/shoutcast3.jpg" alt="Definindo configurações" />
 &lt;/center>
 &lt;p>Na guia Input, determinamos a origem do som que iremos colocar na Internet.&lt;/p>
 &lt;p>Para a execução de mp3 e transmissão das mesmas na Internet, selecionamos ‘Winamp (Recommended)&amp;rsquo; no drop-down Input Device. Depois disso, você cria sua playlist e pronto! A rádio já está pronta.&lt;/p>
@@ -52,7 +52,7 @@ Para colocar a rádio em uma página HTML, podemos usar o código abaixo:&lt;/p>
 &lt;p>Podemos ver informações sobre o servidor, como número de ouvintes ao vivo e status da rádio no endereço: http://127.0.0.1:8000/&lt;br>
 Deve-se carregar uma página como a abaixo:&lt;/p>
 &lt;center>
-&lt;img src="http://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2006/06/shoutcast5.jpg" alt="Informações da rádio" />
+&lt;img src="https://leonardofaria.github.io/leonardofaria.net/wp-content/uploads/2006/06/shoutcast5.jpg" alt="Informações da rádio" />
 &lt;/center>
 &lt;h3 id="considerações-finais">Considerações Finais&lt;/h3>
 &lt;p>Esse artigo pode ser readaptado para outros sistemas operacionais. O SHOUTcast funciona no Linux e no MacOS também. Um dia desses eu testo nesses outros OS =)&lt;br>
