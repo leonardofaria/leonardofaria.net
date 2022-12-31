@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from 'lib/constants';
 import Disqus from 'components/Embed/Disqus';
+import Webmentions from 'components/Webmentions/Webmentions';
 
 export default function Single({
   post,
@@ -25,7 +26,7 @@ export default function Single({
     // TODO: check if dsq_thread_id is really needed
     // dsq_thread_id: disqusIds,
   } = post;
-  const url = `${BASE_URL}/${permalink}`;
+  const url = `${BASE_URL}${permalink}`;
   const MDXContent = useMDXComponent(code);
   const createdAt = new Date(publishedTime);
   // const disqusId = disqusIds?.[0];
@@ -124,7 +125,13 @@ export default function Single({
 
           {type === 'post' && (
             <section className="my-5 py-5 relative">
-              <h2>Comments</h2>
+              <h2>Interactions</h2>
+
+              <h3>Webmentions</h3>
+
+              <Webmentions url={url} />
+
+              <h3>Comments</h3>
 
               <Disqus title={title} url={`${BASE_URL}${permalink}`} />
             </section>
