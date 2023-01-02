@@ -18,9 +18,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       className={`${inter.variable} font-sans bg-gradient flex flex-col min-h-screen`}
     >
       <Head>
-        <link href="https://webmention.io/leonardofaria/webmention" />
+        <link href="https://webmention.io/leonardofaria.net/webmention" />
         <link
-          href="https://webmention.io/leonardofaria/xmlrpc"
+          href="https://webmention.io/leonardofaria.net/xmlrpc"
           rel="pingback"
         />
       </Head>
