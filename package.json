@@ -11,7 +11,7 @@
     "dev": "export LOCAL_IP=$(yarn --silent ip) && hugo server --verbose --disableFastRender --buildFuture --bind=$LOCAL_IP --baseURL=http://$LOCAL_IP:1313",
     "build": "NODE_ENV=production hugo --gc --minify --verbose --buildFuture",
     "ogimages-generator": "node ogimages.js",
-    "deploy": "HUGO_BASEURL=https://leonardofaria.github.io/leonardofaria.net yarn build && NODE_DEBUG=gh-pages gh-pages -d public"
+    "deploy": "HUGO_BASEURL=https://hugo.leonardofaria.net yarn build && NODE_DEBUG=gh-pages gh-pages -d public"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^3.0.0",
