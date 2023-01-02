@@ -1,0 +1,2051 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Leonardo Faria]]></title>
+        <description><![CDATA[I am Leonardo Faria, a Brazilian developer living in Vancouver. This is my blog about software development and more since 2005.]]></description>
+        <link>https://leonardofaria.net</link>
+        <generator>Next.js + Contentlayer</generator>
+        <lastBuildDate>Sun, 01 Jan 2023 21:55:14 GMT</lastBuildDate>
+        <atom:link href="https://leonardofaria.net/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Moving to Next.js]]></title>
+            <description><![CDATA[<p>In the last few days, I worked to move this website to Next.js. In 2020, I moved from WordPress to Hugo and would be better served with Next.js. It was a straightforward migration, and I share what was done in this post.</p>]]></description>
+            <link>https://leonardofaria.net//2022/12/30/moving-to-nextjs</link>
+            <guid isPermaLink="false">2235</guid>
+            <pubDate>Fri, 30 Dec 2022 19:12:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Building Emergenetics Explorer]]></title>
+            <link>https://leonardofaria.net//2022/04/25/building-emergenetics-explorer</link>
+            <guid isPermaLink="false">2234</guid>
+            <category><![CDATA[career]]></category>
+            <pubDate>Mon, 25 Apr 2022 08:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Building TypeScript definitions on demand]]></title>
+            <link>https://leonardofaria.net//2022/02/07/building-typescript-definitions-on-demand</link>
+            <guid isPermaLink="false">2233</guid>
+            <category><![CDATA[javascript]]></category>
+            <pubDate>Mon, 07 Feb 2022 09:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The path to Staff Engineer]]></title>
+            <link>https://leonardofaria.net//2021/11/08/the-path-to-staff-engineer</link>
+            <guid isPermaLink="false">2232</guid>
+            <category><![CDATA[career]]></category>
+            <pubDate>Mon, 08 Nov 2021 09:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[My experience using Lighthouse in the real world]]></title>
+            <description><![CDATA[<p>Lighthouse has been part of my daily work for the last few months and I shared some snippets in my last few posts. For this particular post, it is time to share how I am using Lighthouse in a product used by millions of people and what I have discovered during this process.</p>]]></description>
+            <link>https://leonardofaria.net//2020/11/30/my-experience-using-lighthouse-in-the-real-world</link>
+            <guid isPermaLink="false">2230</guid>
+            <category><![CDATA[javascript]]></category>
+            <category><![CDATA[lighthouse]]></category>
+            <pubDate>Mon, 30 Nov 2020 13:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Creating HAR files with Lighthouse]]></title>
+            <description><![CDATA[<p>HAR (HTTP Archive) is a JSON file containing all information about a browser’s interactions with a page. This file is often used for performance analysis. Earlier this year, I shared what kind of information we can get from  and today we will automate the HAR creation.</p>]]></description>
+            <link>https://leonardofaria.net//2020/11/30/creating-har-files-with-lighthouse</link>
+            <guid isPermaLink="false">2229</guid>
+            <category><![CDATA[javascript]]></category>
+            <category><![CDATA[lighthouse]]></category>
+            <pubDate>Mon, 30 Nov 2020 12:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Generating Web Vitals information with Lighthouse]]></title>
+            <description><![CDATA[<p>Earlier this year, Google announced that “page experience” would impact its search ranking. A few weeks ago, they announced that the new page experience signals will roll out in May 2021. But what are these page experience signals?</p>]]></description>
+            <link>https://leonardofaria.net//2020/11/30/getting-web-vitals-information-with-lighthouse</link>
+            <guid isPermaLink="false">2228</guid>
+            <category><![CDATA[javascript]]></category>
+            <category><![CDATA[lighthouse]]></category>
+            <pubDate>Mon, 30 Nov 2020 11:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Generating screenshots with Lighthouse]]></title>
+            <description><![CDATA[<p>Lighthouse captures the rendering timeline of a page in 10 images. Do you need to store them? If yes, keep reading in order to learn how to store these images.</p>]]></description>
+            <link>https://leonardofaria.net//2020/11/30/generating-screenshots-with-lighthouse</link>
+            <guid isPermaLink="false">2227</guid>
+            <category><![CDATA[javascript]]></category>
+            <category><![CDATA[lighthouse]]></category>
+            <pubDate>Mon, 30 Nov 2020 10:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Getting asset transferred information with Lighthouse]]></title>
+            <description><![CDATA[<p>Have you ever about thought tracking what is added to a page or web app? Did not know how your website became 15MB? Sounds like it is time to track this data!</p>]]></description>
+            <link>https://leonardofaria.net//2020/11/30/getting-asset-transferred-information-with-lighthouse</link>
+            <guid isPermaLink="false">2226</guid>
+            <category><![CDATA[javascript]]></category>
+            <category><![CDATA[lighthouse]]></category>
+            <pubDate>Mon, 30 Nov 2020 09:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The undocumented Lighthouse guide]]></title>
+            <description><![CDATA[<p>Lighthouse is the go-to tool for improving the quality of web pages. Lately, I have been using Lighthouse a lot at work to identify opportunities for performance optimizations. This post is part of a 6 part series that I have written about how to get the most out of Lighthouse.</p>]]></description>
+            <link>https://leonardofaria.net//2020/11/30/the-undocumented-lighthouse-guide</link>
+            <guid isPermaLink="false">2225</guid>
+            <category><![CDATA[javascript]]></category>
+            <category><![CDATA[lighthouse]]></category>
+            <pubDate>Mon, 30 Nov 2020 08:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Enfrentando a síndrome do impostor e problemas de gerenciamento de tempo]]></title>
+            <link>https://leonardofaria.net//2020/11/27/enfrentando-a-sindrome-do-impostor-e-problemas-de-gerenciamento-de-tempo</link>
+            <guid isPermaLink="false">2231</guid>
+            <pubDate>Fri, 27 Nov 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[How to use Git aliases to increase your productivity]]></title>
+            <link>https://leonardofaria.net//2020/10/27/how-to-use-git-aliases-to-increase-your-productivity</link>
+            <guid isPermaLink="false">2223</guid>
+            <category><![CDATA[git]]></category>
+            <pubDate>Tue, 27 Oct 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[3 privacy-focused open-source Google Analytics alternatives for your next project]]></title>
+            <link>https://leonardofaria.net//2020/09/01/three-privacy-focused-open-source-google-analytics-alternatives</link>
+            <guid isPermaLink="false">2222</guid>
+            <category><![CDATA[hugo]]></category>
+            <pubDate>Tue, 01 Sep 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Automating accessibility tests with Cypress]]></title>
+            <link>https://leonardofaria.net//2020/08/13/automating-accessibility-tests-with-cypress/</link>
+            <guid isPermaLink="false">2220</guid>
+            <category><![CDATA[javascript]]></category>
+            <pubDate>Thu, 13 Aug 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Adding screenshot testing with Cypress in your project]]></title>
+            <link>https://leonardofaria.net//2020/08/03/adding-screenshot-testing-with-cypress-in-your-project/</link>
+            <guid isPermaLink="false">2209</guid>
+            <category><![CDATA[javascript]]></category>
+            <pubDate>Mon, 03 Aug 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Bento theme released]]></title>
+            <link>https://leonardofaria.net//2020/07/29/bento-theme-released</link>
+            <guid isPermaLink="false">2207</guid>
+            <category><![CDATA[hugo]]></category>
+            <pubDate>Wed, 29 Jul 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Using Flexbox and text ellipsis together]]></title>
+            <link>https://leonardofaria.net//2020/07/18/using-flexbox-and-text-ellipsis-together/</link>
+            <guid isPermaLink="false">2208</guid>
+            <category><![CDATA[css]]></category>
+            <pubDate>Sat, 18 Jul 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Creating your own ESLint config package]]></title>
+            <link>https://leonardofaria.net//2020/06/16/creating-your-own-eslint-config-package</link>
+            <guid isPermaLink="false">2206</guid>
+            <category><![CDATA[javascript]]></category>
+            <pubDate>Tue, 16 Jun 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Using HAR files to analyze performance over time]]></title>
+            <link>https://leonardofaria.net//2020/06/07/using-har-files-to-analyze-performance-over-time</link>
+            <guid isPermaLink="false">2205</guid>
+            <category><![CDATA[browser]]></category>
+            <pubDate>Sun, 07 Jun 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[The Mentoring Framework]]></title>
+            <link>https://leonardofaria.net//2020/06/01/the-mentoring-framework</link>
+            <guid isPermaLink="false">2204</guid>
+            <category><![CDATA[career]]></category>
+            <pubDate>Mon, 01 Jun 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Changing node versions automatically per directory]]></title>
+            <link>https://leonardofaria.net//2020/05/20/changing-node-versions-automatically-per-directory</link>
+            <guid isPermaLink="false">2203</guid>
+            <category><![CDATA[javascript]]></category>
+            <pubDate>Wed, 20 May 2020 14:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Using Dependabot to keep your environment up to date]]></title>
+            <link>https://leonardofaria.net//2020/05/02/using-dependabot-to-keep-your-environment-up-to-date</link>
+            <guid isPermaLink="false">2202</guid>
+            <category><![CDATA[javascript]]></category>
+            <category><![CDATA[devops]]></category>
+            <category><![CDATA[git]]></category>
+            <pubDate>Sat, 02 May 2020 14:41:56 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Facing impostor syndrome and time management issues]]></title>
+            <link>https://leonardofaria.net//2020/04/26/facing-impostor-syndrome-and-time-management-issues</link>
+            <guid isPermaLink="false">2201</guid>
+            <pubDate>Sun, 26 Apr 2020 14:41:56 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Moving to Hugo]]></title>
+            <link>https://leonardofaria.net//2020/04/21/moving-to-hugo</link>
+            <guid isPermaLink="false">2200</guid>
+            <pubDate>Tue, 21 Apr 2020 14:41:56 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Terminal tips tweets]]></title>
+            <link>https://leonardofaria.net//2020/01/20/terminal-tips-tweets/</link>
+            <guid isPermaLink="false">2165</guid>
+            <category><![CDATA[software]]></category>
+            <pubDate>Mon, 20 Jan 2020 14:41:56 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Exploring device detection for better user experiences in 2020]]></title>
+            <link>https://leonardofaria.net//2020/01/15/exploring-device-detection-for-better-user-experiences-in-2020/</link>
+            <guid isPermaLink="false">2158</guid>
+            <category><![CDATA[browser]]></category>
+            <category><![CDATA[javascript]]></category>
+            <pubDate>Wed, 15 Jan 2020 05:16:54 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[A simple Sinatra Auth]]></title>
+            <link>https://leonardofaria.net//2019/11/04/a-simple-sinatra-auth/</link>
+            <guid isPermaLink="false">2137</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Mon, 04 Nov 2019 04:40:07 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Creating a website for my Apple Collection]]></title>
+            <description><![CDATA[<p><img src="/wp-content/uploads/2019/10/collection.jpg" alt="Part of the collection"></p>
+<p>A while ago I started an Apple Collection. After a few laptops and a few iDevices, I decided that I should start collecting info about my iThings. In the beginning, I created a gist containing model, serial number, how did I get the device, minimum/maximum OS, etc.</p>
+<p>The list kept going bigger and bigger and the content started looking messy. The natural way to organize my data would be inside a SQL database, with the information distributed in columns. After organizing the information in tables, I would create a graphQL API (the one cool kids use these days) to give me the data needed to populate my UI – probably written in React, compiled with Babel and packed with webpack.</p>]]></description>
+            <link>https://leonardofaria.net//2019/10/17/creating-a-website-for-my-apple-collection/</link>
+            <guid isPermaLink="false">2017</guid>
+            <category><![CDATA[portfolio]]></category>
+            <category><![CDATA[css]]></category>
+            <category><![CDATA[javascript]]></category>
+            <pubDate>Thu, 17 Oct 2019 03:36:30 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Forcing the usage of yarn (and at a specific version)]]></title>
+            <description><![CDATA[<p>People and organizations often have preferences for a specific package manager. At work, we decided to use Yarn due to emoji support (jk) but how to keep everybody using Yarn? </p>
+<p>We can use the <a href="https://docs.npmjs.com/misc/scripts">preinstall hook</a> to check if the user run <code>npm install</code>or <code>yarn install</code>. Here is one example:</p>
+<pre><code>"scripts": {
+    "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\"",
+</code></pre>]]></description>
+            <link>https://leonardofaria.net//2019/10/11/forcing-the-usage-of-yarn-and-at-a-specific-version/</link>
+            <guid isPermaLink="false">2071</guid>
+            <category><![CDATA[javascript]]></category>
+            <pubDate>Fri, 11 Oct 2019 03:40:46 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Disabling autofill in Chrome]]></title>
+            <description><![CDATA[<p>Autofill in form elements is a very useful feature in browsers. Creating new accounts or shopping in an online store are examples of this feature saving us time.</p>
+<p>However, the autofill feature can be a problem for SaaS products. Imagine that you want to edit the email address of one of your users. You hit edit in one screen and once you get a form with your user data Chrome will replace their email to your email. This is not a good user experience.</p>
+<p>MDN has an article showing “How to turn off form autocompletion”. The solution is using the autocomplete attribute with an off value. This doesn't work in Chrome.</p>
+<p>Digging in Stackoverflow and Google results, I found a <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=468153#c164">bug issued in 2015 about the topic</a>. Here is the TL,DR (from March 2016):</p>]]></description>
+            <link>https://leonardofaria.net//2019/10/02/disabling-autofill-in-chrome/</link>
+            <guid isPermaLink="false">1995</guid>
+            <category><![CDATA[browser]]></category>
+            <category><![CDATA[javascript]]></category>
+            <pubDate>Wed, 02 Oct 2019 19:58:52 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[My list of GitHub tips and third-party apps]]></title>
+            <link>https://leonardofaria.net//2019/09/03/my-list-of-github-tips-and-third-party-apps/</link>
+            <guid isPermaLink="false">1981</guid>
+            <category><![CDATA[git]]></category>
+            <category><![CDATA[software]]></category>
+            <pubDate>Tue, 03 Sep 2019 14:42:19 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Newsletters to subscribe]]></title>
+            <link>https://leonardofaria.net//2019/05/14/newsletters-to-subscribe/</link>
+            <guid isPermaLink="false">1970</guid>
+            <pubDate>Wed, 15 May 2019 02:54:26 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[It Doesn't Have to Be Crazy at Work and Joy, Inc.: How We Built a Workplace People Love reviews]]></title>
+            <link>https://leonardofaria.net//2019/01/23/it-doesnt-have-to-be-crazy-at-work-and-joy-inc-how-we-built-a-workplace-people-love-reviews/</link>
+            <guid isPermaLink="false">1953</guid>
+            <category><![CDATA[review]]></category>
+            <pubDate>Wed, 23 Jan 2019 06:41:05 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Engineering Manager Readme]]></title>
+            <description><![CDATA[<p>Being a Team Lead requires more than tech skills: you interact daily with people and it is quite challenging building stronger relationships and improving employees onboarding. The following document is my People Lead Readme (sometimes known as Manager Readme), where I talk about me and I share my expectations on people and on the product.</p>
+<h2>What?</h2>
+<p>This document is an extended introduction to what I value and believe in as a team leader and software developer. It is also a quick introduction about myself and how I work.</p>
+<ul>
+<li>This document doesn't replace getting to know each other through 1:1s and day-to-day chats. As I said before, it is an introduction.</li>
+<li>This document applies only to me, and in no way should be considered to apply to any other team lead or manager at Thinkific – even though we think in similar ways sometimes.</li>
+<li>If you feel like I am not acting like I describe here, please let me know.</li>
+<li>If you are curious why this document exists in the first place: there is a newsletter called <a href="http://softwareleadweekly.com/">SoftwareLeadWeekly</a> (recommended) and managers <a href="http://softwareleadweekly.com/issues/271">share their own readme's</a> there. After seeing several documents, I decided to write my own.</li>
+</ul>]]></description>
+            <link>https://leonardofaria.net//2018/06/24/engineering-manager-readme/</link>
+            <guid isPermaLink="false">1939</guid>
+            <category><![CDATA[career]]></category>
+            <pubDate>Sun, 24 Jun 2018 23:33:07 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Another dotfiles repository]]></title>
+            <description><![CDATA[<p>A few days weeks I got a MacBook Air as secondary machine. Since its SSD is smaller than my main Mac I couldn’t use Time Machine. It was definitely a good time to finally create my <a href="https://github.com/leonardofaria/dotfiles">dotfiles</a> repository. My repository is based in <a href="https://github.com/webpro/dotfiles/">webpro/dotfiles</a> (you may want to check it out his repo to understand this one if you feel lost).</p>]]></description>
+            <link>https://leonardofaria.net//2018/06/16/another-dotfiles-repository/</link>
+            <guid isPermaLink="false">1931</guid>
+            <category><![CDATA[software]]></category>
+            <category><![CDATA[git]]></category>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Sat, 16 Jun 2018 21:42:55 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Testing tools to track my work activity]]></title>
+            <description><![CDATA[<p>For a few weeks I have been using two tools to map my work activity. Since my work involves <a href="https://www.learningapprentice.com/maker-mode-manager-mode/">manager and maker modes</a>, I am trying to figure out how much time I spent in each of them and possibly how to remove distractions. A co-worker recommended <a href="https://www.rescuetime.com/ref/1808210">RescueTime</a> and <a href="https://wakatime.com/i/cbdf18ed-26ac-43b6-936c-d006efa2bec0">WakaTime</a> and here are my comments.</p>
+<h3>RescueTime</h3>
+<p>RescueTime home page says <em>“With so many distractions and possibilities in your digital life, it's easy to get scattered”</em> – yes, I know – and <em>“RescueTime helps you understand your daily habits so you can focus and be more productive”</em>. Yes, they really helped me understand my daily habits.</p>]]></description>
+            <link>https://leonardofaria.net//2018/05/06/testing-tools-to-track-my-work-activity/</link>
+            <guid isPermaLink="false">1917</guid>
+            <category><![CDATA[software]]></category>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Mon, 07 May 2018 02:23:30 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[#deletefacebook and social media effects on me]]></title>
+            <description><![CDATA[<p>import YouTube from '../../../../components/Embed/YouTube';</p>
+<p>This week #deletefacebook was a trending topic everywhere after all the Cambridge Analytica scandal. Lots of people deleted their accounts, including <a href="https://www.theverge.com/2018/3/23/17156402/elon-musk-deleted-tesla-and-spacex-facebook-pages-twitter-challenge">Elon Musk</a> and the <a href="https://www.theverge.com/2018/3/20/17145200/brian-acton-delete-facebook-whatsapp">WhatsApp co-founder Brian Acton</a>. I didn't delete my account but one thing that I did in the middle of February was deleting the app from my iPhone – which is a good step anyway.</p>
+<p>I am not deleting my account because I still need Facebook to reach a few people from my previous companies/schools. I used Facebook groups a lot in the past when I was dealing with immigration and unfortunately, it is difficult to find a replacement for this functionality. Forums and lists are not a thing since Facebook absorbed everything on its island.</p>
+<h2>What can I do?</h2>
+<p>If I can't delete my Facebook account, I may have some way to undo my friendship with them.</p>]]></description>
+            <link>https://leonardofaria.net//2018/03/28/deletefacebook-social-media-effects</link>
+            <guid isPermaLink="false">1901</guid>
+            <pubDate>Thu, 29 Mar 2018 02:13:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Thoughts on building components libraries]]></title>
+            <description><![CDATA[<p>A few months ago we started using React at <a href="https://thinkific.com">Thinkific</a>. One of the challenges of using React is creating reusable components not only from a look and feel perspective but also shareable in different projects.</p>
+<p>I didn't create this concept of elements (or components) library. To be honest, there are podcasts, courses, and examples everywhere about it but how to even start it? When you start creating a project from scratch you face several questions:</p>
+<ul>
+<li>How to style components? Sass? Stylus? styled-components?</li>
+<li>How to show the elements?</li>
+<li>How to build the library? Babel? Webpack?</li>
+<li>How to publish the library? To NPM or not NPM?</li>
+<li>How to use integrations and CI in your favour?</li>
+</ul>
+<p>Lots of decisions and you may not know all the answers. Startup Life™ doesn't let you do whatever you want – everything has a cost and a trade-off. Why am I talking all this story? Because I wanted to share my thoughts about it and I created a <a href="https://github.com/leonardofaria/leozera-ui"><strong>repository to document</strong></a> what we are doing.</p>]]></description>
+            <link>https://leonardofaria.net//2018/02/04/thoughts-building-components-libraries/</link>
+            <guid isPermaLink="false">1815</guid>
+            <category><![CDATA[javascript]]></category>
+            <pubDate>Sun, 04 Feb 2018 18:24:53 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Sick Picks: Podcasts]]></title>
+            <link>https://leonardofaria.net//2018/01/23/sick-picks-podcasts/</link>
+            <guid isPermaLink="false">1883</guid>
+            <pubDate>Tue, 23 Jan 2018 04:46:07 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Useful apps that I use daily – 2017 edition]]></title>
+            <description><![CDATA[<p>2 years ago I wrote a <a href="https://leonardofaria.net/2015/09/17/useful-apps-that-i-use-daily/">post</a> about my tooling and here I am again, 2017 edition. I decided to write again because I keep listening to podcasts with Sick Picks and I also have my Sick Picks :)</p>
+<h2>Dev tools</h2>
+<h3>Editor: Atom</h3>
+<p>I have been using Atom for a while. Despite I started testing VS Code in the latest months, I returned to Atom because VS Code doesn't separate <a href="https://github.com/Microsoft/vscode/issues/25986">UI theme from syntax theme</a> – you may not care about this, but I am a fan of a light UI and a dark code highlight.</p>
+<p><a href="https://gist.github.com/leonardofaria/982b8055af2d6d02116b03950bbf0583"><img src="/wp-content/uploads/2017/12/screenshot-atom.png" alt="My Atom"></a></p>
+<p>Here are the packages that I have installed:</p>]]></description>
+            <link>https://leonardofaria.net//2017/12/14/useful-apps-that-i-use-daily-2017-edition/</link>
+            <guid isPermaLink="false">1841</guid>
+            <category><![CDATA[software]]></category>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Thu, 14 Dec 2017 07:09:20 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Github webinars]]></title>
+            <description><![CDATA[<p>Many of us use Github daily however we usually don't use all its features. On the latest months, its team released a few webinars about how Github uses Github. More than showing the web interface, they talked about their culture and their workflows. In this post, I'm adding the links to the webinars with a few notes.</p>]]></description>
+            <link>https://leonardofaria.net//2017/12/04/github-webinars/</link>
+            <guid isPermaLink="false">1822</guid>
+            <category><![CDATA[git]]></category>
+            <pubDate>Mon, 04 Dec 2017 17:44:53 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Cloudready or how to get a Chrome OS in a non-Chromebook laptop]]></title>
+            <link>https://leonardofaria.net//2016/12/29/cloudready-or-how-to-get-a-chrome-os-in-a-non-chromebook-laptop/</link>
+            <guid isPermaLink="false">1796</guid>
+            <category><![CDATA[software]]></category>
+            <pubDate>Thu, 29 Dec 2016 18:36:55 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Another Meetup presentation]]></title>
+            <link>https://leonardofaria.net//2016/12/02/another-meetup-presentation/</link>
+            <guid isPermaLink="false">1801</guid>
+            <category><![CDATA[canada]]></category>
+            <pubDate>Fri, 02 Dec 2016 18:41:57 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Serving raw files directly from Github]]></title>
+            <link>https://leonardofaria.net//2016/08/06/serving-raw-files-directly-from-github/</link>
+            <guid isPermaLink="false">1692</guid>
+            <category><![CDATA[git]]></category>
+            <pubDate>Sat, 06 Aug 2016 23:49:30 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Todo list using a Sinatra REST API]]></title>
+            <description><![CDATA[<p>I am attending to a <a href="http://langara.ca/programs-and-courses/programs/web-and-mobile-app/index.html">post-degree program</a> and one of its courses is Server-Side Scripting. The professor gave us a project which students should create a project and my colleague and I created a <a href="http://sinatra-todo-api.herokuapp.com">Sinatra REST API</a> for a <a href="http://leonardofaria.github.io/todo">todo list application</a>.</p>
+<p><img src="/wp-content/uploads/2016/07/todo.gif" alt="Todo"></p>]]></description>
+            <link>https://leonardofaria.net//2016/07/26/todo-list-using-sinatra-rest-api/</link>
+            <guid isPermaLink="false">1746</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Tue, 26 Jul 2016 22:01:16 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[My first Meetup presentation]]></title>
+            <link>https://leonardofaria.net//2016/06/24/my-first-meetup-presentation/</link>
+            <guid isPermaLink="false">1737</guid>
+            <category><![CDATA[canada]]></category>
+            <pubDate>Fri, 24 Jun 2016 14:41:13 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Excluding folders from indexing in Sublime]]></title>
+            <description><![CDATA[<p>Sometimes we work in projects with tons of Javascript dependencies. Folders like <code>node_modules</code> and <code>bower_components</code> are a pain in the neck because every time that we need to find something in the project the content of these folders will be used in the search.</p>
+<p>Sublime offers 2 settings to hide these files from the index. First of all, open the User Preferences (Preferences -> Settings – User):</p>
+<ul>
+<li><code>binary_file_patterns</code>: This option excludes files from the index but keep them in the sidebar.</li>
+<li><code>folder_exclude_patterns</code>: This option excludes files from the index and sidebar. This is why, for example, you don't see the <code>.git</code> folder in a project.</li>
+</ul>]]></description>
+            <link>https://leonardofaria.net//2016/05/07/excluding-folders-from-indexing-in-sublime/</link>
+            <guid isPermaLink="false">1728</guid>
+            <category><![CDATA[software]]></category>
+            <pubDate>Sat, 07 May 2016 04:07:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Resolving slow loading of local virtualhosts on Chrome]]></title>
+            <description><![CDATA[<p>I've in my development mac different virtualhosts, using .local or .wp TLDs. Opening these address in Chrome are slow – about 3 seconds ‘resolving address'. This situation doesn't happen in Safari or Firefox. Here is my typical <code>/etc/hosts</code> configuration:</p>]]></description>
+            <link>https://leonardofaria.net//2016/03/13/resolving-slow-loading-of-local-virtualhosts-on-chrome/</link>
+            <guid isPermaLink="false">1718</guid>
+            <category><![CDATA[software]]></category>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Sun, 13 Mar 2016 17:38:56 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Replace git author using shell script]]></title>
+            <link>https://leonardofaria.net//2016/02/02/replace-git-author-using-shell-script/</link>
+            <guid isPermaLink="false">1704</guid>
+            <category><![CDATA[git]]></category>
+            <pubDate>Tue, 02 Feb 2016 04:22:56 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Shell script para gravar áudio da Web]]></title>
+            <description><![CDATA[<p><em><a href="https://leonardofaria.net/2016/01/26/shell-script-for-audio-recording/">This post is also available in English.</a></em></p>
+<p>Um dos meus programas de rádio favoritos é o Central 98, da <a href="http://98live.com.br/">98FM</a> (de Belo Horizonte). Ele começa às 10h da manhã e devido a diferença de 6h de fuso horário eu não consigo ouví-lo ao vivo. Então, criei um shell script para gravar o programa e assim posso ouvi-lo no meu tempo livre.</p>]]></description>
+            <link>https://leonardofaria.net//2016/01/29/shell-script-para-gravar-audio-da-web/</link>
+            <guid isPermaLink="false">1710</guid>
+            <category><![CDATA[software]]></category>
+            <category><![CDATA[linux]]></category>
+            <pubDate>Fri, 29 Jan 2016 22:06:38 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Shell script for audio recording]]></title>
+            <description><![CDATA[<p><em><a href="https://leonardofaria.net/2016/01/29/shell-script-para-gravar-audio-da-web/">Esse artigo está disponível em português.</a></em></p>
+<p>One of my favourite radio shows happens every day at 10 AM (Brasilia Timezone). I was unable to listen to it because the time zones. Then, I created the following small shell script to record the show and then I can listen to it in my free time.</p>]]></description>
+            <link>https://leonardofaria.net//2016/01/26/shell-script-for-audio-recording/</link>
+            <guid isPermaLink="false">1693</guid>
+            <category><![CDATA[software]]></category>
+            <category><![CDATA[linux]]></category>
+            <pubDate>Tue, 26 Jan 2016 20:13:43 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[the ink magazine]]></title>
+            <link>https://leonardofaria.net//2015/12/12/the-ink-magazine/</link>
+            <guid isPermaLink="false">1679</guid>
+            <category><![CDATA[portfolio]]></category>
+            <pubDate>Sat, 12 Dec 2015 23:12:26 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[My Sublime Text settings]]></title>
+            <description><![CDATA[<p>Almost <a href="https://leonardofaria.net/2012/12/31/configurando-o-sublime-text-2/">3 years ago I wrote</a> (in Portuguese) a post about my Sublime Text settings. Now, I updated my tips in an English post.</p>
+<h3>1. Free video course</h3>
+<p>If you know nothing about Sublime, please watch <a href="https://code.tutsplus.com/courses/perfect-workflow-in-sublime-text-2">these free videos</a> from tut+.</p>
+<h3>2. Package Control</h3>
+<p>First of all, you should install Package Control to manage plugins. Actually, you can install packages just copying the package files to correct folder, however, Package Control is easier than copy &#x26; paste. Open Sublime Text console (View > Show Console or <code>ctrl + `</code>) and paste the following line:</p>]]></description>
+            <link>https://leonardofaria.net//2015/10/04/my-sublime-text-settings/</link>
+            <guid isPermaLink="false">1643</guid>
+            <category><![CDATA[mac]]></category>
+            <category><![CDATA[software]]></category>
+            <pubDate>Sun, 04 Oct 2015 20:14:16 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Useful apps that I use daily]]></title>
+            <description><![CDATA[<p>I decided write a post describing some tools that I use in my MacBook to enhance my tasks.</p>
+<h3>Alfred</h3>
+<p>How awesome is Alfred? It is totally awesome! Alfred is a great tool working as a shortcut to daily tasks. More than that, you can create customized workflows that improve even more your productivity. You must see:</p>
+<ul>
+<li><a href="http://www.alfredforum.com/topic/3154-yet-another-window-layout-workflow/">Yet another layouter</a>: you can use keyworks like top left, top right to resize and move windows. This is really useful for people who use multiple displays</li>
+<li><a href="http://www.alfredforum.com/topic/1211-battery-view-summary-stats-about-your-laptop-battery/">Battery</a>: it is a workflow that shows relevant information about battery, such as charge cycles, health and serial number</li>
+<li><a href="http://www.alfredforum.com/forum/3-share-your-workflows/">Alfred Workflows Forum</a>: the community forum where people share their workflows</li>
+<li><a href="http://www.packal.org/">Packal</a>: an unofficial directory of workflows and themes. My currently theme is the <a href="http://www.packal.org/theme/elegant-v4">Elegant v4</a>, but you can choose your favorite in <a href="http://www.packal.org/theme-list?items_per_page=60">several options</a>.</li>
+</ul>]]></description>
+            <link>https://leonardofaria.net//2015/09/17/useful-apps-that-i-use-daily/</link>
+            <guid isPermaLink="false">1566</guid>
+            <category><![CDATA[mac]]></category>
+            <category><![CDATA[software]]></category>
+            <pubDate>Thu, 17 Sep 2015 15:56:58 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[A new place]]></title>
+            <link>https://leonardofaria.net//2015/09/11/a-new-place/</link>
+            <guid isPermaLink="false">1623</guid>
+            <category><![CDATA[canada]]></category>
+            <pubDate>Fri, 11 Sep 2015 22:04:24 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Data looks better naked]]></title>
+            <description><![CDATA[<p>Data is usually explained in tables or charts, but people sometimes commit mistakes when they add in them redundant or boring elements. A good table or chart is worth a thousand words and the following three gifs show how to improve your presentations. <a href="https://darkhorseanalytics.com/blog/data-looks-better-naked/">Source</a></p>
+<p><a href="/wp-content/uploads/2015/07/ClearOffPieChart.gif"><img src="/wp-content/uploads/2015/07/ClearOffPieChart.gif" alt="Remove to improve - the pie chart edition"></a></p>]]></description>
+            <link>https://leonardofaria.net//2015/08/31/data-looks-better-naked/</link>
+            <guid isPermaLink="false">1593</guid>
+            <category><![CDATA[usability]]></category>
+            <pubDate>Mon, 31 Aug 2015 20:29:46 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[codestacker in Github]]></title>
+            <link>https://leonardofaria.net//2015/08/26/codestacker-in-github/</link>
+            <guid isPermaLink="false">1603</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <category><![CDATA[portfolio]]></category>
+            <pubDate>Wed, 26 Aug 2015 22:26:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[One line webservers for everybody]]></title>
+            <link>https://leonardofaria.net//2015/08/16/one-line-webservers-for-everybody/</link>
+            <guid isPermaLink="false">1553</guid>
+            <category><![CDATA[software]]></category>
+            <pubDate>Sun, 16 Aug 2015 16:38:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Useful Chrome extensions to developers]]></title>
+            <description><![CDATA[<p>First of all, you must see <a href="https://umaar.com/dev-tips/">Dev Tips</a>: developer tips delivered daily in your email.</p>
+<p><a href="https://umaar.com/dev-tips/17-quick-edit-element/"><img src="https://umaar.com/assets/images/dev-tips/quick-edit-element.gif" alt=""></a></p>
+<p>Now, these are some useful extensions that I've been using in Chrome to help me to develop webapps:</p>]]></description>
+            <link>https://leonardofaria.net//2015/07/20/useful-chrome-extensions-to-developers/</link>
+            <guid isPermaLink="false">1556</guid>
+            <category><![CDATA[browser]]></category>
+            <pubDate>Mon, 20 Jul 2015 12:24:03 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Uptime monitoring tools]]></title>
+            <link>https://leonardofaria.net//2015/07/10/uptime-monitoring-tools/</link>
+            <guid isPermaLink="false">1526</guid>
+            <pubDate>Fri, 10 Jul 2015 11:26:05 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Writing for IELTS and TOEFL]]></title>
+            <link>https://leonardofaria.net//2015/06/10/writing-skills-for-ielts-and-toefl/</link>
+            <guid isPermaLink="false">1532</guid>
+            <category><![CDATA[portfolio]]></category>
+            <category><![CDATA[iphone]]></category>
+            <pubDate>Wed, 10 Jun 2015 20:44:14 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Notice about future]]></title>
+            <link>https://leonardofaria.net//2015/05/31/notice-about-future/</link>
+            <guid isPermaLink="false">1529</guid>
+            <pubDate>Sun, 31 May 2015 23:29:07 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Curiosidade MySQL do dia: senhas em scripts]]></title>
+            <link>https://leonardofaria.net//2014/12/01/curiosidade-mysql-do-dia-senhas-em-scripts/</link>
+            <guid isPermaLink="false">1517</guid>
+            <category><![CDATA[mysql]]></category>
+            <pubDate>Mon, 01 Dec 2014 23:46:07 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Mini-review: Cubieboard 3]]></title>
+            <link>https://leonardofaria.net//2014/11/11/mini-review-cubieboard-3/</link>
+            <guid isPermaLink="false">1469</guid>
+            <category><![CDATA[linux]]></category>
+            <category><![CDATA[review]]></category>
+            <pubDate>Tue, 11 Nov 2014 22:14:06 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[e-Recursos mobile]]></title>
+            <link>https://leonardofaria.net//2014/11/04/e-recursos-mobile/</link>
+            <guid isPermaLink="false">1483</guid>
+            <category><![CDATA[portfolio]]></category>
+            <pubDate>Tue, 04 Nov 2014 22:50:19 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[DIY: Upgrade de SSD no MacBook Air (e outros MacBooks)]]></title>
+            <link>https://leonardofaria.net//2014/10/30/diy-upgrade-de-ssd-no-macbook-air-e-outros-macbooks/</link>
+            <guid isPermaLink="false">1464</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Thu, 30 Oct 2014 20:16:36 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Ocultando versões do Nginx e PHP de seu servidor web]]></title>
+            <link>https://leonardofaria.net//2014/09/16/ocultando-versoes-do-nginx-e-php-de-seu-servidor-web/</link>
+            <guid isPermaLink="false">1458</guid>
+            <category><![CDATA[php]]></category>
+            <pubDate>Tue, 16 Sep 2014 22:38:08 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Curiosidade Ruby do dia #3: Strings]]></title>
+            <link>https://leonardofaria.net//2014/09/10/curiosidade-ruby-do-dia-strings/</link>
+            <guid isPermaLink="false">1450</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Thu, 11 Sep 2014 02:14:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[DIY: Rastreamento veicular]]></title>
+            <link>https://leonardofaria.net//2014/08/28/diy-rastreamento-veicular/</link>
+            <guid isPermaLink="false">1417</guid>
+            <pubDate>Thu, 28 Aug 2014 21:53:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Gource, uma forma estilosa de ver logs do seu controle de versão]]></title>
+            <link>https://leonardofaria.net//2013/01/20/gource-uma-forma-estilosa-de-ver-logs-do-seu-controle-de-versao</link>
+            <guid isPermaLink="false">1375</guid>
+            <category><![CDATA[git]]></category>
+            <pubDate>Sun, 20 Jan 2013 20:53:58 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Dicas aleatórias para gestão de código]]></title>
+            <link>https://leonardofaria.net//2013/01/06/dicas-aleatorias-para-gestao-de-codigo/</link>
+            <guid isPermaLink="false">1360</guid>
+            <pubDate>Sun, 06 Jan 2013 14:02:56 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Migrando um repositório SVN para GIT]]></title>
+            <description><![CDATA[<p>Nos últimos dias, pesquisei uma forma de migrar um repositório de SVN para GIT e quando consegui fazer, percebi que era mais fácil que eu imagina. Com isso, resolvi escrever uma receitinha de como fazer isso.</p>
+<p>Inicialmente você deve criar um arquivo mapeando seus usuários do SVN para o GIT. Ele deverá ter o formato abaixo:</p>
+<pre><code>leonardo = Leonardo Faria &#x3C;leonardo@email.com>
+autor2 = Autor &#x3C;autor@email.com>
+</code></pre>
+<p>Nota: caso você não queira manualmente escrever esse arquivo, vasculhe o log do seu projeto SVN e obtenha a lista de autores automaticamente:</p>
+<pre><code>svn log -q | awk -F '|' '/^r/ {sub("^ ", "", $2); sub(" $", "", $2); print $2" = "$2" &#x3C;"$2">"}' | sort -u > authors.txt
+</code></pre>]]></description>
+            <link>https://leonardofaria.net//2013/01/04/migrando-um-repositorio-svn-para-git/</link>
+            <guid isPermaLink="false">1354</guid>
+            <category><![CDATA[git]]></category>
+            <pubDate>Fri, 04 Jan 2013 14:39:33 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Configurando o Sublime Text 2]]></title>
+            <link>https://leonardofaria.net//2012/12/31/configurando-o-sublime-text-2/</link>
+            <guid isPermaLink="false">1327</guid>
+            <category><![CDATA[software]]></category>
+            <pubDate>Mon, 31 Dec 2012 13:30:47 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Raspberry Pi]]></title>
+            <link>https://leonardofaria.net//2012/12/30/raspberry-pi/</link>
+            <guid isPermaLink="false">1314</guid>
+            <category><![CDATA[linux]]></category>
+            <pubDate>Sun, 30 Dec 2012 19:10:41 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Para agilizar o desenvolvimento do frontend]]></title>
+            <link>https://leonardofaria.net//2012/11/21/para-agilizar-o-desenvolvimento-do-frontend/</link>
+            <guid isPermaLink="false">1309</guid>
+            <category><![CDATA[browser]]></category>
+            <category><![CDATA[css]]></category>
+            <pubDate>Thu, 22 Nov 2012 00:45:14 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[mytop, para monitorar seu MySQL]]></title>
+            <link>https://leonardofaria.net//2012/10/04/mytop-para-monitorar-seu-mysql/</link>
+            <guid isPermaLink="false">1292</guid>
+            <category><![CDATA[mysql]]></category>
+            <pubDate>Thu, 04 Oct 2012 03:27:33 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Atualizando o MacBook Pro]]></title>
+            <link>https://leonardofaria.net//2012/05/29/atualizando-o-macbook-pro/</link>
+            <guid isPermaLink="false">1271</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Tue, 29 May 2012 18:56:24 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Geração de PDFs indolor no PHP]]></title>
+            <link>https://leonardofaria.net//2012/02/12/geracao-de-pdfs-indolor-no-php/</link>
+            <guid isPermaLink="false">1264</guid>
+            <category><![CDATA[php]]></category>
+            <pubDate>Sun, 12 Feb 2012 17:04:44 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[eCPF no Mac]]></title>
+            <link>https://leonardofaria.net//2011/10/07/ecpf-no-mac/</link>
+            <guid isPermaLink="false">1249</guid>
+            <category><![CDATA[mac]]></category>
+            <category><![CDATA[software]]></category>
+            <pubDate>Sat, 08 Oct 2011 01:59:30 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Geração de PDFs indolor no Rails 3]]></title>
+            <link>https://leonardofaria.net//2011/08/31/geracao-de-pdfs-indolor-no-rails-3/</link>
+            <guid isPermaLink="false">1244</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Wed, 31 Aug 2011 03:50:10 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Validações personalizadas no Rails 3]]></title>
+            <link>https://leonardofaria.net//2011/06/05/validacoes-personalizadas-no-rails-3/</link>
+            <guid isPermaLink="false">1180</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Mon, 06 Jun 2011 01:55:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Coletânea de dicas sobre WordPress]]></title>
+            <description><![CDATA[<p>Resolvi escrever uma série de posts com diversas dicas para o WordPress.</p>
+<h3>Temas</h3>
+<p>Vai escrever um template do zero? Recomendo começar pelo <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>. Trata-se de um template com diversas otimizações e resets para garantir a compatibilidade máxima entre browsers.</p>
+<p>Também é interessante uma leitura sobre o <a href="http://codex.wordpress.org/Theme_Development">desenvolvimento de temas</a>, principalmente sobre a <a href="http://codex.wordpress.org/Template_Hierarchy">hierarquia dos templates</a> e a função <a href="http://codex.wordpress.org/Function_Reference/get_template_part">get_template</a>. Venho utilizando essa função para não repetir código nos arquivos <code>archive.php</code>, <code>page.php</code>, <code>search.php</code> e <code>single.php</code>.</p>
+<h3>Rascunhos de posts</h3>
+<p>O WordPress salva automaticamente seus posts, o que pode aumentar o tamanho de seu banco de dados. Para desabilitar esse recurso, você pode editar o arquivo <code>/wp-config.php</code>:</p>]]></description>
+            <link>https://leonardofaria.net//2011/04/24/coletanea-de-dicas-sobre-wordpress/</link>
+            <guid isPermaLink="false">1164</guid>
+            <category><![CDATA[php]]></category>
+            <category><![CDATA[wordpress]]></category>
+            <pubDate>Sun, 24 Apr 2011 18:58:32 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Busca nos campos personalizados do WordPress]]></title>
+            <link>https://leonardofaria.net//2011/03/13/busca-nos-campos-personalizados-do-wordpress/</link>
+            <guid isPermaLink="false">1132</guid>
+            <category><![CDATA[php]]></category>
+            <category><![CDATA[wordpress]]></category>
+            <pubDate>Sun, 13 Mar 2011 15:33:57 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Novo micro-projeto: Guia da TV]]></title>
+            <link>https://leonardofaria.net//2011/01/25/novo-micro-projeto-guia-da-tv/</link>
+            <guid isPermaLink="false">1125</guid>
+            <category><![CDATA[portfolio]]></category>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Tue, 25 Jan 2011 20:33:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Personalizando o scrollbar com WebKit]]></title>
+            <description><![CDATA[<p>Personalizar barras de rolagem é <a href="http://codestacker.com/codes/244-color-scrollbars-for-ie-5-5">algo que vem lá dos tempos</a> do IE 5.5. Naquele tempo, personalizavam-se as cores da barra, criando efeitos na maioria da vezes cafonas. Já <a href="http://webkit.org/blog/363/styling-scrollbars/">faz algum tempo</a> que o WebKit suporta scrollbars personalizadas. Você pode personalizar atributos como borda e background, usando até mesmo imagens para criar barras de rolagens bacanas. Esse artigo mostra alguns pseudo-elementos e pseudo-classes para personalizar sua barra.</p>]]></description>
+            <link>https://leonardofaria.net//2011/01/23/personalizando-o-scrollbar-com-webkit/</link>
+            <guid isPermaLink="false">1106</guid>
+            <category><![CDATA[css]]></category>
+            <category><![CDATA[browser]]></category>
+            <pubDate>Sun, 23 Jan 2011 20:52:34 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2 alternativas ao delicious]]></title>
+            <link>https://leonardofaria.net//2010/12/25/2-alternativas-ao-delicious/</link>
+            <guid isPermaLink="false">1095</guid>
+            <category><![CDATA[software]]></category>
+            <pubDate>Sat, 25 Dec 2010 19:16:45 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Novo micro-projeto: HORÓSCOPO NO MSN]]></title>
+            <link>https://leonardofaria.net//2010/10/09/novo-micro-projeto-horoscopo-no-msn/</link>
+            <guid isPermaLink="false">1085</guid>
+            <category><![CDATA[portfolio]]></category>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sat, 09 Oct 2010 23:16:04 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Cylay, alternativa ao Find My iPhone]]></title>
+            <link>https://leonardofaria.net//2010/08/15/cylay-alternativa-ao-find-my-iphone/</link>
+            <guid isPermaLink="false">1081</guid>
+            <category><![CDATA[iphone]]></category>
+            <pubDate>Sun, 15 Aug 2010 20:29:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Extensões para o Safari 5]]></title>
+            <link>https://leonardofaria.net//2010/07/24/extensoes-para-o-safari-5/</link>
+            <guid isPermaLink="false">1034</guid>
+            <category><![CDATA[browser]]></category>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Sat, 24 Jul 2010 03:09:14 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[iPhone e Rails]]></title>
+            <link>https://leonardofaria.net//2010/02/21/iphone-e-rails/</link>
+            <guid isPermaLink="false">927</guid>
+            <category><![CDATA[iphone]]></category>
+            <category><![CDATA[javascript]]></category>
+            <pubDate>Mon, 22 Feb 2010 02:36:13 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monografia on Rails: autosimulado]]></title>
+            <description><![CDATA[<p>Para conclusão do meu curso de Sistemas de Informação, dediquei minha monografia e trabalho de conclusão de curso ao <a href="http://www.autosimulado.com.br">autosimulado</a>.</p>
+<p>Hoje foi a apresentação da banca do trabalho de conclusão de curso e anexo abaixo minha <a href="/pub/monografia.pdf">monografia em PDF</a> e os <a href="/pub/monografia-slides.pdf">slides da apresentação</a>.</p>]]></description>
+            <link>https://leonardofaria.net//2009/12/05/monografia-on-rails-autosimulado/</link>
+            <guid isPermaLink="false">859</guid>
+            <category><![CDATA[academic]]></category>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sat, 05 Dec 2009 23:00:36 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Syntax Highlight on Rails]]></title>
+            <link>https://leonardofaria.net//2009/12/02/syntax-highlight-on-rails/</link>
+            <guid isPermaLink="false">903</guid>
+            <category><![CDATA[portfolio]]></category>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Wed, 02 Dec 2009 22:52:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[IETester]]></title>
+            <link>https://leonardofaria.net//2009/11/30/ietester/</link>
+            <guid isPermaLink="false">898</guid>
+            <category><![CDATA[browser]]></category>
+            <category><![CDATA[windows]]></category>
+            <pubDate>Mon, 30 Nov 2009 23:14:20 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Internacionalização em labels]]></title>
+            <link>https://leonardofaria.net//2009/11/22/internacionalizacao-em-labels/</link>
+            <guid isPermaLink="false">892</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sun, 22 Nov 2009 21:49:16 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Rails e cia no Snow Leopard]]></title>
+            <description><![CDATA[<p>Fiz uma instalação nova do Snow Leopard no meu MacBook e ao migrar os dados do Time Machine, do Leopard, algumas coisas pararam de funcionar. Resolvi então escrever para complementar meu <a href="https://leonardofaria.net/2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/">post anterior sobre o assunto</a>.</p>
+<h3>Xcode</h3>
+<p><strong>ANTES DE MAIS NADA</strong>, instalei o Xcode. Ele está junto no DVD do Snow Leopard, na pasta de Instalações Opcionais.</p>
+<h3>Rails</h3>
+<p>O Snow Leopard já vem com duas versões do Rails já instaladas: 2.2.2 e 1.13.6. Caso queira atualizar seu ambiente:</p>]]></description>
+            <link>https://leonardofaria.net//2009/11/14/rails-e-cia-no-snow-leopard/</link>
+            <guid isPermaLink="false">878</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Sat, 14 Nov 2009 22:00:24 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[O que é Ruby on Rails?]]></title>
+            <description><![CDATA[<p>A essa altura do campeonato todo mundo já deve saber o que vem a ser o framework Ruby on Rails. Minha monografia e meu trabalho de conclusão de curso da Faculdade foram sobre o <a href="http://www.autosimulado.com.br"><strong>autosimulado</strong></a>. Na monografia fiz uma introdução sobre as características do framework, reproduzido abaixo:</p>
+<h2>Ruby on Rails</h2>
+<p>O framework Ruby on Rails foi extraído de um sistema para gerenciamento de projetos chamado Basecamp. A primeira versão do framework foi oficialmente lançada em 25 de Julho de 2004 e seu desenvolvimento conta com colaboradores em todo o mundo liderados pelo programador dinamarquês David Heinemeier Hansson.</p>
+<h3>MVC</h3>
+<p>Um padrão de projeto descreve e provê uma solução para um problema freqüente, sendo genérico e reusável. São criados a partir de problemas de problemas comuns enfrentados no desenvolvimento de projetos de software.<br>
+A criação de componentes reutilizáveis é uma das técnicas mais exploradas em Engenharia de Software. O uso de componentes diminui o tempo de desenvolvimento e a taxa de erros de codificação. Um padrão pode ser entendido como a abstração de detalhes sobre a implementação de um software.</p>]]></description>
+            <link>https://leonardofaria.net//2009/11/09/o-que-e-ruby-on-rails/</link>
+            <guid isPermaLink="false">846</guid>
+            <category><![CDATA[academic]]></category>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Mon, 09 Nov 2009 23:10:15 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[O que é Ruby?]]></title>
+            <description><![CDATA[<p>A essa altura do campeonato todo mundo já deve saber o que vem a ser a linguagem Ruby. Minha monografia e meu trabalho de conclusão de curso da Faculdade foram sobre o <a href="http://www.autosimulado.com.br"><strong>autosimulado</strong></a>. Na monografia fiz uma introdução sobre as características da linguagem Ruby, reproduzido abaixo:</p>
+<h2>Ruby</h2>
+<p>A linguagem Ruby foi criada em 1993 pelo japonês Yukihiro “Matz” Matsumoto, com sua primeira versão pública lançada em 1995. Para Matz, o primeiro desejo é de Ruby tornar os programadores felizes, reduzindo o trabalho manual que precisasse ser feito. Segundo ele, o desenvolvimento de sistemas deveria enfatizar as necessidades do homem e não da máquina:</p>
+<blockquote>
+<p>Muitas pessoas, especialmente engenheiros de computação, focam nas máquinas. Eles pensam, “Fazendo isso, a máquina será mais rápida. Fazendo isso, a máquina será mais eficiente. Fazendo isso, a máquina irá fazer determinada coisa melhor”. Eles estão focando nas máquinas. Mas de fato nós precisamos focar nos humanos, em como os humanos lidam com programação ou operação das aplicações das máquinas. Nós somos os mestres. Elas são as escravas. (VENNERS, 2003).</p>
+</blockquote>
+<p>Ruby é uma linguagem orientada a objetos, ou seja, qualquer variável é um objeto, mesmo classes e tipos que em muitas linguagens são designadas como primitivos. Por exemplo:</p>
+<pre><code>putz "meu exemplo".upcase # imprimirá MEU EXEMPLO
+</code></pre>]]></description>
+            <link>https://leonardofaria.net//2009/11/09/o-que-e-ruby/</link>
+            <guid isPermaLink="false">836</guid>
+            <category><![CDATA[academic]]></category>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Mon, 09 Nov 2009 23:09:50 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[O ecossistema Rails]]></title>
+            <link>https://leonardofaria.net//2009/10/15/o-ecossistema-rails/</link>
+            <guid isPermaLink="false">805</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Fri, 16 Oct 2009 02:32:07 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Rails Summit: resumo do segundo dia]]></title>
+            <description><![CDATA[<h2><a href="http://twitter.com/rich_kilmer">Richard Kilmer</a>: MacRuby</h2>
+<p>A primeira palestra do segundo dia trouxe o americano Richard Kilmer que falou sobre <a href="http://www.macruby.org">MacRuby</a>, a união entre Ruby e Objective-C. Notas dos slides:</p>
+<ul>
+<li>Problems with RubyCocoa: It's a bridge; 2 runtimes, 2 GC, different syntax</li>
+<li>MacRuby 0.4: Objective-C 2 + Ruby 1.9</li>
+<li>Every Ruby class is an Objective-C class</li>
+<li>Every Ruby object is an Objective-C object</li>
+<li>Every Ruby method is an Objective-C method</li>
+<li>MacRuby é um pouco mais rápido do que Objective-C</li>
+<li>MacRuby utiliza recursos de processamento paralelo do OS X</li>
+<li>HotCocoa is an idiomatic Ruby API that simplifies the configuration and wiring together of Objetive-C/Cocoa classes – resumindo: simplifica a sintaxe e deixa algo mais ‘Ruby Way'</li>
+</ul>
+<h2><a href="http://www.twitter.com/fnando">Nando Vieira</a>: Ruby 1.9</h2>
+<p>O Nando falou do que há de novo no Ruby 1.9, tema inclusive de um <a href="http://howtocode.com.br/o-que-mudou-no-ruby-19">PDF</a> de sua série <a href="http://howtocode.com.br/">HOWTO</a>. Sua apresentação, bem bonita, trouxe inúmeras notas sobre as mudanças da linguagem. Alguns pontos:</p>]]></description>
+            <link>https://leonardofaria.net//2009/10/14/rails-summit-resumo-do-segundo-dia/</link>
+            <guid isPermaLink="false">770</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Wed, 14 Oct 2009 16:07:05 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Rails Summit: resumo do primeiro dia]]></title>
+            <description><![CDATA[<p>Esse é um rascunho do que foi abordado no primeiro dia do Rails Summit.</p>
+<h2><a href="http://twitter.com/chadfowler/">Chad Fowler</a>: Insurgência Ruby on Rails</h2>
+<ul>
+<li>Stop doing things you know are wrong!</li>
+<li>A primeira Rubyconf aconteceu em 2001 com 34 pessoas.</li>
+<li>Nenhum dos participantes ganhava $ com Ruby.</li>
+<li>5 dos 34 participantes escreveram o Agile Manifesto.</li>
+<li>“The survival rate for startups is way less than 50%. So if you're running a startup, you had betted be doing something old. If not, you're in Trouble”</li>
+<li>Implante uma nova tecnologia gradativamente.</li>
+<li>Don't do (.Net | Java | C++ | C | Perl l PHP) in Ruby: a razão de trocar de tecnologia é fazer as coisas diferentes!</li>
+<li>Linguagens de computador são como namoradas: a nova é melhor porque você é melhor.</li>
+</ul>
+<h2><a href="http://twitter.com/greggpollack">Gregg Pollack</a>: Na Vanguarda da Performance em Rails</h2>
+<p>Gregg Pollack, o cara dos screencasts do <a href="http://www.RailsEnvy.com/">RailsEnvy</a>, falou sobre performance. Primeiramente ele trouxe em 60 segundos algumas coisinhas para otimizar apps.</p>
+<ul>
+<li>Usar Yslow</li>
+<li>Cache: Page Caching, Action Caching, Fragment Caching, Object Caching</li>
+<li>Avoid Cache expiration</li>
+<li>Use memcached</li>
+<li>Use background process</li>
+<li>Client-side caching: etags &#x26; last-modified</li>
+<li>Don't pre-optimize: 99% of the time you'll need 0%</li>
+<li>Don't abuse your database</li>
+</ul>]]></description>
+            <link>https://leonardofaria.net//2009/10/13/rails-summit-resumo-do-primeiro-dia/</link>
+            <guid isPermaLink="false">726</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Tue, 13 Oct 2009 15:46:10 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[MacBook e o caso do topcase rachado]]></title>
+            <link>https://leonardofaria.net//2009/10/11/macbook-e-o-caso-do-topcase-rachado/</link>
+            <guid isPermaLink="false">720</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Sun, 11 Oct 2009 17:10:58 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Alternativas ao PHPMyAdmin]]></title>
+            <link>https://leonardofaria.net//2009/08/22/alternativas-ao-phpmyadmin/</link>
+            <guid isPermaLink="false">699</guid>
+            <category><![CDATA[mysql]]></category>
+            <category><![CDATA[php]]></category>
+            <pubDate>Sat, 22 Aug 2009 19:32:36 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Todo lists para o Textmate]]></title>
+            <link>https://leonardofaria.net//2009/08/22/todo-lists-para-o-textmate/</link>
+            <guid isPermaLink="false">694</guid>
+            <category><![CDATA[mac]]></category>
+            <category><![CDATA[software]]></category>
+            <pubDate>Sat, 22 Aug 2009 19:06:36 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Paperclip validando imagens no IE]]></title>
+            <link>https://leonardofaria.net//2009/08/16/paperclip-validando-imagens-no-ie/</link>
+            <guid isPermaLink="false">691</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Mon, 17 Aug 2009 00:47:57 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Descubra de onde vem seus usuários com SQL]]></title>
+            <link>https://leonardofaria.net//2009/07/12/descubra-de-onde-vem-seus-usuarios-com-sql/</link>
+            <guid isPermaLink="false">683</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <category><![CDATA[mysql]]></category>
+            <pubDate>Sun, 12 Jul 2009 20:51:44 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Curiosidade Ruby do dia #2]]></title>
+            <link>https://leonardofaria.net//2009/07/01/curiosidade-ruby-do-dia-2/</link>
+            <guid isPermaLink="false">678</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Thu, 02 Jul 2009 00:03:22 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[hirb, dados tabulados no console]]></title>
+            <link>https://leonardofaria.net//2009/07/01/hirb-dados-tabulados-no-console/</link>
+            <guid isPermaLink="false">672</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Wed, 01 Jul 2009 23:21:22 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[sitemap.xml no Rails]]></title>
+            <description><![CDATA[<p>Usado para SEO, <a href="http://www.sitemaps.org/">Sitemaps</a> servem para informar aos sites de busca como indexar as páginas de um site. Indexadores descobrem páginas com base em links no site e outros sites e o que os Sitemaps fazem é complementar esses dados, para permitir que os indexadores com suporte para Sitemaps peguem todos os URLs no Sitemap e aprendam sobre esses URLs usando os metadados associados.</p>
+<p>Existem <a href="http://www.xml-sitemaps.com/">sites</a> para gerar o arquivo, mas fazer isso no Rails não é complicado e faremos isso em 4 passos. A dica vem do <a href="http://tonycode.com/wiki/index.php?title=Ruby_on_Rails_Sitemap_Generator">Tony</a> no livro <a href="http://www.pragprog.com/titles/fr_arr/advanced-rails-recipes">Advanced Rails Recipes</a>.</p>]]></description>
+            <link>https://leonardofaria.net//2009/06/07/sitemapxml-no-rails/</link>
+            <guid isPermaLink="false">660</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sun, 07 Jun 2009 17:30:52 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Data URI]]></title>
+            <description><![CDATA[<p>Em 2005 o Irapuan Martinez <a href="http://groups.google.com/group/arqhp/browse_thread/thread/2cacd80665d4a28c/3c07db39c244d74a">falou do Acid 2</a> e de um recurso interessantíssimo, que acabei de testar: <a href="http://www.ietf.org/rfc/rfc2397">Dat URI</a> (que existe desde 98).</p>
+<p>Dat URI, em poucas palavras, é a possibilidade de inserir conteúdo dentro de um arquivo HTML sem a necessidade de linkar o arquivo. Assim, a imagem ao lado poderia ser inserida com:</p>]]></description>
+            <link>https://leonardofaria.net//2009/06/07/data-uri/</link>
+            <guid isPermaLink="false">650</guid>
+            <category><![CDATA[browser]]></category>
+            <pubDate>Sun, 07 Jun 2009 03:44:14 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[O desafio de crescer]]></title>
+            <link>https://leonardofaria.net//2009/05/25/o-desafio-de-crescer/</link>
+            <guid isPermaLink="false">645</guid>
+            <category><![CDATA[entrepreneurship]]></category>
+            <pubDate>Mon, 25 May 2009 22:23:21 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[jQuery no Spotlight]]></title>
+            <link>https://leonardofaria.net//2009/05/25/jquery-no-spotlight/</link>
+            <guid isPermaLink="false">637</guid>
+            <category><![CDATA[javascript]]></category>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Mon, 25 May 2009 03:21:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[URL curta no WordPress]]></title>
+            <link>https://leonardofaria.net//2009/04/26/url-curta-no-wordpress/</link>
+            <guid isPermaLink="false">634</guid>
+            <category><![CDATA[php]]></category>
+            <category><![CDATA[wordpress]]></category>
+            <pubDate>Sun, 26 Apr 2009 17:46:56 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Para aprender Ruby on Rails]]></title>
+            <link>https://leonardofaria.net//2009/04/11/para-aprender-ruby-on-rails/</link>
+            <guid isPermaLink="false">508</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sat, 11 Apr 2009 19:49:03 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Integração contínua no autosimulado]]></title>
+            <link>https://leonardofaria.net//2009/04/03/integracao-continua-no-autosimulado/</link>
+            <guid isPermaLink="false">492</guid>
+            <category><![CDATA[portfolio]]></category>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Fri, 03 Apr 2009 23:31:38 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Nasceu: autosimulado]]></title>
+            <link>https://leonardofaria.net//2009/03/14/nasceu-autosimulado/</link>
+            <guid isPermaLink="false">477</guid>
+            <category><![CDATA[portfolio]]></category>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sat, 14 Mar 2009 23:41:36 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Lançado Safari 4]]></title>
+            <link>https://leonardofaria.net//2009/02/25/lancado-safari-4/</link>
+            <guid isPermaLink="false">459</guid>
+            <category><![CDATA[browser]]></category>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Wed, 25 Feb 2009 18:41:27 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Documentação do Rails e Ruby no Spotlight]]></title>
+            <link>https://leonardofaria.net//2009/02/08/documentacao-do-rails-e-ruby-no-spotlight/</link>
+            <guid isPermaLink="false">452</guid>
+            <category><![CDATA[mac]]></category>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Mon, 09 Feb 2009 01:12:35 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Resenha: A cabeça de Steve Jobs]]></title>
+            <link>https://leonardofaria.net//2009/01/31/resenha-a-cabeca-de-steve-jobs/</link>
+            <guid isPermaLink="false">436</guid>
+            <category><![CDATA[mac]]></category>
+            <category><![CDATA[review]]></category>
+            <pubDate>Sat, 31 Jan 2009 16:31:16 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Para turbinar o Safari]]></title>
+            <link>https://leonardofaria.net//2009/01/25/para-turbinar-o-safari/</link>
+            <guid isPermaLink="false">437</guid>
+            <category><![CDATA[browser]]></category>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Sun, 25 Jan 2009 23:28:26 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Edge Rails: método render mais esperto]]></title>
+            <link>https://leonardofaria.net//2008/12/26/edge-rails-metodo-render-mais-esperto/</link>
+            <guid isPermaLink="false">435</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Fri, 26 Dec 2008 18:02:10 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Os axiomas de Zurique]]></title>
+            <link>https://leonardofaria.net//2008/12/04/os-axiomas-de-zurique/</link>
+            <guid isPermaLink="false">433</guid>
+            <category><![CDATA[review]]></category>
+            <pubDate>Thu, 04 Dec 2008 14:28:04 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[gem cheat]]></title>
+            <link>https://leonardofaria.net//2008/11/29/gem-cheat/</link>
+            <guid isPermaLink="false">432</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sat, 29 Nov 2008 22:23:04 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[PHP junto com o Passenger no Leopard]]></title>
+            <link>https://leonardofaria.net//2008/11/26/php-junto-com-o-passenger-no-leopard/</link>
+            <guid isPermaLink="false">430</guid>
+            <category><![CDATA[mac]]></category>
+            <category><![CDATA[php]]></category>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Thu, 27 Nov 2008 01:32:30 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Quer conhecer mais da história da Apple?]]></title>
+            <link>https://leonardofaria.net//2008/11/23/quer-conhecer-mais-da-historia-da-apple/</link>
+            <guid isPermaLink="false">428</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Sun, 23 Nov 2008 23:08:43 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Migrations sem timestamp]]></title>
+            <link>https://leonardofaria.net//2008/11/09/migrations-sem-timestamp/</link>
+            <guid isPermaLink="false">425</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sun, 09 Nov 2008 18:22:44 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[RubyMine: Textmate-killer?]]></title>
+            <link>https://leonardofaria.net//2008/11/08/rubymine-textmate-killer/</link>
+            <guid isPermaLink="false">422</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sat, 08 Nov 2008 21:07:41 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Integração contínua no codestacker]]></title>
+            <link>https://leonardofaria.net//2008/10/23/integracao-continua-no-codestacker/</link>
+            <guid isPermaLink="false">420</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <category><![CDATA[portfolio]]></category>
+            <pubDate>Thu, 23 Oct 2008 02:17:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Ruby on Rails Portable]]></title>
+            <link>https://leonardofaria.net//2008/10/19/ruby-on-rails-portable/</link>
+            <guid isPermaLink="false">416</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <category><![CDATA[windows]]></category>
+            <pubDate>Mon, 20 Oct 2008 01:49:26 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Backup no Mac OS]]></title>
+            <link>https://leonardofaria.net//2008/10/12/backup-no-mac-os/</link>
+            <guid isPermaLink="false">410</guid>
+            <category><![CDATA[mac]]></category>
+            <category><![CDATA[software]]></category>
+            <pubDate>Sun, 12 Oct 2008 19:09:34 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Artigos da semana sobre Rails]]></title>
+            <link>https://leonardofaria.net//2008/09/28/artigos-da-semana-sobre-rails/</link>
+            <guid isPermaLink="false">409</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Mon, 29 Sep 2008 02:45:35 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Impressione todo mundo com o LiquidMac]]></title>
+            <link>https://leonardofaria.net//2008/09/21/impressione-todo-mundo-com-o-liquidmac</link>
+            <guid isPermaLink="false">408</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Mon, 22 Sep 2008 02:36:57 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Edge Rails no Windows Vista]]></title>
+            <link>https://leonardofaria.net//2008/09/10/edge-rails-no-windows-vista/</link>
+            <guid isPermaLink="false">407</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <category><![CDATA[windows]]></category>
+            <pubDate>Wed, 10 Sep 2008 05:26:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Acelerando seu Textmate]]></title>
+            <link>https://leonardofaria.net//2008/08/16/acelerando-seu-textmate/</link>
+            <guid isPermaLink="false">406</guid>
+            <category><![CDATA[mac]]></category>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sat, 16 Aug 2008 19:42:25 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Ruby on Rails na WebMobile]]></title>
+            <link>https://leonardofaria.net//2008/08/10/ruby-on-rails-na-webmobile/</link>
+            <guid isPermaLink="false">404</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sun, 10 Aug 2008 22:32:50 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Mudanças no Rails 2.2]]></title>
+            <link>https://leonardofaria.net//2008/08/02/mudancas-no-rails-22/</link>
+            <guid isPermaLink="false">403</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sat, 02 Aug 2008 21:41:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Protegendo projetos com o .htaccess]]></title>
+            <link>https://leonardofaria.net//2008/07/16/protegendo-projetos-com-o-htaccess/</link>
+            <guid isPermaLink="false">400</guid>
+            <category><![CDATA[devops]]></category>
+            <category><![CDATA[apache]]></category>
+            <pubDate>Wed, 16 Jul 2008 04:48:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Usando ApacheBench para testes: Apache/mod_rails e Nginx/mongrel]]></title>
+            <link>https://leonardofaria.net//2008/07/15/usando-apachebench-para-testes-apachemod_rails-e-nginxmongrel/</link>
+            <guid isPermaLink="false">399</guid>
+            <category><![CDATA[development]]></category>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Tue, 15 Jul 2008 03:41:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Rails Screencasts]]></title>
+            <link>https://leonardofaria.net//2008/07/11/rails-screencasts/</link>
+            <guid isPermaLink="false">397</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Fri, 11 Jul 2008 04:31:43 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Nasceu: codestacker.com]]></title>
+            <link>https://leonardofaria.net//2008/07/02/nasceu-codestackercom/</link>
+            <guid isPermaLink="false">395</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <category><![CDATA[portfolio]]></category>
+            <pubDate>Wed, 02 Jul 2008 03:05:33 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[annotate_model, gem útil da semana]]></title>
+            <link>https://leonardofaria.net//2008/06/30/annotate_model-gem-util-da-semana/</link>
+            <guid isPermaLink="false">394</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Mon, 30 Jun 2008 05:27:05 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Passenger no painel de preferências do Leopard]]></title>
+            <link>https://leonardofaria.net//2008/06/28/passenger-no-painel-de-preferencias-do-leopard/</link>
+            <guid isPermaLink="false">392</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Sat, 28 Jun 2008 20:04:01 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Extendendo a classe Tween do Flash]]></title>
+            <link>https://leonardofaria.net//2008/06/10/extendendo-a-classe-tween-do-flash/</link>
+            <guid isPermaLink="false">389</guid>
+            <category><![CDATA[flash]]></category>
+            <pubDate>Tue, 10 Jun 2008 20:58:21 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Extreme Programming para todos]]></title>
+            <description><![CDATA[<p>Esse é outro post <a href="http://www.leonardofaria.net/tag/academico">acadêmico</a> e novamente um artigo para a disciplina de Engenharia de Software. O artigo está abaixo e dessa vez há também <a href="/wp-content/uploads/2008/06/XP.pdf">slides</a> (PDF, 2 MB) da apresentação feita na <a href="http://www.faculdadepitagoras.com.br/">Faculdade Pitágoras</a>.</p>
+<p>Naturalmente, essa não é a maior referência sobre XP, apenas uma boa introdução sobre o tema. Especialistas mesmo são o <a href="http://www.improveit.com.br/vinicius">Vinícius Teles</a> e o time da <a href="http://www.improveit.com.br">Improve It</a>, que possuem um <a href="http://www.improveit.com.br/xp">ótimo conteúdo</a> sobre o assunto. Vamos lá:</p>
+<h3>Introdução</h3>
+<p>Extreme Programming é uma metodologia de desenvolvimento de software que visa a criação de sistemas de melhor qualidade, produzidos em menos tempo e com menores custos. Criada por Kent Beck no fim da década de 90, o desenvolvimento ágil é atingido através de alguns valores e práticas que muito divergem dos conceitos tradicionais.</p>]]></description>
+            <link>https://leonardofaria.net//2008/06/07/extreme-programming-para-todos/</link>
+            <guid isPermaLink="false">390</guid>
+            <category><![CDATA[academic]]></category>
+            <pubDate>Sat, 07 Jun 2008 23:21:15 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[6 screensavers para seu Mac]]></title>
+            <description><![CDATA[<p>Particularmente, acho os screensavers do Mac OS mais bonitos do que os do Windows e Linux. Nesse post linko alguns screensavers bem interessantes:</p>
+<p>O <a href="http://blog.pixelbreaker.com/polarclock">Polar Clock</a> é escrito com ActionScript 3, e tem versões para Windows e Mac.</p>]]></description>
+            <link>https://leonardofaria.net//2008/06/01/6-screensavers-para-seu-mac/</link>
+            <guid isPermaLink="false">383</guid>
+            <category><![CDATA[mac]]></category>
+            <category><![CDATA[software]]></category>
+            <pubDate>Sun, 01 Jun 2008 17:57:06 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Sobre Controle de Versão]]></title>
+            <description><![CDATA[<p>Na disciplina de Engenharia de Software que faço no curso de Sistemas de Informação da Faculdade Pitágoras, fiz um trabalho introdutório sobre Sistemas de Controle de Versão. O trabalho está abaixo e também disponível em <a href="/wp-content/uploads/2008/05/controle.pdf">PDF</a>.</p>]]></description>
+            <link>https://leonardofaria.net//2008/05/31/sobre-controle-de-versao/</link>
+            <guid isPermaLink="false">379</guid>
+            <category><![CDATA[academic]]></category>
+            <category><![CDATA[git]]></category>
+            <pubDate>Sat, 31 May 2008 20:38:06 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Novo trabalho interativo: is®]]></title>
+            <link>https://leonardofaria.net//2008/05/26/novo-trabalho-interativo-is/</link>
+            <guid isPermaLink="false">375</guid>
+            <category><![CDATA[flash]]></category>
+            <category><![CDATA[portfolio]]></category>
+            <pubDate>Mon, 26 May 2008 23:59:26 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Rails, Git, MySQL e mod_rails no Leopard]]></title>
+            <description><![CDATA[<p>Comprou um Mac? Não sabe por onde começar? Esse é um mega-post mostrando como configurar Ruby on Rails, Git, MySQL e mod_rails no Leopard. É tudo <strong>muito-fácil</strong>!</p>
+<h3>Ruby on Rails</h3>
+<p>O Leopard já vem com Ruby e Rails já instalados. Então, a única sugestão é a de atualizar todos os gems. O comando <code>gem list</code> deve apontar os gems instalados. Por padrão, são:</p>]]></description>
+            <link>https://leonardofaria.net//2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/</link>
+            <guid isPermaLink="false">374</guid>
+            <category><![CDATA[mac]]></category>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sat, 24 May 2008 19:53:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Obtendo o número de leitores do seu Feedburner]]></title>
+            <link>https://leonardofaria.net//2008/05/02/obtendo-o-numero-de-leitores-do-seu-feedburner/</link>
+            <guid isPermaLink="false">368</guid>
+            <category><![CDATA[php]]></category>
+            <pubDate>Fri, 02 May 2008 08:50:54 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Tenha vários Internet Explorer no Mac OS]]></title>
+            <link>https://leonardofaria.net//2008/03/16/tenha-varios-internet-explorer-no-mac-os/</link>
+            <guid isPermaLink="false">355</guid>
+            <category><![CDATA[browser]]></category>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Sun, 16 Mar 2008 18:19:57 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[UML e MySQL no Mac]]></title>
+            <link>https://leonardofaria.net//2008/03/10/uml-e-mysql-no-mac/</link>
+            <guid isPermaLink="false">341</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Tue, 11 Mar 2008 01:53:13 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Ruby on Rails na caveira!]]></title>
+            <link>https://leonardofaria.net//2007/12/19/ruby-on-rails-na-caveira/</link>
+            <guid isPermaLink="false">348</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Wed, 19 Dec 2007 03:47:38 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Locomotive com Rails 2.0]]></title>
+            <link>https://leonardofaria.net//2007/12/16/locomotive-com-rails-20/</link>
+            <guid isPermaLink="false">347</guid>
+            <category><![CDATA[mac]]></category>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Mon, 17 Dec 2007 00:06:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Documentação sobre Ruby e seus gems]]></title>
+            <link>https://leonardofaria.net//2007/12/14/documentacao-sobre-ruby-e-seus-gems/</link>
+            <guid isPermaLink="false">346</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sat, 15 Dec 2007 01:58:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Um resumo do Minas on Rails]]></title>
+            <link>https://leonardofaria.net//2007/12/02/um-resumo-do-minas-on-rails/</link>
+            <guid isPermaLink="false">342</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <category><![CDATA[event]]></category>
+            <pubDate>Sun, 02 Dec 2007 16:56:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[CSS para alinhamento vertical]]></title>
+            <link>https://leonardofaria.net//2007/11/18/css-para-alinhamento-vertical/</link>
+            <guid isPermaLink="false">340</guid>
+            <category><![CDATA[css]]></category>
+            <pubDate>Sun, 18 Nov 2007 16:24:32 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Minas on Rails]]></title>
+            <link>https://leonardofaria.net//2007/11/16/minas-on-rails/</link>
+            <guid isPermaLink="false">339</guid>
+            <category><![CDATA[event]]></category>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Fri, 16 Nov 2007 15:53:30 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Review do .Mac Mail]]></title>
+            <link>https://leonardofaria.net//2007/10/30/review-do-mac-mail/</link>
+            <guid isPermaLink="false">326</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Tue, 30 Oct 2007 03:56:29 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Tornando o Firefox para Mac mais bonito]]></title>
+            <link>https://leonardofaria.net//2007/10/22/tornando-o-firefox-para-mac-mais-bonito/</link>
+            <guid isPermaLink="false">322</guid>
+            <category><![CDATA[browser]]></category>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Mon, 22 Oct 2007 15:10:45 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Alterando o PHP.ini da Dreamhost]]></title>
+            <link>https://leonardofaria.net//2007/10/19/alterando-o-phpini-da-dreamhost/</link>
+            <guid isPermaLink="false">319</guid>
+            <category><![CDATA[php]]></category>
+            <pubDate>Fri, 19 Oct 2007 15:21:42 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Prepare-se para o Rails 2.0]]></title>
+            <link>https://leonardofaria.net//2007/10/12/prepare-se-para-o-rails-20/</link>
+            <guid isPermaLink="false">316</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Fri, 12 Oct 2007 17:54:13 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[5 dicas para trabalhar com Rails]]></title>
+            <link>https://leonardofaria.net//2007/08/19/5-dicas-para-trabalhar-com-rails/</link>
+            <guid isPermaLink="false">309</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sun, 19 Aug 2007 23:29:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Endless Pageless]]></title>
+            <link>https://leonardofaria.net//2007/08/11/endless-pageless/</link>
+            <guid isPermaLink="false">305</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sat, 11 Aug 2007 06:41:55 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Bookmarklet para ver propriedades dos elementos de uma página]]></title>
+            <link>https://leonardofaria.net//2007/08/05/bookmarklet-para-ver-propriedades-dos-elementos-de-uma-pagina/</link>
+            <guid isPermaLink="false">295</guid>
+            <category><![CDATA[browser]]></category>
+            <category><![CDATA[javascript]]></category>
+            <pubDate>Mon, 06 Aug 2007 01:47:54 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[3 anos de Rails]]></title>
+            <link>https://leonardofaria.net//2007/08/04/3-anos-de-rails/</link>
+            <guid isPermaLink="false">294</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sat, 04 Aug 2007 22:33:35 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Café com o TOM, RoR na sua sexta a noite]]></title>
+            <link>https://leonardofaria.net//2007/07/21/cafe-com-o-tom-ror-na-sua-sexta-a-noite/</link>
+            <guid isPermaLink="false">290</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sat, 21 Jul 2007 19:25:44 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Rails, software de opinião]]></title>
+            <link>https://leonardofaria.net//2007/07/21/rails-software-de-opiniao/</link>
+            <guid isPermaLink="false">289</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sat, 21 Jul 2007 05:50:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Conheça o sNews, mini CMS profissional em PHP]]></title>
+            <link>https://leonardofaria.net//2007/07/16/conheca-o-snews-mini-cms-profissional-em-php/</link>
+            <guid isPermaLink="false">286</guid>
+            <category><![CDATA[php]]></category>
+            <pubDate>Mon, 16 Jul 2007 22:10:20 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[12º Encontro de Webdesign: o bom, o ruim e o feio]]></title>
+            <description><![CDATA[<p>Sábado, levantei às 6h e fui rumo a BH em mais um <a href="http://arteccom.com.br/encontro/">Encontro de Webdesign da Arteccom</a>. É a <a href="https://leonardofaria.net/2005/07/10/10-encontro-de-webdesign-o-bom-o-ruim-e-o-feio/"><strong>segunda vez</strong></a> que vou a um encontro dessa editora que faz uns extras com eventos. Morar no interior de Minas não me dá muitas opções de <a href="http://code.google.com/events/developerday/">eventos bacanas</a>.</p>
+<p>Verifiquei nas listas <a href="http://groups.google.com/group/arqhp"><strong>arqHP</strong></a> e <a href="http://www.guilhermo.com/ai_biblioteca/referencialink.asp?referencia=96"><strong>Arquitetura de Informação</strong></a> se ia ter alguém lá, mas só depois do evento apareceram o <a href="http://www.ideiadigital.ppg.br/">Rafael Apocalypse</a> e o <a href="http://www.plasmadesign.com.br/">Sérgio Jardim</a> – ambos que eu já conhecia de troca de e-mails e tal.</p>]]></description>
+            <link>https://leonardofaria.net//2007/07/15/12-encontro-de-webdesign-o-bom-o-ruim-e-o-feio/</link>
+            <guid isPermaLink="false">285</guid>
+            <category><![CDATA[event]]></category>
+            <pubDate>Sun, 15 Jul 2007 22:48:06 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Deployment na Dreamhost e RailsPlayground]]></title>
+            <description><![CDATA[<p>Minha aplicação <strong>Rails</strong> está pronta, mas, e agora? Como instalá-la no servidor?<br>
+Essa é uma dúvida muito comum entre desenvolvedores Rails. Fazer a configuração do ambiente de produção de uma aplicação é uma tarefa bem DIY (do it yourself, ou, faça você mesmo). Não existe uma fórmula certa ou errada para isso, mas sim diferentes soluções para essa questão. Esse artigo, portanto, mostra uma forma, que eu e o <a href="http://www.simplesideias.com.br">Nando</a> usamos para rodarmos nossas aplicações. Ele na <a href="http://railsplayground.com/"><strong>RailsPlayground</strong></a> e eu na <a href="http://www.dreamhost.com"><strong>Dreamhost</strong></a>. Vamos lá:</p>]]></description>
+            <link>https://leonardofaria.net//2007/07/05/deployment-na-dreamhost-e-railsplayground/</link>
+            <guid isPermaLink="false">253</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Fri, 06 Jul 2007 01:36:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Sobre Macs Refurbisheds]]></title>
+            <link>https://leonardofaria.net//2007/07/03/sobre-macs-refurbisheds/</link>
+            <guid isPermaLink="false">284</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Tue, 03 Jul 2007 06:08:06 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Curiosidade Ruby do dia]]></title>
+            <link>https://leonardofaria.net//2007/06/28/curiosidade-ruby-do-dia/</link>
+            <guid isPermaLink="false">283</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Thu, 28 Jun 2007 21:27:44 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Novas janelas em Javascript não-obstrusivo]]></title>
+            <link>https://leonardofaria.net//2007/06/23/novas-janelas-em-javascript-nao-obstrusivo/</link>
+            <guid isPermaLink="false">278</guid>
+            <category><![CDATA[javascript]]></category>
+            <category><![CDATA[usability]]></category>
+            <pubDate>Sat, 23 Jun 2007 03:49:44 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Safari para Windows]]></title>
+            <link>https://leonardofaria.net//2007/06/11/safari-para-windows/</link>
+            <guid isPermaLink="false">275</guid>
+            <category><![CDATA[browser]]></category>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Tue, 12 Jun 2007 01:01:20 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Resultado da Pesquisa sobre Mac Users]]></title>
+            <description><![CDATA[<p>No <a href="https://leonardofaria.net/2007/05/16/pesquisa-sobre-mac-users/">último dia 16 lancei</a> uma <a href="http://pesquisa.leonardofaria.net">pesquisa</a> para conhecer o perfil dos usuários de Macintosh no Brasil. A intenção dessa pesquisa, além do óbvio, é servir de background para o lançamento de um novo serviço sobre Macs no Brasil.</p>
+<p>Para a divulgação da pesquisa, convoquei usuários de <a href="http://macpress.uol.com.br/forum/">vários</a> <a href="http://macmais1.terra.com.br/forum/">fóruns</a>, <a href="http://www.orkut.com/Community.aspx?cmm=8074736">comunidades</a> no <a href="http://www.orkut.com">orkut</a> e pedi a vários blogueiros e <a href="http://applemania.info/">vários</a> <a href="http://www.macmagazine.com.br/">sites</a> uma nota sobre a pesquisa. Assim, depois de um tempo, 490 pessoas responderam as 14 questões do questionário.</p>
+<p>Obrigado a todo mundo que respondeu a pesquisa.<br>
+Os resultados surpreenderam. Vamos lá.</p>]]></description>
+            <link>https://leonardofaria.net//2007/06/07/resultado-da-pesquisa-sobre-mac-users/</link>
+            <guid isPermaLink="false">254</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Thu, 07 Jun 2007 21:07:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Pesquisa sobre Mac Users]]></title>
+            <link>https://leonardofaria.net//2007/05/16/pesquisa-sobre-mac-users/</link>
+            <guid isPermaLink="false">245</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Thu, 17 May 2007 01:42:02 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Novos resources sobre Rails]]></title>
+            <link>https://leonardofaria.net//2007/05/15/novos-resources-sobre-rails/</link>
+            <guid isPermaLink="false">233</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Tue, 15 May 2007 04:11:24 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Manipulando datas no Rails]]></title>
+            <link>https://leonardofaria.net//2007/05/06/manipulando-datas-no-rails/</link>
+            <guid isPermaLink="false">244</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sun, 06 May 2007 21:20:44 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Você conhece o WebObjects?]]></title>
+            <link>https://leonardofaria.net//2007/04/20/voce-conhece-o-webobjects/</link>
+            <guid isPermaLink="false">239</guid>
+            <category><![CDATA[development]]></category>
+            <pubDate>Sat, 21 Apr 2007 01:41:09 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Microsoft lança Flash Killer]]></title>
+            <link>https://leonardofaria.net//2007/04/18/microsoft-lanca-flash-killer/</link>
+            <guid isPermaLink="false">237</guid>
+            <category><![CDATA[flash]]></category>
+            <pubDate>Wed, 18 Apr 2007 03:23:14 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Por que vale a pena trabalhar com Rails]]></title>
+            <description><![CDATA[<p> Resolvi escrever esse post após um amigo me perguntar se compensava aprender/trabalhar com Ruby e com Rails, já que é demasiadamente recente e sem apoio de grandes empresas, como acontece com o PHP e Python.</p>
+<p>Minha curiosidade de trabalhar com Rails veio após todo o hype envolvido no framework e particularmente, depois que conheci o <a href="http://www.orkurioso.com">Orkurioso</a> (serviço todo hypado para monitorar scraps do <a href="http://www.orkut.com">orkut</a>) e vi o <a href="http://media.rubyonrails.org/video/rails_take2_with_sound.mov">screencast</a> (51MB, .mov) do <a href="http://www.loudthinking.com/about.html">David Heinemeier</a>, junto a todas as aplicações da <a href="http://www.37signals.com/">37signals</a>.</p>]]></description>
+            <link>https://leonardofaria.net//2007/04/13/por-que-vale-a-pena-trabalhar-com-rails/</link>
+            <guid isPermaLink="false">221</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sat, 14 Apr 2007 01:36:09 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Criando RSS com Rails]]></title>
+            <description><![CDATA[<p><strong>Nota</strong>: antes do artigo vale lembrar do <a href="http://www.egenial.com.br/curso/">curso online de Ruby on Rails + Flex</a> do <a href="http://www.egenial.com.br">Carlos</a>. Ele já fez <a href="http://blog.egenial.com.br/?p=42">alguns experimentos</a> com esses dois ambientes e rolou um resultado bacana. Vamos ao artigo então :P</p>
+<p>Não sou o maior especialista em padrões de distribuição de conteúdo. Existe gente melhor para isso, mas em um projeto meu, precisei da criação de feeds. O primeiro passo é mapear o arquivos routes.rb (config/routes.rb) do seu projeto.</p>]]></description>
+            <link>https://leonardofaria.net//2007/04/12/criando-rss-com-rails/</link>
+            <guid isPermaLink="false">230</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Fri, 13 Apr 2007 01:27:15 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Mais resources sobre Ruby on Rails]]></title>
+            <link>https://leonardofaria.net//2007/04/07/mais-resources-sobre-ruby-on-rails/</link>
+            <guid isPermaLink="false">220</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sun, 08 Apr 2007 01:06:23 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Flash CS3 e muito mais na área]]></title>
+            <link>https://leonardofaria.net//2007/03/27/flash-cs3-na-area/</link>
+            <guid isPermaLink="false">214</guid>
+            <category><![CDATA[flash]]></category>
+            <pubDate>Wed, 28 Mar 2007 01:52:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Ruby on Rails on Mac OS X]]></title>
+            <link>https://leonardofaria.net//2007/03/11/ruby-on-rails-on-mac-os-x/</link>
+            <guid isPermaLink="false">213</guid>
+            <category><![CDATA[mac]]></category>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sun, 11 Mar 2007 16:58:58 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Extensão melhora usabilidade em sites]]></title>
+            <link>https://leonardofaria.net//2007/01/28/extensao-melhora-usabilidade-em-sites/</link>
+            <guid isPermaLink="false">209</guid>
+            <category><![CDATA[browser]]></category>
+            <category><![CDATA[usability]]></category>
+            <pubDate>Sun, 28 Jan 2007 23:16:36 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Listas de discussões e suas respostas]]></title>
+            <link>https://leonardofaria.net//2007/01/28/listas-de-discussoes-e-suas-respostas/</link>
+            <guid isPermaLink="false">190</guid>
+            <category><![CDATA[fun]]></category>
+            <pubDate>Sun, 28 Jan 2007 17:57:25 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Apresentando Ruby on Rails]]></title>
+            <link>https://leonardofaria.net//2007/01/27/apresentando-ruby-on-rails/</link>
+            <guid isPermaLink="false">208</guid>
+            <category><![CDATA[rubyonrails]]></category>
+            <pubDate>Sat, 27 Jan 2007 02:39:28 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Apple reinventa o celular]]></title>
+            <link>https://leonardofaria.net//2007/01/09/apple-reinventa-o-celular/</link>
+            <guid isPermaLink="false">207</guid>
+            <category><![CDATA[iphone]]></category>
+            <pubDate>Wed, 10 Jan 2007 00:41:43 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Motion Blur no Flash]]></title>
+            <link>https://leonardofaria.net//2007/01/06/motion-blur-no-flash/</link>
+            <guid isPermaLink="false">204</guid>
+            <category><![CDATA[flash]]></category>
+            <pubDate>Sat, 06 Jan 2007 20:37:31 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Site da is® lançado!]]></title>
+            <link>https://leonardofaria.net//2007/01/01/site-da-is-lancado/</link>
+            <guid isPermaLink="false">193</guid>
+            <category><![CDATA[portfolio]]></category>
+            <category><![CDATA[flash]]></category>
+            <pubDate>Tue, 02 Jan 2007 00:59:25 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Widgets para seu Dashboard]]></title>
+            <link>https://leonardofaria.net//2006/12/17/widgets-para-seu-dashboard/</link>
+            <guid isPermaLink="false">183</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Sun, 17 Dec 2006 19:07:16 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[MacStuff]]></title>
+            <link>https://leonardofaria.net//2006/12/10/macstuff/</link>
+            <guid isPermaLink="false">178</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Sun, 10 Dec 2006 15:42:34 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[MP3 to SWF]]></title>
+            <link>https://leonardofaria.net//2006/11/26/mp3-to-swf/</link>
+            <guid isPermaLink="false">166</guid>
+            <category><![CDATA[flash]]></category>
+            <pubDate>Sun, 26 Nov 2006 15:31:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Vários ícones que valem uma palavra]]></title>
+            <link>https://leonardofaria.net//2006/11/25/varios-icones-que-valem-uma-palavra/</link>
+            <guid isPermaLink="false">165</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Sat, 25 Nov 2006 23:45:32 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Trabalhando com imagens no Mac]]></title>
+            <description><![CDATA[<p>Muitas vezes você não precisa de um editor de imagens pesado como o Photoshop para fazer pequenos trabalhos. Então, falo de três soluções para trabalhar com imagens no Mac.</p>
+<p>O primeiro software é o <a href="http://www.kreynet.de/tools.html">DroPic</a>. Não faz nada de tão especial, só redimenciona imagens para 4 formatos (Pequeno, Médio, Grande e Extra Grande). Como tudo no Mac, é superfácil de usar. E bem didático.</p>]]></description>
+            <link>https://leonardofaria.net//2006/11/18/trabalhando-com-imagens-no-mac/</link>
+            <guid isPermaLink="false">154</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Sat, 18 Nov 2006 02:29:10 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Descubra onde seu Mac foi montado]]></title>
+            <link>https://leonardofaria.net//2006/11/18/descubra-onde-seu-mac-foi-montado/</link>
+            <guid isPermaLink="false">159</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Sat, 18 Nov 2006 02:28:50 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[12 efeitos bacanas com script.aculo.us]]></title>
+            <description><![CDATA[<p>Criar efeitos visuais em Javascript era algo bem complexo. Muitos efeitos da lista que cito abaixo era algo somente imaginável para criar, para mim, no Flash. Entretanto, as coisas mudaram. O <a href="http://script.aculo.us/">script.aculo.us</a> é uma biblioteca que permite a criação de efeitos de forma super-simples, sem requerer conhecimentos jedi em JS. Vamos a lista então:</p>
+<ol>
+<li><a href="http://pragmaticobjects.org/index.php?itemid=7">Image Gallery</a> – Efeitos suaves e bem feitos</li>
+<li><a href="http://mir.aculo.us/stuff/reflector/reflector.html">Reflector</a> – Imagens com reflexos (muito usado no site da Apple)</li>
+<li><a href="http://www.bartelme.at/journal/archive/accessible_javascript_newsticker">Newsticker</a> – Newsticker não-obstrusivo</li>
+<li><a href="http://www.ajaxcf.com/blog/index.cfm/2006/2/28/Building-a-Local-AutoCompleter">Auto-Completer</a> – Estilo Google Suggest</li>
+<li><a href="http://wiki.script.aculo.us/scriptaculous/show/Autocompleter.Local">Auto-Completer</a> – Demo do wiki do script.aculo.us</li>
+</ol>]]></description>
+            <link>https://leonardofaria.net//2006/11/13/12-motivos-para-usar-scriptaculous/</link>
+            <guid isPermaLink="false">157</guid>
+            <category><![CDATA[javascript]]></category>
+            <pubDate>Mon, 13 Nov 2006 19:17:22 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Tela azul da Morte. No mac]]></title>
+            <link>https://leonardofaria.net//2006/11/12/tela-azul-da-morte-no-mac/</link>
+            <guid isPermaLink="false">152</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Sun, 12 Nov 2006 04:21:51 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Guerrilha para o Internet Explorer]]></title>
+            <link>https://leonardofaria.net//2006/11/05/guerrilha-para-o-internet-explorer/</link>
+            <guid isPermaLink="false">147</guid>
+            <category><![CDATA[browser]]></category>
+            <pubDate>Sun, 05 Nov 2006 23:04:39 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Novos paradigmas da Programação Moderna]]></title>
+            <link>https://leonardofaria.net//2006/10/30/novos-paradigmas-da-programacao-moderna/</link>
+            <guid isPermaLink="false">139</guid>
+            <category><![CDATA[fun]]></category>
+            <pubDate>Tue, 31 Oct 2006 00:30:11 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Spotlight no Safari]]></title>
+            <link>https://leonardofaria.net//2006/10/29/spotlight-no-safari/</link>
+            <guid isPermaLink="false">137</guid>
+            <category><![CDATA[browser]]></category>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Sun, 29 Oct 2006 21:33:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Acessando seu PC Windows pelo Mac OS]]></title>
+            <description><![CDATA[<p>Esse artigo ensina como logar em sua máquina com Windows a partir do Mac OS. Em redes locais isso é muito prático. O software que iremos utilizar é o <a href="http://www.microsoft.com/mac/otherproducts/otherproducts.aspx?pid=remotedesktopclient">Remote Desktop Connection (RDC)</a>. <a href="http://www.microsoft.com/mac/downloads.aspx?pid=download&#x26;location=/mac/download/misc/rdc_update_103.xml&#x26;secid=80&#x26;ssid=10&#x26;flgnosysreq=True">Faça o download do software</a> (eu escolhi a versão em .bin) e vamos lá.</p>]]></description>
+            <link>https://leonardofaria.net//2006/10/28/acessando-seu-pc-windows-pelo-mac-os/</link>
+            <guid isPermaLink="false">135</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Sun, 29 Oct 2006 00:24:38 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Fixando o botão voltar em projetos em Flash]]></title>
+            <link>https://leonardofaria.net//2006/10/28/fixando-o-botao-voltar-em-projetos-em-flash/</link>
+            <guid isPermaLink="false">132</guid>
+            <category><![CDATA[flash]]></category>
+            <category><![CDATA[usability]]></category>
+            <pubDate>Sat, 28 Oct 2006 23:55:55 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Ajax a seu favor. E não contra]]></title>
+            <link>https://leonardofaria.net//2006/10/28/ajax-a-seu-favor-e-nao-contra/</link>
+            <guid isPermaLink="false">131</guid>
+            <category><![CDATA[ajax]]></category>
+            <category><![CDATA[usability]]></category>
+            <pubDate>Sat, 28 Oct 2006 23:36:26 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Pseudo-seletores são legais]]></title>
+            <link>https://leonardofaria.net//2006/10/28/pseudo-seletores-sao-legais/</link>
+            <guid isPermaLink="false">130</guid>
+            <category><![CDATA[css]]></category>
+            <pubDate>Sat, 28 Oct 2006 04:52:29 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Modifique seu adminstrador do WordPress]]></title>
+            <link>https://leonardofaria.net//2006/09/22/modifique-seu-adminstrador-do-wordpress/</link>
+            <guid isPermaLink="false">128</guid>
+            <category><![CDATA[wordpress]]></category>
+            <pubDate>Fri, 22 Sep 2006 18:33:55 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Por que o Linux não decola?]]></title>
+            <link>https://leonardofaria.net//2006/08/20/por-que-o-linux-nao-decola/</link>
+            <guid isPermaLink="false">109</guid>
+            <category><![CDATA[linux]]></category>
+            <pubDate>Sun, 20 Aug 2006 18:20:46 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Browser para Windows com engine do Safari]]></title>
+            <link>https://leonardofaria.net//2006/08/09/browser-para-windows-com-engine-do-safari-2/</link>
+            <guid isPermaLink="false">106</guid>
+            <category><![CDATA[browser]]></category>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Wed, 09 Aug 2006 14:32:48 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Browser com Exposé]]></title>
+            <link>https://leonardofaria.net//2006/07/23/browser-com-expose/</link>
+            <guid isPermaLink="false">103</guid>
+            <category><![CDATA[browser]]></category>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Sun, 23 Jul 2006 22:33:37 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Web2.Oh]]></title>
+            <link>https://leonardofaria.net//2006/07/06/web2oh/</link>
+            <guid isPermaLink="false">93</guid>
+            <pubDate>Thu, 06 Jul 2006 03:36:48 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Migração para Macintosh]]></title>
+            <link>https://leonardofaria.net//2006/07/01/migracao-para-macintosh/</link>
+            <guid isPermaLink="false">91</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Sat, 01 Jul 2006 18:04:17 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Opera 9 lançado]]></title>
+            <link>https://leonardofaria.net//2006/06/23/opera-9-lancado/</link>
+            <guid isPermaLink="false">76</guid>
+            <category><![CDATA[browser]]></category>
+            <pubDate>Fri, 23 Jun 2006 16:45:41 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Rádio online é moleza!]]></title>
+            <description><![CDATA[<p><strong>[update] Esse artigo foi escrito em 2006 e atualmente pode não ser a melhor opção para streaming.</strong></p>
+<p>Escrevi esse artigo no começo do ano para explicar como ocorre a transmissão de áudio para a Internet. (Nas minhas férias de faculdade – mês que vem – vou refazer esse artigo e aproveitar que tenho 2 micros em casa agora)Utilizaremos o SHOUTcast, que é livre e funciona em vários sistemas operacionais. É uma solução pequena, mais interessantíssima.</p>]]></description>
+            <link>https://leonardofaria.net//2006/06/23/radio-online-e-moleza/</link>
+            <guid isPermaLink="false">70</guid>
+            <category><![CDATA[radio]]></category>
+            <pubDate>Fri, 23 Jun 2006 03:45:29 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Desenvolvimento web no Macintosh 2]]></title>
+            <link>https://leonardofaria.net//2006/06/15/desenvolvimento-web-no-macintosh-2/</link>
+            <guid isPermaLink="false">66</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Fri, 16 Jun 2006 02:31:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Desenvolvimento web no Macintosh]]></title>
+            <description><![CDATA[<p>Muitos que se migram para o Mac OS se perguntam como trabalhar com desenvolvimento web nele. Well, o Mac OS X já vem com Apache configurado. Falta, portanto, configurar PHP e MySQL.</p>]]></description>
+            <link>https://leonardofaria.net//2006/06/15/desenvolvimento-web-no-macintosh/</link>
+            <guid isPermaLink="false">62</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Fri, 16 Jun 2006 02:20:54 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Por que webstandards?]]></title>
+            <description><![CDATA[<p>O artigo que vem a seguir foi escrito por mim em fevereiro do ano passado, para o projeto ReclamaSite (que nasceu morto). Naquela época, web2.0 não era <a href="http://info.abril.com.br/">capa de revista</a> e muita gente ainda tinha desconfiança das vantagens do Tableless.</p>]]></description>
+            <link>https://leonardofaria.net//2006/06/15/por-que-webstandards/</link>
+            <guid isPermaLink="false">61</guid>
+            <category><![CDATA[css]]></category>
+            <category><![CDATA[webstandards]]></category>
+            <pubDate>Fri, 16 Jun 2006 00:56:11 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[O problema do Flash vs IE]]></title>
+            <link>https://leonardofaria.net//2006/06/11/o-problema-do-flash-vs-ie/</link>
+            <guid isPermaLink="false">58</guid>
+            <category><![CDATA[browser]]></category>
+            <category><![CDATA[flash]]></category>
+            <pubDate>Sun, 11 Jun 2006 20:47:21 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Bookmarklets]]></title>
+            <link>https://leonardofaria.net//2006/06/08/bookmarklets/</link>
+            <guid isPermaLink="false">57</guid>
+            <category><![CDATA[browser]]></category>
+            <category><![CDATA[javascript]]></category>
+            <pubDate>Thu, 08 Jun 2006 17:55:37 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Alternativa em webmail]]></title>
+            <description><![CDATA[<p>Quem usa webmail de servidores LAMP provavelmente conhece as sérias limitações do Horde e do SquirelMail, que são instalados juntos no cPanel. Interfaces feias e falta de usabilidade sempre estão ligadas a esses webmails.</p>
+<p>Entretando, conheci semana passada o <a href="http://www.roundcube.net/">RoundCube</a>, um cliente de email com código XHTML válido, bonito e altamente personalizável.</p>]]></description>
+            <link>https://leonardofaria.net//2006/06/08/alternativa-em-webmail/</link>
+            <guid isPermaLink="false">53</guid>
+            <category><![CDATA[linux]]></category>
+            <category><![CDATA[php]]></category>
+            <pubDate>Thu, 08 Jun 2006 05:25:48 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Top plugins para WordPress]]></title>
+            <description><![CDATA[<p>WordPress é unanimidade em solução para blog. Há uns três anos, quando comecei minha vida blogger, eu mesmo escrevia um pequeno gerenciador de notícias, mas isso não se mostrou tão eficiente. Depois disso, adotei o <a href="http://ajfork.berlios.de/">AJ-Fork</a>, mas esse também não se mostrou tão eficiente. Adotei o WordPress e agora relato alguns plugins bastantes interessantes, que uso aqui, ou na extranet da empresa (sim, aonde trabalho estamos desenvolvendo uma extranet).</p>]]></description>
+            <link>https://leonardofaria.net//2006/06/04/top-plugins-para-wordpress/</link>
+            <guid isPermaLink="false">52</guid>
+            <category><![CDATA[php]]></category>
+            <category><![CDATA[wordpress]]></category>
+            <pubDate>Sun, 04 Jun 2006 19:42:15 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Webalizer]]></title>
+            <description><![CDATA[<p>O Webalizer, para quem não sabe, é um software que mostra as estatísticas de utilização de um site. Seu acesso, na maioria das vezes, é feita pelo cPanel, painel de controle do servidor. Esse acesso só acontece se o usuário estiver logado, o que pode inviabilizar o acesso as estatísticas por pessoas sem a senha.<br>
+Entretanto, há uma forma de exibir esses dados, publicamente.</p>]]></description>
+            <link>https://leonardofaria.net//2006/06/04/webalizer/</link>
+            <guid isPermaLink="false">51</guid>
+            <category><![CDATA[php]]></category>
+            <pubDate>Sun, 04 Jun 2006 18:29:38 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Hacks para Internet Explorer]]></title>
+            <description><![CDATA[<p>Escrever uma página 100% idêntica para vários browsers pode parecer impossível. Mas não é.<br>
+Para contornar isso, hacks são usados, para tentar uma aproximação entre browsers.</p>]]></description>
+            <link>https://leonardofaria.net//2006/06/04/hacks-para-internet-explorer/</link>
+            <guid isPermaLink="false">49</guid>
+            <category><![CDATA[browser]]></category>
+            <category><![CDATA[css]]></category>
+            <pubDate>Sun, 04 Jun 2006 17:58:35 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Greasemonkey para orkut na Faculdade]]></title>
+            <link>https://leonardofaria.net//2006/06/01/greasemonkey-para-orkut-na-faculdade/</link>
+            <guid isPermaLink="false">47</guid>
+            <category><![CDATA[browser]]></category>
+            <category><![CDATA[javascript]]></category>
+            <pubDate>Thu, 01 Jun 2006 18:00:32 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Monitorando o MSN de uma rede]]></title>
+            <description><![CDATA[<p>Esse artigo não tem tanto a ver com esse site, mas pode ajudar muitos admistradores de rede Linux.</p>
+<p>O uso do MSN desenfreado pode acabar com a produtividade do trabalho em uma empresa, por exemplo. Aonde eu trabalho, implementamos uma solução interessante: um sniffer, que gera relatórios das conversas dos funcionários (o que não é tão ético assim) e que está instalado em nosso servidor de Internet (rodando Slackware Linux).</p>]]></description>
+            <link>https://leonardofaria.net//2006/05/28/monitorando-o-msn-de-uma-rede/</link>
+            <guid isPermaLink="false">45</guid>
+            <category><![CDATA[linux]]></category>
+            <pubDate>Sun, 28 May 2006 20:57:30 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Webdevelopment no Macintosh]]></title>
+            <link>https://leonardofaria.net//2006/04/27/webdevelopment-no-macintosh/</link>
+            <guid isPermaLink="false">40</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Fri, 28 Apr 2006 01:38:18 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[CSS para preloader de imagem]]></title>
+            <link>https://leonardofaria.net//2006/04/23/css-para-preloader-de-imagem/</link>
+            <guid isPermaLink="false">37</guid>
+            <category><![CDATA[css]]></category>
+            <pubDate>Mon, 24 Apr 2006 01:33:02 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[iBook]]></title>
+            <link>https://leonardofaria.net//2006/04/20/ibook/</link>
+            <guid isPermaLink="false">35</guid>
+            <category><![CDATA[mac]]></category>
+            <pubDate>Fri, 21 Apr 2006 01:25:05 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Diferença entre Web 1.0 e Web 2.0]]></title>
+            <link>https://leonardofaria.net//2006/04/10/diferenca-entre-web-10-e-web-20/</link>
+            <guid isPermaLink="false">33</guid>
+            <category><![CDATA[fun]]></category>
+            <pubDate>Tue, 11 Apr 2006 01:18:21 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Eliminando conteúdo para buscas]]></title>
+            <description><![CDATA[<p>Sistemas de busca, ao trabalhar, lêem um arquivo “robots.txt” (deixado na raiz do servidor). Esse arquivo especifica para o spider quais arquivos devem aparecer na busca.</p>
+<p>Nesse artigo, veremos como excluir determinada pasta de uma search engine.</p>]]></description>
+            <link>https://leonardofaria.net//2006/04/05/eliminando-conteudo-para-buscas/</link>
+            <guid isPermaLink="false">29</guid>
+            <category><![CDATA[apache]]></category>
+            <pubDate>Thu, 06 Apr 2006 01:09:05 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Ocultando a tecnologia de um site usando mod_rewrite]]></title>
+            <description><![CDATA[<p>No artigo anterior, sugeri a mudança na configuração do httpd.conf para ocultar qual a tecnologia de um site. Isso pode ser útil em dois casos. O primeiro, por uma questão estética (não tão relevante) e a segunda por uma questão de segurança. Já que não se conhece como o site foi feito, ataques com SQL Injection, por exemplo, podem ser atrasados.</p>]]></description>
+            <link>https://leonardofaria.net//2006/04/05/ocultando-a-tecnologia-de-um-site-usando-mod_rewrite/</link>
+            <guid isPermaLink="false">28</guid>
+            <category><![CDATA[apache]]></category>
+            <pubDate>Thu, 06 Apr 2006 01:08:58 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Editando o httpd.conf para ocultar a tecnologia de um site]]></title>
+            <description><![CDATA[<p>Em nosso trabalho, deparamos com arquivos do tipo index.do, index.foo, index.123. Mas como isso é feito?<br>
+O Apache permite alterar o suporte das extensões suportadas por ele.<br>
+O arquivo httpd.conf é o principal gerenciador de configurações do servidor. É nele que vamos trabalhar.</p>]]></description>
+            <link>https://leonardofaria.net//2006/04/05/editando-o-httpdconf-para-ocultar-a-tecnologia-de-um-site/</link>
+            <guid isPermaLink="false">27</guid>
+            <category><![CDATA[apache]]></category>
+            <pubDate>Thu, 06 Apr 2006 01:00:45 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Verificando contas de e-mail POP3 com PHP]]></title>
+            <description><![CDATA[<p>Escrevi uma funçãozinha que verifica a existência de emails (e informações adicionais como: assunto, remetente e data) de contas POP3, em PHP. O código está abaixo.</p>
+<p>Na próxima semana, postarei uma revisão desse código. A próxima versão implementará uso de CSS e Javascript, para uma interface mais interativa.</p>]]></description>
+            <link>https://leonardofaria.net//2006/03/20/verificando-contas-de-e-mail-pop3-com-php/</link>
+            <guid isPermaLink="false">26</guid>
+            <category><![CDATA[php]]></category>
+            <pubDate>Tue, 21 Mar 2006 00:57:54 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Executando programas no cliente]]></title>
+            <link>https://leonardofaria.net//2006/03/15/executando-programas-no-cliente/</link>
+            <guid isPermaLink="false">25</guid>
+            <category><![CDATA[browser]]></category>
+            <pubDate>Thu, 16 Mar 2006 00:56:16 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[CSS: Transparências cross-browser]]></title>
+            <link>https://leonardofaria.net//2006/02/09/css-transparencias-cross-browser/</link>
+            <guid isPermaLink="false">31</guid>
+            <category><![CDATA[css]]></category>
+            <pubDate>Fri, 10 Feb 2006 00:18:20 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[O Pai do Flash: FutureSplash]]></title>
+            <link>https://leonardofaria.net//2006/01/07/o-pai-do-flash-futuresplash/</link>
+            <guid isPermaLink="false">24</guid>
+            <category><![CDATA[flash]]></category>
+            <pubDate>Sat, 07 Jan 2006 23:54:15 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Macromedia Studio 8]]></title>
+            <link>https://leonardofaria.net//2005/08/09/macromedia-studio-8/</link>
+            <guid isPermaLink="false">20</guid>
+            <category><![CDATA[flash]]></category>
+            <pubDate>Wed, 10 Aug 2005 00:43:59 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Eu testei o Wallop]]></title>
+            <link>https://leonardofaria.net//2005/07/21/eu-testei-o-wallop/</link>
+            <guid isPermaLink="false">19</guid>
+            <pubDate>Fri, 22 Jul 2005 00:40:31 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[10º Encontro de Webdesign: o bom, o ruim e o feio]]></title>
+            <description><![CDATA[<p>Ontem foi realizado o Décimo Encontro de Webdesign, promovido em Belo Horizonte, pelo Arteccom. Todo o sábado foi marcado por cinco palestras, que comentarei nesse post.</p>
+<p><strong>O design, a web e a agência digital</strong> abriu o dia. Cristiano D'Alcântara expôs a importância do profissional de design para a nova era digital. O design é primordial para uma empresa, salvando-a do vermelho. Apple, Samsung e BMW (a única empresa do mundo que tem um presidente designer!) seriam empresas que investiam bastante em design, conseguindo um ótimo feedback financeiro.</p>]]></description>
+            <link>https://leonardofaria.net//2005/07/10/10-encontro-de-webdesign-o-bom-o-ruim-e-o-feio/</link>
+            <guid isPermaLink="false">18</guid>
+            <category><![CDATA[event]]></category>
+            <pubDate>Mon, 11 Jul 2005 00:37:22 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Documentação sobre Flash]]></title>
+            <link>https://leonardofaria.net//2005/06/04/documentacao-sobre-flash/</link>
+            <guid isPermaLink="false">17</guid>
+            <category><![CDATA[flash]]></category>
+            <pubDate>Sun, 05 Jun 2005 00:34:33 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Rich Internet Applications]]></title>
+            <link>https://leonardofaria.net//2005/05/21/rich-internet-applications/</link>
+            <guid isPermaLink="false">16</guid>
+            <category><![CDATA[flash]]></category>
+            <category><![CDATA[ajax]]></category>
+            <pubDate>Sun, 22 May 2005 00:32:57 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Novas regras para domínios brasileiros]]></title>
+            <link>https://leonardofaria.net//2005/05/05/novas-regras-para-dominios-brasileiros/</link>
+            <guid isPermaLink="false">15</guid>
+            <pubDate>Fri, 06 May 2005 00:31:04 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[A guerra dos browsers esquenta]]></title>
+            <link>https://leonardofaria.net//2005/04/30/a-guerra-dos-browsers-esquenta/</link>
+            <guid isPermaLink="false">14</guid>
+            <category><![CDATA[browser]]></category>
+            <pubDate>Sun, 01 May 2005 00:28:34 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Ajax]]></title>
+            <link>https://leonardofaria.net//2005/04/19/ajax/</link>
+            <guid isPermaLink="false">13</guid>
+            <category><![CDATA[webstandards]]></category>
+            <category><![CDATA[ajax]]></category>
+            <pubDate>Wed, 20 Apr 2005 00:27:12 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Adobe compra Macromedia]]></title>
+            <link>https://leonardofaria.net//2005/04/18/adobe-compra-macromedia/</link>
+            <guid isPermaLink="false">12</guid>
+            <category><![CDATA[flash]]></category>
+            <pubDate>Tue, 19 Apr 2005 00:21:19 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Flash 8?]]></title>
+            <link>https://leonardofaria.net//2005/04/15/flash-8/</link>
+            <guid isPermaLink="false">11</guid>
+            <category><![CDATA[flash]]></category>
+            <pubDate>Sat, 16 Apr 2005 00:16:30 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Web Essentials 2004]]></title>
+            <link>https://leonardofaria.net//2005/03/27/web-essentials-2004/</link>
+            <guid isPermaLink="false">9</guid>
+            <category><![CDATA[webstandards]]></category>
+            <pubDate>Mon, 28 Mar 2005 00:14:56 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[O que esperar com o CSS3]]></title>
+            <link>https://leonardofaria.net//2005/03/27/o-que-esperar-com-o-css3/</link>
+            <guid isPermaLink="false">7</guid>
+            <category><![CDATA[css]]></category>
+            <pubDate>Mon, 28 Mar 2005 00:11:57 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Internet Explorer: porque não contar com ele]]></title>
+            <link>https://leonardofaria.net//2005/03/26/internet-explorer-porque-nao-contar-com-ele/</link>
+            <guid isPermaLink="false">5</guid>
+            <category><![CDATA[browser]]></category>
+            <pubDate>Sun, 27 Mar 2005 00:06:39 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Homepage – Usabilidade: 50 sites desconstruídos]]></title>
+            <link>https://leonardofaria.net//2005/03/25/homepage-usabilidade-50-sites-desconstruidos/</link>
+            <guid isPermaLink="false">42</guid>
+            <category><![CDATA[usability]]></category>
+            <pubDate>Sat, 26 Mar 2005 01:45:50 GMT</pubDate>
+        </item>
+    </channel>
+</rss>

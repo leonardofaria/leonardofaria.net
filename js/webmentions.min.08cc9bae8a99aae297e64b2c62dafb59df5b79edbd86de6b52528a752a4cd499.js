@@ -2,7 +2,7 @@ const ANON_AVATAR='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" 
 const targets=getUrlPermutations(url,aliases,productionBaseUrl);const script=document.createElement('script');let src='https://webmention.io/api/mentions?perPage=500&jsonp=parseWebmentions';targets.forEach((targetUrl)=>{src+=`&target[]=${encodeURIComponent(targetUrl)}`;});src+=`&_=${Math.random()}`;script.src=src;script.async=true;document.body.appendChild(script);}
 const getUrlPermutations=(url,aliases,productionBaseUrl)=>{const urls=[];const currentUrl=new URL(window.location);url=url.replace(currentUrl.origin,productionBaseUrl);urls.push(url);urls.push(url.replace('https://','http://'));if(url.substr(-1)==='/'){var noslash=url.substr(0,url.length-1);urls.push(noslash);urls.push(noslash.replace('https://','http://'));}
 if(aliases){aliases.forEach((alias)=>{urls.push(`${productionBaseUrl}/${alias}`);});}
-return urls;}
+console.log(urls);return urls;}
 const parseWebmentions=(data)=>{const links=data.links.sort(wmSort);const likes=[];const reposts=[];const replies=[];const avatarUrls=[];links.map((l)=>{if(!l.activity||!l.activity.type){console.warning('unknown link type',l);return;}
 if(!l.verified){return;}
 if(l.data.author){avatarUrls.push(l.data.author.photo);}
