@@ -8,6 +8,15 @@ export default function PageNav() {
       <li className="flex my-2 lg:my-2 mx-1 lg:mx-2">
         <Link
           className="uppercase font-bold lg:py-2 lg:px-3 rounded text-sm opacity-75 hover:opacity-100 transition duration-300 ease-in-out"
+          href="/microblog"
+        >
+          Microblog
+        </Link>
+      </li>
+
+      <li className="flex my-2 lg:my-2 mx-1 lg:mx-2">
+        <Link
+          className="uppercase font-bold lg:py-2 lg:px-3 rounded text-sm opacity-75 hover:opacity-100 transition duration-300 ease-in-out"
           href="/archives"
         >
           Archives
