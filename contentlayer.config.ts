@@ -204,6 +204,9 @@ const Micropost = defineDocumentType(() => ({
     ogImage: {
       type: 'string',
     },
+    link: {
+      type: 'string',
+    },
     description: {
       type: 'string',
     },

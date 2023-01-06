@@ -4,9 +4,10 @@ import Header from 'components/Header/Header';
 import { allMicroposts, type Micropost } from 'contentlayer/generated';
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
 import { NextSeo } from 'next-seo';
-import { BASE_URL, WEBSITE_TITLE } from 'lib/constants';
+import { WEBSITE_TITLE } from 'lib/constants';
 import Intro from 'components/Microblog/Intro';
 import Link from 'next/link';
+import Embed from 'components/Embed';
 
 export const getStaticProps: GetStaticProps<{
   microposts: Micropost[];
@@ -50,9 +51,10 @@ export default function MicroblogPage({
           {microposts.map((micropost) => (
             <div key={micropost.slug}>
               <Link href={`/microblog/${micropost.slug}`}>
-                {' '}
-                - {micropost.title}
+                {micropost.title}
               </Link>
+
+              {micropost.link && <Embed url={micropost.link} />}
             </div>
           ))}
         </article>

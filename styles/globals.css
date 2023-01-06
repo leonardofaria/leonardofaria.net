@@ -306,7 +306,7 @@ html {
   @apply bg-transparent;
 }
 
-.article iframe,
+/* .article iframe, */
 .article .fluid-width-video-wrapper {
   @apply block;
   @apply my-6;
