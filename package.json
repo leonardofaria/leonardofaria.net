@@ -41,6 +41,7 @@
     "@next/font": "^13.1.1",
     "@sentry/nextjs": "^7.29.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@vercel/analytics": "^0.1.6",
     "contentlayer": "^0.2.9",
     "disqus-react": "^1.1.5",
     "gray-matter": "^4.0.3",

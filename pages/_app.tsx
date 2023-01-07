@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
+import { Analytics } from '@vercel/analytics/react';
 import { DefaultSeo } from 'next-seo';
 import { Inter } from '@next/font/google';
 import SEO from 'lib/next-seo.config';
@@ -33,6 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         src={UMAMI_URL}
         strategy="lazyOnload"
       />
+      <Analytics />
     </div>
   );
 }
