@@ -151,7 +151,6 @@ const Post = defineDocumentType(() => ({
 const Page = defineDocumentType(() => ({
   name: 'Page',
   contentType: 'mdx',
-  // Location of Post source files (relative to `contentDirPath`)
   filePathPattern: '*.mdx',
   fields: {
     id: {
@@ -184,9 +183,49 @@ const Page = defineDocumentType(() => ({
   },
 }));
 
+const Micropost = defineDocumentType(() => ({
+  name: 'Micropost',
+  contentType: 'mdx',
+  filePathPattern: '*.mdx',
+  fields: {
+    title: {
+      type: 'string',
+      required: true,
+    },
+    publishedAt: {
+      type: 'date',
+      required: true,
+    },
+    template: {
+      type: 'enum',
+      options: ['text', 'video', 'image', 'link', 'embed'],
+      required: true,
+    },
+    ogImage: {
+      type: 'string',
+    },
+    link: {
+      type: 'string',
+    },
+    description: {
+      type: 'string',
+    },
+    tags: {
+      type: 'list',
+      of: { type: 'string' },
+    },
+  },
+  computedFields: {
+    slug: {
+      type: 'string',
+      resolve: (doc: any) => doc._raw.sourceFileName.replace(/\.mdx$/, ''), // eslint-disable-line no-underscore-dangle
+    },
+  },
+}));
+
 export default makeSource({
   contentDirPath: 'content',
-  documentTypes: [Post, Page],
+  documentTypes: [Post, Page, Micropost],
   mdx: {
     esbuildOptions(options) {
       options.target = 'esnext';

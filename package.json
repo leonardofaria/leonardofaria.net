@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "@next/font": "^13.1.1",
+    "@sentry/nextjs": "^7.29.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "contentlayer": "^0.2.9",
     "disqus-react": "^1.1.5",
@@ -48,6 +49,7 @@
     "next-seo": "^5.15.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-embed": "^3.6.0",
     "react-icons": "^4.7.1",
     "react-twitter-embed": "^4.0.4",
     "reading-time": "^1.5.0",
