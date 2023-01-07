@@ -1,7 +1,13 @@
-import { Post } from 'contentlayer/generated';
+import { type Micropost, type Post } from 'contentlayer/generated';
 import Link from 'next/link';
 
-export function PostsByYear({ year, posts }: { year: string; posts: Post[] }) {
+export function PostsByYear({
+  year,
+  posts,
+}: {
+  year: string;
+  posts: (Post | Micropost)[];
+}) {
   return (
     <div className="flex flex-col md:flex-row border-b border-gray-400">
       <h2 className="text-3xl font-bold mb-2 md:w-32 flex-shrink-0 flex-grow-0">
@@ -10,12 +16,13 @@ export function PostsByYear({ year, posts }: { year: string; posts: Post[] }) {
 
       <ol className="mb-4 list-none w-full">
         {posts.map((post) => {
-          const createdAt = new Date(post.date);
+          const createdAt = new Date(post.publishedAt);
+          // const isMicropost = post satisfies Micropost;
 
           return (
             <li
               className="mb-8 flex flex-col no-underline rounded-md hover:bg-white transition duration-300 ease-in-out"
-              key={post.id}
+              key={post.slug}
             >
               <Link
                 className="tracking-tight no-underline text-blue-600 m-2 mb-0"
@@ -25,7 +32,7 @@ export function PostsByYear({ year, posts }: { year: string; posts: Post[] }) {
               </Link>
 
               <small className="m-2 text-sm">
-                <time className="text-gray-500" dateTime={post.date}>
+                <time className="text-gray-500" dateTime={post.publishedAt}>
                   {
                     createdAt
                       .toLocaleDateString('en-US', {

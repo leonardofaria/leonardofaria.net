@@ -1,7 +1,7 @@
 import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
 import Intro from 'components/Intro/Intro';
-import { type Post } from 'contentlayer/generated';
+import { type Post, type Micropost } from 'contentlayer/generated';
 import {
   BASE_URL,
   WEBSITE_DESCRIPTION,
@@ -12,7 +12,7 @@ import { NextSeo } from 'next-seo';
 import { groupPostsByYears } from './shared';
 import { PostsByYear } from './shared/PostsByYear';
 
-export default function Home({ posts }: { posts: Post[] }) {
+export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
   const postsByYears = groupPostsByYears(posts);
 
   return (

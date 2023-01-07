@@ -113,6 +113,11 @@ const Post = defineDocumentType(() => ({
         return null;
       },
     },
+    // TODO: rename date to publishedAt and remove this
+    publishedAt: {
+      type: 'date',
+      resolve: (post) => post.date,
+    },
     readingTime: {
       type: 'json',
       resolve: (doc) => readingTime(doc.body.raw),
@@ -181,6 +186,13 @@ const Page = defineDocumentType(() => ({
       of: { type: 'string' },
     },
   },
+  computedFields: {
+    // TODO: rename date to publishedAt and remove this
+    publishedAt: {
+      type: 'date',
+      resolve: (post) => post.date,
+    },
+  },
 }));
 
 const Micropost = defineDocumentType(() => ({
@@ -218,7 +230,20 @@ const Micropost = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: 'string',
-      resolve: (doc: any) => doc._raw.sourceFileName.replace(/\.mdx$/, ''), // eslint-disable-line no-underscore-dangle
+      resolve: (micropost) =>
+        micropost._raw.sourceFileName.replace(/\.mdx$/, ''), // eslint-disable-line no-underscore-dangle
+    },
+    permalink: {
+      type: 'string',
+      resolve: (micropost) =>
+        `/microblog/${micropost._raw.sourceFileName.replace(/\.mdx$/, '')}`, // eslint-disable-line no-underscore-dangle
+    },
+    year: {
+      type: 'string',
+      resolve: (post) => {
+        const publishedAt = new Date(post.publishedAt);
+        return publishedAt.getFullYear().toString();
+      },
     },
   },
 }));

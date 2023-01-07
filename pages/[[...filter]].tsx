@@ -2,8 +2,11 @@ import Archives from 'components/CMS/Archives';
 import Home from 'components/CMS/Home';
 import Single from 'components/CMS/Single';
 import {
+  allDocuments,
+  allMicroposts,
   allPages,
   allPosts,
+  type Micropost,
   type Page,
   type Post,
 } from 'contentlayer/generated';
@@ -32,10 +35,10 @@ type CurrentFilters = {
 
 export const getStaticProps: GetStaticProps<{
   currentFilters: CurrentFilters;
-  posts: (Post | Page)[];
+  posts: (Post | Page | Micropost)[];
 }> = async ({ params }) => {
-  let posts = [...allPosts, ...allPages].sort(
-    (a, b) => Number(new Date(b.date)) - Number(new Date(a.date))
+  let posts = [...allDocuments].sort(
+    (a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
   );
 
   let currentFilters: CurrentFilters = { type: 'home' };
@@ -55,10 +58,8 @@ export const getStaticProps: GetStaticProps<{
   }
 
   if (currentFilters.type === 'home') {
-    posts = posts.filter((p) => {
-      const date = new Date(p.date);
-      const year = date.getFullYear();
-      if (year >= 2018) {
+    posts = [...allMicroposts, ...allPosts].filter((p) => {
+      if (parseInt(p.year, 10) >= 2020) {
         return true;
       }
       return false;
@@ -84,12 +85,18 @@ export default function SinglePostPage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   if (currentFilters.type === 'home') {
     return (
-      <Home posts={posts.filter((post) => post.type === 'Post') as Post[]} />
+      <Home
+        posts={
+          posts.filter(
+            (post) => post.type === 'Post' || post.type === 'Micropost'
+          ) as (Post | Micropost)[]
+        }
+      />
     );
   }
 
   if (currentFilters.type === 'page') {
-    return <Single post={posts[0]} type="page" />;
+    return <Single post={posts[0] as Page} type="page" />;
   }
 
   if (currentFilters.type === 'archives') {

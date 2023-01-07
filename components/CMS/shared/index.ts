@@ -1,7 +1,10 @@
-import { type Post } from 'contentlayer/generated';
+import { type Post, type Micropost } from 'contentlayer/generated';
 
-export function groupPostsByYears(posts: Post[]): Record<string, Post[]> {
-  return posts.reduce((r: Record<string, Post[]>, post) => {
+export function groupPostsByYears(
+  posts: (Post | Micropost)[]
+): Record<string, (Post | Micropost)[]> {
+  return posts.reduce((r: Record<string, (Post | Micropost)[]>, post) => {
+    // console.log(post.year);
     r[post.year] = r[post.year] || [];
     r[post.year].push(post);
     return r;
