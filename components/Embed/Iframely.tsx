@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 
 const { NEXT_PUBLIC_IFRAMELY_KEY } = process.env;
 
+/* eslint-disable react/no-danger */
+
 export default function Iframely({ url }: { url: string }) {
   const [error, setError] = useState<string | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);

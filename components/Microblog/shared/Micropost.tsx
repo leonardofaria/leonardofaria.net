@@ -1,7 +1,6 @@
 import { type Micropost as MicropostType } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import Link from 'next/link';
-import { BASE_URL } from 'lib/constants';
 import Embed from 'components/Embed';
 
 export default function Micropost({ micropost }: { micropost: MicropostType }) {
@@ -13,7 +12,6 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
     // ogImage,
     body: { code },
   } = micropost;
-  const url = `${BASE_URL}/microblog/${slug}`;
   const MDXContent = useMDXComponent(code);
   const createdAt = new Date(publishedAt);
 
@@ -41,7 +39,7 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
         <h1 className="leading-9 text-center">
           <Link
             className="no-underline inline-block text-black relative"
-            href={url}
+            href={`/microblog/${slug}`}
           >
             {title}
           </Link>
