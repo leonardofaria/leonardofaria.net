@@ -8,6 +8,8 @@ export const WEBSITE_TITLE = 'Leonardo Faria';
 export const WEBSITE_SUBHEADING = "Hi, I'm Leo 👋";
 export const WEBSITE_DESCRIPTION =
   'I am Leonardo Faria, a Brazilian developer living in Vancouver. This is my blog about software development and more since 2005.';
+export const MICROBLOG_INTRO =
+  'Remember Microblogs? My favourite links, videos and short thoughts';
 
 const fullConfig = resolveConfig(tailwindConfig);
 export const LARGE_SCREEN_BREAKPOINT = parseInt(
