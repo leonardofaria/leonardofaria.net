@@ -65,6 +65,16 @@ export const getStaticProps: GetStaticProps<{
     });
   }
 
+  // Catch 404
+  const allPageSlugs = [
+    'archives',
+    ...allPages.map((page) => page.permalink.replace('/', '')),
+  ];
+
+  if (params?.filter?.[0] && !allPageSlugs.includes(params?.filter?.[0])) {
+    return { notFound: true };
+  }
+
   return { props: { posts, currentFilters } };
 };
 
