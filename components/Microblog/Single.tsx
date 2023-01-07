@@ -3,7 +3,7 @@ import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
 import { NextSeo } from 'next-seo';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from 'lib/constants';
-import Disqus from 'components/Embed/Disqus';
+// import Disqus from 'components/Embed/Disqus';
 import Webmentions from 'components/Webmentions/Webmentions';
 import Micropost from './shared/Micropost';
 
@@ -72,9 +72,9 @@ export default function Single({ micropost }: { micropost: MicropostType }) {
 
             <Webmentions url={url} />
 
-            <h3>Comments</h3>
+            {/* <h3>Comments</h3>
 
-            <Disqus title={title} url={`${BASE_URL}${slug}`} />
+            <Disqus title={title} url={`${BASE_URL}${slug}`} /> */}
           </section>
         </article>
       </main>
