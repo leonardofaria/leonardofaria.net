@@ -7,7 +7,7 @@ import {
   type Page,
   type Post,
 } from 'contentlayer/generated';
-import generateFeed from 'lib/rss';
+// import generateFeed from 'lib/rss';
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
 
 export const getStaticPaths = () => {
@@ -62,7 +62,7 @@ export const getStaticProps: GetStaticProps<{
       return false;
     });
 
-    await generateFeed();
+    // await generateFeed();
   }
 
   return { props: { posts, currentFilters } };
