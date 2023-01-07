@@ -3,7 +3,7 @@ import RSS from 'rss';
 import { allPosts } from 'contentlayer/generated';
 import { BASE_URL, WEBSITE_TITLE, WEBSITE_DESCRIPTION } from './constants';
 
-export default async function generateFeed() {
+export default function generateFeed() {
   const feed = new RSS({
     title: WEBSITE_TITLE,
     description: WEBSITE_DESCRIPTION,

@@ -12,6 +12,13 @@ const config: DefaultSeoProps = {
     site: 'https://leonardofaria.net/',
     cardType: 'summary_large_image',
   },
+  additionalLinkTags: [
+    {
+      rel: 'alternate',
+      type: 'application/rss+xml',
+      href: '/rss.xml',
+    },
+  ],
 };
 
 export default config;

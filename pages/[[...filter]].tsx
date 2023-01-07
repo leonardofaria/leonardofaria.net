@@ -7,7 +7,7 @@ import {
   type Page,
   type Post,
 } from 'contentlayer/generated';
-// import generateFeed from 'lib/rss';
+import generateFeed from 'lib/rss';
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
 
 export const getStaticPaths = () => {
@@ -17,6 +17,8 @@ export const getStaticPaths = () => {
       params: { filter: ['page', page.permalink.replace('/', '')] },
     })),
   ];
+
+  generateFeed();
 
   return {
     paths,
@@ -61,8 +63,6 @@ export const getStaticProps: GetStaticProps<{
       }
       return false;
     });
-
-    // await generateFeed();
   }
 
   return { props: { posts, currentFilters } };
