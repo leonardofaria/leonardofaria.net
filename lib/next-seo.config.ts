@@ -1,11 +1,18 @@
 import { DefaultSeoProps } from 'next-seo';
 
-const config: DefaultSeoProps = {
+const config = (url: string): DefaultSeoProps => ({
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://leonardofaria.net/',
     siteName: 'Leonardo Faria',
+    images: [
+      {
+        url,
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
   twitter: {
     handle: '@leozera',
@@ -19,6 +26,6 @@ const config: DefaultSeoProps = {
       href: '/rss.xml',
     },
   ],
-};
+});
 
 export default config;

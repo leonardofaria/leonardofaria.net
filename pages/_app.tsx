@@ -7,6 +7,8 @@ import SEO from 'lib/next-seo.config';
 import Script from 'next/script';
 import { UMAMI_SITEID, UMAMI_URL } from 'lib/constants';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { getAbsoluteURL } from 'lib/utils';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -14,6 +16,11 @@ const inter = Inter({
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  const searchParams = new URLSearchParams();
+  searchParams.set('path', router.asPath);
+  const ogImageUrl = getAbsoluteURL(`/api/thumbnail?${searchParams}`);
+
   return (
     <div
       className={`${inter.variable} font-sans bg-gradient flex flex-col min-h-screen`}
@@ -25,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           rel="pingback"
         />
       </Head>
-      <DefaultSeo {...SEO} />
+      <DefaultSeo {...SEO(ogImageUrl)} />
 
       <Component {...pageProps} />
 
