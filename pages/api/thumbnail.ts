@@ -6,7 +6,10 @@ import { getAbsoluteURL } from 'lib/utils';
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const browser = await playwright.launchChromium({ headless: true });
+    const browser = await playwright.launchChromium({
+      headless: true,
+      ignoreDefaultArgs: ['--disable-extensions'],
+    });
     const page = await browser.newPage({
       viewport: {
         width: 1200,
