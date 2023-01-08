@@ -8,6 +8,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const browser = await playwright.launchChromium({
       headless: true,
+      args: ['--hide-scrollbars', '--disable-web-security'],
       ignoreDefaultArgs: ['--disable-extensions'],
     });
     const page = await browser.newPage({
