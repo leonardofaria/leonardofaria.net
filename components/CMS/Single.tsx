@@ -21,7 +21,7 @@ export default function Single({
     description,
     tags,
     permalink,
-    // ogImage,
+    ogImage,
     body: { code },
     // TODO: check if dsq_thread_id is really needed
     // dsq_thread_id: disqusIds,
@@ -71,14 +71,14 @@ export default function Single({
             tags,
             authors: [AUTHOR],
           },
-          // images: [
-          //   {
-          //     url: `${BASE_URL}/${ogImage}`,
-          //     width: 1800,
-          //     height: 945,
-          //     alt: `Cover photo of ${title}`,
-          //   },
-          // ],
+          images: [
+            {
+              url: `${BASE_URL}/${ogImage}`,
+              width: 1800,
+              height: 945,
+              alt: `Cover photo of ${title}`,
+            },
+          ],
         }}
         title={`${title} · ${WEBSITE_TITLE}`}
       />
