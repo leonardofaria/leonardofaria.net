@@ -27,7 +27,7 @@ const Post = defineDocumentType(() => ({
   name: 'Post',
   contentType: 'mdx',
   // Location of Post source files (relative to `contentDirPath`)
-  filePathPattern: '{20*}/{01-12}/{01-31}/*.mdx',
+  filePathPattern: 'posts/{20*}/{01-12}/{01-31}/*.mdx',
   fields: {
     id: {
       type: 'number',
@@ -156,7 +156,7 @@ const Post = defineDocumentType(() => ({
 const Page = defineDocumentType(() => ({
   name: 'Page',
   contentType: 'mdx',
-  filePathPattern: '*.mdx',
+  filePathPattern: 'pages/*.mdx',
   fields: {
     id: {
       type: 'number',
@@ -198,7 +198,7 @@ const Page = defineDocumentType(() => ({
 const Micropost = defineDocumentType(() => ({
   name: 'Micropost',
   contentType: 'mdx',
-  filePathPattern: '*.mdx',
+  filePathPattern: 'microposts/*.mdx',
   fields: {
     title: {
       type: 'string',
