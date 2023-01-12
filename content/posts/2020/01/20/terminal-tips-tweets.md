@@ -13,7 +13,7 @@ tags:
   - software
 ---
 
-import Twitter from '../../../../../components/Embed/Twitter';
+import Twitter from '../../../../../src/components/Embed/Twitter';
 
 A while ago I started a [thread on Twitter](https://twitter.com/leozera/status/1090639374109138946) with a few terminal tips. There are lots of CLIs in NPM and they can be very handy in our daily work. Here they are and if you like them, [follow me](https://twitter.com/leozera) :)
 

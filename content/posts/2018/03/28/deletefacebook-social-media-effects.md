@@ -9,7 +9,7 @@ guid: https://leonardofaria.net/?p=1901
 permalink: /2018/03/28/deletefacebook-social-media-effects
 ---
 
-import YouTube from '../../../../../components/Embed/YouTube';
+import YouTube from '../../../../../src/components/Embed/YouTube';
 
 This week #deletefacebook was a trending topic everywhere after all the Cambridge Analytica scandal. Lots of people deleted their accounts, including [Elon Musk](https://www.theverge.com/2018/3/23/17156402/elon-musk-deleted-tesla-and-spacex-facebook-pages-twitter-challenge) and the [WhatsApp co-founder Brian Acton](https://www.theverge.com/2018/3/20/17145200/brian-acton-delete-facebook-whatsapp). I didn't delete my account but one thing that I did in the middle of February was deleting the app from my iPhone – which is a good step anyway.
 

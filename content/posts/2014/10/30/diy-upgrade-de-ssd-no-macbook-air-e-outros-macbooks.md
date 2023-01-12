@@ -15,7 +15,7 @@ tags:
   - mac
 ---
 
-import YouTube from '../../../../../components/Embed/YouTube';
+import YouTube from '../../../../../src/components/Embed/YouTube';
 
 <img src="/wp-content/uploads/2014/10/ssd.jpg" alt="ssd" width="300" height="229" align="right" />A [Transcend](http://transcend-info.com/) é uma empresa que produz SSDs específicos para MacBooks. Comprei para um amigo o [kit para o MacBook Air 11&#8242;](http://www.amazon.com/gp/product/B00JKCHNQS/) e ontem fiz o upgrade na máquina.
 

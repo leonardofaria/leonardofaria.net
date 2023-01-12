@@ -10,7 +10,7 @@ import remarkGfm from 'remark-gfm';
 import {
   rehypePrettyCodeClasses,
   rehypePrettyCodeOptions,
-} from './lib/rehypePrettyCode';
+} from './src/lib/rehypePrettyCode';
 
 const format = async (content: string) => {
   const stripped = await remark()

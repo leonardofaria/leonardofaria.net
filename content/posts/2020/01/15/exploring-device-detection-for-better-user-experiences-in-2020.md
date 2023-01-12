@@ -15,7 +15,7 @@ tags:
   - javascript
 ---
 
-import YouTube from '../../../../../components/Embed/YouTube';
+import YouTube from '../../../../../src/components/Embed/YouTube';
 
 A few months ago I watched a great talk in Chrome Dev Summit about performance in slow devices.
 

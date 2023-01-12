@@ -15,7 +15,7 @@ tags:
   - software
 ---
 
-import YouTube from '../../../../../components/Embed/YouTube';
+import YouTube from '../../../../../src/components/Embed/YouTube';
 
 Few months ago I saw in The Verge a [post](http://www.theverge.com/2016/3/7/11173836/neverware-cloudready-how-to-convert-pc-into-chromebook-free) about [CloudReady](https://www.neverware.com/). CloudReady is a remake of Chromium OS ready to go in old PCs or Macs. The company behind the product sells its solutions/support to organizations interested in keeping using their hardware. It's really interesting.
 

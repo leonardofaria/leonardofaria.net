@@ -8,7 +8,7 @@ permalink: /portfolio
 description: Nothing is forever in the www world. Here are a few projects from my past.
 ---
 
-import YouTube from '../../components/Embed/YouTube';
+import YouTube from '../../src/components/Embed/YouTube';
 
 <div class="intro mb-16">
 Nothing is forever in the www world.<br/>

@@ -15,7 +15,7 @@ tags:
   - canada
 ---
 
-import YouTube from '../../../../../components/Embed/YouTube';
+import YouTube from '../../../../../src/components/Embed/YouTube';
 
 Last week I presented in [Code & Coffee](http://www.meetup.com/Code-Coffee-Vancouver/events/231709823/) about WordPress and Gulp. In my 10 minutes talk, I explained briefly what is Gulp and how its tasks can save our time.
 

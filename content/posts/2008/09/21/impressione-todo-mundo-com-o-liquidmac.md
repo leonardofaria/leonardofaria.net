@@ -15,7 +15,7 @@ tags:
   - mac
 ---
 
-import YouTube from '../../../../../components/Embed/YouTube';
+import YouTube from '../../../../../src/components/Embed/YouTube';
 
 Tem um Mac? Mate seu amigos (e inimigos) de inveja com o [**LiquidMac**](http://uri.cat/software/LiquidMac/).
 
