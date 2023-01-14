@@ -8,6 +8,7 @@ import {
   type Post,
 } from 'contentlayer/generated';
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
+import { getPartialContent } from 'src/lib/utils';
 import Archives from '../components/CMS/Archives';
 import Home from '../components/CMS/Home';
 import Single from '../components/CMS/Single';
@@ -55,6 +56,8 @@ export const getStaticProps: GetStaticProps<{
 
   if (params?.filter?.[0] === 'archives') {
     currentFilters = { type: 'archives' };
+
+    posts = getPartialContent(posts);
   }
 
   if (currentFilters.type === 'home') {
@@ -64,6 +67,8 @@ export const getStaticProps: GetStaticProps<{
       }
       return false;
     });
+
+    posts = getPartialContent(posts);
   }
 
   // Catch 404
