@@ -1,0 +1,54 @@
+import { defineDocumentType } from 'contentlayer/source-files';
+
+export const Micropost = defineDocumentType(() => ({
+  name: 'Micropost',
+  contentType: 'mdx',
+  filePathPattern: 'microposts/*.mdx',
+  fields: {
+    title: {
+      type: 'string',
+      required: true,
+    },
+    publishedAt: {
+      type: 'date',
+      required: true,
+    },
+    template: {
+      type: 'enum',
+      options: ['text', 'video', 'image', 'link', 'embed'],
+      required: true,
+    },
+    ogImage: {
+      type: 'string',
+    },
+    link: {
+      type: 'string',
+    },
+    description: {
+      type: 'string',
+    },
+    tags: {
+      type: 'list',
+      of: { type: 'string' },
+    },
+  },
+  computedFields: {
+    slug: {
+      type: 'string',
+      resolve: (micropost) =>
+        micropost._raw.sourceFileName.replace(/\.mdx$/, ''), // eslint-disable-line no-underscore-dangle
+    },
+    permalink: {
+      type: 'string',
+      resolve: (micropost) =>
+        `/microblog/${micropost._raw.sourceFileName.replace(/\.mdx$/, '')}`, // eslint-disable-line no-underscore-dangle
+    },
+    year: {
+      type: 'string',
+      resolve: (post) => {
+        const publishedAt = new Date(post.publishedAt);
+        return publishedAt.getFullYear().toString();
+      },
+    },
+  },
+}));

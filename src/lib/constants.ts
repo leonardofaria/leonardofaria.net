@@ -1,6 +1,3 @@
-import resolveConfig from 'tailwindcss/resolveConfig';
-import tailwindConfig from '../../tailwind.config.js';
-
 export const AUTHOR = 'Leonardo Faria';
 export const BASE_URL = 'https://leonardofaria.net';
 export const DISQUS_SHORTNAME = 'leonardofaria';
@@ -11,12 +8,7 @@ export const WEBSITE_DESCRIPTION =
 export const MICROBLOG_INTRO =
   'Remember Microblogs? My favourite links, videos and short thoughts';
 
-const fullConfig = resolveConfig(tailwindConfig);
-export const LARGE_SCREEN_BREAKPOINT = parseInt(
-  // @ts-ignore
-  fullConfig?.theme?.screens?.lg,
-  10
-);
+export const LARGE_SCREEN_BREAKPOINT = 1024;
 
 export const SOCIAL_LINKS = [
   {
