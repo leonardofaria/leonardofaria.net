@@ -110,7 +110,6 @@ export default function Single({
                 className="no-underline inline-block text-black relative"
                 href={permalink}
               >
-                {isPost && <div className="dots" aria-hidden />}
                 {title}
               </Link>
             </h1>
