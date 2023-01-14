@@ -248,8 +248,6 @@ html {
 .article pre tt {
   font-size: inherit;
   white-space: pre-wrap;
-  @apply bg-transparent;
-  @apply border-0;
   @apply p-0;
 }
 
