@@ -3,12 +3,23 @@ import { type Post, type Micropost } from 'contentlayer/generated';
 export function groupPostsByYears(
   posts: (Post | Micropost)[]
 ): Record<string, (Post | Micropost)[]> {
-  return posts.reduce((r: Record<string, (Post | Micropost)[]>, post) => {
-    // console.log(post.year);
-    r[post.year] = r[post.year] || [];
-    r[post.year].push(post);
-    return r;
-  }, {});
+  const postsByYear = posts.reduce(
+    (r: Record<string, (Post | Micropost)[]>, post) => {
+      r[post.year] = r[post.year] || [];
+      r[post.year].push(post);
+      return r;
+    },
+    {}
+  );
+
+  Object.keys(postsByYear).forEach((year) => {
+    postsByYear[year] = postsByYear[year].sort(
+      (a, b) =>
+        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+    );
+  });
+
+  return postsByYear;
 }
 
 export function getAllTags(allPosts: Post[]): string[] {
