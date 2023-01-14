@@ -4,8 +4,7 @@ title: 'Novo micro-projeto: HORÓSCOPO NO MSN'
 publishedAt: 2010-10-09T20:16:04-03:00
 type: Post
 ogImage: /images/og-images/1085.png
-layout: post
-guid: https://leonardofaria.net/?p=1085
+
 permalink: /2010/10/09/novo-micro-projeto-horoscopo-no-msn/
 dsq_thread_id:
   - "1000136952"

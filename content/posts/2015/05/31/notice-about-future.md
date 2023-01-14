@@ -4,8 +4,7 @@ title: Notice about future
 publishedAt: 2015-05-31T20:29:07-03:00
 type: Post
 ogImage: /images/og-images/1529.png
-layout: post
-guid: https://leonardofaria.net/?p=1529
+
 permalink: /2015/05/31/notice-about-future/
 dsq_thread_id:
   - "3879140824"

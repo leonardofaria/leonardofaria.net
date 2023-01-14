@@ -4,8 +4,7 @@ title: My Sublime Text settings
 publishedAt: 2015-10-04T17:14:16-03:00
 type: Post
 ogImage: /images/og-images/1643.png
-layout: post
-guid: https://leonardofaria.net/?p=1643
+
 permalink: /2015/10/04/my-sublime-text-settings/
 dsq_thread_id:
   - "5341862479"

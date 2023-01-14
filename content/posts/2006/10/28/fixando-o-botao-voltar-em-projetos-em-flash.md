@@ -4,8 +4,7 @@ title: Fixando o botão voltar em projetos em Flash
 publishedAt: 2006-10-28T20:55:55-03:00
 type: Post
 ogImage: /images/og-images/132.png
-layout: post
-guid: https://leonardofaria.net/2006/10/28/fixando-o-botao-voltar-em-projetos-em-flash/
+
 permalink: /2006/10/28/fixando-o-botao-voltar-em-projetos-em-flash/
 dsq_thread_id:
   - "1000135291"

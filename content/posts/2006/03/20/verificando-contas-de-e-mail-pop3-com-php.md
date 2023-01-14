@@ -4,8 +4,7 @@ title: Verificando contas de e-mail POP3 com PHP
 publishedAt: 2006-03-20T21:57:54-03:00
 type: Post
 ogImage: /images/og-images/26.png
-layout: post
-guid: https://leonardofaria.net/2006/03/20/verificando-contas-de-e-mail-pop3-com-php/
+
 permalink: /2006/03/20/verificando-contas-de-e-mail-pop3-com-php/
 dsq_thread_id:
   - "5340574550"

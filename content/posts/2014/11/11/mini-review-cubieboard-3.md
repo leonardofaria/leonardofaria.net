@@ -4,8 +4,7 @@ title: 'Mini-review: Cubieboard 3'
 publishedAt: 2014-11-11T20:14:06-02:00
 type: Post
 ogImage: /images/og-images/1469.png
-layout: post
-guid: https://leonardofaria.net/?p=1469
+
 permalink: /2014/11/11/mini-review-cubieboard-3/
 dsq_thread_id:
   - "3215362169"

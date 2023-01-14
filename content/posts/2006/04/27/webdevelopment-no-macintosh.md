@@ -4,8 +4,7 @@ title: Webdevelopment no Macintosh
 publishedAt: 2006-04-27T22:38:18-03:00
 type: Post
 ogImage: /images/og-images/40.png
-layout: post
-guid: https://leonardofaria.net/2006/04/27/webdevelopment-no-macintosh/
+
 permalink: /2006/04/27/webdevelopment-no-macintosh/
 dsq_thread_id:
   - "1625837281"

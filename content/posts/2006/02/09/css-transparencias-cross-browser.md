@@ -4,8 +4,7 @@ title: 'CSS: Transparências cross-browser'
 publishedAt: 2006-02-09T22:18:20-02:00
 type: Post
 ogImage: /images/og-images/31.png
-layout: post
-guid: https://leonardofaria.net/2006/05/27/css-transparencias-cross-browser/
+
 permalink: /2006/02/09/css-transparencias-cross-browser/
 dsq_thread_id:
   - "1092035618"

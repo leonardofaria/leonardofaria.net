@@ -4,8 +4,7 @@ title: Você conhece o WebObjects?
 publishedAt: 2007-04-20T22:41:09-03:00
 type: Post
 ogImage: /images/og-images/239.png
-layout: post
-guid: https://leonardofaria.net/2007/04/20/voce-conhece-o-webobjects/
+
 permalink: /2007/04/20/voce-conhece-o-webobjects/
 dsq_thread_id:
   - "1000136687"

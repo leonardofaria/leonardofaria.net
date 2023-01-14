@@ -4,8 +4,7 @@ title: Web Essentials 2004
 publishedAt: 2005-03-27T21:14:56-03:00
 type: Post
 ogImage: /images/og-images/9.png
-layout: post
-guid: https://leonardofaria.net/2005/03/27/web-essentials-2004/
+
 permalink: /2005/03/27/web-essentials-2004/
 dsq_thread_id:
   - "1513804975"

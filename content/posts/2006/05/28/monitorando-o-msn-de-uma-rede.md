@@ -4,8 +4,7 @@ title: Monitorando o MSN de uma rede
 publishedAt: 2006-05-28T17:57:30-03:00
 type: Post
 ogImage: /images/og-images/45.png
-layout: post
-guid: https://leonardofaria.net/2006/05/28/monitorando-o-msn-de-uma-rede/
+
 permalink: /2006/05/28/monitorando-o-msn-de-uma-rede/
 dsq_thread_id:
   - "1000136411"

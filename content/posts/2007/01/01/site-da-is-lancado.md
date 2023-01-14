@@ -4,8 +4,7 @@ title: Site da is® lançado!
 publishedAt: 2007-01-01T22:59:25-02:00
 type: Post
 ogImage: /images/og-images/193.png
-layout: post
-guid: https://leonardofaria.net/2007/01/01/site-da-is-lancado/
+
 permalink: /2007/01/01/site-da-is-lancado/
 dsq_thread_id:
   - "2314325545"

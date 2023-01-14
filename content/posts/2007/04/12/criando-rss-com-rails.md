@@ -4,8 +4,7 @@ title: Criando RSS com Rails
 publishedAt: 2007-04-12T22:27:15-03:00
 type: Post
 ogImage: /images/og-images/230.png
-layout: post
-guid: https://leonardofaria.net/2007/04/12/criando-rss-com-rails/
+
 permalink: /2007/04/12/criando-rss-com-rails/
 dsq_thread_id:
   - "1000136958"

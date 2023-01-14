@@ -4,8 +4,7 @@ title: Para turbinar o Safari
 publishedAt: 2009-01-25T21:28:26-02:00
 type: Post
 ogImage: /images/og-images/437.png
-layout: post
-guid: https://leonardofaria.net/?p=437
+
 permalink: /2009/01/25/para-turbinar-o-safari/
 dsq_thread_id:
   - "1002047252"

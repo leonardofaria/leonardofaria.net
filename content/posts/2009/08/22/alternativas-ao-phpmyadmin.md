@@ -4,8 +4,7 @@ title: Alternativas ao PHPMyAdmin
 publishedAt: 2009-08-22T16:32:36-03:00
 type: Post
 ogImage: /images/og-images/699.png
-layout: post
-guid: https://leonardofaria.net/?p=699
+
 permalink: /2009/08/22/alternativas-ao-phpmyadmin/
 dsq_thread_id:
   - "1000136615"

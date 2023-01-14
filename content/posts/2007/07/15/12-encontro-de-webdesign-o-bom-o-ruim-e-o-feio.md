@@ -4,8 +4,7 @@ title: '12º Encontro de Webdesign: o bom, o ruim e o feio'
 publishedAt: 2007-07-15T19:48:06-03:00
 type: Post
 ogImage: /images/og-images/285.png
-layout: post
-guid: https://leonardofaria.net/2007/07/15/12-encontro-de-webdesign-o-bom-o-ruim-e-o-feio/
+
 permalink: /2007/07/15/12-encontro-de-webdesign-o-bom-o-ruim-e-o-feio/
 dsq_thread_id:
   - "1000136150"

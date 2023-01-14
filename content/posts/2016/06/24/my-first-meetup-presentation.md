@@ -4,8 +4,7 @@ title: My first Meetup presentation
 publishedAt: 2016-06-24T11:41:13-03:00
 type: Post
 ogImage: /images/og-images/1737.png
-layout: post
-guid: https://leonardofaria.net/?p=1737
+
 permalink: /2016/06/24/my-first-meetup-presentation/
 dsq_thread_id:
   - "4935743202"

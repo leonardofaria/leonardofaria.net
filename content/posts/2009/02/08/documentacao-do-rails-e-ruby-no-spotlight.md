@@ -4,8 +4,7 @@ title: Documentação do Rails e Ruby no Spotlight
 publishedAt: 2009-02-08T23:12:35-02:00
 type: Post
 ogImage: /images/og-images/452.png
-layout: post
-guid: https://leonardofaria.net/?p=452
+
 permalink: /2009/02/08/documentacao-do-rails-e-ruby-no-spotlight/
 dsq_thread_id:
   - "1000136897"

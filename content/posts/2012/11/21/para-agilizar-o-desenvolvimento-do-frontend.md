@@ -4,8 +4,7 @@ title: Para agilizar o desenvolvimento do frontend
 publishedAt: 2012-11-21T22:45:14-02:00
 type: Post
 ogImage: /images/og-images/1309.png
-layout: post
-guid: https://leonardofaria.net/?p=1309
+
 permalink: /2012/11/21/para-agilizar-o-desenvolvimento-do-frontend/
 dsq_thread_id:
   - "1001300575"

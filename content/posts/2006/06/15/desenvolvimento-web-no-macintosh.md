@@ -4,8 +4,7 @@ title: Desenvolvimento web no Macintosh
 publishedAt: 2006-06-15T23:20:54-03:00
 type: Post
 ogImage: /images/og-images/62.png
-layout: post
-guid: https://leonardofaria.net/2006/06/15/desenvolvimento-web-no-macintosh/
+
 permalink: /2006/06/15/desenvolvimento-web-no-macintosh/
 dsq_thread_id:
   - "1000135341"

@@ -4,8 +4,7 @@ title: Testing tools to track my work activity
 publishedAt: 2018-05-06T23:23:30-03:00
 type: Post
 ogImage: /images/og-images/1917.png
-layout: post
-guid: https://leonardofaria.net/?p=1917
+
 permalink: /2018/05/06/testing-tools-to-track-my-work-activity/
 categories:
   - software

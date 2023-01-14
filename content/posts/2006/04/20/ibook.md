@@ -4,8 +4,7 @@ title: iBook
 publishedAt: 2006-04-20T22:25:05-03:00
 type: Post
 ogImage: /images/og-images/35.png
-layout: post
-guid: https://leonardofaria.net/2006/05/27/ibook/
+
 permalink: /2006/04/20/ibook/
 categories:
   - mac

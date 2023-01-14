@@ -4,8 +4,7 @@ title: Um resumo do Minas on Rails
 publishedAt: 2007-12-02T14:56:00-02:00
 type: Post
 ogImage: /images/og-images/342.png
-layout: post
-guid: https://leonardofaria.net/2007/12/02/um-resumo-do-minas-on-rails/
+
 permalink: /2007/12/02/um-resumo-do-minas-on-rails/
 dsq_thread_id:
   - "5342049188"

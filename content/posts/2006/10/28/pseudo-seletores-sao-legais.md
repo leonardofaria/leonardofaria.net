@@ -4,8 +4,7 @@ title: Pseudo-seletores são legais
 publishedAt: 2006-10-28T01:52:29-03:00
 type: Post
 ogImage: /images/og-images/130.png
-layout: post
-guid: https://leonardofaria.net/2006/10/28/pseudo-seletores-sao-legais/
+
 permalink: /2006/10/28/pseudo-seletores-sao-legais/
 dsq_thread_id:
   - "1082172729"

@@ -4,8 +4,7 @@ title: Novos resources sobre Rails
 publishedAt: 2007-05-15T01:11:24-03:00
 type: Post
 ogImage: /images/og-images/233.png
-layout: post
-guid: https://leonardofaria.net/2007/05/15/novos-resources-sobre-rails/
+
 permalink: /2007/05/15/novos-resources-sobre-rails/
 dsq_thread_id:
   - "1056853400"

@@ -4,8 +4,7 @@ title: the ink magazine
 publishedAt: 2015-12-12T21:12:26-02:00
 type: Post
 ogImage: /images/og-images/1679.png
-layout: post
-guid: https://leonardofaria.net/?p=1679
+
 permalink: /2015/12/12/the-ink-magazine/
 dsq_thread_id:
   - "5345235394"

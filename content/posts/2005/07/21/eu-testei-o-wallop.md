@@ -4,8 +4,7 @@ title: Eu testei o Wallop
 publishedAt: 2005-07-21T21:40:31-03:00
 type: Post
 ogImage: /images/og-images/19.png
-layout: post
-guid: https://leonardofaria.net/2005/07/21/eu-testei-o-wallop/
+
 permalink: /2005/07/21/eu-testei-o-wallop/
 dsq_thread_id:
   - "1000135299"

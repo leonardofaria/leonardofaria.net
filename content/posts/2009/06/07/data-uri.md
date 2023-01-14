@@ -4,8 +4,7 @@ title: Data URI
 publishedAt: 2009-06-07T00:44:14-03:00
 type: Post
 ogImage: /images/og-images/650.png
-layout: post
-guid: https://leonardofaria.net/?p=650
+
 permalink: /2009/06/07/data-uri/
 dsq_thread_id:
   - "1000136908"

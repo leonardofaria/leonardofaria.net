@@ -4,8 +4,7 @@ title: Bookmarklets
 publishedAt: 2006-06-08T14:55:37-03:00
 type: Post
 ogImage: /images/og-images/57.png
-layout: post
-guid: https://leonardofaria.net/2006/06/08/bookmarklets/
+
 permalink: /2006/06/08/bookmarklets/
 dsq_thread_id:
   - "1000136096"

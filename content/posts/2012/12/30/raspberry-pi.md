@@ -4,8 +4,7 @@ title: Raspberry Pi
 publishedAt: 2012-12-30T17:10:41-02:00
 type: Post
 ogImage: /images/og-images/1314.png
-layout: post
-guid: https://leonardofaria.net/?p=1314
+
 permalink: /2012/12/30/raspberry-pi/
 dsq_thread_id:
   - "1000133282"

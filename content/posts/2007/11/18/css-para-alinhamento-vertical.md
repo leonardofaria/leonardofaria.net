@@ -4,8 +4,7 @@ title: CSS para alinhamento vertical
 publishedAt: 2007-11-18T14:24:32-02:00
 type: Post
 ogImage: /images/og-images/340.png
-layout: post
-guid: https://leonardofaria.net/2007/11/18/css-para-alinhamento-vertical/
+
 permalink: /2007/11/18/css-para-alinhamento-vertical/
 dsq_thread_id:
   - "1000136244"

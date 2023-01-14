@@ -4,8 +4,7 @@ title: Rails Screencasts
 publishedAt: 2008-07-11T01:31:43-03:00
 type: Post
 ogImage: /images/og-images/397.png
-layout: post
-guid: https://leonardofaria.net/?p=397
+
 permalink: /2008/07/11/rails-screencasts/
 dsq_thread_id:
   - "1000137529"

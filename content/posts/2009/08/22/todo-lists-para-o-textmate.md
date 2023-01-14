@@ -4,8 +4,7 @@ title: Todo lists para o Textmate
 publishedAt: 2009-08-22T16:06:36-03:00
 type: Post
 ogImage: /images/og-images/694.png
-layout: post
-guid: https://leonardofaria.net/?p=694
+
 permalink: /2009/08/22/todo-lists-para-o-textmate/
 dsq_thread_id:
   - "1002710617"

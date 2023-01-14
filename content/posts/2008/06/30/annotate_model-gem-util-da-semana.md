@@ -4,8 +4,7 @@ title: annotate_model, gem útil da semana
 publishedAt: 2008-06-30T02:27:05-03:00
 type: Post
 ogImage: /images/og-images/394.png
-layout: post
-guid: https://leonardofaria.net/?p=394
+
 permalink: /2008/06/30/annotate_model-gem-util-da-semana/
 dsq_thread_id:
   - "1000137500"

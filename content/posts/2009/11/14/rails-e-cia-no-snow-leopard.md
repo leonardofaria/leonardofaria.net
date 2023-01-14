@@ -4,8 +4,7 @@ title: Rails e cia no Snow Leopard
 publishedAt: 2009-11-14T20:00:24-02:00
 type: Post
 ogImage: /images/og-images/878.png
-layout: post
-guid: https://leonardofaria.net/?p=878
+
 permalink: /2009/11/14/rails-e-cia-no-snow-leopard/
 dsq_thread_id:
   - "1005938579"

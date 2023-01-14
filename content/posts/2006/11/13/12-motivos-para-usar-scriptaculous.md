@@ -4,8 +4,7 @@ title: 12 efeitos bacanas com script.aculo.us
 publishedAt: 2006-11-13T17:17:22-02:00
 type: Post
 ogImage: /images/og-images/157.png
-layout: post
-guid: https://leonardofaria.net/2006/11/13/12-motivos-para-usar-scriptaculous/
+
 permalink: /2006/11/13/12-motivos-para-usar-scriptaculous/
 dsq_thread_id:
   - "1000137065"

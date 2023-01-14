@@ -4,8 +4,7 @@ title: Browser com Exposé
 publishedAt: 2006-07-23T19:33:37-03:00
 type: Post
 ogImage: /images/og-images/103.png
-layout: post
-guid: https://leonardofaria.net/2006/07/23/browser-com-expose/
+
 permalink: /2006/07/23/browser-com-expose/
 dsq_thread_id:
   - "1378144855"

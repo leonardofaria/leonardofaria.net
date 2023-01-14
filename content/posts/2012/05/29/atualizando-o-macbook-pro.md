@@ -4,8 +4,7 @@ title: Atualizando o MacBook Pro
 publishedAt: 2012-05-29T15:56:24-03:00
 type: Post
 ogImage: /images/og-images/1271.png
-layout: post
-guid: https://leonardofaria.net/?p=1271
+
 permalink: /2012/05/29/atualizando-o-macbook-pro/
 dsq_thread_id:
   - "5339293004"

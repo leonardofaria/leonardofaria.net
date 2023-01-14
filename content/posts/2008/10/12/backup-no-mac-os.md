@@ -4,8 +4,7 @@ title: Backup no Mac OS
 publishedAt: 2008-10-12T16:09:34-03:00
 type: Post
 ogImage: /images/og-images/410.png
-layout: post
-guid: https://leonardofaria.net/?p=410
+
 permalink: /2008/10/12/backup-no-mac-os/
 dsq_thread_id:
   - "1004253959"

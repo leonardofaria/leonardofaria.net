@@ -4,8 +4,7 @@ title: Quer conhecer mais da história da Apple?
 publishedAt: 2008-11-23T21:08:43-02:00
 type: Post
 ogImage: /images/og-images/428.png
-layout: post
-guid: https://leonardofaria.net/?p=428
+
 permalink: /2008/11/23/quer-conhecer-mais-da-historia-da-apple/
 dsq_thread_id:
   - "1000137406"

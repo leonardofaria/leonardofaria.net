@@ -4,8 +4,7 @@ title: Writing for IELTS and TOEFL
 publishedAt: 2015-06-10T17:44:14-03:00
 type: Post
 ogImage: /images/og-images/1532.png
-layout: post
-guid: https://leonardofaria.net/?p=1532
+
 permalink: /2015/06/10/writing-skills-for-ielts-and-toefl/
 dsq_thread_id:
   - "5337537755"

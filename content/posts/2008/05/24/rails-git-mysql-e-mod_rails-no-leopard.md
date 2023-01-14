@@ -4,8 +4,7 @@ title: Rails, Git, MySQL e mod_rails no Leopard
 publishedAt: 2008-05-24T16:53:23-03:00
 type: Post
 ogImage: /images/og-images/374.png
-layout: post
-guid: https://leonardofaria.net/?p=374
+
 permalink: /2008/05/24/rails-git-mysql-e-mod_rails-no-leopard/
 dsq_thread_id:
   - "1000136193"

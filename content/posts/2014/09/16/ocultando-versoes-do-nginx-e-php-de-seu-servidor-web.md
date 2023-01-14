@@ -4,8 +4,7 @@ title: Ocultando versões do Nginx e PHP de seu servidor web
 publishedAt: 2014-09-16T19:38:08-03:00
 type: Post
 ogImage: /images/og-images/1458.png
-layout: post
-guid: https://leonardofaria.net/?p=1458
+
 permalink: /2014/09/16/ocultando-versoes-do-nginx-e-php-de-seu-servidor-web/
 dsq_thread_id:
   - "5338930573"

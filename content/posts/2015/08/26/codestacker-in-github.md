@@ -4,8 +4,7 @@ title: codestacker in Github
 publishedAt: 2015-08-26T19:26:00-03:00
 type: Post
 ogImage: /images/og-images/1603.png
-layout: post
-guid: https://leonardofaria.net/?p=1603
+
 permalink: /2015/08/26/codestacker-in-github/
 dsq_thread_id:
   - "4070089214"

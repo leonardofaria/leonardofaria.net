@@ -4,7 +4,6 @@ title: Moving to Next.js
 publishedAt: 2022-12-30T11:12:00-08:00
 type: Post
 ogImage: /images/og-images/2235.png
-layout: post
 permalink: /2022/12/30/moving-to-nextjs
 description: In the last few days, I worked to move this website to Next.js. In 2020, I moved from WordPress to Hugo and would be better served with Next.js. It was a straightforward migration, and I share what was done in this post.
 ---

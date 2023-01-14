@@ -4,8 +4,7 @@ title: Os axiomas de Zurique
 publishedAt: 2008-12-04T12:28:04-02:00
 type: Post
 ogImage: /images/og-images/433.png
-layout: post
-guid: https://leonardofaria.net/?p=433
+
 permalink: /2008/12/04/os-axiomas-de-zurique/
 dsq_thread_id:
   - "1000136199"

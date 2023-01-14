@@ -4,8 +4,7 @@ title: sitemap.xml no Rails
 publishedAt: 2009-06-07T14:30:52-03:00
 type: Post
 ogImage: /images/og-images/660.png
-layout: post
-guid: https://leonardofaria.net/?p=660
+
 permalink: /2009/06/07/sitemapxml-no-rails/
 dsq_thread_id:
   - "1000137532"

@@ -4,8 +4,7 @@ title: Exploring device detection for better user experiences in 2020
 publishedAt: 2020-01-15T02:16:54-03:00
 type: Post
 ogImage: /images/og-images/2158.png
-layout: post
-guid: https://leonardofaria.net/?p=2158
+
 permalink: /2020/01/15/exploring-device-detection-for-better-user-experiences-in-2020/
 categories:
   - browser

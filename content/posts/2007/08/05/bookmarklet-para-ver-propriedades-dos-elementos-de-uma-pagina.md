@@ -4,8 +4,7 @@ title: Bookmarklet para ver propriedades dos elementos de uma página
 publishedAt: 2007-08-05T22:47:54-03:00
 type: Post
 ogImage: /images/og-images/295.png
-layout: post
-guid: https://leonardofaria.net/2007/08/05/bookmarklet-para-ver-propriedades-dos-elementos-de-uma-pagina/
+
 permalink: /2007/08/05/bookmarklet-para-ver-propriedades-dos-elementos-de-uma-pagina/
 dsq_thread_id:
   - "1421046724"

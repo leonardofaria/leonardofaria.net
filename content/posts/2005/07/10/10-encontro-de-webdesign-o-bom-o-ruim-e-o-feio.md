@@ -4,8 +4,7 @@ title: '10º Encontro de Webdesign: o bom, o ruim e o feio'
 publishedAt: 2005-07-10T21:37:22-03:00
 type: Post
 ogImage: /images/og-images/18.png
-layout: post
-guid: https://leonardofaria.net/2006/07/10/10-encontro-de-webdesign-o-bom-o-ruim-e-o-feio/
+
 permalink: /2005/07/10/10-encontro-de-webdesign-o-bom-o-ruim-e-o-feio/
 dsq_thread_id:
   - "1061687403"

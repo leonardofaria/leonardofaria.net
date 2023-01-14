@@ -4,8 +4,7 @@ title: Configurando o Sublime Text 2
 publishedAt: 2012-12-31T11:30:47-02:00
 type: Post
 ogImage: /images/og-images/1327.png
-layout: post
-guid: https://leonardofaria.net/?p=1327
+
 permalink: /2012/12/31/configurando-o-sublime-text-2/
 dsq_thread_id:
   - "5345235310"

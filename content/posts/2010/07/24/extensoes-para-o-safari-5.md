@@ -4,8 +4,7 @@ title: Extensões para o Safari 5
 publishedAt: 2010-07-24T00:09:14-03:00
 type: Post
 ogImage: /images/og-images/1034.png
-layout: post
-guid: https://leonardofaria.net/?p=1034
+
 permalink: /2010/07/24/extensoes-para-o-safari-5/
 dsq_thread_id:
   - "1251817762"

@@ -4,8 +4,7 @@ title: Integração contínua no codestacker
 publishedAt: 2008-10-23T00:17:40-02:00
 type: Post
 ogImage: /images/og-images/420.png
-layout: post
-guid: https://leonardofaria.net/?p=420
+
 permalink: /2008/10/23/integracao-continua-no-codestacker/
 dsq_thread_id:
   - "1580359580"

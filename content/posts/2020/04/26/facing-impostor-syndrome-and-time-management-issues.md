@@ -4,7 +4,6 @@ title: Facing impostor syndrome and time management issues
 publishedAt: 2020-04-26T11:41:56-03:00
 type: Post
 ogImage: /images/og-images/2201.png
-layout: post
 permalink: /2020/04/26/facing-impostor-syndrome-and-time-management-issues
 categories:
   - career

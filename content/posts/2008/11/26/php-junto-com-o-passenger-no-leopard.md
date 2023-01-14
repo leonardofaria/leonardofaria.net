@@ -4,8 +4,7 @@ title: PHP junto com o Passenger no Leopard
 publishedAt: 2008-11-26T23:32:30-02:00
 type: Post
 ogImage: /images/og-images/430.png
-layout: post
-guid: https://leonardofaria.net/?p=430
+
 permalink: /2008/11/26/php-junto-com-o-passenger-no-leopard/
 dsq_thread_id:
   - "1028881004"

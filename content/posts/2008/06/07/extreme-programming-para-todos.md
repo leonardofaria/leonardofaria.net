@@ -4,8 +4,7 @@ title: Extreme Programming para todos
 publishedAt: 2008-06-07T20:21:15-03:00
 type: Post
 ogImage: /images/og-images/390.png
-layout: post
-guid: https://leonardofaria.net/?p=390
+
 permalink: /2008/06/07/extreme-programming-para-todos/
 dsq_thread_id:
   - "1022115991"

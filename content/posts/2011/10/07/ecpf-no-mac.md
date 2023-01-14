@@ -4,8 +4,7 @@ title: eCPF no Mac
 publishedAt: 2011-10-07T22:59:30-03:00
 type: Post
 ogImage: /images/og-images/1249.png
-layout: post
-guid: https://leonardofaria.net/?p=1249
+
 permalink: /2011/10/07/ecpf-no-mac/
 dsq_thread_id:
   - "1001398643"

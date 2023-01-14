@@ -4,8 +4,7 @@ title: Disabling autofill in Chrome
 publishedAt: 2019-10-02T16:58:52-03:00
 type: Post
 ogImage: /images/og-images/1995.png
-layout: post
-guid: https://leonardofaria.net/?p=1995
+
 permalink: /2019/10/02/disabling-autofill-in-chrome/
 categories:
   - browser

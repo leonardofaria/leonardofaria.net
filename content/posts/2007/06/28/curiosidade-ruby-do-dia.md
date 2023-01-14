@@ -4,8 +4,7 @@ title: Curiosidade Ruby do dia
 publishedAt: 2007-06-28T18:27:44-03:00
 type: Post
 ogImage: /images/og-images/283.png
-layout: post
-guid: https://leonardofaria.net/2007/06/28/curiosidade-ruby-do-dia/
+
 permalink: /2007/06/28/curiosidade-ruby-do-dia/
 dsq_thread_id:
   - "1000137260"

@@ -4,8 +4,7 @@ title: 'Rails Summit: resumo do segundo dia'
 publishedAt: 2009-10-14T13:07:05-03:00
 type: Post
 ogImage: /images/og-images/770.png
-layout: post
-guid: https://leonardofaria.net/?p=770
+
 permalink: /2009/10/14/rails-summit-resumo-do-segundo-dia/
 dsq_thread_id:
   - "1000136314"

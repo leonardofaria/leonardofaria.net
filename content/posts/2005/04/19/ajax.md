@@ -4,8 +4,7 @@ title: Ajax
 publishedAt: 2005-04-19T21:27:12-03:00
 type: Post
 ogImage: /images/og-images/13.png
-layout: post
-guid: https://leonardofaria.net/2005/04/19/ajax/
+
 permalink: /2005/04/19/ajax/
 dsq_thread_id:
   - "2297066564"

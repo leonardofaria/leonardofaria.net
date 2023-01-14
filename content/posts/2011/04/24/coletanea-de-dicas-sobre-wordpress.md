@@ -4,8 +4,7 @@ title: Coletânea de dicas sobre WordPress
 publishedAt: 2011-04-24T15:58:32-03:00
 type: Post
 ogImage: /images/og-images/1164.png
-layout: post
-guid: https://leonardofaria.net/?p=1164
+
 permalink: /2011/04/24/coletanea-de-dicas-sobre-wordpress/
 dsq_thread_id:
   - "1018419045"

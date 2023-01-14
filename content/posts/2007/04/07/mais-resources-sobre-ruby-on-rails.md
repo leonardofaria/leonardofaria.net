@@ -4,8 +4,7 @@ title: Mais resources sobre Ruby on Rails
 publishedAt: 2007-04-07T22:06:23-03:00
 type: Post
 ogImage: /images/og-images/220.png
-layout: post
-guid: https://leonardofaria.net/2007/04/07/mais-resources-sobre-ruby-on-rails/
+
 permalink: /2007/04/07/mais-resources-sobre-ruby-on-rails/
 dsq_thread_id:
   - "3915523763"

@@ -4,8 +4,7 @@ title: Top plugins para WordPress
 publishedAt: 2006-06-04T16:42:15-03:00
 type: Post
 ogImage: /images/og-images/52.png
-layout: post
-guid: https://leonardofaria.net/2006/06/04/top-plugins-para-wordpress/
+
 permalink: /2006/06/04/top-plugins-para-wordpress/
 dsq_thread_id:
   - "1000137034"

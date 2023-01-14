@@ -4,8 +4,7 @@ title: URL curta no WordPress
 publishedAt: 2009-04-26T14:46:56-03:00
 type: Post
 ogImage: /images/og-images/634.png
-layout: post
-guid: https://leonardofaria.net/?p=634
+
 permalink: /2009/04/26/url-curta-no-wordpress/
 dsq_thread_id:
   - "1000136884"

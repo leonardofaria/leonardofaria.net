@@ -4,8 +4,7 @@ title: Sobre Controle de Versão
 publishedAt: 2008-05-31T17:38:06-03:00
 type: Post
 ogImage: /images/og-images/379.png
-layout: post
-guid: https://leonardofaria.net/?p=379
+
 permalink: /2008/05/31/sobre-controle-de-versao/
 dsq_thread_id:
   - "1007796758"

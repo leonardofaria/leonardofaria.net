@@ -4,8 +4,7 @@ title: Ruby on Rails on Mac OS X
 publishedAt: 2007-03-11T13:58:58-03:00
 type: Post
 ogImage: /images/og-images/213.png
-layout: post
-guid: https://leonardofaria.net/2007/03/11/ruby-on-rails-on-mac-os-x/
+
 permalink: /2007/03/11/ruby-on-rails-on-mac-os-x/
 dsq_thread_id:
   - "1000137115"

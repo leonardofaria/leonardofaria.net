@@ -4,8 +4,7 @@ title: 3 anos de Rails
 publishedAt: 2007-08-04T19:33:35-03:00
 type: Post
 ogImage: /images/og-images/294.png
-layout: post
-guid: https://leonardofaria.net/2007/08/04/3-anos-de-rails/
+
 permalink: /2007/08/04/3-anos-de-rails/
 dsq_thread_id:
   - "1000135631"

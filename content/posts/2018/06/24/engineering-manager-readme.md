@@ -4,8 +4,7 @@ title: Engineering Manager Readme
 publishedAt: 2018-06-24T20:33:07-03:00
 type: Post
 ogImage: /images/og-images/1939.png
-layout: post
-guid: https://leonardofaria.net/?p=1939
+
 permalink: /2018/06/24/engineering-manager-readme/
 categories:
   - career

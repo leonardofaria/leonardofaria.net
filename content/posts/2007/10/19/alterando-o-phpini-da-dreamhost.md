@@ -4,8 +4,7 @@ title: Alterando o PHP.ini da Dreamhost
 publishedAt: 2007-10-19T13:21:42-02:00
 type: Post
 ogImage: /images/og-images/319.png
-layout: post
-guid: https://leonardofaria.net/2007/10/19/alterando-o-phpini-da-dreamhost/
+
 permalink: /2007/10/19/alterando-o-phpini-da-dreamhost/
 dsq_thread_id:
   - "1000137490"

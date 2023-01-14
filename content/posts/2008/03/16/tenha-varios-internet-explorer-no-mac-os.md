@@ -4,8 +4,7 @@ title: Tenha vários Internet Explorer no Mac OS
 publishedAt: 2008-03-16T15:19:57-03:00
 type: Post
 ogImage: /images/og-images/355.png
-layout: post
-guid: https://leonardofaria.net/2008/03/16/tenha-varios-internet-explorer-no-mac-os/
+
 permalink: /2008/03/16/tenha-varios-internet-explorer-no-mac-os/
 dsq_thread_id:
   - "1016687731"

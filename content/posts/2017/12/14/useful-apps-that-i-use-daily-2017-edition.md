@@ -4,8 +4,7 @@ title: 'Useful apps that I use daily – 2017 edition'
 publishedAt: 2017-12-14T05:09:20-02:00
 type: Post
 ogImage: /images/og-images/1841.png
-layout: post
-guid: https://leonardofaria.net/?p=1841
+
 permalink: /2017/12/14/useful-apps-that-i-use-daily-2017-edition/
 dsq_thread_id:
   - "6348260621"

@@ -4,8 +4,7 @@ title: Descubra de onde vem seus usuários com SQL
 publishedAt: 2009-07-12T17:51:44-03:00
 type: Post
 ogImage: /images/og-images/683.png
-layout: post
-guid: https://leonardofaria.net/?p=683
+
 permalink: /2009/07/12/descubra-de-onde-vem-seus-usuarios-com-sql/
 dsq_thread_id:
   - "1000137458"

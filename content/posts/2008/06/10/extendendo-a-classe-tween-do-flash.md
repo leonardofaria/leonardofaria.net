@@ -4,8 +4,7 @@ title: Extendendo a classe Tween do Flash
 publishedAt: 2008-06-10T17:58:21-03:00
 type: Post
 ogImage: /images/og-images/389.png
-layout: post
-guid: https://leonardofaria.net/?p=389
+
 permalink: /2008/06/10/extendendo-a-classe-tween-do-flash/
 dsq_thread_id:
   - "1000136265"

@@ -4,8 +4,7 @@ title: Useful Chrome extensions to developers
 publishedAt: 2015-07-20T09:24:03-03:00
 type: Post
 ogImage: /images/og-images/1556.png
-layout: post
-guid: https://leonardofaria.net/?p=1556
+
 permalink: /2015/07/20/useful-chrome-extensions-to-developers/
 dsq_thread_id:
   - "3952357891"

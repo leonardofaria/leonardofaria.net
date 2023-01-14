@@ -4,8 +4,7 @@ title: Apresentando Ruby on Rails
 publishedAt: 2007-01-27T00:39:28-02:00
 type: Post
 ogImage: /images/og-images/208.png
-layout: post
-guid: https://leonardofaria.net/2007/01/27/apresentando-ruby-on-rails/
+
 permalink: /2007/01/27/apresentando-ruby-on-rails/
 dsq_thread_id:
   - "1000136630"

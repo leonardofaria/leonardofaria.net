@@ -4,8 +4,7 @@ title: Terminal tips tweets
 publishedAt: 2020-01-20T11:41:56-03:00
 type: Post
 ogImage: /images/og-images/2165.png
-layout: post
-guid: https://leonardofaria.net/?p=2165
+
 permalink: /2020/01/20/terminal-tips-tweets/
 categories:
   - software

@@ -4,8 +4,7 @@ title: Shell script para gravar áudio da Web
 publishedAt: 2016-01-29T20:06:38-02:00
 type: Post
 ogImage: /images/og-images/1710.png
-layout: post
-guid: https://leonardofaria.net/?p=1710
+
 permalink: /2016/01/29/shell-script-para-gravar-audio-da-web/
 dsq_thread_id:
   - "5345234804"

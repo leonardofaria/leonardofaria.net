@@ -4,8 +4,7 @@ title: Github webinars
 publishedAt: 2017-12-04T15:44:53-02:00
 type: Post
 ogImage: /images/og-images/1822.png
-layout: post
-guid: https://leonardofaria.net/?p=1822
+
 permalink: /2017/12/04/github-webinars/
 dsq_thread_id:
   - "6328868122"

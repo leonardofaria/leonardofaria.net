@@ -4,8 +4,7 @@ title: Listas de discussões e suas respostas
 publishedAt: 2007-01-28T15:57:25-02:00
 type: Post
 ogImage: /images/og-images/190.png
-layout: post
-guid: https://leonardofaria.net/2007/01/28/listas-de-discussoes-e-suas-respostas/
+
 permalink: /2007/01/28/listas-de-discussoes-e-suas-respostas/
 dsq_thread_id:
   - "5341924131"

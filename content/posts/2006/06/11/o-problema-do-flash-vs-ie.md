@@ -4,8 +4,7 @@ title: O problema do Flash vs IE
 publishedAt: 2006-06-11T17:47:21-03:00
 type: Post
 ogImage: /images/og-images/58.png
-layout: post
-guid: https://leonardofaria.net/2006/06/11/o-problema-do-flash-vs-ie/
+
 permalink: /2006/06/11/o-problema-do-flash-vs-ie/
 dsq_thread_id:
   - "1028447525"

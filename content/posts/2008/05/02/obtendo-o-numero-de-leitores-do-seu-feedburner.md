@@ -4,8 +4,7 @@ title: Obtendo o número de leitores do seu Feedburner
 publishedAt: 2008-05-02T05:50:54-03:00
 type: Post
 ogImage: /images/og-images/368.png
-layout: post
-guid: https://leonardofaria.net/?p=368
+
 permalink: /2008/05/02/obtendo-o-numero-de-leitores-do-seu-feedburner/
 dsq_thread_id:
   - "1000137309"

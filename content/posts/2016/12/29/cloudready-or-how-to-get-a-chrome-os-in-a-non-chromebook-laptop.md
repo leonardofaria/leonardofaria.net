@@ -4,8 +4,7 @@ title: Cloudready or how to get a Chrome OS in a non-Chromebook laptop
 publishedAt: 2016-12-29T16:36:55-02:00
 type: Post
 ogImage: /images/og-images/1796.png
-layout: post
-guid: https://leonardofaria.net/?p=1796
+
 permalink: /2016/12/29/cloudready-or-how-to-get-a-chrome-os-in-a-non-chromebook-laptop/
 dsq_thread_id:
   - "5420292877"

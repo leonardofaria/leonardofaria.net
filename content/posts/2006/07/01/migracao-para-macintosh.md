@@ -4,8 +4,7 @@ title: Migração para Macintosh
 publishedAt: 2006-07-01T15:04:17-03:00
 type: Post
 ogImage: /images/og-images/91.png
-layout: post
-guid: https://leonardofaria.net/2006/07/01/migracao-para-macintosh/
+
 permalink: /2006/07/01/migracao-para-macintosh/
 dsq_thread_id:
   - "3270476022"

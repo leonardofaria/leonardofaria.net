@@ -4,8 +4,7 @@ title: Rádio online é moleza!
 publishedAt: 2006-06-23T00:45:29-03:00
 type: Post
 ogImage: /images/og-images/70.png
-layout: post
-guid: https://leonardofaria.net/2006/06/23/radio-online-e-moleza/
+
 permalink: /2006/06/23/radio-online-e-moleza/
 dsq_thread_id:
   - "5339145251"

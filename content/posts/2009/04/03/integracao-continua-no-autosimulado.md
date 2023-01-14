@@ -4,8 +4,7 @@ title: Integração contínua no autosimulado
 publishedAt: 2009-04-03T20:31:38-03:00
 type: Post
 ogImage: /images/og-images/492.png
-layout: post
-guid: https://leonardofaria.net/?p=492
+
 permalink: /2009/04/03/integracao-continua-no-autosimulado/
 dsq_thread_id:
   - "1097946230"

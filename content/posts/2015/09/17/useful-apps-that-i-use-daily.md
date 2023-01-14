@@ -4,8 +4,7 @@ title: Useful apps that I use daily
 publishedAt: 2015-09-17T12:56:58-03:00
 type: Post
 ogImage: /images/og-images/1566.png
-layout: post
-guid: https://leonardofaria.net/?p=1566
+
 permalink: /2015/09/17/useful-apps-that-i-use-daily/
 dsq_thread_id:
   - "4138723567"

@@ -4,8 +4,7 @@ title: Rails, software de opinião
 publishedAt: 2007-07-21T02:50:00-03:00
 type: Post
 ogImage: /images/og-images/289.png
-layout: post
-guid: https://leonardofaria.net/2007/07/21/rails-software-de-opiniao/
+
 permalink: /2007/07/21/rails-software-de-opiniao/
 dsq_thread_id:
   - "1430633041"

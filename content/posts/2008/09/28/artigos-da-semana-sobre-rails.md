@@ -4,8 +4,7 @@ title: Artigos da semana sobre Rails
 publishedAt: 2008-09-28T23:45:35-03:00
 type: Post
 ogImage: /images/og-images/409.png
-layout: post
-guid: https://leonardofaria.net/?p=409
+
 permalink: /2008/09/28/artigos-da-semana-sobre-rails/
 dsq_thread_id:
   - ""

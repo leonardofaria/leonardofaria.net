@@ -42,13 +42,6 @@ export const Post = defineDocumentType(() => ({
     description: {
       type: 'string',
     },
-    // Potentially remove this in the future
-    guid: {
-      type: 'string',
-    },
-    layout: {
-      type: 'string',
-    },
   },
   computedFields: {
     excerpt: {

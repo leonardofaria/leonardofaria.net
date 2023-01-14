@@ -4,8 +4,7 @@ title: Widgets para seu Dashboard
 publishedAt: 2006-12-17T17:07:16-02:00
 type: Post
 ogImage: /images/og-images/183.png
-layout: post
-guid: https://leonardofaria.net/2006/12/17/widgets-para-seu-dashboard/
+
 permalink: /2006/12/17/widgets-para-seu-dashboard/
 dsq_thread_id:
   - "2195872849"

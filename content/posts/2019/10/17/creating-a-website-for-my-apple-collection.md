@@ -4,8 +4,7 @@ title: Creating a website for my Apple Collection
 publishedAt: 2019-10-17T00:36:30-03:00
 type: Post
 ogImage: /images/og-images/2017.png
-layout: post
-guid: https://leonardofaria.net/?p=2017
+
 permalink: /2019/10/17/creating-a-website-for-my-apple-collection/
 categories:
   - portfolio

@@ -4,8 +4,7 @@ title: Uptime monitoring tools
 publishedAt: 2015-07-10T08:26:05-03:00
 type: Post
 ogImage: /images/og-images/1526.png
-layout: post
-guid: https://leonardofaria.net/?p=1526
+
 permalink: /2015/07/10/uptime-monitoring-tools/
 dsq_thread_id:
   - "3921279040"

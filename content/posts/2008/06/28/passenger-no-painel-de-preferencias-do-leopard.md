@@ -4,8 +4,7 @@ title: Passenger no painel de preferências do Leopard
 publishedAt: 2008-06-28T17:04:01-03:00
 type: Post
 ogImage: /images/og-images/392.png
-layout: post
-guid: https://leonardofaria.net/?p=392
+
 permalink: /2008/06/28/passenger-no-painel-de-preferencias-do-leopard/
 dsq_thread_id:
   - "1000136269"

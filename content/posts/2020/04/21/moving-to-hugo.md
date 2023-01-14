@@ -4,7 +4,6 @@ title: Moving to Hugo
 publishedAt: 2020-04-21T11:41:56-03:00
 type: Post
 ogImage: /images/og-images/2200.png
-layout: post
 permalink: /2020/04/21/moving-to-hugo
 ---
 

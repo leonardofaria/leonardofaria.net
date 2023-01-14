@@ -4,8 +4,7 @@ title: Mudanças no Rails 2.2
 publishedAt: 2008-08-02T18:41:42-03:00
 type: Post
 ogImage: /images/og-images/403.png
-layout: post
-guid: https://leonardofaria.net/?p=403
+
 permalink: /2008/08/02/mudancas-no-rails-22/
 dsq_thread_id:
   - "1000136276"

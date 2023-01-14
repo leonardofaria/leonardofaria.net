@@ -4,8 +4,7 @@ title: Sobre Macs Refurbisheds
 publishedAt: 2007-07-03T03:08:06-03:00
 type: Post
 ogImage: /images/og-images/284.png
-layout: post
-guid: https://leonardofaria.net/2007/07/03/sobre-macs-refurbisheds/
+
 permalink: /2007/07/03/sobre-macs-refurbisheds/
 dsq_thread_id:
   - "1000137015"

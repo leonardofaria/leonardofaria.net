@@ -4,8 +4,7 @@ title: 'Nasceu: codestacker.com'
 publishedAt: 2008-07-02T00:05:33-03:00
 type: Post
 ogImage: /images/og-images/395.png
-layout: post
-guid: https://leonardofaria.net/?p=395
+
 permalink: /2008/07/02/nasceu-codestackercom/
 dsq_thread_id:
   - "5345235112"

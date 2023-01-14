@@ -4,8 +4,7 @@ title: Endless Pageless
 publishedAt: 2007-08-11T03:41:55-03:00
 type: Post
 ogImage: /images/og-images/305.png
-layout: post
-guid: https://leonardofaria.net/2007/08/11/endless-pageless/
+
 permalink: /2007/08/11/endless-pageless/
 dsq_thread_id:
   - "1000136697"

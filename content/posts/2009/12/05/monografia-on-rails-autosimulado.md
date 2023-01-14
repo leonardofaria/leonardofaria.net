@@ -4,8 +4,7 @@ title: 'Monografia on Rails: autosimulado'
 publishedAt: 2009-12-05T21:00:36-02:00
 type: Post
 ogImage: /images/og-images/859.png
-layout: post
-guid: https://leonardofaria.net/?p=859
+
 permalink: /2009/12/05/monografia-on-rails-autosimulado/
 dsq_thread_id:
   - "1002853995"

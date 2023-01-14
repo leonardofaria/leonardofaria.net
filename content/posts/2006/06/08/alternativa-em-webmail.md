@@ -4,8 +4,7 @@ title: Alternativa em webmail
 publishedAt: 2006-06-08T02:25:48-03:00
 type: Post
 ogImage: /images/og-images/53.png
-layout: post
-guid: https://leonardofaria.net/2006/06/08/alternativa-em-webmail/
+
 permalink: /2006/06/08/alternativa-em-webmail/
 dsq_thread_id:
   - "1000137230"

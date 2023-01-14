@@ -4,8 +4,7 @@ title: Adobe compra Macromedia
 publishedAt: 2005-04-18T21:21:19-03:00
 type: Post
 ogImage: /images/og-images/12.png
-layout: post
-guid: https://leonardofaria.net/2005/04/18/adobe-compra-macromedia/
+
 permalink: /2005/04/18/adobe-compra-macromedia/
 dsq_thread_id:
   - "1347713525"

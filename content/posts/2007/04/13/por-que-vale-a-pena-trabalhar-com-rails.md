@@ -4,8 +4,7 @@ title: Por que vale a pena trabalhar com Rails
 publishedAt: 2007-04-13T22:36:09-03:00
 type: Post
 ogImage: /images/og-images/221.png
-layout: post
-guid: https://leonardofaria.net/2007/04/13/por-que-vale-a-pena-trabalhar-com-rails/
+
 permalink: /2007/04/13/por-que-vale-a-pena-trabalhar-com-rails/
 dsq_thread_id:
   - "1000136375"

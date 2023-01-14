@@ -4,8 +4,7 @@ title: Resolving slow loading of local virtualhosts on Chrome
 publishedAt: 2016-03-13T14:38:56-03:00
 type: Post
 ogImage: /images/og-images/1718.png
-layout: post
-guid: https://leonardofaria.net/?p=1718
+
 permalink: /2016/03/13/resolving-slow-loading-of-local-virtualhosts-on-chrome/
 dsq_thread_id:
   - "5345234862"

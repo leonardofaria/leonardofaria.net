@@ -4,8 +4,7 @@ title: Microsoft lança Flash Killer
 publishedAt: 2007-04-18T00:23:14-03:00
 type: Post
 ogImage: /images/og-images/237.png
-layout: post
-guid: https://leonardofaria.net/2007/04/18/microsoft-lanca-flash-killer/
+
 permalink: /2007/04/18/microsoft-lanca-flash-killer/
 dsq_thread_id:
   - "1000137106"

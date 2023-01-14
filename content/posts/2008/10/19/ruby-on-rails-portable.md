@@ -4,8 +4,7 @@ title: Ruby on Rails Portable
 publishedAt: 2008-10-19T23:49:26-02:00
 type: Post
 ogImage: /images/og-images/416.png
-layout: post
-guid: https://leonardofaria.net/?p=416
+
 permalink: /2008/10/19/ruby-on-rails-portable/
 dsq_thread_id:
   - "1000136294"

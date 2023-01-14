@@ -4,8 +4,7 @@ title: Tela azul da Morte. No mac
 publishedAt: 2006-11-12T02:21:51-02:00
 type: Post
 ogImage: /images/og-images/152.png
-layout: post
-guid: https://leonardofaria.net/2006/11/12/tela-azul-da-morte-no-mac/
+
 permalink: /2006/11/12/tela-azul-da-morte-no-mac/
 dsq_thread_id:
   - "5342050724"

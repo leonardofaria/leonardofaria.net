@@ -4,8 +4,7 @@ title: 'Sick Picks: Podcasts'
 publishedAt: 2018-01-23T02:46:07-02:00
 type: Post
 ogImage: /images/og-images/1883.png
-layout: post
-guid: https://leonardofaria.net/?p=1883
+
 permalink: /2018/01/23/sick-picks-podcasts/
 dsq_thread_id:
   - "6431956529"

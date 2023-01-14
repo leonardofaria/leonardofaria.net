@@ -4,8 +4,7 @@ title: One line webservers for everybody
 publishedAt: 2015-08-16T13:38:47-03:00
 type: Post
 ogImage: /images/og-images/1553.png
-layout: post
-guid: https://leonardofaria.net/?p=1553
+
 permalink: /2015/08/16/one-line-webservers-for-everybody/
 dsq_thread_id:
   - "4051595671"

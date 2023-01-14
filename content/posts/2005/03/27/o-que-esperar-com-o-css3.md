@@ -4,8 +4,7 @@ title: O que esperar com o CSS3
 publishedAt: 2005-03-27T21:11:57-03:00
 type: Post
 ogImage: /images/og-images/7.png
-layout: post
-guid: https://leonardofaria.net/2006/05/27/o-que-esperar-com-o-css3/
+
 permalink: /2005/03/27/o-que-esperar-com-o-css3/
 dsq_thread_id:
   - "1811027111"

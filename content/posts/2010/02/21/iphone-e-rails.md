@@ -4,8 +4,7 @@ title: iPhone e Rails
 publishedAt: 2010-02-21T23:36:13-03:00
 type: Post
 ogImage: /images/og-images/927.png
-layout: post
-guid: https://leonardofaria.net/?p=927
+
 permalink: /2010/02/21/iphone-e-rails/
 dsq_thread_id:
   - "1069799054"

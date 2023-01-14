@@ -4,8 +4,7 @@ title: 'Edge Rails: método render mais esperto'
 publishedAt: 2008-12-26T16:02:10-02:00
 type: Post
 ogImage: /images/og-images/435.png
-layout: post
-guid: https://leonardofaria.net/?p=435
+
 permalink: /2008/12/26/edge-rails-metodo-render-mais-esperto/
 dsq_thread_id:
   - "1031803297"

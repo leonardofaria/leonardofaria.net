@@ -4,8 +4,7 @@ title: O que é Ruby on Rails?
 publishedAt: 2009-11-09T21:10:15-02:00
 type: Post
 ogImage: /images/og-images/846.png
-layout: post
-guid: https://leonardofaria.net/?p=846
+
 permalink: /2009/11/09/o-que-e-ruby-on-rails/
 dsq_thread_id:
   - "1000136331"

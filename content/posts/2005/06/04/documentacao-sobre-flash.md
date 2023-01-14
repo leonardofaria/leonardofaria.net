@@ -4,8 +4,7 @@ title: Documentação sobre Flash
 publishedAt: 2005-06-04T21:34:33-03:00
 type: Post
 ogImage: /images/og-images/17.png
-layout: post
-guid: https://leonardofaria.net/2005/06/04/documentacao-sobre-flash/
+
 permalink: /2005/06/04/documentacao-sobre-flash/
 dsq_thread_id:
   - "1665376552"

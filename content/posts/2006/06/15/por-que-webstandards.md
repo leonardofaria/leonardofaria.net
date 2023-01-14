@@ -4,8 +4,7 @@ title: Por que webstandards?
 publishedAt: 2006-06-15T21:56:11-03:00
 type: Post
 ogImage: /images/og-images/61.png
-layout: post
-guid: https://leonardofaria.net/2006/06/15/por-que-webstandards/
+
 permalink: /2006/06/15/por-que-webstandards/
 categories:
   - css

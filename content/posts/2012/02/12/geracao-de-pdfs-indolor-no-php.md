@@ -4,8 +4,7 @@ title: Geração de PDFs indolor no PHP
 publishedAt: 2012-02-12T15:04:44-02:00
 type: Post
 ogImage: /images/og-images/1264.png
-layout: post
-guid: https://leonardofaria.net/?p=1264
+
 permalink: /2012/02/12/geracao-de-pdfs-indolor-no-php/
 dsq_thread_id:
   - "5338836576"

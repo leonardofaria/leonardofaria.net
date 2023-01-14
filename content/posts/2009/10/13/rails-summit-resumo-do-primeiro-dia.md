@@ -4,8 +4,7 @@ title: 'Rails Summit: resumo do primeiro dia'
 publishedAt: 2009-10-13T12:46:10-03:00
 type: Post
 ogImage: /images/og-images/726.png
-layout: post
-guid: https://leonardofaria.net/?p=726
+
 permalink: /2009/10/13/rails-summit-resumo-do-primeiro-dia/
 dsq_thread_id:
   - "1000137294"

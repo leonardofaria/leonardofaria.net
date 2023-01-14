@@ -4,8 +4,7 @@ title: 'Resenha: A cabeça de Steve Jobs'
 publishedAt: 2009-01-31T14:31:16-02:00
 type: Post
 ogImage: /images/og-images/436.png
-layout: post
-guid: https://leonardofaria.net/?p=436
+
 permalink: /2009/01/31/resenha-a-cabeca-de-steve-jobs/
 dsq_thread_id:
   - "5338156306"

@@ -4,8 +4,7 @@ title: O ecossistema Rails
 publishedAt: 2009-10-15T23:32:07-03:00
 type: Post
 ogImage: /images/og-images/805.png
-layout: post
-guid: https://leonardofaria.net/?p=805
+
 permalink: /2009/10/15/o-ecossistema-rails/
 dsq_thread_id:
   - "1000136935"

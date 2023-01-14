@@ -4,8 +4,7 @@ title: 2 alternativas ao delicious
 publishedAt: 2010-12-25T17:16:45-02:00
 type: Post
 ogImage: /images/og-images/1095.png
-layout: post
-guid: https://leonardofaria.net/?p=1095
+
 permalink: /2010/12/25/2-alternativas-ao-delicious/
 dsq_thread_id:
   - "1000136239"

@@ -4,8 +4,7 @@ title: Validações personalizadas no Rails 3
 publishedAt: 2011-06-05T22:55:12-03:00
 type: Post
 ogImage: /images/og-images/1180.png
-layout: post
-guid: https://leonardofaria.net/?p=1180
+
 permalink: /2011/06/05/validacoes-personalizadas-no-rails-3/
 dsq_thread_id:
   - "1008236005"

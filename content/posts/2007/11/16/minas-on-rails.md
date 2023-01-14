@@ -4,8 +4,7 @@ title: Minas on Rails
 publishedAt: 2007-11-16T13:53:30-02:00
 type: Post
 ogImage: /images/og-images/339.png
-layout: post
-guid: https://leonardofaria.net/2007/11/16/minas-on-rails/
+
 permalink: /2007/11/16/minas-on-rails/
 dsq_thread_id:
   - "1318386471"

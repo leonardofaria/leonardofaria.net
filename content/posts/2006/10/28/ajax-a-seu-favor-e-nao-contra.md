@@ -4,8 +4,7 @@ title: Ajax a seu favor. E não contra
 publishedAt: 2006-10-28T20:36:26-03:00
 type: Post
 ogImage: /images/og-images/131.png
-layout: post
-guid: https://leonardofaria.net/2006/10/28/ajax-a-seu-favor-e-nao-contra/
+
 permalink: /2006/10/28/ajax-a-seu-favor-e-nao-contra/
 dsq_thread_id:
   - "1000134929"

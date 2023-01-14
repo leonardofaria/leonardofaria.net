@@ -4,8 +4,7 @@ title: hirb, dados tabulados no console
 publishedAt: 2009-07-01T20:21:22-03:00
 type: Post
 ogImage: /images/og-images/672.png
-layout: post
-guid: https://leonardofaria.net/?p=672
+
 permalink: /2009/07/01/hirb-dados-tabulados-no-console/
 dsq_thread_id:
   - "1000136230"

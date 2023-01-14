@@ -4,8 +4,7 @@ title: Trabalhando com imagens no Mac
 publishedAt: 2006-11-18T00:29:10-02:00
 type: Post
 ogImage: /images/og-images/154.png
-layout: post
-guid: https://leonardofaria.net/2006/11/18/trabalhando-com-imagens-no-mac/
+
 permalink: /2006/11/18/trabalhando-com-imagens-no-mac/
 dsq_thread_id:
   - "1000296952"

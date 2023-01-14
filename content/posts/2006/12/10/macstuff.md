@@ -4,8 +4,7 @@ title: MacStuff
 publishedAt: 2006-12-10T13:42:34-02:00
 type: Post
 ogImage: /images/og-images/178.png
-layout: post
-guid: https://leonardofaria.net/2006/12/10/macstuff/
+
 permalink: /2006/12/10/macstuff/
 dsq_thread_id:
   - "1105321883"

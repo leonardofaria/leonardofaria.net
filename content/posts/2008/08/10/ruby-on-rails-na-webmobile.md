@@ -4,8 +4,7 @@ title: Ruby on Rails na WebMobile
 publishedAt: 2008-08-10T19:32:50-03:00
 type: Post
 ogImage: /images/og-images/404.png
-layout: post
-guid: https://leonardofaria.net/?p=404
+
 permalink: /2008/08/10/ruby-on-rails-na-webmobile/
 dsq_thread_id:
   - "1000137372"

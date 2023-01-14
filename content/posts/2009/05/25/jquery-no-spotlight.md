@@ -4,8 +4,7 @@ title: jQuery no Spotlight
 publishedAt: 2009-05-25T00:21:40-03:00
 type: Post
 ogImage: /images/og-images/637.png
-layout: post
-guid: https://leonardofaria.net/?p=637
+
 permalink: /2009/05/25/jquery-no-spotlight/
 dsq_thread_id:
   - "1397195620"

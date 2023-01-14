@@ -4,8 +4,7 @@ title: Rich Internet Applications
 publishedAt: 2005-05-21T21:32:57-03:00
 type: Post
 ogImage: /images/og-images/16.png
-layout: post
-guid: https://leonardofaria.net/2005/05/21/rich-internet-applications/
+
 permalink: /2005/05/21/rich-internet-applications/
 dsq_thread_id:
   - "5169722341"

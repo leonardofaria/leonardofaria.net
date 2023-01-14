@@ -4,8 +4,7 @@ title: Excluding folders from indexing in Sublime
 publishedAt: 2016-05-07T01:07:12-03:00
 type: Post
 ogImage: /images/og-images/1728.png
-layout: post
-guid: https://leonardofaria.net/?p=1728
+
 permalink: /2016/05/07/excluding-folders-from-indexing-in-sublime/
 dsq_thread_id:
   - "4910934392"

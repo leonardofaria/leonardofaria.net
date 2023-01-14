@@ -4,8 +4,7 @@ title: Ruby on Rails na caveira!
 publishedAt: 2007-12-19T01:47:38-02:00
 type: Post
 ogImage: /images/og-images/348.png
-layout: post
-guid: https://leonardofaria.net/2007/12/19/ruby-on-rails-na-caveira/
+
 permalink: /2007/12/19/ruby-on-rails-na-caveira/
 dsq_thread_id:
   - "1009567270"

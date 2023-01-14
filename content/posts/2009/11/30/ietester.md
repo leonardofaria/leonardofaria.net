@@ -4,8 +4,7 @@ title: IETester
 publishedAt: 2009-11-30T21:14:20-02:00
 type: Post
 ogImage: /images/og-images/898.png
-layout: post
-guid: https://leonardofaria.net/?p=898
+
 permalink: /2009/11/30/ietester/
 dsq_thread_id:
   - "1506486675"

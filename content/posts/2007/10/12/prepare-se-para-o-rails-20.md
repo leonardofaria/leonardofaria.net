@@ -4,8 +4,7 @@ title: Prepare-se para o Rails 2.0
 publishedAt: 2007-10-12T14:54:13-03:00
 type: Post
 ogImage: /images/og-images/316.png
-layout: post
-guid: https://leonardofaria.net/2007/10/12/prepare-se-para-o-rails-20/
+
 permalink: /2007/10/12/prepare-se-para-o-rails-20/
 dsq_thread_id:
   - "1531150042"

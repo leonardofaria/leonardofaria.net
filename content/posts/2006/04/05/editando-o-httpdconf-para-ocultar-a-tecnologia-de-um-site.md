@@ -4,8 +4,7 @@ title: Editando o httpd.conf para ocultar a tecnologia de um site
 publishedAt: 2006-04-05T22:00:45-03:00
 type: Post
 ogImage: /images/og-images/27.png
-layout: post
-guid: https://leonardofaria.net/2006/04/27/editando-o-httpdconf-para-ocultar-a-tecnologia-de-um-site/
+
 permalink: /2006/04/05/editando-o-httpdconf-para-ocultar-a-tecnologia-de-um-site/
 dsq_thread_id:
   - "1020433179"

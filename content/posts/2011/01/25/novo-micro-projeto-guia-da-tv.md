@@ -4,8 +4,7 @@ title: 'Novo micro-projeto: Guia da TV'
 publishedAt: 2011-01-25T18:33:40-02:00
 type: Post
 ogImage: /images/og-images/1125.png
-layout: post
-guid: https://leonardofaria.net/?p=1125
+
 permalink: /2011/01/25/novo-micro-projeto-guia-da-tv/
 dsq_thread_id:
   - "1000136943"

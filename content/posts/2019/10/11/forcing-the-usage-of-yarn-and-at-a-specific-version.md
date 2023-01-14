@@ -4,8 +4,7 @@ title: Forcing the usage of yarn (and at a specific version)
 publishedAt: 2019-10-11T00:40:46-03:00
 type: Post
 ogImage: /images/og-images/2071.png
-layout: post
-guid: https://leonardofaria.net/?p=2071
+
 permalink: /2019/10/11/forcing-the-usage-of-yarn-and-at-a-specific-version/
 categories:
   - javascript

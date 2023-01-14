@@ -4,8 +4,7 @@ title: Serving raw files directly from Github
 publishedAt: 2016-08-06T20:49:30-03:00
 type: Post
 ogImage: /images/og-images/1692.png
-layout: post
-guid: https://leonardofaria.net/?p=1692
+
 permalink: /2016/08/06/serving-raw-files-directly-from-github/
 dsq_thread_id:
   - "5045995388"

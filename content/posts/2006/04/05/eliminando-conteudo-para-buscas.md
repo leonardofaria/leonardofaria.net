@@ -4,8 +4,7 @@ title: Eliminando conteúdo para buscas
 publishedAt: 2006-04-05T22:09:05-03:00
 type: Post
 ogImage: /images/og-images/29.png
-layout: post
-guid: https://leonardofaria.net/2006/04/05/eliminando-conteudo-para-buscas/
+
 permalink: /2006/04/05/eliminando-conteudo-para-buscas/
 dsq_thread_id:
   - "1308101337"

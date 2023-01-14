@@ -4,8 +4,7 @@ title: Acelerando seu Textmate
 publishedAt: 2008-08-16T16:42:25-03:00
 type: Post
 ogImage: /images/og-images/406.png
-layout: post
-guid: https://leonardofaria.net/?p=406
+
 permalink: /2008/08/16/acelerando-seu-textmate/
 dsq_thread_id:
   - "1000136285"

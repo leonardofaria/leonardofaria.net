@@ -4,8 +4,7 @@ title: Personalizando o scrollbar com WebKit
 publishedAt: 2011-01-23T18:52:34-02:00
 type: Post
 ogImage: /images/og-images/1106.png
-layout: post
-guid: https://leonardofaria.net/?p=1106
+
 permalink: /2011/01/23/personalizando-o-scrollbar-com-webkit/
 dsq_thread_id:
   - "5337469021"

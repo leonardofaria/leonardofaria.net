@@ -4,8 +4,7 @@ title: gem cheat
 publishedAt: 2008-11-29T20:23:04-02:00
 type: Post
 ogImage: /images/og-images/432.png
-layout: post
-guid: https://leonardofaria.net/?p=432
+
 permalink: /2008/11/29/gem-cheat/
 dsq_thread_id:
   - "1000136611"

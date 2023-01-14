@@ -4,8 +4,7 @@ title: 'O Pai do Flash: FutureSplash'
 publishedAt: 2006-01-07T21:54:15-02:00
 type: Post
 ogImage: /images/og-images/24.png
-layout: post
-guid: https://leonardofaria.net/2006/01/07/o-pai-do-flash-futuresplash/
+
 permalink: /2006/01/07/o-pai-do-flash-futuresplash/
 dsq_thread_id:
   - "1448123172"

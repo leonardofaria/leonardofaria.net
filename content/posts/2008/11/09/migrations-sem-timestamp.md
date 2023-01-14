@@ -4,8 +4,7 @@ title: Migrations sem timestamp
 publishedAt: 2008-11-09T16:22:44-02:00
 type: Post
 ogImage: /images/og-images/425.png
-layout: post
-guid: https://leonardofaria.net/?p=425
+
 permalink: /2008/11/09/migrations-sem-timestamp/
 dsq_thread_id:
   - "1348231301"

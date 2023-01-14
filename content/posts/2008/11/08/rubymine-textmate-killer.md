@@ -4,8 +4,7 @@ title: 'RubyMine: Textmate-killer?'
 publishedAt: 2008-11-08T19:07:41-02:00
 type: Post
 ogImage: /images/og-images/422.png
-layout: post
-guid: https://leonardofaria.net/?p=422
+
 permalink: /2008/11/08/rubymine-textmate-killer/
 dsq_thread_id:
   - "1000136302"

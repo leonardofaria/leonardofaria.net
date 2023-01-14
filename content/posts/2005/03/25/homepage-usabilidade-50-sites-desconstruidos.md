@@ -4,8 +4,7 @@ title: 'Homepage – Usabilidade: 50 sites desconstruídos'
 publishedAt: 2005-03-25T22:45:50-03:00
 type: Post
 ogImage: /images/og-images/42.png
-layout: post
-guid: https://leonardofaria.net/2005/03/25/homepage-usabilidade-50-sites-desconstruidos/
+
 permalink: /2005/03/25/homepage-usabilidade-50-sites-desconstruidos/
 dsq_thread_id:
   - "5338218048"

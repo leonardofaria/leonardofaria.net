@@ -4,8 +4,7 @@ title: '#deletefacebook and social media effects on me'
 publishedAt: 2018-03-28T23:13:28-03:00
 type: Post
 ogImage: /images/og-images/1901.png
-layout: post
-guid: https://leonardofaria.net/?p=1901
+
 permalink: /2018/03/28/deletefacebook-social-media-effects
 ---
 

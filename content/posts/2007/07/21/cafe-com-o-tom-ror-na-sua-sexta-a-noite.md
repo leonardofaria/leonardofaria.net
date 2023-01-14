@@ -4,8 +4,7 @@ title: Café com o TOM, RoR na sua sexta a noite
 publishedAt: 2007-07-21T16:25:44-03:00
 type: Post
 ogImage: /images/og-images/290.png
-layout: post
-guid: https://leonardofaria.net/2007/07/21/cafe-com-o-tom-ror-na-sua-sexta-a-noite/
+
 permalink: /2007/07/21/cafe-com-o-tom-ror-na-sua-sexta-a-noite/
 dsq_thread_id:
   - "1000137135"

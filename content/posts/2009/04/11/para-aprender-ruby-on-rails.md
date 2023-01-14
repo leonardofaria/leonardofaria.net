@@ -4,8 +4,7 @@ title: Para aprender Ruby on Rails
 publishedAt: 2009-04-11T16:49:03-03:00
 type: Post
 ogImage: /images/og-images/508.png
-layout: post
-guid: https://leonardofaria.net/?p=508
+
 permalink: /2009/04/11/para-aprender-ruby-on-rails/
 dsq_thread_id:
   - "1008239052"

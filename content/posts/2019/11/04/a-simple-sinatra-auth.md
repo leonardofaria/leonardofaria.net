@@ -4,8 +4,7 @@ title: A simple Sinatra Auth
 publishedAt: 2019-11-04T01:40:07-03:00
 type: Post
 ogImage: /images/og-images/2137.png
-layout: post
-guid: https://leonardofaria.net/?p=2137
+
 permalink: /2019/11/04/a-simple-sinatra-auth/
 categories:
   - rubyonrails

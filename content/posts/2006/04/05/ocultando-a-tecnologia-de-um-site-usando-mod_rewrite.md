@@ -4,8 +4,7 @@ title: Ocultando a tecnologia de um site usando mod_rewrite
 publishedAt: 2006-04-05T22:08:58-03:00
 type: Post
 ogImage: /images/og-images/28.png
-layout: post
-guid: https://leonardofaria.net/2006/05/27/ocultando-a-tecnologia-de-um-site-usando-mod_rewrite/
+
 permalink: /2006/04/05/ocultando-a-tecnologia-de-um-site-usando-mod_rewrite/
 dsq_thread_id:
   - "5342459188"

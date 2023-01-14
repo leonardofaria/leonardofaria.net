@@ -4,8 +4,7 @@ title: Another Meetup presentation
 publishedAt: 2016-12-02T16:41:57-02:00
 type: Post
 ogImage: /images/og-images/1801.png
-layout: post
-guid: https://leonardofaria.net/?p=1801
+
 permalink: /2016/12/02/another-meetup-presentation/
 dsq_thread_id:
   - "5440621470"

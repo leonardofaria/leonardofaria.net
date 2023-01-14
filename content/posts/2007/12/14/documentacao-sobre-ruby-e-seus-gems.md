@@ -4,8 +4,7 @@ title: Documentação sobre Ruby e seus gems
 publishedAt: 2007-12-14T23:58:23-02:00
 type: Post
 ogImage: /images/og-images/346.png
-layout: post
-guid: https://leonardofaria.net/2007/12/14/documentacao-sobre-ruby-e-seus-gems/
+
 permalink: /2007/12/14/documentacao-sobre-ruby-e-seus-gems/
 dsq_thread_id:
   - "1000136873"

@@ -4,8 +4,7 @@ title: 'Usando ApacheBench para testes: Apache/mod_rails e Nginx/mongrel'
 publishedAt: 2008-07-15T00:41:42-03:00
 type: Post
 ogImage: /images/og-images/399.png
-layout: post
-guid: https://leonardofaria.net/?p=399
+
 permalink: /2008/07/15/usando-apachebench-para-testes-apachemod_rails-e-nginxmongrel/
 dsq_thread_id:
   - "5338540697"

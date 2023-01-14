@@ -4,8 +4,7 @@ title: Review do .Mac Mail
 publishedAt: 2007-10-30T01:56:29-02:00
 type: Post
 ogImage: /images/og-images/326.png
-layout: post
-guid: https://leonardofaria.net/2007/10/30/review-do-mac-mail/
+
 permalink: /2007/10/30/review-do-mac-mail/
 dsq_thread_id:
   - "1000137031"

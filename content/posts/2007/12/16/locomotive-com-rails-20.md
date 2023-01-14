@@ -4,8 +4,7 @@ title: Locomotive com Rails 2.0
 publishedAt: 2007-12-16T22:06:23-02:00
 type: Post
 ogImage: /images/og-images/347.png
-layout: post
-guid: https://leonardofaria.net/2007/12/16/locomotive-com-rails-20/
+
 permalink: /2007/12/16/locomotive-com-rails-20/
 dsq_thread_id:
   - "1031892199"

@@ -4,8 +4,7 @@ title: Protegendo projetos com o .htaccess
 publishedAt: 2008-07-16T01:48:18-03:00
 type: Post
 ogImage: /images/og-images/400.png
-layout: post
-guid: https://leonardofaria.net/?p=400
+
 permalink: /2008/07/16/protegendo-projetos-com-o-htaccess/
 dsq_thread_id:
   - "1000137216"

@@ -4,8 +4,7 @@ title: Syntax Highlight on Rails
 publishedAt: 2009-12-02T20:52:12-02:00
 type: Post
 ogImage: /images/og-images/903.png
-layout: post
-guid: https://leonardofaria.net/?p=903
+
 permalink: /2009/12/02/syntax-highlight-on-rails/
 dsq_thread_id:
   - "1089931967"

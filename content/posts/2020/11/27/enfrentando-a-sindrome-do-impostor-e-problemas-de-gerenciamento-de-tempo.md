@@ -4,7 +4,6 @@ title: Enfrentando a síndrome do impostor e problemas de gerenciamento de tempo
 publishedAt: 2020-11-27
 type: Post
 ogImage: /images/og-images/2231.png
-layout: post
 permalink: /2020/11/27/enfrentando-a-sindrome-do-impostor-e-problemas-de-gerenciamento-de-tempo
 categories:
   - career

@@ -4,8 +4,7 @@ title: Resultado da Pesquisa sobre Mac Users
 publishedAt: 2007-06-07T18:07:18-03:00
 type: Post
 ogImage: /images/og-images/254.png
-layout: post
-guid: https://leonardofaria.net/2007/06/07/resultado-da-pesquisa-sobre-mac-users/
+
 permalink: /2007/06/07/resultado-da-pesquisa-sobre-mac-users/
 dsq_thread_id:
   - "1000136739"

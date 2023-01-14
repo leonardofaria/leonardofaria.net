@@ -4,8 +4,7 @@ title: O desafio de crescer
 publishedAt: 2009-05-25T19:23:21-03:00
 type: Post
 ogImage: /images/og-images/645.png
-layout: post
-guid: https://leonardofaria.net/?p=645
+
 permalink: /2009/05/25/o-desafio-de-crescer/
 dsq_thread_id:
   - "1000136204"

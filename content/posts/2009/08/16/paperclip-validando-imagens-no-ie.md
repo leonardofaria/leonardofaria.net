@@ -4,8 +4,7 @@ title: Paperclip validando imagens no IE
 publishedAt: 2009-08-16T21:47:57-03:00
 type: Post
 ogImage: /images/og-images/691.png
-layout: post
-guid: https://leonardofaria.net/?p=691
+
 permalink: /2009/08/16/paperclip-validando-imagens-no-ie/
 dsq_thread_id:
   - "1060851220"

@@ -4,8 +4,7 @@ title: Greasemonkey para orkut na Faculdade
 publishedAt: 2006-06-01T15:00:32-03:00
 type: Post
 ogImage: /images/og-images/47.png
-layout: post
-guid: https://leonardofaria.net/2006/06/01/greasemonkey-para-orkut-na-faculdade/
+
 permalink: /2006/06/01/greasemonkey-para-orkut-na-faculdade/
 dsq_thread_id:
   - "1000135294"

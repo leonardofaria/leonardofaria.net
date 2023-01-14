@@ -4,8 +4,7 @@ title: Extensão melhora usabilidade em sites
 publishedAt: 2007-01-28T21:16:36-02:00
 type: Post
 ogImage: /images/og-images/209.png
-layout: post
-guid: https://leonardofaria.net/2007/01/28/extensao-melhora-usabilidade-em-sites/
+
 permalink: /2007/01/28/extensao-melhora-usabilidade-em-sites/
 dsq_thread_id:
   - "1649670373"

@@ -4,8 +4,7 @@ title: 'DIY: Upgrade de SSD no MacBook Air (e outros MacBooks)'
 publishedAt: 2014-10-30T18:16:36-02:00
 type: Post
 ogImage: /images/og-images/1464.png
-layout: post
-guid: https://leonardofaria.net/?p=1464
+
 permalink: /2014/10/30/diy-upgrade-de-ssd-no-macbook-air-e-outros-macbooks/
 dsq_thread_id:
   - "5339132872"

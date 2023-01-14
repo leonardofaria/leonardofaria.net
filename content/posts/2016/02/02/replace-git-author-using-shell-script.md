@@ -4,8 +4,7 @@ title: Replace git author using shell script
 publishedAt: 2016-02-02T02:22:56-02:00
 type: Post
 ogImage: /images/og-images/1704.png
-layout: post
-guid: https://leonardofaria.net/?p=1704
+
 permalink: /2016/02/02/replace-git-author-using-shell-script/
 dsq_thread_id:
   - "5345234838"

@@ -4,8 +4,7 @@ title: A new place
 publishedAt: 2015-09-11T19:04:24-03:00
 type: Post
 ogImage: /images/og-images/1623.png
-layout: post
-guid: https://leonardofaria.net/?p=1623
+
 permalink: /2015/09/11/a-new-place/
 dsq_thread_id:
   - "4120935812"

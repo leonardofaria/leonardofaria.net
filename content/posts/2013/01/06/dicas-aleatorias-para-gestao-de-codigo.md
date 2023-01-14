@@ -4,8 +4,7 @@ title: Dicas aleatórias para gestão de código
 publishedAt: 2013-01-06T12:02:56-02:00
 type: Post
 ogImage: /images/og-images/1360.png
-layout: post
-guid: https://leonardofaria.net/?p=1360
+
 permalink: /2013/01/06/dicas-aleatorias-para-gestao-de-codigo/
 dsq_thread_id:
   - "1010950173"

@@ -4,8 +4,7 @@ title: Gource, uma forma estilosa de ver logs do seu controle de versão
 publishedAt: 2013-01-20T18:53:58-02:00
 type: Post
 ogImage: /images/og-images/1375.png
-layout: post
-guid: https://leonardofaria.net/?p=1375
+
 permalink: /2013/01/20/gource-uma-forma-estilosa-de-ver-logs-do-seu-controle-de-versao
 dsq_thread_id:
   - "1036959682"

@@ -4,8 +4,7 @@ title: "It Doesn't Have to Be Crazy at Work and Joy, Inc.: How We Built a Workpl
 publishedAt: 2019-01-23T04:41:05-02:00
 type: Post
 ogImage: /images/og-images/1953.png
-layout: post
-guid: https://leonardofaria.net/?p=1953
+
 permalink: /2019/01/23/it-doesnt-have-to-be-crazy-at-work-and-joy-inc-how-we-built-a-workplace-people-love-reviews/
 categories:
   - review

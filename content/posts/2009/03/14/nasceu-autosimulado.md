@@ -4,8 +4,7 @@ title: 'Nasceu: autosimulado'
 publishedAt: 2009-03-14T20:41:36-03:00
 type: Post
 ogImage: /images/og-images/477.png
-layout: post
-guid: https://leonardofaria.net/?p=477
+
 permalink: /2009/03/14/nasceu-autosimulado/
 dsq_thread_id:
   - "1000136214"

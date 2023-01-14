@@ -4,8 +4,7 @@ title: Another dotfiles repository
 publishedAt: 2018-06-16T18:42:55-03:00
 type: Post
 ogImage: /images/og-images/1931.png
-layout: post
-guid: https://leonardofaria.net/?p=1931
+
 permalink: /2018/06/16/another-dotfiles-repository/
 categories:
   - software

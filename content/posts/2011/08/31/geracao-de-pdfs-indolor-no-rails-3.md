@@ -4,8 +4,7 @@ title: Geração de PDFs indolor no Rails 3
 publishedAt: 2011-08-31T00:50:10-03:00
 type: Post
 ogImage: /images/og-images/1244.png
-layout: post
-guid: https://leonardofaria.net/?p=1244
+
 permalink: /2011/08/31/geracao-de-pdfs-indolor-no-rails-3/
 dsq_thread_id:
   - "5338248113"

@@ -4,8 +4,7 @@ title: Newsletters to subscribe
 publishedAt: 2019-05-14T23:54:26-03:00
 type: Post
 ogImage: /images/og-images/1970.png
-layout: post
-guid: https://leonardofaria.net/?p=1970
+
 permalink: /2019/05/14/newsletters-to-subscribe/
 ---
 In the last years, newsletters became more and more popular. Along with Twitter and RSS, it is one of my favourite ways to keep me updated it. Here are the ones I follow:

@@ -4,8 +4,7 @@ title: Thoughts on building components libraries
 publishedAt: 2018-02-04T16:24:53-02:00
 type: Post
 ogImage: /images/og-images/1815.png
-layout: post
-guid: https://leonardofaria.net/?p=1815
+
 permalink: /2018/02/04/thoughts-building-components-libraries/
 dsq_thread_id:
   - "6458404438"

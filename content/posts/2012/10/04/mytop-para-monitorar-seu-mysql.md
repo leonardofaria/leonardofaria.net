@@ -4,8 +4,7 @@ title: mytop, para monitorar seu MySQL
 publishedAt: 2012-10-04T00:27:33-03:00
 type: Post
 ogImage: /images/og-images/1292.png
-layout: post
-guid: https://leonardofaria.net/?p=1292
+
 permalink: /2012/10/04/mytop-para-monitorar-seu-mysql/
 dsq_thread_id:
   - "1001382849"

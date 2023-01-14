@@ -4,8 +4,7 @@ title: Webalizer
 publishedAt: 2006-06-04T15:29:38-03:00
 type: Post
 ogImage: /images/og-images/51.png
-layout: post
-guid: https://leonardofaria.net/2006/06/04/webalizer/
+
 permalink: /2006/06/04/webalizer/
 dsq_thread_id:
   - "1000136086"

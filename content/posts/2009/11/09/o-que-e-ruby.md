@@ -4,8 +4,7 @@ title: O que é Ruby?
 publishedAt: 2009-11-09T21:09:50-02:00
 type: Post
 ogImage: /images/og-images/836.png
-layout: post
-guid: https://leonardofaria.net/?p=836
+
 permalink: /2009/11/09/o-que-e-ruby/
 dsq_thread_id:
   - "1000136928"

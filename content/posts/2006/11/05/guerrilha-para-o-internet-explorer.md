@@ -4,8 +4,7 @@ title: Guerrilha para o Internet Explorer
 publishedAt: 2006-11-05T21:04:39-02:00
 type: Post
 ogImage: /images/og-images/147.png
-layout: post
-guid: https://leonardofaria.net/2006/11/05/guerrilha-para-o-internet-explorer/
+
 permalink: /2006/11/05/guerrilha-para-o-internet-explorer/
 dsq_thread_id:
   - "1006997266"

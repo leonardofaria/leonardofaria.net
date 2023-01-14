@@ -4,8 +4,7 @@ title: MacBook e o caso do topcase rachado
 publishedAt: 2009-10-11T14:10:58-03:00
 type: Post
 ogImage: /images/og-images/720.png
-layout: post
-guid: https://leonardofaria.net/?p=720
+
 permalink: /2009/10/11/macbook-e-o-caso-do-topcase-rachado/
 dsq_thread_id:
   - "1000136040"

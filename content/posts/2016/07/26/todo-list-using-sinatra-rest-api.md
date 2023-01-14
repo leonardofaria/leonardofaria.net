@@ -4,8 +4,7 @@ title: Todo list using a Sinatra REST API
 publishedAt: 2016-07-26T19:01:16-03:00
 type: Post
 ogImage: /images/og-images/1746.png
-layout: post
-guid: https://leonardofaria.net/?p=1746
+
 permalink: /2016/07/26/todo-list-using-sinatra-rest-api/
 dsq_thread_id:
   - "5338692151"

@@ -4,8 +4,7 @@ title: Cylay, alternativa ao Find My iPhone
 publishedAt: 2010-08-15T17:29:51-03:00
 type: Post
 ogImage: /images/og-images/1081.png
-layout: post
-guid: https://leonardofaria.net/?p=1081
+
 permalink: /2010/08/15/cylay-alternativa-ao-find-my-iphone/
 dsq_thread_id:
   - "1000478107"

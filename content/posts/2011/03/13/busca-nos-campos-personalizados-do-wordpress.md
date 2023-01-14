@@ -4,8 +4,7 @@ title: Busca nos campos personalizados do WordPress
 publishedAt: 2011-03-13T12:33:57-03:00
 type: Post
 ogImage: /images/og-images/1132.png
-layout: post
-guid: https://leonardofaria.net/?p=1132
+
 permalink: /2011/03/13/busca-nos-campos-personalizados-do-wordpress/
 dsq_thread_id:
   - "5339201892"

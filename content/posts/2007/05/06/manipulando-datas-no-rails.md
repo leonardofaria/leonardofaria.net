@@ -4,8 +4,7 @@ title: Manipulando datas no Rails
 publishedAt: 2007-05-06T18:20:44-03:00
 type: Post
 ogImage: /images/og-images/244.png
-layout: post
-guid: https://leonardofaria.net/2007/05/06/manipulando-datas-no-rails/
+
 permalink: /2007/05/06/manipulando-datas-no-rails/
 dsq_thread_id:
   - "5338864321"

@@ -4,8 +4,7 @@ title: Apple reinventa o celular
 publishedAt: 2007-01-09T22:41:43-02:00
 type: Post
 ogImage: /images/og-images/207.png
-layout: post
-guid: https://leonardofaria.net/2007/01/09/apple-reinventa-o-celular/
+
 permalink: /2007/01/09/apple-reinventa-o-celular/
 dsq_thread_id:
   - "1239098790"

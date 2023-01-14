@@ -4,8 +4,7 @@ title: Lançado Safari 4
 publishedAt: 2009-02-25T15:41:27-03:00
 type: Post
 ogImage: /images/og-images/459.png
-layout: post
-guid: https://leonardofaria.net/?p=459
+
 permalink: /2009/02/25/lancado-safari-4/
 dsq_thread_id:
   - "1421148988"

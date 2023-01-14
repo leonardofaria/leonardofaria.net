@@ -4,8 +4,7 @@ title: Acessando seu PC Windows pelo Mac OS
 publishedAt: 2006-10-28T21:24:38-03:00
 type: Post
 ogImage: /images/og-images/135.png
-layout: post
-guid: https://leonardofaria.net/2006/10/28/acessando-seu-pc-windows-pelo-mac-os/
+
 permalink: /2006/10/28/acessando-seu-pc-windows-pelo-mac-os/
 dsq_thread_id:
   - "1020268920"

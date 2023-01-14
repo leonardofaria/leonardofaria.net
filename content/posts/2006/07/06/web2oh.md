@@ -4,8 +4,7 @@ title: Web2.Oh
 publishedAt: 2006-07-06T00:36:48-03:00
 type: Post
 ogImage: /images/og-images/93.png
-layout: post
-guid: https://leonardofaria.net/2006/07/06/web2oh/
+
 permalink: /2006/07/06/web2oh/
 dsq_thread_id:
   - "1000137244"

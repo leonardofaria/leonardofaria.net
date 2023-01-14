@@ -4,8 +4,7 @@ title: Flash 8?
 publishedAt: 2005-04-15T21:16:30-03:00
 type: Post
 ogImage: /images/og-images/11.png
-layout: post
-guid: https://leonardofaria.net/2005/04/15/flash-8/
+
 permalink: /2005/04/15/flash-8/
 categories:
   - flash

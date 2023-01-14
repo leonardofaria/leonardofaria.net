@@ -4,8 +4,7 @@ title: Conheça o sNews, mini CMS profissional em PHP
 publishedAt: 2007-07-16T19:10:20-03:00
 type: Post
 ogImage: /images/og-images/286.png
-layout: post
-guid: https://leonardofaria.net/2007/07/16/conheca-o-snews-mini-cms-profissional-em-php/
+
 permalink: /2007/07/16/conheca-o-snews-mini-cms-profissional-em-php/
 dsq_thread_id:
   - "1000136768"

@@ -4,8 +4,7 @@ title: Diferença entre Web 1.0 e Web 2.0
 publishedAt: 2006-04-10T22:18:21-03:00
 type: Post
 ogImage: /images/og-images/33.png
-layout: post
-guid: https://leonardofaria.net/2006/04/10/diferenca-entre-web-10-e-web-20/
+
 permalink: /2006/04/10/diferenca-entre-web-10-e-web-20/
 dsq_thread_id:
   - "1009858247"

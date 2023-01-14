@@ -4,8 +4,7 @@ title: Flash CS3 e muito mais na área
 publishedAt: 2007-03-27T22:52:28-03:00
 type: Post
 ogImage: /images/og-images/214.png
-layout: post
-guid: https://leonardofaria.net/2007/03/27/flash-cs3-na-area/
+
 permalink: /2007/03/27/flash-cs3-na-area/
 dsq_thread_id:
   - "1036760261"

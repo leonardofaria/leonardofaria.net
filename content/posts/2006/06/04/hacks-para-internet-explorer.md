@@ -4,8 +4,7 @@ title: Hacks para Internet Explorer
 publishedAt: 2006-06-04T14:58:35-03:00
 type: Post
 ogImage: /images/og-images/49.png
-layout: post
-guid: https://leonardofaria.net/2006/06/04/hacks-para-internet-explorer/
+
 permalink: /2006/06/04/hacks-para-internet-explorer/
 dsq_thread_id:
   - "1000136064"

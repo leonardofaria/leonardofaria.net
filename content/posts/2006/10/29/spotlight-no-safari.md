@@ -4,8 +4,7 @@ title: Spotlight no Safari
 publishedAt: 2006-10-29T18:33:18-03:00
 type: Post
 ogImage: /images/og-images/137.png
-layout: post
-guid: https://leonardofaria.net/2006/10/29/spotlight-no-safari/
+
 permalink: /2006/10/29/spotlight-no-safari/
 dsq_thread_id:
   - "1000136365"

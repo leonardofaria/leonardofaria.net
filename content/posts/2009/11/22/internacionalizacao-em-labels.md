@@ -4,8 +4,7 @@ title: Internacionalização em labels
 publishedAt: 2009-11-22T19:49:16-02:00
 type: Post
 ogImage: /images/og-images/892.png
-layout: post
-guid: https://leonardofaria.net/?p=892
+
 permalink: /2009/11/22/internacionalizacao-em-labels/
 dsq_thread_id:
   - "1000137222"

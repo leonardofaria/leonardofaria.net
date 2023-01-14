@@ -4,8 +4,7 @@ title: Por que o Linux não decola?
 publishedAt: 2006-08-20T15:20:46-03:00
 type: Post
 ogImage: /images/og-images/109.png
-layout: post
-guid: https://leonardofaria.net/2006/08/20/por-que-o-linux-nao-decola/
+
 permalink: /2006/08/20/por-que-o-linux-nao-decola/
 dsq_thread_id:
   - "1000136100"

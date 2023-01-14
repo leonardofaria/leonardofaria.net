@@ -4,8 +4,7 @@ title: Shell script for audio recording
 publishedAt: 2016-01-26T18:13:43-02:00
 type: Post
 ogImage: /images/og-images/1693.png
-layout: post
-guid: https://leonardofaria.net/?p=1693
+
 permalink: /2016/01/26/shell-script-for-audio-recording/
 dsq_thread_id:
   - "5345235410"

@@ -4,8 +4,7 @@ title: e-Recursos mobile
 publishedAt: 2014-11-04T20:50:19-02:00
 type: Post
 ogImage: /images/og-images/1483.png
-layout: post
-guid: https://leonardofaria.net/?p=1483
+
 permalink: /2014/11/04/e-recursos-mobile/
 dsq_thread_id:
   - "3192328983"
