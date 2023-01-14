@@ -7,6 +7,7 @@ import Footer from '../Footer/Footer';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import Disqus from '../Embed/Disqus';
 import Webmentions from '../Webmentions/Webmentions';
+import { Badge } from '../UI/Badge';
 
 export default function Single({
   post,
@@ -89,7 +90,7 @@ export default function Single({
         <article className="article">
           <header className={isPost ? 'pt-10 pb-6 text-center' : ''}>
             {isPost && (
-              <small className="text-center text-sm">
+              <small className="text-center text-sm flex items-center gap-3 justify-center">
                 <time className="text-gray-500" dateTime={publishedTime}>
                   {createdAt.toLocaleDateString('en-US', {
                     dateStyle: 'medium',
@@ -97,12 +98,8 @@ export default function Single({
                 </time>
 
                 {tags?.map((tag) => (
-                  <Link
-                    className="inline-flex items-center px-4 py-1 rounded-full no-underline bg-orange-100 text-orange-800 hover:bg-orange-300 ml-4"
-                    href={`tags/${tag}`}
-                    key={tag}
-                  >
-                    {tag}
+                  <Link className="no-underline" href={`tags/${tag}`} key={tag}>
+                    <Badge variation="secondary">{tag}</Badge>
                   </Link>
                 ))}
               </small>

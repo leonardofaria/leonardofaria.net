@@ -1,6 +1,7 @@
 import { type Micropost as MicropostType } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import Link from 'next/link';
+import { Badge } from 'src/components/UI/Badge';
 import Embed from '../../Embed';
 
 export default function Micropost({ micropost }: { micropost: MicropostType }) {
@@ -18,7 +19,7 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
   return (
     <>
       <header className="pt-10 pb-6 text-center">
-        <small className="text-center text-sm">
+        <small className="text-center text-sm flex items-center gap-3 justify-center">
           <time className="text-gray-500" dateTime={publishedAt}>
             {createdAt.toLocaleDateString('en-US', {
               dateStyle: 'medium',
@@ -27,11 +28,11 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
 
           {tags?.map((tag) => (
             <Link
-              className="inline-flex items-center px-4 py-1 rounded-full no-underline bg-orange-100 text-orange-800 hover:bg-orange-300 ml-4"
+              className="no-underline"
               href={`/microblog/tags/${tag}`}
               key={tag}
             >
-              {tag}
+              <Badge variation="secondary">{tag}</Badge>
             </Link>
           ))}
         </small>

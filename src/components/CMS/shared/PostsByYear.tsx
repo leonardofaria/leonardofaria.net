@@ -1,5 +1,6 @@
 import { type Micropost, type Post } from 'contentlayer/generated';
 import Link from 'next/link';
+import { Badge } from 'src/components/UI/Badge';
 
 export function PostsByYear({
   year,
@@ -16,23 +17,28 @@ export function PostsByYear({
 
       <ol className="mb-4 list-none w-full">
         {posts.map((post) => {
-          const createdAt = new Date(post.publishedAt);
-          // const isMicropost = post satisfies Micropost;
+          const { slug, permalink, title, publishedAt, tags, type } = post;
+          const createdAt = new Date(publishedAt);
 
           return (
             <li
               className="mb-8 flex flex-col no-underline rounded-md hover:bg-white transition duration-300 ease-in-out"
-              key={post.slug}
+              key={slug}
             >
-              <Link
-                className="tracking-tight no-underline text-blue-600 m-2 mb-0"
-                href={post.permalink}
-              >
-                {post.title}
-              </Link>
+              <div className="flex items-center my-2">
+                {type === 'Micropost' && (
+                  <Badge variation="primary">MICROPOST</Badge>
+                )}
+                <Link
+                  className="tracking-tight no-underline text-blue-600 mx-2"
+                  href={permalink}
+                >
+                  {title}
+                </Link>
+              </div>
 
-              <small className="m-2 text-sm">
-                <time className="text-gray-500" dateTime={post.publishedAt}>
+              <small className="m-2 text-sm flex items-center gap-3">
+                <time className="text-gray-500" dateTime={publishedAt}>
                   {
                     createdAt
                       .toLocaleDateString('en-US', {
@@ -42,13 +48,9 @@ export function PostsByYear({
                   }
                 </time>
 
-                {post.tags?.map((tag) => (
-                  <Link
-                    className="inline-flex items-center px-4 py-1 rounded-full no-underline bg-orange-100 text-orange-800 hover:bg-orange-300 ml-4"
-                    href={`tags/${tag}`}
-                    key={tag}
-                  >
-                    {tag}
+                {tags?.map((tag) => (
+                  <Link className="no-underline" href={`tags/${tag}`} key={tag}>
+                    <Badge variation="secondary">{tag}</Badge>
                   </Link>
                 ))}
               </small>
