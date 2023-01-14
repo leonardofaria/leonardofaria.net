@@ -59,7 +59,7 @@ The Web Vitals information is very easily found in the Lighthouse reports:
 
 What I want to share today is how to get Web Vitals information from the Lighthouse node package (from my [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples)):
 
-```js
+```js showLineNumbers
 const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
 

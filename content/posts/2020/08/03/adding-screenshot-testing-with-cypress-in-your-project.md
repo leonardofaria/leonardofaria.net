@@ -207,7 +207,7 @@ In the `test` script, we are adding the `CYPRESS_baseUrl` environment variable. 
 
 We are ready for Semaphore. Create the `.semaphore/semaphore.yml` file with the following content:
 
-```yml
+```yml showLineNumbers
 version: v1.0
 name: Cypress example
 agent:

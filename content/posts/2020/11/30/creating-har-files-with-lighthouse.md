@@ -39,7 +39,7 @@ This package works like a charm; it creates a HAR file following the [HAR 1.2 sp
 
 Let's take a look at the implementation (from my [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples)):
 
-```js
+```js showLineNumbers
 const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
 const { fromLog } = require('chrome-har-capturer');

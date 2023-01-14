@@ -35,7 +35,7 @@ The filmstrip above reveals how a page is rendered in a browser and gives us an 
 
 In this post you will learn where these images are stored and how to store them in a file system. Here is the script (from my [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples)): 
 
-```js
+```js showLineNumbers
 const { writeFileSync } = require('fs');
 const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
