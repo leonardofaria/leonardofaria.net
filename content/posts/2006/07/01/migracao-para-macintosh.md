@@ -1,7 +1,7 @@
 ---
 id: 91
 title: Migração para Macintosh
-date: 2006-07-01T15:04:17-03:00
+publishedAt: 2006-07-01T15:04:17-03:00
 type: Post
 ogImage: /images/og-images/91.png
 layout: post

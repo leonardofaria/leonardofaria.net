@@ -1,7 +1,7 @@
 ---
 id: 2204
 title: Portfolio
-date: 2022-02-07 01:00:00
+publishedAt: 2022-02-07 01:00:00
 type: Page
 ogImage: /images/portfolio.jpg
 permalink: /portfolio

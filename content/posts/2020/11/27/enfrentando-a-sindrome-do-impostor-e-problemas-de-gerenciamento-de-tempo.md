@@ -1,7 +1,7 @@
 ---
 id: 2231
 title: Enfrentando a síndrome do impostor e problemas de gerenciamento de tempo
-date: 2020-11-27
+publishedAt: 2020-11-27
 type: Post
 ogImage: /images/og-images/2231.png
 layout: post

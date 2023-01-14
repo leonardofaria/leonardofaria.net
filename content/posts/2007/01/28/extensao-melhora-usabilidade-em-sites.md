@@ -1,7 +1,7 @@
 ---
 id: 209
 title: Extensão melhora usabilidade em sites
-date: 2007-01-28T21:16:36-02:00
+publishedAt: 2007-01-28T21:16:36-02:00
 type: Post
 ogImage: /images/og-images/209.png
 layout: post

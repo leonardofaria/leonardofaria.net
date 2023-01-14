@@ -1,7 +1,7 @@
 ---
 id: 720
 title: MacBook e o caso do topcase rachado
-date: 2009-10-11T14:10:58-03:00
+publishedAt: 2009-10-11T14:10:58-03:00
 type: Post
 ogImage: /images/og-images/720.png
 layout: post

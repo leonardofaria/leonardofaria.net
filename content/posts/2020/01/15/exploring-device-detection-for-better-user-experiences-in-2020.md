@@ -1,7 +1,7 @@
 ---
 id: 2158
 title: Exploring device detection for better user experiences in 2020
-date: 2020-01-15T02:16:54-03:00
+publishedAt: 2020-01-15T02:16:54-03:00
 type: Post
 ogImage: /images/og-images/2158.png
 layout: post

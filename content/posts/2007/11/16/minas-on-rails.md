@@ -1,7 +1,7 @@
 ---
 id: 339
 title: Minas on Rails
-date: 2007-11-16T13:53:30-02:00
+publishedAt: 2007-11-16T13:53:30-02:00
 type: Post
 ogImage: /images/og-images/339.png
 layout: post

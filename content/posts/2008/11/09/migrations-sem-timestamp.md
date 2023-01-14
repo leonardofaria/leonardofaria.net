@@ -1,7 +1,7 @@
 ---
 id: 425
 title: Migrations sem timestamp
-date: 2008-11-09T16:22:44-02:00
+publishedAt: 2008-11-09T16:22:44-02:00
 type: Post
 ogImage: /images/og-images/425.png
 layout: post

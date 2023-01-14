@@ -1,7 +1,7 @@
 ---
 id: 31
 title: 'CSS: Transparências cross-browser'
-date: 2006-02-09T22:18:20-02:00
+publishedAt: 2006-02-09T22:18:20-02:00
 type: Post
 ogImage: /images/og-images/31.png
 layout: post

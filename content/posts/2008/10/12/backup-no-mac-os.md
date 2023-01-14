@@ -1,7 +1,7 @@
 ---
 id: 410
 title: Backup no Mac OS
-date: 2008-10-12T16:09:34-03:00
+publishedAt: 2008-10-12T16:09:34-03:00
 type: Post
 ogImage: /images/og-images/410.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 341
 title: UML e MySQL no Mac
-date: 2008-03-10T22:53:13-03:00
+publishedAt: 2008-03-10T22:53:13-03:00
 type: Post
 ogImage: /images/og-images/341.png
 layout: post

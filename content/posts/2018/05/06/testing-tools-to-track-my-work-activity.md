@@ -1,7 +1,7 @@
 ---
 id: 1917
 title: Testing tools to track my work activity
-date: 2018-05-06T23:23:30-03:00
+publishedAt: 2018-05-06T23:23:30-03:00
 type: Post
 ogImage: /images/og-images/1917.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 348
 title: Ruby on Rails na caveira!
-date: 2007-12-19T01:47:38-02:00
+publishedAt: 2007-12-19T01:47:38-02:00
 type: Post
 ogImage: /images/og-images/348.png
 layout: post

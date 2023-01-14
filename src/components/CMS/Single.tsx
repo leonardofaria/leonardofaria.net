@@ -18,7 +18,7 @@ export default function Single({
 }) {
   const {
     title,
-    date: publishedTime,
+    publishedAt: publishedTime,
     description,
     tags,
     permalink,

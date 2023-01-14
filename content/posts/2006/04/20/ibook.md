@@ -1,7 +1,7 @@
 ---
 id: 35
 title: iBook
-date: 2006-04-20T22:25:05-03:00
+publishedAt: 2006-04-20T22:25:05-03:00
 type: Post
 ogImage: /images/og-images/35.png
 layout: post

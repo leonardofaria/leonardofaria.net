@@ -1,7 +1,7 @@
 ---
 id: 392
 title: Passenger no painel de preferências do Leopard
-date: 2008-06-28T17:04:01-03:00
+publishedAt: 2008-06-28T17:04:01-03:00
 type: Post
 ogImage: /images/og-images/392.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 1417
 title: 'DIY: Rastreamento veicular'
-date: 2014-08-28T18:53:18-03:00
+publishedAt: 2014-08-28T18:53:18-03:00
 type: Post
 ogImage: /images/og-images/1417.png
 layout: post

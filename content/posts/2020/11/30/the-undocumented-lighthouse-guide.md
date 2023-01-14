@@ -1,7 +1,7 @@
 ---
 id: 2225
 title: The undocumented Lighthouse guide
-date: 2020-11-30 00:00:00
+publishedAt: 2020-11-30 00:00:00
 type: Post
 ogImage: /images/og-images/2225.png
 permalink: /2020/11/30/the-undocumented-lighthouse-guide

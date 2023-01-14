@@ -1,7 +1,7 @@
 ---
 id: 1532
 title: Writing for IELTS and TOEFL
-date: 2015-06-10T17:44:14-03:00
+publishedAt: 2015-06-10T17:44:14-03:00
 type: Post
 ogImage: /images/og-images/1532.png
 layout: post

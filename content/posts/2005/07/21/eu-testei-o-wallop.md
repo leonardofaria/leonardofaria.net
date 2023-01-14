@@ -1,7 +1,7 @@
 ---
 id: 19
 title: Eu testei o Wallop
-date: 2005-07-21T21:40:31-03:00
+publishedAt: 2005-07-21T21:40:31-03:00
 type: Post
 ogImage: /images/og-images/19.png
 layout: post

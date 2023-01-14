@@ -1,7 +1,7 @@
 ---
 id: 70
 title: Rádio online é moleza!
-date: 2006-06-23T00:45:29-03:00
+publishedAt: 2006-06-23T00:45:29-03:00
 type: Post
 ogImage: /images/og-images/70.png
 layout: post

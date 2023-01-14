@@ -1,7 +1,7 @@
 ---
 id: 403
 title: Mudanças no Rails 2.2
-date: 2008-08-02T18:41:42-03:00
+publishedAt: 2008-08-02T18:41:42-03:00
 type: Post
 ogImage: /images/og-images/403.png
 layout: post

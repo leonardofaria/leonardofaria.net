@@ -1,7 +1,7 @@
 ---
 id: 57
 title: Bookmarklets
-date: 2006-06-08T14:55:37-03:00
+publishedAt: 2006-06-08T14:55:37-03:00
 type: Post
 ogImage: /images/og-images/57.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 408
 title: Impressione todo mundo com o LiquidMac
-date: 2008-09-21T23:36:57-03:00
+publishedAt: 2008-09-21T23:36:57-03:00
 type: Post
 ogImage: /images/og-images/408.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 2235
 title: Moving to Next.js
-date: 2022-12-30T11:12:00-08:00
+publishedAt: 2022-12-30T11:12:00-08:00
 type: Post
 ogImage: /images/og-images/2235.png
 layout: post

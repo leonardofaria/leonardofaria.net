@@ -1,7 +1,7 @@
 ---
 id: 1264
 title: Geração de PDFs indolor no PHP
-date: 2012-02-12T15:04:44-02:00
+publishedAt: 2012-02-12T15:04:44-02:00
 type: Post
 ogImage: /images/og-images/1264.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 903
 title: Syntax Highlight on Rails
-date: 2009-12-02T20:52:12-02:00
+publishedAt: 2009-12-02T20:52:12-02:00
 type: Post
 ogImage: /images/og-images/903.png
 layout: post

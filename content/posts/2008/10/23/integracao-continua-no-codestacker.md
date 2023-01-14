@@ -1,7 +1,7 @@
 ---
 id: 420
 title: Integração contínua no codestacker
-date: 2008-10-23T00:17:40-02:00
+publishedAt: 2008-10-23T00:17:40-02:00
 type: Post
 ogImage: /images/og-images/420.png
 layout: post

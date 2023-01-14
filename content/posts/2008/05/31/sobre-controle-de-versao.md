@@ -1,7 +1,7 @@
 ---
 id: 379
 title: Sobre Controle de Versão
-date: 2008-05-31T17:38:06-03:00
+publishedAt: 2008-05-31T17:38:06-03:00
 type: Post
 ogImage: /images/og-images/379.png
 layout: post

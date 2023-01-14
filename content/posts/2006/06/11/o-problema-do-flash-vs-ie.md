@@ -1,7 +1,7 @@
 ---
 id: 58
 title: O problema do Flash vs IE
-date: 2006-06-11T17:47:21-03:00
+publishedAt: 2006-06-11T17:47:21-03:00
 type: Post
 ogImage: /images/og-images/58.png
 layout: post

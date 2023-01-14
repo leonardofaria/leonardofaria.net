@@ -1,7 +1,7 @@
 ---
 id: 459
 title: Lançado Safari 4
-date: 2009-02-25T15:41:27-03:00
+publishedAt: 2009-02-25T15:41:27-03:00
 type: Post
 ogImage: /images/og-images/459.png
 layout: post

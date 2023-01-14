@@ -1,7 +1,7 @@
 ---
 id: 1566
 title: Useful apps that I use daily
-date: 2015-09-17T12:56:58-03:00
+publishedAt: 2015-09-17T12:56:58-03:00
 type: Post
 ogImage: /images/og-images/1566.png
 layout: post

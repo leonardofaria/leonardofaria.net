@@ -1,7 +1,7 @@
 ---
 id: 147
 title: Guerrilha para o Internet Explorer
-date: 2006-11-05T21:04:39-02:00
+publishedAt: 2006-11-05T21:04:39-02:00
 type: Post
 ogImage: /images/og-images/147.png
 layout: post

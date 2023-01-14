@@ -16,7 +16,7 @@ export const Post = defineDocumentType(() => ({
       type: 'string',
       required: true,
     },
-    date: {
+    publishedAt: {
       type: 'date',
       required: true,
     },
@@ -48,15 +48,6 @@ export const Post = defineDocumentType(() => ({
     },
     layout: {
       type: 'string',
-    },
-    hideSuggestions: {
-      type: 'boolean',
-    },
-    hideComments: {
-      type: 'boolean',
-    },
-    hideMetadata: {
-      type: 'boolean',
     },
   },
   computedFields: {
@@ -91,11 +82,6 @@ export const Post = defineDocumentType(() => ({
         // return stripped.slice(0, 500).trim();
         return null;
       },
-    },
-    // TODO: rename date to publishedAt and remove this
-    publishedAt: {
-      type: 'date',
-      resolve: (post) => post.date,
     },
     readingTime: {
       type: 'json',

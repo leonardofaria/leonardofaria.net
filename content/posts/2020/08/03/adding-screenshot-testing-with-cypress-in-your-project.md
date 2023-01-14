@@ -1,7 +1,7 @@
 ---
 id: 2209
 title: Adding screenshot testing with Cypress in your project
-date: 2020-08-03
+publishedAt: 2020-08-03
 type: Post
 ogImage: /images/og-images/2209.png
 permalink: /2020/08/03/adding-screenshot-testing-with-cypress-in-your-project/

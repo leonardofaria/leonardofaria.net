@@ -1,7 +1,7 @@
 ---
 id: 152
 title: Tela azul da Morte. No mac
-date: 2006-11-12T02:21:51-02:00
+publishedAt: 2006-11-12T02:21:51-02:00
 type: Post
 ogImage: /images/og-images/152.png
 layout: post

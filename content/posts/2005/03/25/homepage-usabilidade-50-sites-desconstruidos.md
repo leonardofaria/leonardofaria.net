@@ -1,7 +1,7 @@
 ---
 id: 42
 title: 'Homepage – Usabilidade: 50 sites desconstruídos'
-date: 2005-03-25T22:45:50-03:00
+publishedAt: 2005-03-25T22:45:50-03:00
 type: Post
 ogImage: /images/og-images/42.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 1704
 title: Replace git author using shell script
-date: 2016-02-02T02:22:56-02:00
+publishedAt: 2016-02-02T02:22:56-02:00
 type: Post
 ogImage: /images/og-images/1704.png
 layout: post

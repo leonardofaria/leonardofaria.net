@@ -1,7 +1,7 @@
 ---
 id: 492
 title: Integração contínua no autosimulado
-date: 2009-04-03T20:31:38-03:00
+publishedAt: 2009-04-03T20:31:38-03:00
 type: Post
 ogImage: /images/og-images/492.png
 layout: post

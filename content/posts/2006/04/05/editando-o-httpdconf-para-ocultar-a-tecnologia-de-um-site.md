@@ -1,7 +1,7 @@
 ---
 id: 27
 title: Editando o httpd.conf para ocultar a tecnologia de um site
-date: 2006-04-05T22:00:45-03:00
+publishedAt: 2006-04-05T22:00:45-03:00
 type: Post
 ogImage: /images/og-images/27.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 433
 title: Os axiomas de Zurique
-date: 2008-12-04T12:28:04-02:00
+publishedAt: 2008-12-04T12:28:04-02:00
 type: Post
 ogImage: /images/og-images/433.png
 layout: post

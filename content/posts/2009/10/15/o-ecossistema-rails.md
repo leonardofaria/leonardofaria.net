@@ -1,7 +1,7 @@
 ---
 id: 805
 title: O ecossistema Rails
-date: 2009-10-15T23:32:07-03:00
+publishedAt: 2009-10-15T23:32:07-03:00
 type: Post
 ogImage: /images/og-images/805.png
 layout: post

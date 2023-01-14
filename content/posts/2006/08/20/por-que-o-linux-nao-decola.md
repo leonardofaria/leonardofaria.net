@@ -1,7 +1,7 @@
 ---
 id: 109
 title: Por que o Linux não decola?
-date: 2006-08-20T15:20:46-03:00
+publishedAt: 2006-08-20T15:20:46-03:00
 type: Post
 ogImage: /images/og-images/109.png
 layout: post

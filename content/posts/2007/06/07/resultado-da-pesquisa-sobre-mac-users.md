@@ -1,7 +1,7 @@
 ---
 id: 254
 title: Resultado da Pesquisa sobre Mac Users
-date: 2007-06-07T18:07:18-03:00
+publishedAt: 2007-06-07T18:07:18-03:00
 type: Post
 ogImage: /images/og-images/254.png
 layout: post

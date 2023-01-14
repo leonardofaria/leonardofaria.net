@@ -1,7 +1,7 @@
 ---
 id: 1529
 title: Notice about future
-date: 2015-05-31T20:29:07-03:00
+publishedAt: 2015-05-31T20:29:07-03:00
 type: Post
 ogImage: /images/og-images/1529.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 1469
 title: 'Mini-review: Cubieboard 3'
-date: 2014-11-11T20:14:06-02:00
+publishedAt: 2014-11-11T20:14:06-02:00
 type: Post
 ogImage: /images/og-images/1469.png
 layout: post

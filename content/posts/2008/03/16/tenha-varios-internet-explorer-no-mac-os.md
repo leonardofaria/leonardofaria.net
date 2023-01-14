@@ -1,7 +1,7 @@
 ---
 id: 355
 title: Tenha vários Internet Explorer no Mac OS
-date: 2008-03-16T15:19:57-03:00
+publishedAt: 2008-03-16T15:19:57-03:00
 type: Post
 ogImage: /images/og-images/355.png
 layout: post

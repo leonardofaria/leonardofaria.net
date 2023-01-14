@@ -1,7 +1,7 @@
 ---
 id: 233
 title: Novos resources sobre Rails
-date: 2007-05-15T01:11:24-03:00
+publishedAt: 2007-05-15T01:11:24-03:00
 type: Post
 ogImage: /images/og-images/233.png
 layout: post

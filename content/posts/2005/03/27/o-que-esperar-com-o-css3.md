@@ -1,7 +1,7 @@
 ---
 id: 7
 title: O que esperar com o CSS3
-date: 2005-03-27T21:11:57-03:00
+publishedAt: 2005-03-27T21:11:57-03:00
 type: Post
 ogImage: /images/og-images/7.png
 layout: post

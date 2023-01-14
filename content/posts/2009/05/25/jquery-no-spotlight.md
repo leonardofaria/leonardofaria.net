@@ -1,7 +1,7 @@
 ---
 id: 637
 title: jQuery no Spotlight
-date: 2009-05-25T00:21:40-03:00
+publishedAt: 2009-05-25T00:21:40-03:00
 type: Post
 ogImage: /images/og-images/637.png
 layout: post

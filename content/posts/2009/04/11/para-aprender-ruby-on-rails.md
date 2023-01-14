@@ -1,7 +1,7 @@
 ---
 id: 508
 title: Para aprender Ruby on Rails
-date: 2009-04-11T16:49:03-03:00
+publishedAt: 2009-04-11T16:49:03-03:00
 type: Post
 ogImage: /images/og-images/508.png
 layout: post

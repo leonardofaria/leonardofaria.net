@@ -1,7 +1,7 @@
 ---
 id: 40
 title: Webdevelopment no Macintosh
-date: 2006-04-27T22:38:18-03:00
+publishedAt: 2006-04-27T22:38:18-03:00
 type: Post
 ogImage: /images/og-images/40.png
 layout: post

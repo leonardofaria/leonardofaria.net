@@ -1,7 +1,7 @@
 ---
 id: 1679
 title: the ink magazine
-date: 2015-12-12T21:12:26-02:00
+publishedAt: 2015-12-12T21:12:26-02:00
 type: Post
 ogImage: /images/og-images/1679.png
 layout: post

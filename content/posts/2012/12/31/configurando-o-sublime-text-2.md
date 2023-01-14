@@ -1,7 +1,7 @@
 ---
 id: 1327
 title: Configurando o Sublime Text 2
-date: 2012-12-31T11:30:47-02:00
+publishedAt: 2012-12-31T11:30:47-02:00
 type: Post
 ogImage: /images/og-images/1327.png
 layout: post

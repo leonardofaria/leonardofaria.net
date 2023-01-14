@@ -1,7 +1,7 @@
 ---
 id: 390
 title: Extreme Programming para todos
-date: 2008-06-07T20:21:15-03:00
+publishedAt: 2008-06-07T20:21:15-03:00
 type: Post
 ogImage: /images/og-images/390.png
 layout: post

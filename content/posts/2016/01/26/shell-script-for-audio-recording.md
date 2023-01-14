@@ -1,7 +1,7 @@
 ---
 id: 1693
 title: Shell script for audio recording
-date: 2016-01-26T18:13:43-02:00
+publishedAt: 2016-01-26T18:13:43-02:00
 type: Post
 ogImage: /images/og-images/1693.png
 layout: post

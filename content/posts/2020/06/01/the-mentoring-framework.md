@@ -1,7 +1,7 @@
 ---
 id: 2204
 title: The Mentoring Framework
-date: 2020-06-01
+publishedAt: 2020-06-01
 type: Post
 ogImage: /images/og-images/2204.png
 permalink: /2020/06/01/the-mentoring-framework

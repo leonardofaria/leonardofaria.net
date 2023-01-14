@@ -1,7 +1,7 @@
 ---
 id: 17
 title: Documentação sobre Flash
-date: 2005-06-04T21:34:33-03:00
+publishedAt: 2005-06-04T21:34:33-03:00
 type: Post
 ogImage: /images/og-images/17.png
 layout: post

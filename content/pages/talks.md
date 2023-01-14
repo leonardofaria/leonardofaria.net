@@ -1,7 +1,7 @@
 ---
 id: 2147
 title: Talks
-date: 2022-02-07 01:00:00
+publishedAt: 2022-02-07 01:00:00
 type: Page
 ogImage: /images/talks.jpg
 permalink: /talks

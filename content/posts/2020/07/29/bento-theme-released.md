@@ -1,7 +1,7 @@
 ---
 id: 2207
 title: Bento theme released
-date: 2020-07-29
+publishedAt: 2020-07-29
 type: Post
 ogImage: /images/og-images/2207.png
 permalink: /2020/07/29/bento-theme-released

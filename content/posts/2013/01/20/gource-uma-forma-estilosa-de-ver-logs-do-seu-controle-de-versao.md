@@ -1,7 +1,7 @@
 ---
 id: 1375
 title: Gource, uma forma estilosa de ver logs do seu controle de versão
-date: 2013-01-20T18:53:58-02:00
+publishedAt: 2013-01-20T18:53:58-02:00
 type: Post
 ogImage: /images/og-images/1375.png
 layout: post

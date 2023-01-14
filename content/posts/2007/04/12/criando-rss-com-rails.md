@@ -1,7 +1,7 @@
 ---
 id: 230
 title: Criando RSS com Rails
-date: 2007-04-12T22:27:15-03:00
+publishedAt: 2007-04-12T22:27:15-03:00
 type: Post
 ogImage: /images/og-images/230.png
 layout: post

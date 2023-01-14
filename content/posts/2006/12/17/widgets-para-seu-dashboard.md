@@ -1,7 +1,7 @@
 ---
 id: 183
 title: Widgets para seu Dashboard
-date: 2006-12-17T17:07:16-02:00
+publishedAt: 2006-12-17T17:07:16-02:00
 type: Post
 ogImage: /images/og-images/183.png
 layout: post

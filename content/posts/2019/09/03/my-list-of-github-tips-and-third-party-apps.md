@@ -1,7 +1,7 @@
 ---
 id: 1981
 title: My list of GitHub tips and third-party apps
-date: 2019-09-03T11:42:19-03:00
+publishedAt: 2019-09-03T11:42:19-03:00
 type: Post
 ogImage: /images/og-images/1981.png
 layout: post

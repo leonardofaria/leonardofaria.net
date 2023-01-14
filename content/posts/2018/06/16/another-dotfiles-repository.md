@@ -1,7 +1,7 @@
 ---
 id: 1931
 title: Another dotfiles repository
-date: 2018-06-16T18:42:55-03:00
+publishedAt: 2018-06-16T18:42:55-03:00
 type: Post
 ogImage: /images/og-images/1931.png
 layout: post

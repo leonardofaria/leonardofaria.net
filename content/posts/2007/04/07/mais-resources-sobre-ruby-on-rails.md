@@ -1,7 +1,7 @@
 ---
 id: 220
 title: Mais resources sobre Ruby on Rails
-date: 2007-04-07T22:06:23-03:00
+publishedAt: 2007-04-07T22:06:23-03:00
 type: Post
 ogImage: /images/og-images/220.png
 layout: post

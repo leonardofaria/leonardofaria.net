@@ -1,7 +1,7 @@
 ---
 id: 139
 title: Novos paradigmas da Programação Moderna
-date: 2006-10-30T21:30:11-03:00
+publishedAt: 2006-10-30T21:30:11-03:00
 type: Post
 ogImage: /images/og-images/139.png
 layout: post

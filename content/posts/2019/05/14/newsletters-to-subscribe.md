@@ -1,7 +1,7 @@
 ---
 id: 1970
 title: Newsletters to subscribe
-date: 2019-05-14T23:54:26-03:00
+publishedAt: 2019-05-14T23:54:26-03:00
 type: Post
 ogImage: /images/og-images/1970.png
 layout: post

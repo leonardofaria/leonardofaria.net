@@ -1,7 +1,7 @@
 ---
 id: 437
 title: Para turbinar o Safari
-date: 2009-01-25T21:28:26-02:00
+publishedAt: 2009-01-25T21:28:26-02:00
 type: Post
 ogImage: /images/og-images/437.png
 layout: post

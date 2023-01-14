@@ -1,7 +1,7 @@
 ---
 id: 53
 title: Alternativa em webmail
-date: 2006-06-08T02:25:48-03:00
+publishedAt: 2006-06-08T02:25:48-03:00
 type: Post
 ogImage: /images/og-images/53.png
 layout: post

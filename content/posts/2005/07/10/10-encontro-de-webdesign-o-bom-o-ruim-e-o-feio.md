@@ -1,7 +1,7 @@
 ---
 id: 18
 title: '10º Encontro de Webdesign: o bom, o ruim e o feio'
-date: 2005-07-10T21:37:22-03:00
+publishedAt: 2005-07-10T21:37:22-03:00
 type: Post
 ogImage: /images/og-images/18.png
 layout: post

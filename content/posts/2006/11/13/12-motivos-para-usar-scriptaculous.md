@@ -1,7 +1,7 @@
 ---
 id: 157
 title: 12 efeitos bacanas com script.aculo.us
-date: 2006-11-13T17:17:22-02:00
+publishedAt: 2006-11-13T17:17:22-02:00
 type: Post
 ogImage: /images/og-images/157.png
 layout: post

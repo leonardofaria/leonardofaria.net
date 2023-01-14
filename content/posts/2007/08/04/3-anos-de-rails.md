@@ -1,7 +1,7 @@
 ---
 id: 294
 title: 3 anos de Rails
-date: 2007-08-04T19:33:35-03:00
+publishedAt: 2007-08-04T19:33:35-03:00
 type: Post
 ogImage: /images/og-images/294.png
 layout: post

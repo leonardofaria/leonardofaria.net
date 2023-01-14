@@ -1,7 +1,7 @@
 ---
 id: 699
 title: Alternativas ao PHPMyAdmin
-date: 2009-08-22T16:32:36-03:00
+publishedAt: 2009-08-22T16:32:36-03:00
 type: Post
 ogImage: /images/og-images/699.png
 layout: post

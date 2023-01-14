@@ -1,7 +1,7 @@
 ---
 id: 672
 title: hirb, dados tabulados no console
-date: 2009-07-01T20:21:22-03:00
+publishedAt: 2009-07-01T20:21:22-03:00
 type: Post
 ogImage: /images/og-images/672.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 33
 title: Diferença entre Web 1.0 e Web 2.0
-date: 2006-04-10T22:18:21-03:00
+publishedAt: 2006-04-10T22:18:21-03:00
 type: Post
 ogImage: /images/og-images/33.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 898
 title: IETester
-date: 2009-11-30T21:14:20-02:00
+publishedAt: 2009-11-30T21:14:20-02:00
 type: Post
 ogImage: /images/og-images/898.png
 layout: post

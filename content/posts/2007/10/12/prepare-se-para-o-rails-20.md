@@ -1,7 +1,7 @@
 ---
 id: 316
 title: Prepare-se para o Rails 2.0
-date: 2007-10-12T14:54:13-03:00
+publishedAt: 2007-10-12T14:54:13-03:00
 type: Post
 ogImage: /images/og-images/316.png
 layout: post

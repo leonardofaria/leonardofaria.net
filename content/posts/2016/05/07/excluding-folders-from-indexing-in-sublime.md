@@ -1,7 +1,7 @@
 ---
 id: 1728
 title: Excluding folders from indexing in Sublime
-date: 2016-05-07T01:07:12-03:00
+publishedAt: 2016-05-07T01:07:12-03:00
 type: Post
 ogImage: /images/og-images/1728.png
 layout: post

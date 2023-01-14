@@ -1,7 +1,7 @@
 ---
 id: 436
 title: 'Resenha: A cabeça de Steve Jobs'
-date: 2009-01-31T14:31:16-02:00
+publishedAt: 2009-01-31T14:31:16-02:00
 type: Post
 ogImage: /images/og-images/436.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 340
 title: CSS para alinhamento vertical
-date: 2007-11-18T14:24:32-02:00
+publishedAt: 2007-11-18T14:24:32-02:00
 type: Post
 ogImage: /images/og-images/340.png
 layout: post

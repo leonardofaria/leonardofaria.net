@@ -1,7 +1,7 @@
 ---
 id: 1556
 title: Useful Chrome extensions to developers
-date: 2015-07-20T09:24:03-03:00
+publishedAt: 2015-07-20T09:24:03-03:00
 type: Post
 ogImage: /images/og-images/1556.png
 layout: post

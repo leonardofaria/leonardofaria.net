@@ -1,7 +1,7 @@
 ---
 id: 1125
 title: 'Novo micro-projeto: Guia da TV'
-date: 2011-01-25T18:33:40-02:00
+publishedAt: 2011-01-25T18:33:40-02:00
 type: Post
 ogImage: /images/og-images/1125.png
 layout: post

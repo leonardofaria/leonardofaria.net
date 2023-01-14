@@ -1,7 +1,7 @@
 ---
 id: 1164
 title: Coletânea de dicas sobre WordPress
-date: 2011-04-24T15:58:32-03:00
+publishedAt: 2011-04-24T15:58:32-03:00
 type: Post
 ogImage: /images/og-images/1164.png
 layout: post

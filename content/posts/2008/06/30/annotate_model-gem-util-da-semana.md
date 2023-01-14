@@ -1,7 +1,7 @@
 ---
 id: 394
 title: annotate_model, gem útil da semana
-date: 2008-06-30T02:27:05-03:00
+publishedAt: 2008-06-30T02:27:05-03:00
 type: Post
 ogImage: /images/og-images/394.png
 layout: post

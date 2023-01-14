@@ -1,7 +1,7 @@
 ---
 id: 213
 title: Ruby on Rails on Mac OS X
-date: 2007-03-11T13:58:58-03:00
+publishedAt: 2007-03-11T13:58:58-03:00
 type: Post
 ogImage: /images/og-images/213.png
 layout: post

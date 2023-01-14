@@ -1,7 +1,7 @@
 ---
 id: 131
 title: Ajax a seu favor. E não contra
-date: 2006-10-28T20:36:26-03:00
+publishedAt: 2006-10-28T20:36:26-03:00
 type: Post
 ogImage: /images/og-images/131.png
 layout: post

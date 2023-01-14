@@ -1,7 +1,7 @@
 ---
 id: 26
 title: Verificando contas de e-mail POP3 com PHP
-date: 2006-03-20T21:57:54-03:00
+publishedAt: 2006-03-20T21:57:54-03:00
 type: Post
 ogImage: /images/og-images/26.png
 layout: post

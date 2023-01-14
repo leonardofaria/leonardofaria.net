@@ -1,7 +1,7 @@
 ---
 id: 1995
 title: Disabling autofill in Chrome
-date: 2019-10-02T16:58:52-03:00
+publishedAt: 2019-10-02T16:58:52-03:00
 type: Post
 ogImage: /images/og-images/1995.png
 layout: post

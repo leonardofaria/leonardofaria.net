@@ -1,7 +1,7 @@
 ---
 id: 650
 title: Data URI
-date: 2009-06-07T00:44:14-03:00
+publishedAt: 2009-06-07T00:44:14-03:00
 type: Post
 ogImage: /images/og-images/650.png
 layout: post

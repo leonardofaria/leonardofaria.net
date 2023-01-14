@@ -1,7 +1,7 @@
 ---
 id: 1314
 title: Raspberry Pi
-date: 2012-12-30T17:10:41-02:00
+publishedAt: 2012-12-30T17:10:41-02:00
 type: Post
 ogImage: /images/og-images/1314.png
 layout: post

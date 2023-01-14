@@ -1,7 +1,7 @@
 ---
 id: 770
 title: 'Rails Summit: resumo do segundo dia'
-date: 2009-10-14T13:07:05-03:00
+publishedAt: 2009-10-14T13:07:05-03:00
 type: Post
 ogImage: /images/og-images/770.png
 layout: post

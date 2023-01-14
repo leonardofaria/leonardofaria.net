@@ -1,7 +1,7 @@
 ---
 id: 347
 title: Locomotive com Rails 2.0
-date: 2007-12-16T22:06:23-02:00
+publishedAt: 2007-12-16T22:06:23-02:00
 type: Post
 ogImage: /images/og-images/347.png
 layout: post

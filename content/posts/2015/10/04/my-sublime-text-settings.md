@@ -1,7 +1,7 @@
 ---
 id: 1643
 title: My Sublime Text settings
-date: 2015-10-04T17:14:16-03:00
+publishedAt: 2015-10-04T17:14:16-03:00
 type: Post
 ogImage: /images/og-images/1643.png
 layout: post

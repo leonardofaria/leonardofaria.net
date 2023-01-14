@@ -1,7 +1,7 @@
 ---
 id: 166
 title: MP3 to SWF
-date: 2006-11-26T13:31:51-02:00
+publishedAt: 2006-11-26T13:31:51-02:00
 type: Post
 ogImage: /images/og-images/166.png
 layout: post

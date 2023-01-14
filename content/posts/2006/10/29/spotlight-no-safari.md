@@ -1,7 +1,7 @@
 ---
 id: 137
 title: Spotlight no Safari
-date: 2006-10-29T18:33:18-03:00
+publishedAt: 2006-10-29T18:33:18-03:00
 type: Post
 ogImage: /images/og-images/137.png
 layout: post

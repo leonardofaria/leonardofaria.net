@@ -1,7 +1,7 @@
 ---
 id: 726
 title: 'Rails Summit: resumo do primeiro dia'
-date: 2009-10-13T12:46:10-03:00
+publishedAt: 2009-10-13T12:46:10-03:00
 type: Post
 ogImage: /images/og-images/726.png
 layout: post

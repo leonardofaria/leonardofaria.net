@@ -1,7 +1,7 @@
 ---
 id: 278
 title: Novas janelas em Javascript não-obstrusivo
-date: 2007-06-23T00:49:44-03:00
+publishedAt: 2007-06-23T00:49:44-03:00
 type: Post
 ogImage: /images/og-images/278.png
 layout: post

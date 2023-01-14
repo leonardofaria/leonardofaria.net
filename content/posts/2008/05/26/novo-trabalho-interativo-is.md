@@ -1,7 +1,7 @@
 ---
 id: 375
 title: 'Novo trabalho interativo: is®'
-date: 2008-05-26T20:59:26-03:00
+publishedAt: 2008-05-26T20:59:26-03:00
 type: Post
 ogImage: /images/og-images/375.png
 layout: post

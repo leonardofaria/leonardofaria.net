@@ -1,7 +1,7 @@
 ---
 id: 237
 title: Microsoft lança Flash Killer
-date: 2007-04-18T00:23:14-03:00
+publishedAt: 2007-04-18T00:23:14-03:00
 type: Post
 ogImage: /images/og-images/237.png
 layout: post

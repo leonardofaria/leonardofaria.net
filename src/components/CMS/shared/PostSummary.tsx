@@ -3,7 +3,7 @@ import { type Post } from 'contentlayer/generated';
 
 /* eslint-disable react/no-danger */
 export function PostSummary({ post }: { post: Post }) {
-  const createdAt = new Date(post.date);
+  const createdAt = new Date(post.publishedAt);
 
   return (
     <div className="border-b border-gray-400" key={post.id}>
@@ -14,7 +14,7 @@ export function PostSummary({ post }: { post: Post }) {
       </h2>
 
       <small className="block text-right text-sm">
-        <time className="text-gray-500" dateTime={post.date}>
+        <time className="text-gray-500" dateTime={post.publishedAt}>
           {createdAt.toLocaleDateString('en-US', {
             dateStyle: 'medium',
           })}

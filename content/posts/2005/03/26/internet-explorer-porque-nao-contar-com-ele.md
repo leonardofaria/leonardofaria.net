@@ -1,7 +1,7 @@
 ---
 id: 5
 title: 'Internet Explorer: porque não contar com ele'
-date: 2005-03-26T21:06:39-03:00
+publishedAt: 2005-03-26T21:06:39-03:00
 type: Post
 ogImage: /images/og-images/5.png
 layout: post

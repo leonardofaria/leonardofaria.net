@@ -1,7 +1,7 @@
 ---
 id: 399
 title: 'Usando ApacheBench para testes: Apache/mod_rails e Nginx/mongrel'
-date: 2008-07-15T00:41:42-03:00
+publishedAt: 2008-07-15T00:41:42-03:00
 type: Post
 ogImage: /images/og-images/399.png
 layout: post

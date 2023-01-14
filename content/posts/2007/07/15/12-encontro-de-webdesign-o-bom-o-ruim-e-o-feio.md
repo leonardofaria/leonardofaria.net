@@ -1,7 +1,7 @@
 ---
 id: 285
 title: '12º Encontro de Webdesign: o bom, o ruim e o feio'
-date: 2007-07-15T19:48:06-03:00
+publishedAt: 2007-07-15T19:48:06-03:00
 type: Post
 ogImage: /images/og-images/285.png
 layout: post

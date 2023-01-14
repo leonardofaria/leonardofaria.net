@@ -1,7 +1,7 @@
 ---
 id: 660
 title: sitemap.xml no Rails
-date: 2009-06-07T14:30:52-03:00
+publishedAt: 2009-06-07T14:30:52-03:00
 type: Post
 ogImage: /images/og-images/660.png
 layout: post

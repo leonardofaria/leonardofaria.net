@@ -1,7 +1,7 @@
 ---
 id: 24
 title: 'O Pai do Flash: FutureSplash'
-date: 2006-01-07T21:54:15-02:00
+publishedAt: 2006-01-07T21:54:15-02:00
 type: Post
 ogImage: /images/og-images/24.png
 layout: post

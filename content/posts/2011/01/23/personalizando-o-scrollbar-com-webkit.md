@@ -1,7 +1,7 @@
 ---
 id: 1106
 title: Personalizando o scrollbar com WebKit
-date: 2011-01-23T18:52:34-02:00
+publishedAt: 2011-01-23T18:52:34-02:00
 type: Post
 ogImage: /images/og-images/1106.png
 layout: post

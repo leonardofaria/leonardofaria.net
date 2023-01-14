@@ -1,7 +1,7 @@
 ---
 id: 397
 title: Rails Screencasts
-date: 2008-07-11T01:31:43-03:00
+publishedAt: 2008-07-11T01:31:43-03:00
 type: Post
 ogImage: /images/og-images/397.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 207
 title: Apple reinventa o celular
-date: 2007-01-09T22:41:43-02:00
+publishedAt: 2007-01-09T22:41:43-02:00
 type: Post
 ogImage: /images/og-images/207.png
 layout: post

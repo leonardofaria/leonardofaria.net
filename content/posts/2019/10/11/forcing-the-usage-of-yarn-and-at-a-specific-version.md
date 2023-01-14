@@ -1,7 +1,7 @@
 ---
 id: 2071
 title: Forcing the usage of yarn (and at a specific version)
-date: 2019-10-11T00:40:46-03:00
+publishedAt: 2019-10-11T00:40:46-03:00
 type: Post
 ogImage: /images/og-images/2071.png
 layout: post

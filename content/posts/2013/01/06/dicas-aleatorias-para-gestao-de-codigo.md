@@ -1,7 +1,7 @@
 ---
 id: 1360
 title: Dicas aleatórias para gestão de código
-date: 2013-01-06T12:02:56-02:00
+publishedAt: 2013-01-06T12:02:56-02:00
 type: Post
 ogImage: /images/og-images/1360.png
 layout: post

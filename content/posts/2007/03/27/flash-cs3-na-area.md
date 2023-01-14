@@ -1,7 +1,7 @@
 ---
 id: 214
 title: Flash CS3 e muito mais na área
-date: 2007-03-27T22:52:28-03:00
+publishedAt: 2007-03-27T22:52:28-03:00
 type: Post
 ogImage: /images/og-images/214.png
 layout: post

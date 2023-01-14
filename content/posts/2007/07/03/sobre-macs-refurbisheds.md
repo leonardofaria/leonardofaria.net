@@ -1,7 +1,7 @@
 ---
 id: 284
 title: Sobre Macs Refurbisheds
-date: 2007-07-03T03:08:06-03:00
+publishedAt: 2007-07-03T03:08:06-03:00
 type: Post
 ogImage: /images/og-images/284.png
 layout: post

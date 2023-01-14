@@ -1,7 +1,7 @@
 ---
 id: 477
 title: 'Nasceu: autosimulado'
-date: 2009-03-14T20:41:36-03:00
+publishedAt: 2009-03-14T20:41:36-03:00
 type: Post
 ogImage: /images/og-images/477.png
 layout: post

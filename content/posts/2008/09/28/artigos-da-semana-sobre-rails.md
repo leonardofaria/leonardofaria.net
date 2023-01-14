@@ -1,7 +1,7 @@
 ---
 id: 409
 title: Artigos da semana sobre Rails
-date: 2008-09-28T23:45:35-03:00
+publishedAt: 2008-09-28T23:45:35-03:00
 type: Post
 ogImage: /images/og-images/409.png
 layout: post

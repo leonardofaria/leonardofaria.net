@@ -1,7 +1,7 @@
 ---
 id: 404
 title: Ruby on Rails na WebMobile
-date: 2008-08-10T19:32:50-03:00
+publishedAt: 2008-08-10T19:32:50-03:00
 type: Post
 ogImage: /images/og-images/404.png
 layout: post

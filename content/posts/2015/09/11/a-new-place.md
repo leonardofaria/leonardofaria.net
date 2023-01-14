@@ -1,7 +1,7 @@
 ---
 id: 1623
 title: A new place
-date: 2015-09-11T19:04:24-03:00
+publishedAt: 2015-09-11T19:04:24-03:00
 type: Post
 ogImage: /images/og-images/1623.png
 layout: post

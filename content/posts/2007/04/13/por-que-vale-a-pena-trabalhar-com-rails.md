@@ -1,7 +1,7 @@
 ---
 id: 221
 title: Por que vale a pena trabalhar com Rails
-date: 2007-04-13T22:36:09-03:00
+publishedAt: 2007-04-13T22:36:09-03:00
 type: Post
 ogImage: /images/og-images/221.png
 layout: post

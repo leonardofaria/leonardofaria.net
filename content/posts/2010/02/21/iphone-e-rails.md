@@ -1,7 +1,7 @@
 ---
 id: 927
 title: iPhone e Rails
-date: 2010-02-21T23:36:13-03:00
+publishedAt: 2010-02-21T23:36:13-03:00
 type: Post
 ogImage: /images/og-images/927.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 289
 title: Rails, software de opinião
-date: 2007-07-21T02:50:00-03:00
+publishedAt: 2007-07-21T02:50:00-03:00
 type: Post
 ogImage: /images/og-images/289.png
 layout: post

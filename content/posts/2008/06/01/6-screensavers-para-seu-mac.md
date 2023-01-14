@@ -1,7 +1,7 @@
 ---
 id: 383
 title: 6 screensavers para seu Mac
-date: 2008-06-01T14:57:06-03:00
+publishedAt: 2008-06-01T14:57:06-03:00
 type: Post
 ogImage: /images/og-images/383.png
 layout: post

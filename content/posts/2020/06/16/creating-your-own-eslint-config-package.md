@@ -1,7 +1,7 @@
 ---
 id: 2206
 title: Creating your own ESLint config package
-date: 2020-06-16
+publishedAt: 2020-06-16
 type: Post
 ogImage: /images/og-images/2206.png
 permalink: /2020/06/16/creating-your-own-eslint-config-package

@@ -1,7 +1,7 @@
 ---
 id: 12
 title: Adobe compra Macromedia
-date: 2005-04-18T21:21:19-03:00
+publishedAt: 2005-04-18T21:21:19-03:00
 type: Post
 ogImage: /images/og-images/12.png
 layout: post

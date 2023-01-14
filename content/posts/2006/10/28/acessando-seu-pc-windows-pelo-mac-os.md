@@ -1,7 +1,7 @@
 ---
 id: 135
 title: Acessando seu PC Windows pelo Mac OS
-date: 2006-10-28T21:24:38-03:00
+publishedAt: 2006-10-28T21:24:38-03:00
 type: Post
 ogImage: /images/og-images/135.png
 layout: post

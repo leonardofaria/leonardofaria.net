@@ -1,7 +1,7 @@
 ---
 id: 2203
 title: Changing node versions automatically per directory
-date: 2020-05-20T07:00:00-07:00
+publishedAt: 2020-05-20T07:00:00-07:00
 type: Post
 ogImage: /images/og-images/2203.png
 permalink: /2020/05/20/changing-node-versions-automatically-per-directory

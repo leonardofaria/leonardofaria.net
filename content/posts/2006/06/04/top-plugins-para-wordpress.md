@@ -1,7 +1,7 @@
 ---
 id: 52
 title: Top plugins para WordPress
-date: 2006-06-04T16:42:15-03:00
+publishedAt: 2006-06-04T16:42:15-03:00
 type: Post
 ogImage: /images/og-images/52.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 2229
 title: Creating HAR files with Lighthouse
-date: 2020-11-30 04:00:00
+publishedAt: 2020-11-30 04:00:00
 type: Post
 ogImage: /images/og-images/2229.png
 permalink: /2020/11/30/creating-har-files-with-lighthouse

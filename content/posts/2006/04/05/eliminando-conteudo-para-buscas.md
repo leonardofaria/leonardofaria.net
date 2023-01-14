@@ -1,7 +1,7 @@
 ---
 id: 29
 title: Eliminando conteúdo para buscas
-date: 2006-04-05T22:09:05-03:00
+publishedAt: 2006-04-05T22:09:05-03:00
 type: Post
 ogImage: /images/og-images/29.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 2227
 title: Generating screenshots with Lighthouse
-date: 2020-11-30 02:00:00
+publishedAt: 2020-11-30 02:00:00
 type: Post
 ogImage: /images/og-images/2227.png
 permalink: /2020/11/30/generating-screenshots-with-lighthouse

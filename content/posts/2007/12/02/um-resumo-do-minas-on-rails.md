@@ -1,7 +1,7 @@
 ---
 id: 342
 title: Um resumo do Minas on Rails
-date: 2007-12-02T14:56:00-02:00
+publishedAt: 2007-12-02T14:56:00-02:00
 type: Post
 ogImage: /images/og-images/342.png
 layout: post

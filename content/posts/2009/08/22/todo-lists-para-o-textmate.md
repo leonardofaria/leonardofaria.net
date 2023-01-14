@@ -1,7 +1,7 @@
 ---
 id: 694
 title: Todo lists para o Textmate
-date: 2009-08-22T16:06:36-03:00
+publishedAt: 2009-08-22T16:06:36-03:00
 type: Post
 ogImage: /images/og-images/694.png
 layout: post

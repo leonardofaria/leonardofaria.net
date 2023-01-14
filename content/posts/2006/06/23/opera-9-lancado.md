@@ -1,7 +1,7 @@
 ---
 id: 76
 title: Opera 9 lançado
-date: 2006-06-23T13:45:41-03:00
+publishedAt: 2006-06-23T13:45:41-03:00
 type: Post
 ogImage: /images/og-images/76.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 2017
 title: Creating a website for my Apple Collection
-date: 2019-10-17T00:36:30-03:00
+publishedAt: 2019-10-17T00:36:30-03:00
 type: Post
 ogImage: /images/og-images/2017.png
 layout: post

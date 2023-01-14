@@ -1,7 +1,7 @@
 ---
 id: 878
 title: Rails e cia no Snow Leopard
-date: 2009-11-14T20:00:24-02:00
+publishedAt: 2009-11-14T20:00:24-02:00
 type: Post
 ogImage: /images/og-images/878.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 1815
 title: Thoughts on building components libraries
-date: 2018-02-04T16:24:53-02:00
+publishedAt: 2018-02-04T16:24:53-02:00
 type: Post
 ogImage: /images/og-images/1815.png
 layout: post

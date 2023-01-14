@@ -1,7 +1,7 @@
 ---
 id: 836
 title: O que é Ruby?
-date: 2009-11-09T21:09:50-02:00
+publishedAt: 2009-11-09T21:09:50-02:00
 type: Post
 ogImage: /images/og-images/836.png
 layout: post

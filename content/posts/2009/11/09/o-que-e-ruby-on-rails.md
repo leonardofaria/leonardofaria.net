@@ -1,7 +1,7 @@
 ---
 id: 846
 title: O que é Ruby on Rails?
-date: 2009-11-09T21:10:15-02:00
+publishedAt: 2009-11-09T21:10:15-02:00
 type: Post
 ogImage: /images/og-images/846.png
 layout: post

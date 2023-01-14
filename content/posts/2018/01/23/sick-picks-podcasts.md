@@ -1,7 +1,7 @@
 ---
 id: 1883
 title: 'Sick Picks: Podcasts'
-date: 2018-01-23T02:46:07-02:00
+publishedAt: 2018-01-23T02:46:07-02:00
 type: Post
 ogImage: /images/og-images/1883.png
 layout: post

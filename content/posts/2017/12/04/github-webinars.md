@@ -1,7 +1,7 @@
 ---
 id: 1822
 title: Github webinars
-date: 2017-12-04T15:44:53-02:00
+publishedAt: 2017-12-04T15:44:53-02:00
 type: Post
 ogImage: /images/og-images/1822.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 1737
 title: My first Meetup presentation
-date: 2016-06-24T11:41:13-03:00
+publishedAt: 2016-06-24T11:41:13-03:00
 type: Post
 ogImage: /images/og-images/1737.png
 layout: post

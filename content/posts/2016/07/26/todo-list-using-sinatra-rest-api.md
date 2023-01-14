@@ -1,7 +1,7 @@
 ---
 id: 1746
 title: Todo list using a Sinatra REST API
-date: 2016-07-26T19:01:16-03:00
+publishedAt: 2016-07-26T19:01:16-03:00
 type: Post
 ogImage: /images/og-images/1746.png
 layout: post

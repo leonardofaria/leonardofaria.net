@@ -1,7 +1,7 @@
 ---
 id: 2230
 title: My experience using Lighthouse in the real world
-date: 2020-11-30 05:00:00
+publishedAt: 2020-11-30 05:00:00
 type: Post
 ogImage: /images/og-images/2230.png
 permalink: /2020/11/30/my-experience-using-lighthouse-in-the-real-world

@@ -1,7 +1,7 @@
 ---
 id: 1464
 title: 'DIY: Upgrade de SSD no MacBook Air (e outros MacBooks)'
-date: 2014-10-30T18:16:36-02:00
+publishedAt: 2014-10-30T18:16:36-02:00
 type: Post
 ogImage: /images/og-images/1464.png
 layout: post

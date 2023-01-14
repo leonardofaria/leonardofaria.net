@@ -1,7 +1,7 @@
 ---
 id: 2223
 title: How to use Git aliases to increase your productivity
-date: 2020-10-27
+publishedAt: 2020-10-27
 type: Post
 ogImage: /images/og-images/2223.png
 permalink: /2020/10/27/how-to-use-git-aliases-to-increase-your-productivity

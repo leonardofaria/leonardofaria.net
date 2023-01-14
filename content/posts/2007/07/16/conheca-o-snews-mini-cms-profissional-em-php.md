@@ -1,7 +1,7 @@
 ---
 id: 286
 title: Conheça o sNews, mini CMS profissional em PHP
-date: 2007-07-16T19:10:20-03:00
+publishedAt: 2007-07-16T19:10:20-03:00
 type: Post
 ogImage: /images/og-images/286.png
 layout: post

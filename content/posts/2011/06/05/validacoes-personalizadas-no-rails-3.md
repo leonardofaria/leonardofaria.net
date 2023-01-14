@@ -1,7 +1,7 @@
 ---
 id: 1180
 title: Validações personalizadas no Rails 3
-date: 2011-06-05T22:55:12-03:00
+publishedAt: 2011-06-05T22:55:12-03:00
 type: Post
 ogImage: /images/og-images/1180.png
 layout: post

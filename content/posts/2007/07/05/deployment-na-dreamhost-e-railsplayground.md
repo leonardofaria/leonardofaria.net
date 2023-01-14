@@ -1,7 +1,7 @@
 ---
 id: 253
 title: Deployment na Dreamhost e RailsPlayground
-date: 2007-07-05T22:36:00-03:00
+publishedAt: 2007-07-05T22:36:00-03:00
 type: Post
 ogImage: /images/og-images/253.png
 layout: post

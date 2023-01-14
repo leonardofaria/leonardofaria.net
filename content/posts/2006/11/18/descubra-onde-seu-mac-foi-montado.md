@@ -1,7 +1,7 @@
 ---
 id: 159
 title: Descubra onde seu Mac foi montado
-date: 2006-11-18T00:28:50-02:00
+publishedAt: 2006-11-18T00:28:50-02:00
 type: Post
 ogImage: /images/og-images/159.png
 layout: post

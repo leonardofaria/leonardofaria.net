@@ -1,7 +1,7 @@
 ---
 id: 132
 title: Fixando o botão voltar em projetos em Flash
-date: 2006-10-28T20:55:55-03:00
+publishedAt: 2006-10-28T20:55:55-03:00
 type: Post
 ogImage: /images/og-images/132.png
 layout: post

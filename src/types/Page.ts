@@ -13,7 +13,7 @@ export const Page = defineDocumentType(() => ({
       type: 'string',
       required: true,
     },
-    date: {
+    publishedAt: {
       type: 'date',
       required: true,
     },
@@ -31,13 +31,6 @@ export const Page = defineDocumentType(() => ({
     tags: {
       type: 'list',
       of: { type: 'string' },
-    },
-  },
-  computedFields: {
-    // TODO: rename date to publishedAt and remove this
-    publishedAt: {
-      type: 'date',
-      resolve: (post) => post.date,
     },
   },
 }));

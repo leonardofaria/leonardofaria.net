@@ -1,7 +1,7 @@
 ---
 id: 2200
 title: Moving to Hugo
-date: 2020-04-21T11:41:56-03:00
+publishedAt: 2020-04-21T11:41:56-03:00
 type: Post
 ogImage: /images/og-images/2200.png
 layout: post

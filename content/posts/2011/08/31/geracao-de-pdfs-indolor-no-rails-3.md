@@ -1,7 +1,7 @@
 ---
 id: 1244
 title: Geração de PDFs indolor no Rails 3
-date: 2011-08-31T00:50:10-03:00
+publishedAt: 2011-08-31T00:50:10-03:00
 type: Post
 ogImage: /images/og-images/1244.png
 layout: post

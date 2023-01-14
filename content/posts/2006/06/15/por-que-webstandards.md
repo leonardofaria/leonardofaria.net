@@ -1,7 +1,7 @@
 ---
 id: 61
 title: Por que webstandards?
-date: 2006-06-15T21:56:11-03:00
+publishedAt: 2006-06-15T21:56:11-03:00
 type: Post
 ogImage: /images/og-images/61.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 1710
 title: Shell script para gravar áudio da Web
-date: 2016-01-29T20:06:38-02:00
+publishedAt: 2016-01-29T20:06:38-02:00
 type: Post
 ogImage: /images/og-images/1710.png
 layout: post

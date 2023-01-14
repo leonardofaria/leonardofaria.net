@@ -1,7 +1,7 @@
 ---
 id: 62
 title: Desenvolvimento web no Macintosh
-date: 2006-06-15T23:20:54-03:00
+publishedAt: 2006-06-15T23:20:54-03:00
 type: Post
 ogImage: /images/og-images/62.png
 layout: post

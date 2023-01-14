@@ -1,7 +1,7 @@
 ---
 id: 193
 title: Site da is® lançado!
-date: 2007-01-01T22:59:25-02:00
+publishedAt: 2007-01-01T22:59:25-02:00
 type: Post
 ogImage: /images/og-images/193.png
 layout: post

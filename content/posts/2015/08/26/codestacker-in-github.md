@@ -1,7 +1,7 @@
 ---
 id: 1603
 title: codestacker in Github
-date: 2015-08-26T19:26:00-03:00
+publishedAt: 2015-08-26T19:26:00-03:00
 type: Post
 ogImage: /images/og-images/1603.png
 layout: post

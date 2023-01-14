@@ -1,7 +1,7 @@
 ---
 id: 28
 title: Ocultando a tecnologia de um site usando mod_rewrite
-date: 2006-04-05T22:08:58-03:00
+publishedAt: 2006-04-05T22:08:58-03:00
 type: Post
 ogImage: /images/og-images/28.png
 layout: post

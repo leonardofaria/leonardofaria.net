@@ -1,7 +1,7 @@
 ---
 id: 244
 title: Manipulando datas no Rails
-date: 2007-05-06T18:20:44-03:00
+publishedAt: 2007-05-06T18:20:44-03:00
 type: Post
 ogImage: /images/og-images/244.png
 layout: post

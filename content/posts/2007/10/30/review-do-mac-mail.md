@@ -1,7 +1,7 @@
 ---
 id: 326
 title: Review do .Mac Mail
-date: 2007-10-30T01:56:29-02:00
+publishedAt: 2007-10-30T01:56:29-02:00
 type: Post
 ogImage: /images/og-images/326.png
 layout: post

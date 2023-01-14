@@ -1,7 +1,7 @@
 ---
 id: 691
 title: Paperclip validando imagens no IE
-date: 2009-08-16T21:47:57-03:00
+publishedAt: 2009-08-16T21:47:57-03:00
 type: Post
 ogImage: /images/og-images/691.png
 layout: post

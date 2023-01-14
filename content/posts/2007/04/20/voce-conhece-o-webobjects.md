@@ -1,7 +1,7 @@
 ---
 id: 239
 title: Você conhece o WebObjects?
-date: 2007-04-20T22:41:09-03:00
+publishedAt: 2007-04-20T22:41:09-03:00
 type: Post
 ogImage: /images/og-images/239.png
 layout: post

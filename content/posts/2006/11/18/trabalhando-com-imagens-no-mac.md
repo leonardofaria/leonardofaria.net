@@ -1,7 +1,7 @@
 ---
 id: 154
 title: Trabalhando com imagens no Mac
-date: 2006-11-18T00:29:10-02:00
+publishedAt: 2006-11-18T00:29:10-02:00
 type: Post
 ogImage: /images/og-images/154.png
 layout: post

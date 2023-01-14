@@ -1,7 +1,7 @@
 ---
 id: 322
 title: Tornando o Firefox para Mac mais bonito
-date: 2007-10-22T13:10:45-02:00
+publishedAt: 2007-10-22T13:10:45-02:00
 type: Post
 ogImage: /images/og-images/322.png
 layout: post

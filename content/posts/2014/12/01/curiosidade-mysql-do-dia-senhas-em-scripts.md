@@ -1,7 +1,7 @@
 ---
 id: 1517
 title: 'Curiosidade MySQL do dia: senhas em scripts'
-date: 2014-12-01T21:46:07-02:00
+publishedAt: 2014-12-01T21:46:07-02:00
 type: Post
 ogImage: /images/og-images/1517.png
 layout: post

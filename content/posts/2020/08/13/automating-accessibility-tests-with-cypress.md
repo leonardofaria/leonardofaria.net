@@ -1,7 +1,7 @@
 ---
 id: 2220
 title: Automating accessibility tests with Cypress
-date: 2020-08-13
+publishedAt: 2020-08-13
 type: Post
 ogImage: /images/og-images/2220.png
 permalink: /2020/08/13/automating-accessibility-tests-with-cypress/

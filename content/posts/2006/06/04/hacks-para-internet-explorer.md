@@ -1,7 +1,7 @@
 ---
 id: 49
 title: Hacks para Internet Explorer
-date: 2006-06-04T14:58:35-03:00
+publishedAt: 2006-06-04T14:58:35-03:00
 type: Post
 ogImage: /images/og-images/49.png
 layout: post

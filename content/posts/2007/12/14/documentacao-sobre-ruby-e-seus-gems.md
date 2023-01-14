@@ -1,7 +1,7 @@
 ---
 id: 346
 title: Documentação sobre Ruby e seus gems
-date: 2007-12-14T23:58:23-02:00
+publishedAt: 2007-12-14T23:58:23-02:00
 type: Post
 ogImage: /images/og-images/346.png
 layout: post

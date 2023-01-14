@@ -1,7 +1,7 @@
 ---
 id: 1095
 title: 2 alternativas ao delicious
-date: 2010-12-25T17:16:45-02:00
+publishedAt: 2010-12-25T17:16:45-02:00
 type: Post
 ogImage: /images/og-images/1095.png
 layout: post

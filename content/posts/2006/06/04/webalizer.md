@@ -1,7 +1,7 @@
 ---
 id: 51
 title: Webalizer
-date: 2006-06-04T15:29:38-03:00
+publishedAt: 2006-06-04T15:29:38-03:00
 type: Post
 ogImage: /images/og-images/51.png
 layout: post

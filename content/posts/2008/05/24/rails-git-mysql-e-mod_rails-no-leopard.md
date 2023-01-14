@@ -1,7 +1,7 @@
 ---
 id: 374
 title: Rails, Git, MySQL e mod_rails no Leopard
-date: 2008-05-24T16:53:23-03:00
+publishedAt: 2008-05-24T16:53:23-03:00
 type: Post
 ogImage: /images/og-images/374.png
 layout: post

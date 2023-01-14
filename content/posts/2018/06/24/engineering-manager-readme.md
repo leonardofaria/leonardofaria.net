@@ -1,7 +1,7 @@
 ---
 id: 1939
 title: Engineering Manager Readme
-date: 2018-06-24T20:33:07-03:00
+publishedAt: 2018-06-24T20:33:07-03:00
 type: Post
 ogImage: /images/og-images/1939.png
 layout: post

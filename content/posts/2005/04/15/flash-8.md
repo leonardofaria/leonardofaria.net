@@ -1,7 +1,7 @@
 ---
 id: 11
 title: Flash 8?
-date: 2005-04-15T21:16:30-03:00
+publishedAt: 2005-04-15T21:16:30-03:00
 type: Post
 ogImage: /images/og-images/11.png
 layout: post

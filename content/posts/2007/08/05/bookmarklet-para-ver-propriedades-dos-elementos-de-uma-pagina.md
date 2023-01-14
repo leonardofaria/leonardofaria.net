@@ -1,7 +1,7 @@
 ---
 id: 295
 title: Bookmarklet para ver propriedades dos elementos de uma página
-date: 2007-08-05T22:47:54-03:00
+publishedAt: 2007-08-05T22:47:54-03:00
 type: Post
 ogImage: /images/og-images/295.png
 layout: post

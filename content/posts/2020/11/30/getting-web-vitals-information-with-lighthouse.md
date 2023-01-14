@@ -1,7 +1,7 @@
 ---
 id: 2228
 title: Generating Web Vitals information with Lighthouse
-date: 2020-11-30 03:00:00
+publishedAt: 2020-11-30 03:00:00
 type: Post
 ogImage: /images/og-images/2228.png
 permalink: /2020/11/30/getting-web-vitals-information-with-lighthouse

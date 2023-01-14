@@ -1,7 +1,7 @@
 ---
 id: 13
 title: Ajax
-date: 2005-04-19T21:27:12-03:00
+publishedAt: 2005-04-19T21:27:12-03:00
 type: Post
 ogImage: /images/og-images/13.png
 layout: post

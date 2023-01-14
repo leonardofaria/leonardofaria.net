@@ -1,7 +1,7 @@
 ---
 id: 1593
 title: Data looks better naked
-date: 2015-08-31T17:29:46-03:00
+publishedAt: 2015-08-31T17:29:46-03:00
 type: Post
 ogImage: /images/og-images/1593.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 208
 title: Apresentando Ruby on Rails
-date: 2007-01-27T00:39:28-02:00
+publishedAt: 2007-01-27T00:39:28-02:00
 type: Post
 ogImage: /images/og-images/208.png
 layout: post

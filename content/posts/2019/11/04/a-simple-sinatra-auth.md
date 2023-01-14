@@ -1,7 +1,7 @@
 ---
 id: 2137
 title: A simple Sinatra Auth
-date: 2019-11-04T01:40:07-03:00
+publishedAt: 2019-11-04T01:40:07-03:00
 type: Post
 ogImage: /images/og-images/2137.png
 layout: post

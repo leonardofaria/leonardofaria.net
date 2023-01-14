@@ -1,7 +1,7 @@
 ---
 id: 859
 title: 'Monografia on Rails: autosimulado'
-date: 2009-12-05T21:00:36-02:00
+publishedAt: 2009-12-05T21:00:36-02:00
 type: Post
 ogImage: /images/og-images/859.png
 layout: post

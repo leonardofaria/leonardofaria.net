@@ -1,7 +1,7 @@
 ---
 id: 1081
 title: Cylay, alternativa ao Find My iPhone
-date: 2010-08-15T17:29:51-03:00
+publishedAt: 2010-08-15T17:29:51-03:00
 type: Post
 ogImage: /images/og-images/1081.png
 layout: post

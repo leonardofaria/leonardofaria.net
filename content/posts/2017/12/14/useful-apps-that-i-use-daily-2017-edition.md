@@ -1,7 +1,7 @@
 ---
 id: 1841
 title: 'Useful apps that I use daily – 2017 edition'
-date: 2017-12-14T05:09:20-02:00
+publishedAt: 2017-12-14T05:09:20-02:00
 type: Post
 ogImage: /images/og-images/1841.png
 layout: post

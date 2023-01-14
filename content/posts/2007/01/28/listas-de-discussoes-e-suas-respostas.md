@@ -1,7 +1,7 @@
 ---
 id: 190
 title: Listas de discussões e suas respostas
-date: 2007-01-28T15:57:25-02:00
+publishedAt: 2007-01-28T15:57:25-02:00
 type: Post
 ogImage: /images/og-images/190.png
 layout: post

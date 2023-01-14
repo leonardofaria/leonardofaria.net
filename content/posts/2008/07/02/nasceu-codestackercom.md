@@ -1,7 +1,7 @@
 ---
 id: 395
 title: 'Nasceu: codestacker.com'
-date: 2008-07-02T00:05:33-03:00
+publishedAt: 2008-07-02T00:05:33-03:00
 type: Post
 ogImage: /images/og-images/395.png
 layout: post

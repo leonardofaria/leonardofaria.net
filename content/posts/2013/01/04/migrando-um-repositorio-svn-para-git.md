@@ -1,7 +1,7 @@
 ---
 id: 1354
 title: Migrando um repositório SVN para GIT
-date: 2013-01-04T12:39:33-02:00
+publishedAt: 2013-01-04T12:39:33-02:00
 type: Post
 ogImage: /images/og-images/1354.png
 layout: post

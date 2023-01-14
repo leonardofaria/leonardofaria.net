@@ -1,7 +1,7 @@
 ---
 id: 290
 title: Café com o TOM, RoR na sua sexta a noite
-date: 2007-07-21T16:25:44-03:00
+publishedAt: 2007-07-21T16:25:44-03:00
 type: Post
 ogImage: /images/og-images/290.png
 layout: post

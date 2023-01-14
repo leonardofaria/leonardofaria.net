@@ -1,7 +1,7 @@
 ---
 id: 16
 title: Rich Internet Applications
-date: 2005-05-21T21:32:57-03:00
+publishedAt: 2005-05-21T21:32:57-03:00
 type: Post
 ogImage: /images/og-images/16.png
 layout: post

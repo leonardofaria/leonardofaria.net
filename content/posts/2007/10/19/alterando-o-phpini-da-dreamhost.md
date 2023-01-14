@@ -1,7 +1,7 @@
 ---
 id: 319
 title: Alterando o PHP.ini da Dreamhost
-date: 2007-10-19T13:21:42-02:00
+publishedAt: 2007-10-19T13:21:42-02:00
 type: Post
 ogImage: /images/og-images/319.png
 layout: post

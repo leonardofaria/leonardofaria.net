@@ -1,7 +1,7 @@
 ---
 id: 1718
 title: Resolving slow loading of local virtualhosts on Chrome
-date: 2016-03-13T14:38:56-03:00
+publishedAt: 2016-03-13T14:38:56-03:00
 type: Post
 ogImage: /images/og-images/1718.png
 layout: post

@@ -1,7 +1,7 @@
 ---
 id: 2165
 title: Terminal tips tweets
-date: 2020-01-20T11:41:56-03:00
+publishedAt: 2020-01-20T11:41:56-03:00
 type: Post
 ogImage: /images/og-images/2165.png
 layout: post

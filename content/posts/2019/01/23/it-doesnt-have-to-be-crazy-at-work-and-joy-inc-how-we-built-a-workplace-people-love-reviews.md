@@ -1,7 +1,7 @@
 ---
 id: 1953
 title: "It Doesn't Have to Be Crazy at Work and Joy, Inc.: How We Built a Workplace People Love reviews"
-date: 2019-01-23T04:41:05-02:00
+publishedAt: 2019-01-23T04:41:05-02:00
 type: Post
 ogImage: /images/og-images/1953.png
 layout: post
