@@ -1,6 +1,6 @@
 import { writeFileSync } from 'fs';
 import RSS from 'rss';
-import { allPosts } from 'contentlayer/generated';
+import { allPosts, allMicroposts } from 'contentlayer/generated';
 import { BASE_URL, WEBSITE_TITLE, WEBSITE_DESCRIPTION } from './constants';
 
 export default function generateFeed() {
@@ -12,15 +12,22 @@ export default function generateFeed() {
     site_url: BASE_URL,
   });
 
-  allPosts
-    .sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)))
+  // eslint-disable-next-line no-console
+  console.log('Generating RSS');
+
+  [...allPosts, ...allMicroposts]
+    .sort(
+      (a, b) =>
+        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+    )
     .map((post) => ({
       title: post.title,
-      description: post.excerpt,
-      url: `${BASE_URL}/${post.permalink}`,
-      guid: post.id,
+      // TODO: fix description for Micropost
+      description: post.type === 'Post' ? post.excerpt : null,
+      url: `${BASE_URL}${post.permalink}`,
+      guid: post.permalink,
       categories: post.tags,
-      date: post.date,
+      date: post.publishedAt,
     }))
     .forEach((item: any) => {
       feed.item(item);
