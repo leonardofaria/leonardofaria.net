@@ -2,6 +2,10 @@ module.exports = {
   extends: ['leozera', 'next/core-web-vitals'],
   rules: {
     'no-param-reassign': 'off',
-    'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    // TODO: move this to eslint-config-leozera
+    'no-unused-vars': [
+      'error',
+      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+    ],
   },
 };
