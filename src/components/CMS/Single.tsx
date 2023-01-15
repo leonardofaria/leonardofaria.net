@@ -2,6 +2,7 @@ import { type Page, type Post } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
+import Balancer from 'react-wrap-balancer';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
@@ -106,12 +107,14 @@ export default function Single({
             )}
 
             <h1 className={isPost ? 'leading-9 text-center' : 'leading-9'}>
-              <Link
-                className="no-underline inline-block text-black relative"
-                href={permalink}
-              >
-                {title}
-              </Link>
+              <Balancer>
+                <Link
+                  className="no-underline inline-block text-black relative"
+                  href={permalink}
+                >
+                  {title}
+                </Link>
+              </Balancer>
             </h1>
           </header>
 

@@ -4,7 +4,7 @@ import { Badge } from '../UI/Badge';
 export default function Intro() {
   return (
     <section
-      className="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
+      className="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex self-center"
       role="alert"
     >
       <Badge variation="primary">New</Badge>

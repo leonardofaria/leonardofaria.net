@@ -1,3 +1,4 @@
+import Balancer from 'react-wrap-balancer';
 import { type Micropost as MicropostType } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import Link from 'next/link';
@@ -38,12 +39,14 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
         </small>
 
         <h1 className="leading-9 text-center">
-          <Link
-            className="no-underline inline-block text-black relative"
-            href={`/microblog/${slug}`}
-          >
-            {title}
-          </Link>
+          <Balancer>
+            <Link
+              className="no-underline inline-block text-black relative"
+              href={`/microblog/${slug}`}
+            >
+              {title}
+            </Link>
+          </Balancer>
         </h1>
       </header>
 
