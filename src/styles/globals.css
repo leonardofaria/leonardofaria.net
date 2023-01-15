@@ -205,17 +205,6 @@ html {
   @apply font-normal;
 }
 
-/* .article code, tt {
-  padding: 1px 3px;
-  @apply font-mono;
-  @apply text-lg;
-
-  white-space: pre-wrap;
-  border: #E3EDF3 1px solid;
-  background: #F7FAFB;
-  border-radius: 2px;
-} */
-
 .article .full-width, 
 .article .highlight {
   width: 100vw;
@@ -228,27 +217,6 @@ html {
 
 .article .highlight {
   @apply bg-white;
-}
-
-.article pre {
-  @apply max-w-3xl;
-  @apply m-auto;
-  @apply my-2;
-  @apply px-5;
-  @apply py-4;
-  @apply font-mono;
-  @apply text-lg;
-  white-space: pre;
-  overflow: auto;
-  @apply bg-white;
-  @apply rounded;
-}
-
-.article pre code,
-.article pre tt {
-  font-size: inherit;
-  white-space: pre-wrap;
-  @apply p-0;
 }
 
 .article kbd {

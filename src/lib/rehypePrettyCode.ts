@@ -5,12 +5,13 @@ import { visit } from 'unist-util-visit';
 const BLOCK =
   'w-[100vw] relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] bg-white';
 const TITLE =
-  'mb-0.5 rounded-md bg-rose-100/10 px-3 py-1 font-mono text-xs text-rose-100/70 shadow-sm';
-const PRE = '';
+  'max-w-3xl m-auto mb-0.5 rounded-md bg-gray-100/10 px-3 py-1 font-mono text-xs text-gray-300 shadow-sm';
+const PRE =
+  'max-w-3xl m-auto my-2 px-5 py-4 font-mono text-lg bg-white rounded';
 const CODE =
   'grid [&>span]:border-l-4 [&>span]:border-l-transparent [&>span]:pl-2 [&>span]:pr-3';
-// `something`
-const INLINE_BLOCK = 'whitespace-pre-wrap px-1.5 py-px rounded-md';
+const INLINE_BLOCK =
+  'whitespace-pre-wrap border border-[#E3EDF3] px-1.5 py-px rounded-md bg-[#F7FAFB]';
 const INLINE_CODE = '';
 const NUMBERED_LINES =
   '[counter-reset:line] before:[&>span]:mr-3 before:[&>span]:inline-block before:[&>span]:w-4 before:[&>span]:text-right before:[&>span]:text-gray-600 before:[&>span]:text-sm before:[&>span]:![content:counter(line)] before:[&>span]:[counter-increment:line]';

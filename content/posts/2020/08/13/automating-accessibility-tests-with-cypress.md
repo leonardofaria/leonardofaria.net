@@ -123,7 +123,7 @@ You can find more information about it in the [axe-core docs](https://github.com
 
 Last, let's create inside the `package.json` the command to trigger the tests:
 
-```json
+```json title="package.json"
 {
   "test": "cypress"
 }  
@@ -163,7 +163,7 @@ git checkout -b improve-cypress-tests
 
 Next, create the `cypress/plugins/index.js` file with the following content: 
 
-```js
+```js title="cypress/plugins/index.js"
 module.exports = (on, config) => {
   on('task', {
     log(message) {
@@ -182,7 +182,7 @@ module.exports = (on, config) => {
 
 This will execute code in Node via the `task` plugin event of Cypress. Next, let's go back to the `accessibility.spec.js` file and add the following function in the top of the file:
 
-```js
+```js title="accessibility.spec.js"
 const terminalLog = (violations) => {
   cy.task(
     'log',
