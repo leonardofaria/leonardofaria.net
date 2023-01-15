@@ -4,7 +4,6 @@ title: My list of GitHub tips and third-party apps
 publishedAt: 2019-09-03T11:42:19-03:00
 type: Post
 ogImage: /images/og-images/1981.png
-
 permalink: /2019/09/03/my-list-of-github-tips-and-third-party-apps/
 categories:
   - git

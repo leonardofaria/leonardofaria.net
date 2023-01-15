@@ -77,10 +77,8 @@ I love writing CSS, especially when I can use SASS but I decided to do not write
 
 If you never heard about Tailwind CSS, please don't try to think &#8220;it is a Bootstrap option&#8221;. Here is a good short explanation, from their website:
 
-<blockquote class="wp-block-quote">
-  <p>
-    Most CSS frameworks do too much.<br />&#8230;<br />Instead of opinionated predesigned components, Tailwind provides low-level utility classes that let you build completely custom designs without ever leaving your HTML.
-  </p>
+<blockquote>
+  Most CSS frameworks do too much.<br />&#8230;<br />Instead of opinionated predesigned components, Tailwind provides low-level utility classes that let you build completely custom designs without ever leaving your HTML.
 </blockquote>
 
 This is pretty much true. A quick search gives you many web apps &#8220;rebuilt&#8221; with Tailwind CSS:

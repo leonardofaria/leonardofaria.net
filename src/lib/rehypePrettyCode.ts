@@ -9,7 +9,7 @@ const TITLE =
 const PRE =
   'max-w-3xl m-auto my-2 px-5 py-4 font-mono text-lg bg-white rounded';
 const CODE =
-  'grid [&>span]:border-l-4 [&>span]:border-l-transparent [&>span]:pl-2 [&>span]:pr-3';
+  'whitespace-pre-wrap grid [&>span]:border-l-4 [&>span]:border-l-transparent [&>span]:pl-2 [&>span]:pr-3';
 const INLINE_BLOCK =
   'whitespace-pre-wrap border border-[#E3EDF3] px-1.5 py-px rounded-md bg-[#F7FAFB]';
 const INLINE_CODE = '';
