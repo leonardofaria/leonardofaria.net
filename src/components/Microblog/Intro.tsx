@@ -4,11 +4,11 @@ import { Badge } from '../UI/Badge';
 export default function Intro() {
   return (
     <section
-      className="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex self-center"
+      className="flex items-center self-center bg-indigo-800 p-2 leading-none text-indigo-100 lg:inline-flex lg:rounded-full"
       role="alert"
     >
       <Badge variation="primary">New</Badge>
-      <span className="font-semibold mx-2 text-left">{MICROBLOG_INTRO}</span>
+      <span className="mx-2 text-left font-semibold">{MICROBLOG_INTRO}</span>
     </section>
   );
 }

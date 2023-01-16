@@ -20,7 +20,7 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
   return (
     <>
       <header className="pt-10 pb-6 text-center">
-        <small className="text-center text-sm flex items-center gap-3 justify-center">
+        <small className="flex items-center justify-center gap-3 text-center text-sm">
           <time className="text-gray-500" dateTime={publishedAt}>
             {createdAt.toLocaleDateString('en-US', {
               dateStyle: 'medium',
@@ -38,10 +38,10 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
           ))}
         </small>
 
-        <h1 className="leading-9 text-center">
+        <h1 className="text-center leading-9">
           <Balancer>
             <Link
-              className="no-underline inline-block text-black relative"
+              className="relative inline-block text-black no-underline"
               href={`/microblog/${slug}`}
             >
               {title}

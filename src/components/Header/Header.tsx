@@ -18,16 +18,16 @@ function ToggleButton({
 }) {
   return (
     <button
-      className="nav-button w-10 h-10 justify-center flex items-center opacity-75 hover:opacity-100 transition duration-300 ease-in-out"
+      className="flex h-10 w-10 items-center justify-center opacity-75 transition duration-300 ease-in-out hover:opacity-100"
       type="button"
       onClick={() => {
         setShowMenu(!showMenu);
       }}
     >
       {showMenu ? (
-        <MdClose className="fill-current h-6 w-6" />
+        <MdClose className="h-6 w-6 fill-current" />
       ) : (
-        <BiMenu className="fill-current h-6 w-6" />
+        <BiMenu className="h-6 w-6 fill-current" />
       )}
     </button>
   );
@@ -44,20 +44,20 @@ export default function Header({ showHero }: { showHero?: boolean }) {
   if (showHero) {
     return (
       <header
-        className="header flex w-full m-0 bg-cover bg-top-center"
+        className="header bg-top-center m-0 flex w-full bg-cover"
         style={{
           backgroundImage:
             'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.55)), url(/images/vancouver.jpg)',
         }}
       >
-        <div className="max-w-7xl mx-auto p-6 flex flex-col items-center w-full relative">
-          <div className="block lg:hidden text-white self-end mx-2">
+        <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center p-6">
+          <div className="mx-2 block self-end text-white lg:hidden">
             <ToggleButton setShowMenu={setShowMenu} showMenu={showMenu} />
           </div>
 
           {showMenu || isDesktop ? (
             <div
-              className={`${pageNavClasses} absolute lg:p-6  self-end text-white rounded-md bg-black shadow lg:bg-transparent lg:shadow-none`}
+              className={`${pageNavClasses} absolute self-end  rounded-md bg-black text-white shadow lg:bg-transparent lg:p-6 lg:shadow-none`}
             >
               <nav>
                 <PageNav />
@@ -65,17 +65,17 @@ export default function Header({ showHero }: { showHero?: boolean }) {
             </div>
           ) : null}
 
-          <div className="flex-grow w-full flex flex-col justify-center items-center">
+          <div className="flex w-full grow flex-col items-center justify-center">
             <Image
               alt="Leonardo Faria"
-              className="w-24 h-24 lg:w-32 lg:h-32 rounded-full mb-3"
+              className="mb-3 h-24 w-24 rounded-full lg:h-32 lg:w-32"
               height="128"
               src="/images/avatar.jpg"
               width="128"
             />
 
             <Link
-              className="tracking-tighter text-4xl font-semibold flex flex-shrink-0 text-center px-3 bg-white focus:text-gray-300 opacity-75 hover:opacity-100 transition duration-300 ease-in-out"
+              className="flex shrink-0 bg-white px-3 text-center text-4xl font-semibold tracking-tighter opacity-75 transition duration-300 ease-in-out hover:opacity-100 focus:text-gray-300"
               href="/"
             >
               Leonardo Faria
@@ -97,33 +97,33 @@ export default function Header({ showHero }: { showHero?: boolean }) {
     <header
       className={
         scrollPosition > 0
-          ? `shadow bg-white-90 ${headerClasses}`
+          ? `bg-white-90 shadow ${headerClasses}`
           : headerClasses
       }
     >
-      <div className="max-w-7xl mx-auto p-6 flex items-center flex-wrap lg:flex-no-wrap relative justify-between">
+      <div className="lg:flex-no-wrap relative mx-auto flex max-w-7xl flex-wrap items-center justify-between p-6">
         <Link
-          className="tracking-tighter leading-10 text-3xl font-semibold text-gray-600 flex flex-shrink-0"
+          className="flex shrink-0 text-3xl font-semibold leading-10 tracking-tighter text-gray-600"
           href="/"
         >
           Leonardo Faria
         </Link>
 
-        <div className="block lg:hidden mx-2">
+        <div className="mx-2 block lg:hidden">
           <ToggleButton setShowMenu={setShowMenu} showMenu={showMenu} />
         </div>
 
-        <div className="absolute right-8 top-16 lg:relative lg:right-0 lg:top-0 flex flex-col lg:flex-row items-center rounded-md bg-white shadow lg:bg-transparent lg:shadow-none">
+        <div className="absolute right-8 top-16 flex flex-col items-center rounded-md bg-white shadow lg:relative lg:right-0 lg:top-0 lg:flex-row lg:bg-transparent lg:shadow-none">
           {showMenu || isDesktop ? (
             <>
               <nav
-                className={`${pageNavClasses} p-4 lg:p-0 text-gray-600 lg:order-last w-full lg:w-auto lg:ml-3`}
+                className={`${pageNavClasses} w-full p-4 text-gray-600 lg:order-last lg:ml-3 lg:w-auto lg:p-0`}
               >
                 <SocialNav />
               </nav>
 
               <nav
-                className={`${pageNavClasses} p-4 lg:p-0 w-full lg:w-auto text-gray-600`}
+                className={`${pageNavClasses} w-full p-4 text-gray-600 lg:w-auto lg:p-0`}
               >
                 <PageNav />
               </nav>

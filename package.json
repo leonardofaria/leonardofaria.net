@@ -44,6 +44,7 @@
     "@vercel/analytics": "^0.1.6",
     "contentlayer": "^0.2.9",
     "disqus-react": "^1.1.5",
+    "eslint-plugin-tailwindcss": "^3.8.0",
     "gray-matter": "^4.0.3",
     "next": "latest",
     "next-contentlayer": "^0.2.9",

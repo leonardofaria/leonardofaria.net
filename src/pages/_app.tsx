@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <div
-      className={`${inter.variable} font-sans bg-gradient flex flex-col min-h-screen`}
+      className={`${inter.variable} bg-gradient flex min-h-screen flex-col font-sans`}
     >
       <Head>
         <link href="https://webmention.io/leonardofaria.net/webmention" />

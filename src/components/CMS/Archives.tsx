@@ -31,12 +31,12 @@ export default function Archives({ posts }: { posts: Post[] }) {
 
       <Header />
 
-      <main className="flex-1 mt-12 max-w-3xl mt-32 mx-auto text-gray-700 w-full">
+      <main className="mx-auto mt-32 w-full max-w-3xl flex-1 text-gray-700">
         <article className="article px-5 pb-5">
           <header>
             <h1 className="leading-9">
               <Link
-                className="no-underline inline-block text-black relative"
+                className="relative inline-block text-black no-underline"
                 href="/archives"
               >
                 Archives

@@ -10,34 +10,34 @@ export function PostsByYear({
   posts: (Post | Micropost)[];
 }) {
   return (
-    <div className="flex flex-col md:flex-row border-b border-gray-400">
-      <h2 className="text-3xl font-bold mb-2 md:w-32 flex-shrink-0 flex-grow-0">
+    <div className="flex flex-col border-b border-gray-400 md:flex-row">
+      <h2 className="mb-2 shrink-0 grow-0 text-3xl font-bold md:w-32">
         {year}
       </h2>
 
-      <ol className="mb-4 list-none w-full">
+      <ol className="mb-4 w-full list-none">
         {posts.map((post) => {
           const { slug, permalink, title, publishedAt, tags, type } = post;
           const createdAt = new Date(publishedAt);
 
           return (
             <li
-              className="mb-8 flex flex-col no-underline rounded-md hover:bg-white transition duration-300 ease-in-out"
+              className="mb-8 flex flex-col rounded-md no-underline transition duration-300 ease-in-out hover:bg-white"
               key={slug}
             >
-              <div className="flex items-center my-2">
+              <div className="my-2 flex items-center">
                 {type === 'Micropost' && (
                   <Badge variation="primary">MICROPOST</Badge>
                 )}
                 <Link
-                  className="tracking-tight no-underline text-blue-600 mx-2"
+                  className="mx-2 tracking-tight text-blue-600 no-underline"
                   href={permalink}
                 >
                   {title}
                 </Link>
               </div>
 
-              <small className="m-2 text-sm flex items-center gap-3">
+              <small className="m-2 flex items-center gap-3 text-sm">
                 <time className="text-gray-500" dateTime={publishedAt}>
                   {
                     createdAt

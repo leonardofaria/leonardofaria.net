@@ -31,7 +31,7 @@ export default function Microposts({
 
       <Header />
 
-      <main className="flex-1 mt-12 max-w-2xl mt-32 mx-auto text-gray-700 w-full flex flex-col">
+      <main className="mx-auto mt-32 flex w-full max-w-2xl flex-1 flex-col text-gray-700">
         <Intro />
 
         {microposts.map((micropost) => (

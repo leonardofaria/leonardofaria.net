@@ -47,7 +47,7 @@ function Mention({ originalMention }: { originalMention: WebMention }) {
   function renderDate() {
     return (
       <small>
-        <a className="no-underline ml-2" href={mention.data.author?.url}>
+        <a className="ml-2 no-underline" href={mention.data.author?.url}>
           {new Date(mention.verified_date).toLocaleDateString('en-US', {
             month: 'short',
             day: '2-digit',
@@ -59,12 +59,12 @@ function Mention({ originalMention }: { originalMention: WebMention }) {
   }
 
   return (
-    <li className="flex mb-8 text-base">
-      <a className="flex-shrink-0" href={mention.data.author.url}>
+    <li className="mb-8 flex text-base">
+      <a className="shrink-0" href={mention.data.author.url}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           alt=""
-          className="w-8 h-8 rounded-full mr-3"
+          className="mr-3 h-8 w-8 rounded-full"
           src={mention.data.author.photo}
         />
       </a>
@@ -136,28 +136,28 @@ export default function Webmentions({ url }: { url: string }) {
     <>
       <header className="flex items-center">
         <button
-          className="flex items-center mr-6 p-3 bg-gray-100 hover:bg-white transition duration-300 ease-in-out rounded-md"
+          className="mr-6 flex items-center rounded-md bg-gray-100 p-3 transition duration-300 ease-in-out hover:bg-white"
           type="button"
           onClick={() => setShowLikes(!showLikes)}
         >
-          <FaHeart className="w-6 h-6 mr-2" />
+          <FaHeart className="mr-2 h-6 w-6" />
           <span className="mr-1">{likesTotal}</span>
         </button>
         <button
-          className="flex items-center mr-6 p-3 bg-gray-100 hover:bg-white transition duration-300 ease-in-out rounded-md"
+          className="mr-6 flex items-center rounded-md bg-gray-100 p-3 transition duration-300 ease-in-out hover:bg-white"
           type="button"
           onClick={() => setShowInteractions(!showInteractions)}
         >
-          <FaComment className="w-6 h-6 mr-2" />
+          <FaComment className="mr-2 h-6 w-6" />
           <span className="mr-1">{interactionsTotal}</span>
         </button>
-        <div className="flex-grow">
+        <div className="grow">
           <div className="flex -space-x-2 overflow-hidden">
             {uniqueAuthorUrls.map((authorUrl, index) => {
               if (index === LIMIT_AVATARS) {
                 return (
                   <span
-                    className="flex items-center justify-center text-xs bg-black text-white font-bold h-8 w-8 rounded-full ring-2 ring-white"
+                    className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-xs font-bold text-white ring-2 ring-white"
                     key="more"
                   >
                     +{(mentions?.length || 0) - LIMIT_AVATARS}

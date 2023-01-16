@@ -6,7 +6,7 @@ export default function NotFound() {
     <>
       <Header />
 
-      <main className="flex-1 mt-12 max-w-3xl mt-32 mx-auto text-gray-700 w-full">
+      <main className="mx-auto mt-32 w-full max-w-3xl flex-1 text-gray-700">
         <article className="article">
           <h1 className="leading-9">Not found</h1>
 

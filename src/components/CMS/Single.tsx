@@ -87,11 +87,11 @@ export default function Single({
 
       <Header />
 
-      <main className="flex-1 mt-12 max-w-3xl mt-32 mx-auto text-gray-700 w-full">
+      <main className="mx-auto mt-32 w-full max-w-3xl flex-1 text-gray-700">
         <article className="article">
           <header className={isPost ? 'pt-10 pb-6 text-center' : ''}>
             {isPost && (
-              <small className="text-center text-sm flex items-center gap-3 justify-center">
+              <small className="flex items-center justify-center gap-3 text-center text-sm">
                 <time className="text-gray-500" dateTime={publishedTime}>
                   {createdAt.toLocaleDateString('en-US', {
                     dateStyle: 'medium',
@@ -106,10 +106,10 @@ export default function Single({
               </small>
             )}
 
-            <h1 className={isPost ? 'leading-9 text-center' : 'leading-9'}>
+            <h1 className={isPost ? 'text-center leading-9' : 'leading-9'}>
               <Balancer>
                 <Link
-                  className="no-underline inline-block text-black relative"
+                  className="relative inline-block text-black no-underline"
                   href={permalink}
                 >
                   {title}
@@ -123,7 +123,7 @@ export default function Single({
           </div>
 
           {type === 'post' && (
-            <section className="my-5 py-5 relative">
+            <section className="relative my-5 py-5">
               <h2>Interactions</h2>
 
               <h3>Webmentions</h3>

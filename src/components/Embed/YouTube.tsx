@@ -10,7 +10,7 @@ export default function YouTube({
   return (
     <div className={fullWidth ? 'full-width' : 'aspect-w-16 aspect-h-9'}>
       <iframe
-        className={fullWidth ? 'w-full h-screen' : '!my-0'}
+        className={fullWidth ? 'h-screen w-full' : '!my-0'}
         src={`https://youtube.com/embed/${id}`}
         title="YouTube video"
       />

@@ -61,11 +61,11 @@ export default function Single({ micropost }: { micropost: MicropostType }) {
 
       <Header />
 
-      <main className="flex-1 mt-12 max-w-2xl mt-32 mx-auto text-gray-700 w-full">
+      <main className="mx-auto mt-32 w-full max-w-2xl flex-1 text-gray-700">
         <article className="article">
           <Micropost micropost={micropost} />
 
-          <section className="my-5 py-5 relative">
+          <section className="relative my-5 py-5">
             <h2>Interactions</h2>
 
             <h3>Webmentions</h3>

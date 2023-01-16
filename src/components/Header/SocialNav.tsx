@@ -35,7 +35,7 @@ export default function SocialNav() {
       {SOCIAL_LINKS.map((social) => (
         <li key={social.name}>
           <a
-            className="block p-2 opacity-75 hover:opacity-100 transition duration-300 ease-in-out"
+            className="block p-2 opacity-75 transition duration-300 ease-in-out hover:opacity-100"
             href={social.url}
             // rel="me" is used for IndieWeb sign-in
             rel={social.name === 'GitHub' ? 'me' : undefined}

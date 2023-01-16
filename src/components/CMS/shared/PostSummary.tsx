@@ -7,7 +7,7 @@ export function PostSummary({ post }: { post: Post }) {
 
   return (
     <div className="border-b border-gray-400" key={post.id}>
-      <h2 className="text-3xl font-bold mb-0">
+      <h2 className="mb-0 text-3xl font-bold">
         <Link className="no-underline" href={post.permalink}>
           {post.title}
         </Link>

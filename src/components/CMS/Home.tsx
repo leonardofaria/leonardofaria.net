@@ -37,7 +37,7 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
 
       <Header showHero />
 
-      <main className="flex-1 mt-12 max-w-3xl mx-auto text-gray-700 w-full">
+      <main className="mx-auto mt-12 w-full max-w-3xl flex-1 text-gray-700">
         <article className="article px-5 pb-5">
           <Intro />
 

@@ -13,7 +13,7 @@ export function Badge({
 
   return (
     <span
-      className={`flex rounded-full uppercase px-2 py-1 text-xs font-bold ${variationClasses}`}
+      className={`flex rounded-full px-2 py-1 text-xs font-bold uppercase ${variationClasses}`}
     >
       {children}
     </span>
