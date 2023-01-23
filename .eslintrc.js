@@ -11,5 +11,6 @@ module.exports = {
       'error',
       { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
     ],
+    'react/require-default-props': 'off',
   },
 };
