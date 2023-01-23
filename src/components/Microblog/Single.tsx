@@ -1,5 +1,6 @@
 import { type Micropost as MicropostType } from 'contentlayer/generated';
 import { NextSeo } from 'next-seo';
+import { useEffect, useState } from 'react';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
@@ -8,6 +9,11 @@ import Micropost from './shared/Micropost';
 import Disqus from '../Embed/Disqus';
 
 export default function Single({ micropost }: { micropost: MicropostType }) {
+  const [showComponent, setShowComponent] = useState(false);
+  useEffect(() => {
+    setShowComponent(true);
+  }, []);
+
   const { title, publishedAt, description, tags, ogImage, slug } = micropost;
   const url = `${BASE_URL}/microblog/${slug}`;
   const createdAt = new Date(publishedAt).toLocaleDateString('en-US', {
@@ -76,7 +82,7 @@ export default function Single({ micropost }: { micropost: MicropostType }) {
 
             <h3>Comments</h3>
 
-            <Disqus title={title} url={url} />
+            {showComponent && <Disqus title={title} url={url} />}
           </section>
         </article>
       </main>
