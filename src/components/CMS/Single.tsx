@@ -4,13 +4,15 @@ import { useMDXComponent } from 'next-contentlayer/hooks';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import Balancer from 'react-wrap-balancer';
+import dynamic from 'next/dynamic';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
-import Disqus from '../Embed/Disqus';
 import Webmentions from '../Webmentions/Webmentions';
 import { Badge } from '../UI/Badge';
 import { Playground } from '../Playground';
+
+const Disqus = dynamic(() => import('../Embed/Disqus'), { ssr: false });
 
 export default function Single({
   post,

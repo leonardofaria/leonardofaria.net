@@ -1,12 +1,14 @@
 import { type Micropost as MicropostType } from 'contentlayer/generated';
 import { NextSeo } from 'next-seo';
 import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import Webmentions from '../Webmentions/Webmentions';
 import Micropost from './shared/Micropost';
-import Disqus from '../Embed/Disqus';
+
+const Disqus = dynamic(() => import('../Embed/Disqus'), { ssr: false });
 
 export default function Single({ micropost }: { micropost: MicropostType }) {
   const [showComponent, setShowComponent] = useState(false);
