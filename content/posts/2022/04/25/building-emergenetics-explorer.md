@@ -25,8 +25,8 @@ My previous company uses Emergenetics assessments as a way to learn how to work 
 
 An Emergenetics Profile looks like this ([full width](/pub/emergenetics-sample-profile.pdf)):
 
-<div class="full-width">
-  <iframe src="/pub/emergenetics-sample-profile.pdf" class="w-full"></iframe>
+<div className="full-width">
+  <iframe src="/pub/emergenetics-sample-profile.pdf" className="w-full"></iframe>
 </div>
 
 From what I understand (from an analytical/structural brain), there is no right or wrong profile. People are different and as more diverse they are, the better. With the information of the profile, you can understand better your signs of brilliance, challenges and how you prefer others to communicate with you.
@@ -59,7 +59,7 @@ The Directory page lists all employees and their basic info (title, division, de
 
 Since I also had the name of the city, state and country of employees, I thought it would be cool to show where employees live in a [map](https://emergenetics-explorer.leonardofaria.net/world). Since the company became remote-first, people liked this a lot to get to know where their colleagues live. 
 
-<video class="h-auto" controls autoPlay="autoPlay">
+<video className="h-auto" controls autoPlay="autoPlay">
   <source src="/wp-content/uploads/2022/04/emergenetics-explorer-world.mp4" type="video/mp4" />
 </video>
 

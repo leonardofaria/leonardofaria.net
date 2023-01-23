@@ -8,14 +8,12 @@ permalink: /talks
 description: I like to tell stories. Here is a list of my talks.
 ---
 
-<div class="intro mb-16">
-<p>
+<div className="intro mb-16">
 I like to tell stories.<br/>
 Here is a list of my talks.
-</p>
 </div>
 
-<div class="full-width"><img alt="Talks" src="/images/talks.jpg" /></div>
+<div className="full-width"><img alt="Talks" src="/images/talks.jpg" /></div>
 
 ## Using Lighthouse in the real world (Nov 3, 2021)
 

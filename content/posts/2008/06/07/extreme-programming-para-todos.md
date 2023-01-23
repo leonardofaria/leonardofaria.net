@@ -63,7 +63,7 @@ O desenvolvimento é feito em iterações semanais. A cada começo de semana, de
 
 A liberação de pequenas versões funcionais auxilia o processo de aceitação e absorção do software por parte do cliente.
 
-**Programação em pares**<img src="/wp-content/uploads/2008/06/xp1.jpg" title="Programação em par" width="300" align="right" class="photo white" />
+**Programação em pares**<img src="/wp-content/uploads/2008/06/xp1.jpg" title="Programação em par" width="300" align="right" className="photo white" />
 
 A programação em pares é um dos principais diferenciais do XP. Dois profissionais trabalhando juntos produzem códigos mais limpos, funcionais, revisados e sujeito a menos falhas. 
 

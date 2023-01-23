@@ -42,7 +42,7 @@ Realizei perguntas simples sobre quem é o usuário de Mac em terras tupiniquins
   </p>
 </center>
 
-<h3 class="comments">
+<h3 className="comments">
   O Mac User e seus equipamentos
 </h3>
 
@@ -61,7 +61,7 @@ Realizei perguntas simples sobre quem é o usuário de Mac em terras tupiniquins
   </p>
 </center>
 
-<h3 class="comments">
+<h3 className="comments">
   O Mac User e as compras
 </h3>
 
@@ -84,7 +84,7 @@ Realizei perguntas simples sobre quem é o usuário de Mac em terras tupiniquins
   </p>
 </center>
 
-<h3 class="comments">
+<h3 className="comments">
   Estatísticas de quem acessou a pesquisa
 </h3>
 
@@ -111,7 +111,7 @@ Realizei perguntas simples sobre quem é o usuário de Mac em terras tupiniquins
   </p>
 </center>
 
-<h3 class="comments">
+<h3 className="comments">
   Direitos autorais dessa pesquisa
 </h3>
 

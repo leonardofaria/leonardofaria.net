@@ -11,7 +11,7 @@ categories:
 tags:
   - mac
 ---
-<img src="/wp-content/uploads/2006/05/homeoffice.jpg" class="w-32 mr-3" align="left" alt="Home Office" />
+<img src="/wp-content/uploads/2006/05/homeoffice.jpg" className="w-32 mr-3" align="left" alt="Home Office" />
 
 Finalmente chegou meu Mac. 
 

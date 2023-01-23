@@ -20,7 +20,7 @@ Lighthouse has been part of my daily work for the last few months and I shared s
 
 _Disclaimers_: 1. This content may be reviewed in the future as I learn more about web performance and Lighthouse; 2. Do not take this post as professional/legal advice; 3. Do not take my comments on tech X or Y as attacks to tech X or Y.
 
-<div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
+<div className="my-10 p-4 border border-gray-6 rounded-md bg-white">
 <strong>Hi! This post is part of a Lighthouse post series. Also, check out:</strong>
 
 <ul>

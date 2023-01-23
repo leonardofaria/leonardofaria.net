@@ -108,7 +108,7 @@ npm publish
 
 I have a functional GitHub project showing the setup of this post: [eslint-config-leozera](https://github.com/leonardofaria/eslint-config-leozera). You can also see it below:
 
-<div class="full-width">
+<div className="full-width">
   <iframe
      src="https://codesandbox.io/embed/github/leonardofaria/eslint-config-leozera/tree/master/?fontsize=14&theme=dark"
      title="leonardofaria/eslint-config-leozera"

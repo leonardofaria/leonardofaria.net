@@ -24,13 +24,13 @@ I work at Thinkific with 20+ other developers (we are [hiring](http://bit.ly/thn
 
 This extension list project files in a tree. This is quite useful when you have a big pull request and you need to go back and forth to understand better what is going on.
 
-<img src="/wp-content/uploads/2019/09/better-pull-request-for-github.jpg" alt="" class="wp-image-1984" />
+<img src="/wp-content/uploads/2019/09/better-pull-request-for-github.jpg" alt="" className="wp-image-1984" />
 
 ### [GitHub Hovercard](https://chrome.google.com/webstore/detail/github-hovercard/mmoahbbnojgkclgceahhakhnccimnplk?hl=en)
 
 This extension shows info about a user, project, issue or commit. It is a cool UI trick like Facebook does. This extension even works for private repositories, as long as you have a valid token to grab the information of the service.
 
-<img src="/wp-content/uploads/2019/09/hover-cards.jpg" alt="" class="wp-image-1986" />
+<img src="/wp-content/uploads/2019/09/hover-cards.jpg" alt="" className="wp-image-1986" />
 
 ### [GitHub Repository Size](https://chrome.google.com/webstore/detail/github-repository-size/apnjnioapinblneaedefcnopcjepgkci?hl=en)
 

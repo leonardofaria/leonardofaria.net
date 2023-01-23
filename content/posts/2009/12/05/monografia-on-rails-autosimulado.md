@@ -21,4 +21,4 @@ Hoje foi a apresentação da banca do trabalho de conclusão de curso e anexo ab
 
 <span className="hidden">more</span>
 
-<iframe src="/pub/monografia.pdf" class="w-full h-screen" />
+<iframe src="/pub/monografia.pdf" className="w-full h-screen" />

@@ -19,6 +19,6 @@ Data is usually explained in tables or charts, but people sometimes commit mista
 <span className="hidden">more</span>
 
   
-[<img src="/wp-content/uploads/2015/07/ClearOffBarGraph.gif" alt="Remove to improve - the pie chart edition" width="640" height="460" class="alignnone size-full wp-image-1596" />](/wp-content/uploads/2015/07/ClearOffBarGraph.gif)
+[<img src="/wp-content/uploads/2015/07/ClearOffBarGraph.gif" alt="Remove to improve - the pie chart edition" width="640" height="460" className="alignnone size-full wp-image-1596" />](/wp-content/uploads/2015/07/ClearOffBarGraph.gif)
 
-[<img src="/wp-content/uploads/2015/07/ClearOffTheTableMd.gif" alt="Remove to improve - the table edition" width="800" height="600" class="alignnone size-full wp-image-1597" />](/wp-content/uploads/2015/07/ClearOffTheTableMd.gif)
+[<img src="/wp-content/uploads/2015/07/ClearOffTheTableMd.gif" alt="Remove to improve - the table edition" width="800" height="600" className="alignnone size-full wp-image-1597" />](/wp-content/uploads/2015/07/ClearOffTheTableMd.gif)

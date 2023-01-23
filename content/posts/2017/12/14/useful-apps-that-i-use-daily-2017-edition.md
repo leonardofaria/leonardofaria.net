@@ -61,7 +61,7 @@ I am using **[iTerm2](https://www.iterm2.com/)** for a long time with Zsh and **
 **[Gitify](http://www.gitify.io)** is an app on the menubar that brings Github notifications. I know, there are email notifications or Chrome extensions but what I like in Gitify: it just works. New notification: icon color change in the menubar.
 
 <center>
-  <a href="http://www.gitify.io"><img src="/wp-content/uploads/2017/12/screenshot-gitify.png" alt="" width="500" height="342" class="aligncenter size-full wp-image-1844" srcset="/wp-content/uploads/2017/12/screenshot-gitify.png 500w, /wp-content/uploads/2017/12/screenshot-gitify-300x205.png 300w" sizes="(max-width: 500px) 100vw, 500px" /></a>
+  <a href="http://www.gitify.io"><img src="/wp-content/uploads/2017/12/screenshot-gitify.png" alt="" width="500" height="342" className="aligncenter size-full wp-image-1844" srcset="/wp-content/uploads/2017/12/screenshot-gitify.png 500w, /wp-content/uploads/2017/12/screenshot-gitify-300x205.png 300w" sizes="(max-width: 500px) 100vw, 500px" /></a>
 </center>
 
 <img src="/wp-content/uploads/2017/12/screenshot-codehub.png" width="40%" align="right" />

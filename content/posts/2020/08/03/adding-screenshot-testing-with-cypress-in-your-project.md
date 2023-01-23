@@ -264,7 +264,7 @@ Earlier I have mentioned we would be using Cypress inside Docker but here we are
 
 Inside Cypress, let's go the Runs tab, click in "Set up project to record", choose a name and visibility. We will get a `projectId` that is automatically added in the `cypress.json` file and a private record key. Here is a video of the steps:
 
-<video class="h-auto" controls loop autoPlay="autoPlay">
+<video className="h-auto" controls loop autoPlay="autoPlay">
   <source src="/wp-content/uploads/2020/08/cypress-adding-integration.mp4" type="video/mp4" />
 </video>
 
@@ -278,7 +278,7 @@ In Semaphore, I added the record key as an environment variable called `CYPRESS_
 
 That is pretty much all that needs to be done. In the [Pull request](https://github.com/leonardofaria/cypress-example/pull/8) we can see the cypress.io integration in the comments. There is even a deep link that takes us to their dashboard and shows all the screenshots. Check the video below: 
 
-<video class="h-auto" controls loop autoPlay="autoPlay">
+<video className="h-auto" controls loop autoPlay="autoPlay">
   <source src="/wp-content/uploads/2020/08/cypress-io-test-dashboard.mp4" type="video/mp4" />
 </video>
 
@@ -292,13 +292,13 @@ In the example website, let's double the horizontal padding from 16px to 32px. T
 
 As we could expect, Cypress captured that the button doesn't match the screenshots. Visiting the page, we can check the screenshot of the broken test:
 
-<video class="h-auto" controls loop autoPlay="autoPlay">
+<video className="h-auto" controls loop autoPlay="autoPlay">
   <source src="/wp-content/uploads/2020/08/cypress-io-broken-test.mp4" type="video/mp4" />
 </video>
 
 The diff file shows the original screenshot on the left, the current result on the right and they are combined in the middle. We also have the option to download the image so we can see the issue better:
 
-<div class="full-width"><img alt="Button before and after" src="/wp-content/uploads/2020/08/cypress-io-broken-test.png" /></div>
+<div className="full-width"><img alt="Button before and after" src="/wp-content/uploads/2020/08/cypress-io-broken-test.png" /></div>
 
 If this is not an issue, update the screenshots:
 

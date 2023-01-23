@@ -10,14 +10,14 @@ description: Nothing is forever in the www world. Here are a few projects from m
 
 import YouTube from '../../src/components/Embed/YouTube';
 
-<div class="intro mb-16">
+<div className="intro mb-16">
 Nothing is forever in the www world.<br/>
 Here are a few projects from my past.
 </div>
 
-<div class="full-width"><img alt="Portfolio" src="/images/portfolio.jpg" /></div>
+<div className="full-width"><img alt="Portfolio" src="/images/portfolio.jpg" /></div>
 
-<div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
+<div className="my-10 p-4 border border-gray-6 rounded-md bg-white">
 Project types: <a href="#ruby-on-rails">Ruby on Rails</a>, <a href="#wordpress">WordPress</a>, <a href="#mobile">Mobile</a>, <a href="#flash">Flash</a>.<br/><br/>
 On 2016 I joined <a href="https://thinkific.com" target="_blank">Thinkific</a> and I stopped freelancing. My <a href="/pub/resume.pdf" target="_blank">updated resume</a>.
 </div>
@@ -28,55 +28,55 @@ Ruby on Rails is my go-to option for personal projects and for cases I want to d
 
 ### MVB
 
-<small class="uppercase font-sans text-xs"><b class="border border-gray-6 rounded-md mr-2 py-2 px-3">2015</b> <a href="https://minasvesteobrasil.herokuapp.com" class="text-teal-700">Online (restricted)</a></small>
+<small className="uppercase font-sans text-xs"><b className="border border-gray-6 rounded-md mr-2 py-2 px-3">2015</b> <a href="https://minasvesteobrasil.herokuapp.com" className="text-teal-700">Online (restricted)</a></small>
 
 MVB is a B2B website to connect mall stores and clothes factories from my hometown. It was used by 40 factories during three events, selling millions of Brazilian reais in fast-fashion. 
 
-<center><img alt="MVB screenshot" src="/images/portfolio/mvb.jpg" loading="lazy" class="mb-16" /></center>
+<center><img alt="MVB screenshot" src="/images/portfolio/mvb.jpg" loading="lazy" className="mb-16" /></center>
 
 ### Envirosax
 
-<small class="uppercase font-sans text-xs"><b class="border border-gray-6 rounded-md mr-2 py-2 px-3">2011</b> <a href="https://envirosax.herokuapp.com" class="text-teal-700">Online (restricted)</a></small>
+<small className="uppercase font-sans text-xs"><b className="border border-gray-6 rounded-md mr-2 py-2 px-3">2011</b> <a href="https://envirosax.herokuapp.com" className="text-teal-700">Online (restricted)</a></small>
 
 Envirosax has been the leader in design-led reusable shopping bags. In this store, business owners can buy Envirosax bags to re-sell in their physical stores. Above is a 5-min video showing the features of the store.
 
 <YouTube id="Ymh1VRPEJm0" />  
 
-<div class="mb-16"></div>
+<div className="mb-16"></div>
 
 ### Guia da TV
 
-<small class="uppercase font-sans text-xs"><b class="border border-gray-6 rounded-md mr-2 py-2 px-3">2011</b> <span class="text-red-600">Offline</span></small>
+<small className="uppercase font-sans text-xs"><b className="border border-gray-6 rounded-md mr-2 py-2 px-3">2011</b> <span className="text-red-600">Offline</span></small>
 
 Guia da TV was a weekend project with Brazilian TV Channel Listings. You could open the website to see what was coming to cable TV in the next hours.
 
-<center><img alt="Guia da TV" src="/images/portfolio/guiadatv.jpg" loading="lazy" class="mb-16" /></center>
+<center><img alt="Guia da TV" src="/images/portfolio/guiadatv.jpg" loading="lazy" className="mb-16" /></center>
 
 ### autosimulado
 
-<small class="uppercase font-sans text-xs"><b class="border border-gray-6 rounded-md mr-2 py-2 px-3">2009</b> <a href="https://autosimulado.com.br" class="text-teal-700">Online</a></small>
+<small className="uppercase font-sans text-xs"><b className="border border-gray-6 rounded-md mr-2 py-2 px-3">2009</b> <a href="https://autosimulado.com.br" className="text-teal-700">Online</a></small>
 
 [autosimulado](https://autosimulado.com.br) is a website started in my college to help my girlfriend to learn traffic rules. More than 40.000 people used this service to prepare for driver license exams.
 
-<center><img alt="autosimulado screenshot" src="/images/portfolio/autosimulado.jpg" loading="lazy" class="mb-16" /></center>
+<center><img alt="autosimulado screenshot" src="/images/portfolio/autosimulado.jpg" loading="lazy" className="mb-16" /></center>
 
 ### Horoscopo no MSN
 
-<small class="uppercase font-sans text-xs"><b class="border border-gray-6 rounded-md mr-2 py-2 px-3">2010</b> <span class="text-red-600">Offline</span></small>
+<small className="uppercase font-sans text-xs"><b className="border border-gray-6 rounded-md mr-2 py-2 px-3">2010</b> <span className="text-red-600">Offline</span></small>
 
 Horoscopo no MSN was a MSN bot that I created to deliver horoscope daily to the MSN users who added a specific email in their contact list.
 
-<center><img alt="Horoscopo no MSN screenshot" src="/images/portfolio/horoscopo.jpg" loading="lazy" class="mb-16" /></center>
+<center><img alt="Horoscopo no MSN screenshot" src="/images/portfolio/horoscopo.jpg" loading="lazy" className="mb-16" /></center>
 
 ### codestacker
 
-<small class="uppercase font-sans text-xs"><b class="border border-gray-6 rounded-md mr-2 py-2 px-3">2008</b> <a href="https://codestacker.com" class="text-teal-700">Online</a></small>
+<small className="uppercase font-sans text-xs"><b className="border border-gray-6 rounded-md mr-2 py-2 px-3">2008</b> <a href="https://codestacker.com" className="text-teal-700">Online</a></small>
 
 [codestacker](https://codestacker.herokuapp.com) is a community to share code snippets, before GitHub Gists, Codepen, CodeSandbox and others. The idea was replicating a blog model with syntax highlighting for developers.
 
 <center><img alt="codestacker screenshot" src="/images/portfolio/codestacker.jpg" loading="lazy" /></center>
 
-<hr class="border-t border-gray-6 w-full mt-24 mb-20" />
+<hr className="border-t border-gray-6 w-full mt-24 mb-20" />
 
 ## WordPress
 
@@ -88,7 +88,7 @@ The most important work to mention is the website of the [Ministry of Social Sec
 
 <center><img alt="Previdência Social website screenshot" src="/images/portfolio/previdencia.jpg" loading="lazy" /></center>
 
-<hr class="border-t border-gray-6 w-full mt-24 mb-20" />
+<hr className="border-t border-gray-6 w-full mt-24 mb-20" />
 
 ## Mobile
 
@@ -96,21 +96,21 @@ I have used Phonegap in the past for creating iOS and Android mobile apps.
 
 ### Writing for IELTS and Toefl
 
-<small class="uppercase font-sans text-xs"><b class="border border-gray-6 rounded-md mr-2 py-2 px-3">2015</b> <span class="text-red-600">Offline</span></small>
+<small className="uppercase font-sans text-xs"><b className="border border-gray-6 rounded-md mr-2 py-2 px-3">2015</b> <span className="text-red-600">Offline</span></small>
 
 IELTS and Toefl are two international tests required for admission in universities / immigration in English-speaking countries. While I was studying for the tests, I decided to create an app with writing questions and tips, to help people like me.
 
-<center><img alt="Writing for IELTS and Toefl screenshot" src="/images/portfolio/writing-skills.jpg" loading="lazy" class="mb-16" /></center>
+<center><img alt="Writing for IELTS and Toefl screenshot" src="/images/portfolio/writing-skills.jpg" loading="lazy" className="mb-16" /></center>
 
 ### e-Recursos App
 
-<small class="uppercase font-sans text-xs"><b class="border border-gray-6 rounded-md mr-2 py-2 px-3">2013</b> <span class="text-red-600">Offline</span></small>
+<small className="uppercase font-sans text-xs"><b className="border border-gray-6 rounded-md mr-2 py-2 px-3">2013</b> <span className="text-red-600">Offline</span></small>
 
 e-Recursos was the first Brazilian Social Security mobile app. Citizen would use the app for getting status updates of their requests.
 
 <center><img alt="erecursos screenshot" src="/images/portfolio/erecursos.jpg" loading="lazy" /></center>
 
-<hr class="border-t border-gray-6 w-full mt-24 mb-20" />
+<hr className="border-t border-gray-6 w-full mt-24 mb-20" />
 
 ## Flash
 
@@ -118,15 +118,15 @@ Flash is dead but back in 2000's it was the go-to solution for the so called int
 
 ### Monkey Radio
 
-<small class="uppercase font-sans text-xs"><b class="border border-gray-6 rounded-md mr-2 py-2 px-3">2008</b> <span class="text-red-600">Offline</span></small>
+<small className="uppercase font-sans text-xs"><b className="border border-gray-6 rounded-md mr-2 py-2 px-3">2008</b> <span className="text-red-600">Offline</span></small>
 
 Monkey Store was a hip teenager store chain in different Brazil cities. The store had its own streaming for customers.
 
-<center><img alt="Monkey Radio screenshot" src="/images/portfolio/monkey-radio.jpg" loading="lazy" class="mb-16" /></center>
+<center><img alt="Monkey Radio screenshot" src="/images/portfolio/monkey-radio.jpg" loading="lazy" className="mb-16" /></center>
 
 ### is®
 
-<small class="uppercase font-sans text-xs"><b class="border border-gray-6 rounded-md mr-2 py-2 px-3">2006 - 2009</b> <span class="text-teal-700">Online</span></small>
+<small className="uppercase font-sans text-xs"><b className="border border-gray-6 rounded-md mr-2 py-2 px-3">2006 - 2009</b> <span className="text-teal-700">Online</span></small>
 
 My favourite Flash projects were created for the t-shirt brand is®.
 

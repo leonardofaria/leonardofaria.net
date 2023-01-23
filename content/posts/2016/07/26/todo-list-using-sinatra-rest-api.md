@@ -108,7 +108,7 @@ end
 ## Defining models
 
 <center>
-  <img src="/wp-content/uploads/2016/07/diagram.png" alt="Diagram" width="250" height="149" class="aligncenter size-full wp-image-1770" />
+  <img src="/wp-content/uploads/2016/07/diagram.png" alt="Diagram" width="250" height="149" className="aligncenter size-full wp-image-1770" />
 </center>
 
 As you can see in ERD above, my todo list has two entities: `List` and `Task`.
@@ -319,7 +319,7 @@ Hopefully, shotgun should return something like:
 
 After that, you will be able to do requests as I did:
 
-<img src="/wp-content/uploads/2016/07/httpie.png" class="aligncenter" />
+<img src="/wp-content/uploads/2016/07/httpie.png" className="aligncenter" />
 
 ## Seeding initial data
 

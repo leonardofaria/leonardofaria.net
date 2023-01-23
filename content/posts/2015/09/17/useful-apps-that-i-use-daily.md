@@ -55,7 +55,7 @@ How awesome is Alfred? It is totally awesome! Alfred is a great tool working as 
 [Time Tracker](http://rainer.4950.net/timetracker-for-mac/) is an old free software that just works. You can record time from different projects and tasks. I can say that this app is one of the freelancer's best friend.
 
 <center>
-  <a href="http://rainer.4950.net/timetracker-for-mac/"><img src="/wp-content/uploads/2015/07/timetracker.png" alt="timetracker" width="615" height="281" class="alignnone size-full wp-image-1586" srcset="/wp-content/uploads/2015/07/timetracker.png 615w, /wp-content/uploads/2015/07/timetracker-300x137.png 300w" sizes="(max-width: 615px) 100vw, 615px" /></a>
+  <a href="http://rainer.4950.net/timetracker-for-mac/"><img src="/wp-content/uploads/2015/07/timetracker.png" alt="timetracker" width="615" height="281" className="alignnone size-full wp-image-1586" srcset="/wp-content/uploads/2015/07/timetracker.png 615w, /wp-content/uploads/2015/07/timetracker-300x137.png 300w" sizes="(max-width: 615px) 100vw, 615px" /></a>
 </center>
 
 ### WhatApp Desktop

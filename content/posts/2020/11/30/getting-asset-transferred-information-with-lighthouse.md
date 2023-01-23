@@ -20,7 +20,7 @@ Have you ever about thought tracking what is added to a page or web app? Did not
 
 [Calibre](https://calibreapp.com/), one of my favourite web performance tools, creates charts, such as the one above, to illustrate what is being transferred to users when they visit your page or use your web app.
 
-<div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
+<div className="my-10 p-4 border border-gray-6 rounded-md bg-white">
 <strong>Hi! This post is part of a Lighthouse post series. Also, check out:</strong>
 
 <ul>

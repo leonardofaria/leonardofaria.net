@@ -17,4 +17,4 @@ In yesterday [Code & Coffee](https://www.meetup.com/Code-Coffee-Vancouver/events
 
 Here are [my slides](https://leonardofaria.github.io/web-apis-to-improve-ux-slides/) and the [example repository](https://github.com/leonardofaria/web-apis-to-improve-ux) that I created for the event.
 
-<img src="/wp-content/uploads/2016/12/IMG_6581-1024x768.jpg" alt="" width="1024" height="768" class="aligncenter size-large wp-image-1802" srcset="/wp-content/uploads/2016/12/IMG_6581-1024x768.jpg 1024w, /wp-content/uploads/2016/12/IMG_6581-300x225.jpg 300w, /wp-content/uploads/2016/12/IMG_6581-768x576.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img src="/wp-content/uploads/2016/12/IMG_6581-1024x768.jpg" alt="" width="1024" height="768" className="aligncenter size-large wp-image-1802" srcset="/wp-content/uploads/2016/12/IMG_6581-1024x768.jpg 1024w, /wp-content/uploads/2016/12/IMG_6581-300x225.jpg 300w, /wp-content/uploads/2016/12/IMG_6581-768x576.jpg 768w" sizes="(max-width: 1024px) 100vw, 1024px" />

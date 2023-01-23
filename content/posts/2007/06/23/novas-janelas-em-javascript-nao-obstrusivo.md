@@ -29,7 +29,7 @@ A newsletter dessa semana do [SitePoint](http://www.sitepoint.com/) mostrou uma 
 Basicamente, emprega-se o uso de uma caixa de diálogo. Bem simples. Uma alternativa mais sofisticada é criar uma função e ativá-la através do uso de uma classe. Veja:
 
 ```html
-<a href="http://example.com/" class="ext">external link</a>
+<a href="http://example.com/" className="ext">external link</a>
 <script type="text/javascript">
   var links = document.getElementsByTagName("a");
   for (var i = 0; i < links.length; i++) {

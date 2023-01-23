@@ -27,7 +27,7 @@ TailwindCSS is my go-to option for CSS in personal projects. It is easy to use, 
 
 In the theme I used transitions for links colors, a gradient in the bottom of the page and last not least, a cool reading progress bar in the top of the page. 
 
-<video class="h-auto" controls autoPlay="autoPlay">
+<video className="h-auto" controls autoPlay="autoPlay">
   <source src="/wp-content/uploads/2020/07/page-scroll.mp4" type="video/mp4" />
 </video>
 

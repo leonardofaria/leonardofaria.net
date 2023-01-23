@@ -26,9 +26,9 @@ Pensamos em uma [POG](http://desciclo.pedia.ws/wiki/POG) de usar imagemagick no 
 &nbsp;&nbsp;
 
 ```html
-<div class="product1">
-    <div class="product2">
-        <div class="product3">
+<div className="product1">
+    <div className="product2">
+        <div className="product3">
             <img src="imagem.jpg"/>
         </div>
     </div>

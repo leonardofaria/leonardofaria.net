@@ -18,7 +18,7 @@ Lighthouse is the go-to tool for improving the quality of web pages. Lately, I h
 
 ![Lighthouse photo by Robert Wiedemann](/wp-content/uploads/2020/11/lighthouse.jpg)
 
-<div class="my-10 p-4 border border-gray-6 rounded-md bg-white">
+<div className="my-10 p-4 border border-gray-6 rounded-md bg-white">
 <strong>Lighthouse Post Series</strong>
 
 <ul>

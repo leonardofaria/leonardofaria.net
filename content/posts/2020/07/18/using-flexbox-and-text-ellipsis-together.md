@@ -22,9 +22,9 @@ The second item of the table is `mobile-phone-screenshot-long-fine-name.png`, ho
 ### HTML markup:
 
 ```html
-<div class="filename">
-  <span class="filename__base">this-file-has-a-really-really-really-long-filename.</span>
-  <span class="filename__extension">pdf</span>
+<div className="filename">
+  <span className="filename__base">this-file-has-a-really-really-really-long-filename.</span>
+  <span className="filename__extension">pdf</span>
 </div>
 ```
 
@@ -61,6 +61,6 @@ By using `min-width: 0`, we are changing the minimum size of the flexbox contain
 
 The full example is available in [this Codepen](https://codepen.io/leonardofaria/pen/rNxZJad):
 
-<div class="full-width">
-  <iframe src="https://codepen.io/leonardofaria/embed/rNxZJad" class="w-full h-screen"></iframe>
+<div className="full-width">
+  <iframe src="https://codepen.io/leonardofaria/embed/rNxZJad" className="w-full h-screen"></iframe>
 </div>
