@@ -3,6 +3,7 @@ import { type Micropost as MicropostType } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import Link from 'next/link';
 import { Badge } from 'src/components/UI/Badge';
+import { Playground } from 'src/components/Playground';
 import Embed from '../../Embed';
 
 export default function Micropost({ micropost }: { micropost: MicropostType }) {
@@ -58,7 +59,7 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
             </div>
           </div>
         )}
-        <MDXContent />
+        <MDXContent components={{ Playground }} />
       </div>
     </>
   );

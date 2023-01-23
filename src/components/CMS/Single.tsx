@@ -9,6 +9,7 @@ import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import Disqus from '../Embed/Disqus';
 import Webmentions from '../Webmentions/Webmentions';
 import { Badge } from '../UI/Badge';
+import { Playground } from '../Playground';
 
 export default function Single({
   post,
@@ -119,7 +120,7 @@ export default function Single({
           </header>
 
           <div className="article__content">
-            <MDXContent />
+            <MDXContent components={{ Playground }} />
           </div>
 
           {type === 'post' && (

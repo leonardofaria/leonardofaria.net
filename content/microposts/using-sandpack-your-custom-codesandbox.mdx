@@ -1,0 +1,61 @@
+---
+title: Using Sandpack, your custom CodeSandbox
+publishedAt: 2023-01-22T17:00:00-08:00
+template: post
+type: Micropost
+tags: 
+  - javascript
+ogImage: /images/og-images/using-sandpack-your-custom-codesandbox.png
+---
+
+For a while I wanted to embed code with previews in a good way in this website. I finally spent a couple of hours adding [Sandpack](https://sandpack.codesandbox.io) to it.  
+
+<Playground files={
+{
+    '/App.tsx': `export default function App() { 
+  return (
+    <>
+      <h1>VANCOUVER</h1>
+      <h2>CANADA</h2>
+    </>
+  );
+};`,
+
+    '/styles.css': `
+h1 {
+  background: #000;
+  color: #fff;
+  mix-blend-mode: multiply;
+  
+  padding: 2%;
+}
+
+h2 {
+  background: #fff;
+  color: #000;
+  mix-blend-mode: color-dodge;
+  
+  padding: 2%;
+}
+
+body {
+  background: url('https://images.unsplash.com/photo-1541369866856-c4f5aa6f5807?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8dmFuY291dmVyfGVufDB8fDB8&auto=format&fit=crop&w=900&q=60') center center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  font-family: sans-serif;
+  height: 100vh;
+}
+`,
+  }
+} />
+
+Sandpack is the playground used by [CodeSandbox](https://codesandbox.io). It uses different templates (react, react-ts, vue, vanilla, etc) and it supports different themes (I'm a big fan of the GitHub light theme).
+
+I am not going to write a tutorial about adding Sandpack in a React app because [Joshua Comeau](https://www.joshwcomeau.com/react/next-level-playground/) and [Chris Nicholas](https://www.ctnicholas.dev/articles/how-to-use-sandpack-for-code-demos) already did a great job showing how to interact with the components. Their posts were very helpful to add to the good documentation of the project. Despite not writing a tutorial, I can still [show what I did](https://github.com/leonardofaria/leonardofaria.net/tree/master/src/components/playground) if you check this website repository. Or you can read the [Pull Request](https://github.com/leonardofaria/leonardofaria.net/pull/138).
+
+I initially thought in creating something more elaborated with [resizable panels](https://react-resizable-panels.vercel.app) and custom toolbars like Joshua did but I ended up with something smaller.
