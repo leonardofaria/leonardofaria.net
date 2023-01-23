@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { type Page, type Post } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import Link from 'next/link';
@@ -18,6 +19,11 @@ export default function Single({
   post: Post | Page;
   type: 'post' | 'page';
 }) {
+  const [showComponent, setShowComponent] = useState(false);
+  useEffect(() => {
+    setShowComponent(true);
+  }, []);
+
   const {
     title,
     publishedAt: publishedTime,
@@ -133,7 +139,9 @@ export default function Single({
 
               <h3>Comments</h3>
 
-              <Disqus title={title} url={`${BASE_URL}${permalink}`} />
+              {showComponent && (
+                <Disqus title={title} url={`${BASE_URL}${permalink}`} />
+              )}
             </section>
           )}
         </article>

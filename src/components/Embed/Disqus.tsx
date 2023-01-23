@@ -18,26 +18,21 @@ export default function Disqus({
 
   const ref = useRef(null);
 
-  const handleMutations = useCallback((mutations) => {
-    mutations.forEach(
-      ({
-        type,
-        target,
-      }: {
-        type: MutationRecordType;
-        target: Element | null;
-      }) => {
-        console.log(target);
-        if (type === 'attributes') {
-          console.log(target?.getAttribute('aria-hidden'));
+  // Hacky way to hide recommendations. I can't just remove
+  // the node because otherwise disqus will break
+  const handleMutations = useCallback((mutations: any) => {
+    mutations.forEach(({ target }: { target: Element | null }) => {
+      target?.childNodes.forEach((node) => {
+        if ((node as HTMLElement)?.id === 'disqus_recommendations') {
+          (node as HTMLElement).style.display = 'none';
         }
-      }
-    );
+      });
+    });
   }, []);
 
   useMutationObserver({
     target: ref,
-    options: { attributes: true },
+    options: { childList: true },
     callback: handleMutations,
   });
 
@@ -47,7 +42,7 @@ export default function Disqus({
   // }
 
   return (
-    <div ref={mutationRef}>
+    <div ref={ref}>
       <DiscussionEmbed config={config} shortname={DISQUS_SHORTNAME} />
     </div>
   );
