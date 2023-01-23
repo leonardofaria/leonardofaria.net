@@ -8,9 +8,11 @@ import Webmentions from '../Webmentions/Webmentions';
 import Micropost from './shared/Micropost';
 
 export default function Single({ micropost }: { micropost: MicropostType }) {
-  const { title, publishedAt, description, tags, slug } = micropost;
+  const { title, publishedAt, description, tags, ogImage, slug } = micropost;
   const url = `${BASE_URL}/microblog/${slug}`;
-  const createdAt = new Date(publishedAt);
+  const createdAt = new Date(publishedAt).toLocaleDateString('en-US', {
+    dateStyle: 'medium',
+  });
 
   const additionalMetaTags = [
     {
@@ -27,9 +29,7 @@ export default function Single({ micropost }: { micropost: MicropostType }) {
     },
     {
       name: 'twitter:data2',
-      content: createdAt.toLocaleDateString('en-US', {
-        dateStyle: 'medium',
-      }),
+      content: createdAt,
     },
   ];
 
@@ -39,18 +39,20 @@ export default function Single({ micropost }: { micropost: MicropostType }) {
         additionalMetaTags={additionalMetaTags}
         description={description}
         openGraph={{
-          title: `${title} · ${WEBSITE_TITLE}`,
+          title: `${title} · Micropost · ${WEBSITE_TITLE}`,
           description,
           url,
           type: 'article',
           article: {
-            // publishedAt: createdAt,
+            publishedTime: createdAt,
             tags,
             authors: [AUTHOR],
           },
           images: [
             {
-              url: `${BASE_URL}/images/og_image.jpg`,
+              url: ogImage
+                ? `${BASE_URL}${ogImage}`
+                : `${BASE_URL}/images/og_image.jpg`,
               width: 1800,
               height: 945,
             },
