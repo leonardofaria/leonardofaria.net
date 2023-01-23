@@ -1,16 +1,21 @@
 // https://playwright.tech/blog/generate-opengraph-images-using-playwright
 import { NextApiRequest, NextApiResponse } from 'next';
-import * as playwright from 'playwright-aws-lambda';
+import chrome from 'chrome-aws-lambda';
+import { chromium } from 'playwright-core';
 import { getAbsoluteURL } from '../../lib/utils';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const browser = await playwright.launchChromium({
+    const browser = await chromium.launch({
+      args: chrome.args,
+      // executablePath:
+      //   process.env.NODE_ENV !== 'development'
+      //     ? await chrome.executablePath
+      //     : '/bin/chromium',
       headless: true,
-      args: ['--hide-scrollbars', '--disable-web-security'],
-      ignoreDefaultArgs: ['--disable-extensions'],
     });
+
     const page = await browser.newPage({
       viewport: {
         width: 1200,
