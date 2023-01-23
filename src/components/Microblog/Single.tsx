@@ -3,9 +3,9 @@ import { NextSeo } from 'next-seo';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
-// import Disqus from 'components/Embed/Disqus';
 import Webmentions from '../Webmentions/Webmentions';
 import Micropost from './shared/Micropost';
+import Disqus from '../Embed/Disqus';
 
 export default function Single({ micropost }: { micropost: MicropostType }) {
   const { title, publishedAt, description, tags, ogImage, slug } = micropost;
@@ -39,7 +39,7 @@ export default function Single({ micropost }: { micropost: MicropostType }) {
         additionalMetaTags={additionalMetaTags}
         description={description}
         openGraph={{
-          title: `${title} · Micropost · ${WEBSITE_TITLE}`,
+          title: `${title} · Microblog · ${WEBSITE_TITLE}`,
           description,
           url,
           type: 'article',
@@ -58,7 +58,7 @@ export default function Single({ micropost }: { micropost: MicropostType }) {
             },
           ],
         }}
-        title={`${title} · ${WEBSITE_TITLE}`}
+        title={`${title} · Microblog · ${WEBSITE_TITLE}`}
       />
 
       <Header />
@@ -74,9 +74,9 @@ export default function Single({ micropost }: { micropost: MicropostType }) {
 
             <Webmentions url={url} />
 
-            {/* <h3>Comments</h3>
+            <h3>Comments</h3>
 
-            <Disqus title={title} url={`${BASE_URL}${slug}`} /> */}
+            <Disqus title={title} url={url} />
           </section>
         </article>
       </main>
