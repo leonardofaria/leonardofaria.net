@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "which google-chrome; which chromium; next build",
     "start": "next start",
     "lint": "next lint --fix",
     "build:ogImages": "ts-node --esm lib/ogImages.ts"
