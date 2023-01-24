@@ -1,21 +1,31 @@
 // https://playwright.tech/blog/generate-opengraph-images-using-playwright
 import { NextApiRequest, NextApiResponse } from 'next';
-import * as playwright from 'playwright-aws-lambda';
+import puppeteer from 'puppeteer-core';
 import { getAbsoluteURL } from '../../lib/utils';
+
+const IS_PRODUCTION = process.env.NODE_ENV === 'production';
+const { BROWSERLESS_API_TOKEN } = process.env;
+
+const LOCAL_CHROME_EXECUTABLE =
+  '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const browserWSEndpoint = `wss://chrome.browserless.io?token=${BROWSERLESS_API_TOKEN}`;
+
+const getBrowser = () =>
+  IS_PRODUCTION
+    ? puppeteer.connect({
+        browserWSEndpoint,
+      })
+    : puppeteer.launch({ executablePath: LOCAL_CHROME_EXECUTABLE });
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const browser = await playwright.launchChromium({
-      headless: true,
-      args: ['--hide-scrollbars', '--disable-web-security'],
-      ignoreDefaultArgs: ['--disable-extensions'],
-    });
-    const page = await browser.newPage({
-      viewport: {
-        width: 1200,
-        height: 630,
-      },
+    const browser = await getBrowser();
+    const page = await browser.newPage();
+    await page.setViewport({
+      width: 1200,
+      height: 630,
+      deviceScaleFactor: 1.5,
     });
     const url = getAbsoluteURL((req.query.path as string) || '');
     await page.goto(url, {
