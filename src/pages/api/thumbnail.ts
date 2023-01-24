@@ -1,27 +1,23 @@
 // https://playwright.tech/blog/generate-opengraph-images-using-playwright
 import { NextApiRequest, NextApiResponse } from 'next';
-import chrome from 'chrome-aws-lambda';
-import { chromium } from 'playwright-core';
+import puppeteer from 'puppeteer-core';
+import chromium from '@sparticuz/chromium-min';
 import { getAbsoluteURL } from '../../lib/utils';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const browser = await chromium.launch({
-      args: chrome.args,
-      // executablePath:
-      //   process.env.NODE_ENV !== 'development'
-      //     ? await chrome.executablePath
-      //     : '/bin/chromium',
-      headless: true,
+    const browser = await puppeteer.launch({
+      args: chromium.args,
+      defaultViewport: chromium.defaultViewport,
+      executablePath: await chromium.executablePath(
+        'https://github.com/Sparticuz/chromium/releases/download/v109.0.6/chromium-v109.0.6-pack.tar'
+      ),
+      headless: chromium.headless,
+      ignoreHTTPSErrors: true,
     });
 
-    const page = await browser.newPage({
-      viewport: {
-        width: 1200,
-        height: 630,
-      },
-    });
+    const page = await browser.newPage();
     const url = getAbsoluteURL((req.query.path as string) || '');
     await page.goto(url, {
       timeout: 0,
