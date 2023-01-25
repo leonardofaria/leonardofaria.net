@@ -16,11 +16,12 @@ export default function Single({ micropost }: { micropost: MicropostType }) {
     setShowComponent(true);
   }, []);
 
-  const { title, publishedAt, description, tags, ogImage, slug } = micropost;
+  const { title, publishedAt, excerpt, tags, ogImage, slug } = micropost;
   const url = `${BASE_URL}/microblog/${slug}`;
   const createdAt = new Date(publishedAt).toLocaleDateString('en-US', {
     dateStyle: 'medium',
   });
+  const description = excerpt.replace(/(<([^>]+)>)/gi, '');
 
   const additionalMetaTags = [
     {

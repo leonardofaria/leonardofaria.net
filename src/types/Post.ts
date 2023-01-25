@@ -1,6 +1,6 @@
 import readingTime from 'reading-time';
 import { defineDocumentType } from 'contentlayer/source-files';
-import { format } from '../lib/utils';
+import { generateExcerpt } from '../lib/utils';
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -46,35 +46,7 @@ export const Post = defineDocumentType(() => ({
   computedFields: {
     excerpt: {
       type: 'string',
-      resolve: async (doc) => {
-        if (doc.description) {
-          return `<p>${doc.description}</p>`;
-        }
-
-        const content = doc.body.raw;
-
-        // I used to add a <!-- Read more --> in some posts
-        // which is a WP thing to create an excerpt
-        // In this migration, I replaced
-        // <!-- Read more --> to <span className="hidden">more</span>
-        const readMore = '<span className="hidden">more</span>';
-        if (content.includes(readMore)) {
-          const parsedContent = content.split(readMore);
-
-          // If the post doesn't have a more node, going to create
-          // the content dynamically
-          return format(parsedContent[0]);
-        }
-
-        // TODO: need to fix this to create valid HTML
-        // If the post doesn't have a more node, going to create
-        // the content dynamically
-        // const stripped = await format(
-        //   doc.body.raw.replace(/(<([^>]+)>)/gi, '')
-        // );
-        // return stripped.slice(0, 500).trim();
-        return null;
-      },
+      resolve: (doc) => generateExcerpt(doc),
     },
     readingTime: {
       type: 'json',

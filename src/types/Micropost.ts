@@ -1,4 +1,5 @@
 import { defineDocumentType } from 'contentlayer/source-files';
+import { generateExcerpt } from '../lib/utils';
 
 export const Micropost = defineDocumentType(() => ({
   name: 'Micropost',
@@ -49,6 +50,10 @@ export const Micropost = defineDocumentType(() => ({
         const publishedAt = new Date(post.publishedAt);
         return publishedAt.getFullYear().toString();
       },
+    },
+    excerpt: {
+      type: 'string',
+      resolve: (doc) => generateExcerpt(doc),
     },
   },
 }));

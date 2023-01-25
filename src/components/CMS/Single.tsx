@@ -29,7 +29,7 @@ export default function Single({
   const {
     title,
     publishedAt: publishedTime,
-    description,
+    excerpt,
     tags,
     permalink,
     ogImage,
@@ -42,6 +42,7 @@ export default function Single({
   const createdAt = new Date(publishedTime);
   // const disqusId = disqusIds?.[0];
   const isPost = type === 'post';
+  const description = excerpt.replace(/(<([^>]+)>)/gi, '');
 
   let additionalMetaTags: any = [];
   if (isPost) {

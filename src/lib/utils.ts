@@ -26,6 +26,32 @@ export const format = async (content: string) => {
   return stripped.toString();
 };
 
+export const generateExcerpt = async (doc: Post | Page | Micropost) => {
+  if (doc.description) {
+    return `<p>${doc.description}</p>`;
+  }
+
+  const content = doc.body.raw;
+
+  // I used to add a <!-- Read more --> in some posts
+  // which is a WP thing to create an excerpt
+  // In this migration, I replaced
+  // <!-- Read more --> to <span className="hidden">more</span>
+  const readMore = '<span className="hidden">more</span>';
+  if (content.includes(readMore)) {
+    const parsedContent = content.split(readMore);
+
+    // If the post doesn't have a more node, going to create
+    // the content dynamically
+    return format(parsedContent[0]);
+  }
+
+  // If the post doesn't have a more node, going to create
+  // the content dynamically
+  const stripped = await format(doc.body.raw.replace(/(<([^>]+)>)/gi, ''));
+  return `${stripped.split('</p>')[0]}</p>`;
+};
+
 // We don't need all contentlayer fields. This will reduce the data sent to the client
 export const getPartialContent = (posts: (Post | Page | Micropost)[]) => {
   return posts.map((post) => {

@@ -1,4 +1,5 @@
 import { defineDocumentType } from 'contentlayer/source-files';
+import { generateExcerpt } from '../lib/utils';
 
 export const Page = defineDocumentType(() => ({
   name: 'Page',
@@ -31,6 +32,12 @@ export const Page = defineDocumentType(() => ({
     tags: {
       type: 'list',
       of: { type: 'string' },
+    },
+  },
+  computedFields: {
+    excerpt: {
+      type: 'string',
+      resolve: (doc) => generateExcerpt(doc),
     },
   },
 }));
