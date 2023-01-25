@@ -43,6 +43,7 @@
     "@sentry/nextjs": "^7.29.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@vercel/analytics": "^0.1.6",
+    "@vercel/og": "^0.0.27",
     "contentlayer": "^0.2.9",
     "disqus-react": "^1.1.5",
     "eslint-plugin-tailwindcss": "^3.8.0",

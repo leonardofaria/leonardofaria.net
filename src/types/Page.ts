@@ -39,5 +39,9 @@ export const Page = defineDocumentType(() => ({
       type: 'string',
       resolve: (doc) => generateExcerpt(doc),
     },
+    slug: {
+      type: 'string',
+      resolve: (post) => post.permalink.split('/')[1],
+    },
   },
 }));
