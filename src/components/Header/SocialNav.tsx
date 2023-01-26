@@ -31,7 +31,7 @@ function Icon({ name }: { name: string }) {
 
 export default function SocialNav() {
   return (
-    <ul className="flex justify-end">
+    <ul className="flex list-none justify-end lg:justify-start">
       {SOCIAL_LINKS.map((social) => (
         <li key={social.name}>
           <a

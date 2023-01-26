@@ -5,7 +5,7 @@ export const DISQUS_SHORTNAME = 'leonardofaria';
 export const WEBSITE_TITLE = 'Leonardo Faria';
 export const WEBSITE_SUBHEADING = "Hi, I'm Leo 👋";
 export const WEBSITE_DESCRIPTION =
-  'I am Leonardo Faria, a Brazilian developer living in Vancouver. This is my blog about software development and more since 2005.';
+  'I like to code and build products directly from Vancouver. \nHere, I write about software development since 2005. \nCurrently Staff Software Engineer at Lattice.';
 export const MICROBLOG_INTRO =
   'Remember Microblogs? My favourite links, videos and short thoughts';
 

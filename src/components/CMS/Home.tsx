@@ -35,10 +35,10 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
         title={`${WEBSITE_SUBHEADING} · ${WEBSITE_TITLE}`}
       />
 
-      <Header showHero />
+      <Header showSocialNav={false} />
 
-      <main className="mx-auto mt-12 w-full max-w-3xl flex-1 text-gray-700">
-        <article className="article px-5 pb-5">
+      <main className="mx-auto mt-32 w-full max-w-5xl flex-1 text-gray-700">
+        <article className="article pb-5">
           <Intro />
 
           {Object.keys(postsByYears)

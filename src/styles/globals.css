@@ -14,41 +14,6 @@ html {
   background: rgba(255, 255, 255, 0.9);
 }
 
-.bg-gradient {
-  background-image: linear-gradient(to top, rgba(217, 219, 224, 0.7) 0, rgb(249, 250, 251) 500px);
-}
-
-/* Home page header - with triangle effect */
-.header {
-  position: relative;
-  min-height: 400px;
-  height: 50vh;
-}
-
-.header:before, .header:after {
-  box-sizing: border-box;
-  content: " ";
-  position: absolute;
-  bottom: 0;
-  display: block;
-  width: 50%;
-  height: 20px;
-  border: 20px solid transparent;
-  border-bottom-color: #f9fafb;
-}
-
-.header:before {
-  left: 0;
-  border-right: 30px solid transparent;
-  border-left: 0;
-}
-
-.header:after {
-  right: 0;
-  border-left: 30px solid transparent;
-  border-right: 0;
-}
-
 /* 
  * These styles are needed since the markup is 
  * created dynamically from MDX files
@@ -128,16 +93,16 @@ html {
   @apply text-gray-700;
 }
 
-.article h1,
-.article h2,
-.article h3,
-.article h4,
-.article h5,
-.article h6,
-.article p,
-.article ul,
-.article ol,
-.article dl {
+.article > h1,
+.article > h2,
+.article > h3,
+.article > h4,
+.article > h5,
+.article > h6,
+.article > p,
+.article > ul,
+.article > ol,
+.article > dl {
   @apply my-6;
   text-rendering: geometricPrecision;
 }
