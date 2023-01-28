@@ -4,13 +4,13 @@ import SocialNav from '../Header/SocialNav';
 
 export default function Intro() {
   return (
-    <section className="mt-10 mb-32 flex gap-3 overflow-hidden rounded-lg border bg-white shadow-inner">
+    <section className="mt-10 mb-32 flex gap-3 overflow-hidden rounded-lg border bg-gradient-to-b from-gray-200 to-gray-100 shadow-inner">
       <div className="flex flex-col gap-6 p-8">
         <h1 className="relative">{WEBSITE_SUBHEADING}</h1>
 
         <p className="lg:mr-4">{WEBSITE_DESCRIPTION}</p>
 
-        <nav className="text-gray-600">
+        <nav>
           <SocialNav />
         </nav>
       </div>

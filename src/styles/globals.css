@@ -10,10 +10,6 @@ html {
   backdrop-filter: blur(5px);
 }
 
-.bg-white-90 {
-  background: rgba(255, 255, 255, 0.9);
-}
-
 /* 
  * These styles are needed since the markup is 
  * created dynamically from MDX files
@@ -93,16 +89,16 @@ html {
   @apply text-gray-700;
 }
 
-.article > h1,
-.article > h2,
-.article > h3,
-.article > h4,
-.article > h5,
-.article > h6,
-.article > p,
-.article > ul,
-.article > ol,
-.article > dl {
+.article_content h1,
+.article_content h2,
+.article_content h3,
+.article_content h4,
+.article_content h5,
+.article_content h6,
+.article_content p,
+.article_content ul,
+.article_content ol,
+.article_content dl {
   @apply my-6;
   text-rendering: geometricPrecision;
 }

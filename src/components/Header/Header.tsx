@@ -44,35 +44,42 @@ export default function Header({
   const isDesktop = width >= LARGE_SCREEN_BREAKPOINT;
   const pageNavClasses = showMenu || isDesktop ? 'lg:block' : 'hidden';
 
-  const headerClasses =
-    'lg:flex-no-wrap relative mx-auto flex max-w-7xl flex-wrap items-center justify-between rounded-md px-6 py-3';
+  const backgroundClasses = `backdrop-filter-blur rounded-md shadow absolute top-0 bottom-0 left-2 right-2 lg:left-4 lg:right-4 z-0 scale-95 rounded bg-white opacity-0 transition ${
+    scrollPosition > 0 ? 'scale-100 opacity-90' : 0
+  }`;
 
   return (
     <>
-      <div className="fixed -z-10 h-[50vh] w-screen bg-gradient-to-b from-purple-50 to-white" />
+      <div className="fixed -z-10 h-[50vh] w-screen bg-gradient-to-b from-blue-100 to-white" />
 
-      <header className="backdrop-filter-blur fixed z-20 my-2 w-full transition-all duration-300 ease-in-out">
-        <div
-          className={
-            scrollPosition > 0
-              ? `bg-white-90 shadow ${headerClasses}`
-              : headerClasses
-          }
-        >
-          <Link
-            className="flex shrink-0 text-3xl font-semibold leading-10 tracking-tighter text-gray-600"
-            href="/"
-          >
-            Leonardo Faria
-          </Link>
+      <header className="fixed z-20 my-2 w-full">
+        <div className="relative mx-auto max-w-7xl">
+          <div className="relative z-10 flex items-center justify-between px-6 py-4 md:justify-start md:space-x-10 lg:px-8">
+            <div className="flex justify-start lg:w-0 lg:flex-1">
+              <Link
+                className="flex shrink-0 text-3xl font-semibold leading-10 tracking-tighter text-gray-600"
+                href="/"
+              >
+                Leonardo Faria
+              </Link>
+            </div>
 
-          <div className="mx-2 block lg:hidden">
-            <ToggleButton setShowMenu={setShowMenu} showMenu={showMenu} />
-          </div>
-
-          <div className="absolute right-8 top-16 flex flex-col items-center rounded-md bg-white shadow lg:relative lg:right-0 lg:top-0 lg:flex-row lg:bg-transparent lg:shadow-none">
-            {showMenu || isDesktop ? (
+            {isDesktop ? (
               <>
+                <nav className="hidden space-x-10 md:flex">
+                  <PageNav />
+                </nav>
+
+                <nav className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
+                  <SocialNav />
+                </nav>
+              </>
+            ) : (
+              <ToggleButton setShowMenu={setShowMenu} showMenu={showMenu} />
+            )}
+
+            {showMenu ? (
+              <div className="absolute right-8 top-16 flex flex-col items-center rounded-md bg-white shadow lg:relative lg:right-0 lg:top-0 lg:flex-row lg:bg-transparent lg:shadow-none">
                 {showSocialNav && (
                   <nav
                     className={`${pageNavClasses} w-full p-4 text-gray-600 lg:order-last lg:ml-3 lg:w-auto lg:p-0`}
@@ -86,9 +93,11 @@ export default function Header({
                 >
                   <PageNav />
                 </nav>
-              </>
+              </div>
             ) : null}
           </div>
+
+          <div className={backgroundClasses} />
         </div>
       </header>
     </>
