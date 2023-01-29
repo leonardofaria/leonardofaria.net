@@ -6,20 +6,17 @@ html {
   scroll-behavior: smooth;
 }
 
-.backdrop-filter-blur {
-  backdrop-filter: blur(5px);
-}
 
 /* 
  * These styles are needed since the markup is 
  * created dynamically from MDX files
  */
 
- .article {
+ /* .article {
   @apply px-5;
   @apply pb-5;
   @apply text-gray-600;
-}
+} */
 
 /* Make images/videos wider than post width, like Medium */
 .article__content > p > img,
@@ -39,7 +36,7 @@ html {
   }  
 }
 
-.article a {
+/* .article a {
   @apply transition;
   @apply duration-300;
   @apply ease-in-out;
@@ -47,14 +44,14 @@ html {
 
 .article a:not(.no-underline) {
   @apply underline;
-}
+} */
 
-.article a:not([class^="text-"]):hover,
+/* .article a:not([class^="text-"]):hover,
 .article a:not([class^="text-"]):focus {
   @apply text-blue-600;
-}
+} */
 
-.article h1 {
+/* .article h1 {
   @apply text-4xl;
   @apply font-semibold;
   @apply tracking-tighter;
@@ -87,9 +84,9 @@ html {
   @apply font-semibold;
   @apply uppercase;
   @apply text-gray-700;
-}
+} */
 
-.article_content h1,
+/* .article_content h1,
 .article_content h2,
 .article_content h3,
 .article_content h4,
@@ -101,10 +98,10 @@ html {
 .article_content dl {
   @apply my-6;
   text-rendering: geometricPrecision;
-}
+} */
 
 /* Set the scroll-margin for internal anchor links, since we have a fixed top bar */
-.article h1,
+/* .article h1,
 .article h2,
 .article h3,
 .article h4,
@@ -112,15 +109,15 @@ html {
 .article h6 {
   @apply tracking-tighter;
   scroll-margin-top: 8rem;
-}
+} */
 
-.article p,
+/* .article p,
 .article ul,
 .article ol,
 .article dl,
 .article td {
   @apply text-lg;
-}
+} */
 
 .article ol:not(.list-none),
 .article ul:not(.list-none) {
@@ -136,11 +133,11 @@ html {
   @apply list-decimal;
 }
 
-.article blockquote {
+/* .article blockquote {
   @apply pl-5;
   @apply border-l-4;
   @apply border-gray-600;
-}
+} */
 
 /* TODO: port to Tailwind CSS */
 
@@ -176,11 +173,11 @@ html {
   margin-right: -50vw; 
 }
 
-.article .highlight {
+/* .article .highlight {
   @apply bg-white;
-}
+} */
 
-.article kbd {
+/* .article kbd {
   display: inline-block;
   margin-bottom: 0.4em;
   padding: 1px 8px;
@@ -194,25 +191,25 @@ html {
   box-shadow:
       0 1px 0 rgba(0, 0, 0, 0.2),
       0 1px 0 0 #fff inset;
-}
+} */
 
-.article table {
+/* .article table {
   @apply my-6;
   @apply w-full;
   @apply max-w-full;
   @apply bg-transparent;
-}
+} */
 
-.article table th,
+/* .article table th,
 .article table td {
   @apply p-2;
   @apply align-top;
   border-top: #EFEFEF 1px solid;
-}
+} */
 
-.article table th {
+/* .article table th {
   @apply text-black;
-}
+} */
 
 .article table caption + thead tr:first-child th,
 .article table caption + thead tr:first-child td,
@@ -239,7 +236,7 @@ html {
   @apply my-6;
 }
 
-.intro p,
+/* .intro p, */
 .article__content>p:first-of-type {
   @apply tracking-tight;
   @apply text-xl;

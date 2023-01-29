@@ -18,8 +18,87 @@ const NUMBERED_LINES =
 const HIGHLIGHTED_LINE =
   '!border-l-rose-300/70 bg-rose-200/10 before:!text-white/70';
 
+const STYLES = {
+  a: 'transition duration-300 ease-in-out hover:text-blue-600 underline',
+  blockquote: 'pl-5 border-l-4 border-gray-600',
+  h1: 'my-6 font-semibold tracking-tighter text-gray-700 text-4xl',
+  h2: 'my-6 font-semibold tracking-tighter text-gray-700 text-3xl',
+  h3: 'my-6 font-semibold tracking-tighter text-gray-700 text-2xl',
+  h4: 'my-6 tracking-tighter text-gray-700 text-xl',
+  h5: 'my-6 text-lg text-gray-700',
+  h6: 'my-6 font-semibold text-base uppercase text-gray-700',
+  p: 'my-6 text-lg',
+  ul: 'my-6 text-lg',
+  ol: 'my-6 text-lg',
+  dl: 'my-6 text-lg',
+  table: 'my-6 w-full max-f-full bg-transparent',
+  td: 'p-2 align-top border-t border-gray-600',
+  tr: 'p-2 align-top border-t border-gray-600',
+  th: 'text-black',
+  kbd: INLINE_BLOCK,
+};
+
+const TAGS = Object.keys(STYLES);
+
+// TODO: fix types
+type Node = {
+  tagName: keyof typeof STYLES;
+  name: keyof typeof STYLES;
+  attributes: {
+    type: string;
+    name: string;
+    value: string;
+  }[];
+  type: string;
+  children: Node[];
+  [key: string]: unknown;
+};
+
+const injectTailwindClasses = (node: Node) => {
+  node.properties = {
+    className: STYLES[node.tagName],
+  };
+
+  if ('children' in node) {
+    node.children = node.children.map((n) => {
+      if (n.type === 'mdxJsxTextElement' && TAGS.includes(n.name)) {
+        n.attributes = n.attributes.map((attribute: any) => {
+          if (attribute.name === 'className') {
+            attribute.value = `${STYLES[n.name]} ${attribute.value}`;
+          }
+
+          return attribute;
+        });
+
+        return n;
+      }
+
+      if ('tagName' in n) {
+        n = injectTailwindClasses(n);
+      }
+
+      return n;
+    });
+  }
+
+  return node;
+};
+
 export function rehypePrettyCodeClasses() {
   return (tree: any) => {
+    visit(
+      tree,
+      (node: any) =>
+        Boolean(
+          TAGS.includes(node.tagName) &&
+            Object.keys(node.properties).length === 0 &&
+            node.children.some((n: any) => n.type === 'text')
+        ),
+      (node: any) => {
+        injectTailwindClasses(node);
+      }
+    );
+
     visit(
       tree,
       (node: any) =>

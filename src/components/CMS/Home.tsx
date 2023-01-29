@@ -37,16 +37,18 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
 
       <Header showSocialNav={false} />
 
-      <main className="mx-auto mt-32 w-full max-w-5xl flex-1 text-gray-700">
-        <article className="article pb-5">
-          <Intro />
+      <main className="mx-auto mt-16 w-full max-w-7xl flex-1 text-gray-700">
+        <div className="rounded bg-white lg:mx-4">
+          <article className="article">
+            <Intro />
 
-          {Object.keys(postsByYears)
-            .reverse()
-            .map((key) => (
-              <PostsByYear key={key} posts={postsByYears[key]} year={key} />
-            ))}
-        </article>
+            {Object.keys(postsByYears)
+              .reverse()
+              .map((key) => (
+                <PostsByYear key={key} posts={postsByYears[key]} year={key} />
+              ))}
+          </article>
+        </div>
       </main>
 
       <Footer />

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { BiMenu } from 'react-icons/bi';
 import { MdClose } from 'react-icons/md';
@@ -32,7 +33,6 @@ function ToggleButton({
   );
 }
 
-// TODO: this can be probably refactored
 export default function Header({
   showSocialNav = true,
 }: {
@@ -44,13 +44,21 @@ export default function Header({
   const isDesktop = width >= LARGE_SCREEN_BREAKPOINT;
   const pageNavClasses = showMenu || isDesktop ? 'lg:block' : 'hidden';
 
-  const backgroundClasses = `backdrop-filter-blur rounded-md shadow absolute top-0 bottom-0 left-2 right-2 lg:left-4 lg:right-4 z-0 scale-95 rounded bg-white opacity-0 transition ${
-    scrollPosition > 0 ? 'scale-100 opacity-90' : 0
+  const backgroundClasses = `bg-opacity-80 backdrop-blur rounded-md shadow absolute top-0 bottom-0 left-2 right-2 lg:left-4 lg:right-4 z-0 scale-95 rounded bg-white opacity-0 transition ${
+    scrollPosition > 0 ? 'scale-100 opacity-100' : 0
   }`;
 
   return (
     <>
-      <div className="fixed -z-10 h-[50vh] w-screen bg-gradient-to-b from-blue-100 to-white" />
+      <div aria-hidden="true" className="fixed -z-10 h-screen w-screen">
+        <Image
+          alt=""
+          className="h-screen w-screen object-cover"
+          height="900"
+          src="/images/bg.svg"
+          width="1600"
+        />
+      </div>
 
       <header className="fixed z-20 my-2 w-full">
         <div className="relative mx-auto max-w-7xl">
