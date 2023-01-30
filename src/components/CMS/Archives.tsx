@@ -1,11 +1,13 @@
 import { type Post } from 'contentlayer/generated';
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
+import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import { BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import { groupPostsByYears, getAllTags } from './shared';
 import { PostsByYear } from './shared/PostsByYear';
+import { Article, H1, Main } from '../UI';
 
 export default function Archives({ posts }: { posts: Post[] }) {
   const postsByYears = groupPostsByYears(posts);
@@ -31,24 +33,19 @@ export default function Archives({ posts }: { posts: Post[] }) {
 
       <Header />
 
-      <main className="mx-auto mt-32 w-full max-w-3xl flex-1 text-gray-700">
-        <article className="article px-5 pb-5">
-          <header>
-            <h1 className="leading-9">
-              <Link
-                className="relative inline-block text-black no-underline"
-                href="/archives"
-              >
-                Archives
-              </Link>
-            </h1>
+      <Main>
+        <Article>
+          <header className="pt-10">
+            <H1>
+              <Link href="/archives">Archives</Link>
+            </H1>
           </header>
 
-          <p className="intro flex flex-wrap">
+          <p className="mt-6 mb-12 flex flex-wrap text-lg">
             I like to talk about:&nbsp;
             {allTags.map((tag) => (
               <span key={tag}>
-                <Link className="no-underline" href={`/tags/${tag}`}>
+                <Link className={CONTENT_STYLES.a} href={`/tags/${tag}`}>
                   {tag}
                 </Link>
                 &nbsp;
@@ -61,8 +58,8 @@ export default function Archives({ posts }: { posts: Post[] }) {
             .map((key) => (
               <PostsByYear key={key} posts={postsByYears[key]} year={key} />
             ))}
-        </article>
-      </main>
+        </Article>
+      </Main>
 
       <Footer />
     </>

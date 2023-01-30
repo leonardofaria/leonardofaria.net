@@ -2,48 +2,59 @@ import { type Options } from 'rehype-pretty-code';
 import { visit } from 'unist-util-visit';
 
 // div.BLOCK > pre.PRE > code.CODE
-const BLOCK =
-  'w-[100vw] relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] bg-white';
-const TITLE =
-  'max-w-3xl m-auto mb-0.5 rounded-md bg-gray-100/10 px-3 py-1 font-mono text-xs text-gray-300 shadow-sm';
-const PRE =
-  'max-w-3xl m-auto my-2 px-5 py-4 font-mono text-lg bg-white rounded';
-const CODE =
-  'whitespace-pre-wrap grid [&>span]:border-l-4 [&>span]:border-l-transparent [&>span]:pl-2 [&>span]:pr-3';
-const INLINE_BLOCK =
-  'whitespace-pre-wrap border border-[#E3EDF3] px-1.5 py-px rounded-md bg-[#F7FAFB]';
-const INLINE_CODE = '';
-const NUMBERED_LINES =
-  '[counter-reset:line] before:[&>span]:mr-3 before:[&>span]:inline-block before:[&>span]:w-4 before:[&>span]:text-right before:[&>span]:text-gray-600 before:[&>span]:text-sm before:[&>span]:![content:counter(line)] before:[&>span]:[counter-increment:line]';
-const HIGHLIGHTED_LINE =
-  '!border-l-rose-300/70 bg-rose-200/10 before:!text-white/70';
+const CODE_STYLES = {
+  BLOCK:
+    'w-[100vw] relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] bg-gradient-to-b from-gray-50 to-white',
+  TITLE:
+    'max-w-3xl m-auto mb-0.5 rounded-md bg-gray-100/10 px-3 py-1 font-mono text-xs text-gray-300 shadow-sm',
+  PRE: 'max-w-3xl m-auto my-2 px-5 py-4 font-mono text-lg bg-gradient-to-b from-gray-50 to-white rounded',
+  CODE: 'whitespace-pre-wrap grid [&>span]:border-l-4 [&>span]:border-l-transparent [&>span]:pl-2 [&>span]:pr-3',
+  INLINE_BLOCK:
+    'whitespace-pre-wrap border border-[#E3EDF3] px-1.5 py-px rounded-md bg-[#F7FAFB]',
+  INLINE_CODE: '',
+  NUMBERED_LINES:
+    '[counter-reset:line] before:[&>span]:mr-3 before:[&>span]:inline-block before:[&>span]:w-4 before:[&>span]:text-right before:[&>span]:text-gray-600 before:[&>span]:text-sm before:[&>span]:![content:counter(line)] before:[&>span]:[counter-increment:line]',
+  HIGHLIGHTED_LINE:
+    '!border-l-purple-300/70 bg-purple-200/10 before:!text-white/70',
+};
 
-const STYLES = {
-  a: 'transition duration-300 ease-in-out hover:text-blue-600 underline',
+export const FULL_WIDTH_WRAPPER =
+  'w-screen relative left-2/4 right-2/4 -ml-[50vw] -mr-[50vw]';
+
+const WIDE_WRAPPER = 'w-screen relative left-2/4 lg:max-w-4xl';
+
+export const CONTENT_STYLES = {
+  a: 'transition duration-300 ease-in-out text-blue-600 hover:text-blue-800 underline',
   blockquote: 'pl-5 border-l-4 border-gray-600',
-  h1: 'my-6 font-semibold tracking-tighter text-gray-700 text-4xl',
-  h2: 'my-6 font-semibold tracking-tighter text-gray-700 text-3xl',
-  h3: 'my-6 font-semibold tracking-tighter text-gray-700 text-2xl',
-  h4: 'my-6 tracking-tighter text-gray-700 text-xl',
-  h5: 'my-6 text-lg text-gray-700',
-  h6: 'my-6 font-semibold text-base uppercase text-gray-700',
-  p: 'my-6 text-lg',
-  ul: 'my-6 text-lg',
-  ol: 'my-6 text-lg',
+  h1: 'my-2 font-semibold tracking-tighter text-gray-700 text-3xl lg:text-4xl',
+  h2: 'my-2 font-semibold tracking-tighter text-gray-700 text-2xl lg:text-3xl',
+  h3: 'my-2 font-semibold tracking-tighter text-gray-700 text-xl lg:text-2xl',
+  h4: 'my-2 tracking-tighter text-gray-700 text-lg lg:text-xl',
+  h5: 'my-2 text-lg text-gray-700',
+  h6: 'my-2 font-semibold text-base uppercase text-gray-700',
+  p: 'my-2 text-lg',
+  ul: 'my-6 text-lg ml-1 list-inside list-disc',
+  ol: 'my-6 text-lg ml-1 list-inside list-decimal',
   dl: 'my-6 text-lg',
   table: 'my-6 w-full max-f-full bg-transparent',
   td: 'p-2 align-top border-t border-gray-600',
   tr: 'p-2 align-top border-t border-gray-600',
   th: 'text-black',
-  kbd: INLINE_BLOCK,
+  section: '',
+  video: WIDE_WRAPPER,
 };
 
-const TAGS = Object.keys(STYLES);
+// The markdown content is wrappered in an element with
+// these classes. Note that I'm overriding my-2 from above
+export const CONTENT_STYLES_WRAPPER =
+  '[&>p]:my-6 [&>p:first-of-type]:text-xl [&>h1]:my-6 [&>h2]:my-6 [&>h3]:my-6 [&>h4]:my-6 [&>h5]:my-6 [&>h6]:my-6 [&>ul]:my-6 [&>ol]:my-6 [&>dd]:my-6 [&>table]:my-6';
+
+const TAGS = Object.keys(CONTENT_STYLES);
 
 // TODO: fix types
 type Node = {
-  tagName: keyof typeof STYLES;
-  name: keyof typeof STYLES;
+  tagName: keyof typeof CONTENT_STYLES;
+  name: keyof typeof CONTENT_STYLES;
   attributes: {
     type: string;
     name: string;
@@ -56,7 +67,7 @@ type Node = {
 
 const injectTailwindClasses = (node: Node) => {
   node.properties = {
-    className: STYLES[node.tagName],
+    className: CONTENT_STYLES[node.tagName],
   };
 
   if ('children' in node) {
@@ -64,7 +75,7 @@ const injectTailwindClasses = (node: Node) => {
       if (n.type === 'mdxJsxTextElement' && TAGS.includes(n.name)) {
         n.attributes = n.attributes.map((attribute: any) => {
           if (attribute.name === 'className') {
-            attribute.value = `${STYLES[n.name]} ${attribute.value}`;
+            attribute.value = `${CONTENT_STYLES[n.name]} ${attribute.value}`;
           }
 
           return attribute;
@@ -73,6 +84,7 @@ const injectTailwindClasses = (node: Node) => {
         return n;
       }
 
+      // Recursively inject classes in the markup
       if ('tagName' in n) {
         n = injectTailwindClasses(n);
       }
@@ -103,6 +115,33 @@ export function rehypePrettyCodeClasses() {
       tree,
       (node: any) =>
         Boolean(
+          node.type === 'mdxJsxFlowElement' &&
+            node?.attributes?.some((attribute: any) => {
+              return (
+                attribute.name === 'className' &&
+                attribute.value?.includes('full-width')
+              );
+            })
+        ),
+      (node: any) => {
+        node.attributes = node.attributes.map((attribute: any) => {
+          if (attribute.name === 'className') {
+            attribute.value = FULL_WIDTH_WRAPPER;
+          }
+
+          return attribute;
+        });
+
+        return node;
+      }
+    );
+
+    // TODO: fix wide
+
+    visit(
+      tree,
+      (node: any) =>
+        Boolean(
           node.tagName === 'code' &&
             Object.keys(node.properties).length === 0 &&
             node.children.some((n: any) => n.type === 'text')
@@ -111,9 +150,9 @@ export function rehypePrettyCodeClasses() {
         const textNode = node.children.find((n: any) => n.type === 'text');
         textNode.type = 'element';
         textNode.tagName = 'code';
-        textNode.properties = { className: [INLINE_CODE] };
+        textNode.properties = { className: [CODE_STYLES.INLINE_CODE] };
         textNode.children = [{ type: 'text', value: textNode.value }];
-        node.properties.className = [INLINE_BLOCK];
+        node.properties.className = [CODE_STYLES.INLINE_BLOCK];
         node.tagName = 'span';
       }
     );
@@ -129,11 +168,11 @@ export function rehypePrettyCodeClasses() {
         if (node.tagName === 'span') {
           node.properties.className = [
             ...(node.properties.className || []),
-            INLINE_BLOCK,
+            CODE_STYLES.INLINE_BLOCK,
           ];
           node.children[0].properties.className = [
             ...(node.children[0].properties.className || []),
-            INLINE_CODE,
+            CODE_STYLES.INLINE_CODE,
           ];
 
           return node;
@@ -142,7 +181,7 @@ export function rehypePrettyCodeClasses() {
         if (node.tagName === 'div') {
           node.properties.className = [
             ...(node.properties.className || []),
-            BLOCK,
+            CODE_STYLES.BLOCK,
           ];
           // eslint-disable-next-line no-shadow
           node.children = node.children.map((node: any) => {
@@ -153,21 +192,23 @@ export function rehypePrettyCodeClasses() {
             ) {
               node.properties.className = [
                 ...(node.properties.className || []),
-                TITLE,
+                CODE_STYLES.TITLE,
               ];
             }
             if (node.tagName === 'pre') {
-              node.properties.className = [PRE];
+              node.properties.className = [CODE_STYLES.PRE];
               if (node.children[0].tagName === 'code') {
                 node.children[0].properties.className = [
                   ...(node.children[0].properties.className || []),
-                  CODE,
+                  CODE_STYLES.CODE,
                 ];
                 if (
                   typeof node.children[0].properties['data-line-numbers'] !==
                   'undefined'
                 ) {
-                  node.children[0].properties.className.push(NUMBERED_LINES);
+                  node.children[0].properties.className.push(
+                    CODE_STYLES.NUMBERED_LINES
+                  );
                 }
               }
             }
@@ -201,6 +242,6 @@ export const rehypePrettyCodeOptions: Partial<Options> = {
     node.properties.className = [''];
   },
   onVisitHighlightedLine(node) {
-    node.properties.className.push(HIGHLIGHTED_LINE);
+    node.properties.className.push(CODE_STYLES.HIGHLIGHTED_LINE);
   },
 };

@@ -11,7 +11,7 @@ export default function NotFound() {
           <h1 className="leading-9">Not found</h1>
 
           <div className="article__content">
-            <div className="intro mb-16">
+            <div className="mb-16">
               <p>Error 404: Page not found</p>
             </div>
           </div>

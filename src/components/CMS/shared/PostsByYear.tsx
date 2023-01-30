@@ -11,7 +11,7 @@ export function PostsByYear({
 }) {
   return (
     <section className="mb-8 flex flex-col md:flex-row">
-      <h2 className="!lg:my-0 relative z-10 mb-2 shrink-0 grow-0 text-3xl font-bold md:w-32">
+      <h2 className="relative z-10 mb-2 shrink-0 grow-0 text-3xl font-semibold text-indigo-800 md:w-32 lg:my-0">
         {year}
       </h2>
 
@@ -31,7 +31,7 @@ export function PostsByYear({
                     {type === 'Micropost' && (
                       <Badge variation="primary">MICROPOST</Badge>
                     )}
-                    <h3 className="text-xl">{title}</h3>
+                    <h3 className="text-lg lg:text-xl">{title}</h3>
                   </span>
                 </Link>
               </span>

@@ -10,10 +10,7 @@ description: Nothing is forever in the www world. Here are a few projects from m
 
 import YouTube from '../../src/components/Embed/YouTube';
 
-<div className="intro mb-16">
-Nothing is forever in the www world.<br/>
-Here are a few projects from my past.
-</div>
+<p className="!mb-16">Nothing is forever in the www world.<br/>Here are a few projects from my past.</p>
 
 <div className="full-width"><img alt="Portfolio" src="/images/portfolio.jpg" /></div>
 

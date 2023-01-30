@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import { BASE_URL, WEBSITE_TITLE, MICROBLOG_INTRO } from '../../lib/constants';
 import Micropost from './shared/Micropost';
 import Intro from './Intro';
+import { Article, Main } from '../UI';
 
 export default function Microposts({
   microposts,
@@ -31,15 +32,15 @@ export default function Microposts({
 
       <Header />
 
-      <main className="mx-auto mt-32 flex w-full max-w-2xl flex-1 flex-col text-gray-700">
+      <Main>
         <Intro />
 
         {microposts.map((micropost) => (
-          <article className="article" key={micropost.slug}>
+          <Article key={micropost.slug}>
             <Micropost micropost={micropost} />
-          </article>
+          </Article>
         ))}
-      </main>
+      </Main>
 
       <Footer />
     </>

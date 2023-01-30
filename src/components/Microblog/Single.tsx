@@ -2,11 +2,13 @@ import { type Micropost as MicropostType } from 'contentlayer/generated';
 import { NextSeo } from 'next-seo';
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
+import { CONTENT_STYLES, FULL_WIDTH_WRAPPER } from 'src/lib/rehypePrettyCode';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import Webmentions from '../Webmentions/Webmentions';
 import Micropost from './shared/Micropost';
+import { Article, Main } from '../UI';
 
 const Disqus = dynamic(() => import('../Embed/Disqus'), { ssr: false });
 
@@ -72,23 +74,27 @@ export default function Single({ micropost }: { micropost: MicropostType }) {
 
       <Header />
 
-      <main className="mx-auto mt-32 w-full max-w-2xl flex-1 text-gray-700">
-        <article className="article">
+      <Main>
+        <Article>
           <Micropost micropost={micropost} />
 
-          <section className="relative my-5 py-5">
-            <h2>Interactions</h2>
+          <section
+            className={`${FULL_WIDTH_WRAPPER} bg-gradient-to-b from-gray-50 to-white`}
+          >
+            <div className="mx-auto max-w-3xl p-6 lg:px-0">
+              <h2 className={CONTENT_STYLES.h2}>Interactions</h2>
 
-            <h3>Webmentions</h3>
+              <h3 className={CONTENT_STYLES.h3}>Webmentions</h3>
 
-            <Webmentions url={url} />
+              <Webmentions url={url} />
 
-            <h3>Comments</h3>
+              <h3 className={CONTENT_STYLES.h3}>Comments</h3>
 
-            {showComponent && <Disqus title={title} url={url} />}
+              {showComponent && <Disqus title={title} url={url} />}
+            </div>
           </section>
-        </article>
-      </main>
+        </Article>
+      </Main>
 
       <Footer />
     </>

@@ -3,11 +3,14 @@ import { WEBSITE_SUBHEADING } from '../../lib/constants';
 
 export default function Intro() {
   return (
-    <section className="mb-16 flex gap-3 overflow-hidden rounded-lg border bg-gradient-to-b from-gray-200 to-gray-100 shadow-inner lg:mt-10 lg:mb-32">
+    <section className="mt-6 mb-12 flex gap-3 overflow-hidden rounded-lg border bg-gradient-to-b from-gray-50 to-white shadow-inner">
       <div className="flex flex-col gap-6 p-8">
-        <h1 className="relative">{WEBSITE_SUBHEADING}</h1>
+        {/* TODO: animate hand */}
+        <h1 className="text-3xl font-semibold tracking-tighter text-gray-700 lg:text-4xl">
+          Hi, I'm Leo <span className="animate-wiggle">👋</span>
+        </h1>
 
-        <p className="!text-base lg:mr-4">
+        <p className="text-lg lg:mr-4">
           I like to write code and build products directly from Vancouver.{' '}
           <br />
           Here, I write about development since 2005.

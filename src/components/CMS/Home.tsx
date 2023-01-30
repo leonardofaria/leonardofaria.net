@@ -11,6 +11,7 @@ import {
 } from '../../lib/constants';
 import { groupPostsByYears } from './shared';
 import { PostsByYear } from './shared/PostsByYear';
+import { Article, Main } from '../UI';
 
 export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
   const postsByYears = groupPostsByYears(posts);
@@ -35,21 +36,19 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
         title={`${WEBSITE_SUBHEADING} · ${WEBSITE_TITLE}`}
       />
 
-      <Header showSocialNav={false} />
+      <Header />
 
-      <main className="mx-auto mt-16 w-full max-w-7xl flex-1 text-gray-700">
-        <div className="rounded bg-white lg:mx-4">
-          <article className="article">
-            <Intro />
+      <Main>
+        <Article>
+          <Intro />
 
-            {Object.keys(postsByYears)
-              .reverse()
-              .map((key) => (
-                <PostsByYear key={key} posts={postsByYears[key]} year={key} />
-              ))}
-          </article>
-        </div>
-      </main>
+          {Object.keys(postsByYears)
+            .reverse()
+            .map((key) => (
+              <PostsByYear key={key} posts={postsByYears[key]} year={key} />
+            ))}
+        </Article>
+      </Main>
 
       <Footer />
     </>

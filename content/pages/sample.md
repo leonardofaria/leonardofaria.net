@@ -7,10 +7,7 @@ permalink: /sample
 description: Sample page for styling purposes
 ---
 
-<div className="intro mb-16">
-Short thing 1.<br/>
-Short thing 2.
-</div>
+<p className="!mb-16">Short thing 1.<br/>Short thing 2.</p>
 
 <div className="full-width"><img alt="Portfolio" src="/images/portfolio.jpg" /></div>
 
@@ -103,6 +100,14 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
   1. First Sub-item
   2. Second Sub-item
 
+#### HTML list without marker
+
+<ol className="list-none">
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+</ol>
+
 ## Other Elements — abbr, sub, sup, kbd, mark
 
 <abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
@@ -114,3 +119,56 @@ X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 Press <kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd> to end the session.
 
 Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+
+## Sandpack
+
+<Playground files={
+{
+    '/App.tsx': `export default function App() { 
+  return (
+    <>
+      <h1>VANCOUVER</h1>
+      <h2>CANADA</h2>
+    </>
+  );
+};`,
+
+    '/styles.css': `
+h1 {
+  background: #000;
+  color: #fff;
+  mix-blend-mode: multiply;
+  
+  padding: 2%;
+}
+
+h2 {
+  background: #fff;
+  color: #000;
+  mix-blend-mode: color-dodge;
+  
+  padding: 2%;
+}
+
+body {
+  background: url('https://images.unsplash.com/photo-1541369866856-c4f5aa6f5807?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8dmFuY291dmVyfGVufDB8fDB8&auto=format&fit=crop&w=900&q=60') center center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  font-family: sans-serif;
+  height: 100vh;
+}
+`,
+  }
+} />
+
+## Video
+
+<Embed url="https://youtube.com/?v=r0ji8FDNTj0" />
+
+## Image
+

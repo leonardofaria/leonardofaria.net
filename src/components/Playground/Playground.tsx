@@ -7,10 +7,11 @@ import {
   SandpackPredefinedTemplate,
 } from '@codesandbox/sandpack-react';
 import { githubLight } from '@codesandbox/sandpack-themes';
+import { FULL_WIDTH_WRAPPER } from 'src/lib/rehypePrettyCode';
 import CustomTabs from './CustomTabs';
 
 export function Playground({
-  wrapperClassNames = 'full-width',
+  wrapperClassNames = FULL_WIDTH_WRAPPER,
   files,
   showConsole = false,
   showPreview = true,

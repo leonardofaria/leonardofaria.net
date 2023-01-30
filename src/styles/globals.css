@@ -18,23 +18,24 @@ html {
   @apply text-gray-600;
 } */
 
+/* TODO: fix wide */
 /* Make images/videos wider than post width, like Medium */
-.article__content > p > img,
+/* .article__content > p > img,
 .article__content > video,
 .article__content > .wide {
   max-width: 100vw;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-}
+} */
 
-@screen lg {
+/* @screen lg {
   .article__content > p > img,
   .article__content > video,
   .article__content > .wide {
     @apply max-w-4xl;
   }  
-}
+} */
 
 /* .article a {
   @apply transition;
@@ -119,7 +120,7 @@ html {
   @apply text-lg;
 } */
 
-.article ol:not(.list-none),
+/* .article ol:not(.list-none),
 .article ul:not(.list-none) {
   @apply ml-1;
   @apply list-inside;
@@ -131,7 +132,7 @@ html {
 
 .article ol:not(.list-none) {
   @apply list-decimal;
-}
+} */
 
 /* .article blockquote {
   @apply pl-5;
@@ -141,7 +142,7 @@ html {
 
 /* TODO: port to Tailwind CSS */
 
-.article blockquote p {
+/* .article blockquote p {
   margin: 0.8em 0;
   font-style: italic;
 }
@@ -161,9 +162,9 @@ html {
 
 .article blockquote cite a {
   @apply font-normal;
-}
+} */
 
-.article .full-width, 
+/* .article .full-width, 
 .article .highlight {
   width: 100vw;
   position: relative;
@@ -171,7 +172,7 @@ html {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw; 
-}
+} */
 
 /* .article .highlight {
   @apply bg-white;

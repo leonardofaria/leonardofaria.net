@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FaHeart, FaComment } from 'react-icons/fa';
+import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 import type { WebMention } from '../../lib/types';
 import useWindowSize from '../../lib/hooks/useWindowSize';
 import { LARGE_SCREEN_BREAKPOINT } from '../../lib/constants';
@@ -184,7 +185,7 @@ export default function Webmentions({ url }: { url: string }) {
 
       {showInteractions && (
         <>
-          <h4>Replies & Shares</h4>
+          <h4 className={CONTENT_STYLES.h4}>Replies & Shares</h4>
 
           <ul>
             {mentions?.map((mention) => {
@@ -199,7 +200,7 @@ export default function Webmentions({ url }: { url: string }) {
 
       {showLikes && (
         <>
-          <h4>Likes</h4>
+          <h4 className={CONTENT_STYLES.h4}>Likes</h4>
 
           <ul>
             {mentions?.map((mention) => {

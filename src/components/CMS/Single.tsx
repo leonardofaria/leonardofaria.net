@@ -5,12 +5,18 @@ import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import Balancer from 'react-wrap-balancer';
 import dynamic from 'next/dynamic';
+import {
+  CONTENT_STYLES,
+  CONTENT_STYLES_WRAPPER,
+  FULL_WIDTH_WRAPPER,
+} from 'src/lib/rehypePrettyCode';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import Webmentions from '../Webmentions/Webmentions';
-import { Badge } from '../UI/Badge';
 import { Playground } from '../Playground';
+import Embed from '../Embed';
+import { Article, Badge, H1, Main } from '../UI';
 
 const Disqus = dynamic(() => import('../Embed/Disqus'), { ssr: false });
 
@@ -97,11 +103,11 @@ export default function Single({
 
       <Header />
 
-      <main className="mx-auto mt-32 w-full max-w-3xl flex-1 text-gray-700">
-        <article className="article">
-          <header className={isPost ? 'pt-10 pb-6 text-center' : ''}>
+      <Main>
+        <Article>
+          <header className={isPost ? 'pt-10 text-center' : 'pt-10'}>
             {isPost && (
-              <small className="flex items-center justify-center gap-3 text-center text-sm">
+              <small className="mb-4 flex items-center justify-center gap-3 text-center text-sm">
                 <time className="text-gray-500" dateTime={publishedTime}>
                   {createdAt.toLocaleDateString('en-US', {
                     dateStyle: 'medium',
@@ -109,46 +115,45 @@ export default function Single({
                 </time>
 
                 {tags?.map((tag) => (
-                  <Link className="no-underline" href={`tags/${tag}`} key={tag}>
+                  <Link href={`tags/${tag}`} key={tag}>
                     <Badge variation="secondary">{tag}</Badge>
                   </Link>
                 ))}
               </small>
             )}
 
-            <h1 className={isPost ? 'text-center leading-9' : 'leading-9'}>
+            <H1>
               <Balancer>
-                <Link
-                  className="relative inline-block text-black no-underline"
-                  href={permalink}
-                >
-                  {title}
-                </Link>
+                <Link href={permalink}>{title}</Link>
               </Balancer>
-            </h1>
+            </H1>
           </header>
 
-          <div className="article__content">
-            <MDXContent components={{ Playground }} />
+          <div className={CONTENT_STYLES_WRAPPER}>
+            <MDXContent components={{ Playground, Embed }} />
           </div>
 
           {type === 'post' && (
-            <section className="relative my-5 py-5">
-              <h2>Interactions</h2>
+            <section
+              className={`${FULL_WIDTH_WRAPPER} bg-gradient-to-b from-gray-50 to-white`}
+            >
+              <div className="mx-auto max-w-3xl p-6 lg:px-0">
+                <h2 className={CONTENT_STYLES.h2}>Interactions</h2>
 
-              <h3>Webmentions</h3>
+                <h3 className={CONTENT_STYLES.h3}>Webmentions</h3>
 
-              <Webmentions url={url} />
+                <Webmentions url={url} />
 
-              <h3>Comments</h3>
+                <h3 className={CONTENT_STYLES.h3}>Comments</h3>
 
-              {showComponent && (
-                <Disqus title={title} url={`${BASE_URL}${permalink}`} />
-              )}
+                {showComponent && (
+                  <Disqus title={title} url={`${BASE_URL}${permalink}`} />
+                )}
+              </div>
             </section>
           )}
-        </article>
-      </main>
+        </Article>
+      </Main>
 
       <Footer />
     </>
