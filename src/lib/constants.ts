@@ -29,7 +29,7 @@ export const SOCIAL_LINKS = [
     url: 'https://linkedin.com/in/leonardofariacoelho/',
   },
   {
-    name: 'E-mail',
+    name: 'Email',
     url: 'mailto:leonardofaria@gmail.com',
   },
   {

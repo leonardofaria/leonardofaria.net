@@ -1,13 +1,13 @@
 import Image from 'next/image';
-import { WEBSITE_SUBHEADING } from '../../lib/constants';
 
 export default function Intro() {
   return (
     <section className="mt-6 mb-12 flex gap-3 overflow-hidden rounded-lg border bg-gradient-to-b from-gray-50 to-white shadow-inner">
       <div className="flex flex-col gap-6 p-8">
         {/* TODO: animate hand */}
-        <h1 className="text-3xl font-semibold tracking-tighter text-gray-700 lg:text-4xl">
-          Hi, I'm Leo <span className="animate-wiggle">👋</span>
+        <h1 className="flex text-3xl font-semibold tracking-tighter text-gray-700 lg:text-4xl">
+          <span>Hi, I&apos;m Leo</span>{' '}
+          <span className="ml-2 animate-wiggle">👋</span>
         </h1>
 
         <p className="text-lg lg:mr-4">
