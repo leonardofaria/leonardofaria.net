@@ -231,15 +231,15 @@ html {
   @apply bg-transparent;
 }
 
-/* .article iframe, */
+/* .article iframe,
 .article .fluid-width-video-wrapper {
   @apply block;
   @apply my-6;
 }
 
-/* .intro p, */
+.intro p,
 .article__content>p:first-of-type {
   @apply tracking-tight;
   @apply text-xl;
   @apply text-gray-800;
-}
+} */

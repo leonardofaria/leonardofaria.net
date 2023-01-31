@@ -6,7 +6,7 @@ const CODE_STYLES = {
   BLOCK:
     'w-[100vw] relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] bg-gradient-to-b from-gray-50 to-white',
   TITLE:
-    'max-w-3xl m-auto mb-0.5 rounded-md bg-gray-100/10 px-3 py-1 font-mono text-xs text-gray-300 shadow-sm',
+    'max-w-3xl m-auto mb-0.5 bg-gray-100/10 px-3 py-1 font-mono text-xs text-gray-500',
   PRE: 'max-w-3xl m-auto my-2 px-5 py-4 font-mono text-lg bg-gradient-to-b from-gray-50 to-white rounded',
   CODE: 'whitespace-pre-wrap grid [&>span]:border-l-4 [&>span]:border-l-transparent [&>span]:pl-2 [&>span]:pr-3',
   INLINE_BLOCK:
@@ -15,7 +15,7 @@ const CODE_STYLES = {
   NUMBERED_LINES:
     '[counter-reset:line] before:[&>span]:mr-3 before:[&>span]:inline-block before:[&>span]:w-4 before:[&>span]:text-right before:[&>span]:text-gray-600 before:[&>span]:text-sm before:[&>span]:![content:counter(line)] before:[&>span]:[counter-increment:line]',
   HIGHLIGHTED_LINE:
-    '!border-l-purple-300/70 bg-purple-200/10 before:!text-white/70',
+    '!border-l-purple-300/70 bg-purple-200/15 before:!text-gray-600',
 };
 
 export const FULL_WIDTH_WRAPPER =
@@ -68,6 +68,8 @@ type Node = {
 
 const injectTailwindClasses = (node: Node) => {
   node.properties = {
+    // @ts-ignore trust me ts
+    ...node.properties,
     className: CONTENT_STYLES[node.tagName],
   };
 
@@ -98,6 +100,7 @@ const injectTailwindClasses = (node: Node) => {
 };
 
 export function rehypePrettyCodeClasses() {
+  // Inject right Tailwind CSS
   return (tree: any) => {
     visit(
       tree,
@@ -112,6 +115,7 @@ export function rehypePrettyCodeClasses() {
       }
     );
 
+    // Replace "full-width" to right Tailwind CSS classes
     visit(
       tree,
       (node: any) =>
@@ -137,8 +141,48 @@ export function rehypePrettyCodeClasses() {
       }
     );
 
-    // TODO: fix wide
+    // Make images wider than text container
+    visit(
+      tree,
+      (node: any) =>
+        Boolean(
+          node.tagName === 'p' &&
+            node.children?.length === 1 &&
+            node.children.some((n: any) => n.tagName === 'img')
+        ),
+      (node: any) => {
+        node.children = node.children.map((n: any) => {
+          n.properties = {
+            ...n.properties,
+            className: WIDE_WRAPPER,
+          };
 
+          return n;
+        });
+
+        return node;
+      }
+    );
+
+    // Make videos wider than text container
+    visit(
+      tree,
+      (node: any) =>
+        Boolean(node.type === 'mdxJsxFlowElement' && node.name === 'video'),
+      (node: any) => {
+        node.attributes = node.attributes.map((attribute: any) => {
+          if (attribute.name === 'className') {
+            attribute.value = `${attribute.value} ${WIDE_WRAPPER}`;
+          }
+
+          return attribute;
+        });
+
+        return node;
+      }
+    );
+
+    // Related to code highlighting
     visit(
       tree,
       (node: any) =>

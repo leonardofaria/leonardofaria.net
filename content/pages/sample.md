@@ -67,7 +67,7 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 #### Code block with backticks
 
-```html title="example.html" showNumberLines {3-6}
+```html title="example.html" showLineNumbers {3-6}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -172,3 +172,10 @@ body {
 
 ## Image
 
+![Chart](/wp-content/uploads/2022/04/emergenetics-explorer-chart.png)
+
+## Video
+
+<video className="h-auto" controls autoPlay="autoPlay">
+  <source src="/wp-content/uploads/2020/05/nvm.mp4" type="video/mp4" />
+</video>
