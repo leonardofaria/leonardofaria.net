@@ -14,11 +14,9 @@ tags:
   - software
 ---
 
-import YouTube from '../../../../../src/components/Embed/YouTube';
-
 Few months ago I saw in The Verge a [post](http://www.theverge.com/2016/3/7/11173836/neverware-cloudready-how-to-convert-pc-into-chromebook-free) about [CloudReady](https://www.neverware.com/). CloudReady is a remake of Chromium OS ready to go in old PCs or Macs. The company behind the product sells its solutions/support to organizations interested in keeping using their hardware. It's really interesting.
 
-<YouTube id="NAakr95sLOI" />  
+<Embed type="YouTube" id="NAakr95sLOI" />  
 
 I am writing this post because my wife has an old Samsung laptop and I finally found a time to give a chance to CloudReady. Her laptop was initially running Windows 7 and it was updated to Windows 10. The idea was using CloudReady in another partition and using Grub to handle the boot process like any Linux distribution.
 

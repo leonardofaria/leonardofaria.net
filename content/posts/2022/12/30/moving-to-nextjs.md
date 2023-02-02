@@ -25,7 +25,7 @@ I have been working full-time with Next.js since April (by the way, that was one
 ## How? 
 I recently came across [Contentlayer](https://contentlayer.dev/). Contentlayer is an SDK that validates and transforms your content into type-safe JSON. This is the best of worlds: I can keep my content in markdown and use TypeScript on my website. I don't need to use GraphQL or different solutions to get what I need.
 
-<Twitter id="1517163485439926272" />
+<Embed type="Twitter" id="1517163485439926272" />
 
 [Delba Oliveira](https://delba.dev) has a great post series called "[Build a Developer Blog with Next.js](https://delba.dev/blog/next-blog-structured-mdx-content-with-contentlayer)". Her posts and website source code helped me understand what needed to be done here. There is also another tutorial called "[Building Better Next.js Static Sites with MDX and Contentlayer](https://dawchihliou.github.io/articles/build-better-nextjs-static-sites-with-mdx-and-contentlayer)" that helped me a lot.
 

@@ -168,7 +168,13 @@ body {
 
 ## Video
 
-<Embed url="https://youtube.com/?v=r0ji8FDNTj0" />
+### YouTube 
+
+<Embed type="YouTube" id="r0ji8FDNTj0" />
+
+### Twitter
+
+<Embed type="Twitter" id='1598707678788059142' />
 
 ## Image
 
