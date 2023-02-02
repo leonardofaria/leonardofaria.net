@@ -8,8 +8,6 @@ permalink: /2022/12/30/moving-to-nextjs
 description: In the last few days, I worked to move this website to Next.js. In 2020, I moved from WordPress to Hugo and would be better served with Next.js. It was a straightforward migration, and I share what was done in this post.
 ---
 
-import Twitter from '../../../../../src/components/Embed/Twitter';
-
 In the last few days, I worked to move this website to Next.js. In 2020, I moved from WordPress to Hugo and would be better served with Next.js. It was a straightforward migration, and I share what was done in this post.
 
 ## Why Hugo?
