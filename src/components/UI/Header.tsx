@@ -6,8 +6,8 @@ import { MdClose } from 'react-icons/md';
 import useScrollPosition from '../../lib/hooks/useScrollPosition';
 import useWindowSize from '../../lib/hooks/useWindowSize';
 import { LARGE_SCREEN_BREAKPOINT } from '../../lib/constants';
-import PageNav from './PageNav';
-import SocialNav from './SocialNav';
+import { PageNav } from './PageNav';
+import { SocialNav } from './SocialNav';
 
 function ToggleButton({
   setShowMenu,
@@ -33,7 +33,7 @@ function ToggleButton({
   );
 }
 
-export default function Header() {
+export function Header() {
   const [showMenu, setShowMenu] = useState(false);
   const scrollPosition = useScrollPosition();
   const { width } = useWindowSize();

@@ -1,7 +1,6 @@
 import { type Post, type Micropost } from 'contentlayer/generated';
 import { NextSeo } from 'next-seo';
-import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
+import { Header, Footer, Article, Main } from '../UI';
 import Intro from '../Intro/Intro';
 import {
   BASE_URL,
@@ -11,7 +10,6 @@ import {
 } from '../../lib/constants';
 import { groupPostsByYears } from './shared';
 import { PostsByYear } from './shared/PostsByYear';
-import { Article, Main } from '../UI';
 
 export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
   const postsByYears = groupPostsByYears(posts);

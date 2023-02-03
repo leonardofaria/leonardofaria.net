@@ -29,7 +29,7 @@ function Icon({ name }: { name: string }) {
   }
 }
 
-export default function SocialNav() {
+export function SocialNav() {
   return (
     <ul className="flex list-none justify-end lg:justify-start">
       {/* Hack to get all the classes otherwise we don't get them generated */}

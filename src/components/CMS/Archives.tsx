@@ -2,12 +2,10 @@ import { type Post } from 'contentlayer/generated';
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
-import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
 import { BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import { groupPostsByYears, getAllTags } from './shared';
 import { PostsByYear } from './shared/PostsByYear';
-import { Article, H1, Main } from '../UI';
+import { Article, H1, Main, Footer, Header } from '../UI';
 
 export default function Archives({ posts }: { posts: Post[] }) {
   const postsByYears = groupPostsByYears(posts);

@@ -4,12 +4,10 @@ import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import Balancer from 'react-wrap-balancer';
 import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import { Playground } from '../Playground';
 import Embed from '../Embed';
-import { Article, Badge, H1, Main } from '../UI';
+import { Article, Badge, Footer, H1, Header, Main } from '../UI';
 import { Interactions } from './shared/Interactions';
 
 export default function Single({

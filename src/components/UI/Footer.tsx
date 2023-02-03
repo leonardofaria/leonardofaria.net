@@ -1,6 +1,6 @@
-import SocialNav from '../Header/SocialNav';
+import { SocialNav } from './SocialNav';
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="mx-auto w-full max-w-7xl lg:px-4">
       <div className="flex flex-col items-center justify-between gap-3 border-t border-gray-300 p-4 text-sm text-gray-500 lg:flex-row">
