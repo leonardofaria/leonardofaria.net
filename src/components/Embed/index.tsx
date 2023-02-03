@@ -22,9 +22,7 @@ export default function Embed({
   if (type === 'YouTube' && id) {
     return (
       <div className={WIDE_WRAPPER}>
-        <div className="aspect-w-16 aspect-h-9">
-          <LiteYouTubeEmbed id={id} title="YouTube" />
-        </div>
+        <LiteYouTubeEmbed id={id} title="YouTube" />
       </div>
     );
   }
