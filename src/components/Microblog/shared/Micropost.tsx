@@ -23,7 +23,7 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
     <>
       <header className="pt-10 pb-6 text-center">
         <small className="mb-4 flex items-center justify-center gap-3 text-center text-sm">
-          <time className="text-gray-500" dateTime={publishedAt}>
+          <time className="text-charade-500" dateTime={publishedAt}>
             {createdAt.toLocaleDateString('en-US', {
               dateStyle: 'medium',
             })}

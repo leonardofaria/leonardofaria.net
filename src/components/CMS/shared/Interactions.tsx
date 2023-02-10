@@ -13,7 +13,7 @@ export function Interactions({ title, url }: { title: string; url: string }) {
 
   return (
     <section
-      className={`${FULL_WIDTH_WRAPPER} bg-gradient-to-b from-gray-50 to-white`}
+      className={`${FULL_WIDTH_WRAPPER} bg-gradient-to-b from-charade-50 to-white`}
     >
       <div className="mx-auto max-w-3xl p-6 lg:px-0">
         <h2 className={CONTENT_STYLES.h2}>Interactions</h2>

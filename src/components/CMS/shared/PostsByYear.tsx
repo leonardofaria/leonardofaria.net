@@ -11,7 +11,7 @@ export function PostsByYear({
 }) {
   return (
     <section className="mb-8 flex flex-col md:flex-row">
-      <h2 className="relative z-10 mb-2 shrink-0 grow-0 text-3xl font-semibold text-indigo-800 md:w-32 lg:my-0">
+      <h2 className="relative z-10 mb-2 shrink-0 grow-0 text-3xl font-semibold text-amethyst-smoke-800 md:w-32 lg:my-0">
         {year}
       </h2>
 
@@ -36,8 +36,8 @@ export function PostsByYear({
                 </Link>
               </span>
 
-              <small className="relative z-10 m-2 flex items-center gap-3 text-sm">
-                <time className="text-gray-500" dateTime={publishedAt}>
+              <small className="relative z-10 my-2 flex items-center gap-3 text-sm">
+                <time className="text-charade-500" dateTime={publishedAt}>
                   {
                     createdAt
                       .toLocaleDateString('en-US', {

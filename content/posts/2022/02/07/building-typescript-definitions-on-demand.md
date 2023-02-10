@@ -17,7 +17,7 @@ I recently came across an interesting problem: is it possible to dynamically cre
 
 Let me detail the problem a bit better. Consider the Button component below:
 
-```jsx
+```jsx title="Button.tsx"
 import PropTypes from "prop-types";
 
 const Button = ({ appearance, children, ...props }) => {

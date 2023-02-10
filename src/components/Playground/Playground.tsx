@@ -26,7 +26,7 @@ export function Playground({
   return (
     <div className={wrapperClassNames}>
       <SandpackProvider files={files} template={template} theme={githubLight}>
-        <header className="border-b border-gray-200">
+        <header className="border-b border-charade-200">
           <CustomTabs />
         </header>
         <SandpackLayout>

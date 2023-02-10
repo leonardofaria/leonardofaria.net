@@ -137,7 +137,7 @@ export default function Webmentions({ url }: { url: string }) {
     <>
       <header className="flex items-center">
         <button
-          className="mr-6 flex items-center rounded-md bg-gray-100 p-3 transition duration-300 ease-in-out hover:bg-white"
+          className="mr-6 flex items-center rounded-md bg-charade-100 p-3 transition duration-300 ease-in-out hover:bg-white"
           type="button"
           onClick={() => setShowLikes(!showLikes)}
         >
@@ -145,7 +145,7 @@ export default function Webmentions({ url }: { url: string }) {
           <span className="mr-1">{likesTotal}</span>
         </button>
         <button
-          className="mr-6 flex items-center rounded-md bg-gray-100 p-3 transition duration-300 ease-in-out hover:bg-white"
+          className="mr-6 flex items-center rounded-md bg-charade-100 p-3 transition duration-300 ease-in-out hover:bg-white"
           type="button"
           onClick={() => setShowInteractions(!showInteractions)}
         >

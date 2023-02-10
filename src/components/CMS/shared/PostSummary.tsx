@@ -7,13 +7,13 @@ export function PostSummary({ post }: { post: Post }) {
   const createdAt = new Date(post.publishedAt);
 
   return (
-    <div className="my-4 border-b border-gray-400 py-4" key={post.id}>
+    <div className="my-4 border-b border-charade-400 py-4" key={post.id}>
       <h2 className={CONTENT_STYLES.h2}>
         <Link href={post.permalink}>{post.title}</Link>
       </h2>
 
       <small className="my-2 block text-right text-sm">
-        <time className="text-gray-500" dateTime={post.publishedAt}>
+        <time className="text-charade-500" dateTime={post.publishedAt}>
           {createdAt.toLocaleDateString('en-US', {
             dateStyle: 'medium',
           })}

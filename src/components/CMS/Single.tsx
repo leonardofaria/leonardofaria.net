@@ -93,7 +93,7 @@ export default function Single({
           <header className={isPost ? 'pt-10 text-center' : 'pt-10'}>
             {isPost && (
               <small className="mb-4 flex items-center justify-center gap-3 text-center text-sm">
-                <time className="text-gray-500" dateTime={publishedTime}>
+                <time className="text-charade-500" dateTime={publishedTime}>
                   {createdAt.toLocaleDateString('en-US', {
                     dateStyle: 'medium',
                   })}

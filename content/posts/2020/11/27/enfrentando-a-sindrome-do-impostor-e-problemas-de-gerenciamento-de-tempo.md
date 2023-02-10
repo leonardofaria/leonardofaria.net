@@ -9,7 +9,7 @@ categories:
   - career
 ---
 
-<div className="my-10 p-4 border border-gray-6 rounded-md bg-white">
+<div className="my-10 p-4 border border-charade-6 rounded-md bg-white">
 This is the Portuguese version of the post <a href="/2020/04/26/facing-impostor-syndrome-and-time-management-issues">Facing importor syndrome and time management issues</a> that I wrote back on April. A few weeks after sharing my thoughts, Glaucio Oliveira translated the post and shared it on <a href="https://www.linkedin.com/pulse/como-lidar-com-s%C3%ADndrome-do-impostor-e-problemas-de-tempo-oliveira/">his Linkedin</a>. Now, I am including the translation here.
 </div>
 

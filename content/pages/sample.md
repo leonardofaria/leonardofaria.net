@@ -11,7 +11,7 @@ description: Sample page for styling purposes
 
 <div className="full-width"><img alt="Portfolio" src="/images/portfolio.jpg" /></div>
 
-<div className="my-10 p-4 border border-gray-6 rounded-md bg-white">
+<div className="my-10 p-4 border border-charade-6 rounded-md bg-white">
 Custom div
 </div>
 
@@ -66,6 +66,22 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 ## Code Blocks
 
 #### Code block with backticks
+
+##### Example 1
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example HTML5 Document</title>
+</head>
+<body>
+  <p>Test</p>
+</body>
+</html>
+```
+##### Example 2
 
 ```html title="example.html" showLineNumbers {3-6}
 <!DOCTYPE html>
