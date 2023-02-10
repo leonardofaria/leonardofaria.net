@@ -48,17 +48,17 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
                   src="/images/avatar.webp"
                   width={36}
                 />
-                <span>Hi, I&apos;m Leo</span>{' '}
+                <span>{WEBSITE_SUBHEADING}</span>{' '}
                 <span className="ml-2 animate-wiggle">👋</span>
               </h1>
 
-              <p className="text-lg lg:mr-4">
-                I like to write code and build products.
-                <br />
-                Here, I write about development since 2005.
-                <br />
-                Currently Staff Software Engineer at Lattice.
-              </p>
+              <p
+                className="text-lg lg:mr-4"
+                // eslint-disable-next-line react/no-danger
+                dangerouslySetInnerHTML={{
+                  __html: WEBSITE_DESCRIPTION.replace('. ', '<br />'),
+                }}
+              />
             </div>
             <div className="relative hidden max-w-[240px] lg:block">
               <div className="absolute top-20 left-5 z-0 h-full w-full scale-150 text-orange-100">

@@ -22,7 +22,7 @@ export const FULL_WIDTH_WRAPPER =
   'w-screen relative left-2/4 right-2/4 -ml-[50vw] -mr-[50vw]';
 
 export const WIDE_WRAPPER =
-  'w-screen relative left-2/4 lg:max-w-4xl -translate-x-2/4';
+  'max-w-[100vw] relative left-2/4 lg:max-w-4xl -translate-x-2/4';
 
 export const CONTENT_STYLES = {
   a: 'transition duration-300 ease-in-out text-blue-600 hover:text-blue-800 underline',
