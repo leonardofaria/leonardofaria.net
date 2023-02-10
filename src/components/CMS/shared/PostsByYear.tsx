@@ -10,35 +10,34 @@ export function PostsByYear({
   posts: (Post | Micropost)[];
 }) {
   return (
-    <div className="flex flex-col border-b border-gray-400 md:flex-row">
-      <h2 className="mb-2 shrink-0 grow-0 text-3xl font-bold md:w-32">
+    <section className="mb-8 flex flex-col md:flex-row">
+      <h2 className="relative z-10 mb-2 shrink-0 grow-0 text-3xl font-semibold text-amethyst-smoke-800 md:w-32 lg:my-0">
         {year}
       </h2>
 
-      <ol className="mb-4 w-full list-none">
+      <ol className="flex w-full list-none flex-col gap-y-8">
         {posts.map((post) => {
           const { slug, permalink, title, publishedAt, tags, type } = post;
           const createdAt = new Date(publishedAt);
 
           return (
-            <li
-              className="mb-8 flex flex-col rounded-md no-underline transition duration-300 ease-in-out hover:bg-white"
-              key={slug}
-            >
-              <div className="my-2 flex items-center">
-                {type === 'Micropost' && (
-                  <Badge variation="primary">MICROPOST</Badge>
-                )}
-                <Link
-                  className="mx-2 tracking-tight text-blue-600 no-underline"
-                  href={permalink}
-                >
-                  {title}
-                </Link>
-              </div>
+            <li className="group relative flex flex-col md:mr-4" key={slug}>
+              <div className="absolute -inset-4 z-0 scale-95 rounded bg-white opacity-0 transition group-hover:scale-100 group-hover:opacity-100" />
 
-              <small className="m-2 flex items-center gap-3 text-sm">
-                <time className="text-gray-500" dateTime={publishedAt}>
+              <span className="relative z-10 tracking-tight">
+                <Link className="no-underline" href={permalink}>
+                  {/* <span className="h-100 w-100 absolute -inset-4 z-20 rounded bg-black opacity-40" /> */}
+                  <span className="relative z-10 flex items-center gap-2">
+                    {type === 'Micropost' && (
+                      <Badge variation="primary">MICROPOST</Badge>
+                    )}
+                    <h3 className="text-lg lg:text-xl">{title}</h3>
+                  </span>
+                </Link>
+              </span>
+
+              <small className="relative z-10 my-2 flex items-center gap-3 text-sm">
+                <time className="text-charade-500" dateTime={publishedAt}>
                   {
                     createdAt
                       .toLocaleDateString('en-US', {
@@ -58,6 +57,6 @@ export function PostsByYear({
           );
         })}
       </ol>
-    </div>
+    </section>
   );
 }

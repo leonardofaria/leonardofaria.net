@@ -8,7 +8,7 @@ export default function CustomTabs() {
     <nav className="-mb-px flex space-x-6">
       {visibleFiles.map((name) => (
         <button
-          className={`group inline-flex items-center border-b-2 border-transparent py-2 px-1 text-sm font-medium hover:border-gray-300 hover:text-gray-700 ${
+          className={`group inline-flex items-center border-b-2 border-transparent py-2 px-1 text-sm font-medium transition duration-300 ease-in-out hover:border-gray-300 hover:text-gray-700 ${
             name === activeFile
               ? 'border-indigo-500 text-indigo-600'
               : 'text-gray-500'

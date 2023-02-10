@@ -1,22 +1,27 @@
-import Footer from 'src/components/Footer/Footer';
-import Header from 'src/components/Header/Header';
+import { Footer, Header, Main } from 'src/components/UI';
 
 export default function NotFound() {
   return (
     <>
       <Header />
 
-      <main className="mx-auto mt-32 w-full max-w-3xl flex-1 text-gray-700">
-        <article className="article">
-          <h1 className="leading-9">Not found</h1>
-
-          <div className="article__content">
-            <div className="intro mb-16">
-              <p>Error 404: Page not found</p>
+      <Main className="flex items-center justify-center">
+        <div className="mx-auto flex max-w-max">
+          <p className="text-4xl font-semibold tracking-tighter text-charade-900 sm:text-5xl">
+            404
+          </p>
+          <div className="sm:ml-6">
+            <div className="sm:border-l sm:border-charade-200 sm:pl-6">
+              <h1 className="text-4xl font-semibold tracking-tighter text-charade-700 sm:text-5xl">
+                Page not found
+              </h1>
+              <p className="mt-3 text-base text-charade-500">
+                Please check the URL in the address bar and try again.
+              </p>
             </div>
           </div>
-        </article>
-      </main>
+        </div>
+      </Main>
 
       <Footer />
     </>

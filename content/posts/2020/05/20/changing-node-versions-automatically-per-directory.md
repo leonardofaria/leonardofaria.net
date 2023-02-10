@@ -19,7 +19,7 @@ Working in multiple Node projects sometimes means using different versions of No
 
 If you are using macOS Catalina, you are probably using ZSH as default shell. To make the magic happen, paste the following in `~/.zshrc` file.
 
-```bash
+```bash title="~/.zshrc" showLineNumbers 
 # place this after nvm initialization!
 autoload -U add-zsh-hook
 load-nvmrc() {

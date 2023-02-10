@@ -15,13 +15,13 @@ People and organizations often have preferences for a specific package manager. 
 
 We can use the [preinstall hook](https://docs.npmjs.com/misc/scripts) to check if the user run `npm install`or `yarn install`. Here is one example:
 
+<span className="hidden">more</span>
+
 ```js title="package.json"
 "scripts": {
   "preinstall": "node -e \"if(process.env.npm_execpath.indexOf('yarn') === -1) throw new Error('You must use Yarn to install, not NPM')\"",
 }
 ```
-
-<span className="hidden">more</span>
 
 If you run `npm install`:
 

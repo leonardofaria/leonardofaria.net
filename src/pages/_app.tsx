@@ -22,9 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const ogImageUrl = getAbsoluteURL(`/api/thumbnail?${searchParams}`);
 
   return (
-    <div
-      className={`${inter.variable} bg-gradient flex min-h-screen flex-col font-sans`}
-    >
+    <div className={`${inter.variable} flex min-h-screen flex-col font-sans`}>
       <Head>
         <link href="https://webmention.io/leonardofaria.net/webmention" />
         <link

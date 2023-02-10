@@ -3,9 +3,9 @@ export const AUTHOR = 'Leonardo Faria';
 export const BASE_URL = 'https://leonardofaria.net';
 export const DISQUS_SHORTNAME = 'leonardofaria';
 export const WEBSITE_TITLE = 'Leonardo Faria';
-export const WEBSITE_SUBHEADING = "Hi, I'm Leo 👋";
+export const WEBSITE_SUBHEADING = "Hi, I'm Leo";
 export const WEBSITE_DESCRIPTION =
-  'I am Leonardo Faria, a Brazilian developer living in Vancouver. This is my blog about software development and more since 2005.';
+  'I like to write code and build products. Here, I write about development since 2005. Currently Staff Software Engineer at Lattice.';
 export const MICROBLOG_INTRO =
   'Remember Microblogs? My favourite links, videos and short thoughts';
 
@@ -29,7 +29,7 @@ export const SOCIAL_LINKS = [
     url: 'https://linkedin.com/in/leonardofariacoelho/',
   },
   {
-    name: 'E-mail',
+    name: 'Email',
     url: 'mailto:leonardofaria@gmail.com',
   },
   {

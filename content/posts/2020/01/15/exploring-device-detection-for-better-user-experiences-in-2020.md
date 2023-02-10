@@ -14,11 +14,9 @@ tags:
   - javascript
 ---
 
-import YouTube from '../../../../../src/components/Embed/YouTube';
-
 A few months ago I watched a great talk in Chrome Dev Summit about performance in slow devices.
 
-<YouTube id="puUPpVrIRkc" />  
+<Embed type="YouTube" id="puUPpVrIRkc" />  
 
 It blew my mind all the work done by Facebook in identifying devices to create a better user experience. Fast-forward to now, I decided to study a bit more the topic and see what I could do at Thinkific.
 

@@ -2,9 +2,8 @@ import { allPosts, type Post } from 'contentlayer/generated';
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
+import { Article, Footer, Header, Main, H1 } from 'src/components/UI';
 import { getAllTags } from '../../components/CMS/shared';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
 import { BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import { PostSummary } from '../../components/CMS/shared/PostSummary';
 
@@ -68,15 +67,17 @@ export default function TagPage({
 
       <Header />
 
-      <main className="mx-auto mt-32 w-full max-w-3xl flex-1 text-gray-700">
-        <article className="article">
-          <h1>{description}</h1>
+      <Main>
+        <Article>
+          <div className="pt-10">
+            <H1>{description}</H1>
+          </div>
 
           {posts.map((post) => (
             <PostSummary key={post.id} post={post} />
           ))}
-        </article>
-      </main>
+        </Article>
+      </Main>
 
       <Footer />
     </>

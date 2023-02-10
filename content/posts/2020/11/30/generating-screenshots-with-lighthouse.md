@@ -20,7 +20,7 @@ Lighthouse captures the rendering timeline of a page in 10 images. Do you need t
 
 The filmstrip above reveals how a page is rendered in a browser and gives us an opportunity to understand what is slow. For example, blank screenshots in the beginning is a sign that the [First Contentful Paint](https://web.dev/fcp/) is too slow. 
 
-<div className="my-10 p-4 border border-gray-6 rounded-md bg-white">
+<div className="my-10 p-4 border border-charade-6 rounded-md bg-white">
 <strong>Hi! This post is part of a Lighthouse post series. Also, check out:</strong>
 
 <ul>

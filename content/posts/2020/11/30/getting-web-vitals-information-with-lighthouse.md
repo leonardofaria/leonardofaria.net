@@ -20,7 +20,7 @@ tags:
 
 The [page experience](https://developers.google.com/search/docs/guides/page-experience) signal measures aspects of how users perceive the experience of interacting with a web page. Offering mobile-friendly pages and serving content over HTTPS is something we have been doing for a while but soon slow sites may lose their spot in the Google page ranking algorithm. 
 
-<div className="my-10 p-4 border border-gray-6 rounded-md bg-white">
+<div className="my-10 p-4 border border-charade-6 rounded-md bg-white">
 <strong>Hi! This post is part of a Lighthouse post series. Also, check out:</strong>
 
 <ul>

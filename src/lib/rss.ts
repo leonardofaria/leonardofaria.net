@@ -13,7 +13,7 @@ export default function generateFeed() {
   });
 
   // eslint-disable-next-line no-console
-  console.log('Generating RSS');
+  console.log('info  - Generating RSS');
 
   [...allPosts, ...allMicroposts]
     .sort(

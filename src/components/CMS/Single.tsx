@@ -1,18 +1,14 @@
-import { useState, useEffect } from 'react';
 import { type Page, type Post } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import Balancer from 'react-wrap-balancer';
-import dynamic from 'next/dynamic';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
+import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
-import Webmentions from '../Webmentions/Webmentions';
-import { Badge } from '../UI/Badge';
 import { Playground } from '../Playground';
-
-const Disqus = dynamic(() => import('../Embed/Disqus'), { ssr: false });
+import Embed from '../Embed';
+import { Article, Badge, Footer, H1, Header, Main } from '../UI';
+import { Interactions } from './shared/Interactions';
 
 export default function Single({
   post,
@@ -21,11 +17,6 @@ export default function Single({
   post: Post | Page;
   type: 'post' | 'page';
 }) {
-  const [showComponent, setShowComponent] = useState(false);
-  useEffect(() => {
-    setShowComponent(true);
-  }, []);
-
   const {
     title,
     publishedAt: publishedTime,
@@ -97,58 +88,39 @@ export default function Single({
 
       <Header />
 
-      <main className="mx-auto mt-32 w-full max-w-3xl flex-1 text-gray-700">
-        <article className="article">
-          <header className={isPost ? 'pt-10 pb-6 text-center' : ''}>
+      <Main>
+        <Article>
+          <header className={isPost ? 'pt-10 text-center' : 'pt-10'}>
             {isPost && (
-              <small className="flex items-center justify-center gap-3 text-center text-sm">
-                <time className="text-gray-500" dateTime={publishedTime}>
+              <small className="mb-4 flex items-center justify-center gap-3 text-center text-sm">
+                <time className="text-charade-500" dateTime={publishedTime}>
                   {createdAt.toLocaleDateString('en-US', {
                     dateStyle: 'medium',
                   })}
                 </time>
 
                 {tags?.map((tag) => (
-                  <Link className="no-underline" href={`tags/${tag}`} key={tag}>
+                  <Link href={`tags/${tag}`} key={tag}>
                     <Badge variation="secondary">{tag}</Badge>
                   </Link>
                 ))}
               </small>
             )}
 
-            <h1 className={isPost ? 'text-center leading-9' : 'leading-9'}>
+            <H1>
               <Balancer>
-                <Link
-                  className="relative inline-block text-black no-underline"
-                  href={permalink}
-                >
-                  {title}
-                </Link>
+                <Link href={permalink}>{title}</Link>
               </Balancer>
-            </h1>
+            </H1>
           </header>
 
-          <div className="article__content">
-            <MDXContent components={{ Playground }} />
+          <div className={CONTENT_STYLES_WRAPPER}>
+            <MDXContent components={{ Playground, Embed }} />
           </div>
 
-          {type === 'post' && (
-            <section className="relative my-5 py-5">
-              <h2>Interactions</h2>
-
-              <h3>Webmentions</h3>
-
-              <Webmentions url={url} />
-
-              <h3>Comments</h3>
-
-              {showComponent && (
-                <Disqus title={title} url={`${BASE_URL}${permalink}`} />
-              )}
-            </section>
-          )}
-        </article>
-      </main>
+          {type === 'post' && <Interactions title={title} url={url} />}
+        </Article>
+      </Main>
 
       <Footer />
     </>

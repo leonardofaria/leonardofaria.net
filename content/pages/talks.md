@@ -8,10 +8,7 @@ permalink: /talks
 description: I like to tell stories. Here is a list of my talks.
 ---
 
-<div className="intro mb-16">
-I like to tell stories.<br/>
-Here is a list of my talks.
-</div>
+<p className="!mb-16">I like to tell stories.<br/>Here is a list of my talks.</p>
 
 <div className="full-width"><img alt="Talks" src="/images/talks.jpg" /></div>
 

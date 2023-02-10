@@ -7,10 +7,11 @@ import {
   SandpackPredefinedTemplate,
 } from '@codesandbox/sandpack-react';
 import { githubLight } from '@codesandbox/sandpack-themes';
+import { FULL_WIDTH_WRAPPER } from 'src/lib/rehypePrettyCode';
 import CustomTabs from './CustomTabs';
 
 export function Playground({
-  wrapperClassNames = 'full-width',
+  wrapperClassNames = FULL_WIDTH_WRAPPER,
   files,
   showConsole = false,
   showPreview = true,
@@ -25,7 +26,7 @@ export function Playground({
   return (
     <div className={wrapperClassNames}>
       <SandpackProvider files={files} template={template} theme={githubLight}>
-        <header className="border-b border-gray-200">
+        <header className="border-b border-charade-200">
           <CustomTabs />
         </header>
         <SandpackLayout>

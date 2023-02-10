@@ -8,7 +8,8 @@ export function Badge({
   let variationClasses = 'bg-indigo-500 text-indigo-100';
 
   if (variation === 'secondary') {
-    variationClasses = 'bg-orange-100 text-orange-800 hover:bg-orange-300';
+    variationClasses =
+      'transition duration-300 ease-in-out bg-orange-100 text-orange-800 hover:bg-orange-300';
   }
 
   return (

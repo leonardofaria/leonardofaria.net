@@ -1,8 +1,4 @@
 /**
- * NOTE: This requires `@sentry/nextjs` version 7.3.0 or higher.
- *
- * NOTE: If using this with `next` version 12.2.0 or lower, uncomment the
- * penultimate line in `CustomErrorComponent`.
  *
  * This page is loaded by Nextjs:
  *  - on the server, when data-fetching methods throw or reject
@@ -30,7 +26,9 @@ function CustomErrorComponent({ statusCode }) {
 CustomErrorComponent.getInitialProps = async (contextData) => {
   // In case this is running in a serverless function, await this in order to give Sentry
   // time to send the error before the lambda exits
-  await Sentry.captureUnderscoreErrorException(contextData);
+  if (process.env.NODE_ENV === 'production') {
+    await Sentry.captureUnderscoreErrorException(contextData);
+  }
 
   // This will contain the status code of the response
   return NextErrorComponent.getInitialProps(contextData);
