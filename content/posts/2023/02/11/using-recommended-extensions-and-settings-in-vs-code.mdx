@@ -1,0 +1,65 @@
+---
+id: 2236
+title: Using recommended extensions and settings in VS Code
+publishedAt: 2023-02-11T11:12:00-08:00
+type: Post
+ogImage: /images/og-images/2236.png
+permalink: /2023/02/11/using-recommended-extensions-and-settings-in-vs-code
+description: In the last few days, I worked to move this website to Next.js. In 2020, I moved from WordPress to Hugo and would be better served with Next.js. It was a straightforward migration, and I share what was done in this post.
+---
+
+VS Code offers a handy way to set up your editor with recommended extensions and settings per workspace, which is incredibly useful when working in codebases with different technologies. Let's learn how to use this in our favor.
+
+I initially saw the benefits of this in one [Next.js PR](https://github.com/vercel/next.js/pull/43954/files). The magic happens in the `.vscode` directory. As you can imagine, this folder contains VS Code shenanigans and the file `extensions.json` defines which extensions you can recommend when opening this workspace. Here is one example:
+
+```js title=".vscode/extensions.json"
+{
+  "recommendations": [
+    // ESLint/Prettier formatter
+    "esbenp.prettier-vscode",
+    // ESLint support to VSCode
+    "dbaeumer.vscode-eslint",
+    // Tailwind CSS autocomplete and more
+    "bradlc.vscode-tailwindcss",
+  ]
+}
+```
+
+Note that you can add comments to JSON files used by VS Code. The next time you open the workspace, VS Code will show a small banner in the bottom right with the recommendations:
+
+![VS Code Banner](/wp-content/uploads/2023/02/vscode-banner.png)
+
+If you click on "Show Recommendations", the extension panel on the left will list the recommendations of the file and you can see what you already have installed.
+
+![VS Code Banner](/wp-content/uploads/2023/02/vscode-recommendations.png)
+
+Similarly, you can add settings per workspace, which can be especially handy if you want to tie extensions and their settings. Here is one example of always using the Prettier extension in the repository
+
+```js title=".vscode/settings.json"
+{
+  // Override default formatter to the ESLint one
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Formatting using Prettier for JavaScript, overrides VSCode default.
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+}
+```
+
+It is important to mention that settings in VS Code can be overridden in different ways. In the following list ([source](https://code.visualstudio.com/docs/getstarted/settings#_settings-precedence)), later scopes override earlier scopes:
+
+- Default settings - This scope represents the default unconfigured setting values.
+- User settings - Apply globally to all VS Code instances.
+- Remote settings - Apply to a remote machine opened by a user.
+- Workspace settings - Apply to the open folder or workspace.
+- Workspace Folder settings - Apply to a specific folder of a multi-root workspace.
+- Language-specific default settings - These are language-specific default values that can be contributed by extensions.
+- Language-specific user settings - Same as User settings, but specific to a language.
+- Language-specific remote settings - Same as Remote settings, but specific to a language.
+- Language-specific workspace settings - Same as Workspace settings, but specific to a language.
+- Language-specific workspace folder settings - Same as Workspace Folder settings, but specific to a language.
+- Policy settings - Set by the system administrator, these values always override other setting values.
