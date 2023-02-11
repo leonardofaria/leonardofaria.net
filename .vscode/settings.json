@@ -1,0 +1,11 @@
+{
+  // Override default formatter to the ESLint one
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // Formatting using Prettier for JavaScript, overrides VSCode default.
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true
+}
