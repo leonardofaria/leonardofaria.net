@@ -56,7 +56,7 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
                 className="text-lg lg:mr-4"
                 // eslint-disable-next-line react/no-danger
                 dangerouslySetInnerHTML={{
-                  __html: WEBSITE_DESCRIPTION.replace('. ', '<br />'),
+                  __html: WEBSITE_DESCRIPTION.split('. ').join('.<br/>'),
                 }}
               />
             </div>
