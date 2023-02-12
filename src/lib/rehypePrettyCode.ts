@@ -4,7 +4,7 @@ import { visit } from 'unist-util-visit';
 // div.BLOCK > pre.PRE > code.CODE
 const CODE_STYLES = {
   BLOCK:
-    'w-[100vw] relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] bg-gradient-to-b from-gray-50 to-white',
+    'w-[100vw] relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] bg-gradient-to-b from-gray-50 to-white overflow-scroll',
   TITLE:
     'max-w-3xl m-auto mb-0.5 bg-gray-100/10 px-3 py-1 font-mono text-xs text-gray-500',
   PRE: 'max-w-3xl m-auto my-2 py-4 font-mono text-lg bg-gradient-to-b from-gray-50 to-white rounded',
