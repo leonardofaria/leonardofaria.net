@@ -11,7 +11,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
-    "build:ogImages": "ts-node --esm lib/ogImages.ts"
+    "build:ogImages": "ts-node --esm src/lib/ogImages.ts"
   },
   "devDependencies": {
     "@types/node": "18.11.18",

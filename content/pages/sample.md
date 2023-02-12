@@ -2,7 +2,8 @@
 id: 9999
 title: Sample
 publishedAt: 2022-02-07 01:00:00
-type: Page
+type: Post
+ogImage: /images/og-images/9999.png
 permalink: /sample
 description: Sample page for styling purposes
 ---
