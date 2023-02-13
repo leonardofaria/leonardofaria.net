@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import Webmentions from 'src/components/Webmentions/Webmentions';
 import { CONTENT_STYLES, FULL_WIDTH_WRAPPER } from 'src/lib/rehypePrettyCode';
-import { SegmentedControl } from 'src/components/UI/SegmentedControl';
+import { SegmentedControl } from 'src/components/UI';
 
 const Disqus = dynamic(() => import('../../Embed/Disqus'), { ssr: false });
 
