@@ -9,6 +9,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      translate: {
+        fullx2: '200%',
+        fullx3: '300%',
+      },
       fontFamily: {
         sans: ['var(--font-inter)', ...fontFamily.sans],
       },

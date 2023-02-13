@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { FaHeart, FaComment } from 'react-icons/fa';
 import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 import type { WebMention } from '../../lib/types';
 import useWindowSize from '../../lib/hooks/useWindowSize';
@@ -48,7 +47,7 @@ function Mention({ originalMention }: { originalMention: WebMention }) {
   function renderDate() {
     return (
       <small>
-        <a className="ml-2 no-underline" href={mention.data.author?.url}>
+        <a className="ml-2 underline" href={mention.data.author?.url}>
           {new Date(mention.verified_date).toLocaleDateString('en-US', {
             month: 'short',
             day: '2-digit',
@@ -100,18 +99,18 @@ export default function Webmentions({ url }: { url: string }) {
 
   const LIMIT_AVATARS = isDesktop ? 20 : 4;
   const [mentions, setMentions] = useState<WebMention[]>();
-  const [showLikes, setShowLikes] = useState(false);
-  const [showInteractions, setShowInteractions] = useState(false);
+
   let likesTotal = 0;
   const uniqueAuthorUrls: string[] = [];
 
   mentions?.forEach((mention) => {
     if (mention.activity.type === 'like') {
       likesTotal += 1;
-    }
-    const authorUrl = mention.data.author?.photo;
-    if (authorUrl && !uniqueAuthorUrls.includes(authorUrl)) {
-      uniqueAuthorUrls.push(authorUrl);
+
+      const authorUrl = mention.data.author?.photo;
+      if (authorUrl && !uniqueAuthorUrls.includes(authorUrl)) {
+        uniqueAuthorUrls.push(authorUrl);
+      }
     }
   });
 
@@ -135,23 +134,8 @@ export default function Webmentions({ url }: { url: string }) {
 
   return (
     <>
-      <header className="flex items-center">
-        <button
-          className="mr-6 flex items-center rounded-md bg-charade-100 p-3 transition duration-300 ease-in-out hover:bg-white"
-          type="button"
-          onClick={() => setShowLikes(!showLikes)}
-        >
-          <FaHeart className="mr-2 h-6 w-6" />
-          <span className="mr-1">{likesTotal}</span>
-        </button>
-        <button
-          className="mr-6 flex items-center rounded-md bg-charade-100 p-3 transition duration-300 ease-in-out hover:bg-white"
-          type="button"
-          onClick={() => setShowInteractions(!showInteractions)}
-        >
-          <FaComment className="mr-2 h-6 w-6" />
-          <span className="mr-1">{interactionsTotal}</span>
-        </button>
+      <div className="flex items-center">
+        <h4 className={`${CONTENT_STYLES.h4} mr-3`}>{likesTotal} Likes</h4>
         <div className="grow">
           <div className="flex -space-x-2 overflow-hidden">
             {uniqueAuthorUrls.map((authorUrl, index) => {
@@ -181,37 +165,20 @@ export default function Webmentions({ url }: { url: string }) {
             })}
           </div>
         </div>
-      </header>
+      </div>
 
-      {showInteractions && (
-        <>
-          <h4 className={CONTENT_STYLES.h4}>Replies & Shares</h4>
+      <h4 className={CONTENT_STYLES.h4}>
+        {interactionsTotal} Replies & Shares
+      </h4>
 
-          <ul>
-            {mentions?.map((mention) => {
-              if (mention.activity.type === 'like') {
-                return null;
-              }
-              return <Mention key={mention.id} originalMention={mention} />;
-            })}
-          </ul>
-        </>
-      )}
-
-      {showLikes && (
-        <>
-          <h4 className={CONTENT_STYLES.h4}>Likes</h4>
-
-          <ul>
-            {mentions?.map((mention) => {
-              if (mention.activity.type !== 'like') {
-                return null;
-              }
-              return <Mention key={mention.id} originalMention={mention} />;
-            })}
-          </ul>
-        </>
-      )}
+      <ul>
+        {mentions?.map((mention) => {
+          if (mention.activity.type === 'like') {
+            return null;
+          }
+          return <Mention key={mention.id} originalMention={mention} />;
+        })}
+      </ul>
     </>
   );
 }
