@@ -182,6 +182,35 @@ export function rehypePrettyCodeClasses() {
       }
     );
 
+    // Append icons to links
+    // visit(
+    //   tree,
+    //   (node: any) =>
+    //     Boolean(
+    //       node.tagName === 'p' &&
+    //         node.children?.length > 1 &&
+    //         node.children.some((n: any) => n.tagName === 'a')
+    //     ),
+    //   (node: any) => {
+    //     node.children = node.children.map((n: any) => {
+    //       if (
+    //         n.tagName === 'a' &&
+    //         // eslint-disable-next-line no-prototype-builtins
+    //         n.properties.hasOwnProperty('href') &&
+    //         n.properties.href.includes('github.com')
+    //       ) {
+    //         n.children = n.children.map((anchorNode: any) => {
+    //           return anchorNode;
+    //         });
+    //       }
+
+    //       return n;
+    //     });
+
+    //     return node;
+    //   }
+    // );
+
     // Related to code highlighting
     visit(
       tree,
