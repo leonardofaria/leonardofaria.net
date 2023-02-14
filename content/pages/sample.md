@@ -21,10 +21,15 @@ Custom div
 The following <a href="/" className="text-red-500">HTML</a> `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the [lowest](/).
 
 # H1
+
 ## H2
+
 ### H3
+
 #### H4
+
 ##### H5
+
 ###### H6
 
 ## Paragraph
@@ -40,7 +45,7 @@ The blockquote element represents content that is quoted from another source, op
 #### Blockquote without attribution
 
 > Tiam, ad mint andaepu dandae nostion secatur sequo quae.
-> **Note** that you can use *Markdown syntax* within a blockquote.
+> **Note** that you can use _Markdown syntax_ within a blockquote.
 
 #### Blockquote with attribution
 
@@ -60,9 +65,9 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 #### Inline Markdown within tables
 
-| Inline&nbsp;&nbsp;&nbsp;     | Markdown&nbsp;&nbsp;&nbsp;  | In&nbsp;&nbsp;&nbsp;                | Table      |
-| ---------- | --------- | ----------------- | ---------- |
-| *italics*  | **bold**  | ~~strikethrough~~&nbsp;&nbsp;&nbsp; | `code`     |
+| Inline&nbsp;&nbsp;&nbsp; | Markdown&nbsp;&nbsp;&nbsp; | In&nbsp;&nbsp;&nbsp;                | Table  |
+| ------------------------ | -------------------------- | ----------------------------------- | ------ |
+| _italics_                | **bold**                   | ~~strikethrough~~&nbsp;&nbsp;&nbsp; | `code` |
 
 ## Code Blocks
 
@@ -73,27 +78,28 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Example HTML5 Document</title>
-</head>
-<body>
-  <p>Test</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Example HTML5 Document</title>
+  </head>
+  <body>
+    <p>Test</p>
+  </body>
 </html>
 ```
+
 ##### Example 2
 
 ```html title="example.html" showLineNumbers {3-6}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Example HTML5 Document</title>
-</head>
-<body>
-  <p>Test</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Example HTML5 Document</title>
+  </head>
+  <body>
+    <p>Test</p>
+  </body>
 </html>
 ```
 
@@ -107,13 +113,13 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 #### Unordered List
 
-* List item
-* Another item
-* And another item
+- List item
+- Another item
+- And another item
 
 #### Nested list
 
-* Item
+- Item
   1. First Sub-item
   2. Second Sub-item
 
@@ -141,7 +147,7 @@ Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and ot
 
 <Playground files={
 {
-    '/App.tsx': `export default function App() { 
+'/App.tsx': `export default function App() { 
   return (
     <>
       <h1>VANCOUVER</h1>
@@ -151,41 +157,42 @@ Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and ot
 };`,
 
     '/styles.css': `
+
 h1 {
-  background: #000;
-  color: #fff;
-  mix-blend-mode: multiply;
-  
-  padding: 2%;
+background: #000;
+color: #fff;
+mix-blend-mode: multiply;
+
+padding: 2%;
 }
 
 h2 {
-  background: #fff;
-  color: #000;
-  mix-blend-mode: color-dodge;
-  
-  padding: 2%;
+background: #fff;
+color: #000;
+mix-blend-mode: color-dodge;
+
+padding: 2%;
 }
 
 body {
-  background: url('https://images.unsplash.com/photo-1541369866856-c4f5aa6f5807?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8dmFuY291dmVyfGVufDB8fDB8&auto=format&fit=crop&w=900&q=60') center center no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  
-  font-family: sans-serif;
-  height: 100vh;
+background: url('https://images.unsplash.com/photo-1541369866856-c4f5aa6f5807?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8dmFuY291dmVyfGVufDB8fDB8&auto=format&fit=crop&w=900&q=60') center center no-repeat;
+background-size: cover;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+
+font-family: sans-serif;
+height: 100vh;
 }
 `,
-  }
+}
 } />
 
 ## Video
 
-### YouTube 
+### YouTube
 
 <Embed type="YouTube" id="r0ji8FDNTj0" />
 
