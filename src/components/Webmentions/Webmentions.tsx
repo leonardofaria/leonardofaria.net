@@ -1,4 +1,13 @@
 import { useState, useEffect } from 'react';
+import {
+  FaTwitter,
+  FaLinkedin,
+  FaEnvelope,
+  FaReddit,
+  FaHackerNews,
+  FaWhatsapp,
+  FaTelegram,
+} from 'react-icons/fa';
 import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 import type { WebMention } from '../../lib/types';
 import useWindowSize from '../../lib/hooks/useWindowSize';
@@ -27,6 +36,72 @@ const getUrlPermutations = (url: string) => {
 
   return urls;
 };
+
+function Share({ url, title }: { url: string; title: string }) {
+  const classes = 'mr-2 h-4 w-4 fill-current';
+
+  const shareOptions = [
+    {
+      background: 'bg-email',
+      name: 'Email',
+      icon: <FaEnvelope className={classes} />,
+      link: `something?url=${url}&title=${title}`,
+    },
+    {
+      background: 'bg-twitter',
+      name: 'Twitter',
+      icon: <FaTwitter className={classes} />,
+      link: '#',
+    },
+    {
+      background: 'bg-linkedin',
+      name: 'Linkedin',
+      icon: <FaLinkedin className={classes} />,
+      link: '#',
+    },
+    {
+      background: 'bg-reddit',
+      name: 'Reddit',
+      icon: <FaReddit className={classes} />,
+      link: '#',
+    },
+    {
+      background: 'bg-hackernews',
+      name: 'Hacker News',
+      icon: <FaHackerNews className={classes} />,
+      link: '#',
+    },
+    {
+      background: 'bg-whatsapp',
+      name: 'Whatsapp',
+      icon: <FaWhatsapp className={classes} />,
+      link: '#',
+    },
+    {
+      background: 'bg-telegram',
+      name: 'Telegram',
+      icon: <FaTelegram className={classes} />,
+      link: '#',
+    },
+  ];
+
+  return (
+    <div className="my-1 flex flex-wrap items-center gap-3">
+      <span className="mr-2">Share: </span>
+      {shareOptions.map((shareOption) => {
+        return (
+          <a
+            className={`flex items-center rounded-md px-3 py-2 text-xs font-bold text-white no-underline hover:opacity-75 ${shareOption.background}`}
+            href={shareOption.link}
+            key={shareOption.name}
+          >
+            {shareOption.name}
+          </a>
+        );
+      })}
+    </div>
+  );
+}
 
 function Mention({ originalMention }: { originalMention: WebMention }) {
   const mention = originalMention;
@@ -93,7 +168,13 @@ function Mention({ originalMention }: { originalMention: WebMention }) {
   );
 }
 
-export default function Webmentions({ url }: { url: string }) {
+export default function Webmentions({
+  url,
+  title,
+}: {
+  url: string;
+  title?: string;
+}) {
   const { width } = useWindowSize();
   const isDesktop = width >= LARGE_SCREEN_BREAKPOINT;
 
@@ -131,6 +212,11 @@ export default function Webmentions({ url }: { url: string }) {
         setMentions(result.links);
       });
   }, [url]);
+
+  // TODO: unhide this
+  if (mentions?.length === -1) {
+    return <Share title={title || ''} url={url} />;
+  }
 
   return (
     <>
