@@ -15,7 +15,7 @@ What happens after you are a Senior Engineer in a startup? How do you align your
 
 ![Architect's Weekly Calendar](/wp-content/uploads/2021/11/staff-eng-cover.png)
 
-In the last five years, I have worked in different roles at Thinkific (by the way, [we are hiring](http://bit.ly/thnk-careers)): I started as a Full-stack Developer, and then I was Team Lead for three years. The Team Lead role was great, and I had great support from the organization, but it was not for me.
+In the last five years, I have worked in different roles at Thinkific: I started as a Full-stack Developer, and then I was Team Lead for three years. The Team Lead role was great, and I had great support from the organization, but it was not for me.
 
 Moving back to a Technical track of my career, I found the Staff Engineer book written by Wilson Larson, which helped me a lot how to see my role and my potential. The book covers the different types of Staff+ titles we see in this industry (Staff Engineer, Principal Engineer, Architect, and others) and contains interviews with fourteen professionals who share their career trajectories.
 
@@ -25,7 +25,7 @@ Next, I will share a few topics of the book along with my personal experiences.
 
 ## Archetypes
 
-The book starts by identifying the different archetypes of Staff Engineers. I previously noticed how my colleagues act in different ways in their projects and teams: 
+The book starts by identifying the different archetypes of Staff Engineers. I previously noticed how my colleagues act in different ways in their projects and teams:
 
 - **Tech Lead** guides the approach and execution of a particular team;
 - **Architect** is responsible for the direction, quality, and strategy within an area;
@@ -48,7 +48,7 @@ This is not a promotion requirement, but delivering a Staff project is a popular
 
 - Complex and ambiguous: the project might start with only one unclear statement, and from there, you'll have to identify a concrete approach that works;
 - Numerous and divided stakeholders: the complexity can also happen in the organizational alignment around both the problem and the solution;
-- Highly visible: the kind of project that leadership talks about it in their all-company meetings. Any failure or success will be visible. 
+- Highly visible: the kind of project that leadership talks about it in their all-company meetings. Any failure or success will be visible.
 
 I didn't have a Staff project to move to an architecture role; however, I delivered a complex project with the characteristics above during my Team Lead years.
 
@@ -60,11 +60,11 @@ The promotion packet is a living document. Review it with your manager once you 
 
 ### Finding your sponsor
 
-_"The most important member of the team guiding your promotion is you yourself"_ is a quote I couldn't agree more. Nobody will drive your career for you, but it is crucial to find people that will support your journey. 
+_"The most important member of the team guiding your promotion is you yourself"_ is a quote I couldn't agree more. Nobody will drive your career for you, but it is crucial to find people that will support your journey.
 
 Your direct manager will be the person to advocate for your promotion and the one having honest conversations about the gaps you need to fill to become a better professional. They may/may not have worked with someone aspiring to the same careers goals that you have, and for that, invest in other relationships.
 
-### Get in the room, and stay there 
+### Get in the room, and stay there
 
 This chapter is great no matter the area you work or the title you have. The content is [available online](https://staffeng.com/guides/getting-in-the-room) and here is a short summary of the main points:
 
@@ -86,11 +86,11 @@ The last topic about the book I want to highlight here is visibility. Visibility
 
 - **Executive visibility:** develop relationships beyond your manager;
 - **External visibility:** have a blog/podcast and speak in a meetup/conference creates visibility for yourself and your work;
-- **Internal visibility:** work on things that matter is the best way to create internal visibility, however a few other things that can help you, including writing long-lived documents (ex. architecture docs), leading company events (ex. architecture reviews, company all-hands), contributing to your company's blog and attending/hosting office hours for your team or organization. 
+- **Internal visibility:** work on things that matter is the best way to create internal visibility, however a few other things that can help you, including writing long-lived documents (ex. architecture docs), leading company events (ex. architecture reviews, company all-hands), contributing to your company's blog and attending/hosting office hours for your team or organization.
 
 I am a true believer in external visibility; otherwise, I wouldn't be writing about development here since 2005 or speaking at meetups (even without a polished English) since 2016. In different organizations I worked with, I had written docs, led company events, and attended/hosted events.
 
-## Stories 
+## Stories
 
 Each story of a Staff or Principal is fascinating to read. My favourite snippet, which is very similar to what I was doing before reading the book, is from [Katie Sylor-Miller](https://sylormiller.com):
 
@@ -98,6 +98,6 @@ Each story of a Staff or Principal is fascinating to read. My favourite snippet,
 
 ## Conclusions
 
-Figuring out what to do in our careers is hard, but there is help out there. For a while, I stayed in the "manager path" then I returned to the "technical path" with the support of my [great] manager and research. 
+Figuring out what to do in our careers is hard, but there is help out there. For a while, I stayed in the "manager path" then I returned to the "technical path" with the support of my [great] manager and research.
 
 I hope that the experience I shared here and Larson's book can help you identify how to navigate your career development. Share your thoughts in the comments!

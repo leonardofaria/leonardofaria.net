@@ -12,9 +12,10 @@ tags:
   - git
   - software
 ---
-I work at Thinkific with 20+ other developers (we are [hiring](http://bit.ly/thnk-eng-team-lead) [for](http://bit.ly/thnk-eng-lead) [multiple](http://bit.ly/thnk-senior-front-end-engineer) positions) in different codebases. GitHub is part of our toolkit, and I decided to write a post sharing a few Chrome extensions, integrations and third-party apps that help me be productive as an individual contributor and organized as code reviewer and team lead.
 
-## Chrome extensions 
+I work at Thinkific with 20+ other developers in different codebases. GitHub is part of our toolkit, and I decided to write a post sharing a few Chrome extensions, integrations and third-party apps that help me be productive as an individual contributor and organized as code reviewer and team lead.
+
+## Chrome extensions
 
 ### [Refined GitHub](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
 
@@ -52,7 +53,7 @@ Pull Panda can also spot bottlenecks, show who are the ones most pushing/reviewi
 
 ### [Gitify](https://www.gitify.io/)
 
-Gitify lives in your Mac menu bar and it is quite simple to understand. If the icon is green, you have a notification! It is also cool to mention the app is [open-source](https://github.com/manosim/gitify) (Electron-based, if you are curious). 
+Gitify lives in your Mac menu bar and it is quite simple to understand. If the icon is green, you have a notification! It is also cool to mention the app is [open-source](https://github.com/manosim/gitify) (Electron-based, if you are curious).
 
 ### [Quests](https://steamclock.com/quests/)
 

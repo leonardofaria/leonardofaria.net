@@ -19,14 +19,14 @@ Last year I built a tool to visualize data from Emergenetics Profile. In this po
 
 **Disclaimer**: I am not affiliated with Emergenetics. I am genuinely curious about psychology and how we interact with each other, at work and outside work.
 
-## What is Emergenetics 
+## What is Emergenetics
 
-My previous company uses Emergenetics assessments as a way to learn how to work better. According to [Wikipedia](https://en.wikipedia.org/wiki/Emergenetics_International), _Emergenetics International uses psychometric research and behavioral studies to advise and consult with businesses and individuals on how to assess human capital_. Their Emergenetics Profile is an _assessment test to designate individuals by four thinking attributes, analytical, structural, social and conceptual, and three behavioral attributes, expressiveness, assertiveness and flexibility._ 
+My previous company uses Emergenetics assessments as a way to learn how to work better. According to [Wikipedia](https://en.wikipedia.org/wiki/Emergenetics_International), _Emergenetics International uses psychometric research and behavioral studies to advise and consult with businesses and individuals on how to assess human capital_. Their Emergenetics Profile is an _assessment test to designate individuals by four thinking attributes, analytical, structural, social and conceptual, and three behavioral attributes, expressiveness, assertiveness and flexibility._
 
 An Emergenetics Profile looks like this ([full width](/pub/emergenetics-sample-profile.pdf)):
 
 <div className="full-width">
-  <iframe src="/pub/emergenetics-sample-profile.pdf" className="w-full"></iframe>
+  <iframe src="/pub/emergenetics-sample-profile.pdf" className="w-full" loading="lazy"></iframe>
 </div>
 
 From what I understand (from an analytical/structural brain), there is no right or wrong profile. People are different and as more diverse they are, the better. With the information of the profile, you can understand better your signs of brilliance, challenges and how you prefer others to communicate with you.
@@ -57,7 +57,7 @@ The Directory page lists all employees and their basic info (title, division, de
 
 ### Map
 
-Since I also had the name of the city, state and country of employees, I thought it would be cool to show where employees live in a [map](https://emergenetics-explorer.leonardofaria.net/world). Since the company became remote-first, people liked this a lot to get to know where their colleagues live. 
+Since I also had the name of the city, state and country of employees, I thought it would be cool to show where employees live in a [map](https://emergenetics-explorer.leonardofaria.net/world). Since the company became remote-first, people liked this a lot to get to know where their colleagues live.
 
 <video className="h-auto" controls autoPlay="autoPlay">
   <source src="/wp-content/uploads/2022/04/emergenetics-explorer-world.mp4" type="video/mp4" />
