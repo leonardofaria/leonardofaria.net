@@ -22,6 +22,7 @@ module.exports = {
         github: '#333333',
         linkedin: '#0a66c2',
         email: '#000000',
+        buymeacoffee: '#fbdb04',
         rss: '#ff6600',
         charade: {
           50: '#F4F4F5',

@@ -40,7 +40,7 @@ export function Interactions({ title, url }: { title: string; url: string }) {
           <>
             <h3 className={CONTENT_STYLES.h3}>Webmentions</h3>
 
-            <Webmentions url={url} />
+            <Webmentions title={title} url={url} />
           </>
         )}
 

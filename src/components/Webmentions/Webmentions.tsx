@@ -1,13 +1,6 @@
 import { useState, useEffect } from 'react';
-import {
-  FaTwitter,
-  FaLinkedin,
-  FaEnvelope,
-  FaReddit,
-  FaHackerNews,
-  FaWhatsapp,
-  FaTelegram,
-} from 'react-icons/fa';
+import { FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { SiBuymeacoffee } from 'react-icons/si';
 import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 import type { WebMention } from '../../lib/types';
 import useWindowSize from '../../lib/hooks/useWindowSize';
@@ -38,60 +31,43 @@ const getUrlPermutations = (url: string) => {
 };
 
 function Share({ url, title }: { url: string; title: string }) {
-  const classes = 'mr-2 h-4 w-4 fill-current';
+  const iconClasses = 'mr-2 h-4 w-4 fill-current';
 
   const shareOptions = [
     {
-      background: 'bg-email',
-      name: 'Email',
-      icon: <FaEnvelope className={classes} />,
-      link: `something?url=${url}&title=${title}`,
-    },
-    {
       background: 'bg-twitter',
       name: 'Twitter',
-      icon: <FaTwitter className={classes} />,
-      link: '#',
+      icon: <FaTwitter className={iconClasses} />,
+      link: `https://twitter.com/intent/tweet?url=${url}&amp;text=${title}`,
     },
     {
       background: 'bg-linkedin',
       name: 'Linkedin',
-      icon: <FaLinkedin className={classes} />,
-      link: '#',
-    },
-    {
-      background: 'bg-reddit',
-      name: 'Reddit',
-      icon: <FaReddit className={classes} />,
-      link: '#',
-    },
-    {
-      background: 'bg-hackernews',
-      name: 'Hacker News',
-      icon: <FaHackerNews className={classes} />,
-      link: '#',
-    },
-    {
-      background: 'bg-whatsapp',
-      name: 'Whatsapp',
-      icon: <FaWhatsapp className={classes} />,
-      link: '#',
-    },
-    {
-      background: 'bg-telegram',
-      name: 'Telegram',
-      icon: <FaTelegram className={classes} />,
-      link: '#',
+      icon: <FaLinkedin className={iconClasses} />,
+      link: `https://www.linkedin.com/shareArticle?mini=true&amp;url=${url}&amp;title=${title}&amp;summary=${title}&amp;source=https%3A%2F%2Fleonardofaria.net`,
     },
   ];
 
+  const buttonClasses = `flex items-center rounded-md px-3 py-2 text-xs font-bold text-white no-underline hover:opacity-75`;
+
   return (
-    <div className="my-1 flex flex-wrap items-center gap-3">
-      <span className="mr-2">Share: </span>
+    <div className="mt-4 mb-2 flex flex-wrap items-center gap-3">
+      <span>Like this content? </span>
+
+      <a
+        className={`${buttonClasses} bg-buymeacoffee !text-black`}
+        href="https://buymeacoffee.com/leonardofaria"
+      >
+        <SiBuymeacoffee className={iconClasses} />
+        Buy me a coffee
+      </a>
+
+      <span>or share around: </span>
+
       {shareOptions.map((shareOption) => {
         return (
           <a
-            className={`flex items-center rounded-md px-3 py-2 text-xs font-bold text-white no-underline hover:opacity-75 ${shareOption.background}`}
+            className={`${buttonClasses} ${shareOption.background}`}
             href={shareOption.link}
             key={shareOption.name}
           >
@@ -173,7 +149,7 @@ export default function Webmentions({
   title,
 }: {
   url: string;
-  title?: string;
+  title: string;
 }) {
   const { width } = useWindowSize();
   const isDesktop = width >= LARGE_SCREEN_BREAKPOINT;
@@ -213,13 +189,14 @@ export default function Webmentions({
       });
   }, [url]);
 
-  // TODO: unhide this
-  if (mentions?.length === -1) {
+  if (mentions?.length === 0) {
     return <Share title={title || ''} url={url} />;
   }
 
   return (
     <>
+      <Share title={title || ''} url={url} />
+
       <div className="flex items-center">
         <h4 className={`${CONTENT_STYLES.h4} mr-3`}>{likesTotal} Likes</h4>
         <div className="grow">
