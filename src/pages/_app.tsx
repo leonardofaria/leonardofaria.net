@@ -1,4 +1,6 @@
 import '../styles/globals.css';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { Analytics } from '@vercel/analytics/react';
 import { DefaultSeo } from 'next-seo';
@@ -6,6 +8,7 @@ import { Inter } from '@next/font/google';
 import Script from 'next/script';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import AOS from 'aos';
 import { UMAMI_SITEID, UMAMI_URL } from '../lib/constants';
 import SEO from '../lib/next-seo.config';
 import { getAbsoluteURL } from '../lib/utils';
@@ -20,6 +23,16 @@ function MyApp({ Component, pageProps }: AppProps) {
   const searchParams = new URLSearchParams();
   searchParams.set('path', router.asPath);
   const ogImageUrl = getAbsoluteURL(`/api/thumbnail?${searchParams}`);
+
+  useEffect(() => {
+    AOS.init({
+      delay: 25,
+      duration: 400,
+      easing: 'ease-in-out',
+      offset: 20,
+      once: true,
+    });
+  }, []);
 
   return (
     <div className={`${inter.variable} flex min-h-screen flex-col font-sans`}>
