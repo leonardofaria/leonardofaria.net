@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import { FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FaTwitter, FaLinkedin, FaCopy } from 'react-icons/fa';
 import { SiBuymeacoffee } from 'react-icons/si';
 import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
+import useCopyToClipboard from 'src/lib/hooks/useCopyToClipboard';
 import type { WebMention } from '../../lib/types';
 import useWindowSize from '../../lib/hooks/useWindowSize';
 import { LARGE_SCREEN_BREAKPOINT } from '../../lib/constants';
@@ -31,24 +32,10 @@ const getUrlPermutations = (url: string) => {
 };
 
 function Share({ url, title }: { url: string; title: string }) {
-  const iconClasses = 'mr-2 h-4 w-4 fill-current';
-
-  const shareOptions = [
-    {
-      background: 'bg-twitter',
-      name: 'Twitter',
-      icon: <FaTwitter className={iconClasses} />,
-      link: `https://twitter.com/intent/tweet?url=${url}&amp;text=${title}`,
-    },
-    {
-      background: 'bg-linkedin',
-      name: 'Linkedin',
-      icon: <FaLinkedin className={iconClasses} />,
-      link: `https://www.linkedin.com/shareArticle?mini=true&amp;url=${url}&amp;title=${title}&amp;summary=${title}&amp;source=https%3A%2F%2Fleonardofaria.net`,
-    },
-  ];
-
-  const buttonClasses = `flex items-center rounded-md px-3 py-2 text-xs font-bold text-white no-underline hover:opacity-75`;
+  const [_value, copy] = useCopyToClipboard();
+  const [copyBgColor, setCopyBgColor] = useState('bg-gray-600');
+  const iconClasses = 'h-4 w-4 fill-current';
+  const buttonClasses = `flex gap-2 items-center rounded-md px-3 py-2 text-xs font-bold text-white no-underline hover:opacity-75 transition`;
 
   return (
     <div className="mt-4 mb-2 flex flex-wrap items-center gap-3">
@@ -64,17 +51,36 @@ function Share({ url, title }: { url: string; title: string }) {
 
       <span>or share around: </span>
 
-      {shareOptions.map((shareOption) => {
-        return (
-          <a
-            className={`${buttonClasses} ${shareOption.background}`}
-            href={shareOption.link}
-            key={shareOption.name}
-          >
-            {shareOption.name}
-          </a>
-        );
-      })}
+      <button
+        className={`${buttonClasses} ${copyBgColor}`}
+        type="button"
+        onClick={() => {
+          copy(url);
+          setCopyBgColor('bg-teal-600');
+          setTimeout(() => {
+            setCopyBgColor('bg-gray-600');
+          }, 2000);
+        }}
+      >
+        <FaCopy className={iconClasses} />
+        <span className="hidden lg:flex">Share URL</span>
+      </button>
+
+      <a
+        className={`${buttonClasses} bg-twitter`}
+        href={`https://twitter.com/intent/tweet?url=${url}&amp;text=${title}`}
+      >
+        <FaTwitter className={iconClasses} />
+        <span className="hidden lg:flex">Twitter</span>
+      </a>
+
+      <a
+        className={`${buttonClasses} bg-linkedin`}
+        href={`https://twitter.com/intent/tweet?url=${url}&amp;text=${title}`}
+      >
+        <FaLinkedin className={iconClasses} />
+        <span className="hidden lg:flex">Linkedin</span>
+      </a>
     </div>
   );
 }
