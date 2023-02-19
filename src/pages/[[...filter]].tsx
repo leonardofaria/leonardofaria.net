@@ -62,7 +62,7 @@ export const getStaticProps: GetStaticProps<{
 
   if (currentFilters.type === 'home') {
     posts = [...allMicroposts, ...allPosts].filter((p) => {
-      if (parseInt(p.year, 10) >= 2020) {
+      if (parseInt(p.year, 10) >= 2021) {
         return true;
       }
       return false;
