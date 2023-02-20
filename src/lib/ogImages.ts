@@ -3,7 +3,7 @@ import { readFile } from 'fs/promises';
 // @ts-ignore
 import lineReplace from 'line-replace';
 
-import path from 'path';
+import path, { parse } from 'path';
 import matter from 'gray-matter';
 
 const BASE_URL = 'http://localhost:3000';
@@ -24,7 +24,7 @@ function getAllMarkdownFiles(dirPath: string, arrayOfFiles: string[]) {
   });
 
   return arrayOfFiles
-    .filter((file) => file.includes('.md'))
+    .filter((file) => file.includes('.md') || file.includes('.mdx'))
     .sort()
     .reverse();
 }
@@ -37,20 +37,24 @@ async function processMarkdownFiles(files: string[]) {
     // eslint-disable-next-line no-await-in-loop
     const data = await readFile(file);
     const {
-      data: { id, permalink, ogImage },
+      data: { id, permalink, type, ogImage },
     } = matter(data);
 
     if (!existsSync(`./public/${ogImage}`)) {
-      const ogImagePath = `/images/og-images/${id}.png`;
-      console.log(`${permalink} - og:image not found`);
+      const slug = parse(file).name;
+      const filename = type === 'Post' ? id : slug;
+      const url = type === 'Post' ? permalink : `/microblog/${slug}`;
+
+      const ogImagePath = `/images/og-images/${filename}.png`;
+      console.log(`${filename} - og:image not found`);
       // eslint-disable-next-line no-await-in-loop
-      await visitPageAndScreenshot(browser, permalink, ogImagePath);
+      await visitPageAndScreenshot(browser, `${BASE_URL}${url}`, ogImagePath);
 
       if (!ogImage) {
         lineReplace({
           file,
           line: 5,
-          text: `type: Post\nogImage: ${ogImagePath}`,
+          text: `type: ${type}\nogImage: ${ogImagePath}`,
           addNewLine: true,
           callback: () => {
             console.log(`${file} updated with open graph image`);
@@ -67,21 +71,29 @@ async function processMarkdownFiles(files: string[]) {
 
 async function visitPageAndScreenshot(
   browser: any,
-  permalink: string,
+  url: string,
   ogImagePath: string
 ) {
-  const url = `${BASE_URL}${permalink}`;
-  console.log(`Visiting ${url}`);
-  const page = await browser.newPage();
+  try {
+    console.log(`Visiting ${url}`);
+    const page = await browser.newPage();
 
-  await page.setViewport({ width: 1200, height: 630, deviceScaleFactor: 1.5 });
-  await page.goto(url);
-  await page.screenshot({
-    type: 'png',
-    path: `./public${ogImagePath}`,
-  });
+    await page.setViewport({
+      width: 1200,
+      height: 630,
+      deviceScaleFactor: 1.5,
+    });
+    await page.goto(url);
+    await page.screenshot({
+      type: 'png',
+      path: `./public${ogImagePath}`,
+    });
 
-  console.log('Screenshot saved');
+    console.log('Screenshot saved');
+  } catch (error) {
+    console.error(`Error visiting: ${url}`);
+    console.log(error);
+  }
 }
 
 async function launchBrowser() {
