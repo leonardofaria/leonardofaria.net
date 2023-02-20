@@ -18,9 +18,11 @@ export function Interactions({ title, url }: { title: string; url: string }) {
       className={`${FULL_WIDTH_WRAPPER} bg-gradient-to-b from-charade-50 to-white`}
     >
       <div className="mx-auto max-w-3xl p-6 lg:px-0">
-        <div className="flex items-center justify-between">
-          <h2 className={`${CONTENT_STYLES.h2} mr-2`}>Interactions</h2>
-          <div className="w-72">
+        <div className="flex flex-col flex-wrap items-center justify-between lg:flex-row">
+          <h2 className={`${CONTENT_STYLES.h2} mr-2 self-start lg:self-center`}>
+            Interactions
+          </h2>
+          <div className="w-72 self-end lg:self-center">
             <SegmentedControl
               items={[
                 {

@@ -27,7 +27,7 @@ export function PostsByYear({
               data-aos-delay={25 * i}
               key={slug}
             >
-              <div className="absolute -inset-4 z-0 scale-95 rounded bg-white opacity-0 transition group-hover:scale-100 group-hover:opacity-100" />
+              <div className="absolute -inset-4 z-0 hidden scale-95 rounded bg-white opacity-0 transition group-hover:scale-100 group-hover:opacity-100 lg:block" />
 
               <span className="relative z-10 tracking-tight">
                 <Link className="no-underline" href={permalink}>
