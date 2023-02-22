@@ -40,13 +40,13 @@ async function processMarkdownFiles(files: string[]) {
       data: { id, permalink, type, ogImage },
     } = matter(data);
 
-    if (!existsSync(`./public/${ogImage}`)) {
-      const slug = parse(file).name;
-      const filename = type === 'Post' ? id : slug;
-      const url = type === 'Post' ? permalink : `/microblog/${slug}`;
+    const slug = parse(file).name;
+    const filename = type === 'Post' ? id : slug;
+    const url = type === 'Post' ? permalink : `/microblog/${slug}`;
 
+    if (!existsSync(`./public/${ogImage}`)) {
       const ogImagePath = `/images/og-images/${filename}.png`;
-      console.log(`${filename} - og:image not found`);
+      console.log(`${filename} - image not found`);
       // eslint-disable-next-line no-await-in-loop
       await visitPageAndScreenshot(browser, `${BASE_URL}${url}`, ogImagePath);
 
@@ -61,8 +61,9 @@ async function processMarkdownFiles(files: string[]) {
           },
         });
       }
+      console.log('\n');
     } else {
-      // console.log(`${permalink} - og:image found`);
+      console.log(`${filename} - og:image found`);
     }
   }
 
@@ -75,7 +76,7 @@ async function visitPageAndScreenshot(
   ogImagePath: string
 ) {
   try {
-    console.log(`Visiting ${url}`);
+    console.log(`  Visiting ${url}`);
     const page = await browser.newPage();
 
     await page.setViewport({
@@ -89,9 +90,9 @@ async function visitPageAndScreenshot(
       path: `./public${ogImagePath}`,
     });
 
-    console.log('Screenshot saved');
+    console.log('  Screenshot saved');
   } catch (error) {
-    console.error(`Error visiting: ${url}`);
+    console.error(`  Error visiting: ${url}`);
     console.log(error);
   }
 }
