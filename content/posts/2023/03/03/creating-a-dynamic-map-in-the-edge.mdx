@@ -1,0 +1,23 @@
+---
+id: 2237
+title: Creating a dynamic map in the edge
+publishedAt: 2023-03-03T18:00:00-08:00
+type: Post
+permalink: /2023/03/03/creating-a-dynamic-map-in-the-edge
+categories:
+  - javascript
+tags:
+  - javascript
+description: Learn how to use Vercel Edge Middleware in Next.js and create a cool world map with your visitor location.
+---
+
+A few months ago, Wes Bos [tweeted](https://twitter.com/wesbos/status/1603090933347672066) _"Really neat feature of the new SvelteKit website, this dynamic SVG is rendered on the edge and changes based on your location"_, pointing to the following image:
+
+![Your location](https://kit.svelte.dev/edge.svg)
+
+Unless you are using a VPN, the image above should pin where you are. He also linked the [source code](https://github.com/sveltejs/kit/blob/3aecae584917b9e686cc6372f87e58a340d2099f/sites/kit.svelte.dev/src/routes/edge.svg/%2Bserver.js) and I decided to adapt it to Next.js. Let me detail what I did:
+
+1. Use a Middleware
+2. Install a few dependencies
+3. Create an endpoint to return a SVG
+4. Create a redirect
