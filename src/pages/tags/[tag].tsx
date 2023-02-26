@@ -1,8 +1,9 @@
-import { allPosts, type Post } from 'contentlayer/generated';
+import { allPosts } from 'contentlayer/generated';
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 import { Article, Footer, Header, Main, H1 } from 'src/components/UI';
+import type { SimplePost } from 'src/types/ContentLayer';
 import { getAllTags } from '../../components/CMS/shared';
 import { BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import { PostSummary } from '../../components/CMS/shared/PostSummary';
@@ -18,7 +19,7 @@ export const getStaticPaths = () => {
 };
 
 export const getStaticProps: GetStaticProps<{
-  posts: Post[];
+  posts: SimplePost[];
 }> = ({ params }) => {
   const posts = allPosts
     .filter((post) => {
@@ -31,11 +32,13 @@ export const getStaticProps: GetStaticProps<{
     })
     .reverse();
 
-  if (posts.length === 0) {
-    return { notFound: true };
-  }
+  const simplePosts = posts.map((post) => {
+    /* eslint-disable-next-line no-unused-vars */
+    const { body, _raw, ...rest } = post;
+    return { ...rest };
+  });
 
-  return { props: { posts } };
+  return { props: { posts: simplePosts as SimplePost[] } };
 };
 
 export default function TagPage({
