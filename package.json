@@ -8,6 +8,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "ts-node --esm src/lib/githubCommits.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",

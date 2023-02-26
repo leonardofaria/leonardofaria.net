@@ -39,5 +39,6 @@ next-env.d.ts
 .contentlayer
 
 public/rss.xml
+public/commits.json
 # Sentry
 .sentryclirc
