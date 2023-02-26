@@ -25,7 +25,7 @@ export const WIDE_WRAPPER =
   'max-w-[100vw] relative left-2/4 lg:max-w-4xl -translate-x-2/4';
 
 export const CONTENT_STYLES = {
-  a: 'transition duration-300 ease-in-out text-blue-600 hover:text-blue-800 underline',
+  a: 'transition duration-300 ease-in-out text-blue-600 hover:text-blue-800',
   blockquote: 'pl-5 border-l-4 border-charade-600',
   h1: 'my-2 font-semibold tracking-tighter text-charade-700 text-3xl lg:text-4xl',
   h2: 'my-2 font-semibold tracking-tighter text-charade-700 text-2xl lg:text-3xl',
@@ -182,34 +182,51 @@ export function rehypePrettyCodeClasses() {
       }
     );
 
-    // Append icons to links
-    // visit(
-    //   tree,
-    //   (node: any) =>
-    //     Boolean(
-    //       node.tagName === 'p' &&
-    //         node.children?.length > 1 &&
-    //         node.children.some((n: any) => n.tagName === 'a')
-    //     ),
-    //   (node: any) => {
-    //     node.children = node.children.map((n: any) => {
-    //       if (
-    //         n.tagName === 'a' &&
-    //         // eslint-disable-next-line no-prototype-builtins
-    //         n.properties.hasOwnProperty('href') &&
-    //         n.properties.href.includes('github.com')
-    //       ) {
-    //         n.children = n.children.map((anchorNode: any) => {
-    //           return anchorNode;
-    //         });
-    //       }
+    // Append icons to links ↗︎
+    visit(
+      tree,
+      (node: any) =>
+        Boolean(
+          node.tagName === 'p' &&
+            node.children?.length > 1 &&
+            node.children.some((n: any) => n.tagName === 'a')
+        ),
+      (node: any) => {
+        node.children = node.children.map((n: any) => {
+          // TODO: Add GitHub/YouTube icons
+          // if (
+          //   n.tagName === 'a' &&
+          //   // eslint-disable-next-line no-prototype-builtins
+          //   n.properties.hasOwnProperty('href') &&
+          //   n.properties.href.includes('github.com')
+          // ) {
+          //   n.children = n.children.map((anchorNode: any) => {
+          //     return anchorNode;
+          //   });
+          // }
 
-    //       return n;
-    //     });
+          if (
+            n.tagName === 'a' &&
+            // eslint-disable-next-line no-prototype-builtins
+            n.properties.hasOwnProperty('href') &&
+            n.properties.href.startsWith('https://') &&
+            !n.properties.href.includes('https://leonardofaria.net')
+          ) {
+            // console.log({ n });
+            n.children = n.children.map((anchorNode: any) => {
+              if (anchorNode.type === 'text') {
+                anchorNode.value = `${anchorNode.value} ↗︎`;
+              }
+              return anchorNode;
+            });
+          }
 
-    //     return node;
-    //   }
-    // );
+          return n;
+        });
+
+        return node;
+      }
+    );
 
     // Related to code highlighting
     visit(
