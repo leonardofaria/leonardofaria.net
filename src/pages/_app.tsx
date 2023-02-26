@@ -4,7 +4,8 @@ import { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { Analytics } from '@vercel/analytics/react';
 import { DefaultSeo } from 'next-seo';
-import { Inter } from '@next/font/google';
+/* eslint-disable-next-line camelcase */
+import { Inter, Fira_Code } from '@next/font/google';
 import Script from 'next/script';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -16,6 +17,11 @@ import { getAbsoluteURL } from '../lib/utils';
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
+});
+
+const firaCode = Fira_Code({
+  subsets: ['latin'],
+  variable: '--font-fira-code',
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -35,7 +41,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <div className={`${inter.variable} flex min-h-screen flex-col font-sans`}>
+    <div
+      className={`${inter.variable} ${firaCode.variable} flex min-h-screen flex-col font-sans`}
+    >
       <Head>
         <link href="https://webmention.io/leonardofaria.net/webmention" />
         <link

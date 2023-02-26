@@ -9,12 +9,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      // Segmented control component
       translate: {
         fullx2: '200%',
         fullx3: '300%',
       },
       fontFamily: {
         sans: ['var(--font-inter)', ...fontFamily.sans],
+        mono: ['var(--font-fira-code)', ...fontFamily.mono],
       },
       colors: {
         mastodon: '#3088d4',
