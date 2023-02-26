@@ -13,17 +13,14 @@
  */
 
 import * as Sentry from '@sentry/nextjs';
+import { NextPageContext } from 'next';
 import NextErrorComponent from 'next/error';
 
-function CustomErrorComponent({ statusCode }) {
-  // If you're using a Nextjs version prior to 12.2.1, uncomment this to
-  // compensate for https://github.com/vercel/next.js/issues/8592
-  // Sentry.captureUnderscoreErrorException(props);
-
+function CustomErrorComponent({ statusCode }: { statusCode: number }) {
   return <NextErrorComponent statusCode={statusCode} />;
 }
 
-CustomErrorComponent.getInitialProps = async (contextData) => {
+CustomErrorComponent.getInitialProps = async (contextData: NextPageContext) => {
   // In case this is running in a serverless function, await this in order to give Sentry
   // time to send the error before the lambda exits
   if (process.env.NODE_ENV === 'production') {
