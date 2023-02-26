@@ -1003,6 +1003,13 @@
   resolved "https://registry.npmjs.org/@types/aos/-/aos-3.0.4.tgz#fd0dce430f18d118081aaced2c79c30617b15818"
   integrity sha512-mna6Jd6bdK1NpwarLopGvXOgUoCfj0470IwLxuVOFDElTGI0JTd7xSGQ0AjbAEnHErC/b3fA9t2uB3IXVKmckA==
 
+"@types/d3-geo@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.npmjs.org/@types/d3-geo/-/d3-geo-3.0.3.tgz#535e5f24be13722964c52354301be09b752f5d6e"
+  integrity sha512-bK9uZJS3vuDCNeeXQ4z3u0E7OeJZXjUgzFdSOtNtMCJCLvDtWDwfpRVWlyt3y8EvRzI0ccOu9xlMVirawolSCw==
+  dependencies:
+    "@types/geojson" "*"
+
 "@types/debug@^4.0.0":
   version "4.1.7"
   resolved "https://registry.npmjs.org/@types/debug/-/debug-4.1.7.tgz#7cc0ea761509124709b8b2d1090d8f6c17aadb82"
@@ -1021,6 +1028,11 @@
   version "1.0.0"
   resolved "https://registry.npmjs.org/@types/estree/-/estree-1.0.0.tgz#5fb2e536c1ae9bf35366eed879e827fa59ca41c2"
   integrity sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==
+
+"@types/geojson@*":
+  version "7946.0.10"
+  resolved "https://registry.npmjs.org/@types/geojson/-/geojson-7946.0.10.tgz#6dfbf5ea17142f7f9a043809f1cd4c448cb68249"
+  integrity sha512-Nmh0K3iWQJzniTuPRcJn5hxXkfB1T1pgB89SBig5PlJQU5yocazeu4jATJlaA0GYFKWMqDdvYemoSnF2pXgLVA==
 
 "@types/hast@^2.0.0":
   version "2.3.4"
@@ -1106,6 +1118,21 @@
   version "0.16.2"
   resolved "https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
   integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
+
+"@types/topojson-client@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.npmjs.org/@types/topojson-client/-/topojson-client-3.1.1.tgz#d1396b2e79f530ef69bb162523cddf94576bd5a9"
+  integrity sha512-E4/Z2Xg56kVLRzYWem/6uOKVcVNqqxEqlWM9qCG2tCV1BxuzvvXC02/ELoGJWgtKkQhfycBPlMFEuTFdA/YiTg==
+  dependencies:
+    "@types/geojson" "*"
+    "@types/topojson-specification" "*"
+
+"@types/topojson-specification@*":
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/@types/topojson-specification/-/topojson-specification-1.0.2.tgz#e20df2c5a611e31f51d606473dbaccc1d90461c8"
+  integrity sha512-SGc1NdX9g3UGDp6S+p+uyG+Z8CehS51sUJ9bejA25Xgn2kkAguILk6J9nxXK+0M/mbTBN7ypMA7+4HVLNMJ8ag==
+  dependencies:
+    "@types/geojson" "*"
 
 "@types/unist@*", "@types/unist@^2.0.0", "@types/unist@^2.0.6":
   version "2.0.6"
@@ -1645,6 +1672,16 @@ comma-separated-tokens@^2.0.0:
   resolved "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-2.0.3.tgz#4e89c9458acb61bc8fef19f4529973b2392839ee"
   integrity sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==
 
+commander@2:
+  version "2.20.3"
+  resolved "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
+  integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
+
+commander@7:
+  version "7.2.0"
+  resolved "https://registry.npmjs.org/commander/-/commander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
+  integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
+
 commander@^4.0.0:
   version "4.1.1"
   resolved "https://registry.npmjs.org/commander/-/commander-4.1.1.tgz#9fd602bd936294e9e9ef46a3f4d6964044b18068"
@@ -1783,6 +1820,29 @@ csstype@^3.0.2, csstype@^3.0.6:
   version "3.1.1"
   resolved "https://registry.npmjs.org/csstype/-/csstype-3.1.1.tgz#841b532c45c758ee546a11d5bd7b7b473c8c30b9"
   integrity sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==
+
+"d3-array@1 - 3", "d3-array@2.5.0 - 3":
+  version "3.2.2"
+  resolved "https://registry.npmjs.org/d3-array/-/d3-array-3.2.2.tgz#f8ac4705c5b06914a7e0025bbf8d5f1513f6a86e"
+  integrity sha512-yEEyEAbDrF8C6Ob2myOBLjwBLck1Z89jMGFee0oPsn95GqjerpaOA4ch+vc2l0FNFFwMD5N7OCSEN5eAlsUbgQ==
+  dependencies:
+    internmap "1 - 2"
+
+d3-geo-projection@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/d3-geo-projection/-/d3-geo-projection-4.0.0.tgz#dc229e5ead78d31869a4e87cf1f45bd2716c48ca"
+  integrity sha512-p0bK60CEzph1iqmnxut7d/1kyTmm3UWtPlwdkM31AU+LW+BXazd5zJdoCn7VFxNCHXRngPHRnsNn5uGjLRGndg==
+  dependencies:
+    commander "7"
+    d3-array "1 - 3"
+    d3-geo "1.12.0 - 3"
+
+"d3-geo@1.12.0 - 3", d3-geo@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/d3-geo/-/d3-geo-3.1.0.tgz#74fd54e1f4cebd5185ac2039217a98d39b0a4c0e"
+  integrity sha512-JEo5HxXDdDYXCaWdwLRt79y7giK8SbhZJbFWXqbRTolCHFI5jRqteLzCsq51NKbUoX0PjBVSohxrx+NoOUujYA==
+  dependencies:
+    d3-array "2.5.0 - 3"
 
 d@1, d@^1.0.1:
   version "1.0.1"
@@ -3087,6 +3147,11 @@ internal-slot@^1.0.3:
     get-intrinsic "^1.1.3"
     has "^1.0.3"
     side-channel "^1.0.4"
+
+"internmap@1 - 2":
+  version "2.0.3"
+  resolved "https://registry.npmjs.org/internmap/-/internmap-2.0.3.tgz#6685f23755e43c524e251d29cbc97248e3061009"
+  integrity sha512-5Hh7Y1wQbvY5ooGgPbDaL5iYLAPzMTUrjMulskHLH6wnv/A+1q5rgEaiuqEjB+oxGXIVZs1FF+R/KPN3ZSQYYg==
 
 intersection-observer@^0.10.0:
   version "0.10.0"
@@ -5647,6 +5712,13 @@ toml@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/toml/-/toml-3.0.0.tgz#342160f1af1904ec9d204d03a5d61222d762c5ee"
   integrity sha512-y/mWCZinnvxjTKYhJ+pYxwD0mRLVvOtdS2Awbgxln6iEnt4rk0yBxeSBHkGJcPucRiG0e55mwWp+g/05rsrd6w==
+
+topojson-client@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.npmjs.org/topojson-client/-/topojson-client-3.1.0.tgz#22e8b1ed08a2b922feeb4af6f53b6ef09a467b99"
+  integrity sha512-605uxS6bcYxGXw9qi62XyrV6Q3xwbndjachmNxu8HWTtVPxZfEJN9fd/SZS1Q54Sn2y0TMyMxFj/cJINqGHrKw==
+  dependencies:
+    commander "2"
 
 tr46@~0.0.3:
   version "0.0.3"

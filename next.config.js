@@ -19,6 +19,16 @@ module.exports = withSentryConfig(
     // Disabled due to react-embed
     // reactStrictMode: true,
 
+    async rewrites() {
+      return [
+        {
+          // Hide /api from an image URL
+          source: '/edge.svg',
+          destination: '/api/edge.svg',
+        },
+      ];
+    },
+
     sentry: {
       // Use `hidden-source-map` rather than `source-map` as the Webpack `devtool`
       // for client-side builds. (This will be the default starting in
