@@ -92,7 +92,7 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
               className="group inline-flex items-center rounded-full bg-transparent px-4 py-1.5 transition hover:bg-white"
               href="/archives"
             >
-              All posts (2005 · {new Date().getFullYear()})
+              <span>All posts</span>
               <svg
                 aria-hidden="true"
                 className="mt-0.5 ml-2 -mr-1 stroke-black stroke-2"
