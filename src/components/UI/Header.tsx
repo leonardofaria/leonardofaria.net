@@ -44,6 +44,12 @@ export function Header() {
     scrollPosition > 0 ? 'scale-100 opacity-100' : 0
   }`;
 
+  const mobileBackgroundClasses = !isDesktop
+    ? `${
+        scrollPosition > 0 ? 'bg-white shadow' : ''
+      }  bg-opacity-80 backdrop-blur rounded-md mx-2 !-py-2`
+    : '';
+
   return (
     <>
       <div aria-hidden="true" className="fixed -z-10 h-screen w-screen">
@@ -58,7 +64,9 @@ export function Header() {
 
       <header className="fixed z-20 my-2 w-full">
         <div className="relative mx-auto max-w-7xl">
-          <div className="relative z-10 flex items-center justify-between px-6 py-4 md:justify-start md:space-x-10 lg:px-8">
+          <div
+            className={`relative z-10 flex items-center justify-between px-6 py-4 md:justify-start md:space-x-10 lg:px-8 ${mobileBackgroundClasses}`}
+          >
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <Link
                 className="flex shrink-0 text-3xl font-semibold leading-10 tracking-tighter text-amethyst-smoke-800"
@@ -77,6 +85,8 @@ export function Header() {
                 <nav className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
                   <SocialNav />
                 </nav>
+
+                <div className={backgroundClasses} />
               </>
             ) : (
               <ToggleButton setShowMenu={setShowMenu} showMenu={showMenu} />
@@ -98,8 +108,6 @@ export function Header() {
               </div>
             ) : null}
           </div>
-
-          <div className={backgroundClasses} />
         </div>
       </header>
     </>
