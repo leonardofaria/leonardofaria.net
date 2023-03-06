@@ -15,7 +15,16 @@ export function Footer() {
             >
               Made
             </a>{' '}
-            in the beautiful Vancouver, CA.&nbsp;
+            in the beautiful Vancouver.&nbsp;
+          </span>
+          <span className="text-center">
+            <a
+              className="underline transition duration-300 ease-in-out hover:text-blue-600"
+              href="https://creativecommons.org/licenses/by-nc/2.5/"
+            >
+              Some rights reserved
+            </a>
+            .&nbsp;
           </span>
           <span className="text-center">
             Last update:{' '}
