@@ -16,15 +16,15 @@ export function PostsByYear({
       </h2>
 
       <ol className="flex w-full list-none flex-col gap-y-8">
-        {posts.map((post, i) => {
+        {posts.map((post /* , i */) => {
           const { slug, permalink, title, publishedAt, tags, type } = post;
           const createdAt = new Date(publishedAt);
 
           return (
             <li
               className="group relative flex flex-col md:mr-4"
-              data-aos="fade-up"
-              data-aos-delay={25 * i}
+              // data-aos="fade-up"
+              // data-aos-delay={25 * i}
               key={slug}
             >
               <div className="absolute -inset-4 z-0 hidden scale-95 rounded bg-white opacity-0 transition group-hover:scale-100 group-hover:opacity-100 lg:block" />
