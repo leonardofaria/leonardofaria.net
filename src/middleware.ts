@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export const config = {
-  matcher: '/edge.svg',
+  matcher: ['/world-globe.svg', '/world-map.svg'],
 };
 
 export async function middleware(req: NextRequest) {

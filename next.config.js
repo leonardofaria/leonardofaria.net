@@ -23,8 +23,13 @@ module.exports = withSentryConfig(
       return [
         {
           // Hide /api from an image URL
-          source: '/edge.svg',
-          destination: '/api/edge.svg',
+          source: '/world-globe.svg',
+          destination: '/api/world-globe.svg',
+        },
+        {
+          // Hide /api from an image URL
+          source: '/world-map.svg',
+          destination: '/api/world-map.svg',
         },
       ];
     },
