@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse, GetServerSideProps } from 'next';
 
 import { geoPath } from 'd3-geo';
 /* @ts-ignore */
-import { geoCylindricalStereographic } from 'd3-geo-projection';
+import { geoCylindricalEqualArea } from 'd3-geo-projection';
 import * as topojson from 'topojson-client';
 import topology from './world-globe.svg/land-110m.json';
 
@@ -21,16 +21,12 @@ const FONT_SIZE = 36;
  * distance of the satellite observer from the earth
  * https://github.com/d3/d3-geo-projection#satellite_distance
  */
-const distance = 8;
+// const distance = 8;
 const w = 960;
 const h = 500;
-const radToDegree = 180 / Math.PI;
 
-const projection = geoCylindricalStereographic()
-  .distance(distance)
-  .clipAngle(Math.acos(1 / distance) * radToDegree)
+const projection = geoCylindricalEqualArea()
   .translate([w / 2, h / 2])
-  .scale(450)
   .precision(0.5);
 
 const path = geoPath(projection);
@@ -121,6 +117,6 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const svg = render(req.query as Query);
-
+  res.setHeader('Content-Type', 'image/svg+xml');
   res.end(svg);
 }

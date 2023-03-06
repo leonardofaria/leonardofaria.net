@@ -30,7 +30,7 @@ const projection = geoSatellite()
   .distance(distance)
   .clipAngle(Math.acos(1 / distance) * radToDegree)
   .translate([w / 2, h / 2])
-  .scale(450)
+  .scale(550)
   .precision(0.5);
 
 const path = geoPath(projection);
@@ -121,6 +121,6 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const svg = render(req.query as Query);
-
+  res.setHeader('Content-Type', 'image/svg+xml');
   res.end(svg);
 }

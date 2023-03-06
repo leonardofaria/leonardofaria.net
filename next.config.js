@@ -21,13 +21,12 @@ module.exports = withSentryConfig(
 
     async rewrites() {
       return [
+        // Hide /api from an image URL
         {
-          // Hide /api from an image URL
           source: '/world-globe.svg',
           destination: '/api/world-globe.svg',
         },
         {
-          // Hide /api from an image URL
           source: '/world-map.svg',
           destination: '/api/world-map.svg',
         },
