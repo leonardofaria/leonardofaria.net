@@ -85,8 +85,6 @@ export function Header() {
                 <nav className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
                   <SocialNav />
                 </nav>
-
-                <div className={backgroundClasses} />
               </>
             ) : (
               <ToggleButton setShowMenu={setShowMenu} showMenu={showMenu} />
@@ -108,6 +106,8 @@ export function Header() {
               </div>
             ) : null}
           </div>
+
+          {isDesktop && <div className={backgroundClasses} />}
         </div>
       </header>
     </>
