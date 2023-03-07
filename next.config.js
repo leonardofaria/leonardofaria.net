@@ -19,6 +19,20 @@ module.exports = withSentryConfig(
     // Disabled due to react-embed
     // reactStrictMode: true,
 
+    async rewrites() {
+      return [
+        // Hide /api from an image URL
+        {
+          source: '/world-globe.svg',
+          destination: '/api/world-globe.svg',
+        },
+        {
+          source: '/world-map.svg',
+          destination: '/api/world-map.svg',
+        },
+      ];
+    },
+
     sentry: {
       // Use `hidden-source-map` rather than `source-map` as the Webpack `devtool`
       // for client-side builds. (This will be the default starting in

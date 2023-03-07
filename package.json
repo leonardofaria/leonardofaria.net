@@ -15,10 +15,12 @@
     "build:ogImages": "ts-node --esm src/lib/ogImages.ts"
   },
   "devDependencies": {
+    "@types/d3-geo": "^3.0.3",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.10",
     "@types/rss": "^0.0.29",
+    "@types/topojson-client": "^3.1.1",
     "autoprefixer": "^10.4.13",
     "eslint": "^8.30.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -48,6 +50,8 @@
     "@vercel/og": "^0.0.27",
     "aos": "^2.3.4",
     "contentlayer": "^0.2.9",
+    "d3-geo": "^3.1.0",
+    "d3-geo-projection": "^4.0.0",
     "disqus-react": "^1.1.5",
     "eslint-plugin-tailwindcss": "^3.8.0",
     "gray-matter": "^4.0.3",
@@ -74,6 +78,7 @@
     "rss": "^1.2.2",
     "shiki": "^0.12.1",
     "strip-markdown": "^5.0.0",
+    "topojson-client": "^3.1.0",
     "ts-node": "^10.9.1"
   },
   "browserslist": [
