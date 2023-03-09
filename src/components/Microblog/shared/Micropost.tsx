@@ -1,6 +1,7 @@
 import Balancer from 'react-wrap-balancer';
 import { type Micropost as MicropostType } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
+import Image from 'next/image';
 import Link from 'next/link';
 import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
 import { Badge, H1 } from 'src/components/UI';
@@ -50,7 +51,7 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
       )}
 
       <div className={CONTENT_STYLES_WRAPPER}>
-        <MDXContent components={{ Playground, Embed }} />
+        <MDXContent components={{ Playground, Embed, Image }} />
       </div>
     </>
   );

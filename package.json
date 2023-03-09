@@ -7,7 +7,7 @@
   "author": "Leonardo Faria <leonardofaria@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
+    "dev": "yarn prebuild && next dev",
     "prebuild": "ts-node --esm src/lib/githubCommits.ts",
     "build": "next build",
     "start": "next start",

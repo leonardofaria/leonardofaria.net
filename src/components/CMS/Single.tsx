@@ -1,5 +1,6 @@
 import { type Page, type Post } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
+import Image from 'next/image';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import Balancer from 'react-wrap-balancer';
@@ -115,7 +116,7 @@ export default function Single({
           </header>
 
           <div className={CONTENT_STYLES_WRAPPER}>
-            <MDXContent components={{ Playground, Embed }} />
+            <MDXContent components={{ Playground, Embed, Image }} />
           </div>
 
           {type === 'post' && <Interactions title={title} url={url} />}
