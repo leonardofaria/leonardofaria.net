@@ -7,7 +7,6 @@ import { DefaultSeo } from 'next-seo';
 /* eslint-disable-next-line camelcase */
 import { Inter, Fira_Code } from '@next/font/google';
 import Script from 'next/script';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import AOS from 'aos';
 import { UMAMI_SITEID, UMAMI_URL } from '../lib/constants';
@@ -44,13 +43,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     <div
       className={`${inter.variable} ${firaCode.variable} flex min-h-screen flex-col font-sans`}
     >
-      <Head>
-        <link href="https://webmention.io/leonardofaria.net/webmention" />
-        <link
-          href="https://webmention.io/leonardofaria.net/xmlrpc"
-          rel="pingback"
-        />
-      </Head>
       <DefaultSeo {...SEO(ogImageUrl)} />
 
       <Component {...pageProps} />
