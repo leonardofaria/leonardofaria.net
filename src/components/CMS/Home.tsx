@@ -44,7 +44,8 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
               <h1 className="flex items-center text-3xl font-semibold tracking-tighter text-charade-700 lg:text-4xl">
                 <Image
                   alt="Headshot"
-                  className="mr-2 self-start rounded-full bg-white lg:hidden"
+                  /* eslint-disable-next-line tailwindcss/no-custom-classname */
+                  className="u-photo mr-2 self-start rounded-full bg-white lg:hidden"
                   height={36}
                   src="/images/avatar.webp"
                   width={36}

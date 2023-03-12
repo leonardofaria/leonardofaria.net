@@ -1,7 +1,7 @@
 export const IS_SSR = typeof window !== 'undefined';
 export const AUTHOR = 'Leonardo Faria';
 export const BASE_URL = process.env.NEXT_PUBLIC_VERCEL_URL
-  ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+  ? `https://leonardofaria.net`
   : 'http://localhost:3000';
 export const DISQUS_SHORTNAME = 'leonardofaria';
 export const WEBSITE_TITLE = 'Leonardo Faria';
