@@ -55,7 +55,8 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
               </h1>
 
               <p
-                className="text-lg lg:mr-4"
+                /* eslint-disable-next-line tailwindcss/no-custom-classname */
+                className="p-note text-lg lg:mr-4"
                 // eslint-disable-next-line react/no-danger
                 dangerouslySetInnerHTML={{
                   __html: WEBSITE_DESCRIPTION.split('. ').join('.<br/>'),
