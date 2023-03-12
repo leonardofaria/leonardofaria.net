@@ -105,7 +105,12 @@ export default function Single({
                 </time>
 
                 {tags?.map((tag) => (
-                  <Link href={`tags/${tag}`} key={tag}>
+                  <Link
+                    /* eslint-disable-next-line tailwindcss/no-custom-classname */
+                    className="p-category"
+                    href={`tags/${tag}`}
+                    key={tag}
+                  >
                     <Badge variation="secondary">{tag}</Badge>
                   </Link>
                 ))}
@@ -116,7 +121,7 @@ export default function Single({
               <Balancer>
                 <Link
                   /* eslint-disable-next-line tailwindcss/no-custom-classname */
-                  className="p-name"
+                  className="p-name u-url"
                   href={permalink}
                 >
                   {title}
