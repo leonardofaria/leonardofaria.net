@@ -136,6 +136,18 @@ export default function Single({
           >
             <MDXContent components={{ Playground, Embed, Image }} />
           </div>
+
+          <footer className="hidden">
+            Written by {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <a
+              /* eslint-disable-next-line tailwindcss/no-custom-classname */
+              className="p-author h-card"
+              rel="author"
+            >
+              Leonardo Faria
+            </a>
+          </footer>
+
           {type === 'post' && <Interactions title={title} url={url} />}
         </Article>
       </Main>
