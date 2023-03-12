@@ -5,7 +5,7 @@ import { BiMenu } from 'react-icons/bi';
 import { MdClose } from 'react-icons/md';
 import useScrollPosition from '../../lib/hooks/useScrollPosition';
 import useWindowSize from '../../lib/hooks/useWindowSize';
-import { LARGE_SCREEN_BREAKPOINT } from '../../lib/constants';
+import { BASE_URL, LARGE_SCREEN_BREAKPOINT } from '../../lib/constants';
 import { PageNav } from './PageNav';
 import { SocialNav } from './SocialNav';
 
@@ -69,8 +69,10 @@ export function Header() {
           >
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <Link
-                className="flex shrink-0 text-3xl font-semibold leading-10 tracking-tighter text-amethyst-smoke-800"
-                href="/"
+                /* eslint-disable-next-line tailwindcss/no-custom-classname */
+                className="h-card flex shrink-0 text-3xl font-semibold leading-10 tracking-tighter text-amethyst-smoke-800"
+                href={BASE_URL}
+                rel="me"
               >
                 Leonardo Faria
               </Link>
