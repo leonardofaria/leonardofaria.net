@@ -94,7 +94,11 @@ export default function Single({
           <header className={isPost ? 'pt-10 text-center' : 'pt-10'}>
             {isPost && (
               <small className="mb-4 flex items-center justify-center gap-3 text-center text-sm">
-                <time className="text-charade-500" dateTime={publishedTime}>
+                <time
+                  /* eslint-disable-next-line tailwindcss/no-custom-classname */
+                  className="dt-published text-charade-500"
+                  dateTime={publishedTime}
+                >
                   {createdAt.toLocaleDateString('en-US', {
                     dateStyle: 'medium',
                   })}
@@ -110,15 +114,23 @@ export default function Single({
 
             <H1>
               <Balancer>
-                <Link href={permalink}>{title}</Link>
+                <Link
+                  /* eslint-disable-next-line tailwindcss/no-custom-classname */
+                  className="p-name"
+                  href={permalink}
+                >
+                  {title}
+                </Link>
               </Balancer>
             </H1>
           </header>
 
-          <div className={CONTENT_STYLES_WRAPPER}>
+          <div
+            /* eslint-disable-next-line tailwindcss/no-custom-classname */
+            className={`e-content ${CONTENT_STYLES_WRAPPER}`}
+          >
             <MDXContent components={{ Playground, Embed, Image }} />
           </div>
-
           {type === 'post' && <Interactions title={title} url={url} />}
         </Article>
       </Main>
