@@ -74,7 +74,8 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
               </div>
               <Image
                 alt="Headshot"
-                className="relative z-10 object-cover"
+                /* eslint-disable-next-line tailwindcss/no-custom-classname */
+                className="u-photo relative z-10 object-cover"
                 height={800}
                 src="/images/avatar.webp"
                 width={800}
