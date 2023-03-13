@@ -24,14 +24,22 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
     <>
       <header className="pt-10 pb-6 text-center">
         <small className="mb-4 flex items-center justify-center gap-3 text-center text-sm">
-          <time className="text-charade-500" dateTime={publishedAt}>
+          <time /* eslint-disable-next-line tailwindcss/no-custom-classname */
+            className="dt-published text-charade-500"
+            dateTime={publishedAt}
+          >
             {createdAt.toLocaleDateString('en-US', {
               dateStyle: 'medium',
             })}
           </time>
 
           {tags?.map((tag) => (
-            <Link href={`/microblog/tags/${tag}`} key={tag}>
+            <Link
+              /* eslint-disable-next-line tailwindcss/no-custom-classname */
+              className="p-category"
+              href={`/microblog/tags/${tag}`}
+              key={tag}
+            >
               <Badge variation="secondary">{tag}</Badge>
             </Link>
           ))}
@@ -39,20 +47,36 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
 
         <H1>
           <Balancer>
-            <Link href={`/microblog/${slug}`}>{title}</Link>
+            <Link
+              /* eslint-disable-next-line tailwindcss/no-custom-classname */
+              className="p-name u-url"
+              href={`/microblog/${slug}`}
+            >
+              {title}
+            </Link>
           </Balancer>
         </H1>
       </header>
 
-      {micropost.link && (
-        <div className="">
-          <Embed url={micropost.link} />
-        </div>
-      )}
+      {micropost.link && <Embed url={micropost.link} />}
 
-      <div className={CONTENT_STYLES_WRAPPER}>
+      <div
+        /* eslint-disable-next-line tailwindcss/no-custom-classname */
+        className={`e-content ${CONTENT_STYLES_WRAPPER}`}
+      >
         <MDXContent components={{ Playground, Embed, Image }} />
       </div>
+
+      <footer className="hidden">
+        Written by {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+        <a
+          /* eslint-disable-next-line tailwindcss/no-custom-classname */
+          className="p-author h-card"
+          rel="author"
+        >
+          Leonardo Faria
+        </a>
+      </footer>
     </>
   );
 }

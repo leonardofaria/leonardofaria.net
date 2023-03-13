@@ -108,7 +108,7 @@ export default function Single({
                   <Link
                     /* eslint-disable-next-line tailwindcss/no-custom-classname */
                     className="p-category"
-                    href={`tags/${tag}`}
+                    href={`/tags/${tag}`}
                     key={tag}
                   >
                     <Badge variation="secondary">{tag}</Badge>
