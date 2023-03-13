@@ -38,8 +38,15 @@ export function SocialNav() {
       {SOCIAL_LINKS.map((social) => {
         const className = `block p-2 transition duration-300 ease-in-out text-charade-600 hover:text-${social.name.toLowerCase()}`;
         return (
-          <li className="" key={social.name}>
-            <a className={className} href={social.url} title={social.name}>
+          <li key={social.name}>
+            <a
+              className={className}
+              href={social.url}
+              rel={
+                ['GitHub', 'Mastodon'].includes(social.name) ? 'me' : undefined
+              }
+              title={social.name}
+            >
               <Icon name={social.name} />
             </a>
           </li>
