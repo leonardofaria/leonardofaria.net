@@ -38,6 +38,113 @@ Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptio
 
 Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.
 
+<div className="full-width">
+  <div className="w-full h-[500px] overflow-hidden">
+    <div className="w-full h-[820px] -ml-8 -mt-32 -rotate-[12deg] transform flex flex-wrap flex-col">
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/Fd_Wt7yacAA2khr.jpeg"
+        alt="Moving day"
+      />
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/FanFMjuUIAA4aMM.jpeg"
+        alt="Carring all the groceries"
+      />
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/FaNRaq2UcAE24Fg.jpeg"
+        alt="Walking the dog"
+      />
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/FbLM5mhagAAfRd2.jpeg"
+        alt="Building Ikea Furniture"
+      />
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/FgZzTWyaAAApp5H.jpeg"
+        alt="Trick-or-Treating"
+      />
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/FcNkBoIagAQ4LEm.jpeg"
+        alt="Preordering the iPhone 14"
+      />
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/Fd_Wt7yacAA2khr.jpeg"
+        alt="Moving day"
+      />
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/FfMsfGRagAUuC0_.jpeg"
+        alt="Grocery shopping"
+      />
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/Ffrnxx1acAIU6vh.jpeg"
+        alt="Beer pong"
+      />
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/FgPh5J7agAACE4H.jpeg"
+        alt="Racking leaves"
+      />
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/FaNRaq2UcAE24Fg.jpeg"
+        alt="Walking the dog"
+      />
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/FbvLmVwakAACVnd.jpeg"
+        alt="Dodgeball"
+      />
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/Fh70mXgaYAI8b6F.jpeg"
+        alt="Hitting the Snooze Button"
+      />
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/FhX5aEoacAABeRT.jpeg"
+        alt="Unclogging the toilet"
+      />
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/FiazLhNaAAATvb5.jpeg"
+        alt="Black Friday Shopping"
+      />
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/FiVmnPUakAAJfA6.jpeg"
+        alt="Preparing Thanksgiving dinner"
+      />
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/FZ4s5-8UcAE0Vtr.jpeg"
+        alt="Cable management"
+      />
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/FZgCzmfUYAADnI7.jpeg"
+        alt="Outrunning a Swarm of Bees"
+      />
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/FaNRaq2UcAE24Fg.jpeg"
+        alt="Walking the dog"
+      />
+      <img
+        className="w-48 flex-grow-0 flex-shrink-0 border-solid m-3 h-auto shadow-2xl"
+        src="/images/apple-watch/FgzqzFgagAANKHx.jpeg"
+        alt="Tug of war"
+      />
+    </div>
+  </div>
+</div>
+
 ## Blockquotes
 
 The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
