@@ -42,6 +42,16 @@ module.exports = withSentryConfig(
       // for more information.
       hideSourceMaps: true,
     },
+
+    experimental: {
+      // The output of our getServerSideProps() return large chunks of
+      // data because it contains our rendered Markdown.
+      // The default, for a "Large Page Data" warning is 128KB
+      // but many of our pages are much larger.
+      // The warning is: https://nextjs.org/docs/messages/large-page-data
+      // https://github.com/github/docs/blob/0820c53e071a0a28d5a1cad4cc27bcb6b0e37d45/next.config.js#L52
+      largePageDataBytes: 1024 * 1024, // 1 MB
+    },
   }),
   sentryWebpackPluginOptions
 );
