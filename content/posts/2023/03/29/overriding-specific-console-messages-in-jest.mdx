@@ -1,0 +1,86 @@
+---
+id: 2238
+title: Overriding specific console messages in Jest
+publishedAt: 2023-03-29T08:15:00-08:00
+type: Post
+ogImage: /images/og-images/2238.png
+permalink: /2023/03/29/overriding-specific-console-messages-in-jest
+categories:
+  - javascript
+  - jest
+tags:
+  - javascript
+  - jest
+description: Learn how to override specific console.log and other console messages in Jest
+---
+
+If you use React, you probably know that the library warns when things are wrong. One famous one is the [Unknown Prop warning](https://legacy.reactjs.org/warnings/unknown-prop.html), fired if you attempt to render a DOM element with a prop React does not recognize as a legal DOM attribute/property. Quoting the React documentation example:
+
+```jsx
+function MyDiv(props) {
+  if (props.layout === 'horizontal') {
+    // BAD! Because you know for sure "layout" is not a prop that <div> understands.
+    return <div {...props} style={getHorizontalStyle()} />;
+  } else {
+    // BAD! Because you know for sure "layout" is not a prop that <div> understands.
+    return <div {...props} style={getVerticalStyle()} />;
+  }
+}
+```
+
+The browser console and Jest output will render a `console.error` message with `React does not recognize the X prop on a DOM element`. Reading [the docs](https://legacy.reactjs.org/warnings/unknown-prop.html), you learn that you can use the spread syntax to remove unnecessary variables, and then the error is gone:
+
+```jsx
+function MyDiv(props) {
+  const { layout, ...rest } = props;
+  if (layout === 'horizontal') {
+    return <div {...rest} style={getHorizontalStyle()} />;
+  } else {
+    return <div {...rest} style={getVerticalStyle()} />;
+  }
+}
+```
+
+The example above is very straightforward; however, imagine you have hundreds of this error or some similar repeatable offender that is not breaking your app. At the same time, you are not willing to fix it right now. How can you avoid this leaking in your Jest tests and polluting your CI? This post documents a [monkey patch](https://en.wiktionary.org/wiki/monkey_patch) to work around `console` messages in Jest.
+
+Jest config has a [`setupFiles`](https://jestjs.io/docs/configuration#setupfiles-array) option, giving you the ability to execute a function before a test run:
+
+```js title="app/jest.config.js"
+const config = {
+  // ...other configs
+  setupFiles: ['<rootDir>/test/setupFiles.js'],
+};
+
+module.exports = config;
+```
+
+Next, let's create a `setupFiles.js` file with some code to override specific calls:
+
+```js showLineNumbers title="app/test/setupFiles.js"
+(() => {
+  const originalConsole = global.console;
+
+  global.console = {
+    ...global.console,
+
+    error: (...args) => {
+      if (
+        typeof args[0] === 'string' &&
+        args[0].includes('React does not recognize the') &&
+        args[0].includes('prop on a DOM element')
+      ) {
+        return true;
+      }
+
+      // Show the original error for everything else
+      originalConsole.error(...args);
+    },
+  };
+})();
+
+export {};
+```
+
+You can create this one-off solution to hide bad smells as long you can identify the error. Overriding methods must be used only as the last resource since they can hide some critical detail that will hunt you back in the future.
+
+Another way to hide red messages from your tests is the package [jest-mock-console](https://www.npmjs.com/package/jest-mock-console). This package can be an option for the approach mentioned in this post since you can control this at a test file level.
