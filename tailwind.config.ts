@@ -1,7 +1,7 @@
-const { fontFamily } = require('tailwindcss/defaultTheme');
+import type { Config } from 'tailwindcss';
+import { fontFamily } from 'tailwindcss/defaultTheme';
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     './src/**/*.{js,ts,jsx,tsx}',
     './content/**/*.{md,mdx}',
@@ -65,4 +65,4 @@ module.exports = {
   },
   // eslint-disable-next-line global-require
   plugins: [require('@tailwindcss/aspect-ratio')],
-};
+} satisfies Config;
