@@ -6,7 +6,7 @@ export default function Resume() {
           <h1 className="m-0 text-4xl text-gray-500">Leonardo Faria</h1>
         </aside>
 
-        <div className="px-2 pb-5 text-sm print:w-3/4 sm:w-3/4">
+        <div className="sm:px-2 pb-5 text-sm print:w-3/4 sm:w-3/4">
           <p className="mb-5 text-right">
             <a
               className="text-blue-500 underline"
@@ -43,8 +43,8 @@ export default function Resume() {
           <h2 className="text-2xl text-gray-500">Experience</h2>
         </aside>
 
-        <section className="grow-0 border-t border-gray-400 py-6 text-sm print:w-3/4 sm:w-3/4">
-          <div className="mb-6 px-2">
+        <section className="w-full border-t border-gray-400 py-6 text-sm print:w-3/4 sm:w-3/4">
+          <div className="mb-6 sm:px-2">
             <div className="flex items-center justify-between">
               <h3 className="text-base font-semibold text-gray-500">Lattice</h3>
               <small>San Francisco / Remote</small>
@@ -74,7 +74,7 @@ export default function Resume() {
             </ul>
           </div>
 
-          <div className="my-6 px-2">
+          <div className="my-6 sm:px-2">
             <div>
               <div className="flex items-center justify-between">
                 <h3 className="text-base font-semibold text-gray-500">
@@ -144,7 +144,7 @@ export default function Resume() {
             </p>
           </div>
 
-          <div className="my-6 px-2">
+          <div className="my-6 sm:px-2">
             <div className="flex items-center justify-between">
               <h3 className="text-base font-semibold text-gray-500">
                 Dynamic Leap Technology
@@ -162,7 +162,7 @@ export default function Resume() {
             </p>
           </div>
 
-          <div className="my-6 px-2">
+          <div className="my-6 sm:px-2">
             <div>
               <div className="flex items-center justify-between">
                 <h3 className="text-base font-semibold text-gray-500">
@@ -182,7 +182,7 @@ export default function Resume() {
             </p>
           </div>
 
-          <div className="my-6 px-2">
+          <div className="my-6 sm:px-2">
             <div>
               <div className="flex items-center justify-between">
                 <h3 className="text-base font-semibold text-gray-500">
@@ -212,7 +212,7 @@ export default function Resume() {
             </ul>
           </div>
 
-          <div className="mt-6 px-2">
+          <div className="mt-6 sm:px-2">
             <div>
               <div className="flex items-center justify-between">
                 <h3 className="text-base font-semibold text-gray-500">
@@ -245,8 +245,8 @@ export default function Resume() {
           <h2 className="text-2xl text-gray-500">Education</h2>
         </aside>
 
-        <section className="grow-0 border-t border-gray-400 py-6 text-sm print:w-3/4 sm:w-3/4">
-          <div className="mb-6 hidden px-2">
+        <section className="w-full border-t border-gray-400 py-6 text-sm print:w-3/4 sm:w-3/4">
+          <div className="mb-6 hidden sm:px-2">
             <div>
               <div className="flex items-center justify-between">
                 <h3 className="text-base font-semibold text-gray-500">
@@ -261,7 +261,7 @@ export default function Resume() {
             </div>
           </div>
 
-          <div className="mb-6 px-2">
+          <div className="mb-6 sm:px-2">
             <div>
               <div className="flex items-center justify-between">
                 <h3 className="text-base font-semibold text-gray-500">
@@ -280,7 +280,7 @@ export default function Resume() {
             </div>
           </div>
 
-          <div className="mt-6 px-2">
+          <div className="mt-6 sm:px-2">
             <div>
               <div className="flex items-center justify-between">
                 <h3 className="text-base font-semibold text-gray-500">
@@ -302,8 +302,8 @@ export default function Resume() {
           <h2 className="text-2xl text-gray-500">Other</h2>
         </aside>
 
-        <section className="grow-0 border-t border-gray-400 py-6 text-sm print:w-3/4 sm:w-3/4">
-          <div className="mb-6 px-2">
+        <section className="w-full border-t border-gray-400 py-6 text-sm print:w-3/4 sm:w-3/4">
+          <div className="mb-6 sm:px-2">
             <div>
               <div className="flex items-center justify-between">
                 <h3 className="text-base font-semibold text-gray-500">
@@ -321,7 +321,7 @@ export default function Resume() {
             </div>
           </div>
 
-          <div className="my-6 px-2">
+          <div className="my-6 sm:px-2">
             <div>
               <div className="flex items-center justify-between">
                 <h3 className="text-base font-semibold text-gray-500">
