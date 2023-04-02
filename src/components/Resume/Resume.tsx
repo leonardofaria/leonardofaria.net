@@ -6,7 +6,7 @@ export default function Resume() {
           <h1 className="m-0 text-4xl text-gray-500">Leonardo Faria</h1>
         </aside>
 
-        <div className="sm:px-2 pb-5 text-sm print:w-3/4 sm:w-3/4">
+        <div className="pb-5 text-sm print:w-3/4 sm:w-3/4 sm:px-2">
           <p className="mb-5 text-right">
             <a
               className="text-blue-500 underline"
