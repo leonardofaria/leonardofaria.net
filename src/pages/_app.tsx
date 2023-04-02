@@ -18,6 +18,8 @@ const inter = Inter({
   variable: '--font-inter',
 });
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 const firaCode = Fira_Code({
   subsets: ['latin'],
   variable: '--font-fira-code',
@@ -47,11 +49,14 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <Component {...pageProps} />
 
-      <Script
-        data-website-id={UMAMI_SITEID}
-        src={UMAMI_URL}
-        strategy="lazyOnload"
-      />
+      {isProduction && (
+        <Script
+          data-website-id={UMAMI_SITEID}
+          src={UMAMI_URL}
+          strategy="lazyOnload"
+        />
+      )}
+
       <Analytics />
     </div>
   );

@@ -40,7 +40,7 @@ export function Header() {
   const isDesktop = width >= LARGE_SCREEN_BREAKPOINT;
   const pageNavClasses = showMenu || isDesktop ? 'lg:block' : 'hidden';
 
-  const backgroundClasses = `bg-opacity-80 backdrop-blur rounded-md shadow absolute top-0 bottom-0 left-2 right-2 lg:left-4 lg:right-4 z-0 scale-95 rounded bg-white opacity-0 transition ${
+  const backgroundClasses = `bg-opacity-80 backdrop-blur rounded-md shadow absolute top-0 bottom-0 left-2 right-2 lg:left-4 lg:right-4 z-0 scale-100 rounded bg-white opacity-0 transition ${
     scrollPosition > 0 ? 'scale-100 opacity-100' : 0
   }`;
 

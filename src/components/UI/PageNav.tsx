@@ -23,7 +23,7 @@ export function PageNav() {
     <ul className="flex w-full flex-col items-end justify-end lg:flex-row lg:items-center">
       {pages.map((page) => (
         <li
-          className={`rounded-full border border-transparent bg-transparent transition duration-300 ease-in-out hover:bg-white ${
+          className={`rounded-full border border-transparent transition duration-300 ease-in-out hover:bg-white ${
             router.asPath.includes(page.value)
               ? 'bg-amethyst-smoke-200 shadow-inner'
               : null
