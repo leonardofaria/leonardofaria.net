@@ -23,3 +23,29 @@ export type WebMention = {
   };
   target: string;
 };
+
+// Used in the /mac/collection
+export type Computer = {
+  computer: string;
+  serial: string;
+  price: string;
+  bought_at: string; // it should be Date =/
+  hardware: string;
+  photo: string;
+  reference: string;
+  minimum_os: string;
+  current_os: string;
+  maximum_os: string;
+  notes?: string;
+};
+
+export type Idevice = {
+  device: string;
+  serial: string;
+  price: string;
+  bought_at: string; // it should be Date =/
+  hardware: string;
+  photo: string;
+  reference: string;
+  notes?: string;
+};
