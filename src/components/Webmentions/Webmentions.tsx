@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FaTwitter, FaLinkedin, FaCopy } from 'react-icons/fa';
+import Link from 'next/link';
 import { SiBuymeacoffee } from 'react-icons/si';
 import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 import useCopyToClipboard from 'src/lib/hooks/useCopyToClipboard';
@@ -204,10 +205,13 @@ export default function Webmentions({
       <Share title={title || ''} url={url} />
 
       <div className="flex items-center">
-        <h4 className={`${CONTENT_STYLES.h4} mr-3`}>{likesTotal} Likes</h4>
+        <h4 className={`${CONTENT_STYLES.h4} mr-3`}>
+          {likesTotal} {likesTotal > 1 ? 'Likes' : 'Like'}
+        </h4>
+
         <div className="grow">
           <div className="flex -space-x-2 overflow-hidden">
-            {uniqueAuthorUrls.map((authorUrl, index) => {
+            {mentions?.map((mention, index) => {
               if (index === LIMIT_AVATARS) {
                 return (
                   <span
@@ -224,12 +228,17 @@ export default function Webmentions({
               }
 
               return (
-                <img
-                  alt=""
-                  className="inline-block h-8 w-8 rounded-full ring-2 ring-white"
-                  key={authorUrl}
-                  src={authorUrl}
-                />
+                <Link
+                  href={mention.data.url}
+                  key={mention.id}
+                  title={mention.activity.sentence}
+                >
+                  <img
+                    alt=""
+                    className="inline-block h-8 w-8 rounded-full ring-2 ring-white"
+                    src={mention.data.author?.photo}
+                  />
+                </Link>
               );
             })}
           </div>
@@ -237,7 +246,8 @@ export default function Webmentions({
       </div>
 
       <h4 className={CONTENT_STYLES.h4}>
-        {interactionsTotal} Replies & Shares
+        {interactionsTotal}{' '}
+        {interactionsTotal > 1 ? 'Replies & Shares' : 'Reply & Share'}
       </h4>
 
       <ul>
