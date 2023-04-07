@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import { Analytics } from '@vercel/analytics/react';
 import { DefaultSeo } from 'next-seo';
+import { ParallaxProvider } from 'react-scroll-parallax';
 /* eslint-disable-next-line camelcase */
 import { Inter, Fira_Code } from '@next/font/google';
 import Script from 'next/script';
@@ -42,23 +43,25 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <div
-      className={`${inter.variable} ${firaCode.variable} flex min-h-screen flex-col font-sans`}
-    >
-      <DefaultSeo {...SEO(ogImageUrl)} />
+    <ParallaxProvider>
+      <div
+        className={`${inter.variable} ${firaCode.variable} flex min-h-screen flex-col font-sans`}
+      >
+        <DefaultSeo {...SEO(ogImageUrl)} />
 
-      <Component {...pageProps} />
+        <Component {...pageProps} />
 
-      {isProduction && (
-        <Script
-          data-website-id={UMAMI_SITEID}
-          src={UMAMI_URL}
-          strategy="lazyOnload"
-        />
-      )}
+        {isProduction && (
+          <Script
+            data-website-id={UMAMI_SITEID}
+            src={UMAMI_URL}
+            strategy="lazyOnload"
+          />
+        )}
 
-      <Analytics />
-    </div>
+        <Analytics />
+      </div>
+    </ParallaxProvider>
   );
 }
 

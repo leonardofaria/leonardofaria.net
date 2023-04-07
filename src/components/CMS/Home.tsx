@@ -1,6 +1,7 @@
 import { type Post, type Micropost } from 'contentlayer/generated';
 import Image from 'next/image';
 import { NextSeo } from 'next-seo';
+import { Parallax } from 'react-scroll-parallax';
 import Link from 'next/link';
 import { Header, Footer, Article, Main } from '../UI';
 import {
@@ -39,9 +40,9 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
 
       <Main>
         <Article>
-          <section className="mt-6 mb-12 flex gap-3 overflow-hidden rounded-lg border bg-gradient-to-b from-charade-50 to-white shadow-inner">
+          <section className="from-charade-50 mt-6 mb-12 flex gap-3 overflow-hidden rounded-lg border bg-gradient-to-b to-white shadow-inner">
             <div className="flex grow flex-col gap-6 p-8">
-              <h1 className="flex items-center text-3xl font-semibold tracking-tighter text-charade-700 lg:text-4xl">
+              <h1 className="text-charade-700 flex items-center text-3xl font-semibold tracking-tighter lg:text-4xl">
                 <Image
                   alt="Headshot"
                   /* eslint-disable-next-line tailwindcss/no-custom-classname */
@@ -51,7 +52,7 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
                   width={36}
                 />
                 <span>{WEBSITE_SUBHEADING}</span>{' '}
-                <span className="ml-2 animate-wiggle">👋</span>
+                <span className="animate-wiggle ml-2">👋</span>
               </h1>
 
               <p
@@ -73,14 +74,16 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
                   />
                 </svg>
               </div>
-              <Image
-                alt="Headshot"
-                /* eslint-disable-next-line tailwindcss/no-custom-classname */
-                className="u-photo relative z-10 object-cover"
-                height={800}
-                src="/images/avatar.webp"
-                width={800}
-              />
+              <Parallax speed={-5}>
+                <Image
+                  alt="Headshot"
+                  /* eslint-disable-next-line tailwindcss/no-custom-classname */
+                  className="u-photo relative z-10 object-cover"
+                  height={800}
+                  src="/images/avatar.webp"
+                  width={800}
+                />
+              </Parallax>
             </div>
           </section>
 
