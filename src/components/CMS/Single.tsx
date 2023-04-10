@@ -3,6 +3,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
+import { Parallax } from 'react-scroll-parallax';
 import Balancer from 'react-wrap-balancer';
 import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
@@ -134,7 +135,7 @@ export default function Single({
             /* eslint-disable-next-line tailwindcss/no-custom-classname */
             className={`e-content ${CONTENT_STYLES_WRAPPER}`}
           >
-            <MDXContent components={{ Playground, Embed, Image }} />
+            <MDXContent components={{ Playground, Embed, Image, Parallax }} />
           </div>
 
           <footer className="hidden">

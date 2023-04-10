@@ -8,7 +8,7 @@ permalink: /portfolio
 description: Nothing is forever in the www world. Here are a few projects from my past.
 ---
 
-<p className="!mb-16">Nothing is forever in the www world.<br/>Here are a few projects from my past.</p>
+<Parallax speed={5}><p className="!mb-16">Nothing is forever in the www world.<br/>Here are a few projects from my past.</p></Parallax>
 
 <div className="full-width"><img alt="Portfolio" src="/images/portfolio.jpg" /></div>
 
@@ -17,7 +17,7 @@ Project types: <a href="#ruby-on-rails">Ruby on Rails</a>, <a href="#wordpress">
 On 2016 I joined <a href="https://thinkific.com" target="_blank">Thinkific</a> and I stopped freelancing. My <a href="/pub/resume.pdf" target="_blank">updated resume</a>.
 </div>
 
-## Ruby on Rails 
+## Ruby on Rails
 
 Ruby on Rails is my go-to option for personal projects and for cases I want to deliver fast value to a client.
 
@@ -25,7 +25,7 @@ Ruby on Rails is my go-to option for personal projects and for cases I want to d
 
 <small className="uppercase font-sans text-xs"><b className="border border-charade-6 rounded-md mr-2 py-2 px-3">2015</b> <a href="https://minasvesteobrasil.herokuapp.com" className="text-teal-700">Online (restricted)</a></small>
 
-MVB is a B2B website to connect mall stores and clothes factories from my hometown. It was used by 40 factories during three events, selling millions of Brazilian reais in fast-fashion. 
+MVB is a B2B website to connect mall stores and clothes factories from my hometown. It was used by 40 factories during three events, selling millions of Brazilian reais in fast-fashion.
 
 <center><img alt="MVB screenshot" src="/images/portfolio/mvb.jpg" loading="lazy" className="mb-16" /></center>
 
@@ -35,7 +35,7 @@ MVB is a B2B website to connect mall stores and clothes factories from my hometo
 
 Envirosax has been the leader in design-led reusable shopping bags. In this store, business owners can buy Envirosax bags to re-sell in their physical stores. Above is a 5-min video showing the features of the store.
 
-<Embed type="YouTube" id="Ymh1VRPEJm0" />  
+<Embed type="YouTube" id="Ymh1VRPEJm0" />
 
 <div className="mb-16"></div>
 
@@ -77,7 +77,7 @@ Horoscopo no MSN was a MSN bot that I created to deliver horoscope daily to the 
 
 ### Ministry of Social Security
 
-I have worked in a dozen projects using this CMS in Brazil and Canada. Most times I would be the solo programmer working with a designer. 
+I have worked in a dozen projects using this CMS in Brazil and Canada. Most times I would be the solo programmer working with a designer.
 
 The most important work to mention is the website of the [Ministry of Social Security in Brasil](https://previdencia.gov.br). Back in 2013, Brazil's government wanted to standardize all their citizen portals using Plone or Wordpress. In this project I was responsible for moving existing data (2.000+ pages, 20.000+ posts) from their in-house made solution to WP, coordinating the transition with in their infrastructure provider and training the personnel responsible for content updates.
 
@@ -109,7 +109,7 @@ e-Recursos was the first Brazilian Social Security mobile app. Citizen would use
 
 ## Flash
 
-Flash is dead but back in 2000's it was the go-to solution for the so called interactive websites. 
+Flash is dead but back in 2000's it was the go-to solution for the so called interactive websites.
 
 ### Monkey Radio
 
