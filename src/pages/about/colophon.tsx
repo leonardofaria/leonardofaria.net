@@ -15,22 +15,31 @@ export default function Colophon() {
 
       <p>
         Since I was a teenager I liked to read blogs to learn more about
-        webstandards and Linux.
+        webstandards and Linux. I also wanted to share what I knew and then I
+        started blogging at Blogspot until I create my own website.
+      </p>
+
+      <p>
+        Over the years, people moved from personal websites to social media. I
+        learned a lot from famous and not famous tech people on Twitter but in
+        all these platforms the creator doesn&apos;t own their content. Having a
+        website is the only way to guarantee the content will be live for
+        eternity (or until you keep paying the hosting bill).
       </p>
 
       <H2>Timeline</H2>
-      <ol className="border-l border-neutral-300 dark:border-neutral-500">
+      <ol className="border-l border-indigo-500">
         <li>
           <div className="flex items-center pt-3">
-            <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500" />
-            <p className="text-sm">Dec 2022</p>
+            <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-indigo-500" />
+            <p className="text-sm text-neutral-500">Dec 2022</p>
           </div>
           <div className="mb-6 ml-4 mt-2">
             <h3 className="text-amethyst-smoke-800 mb-1.5 text-xl font-semibold">
               Moved to Next.js
             </h3>
             <p className="mb-3 ">
-              Closed the year with the idea of writing more nad leveraging
+              Closed the year with the idea of writing more and leveraging
               Next.js better for my content.{' '}
               <Link
                 className={CONTENT_STYLES.a}
@@ -45,8 +54,8 @@ export default function Colophon() {
 
         <li>
           <div className="flex items-center pt-2">
-            <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500" />
-            <p className="text-sm ">Apr 2020</p>
+            <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-indigo-500" />
+            <p className="text-sm text-neutral-500">Apr 2020</p>
           </div>
           <div className="mb-6 ml-4 mt-2">
             <h3 className="text-amethyst-smoke-800 mb-1.5 text-xl font-semibold">
@@ -67,10 +76,8 @@ export default function Colophon() {
 
         <li>
           <div className="flex items-center pt-2">
-            <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 dark:bg-neutral-500" />
-            <p className="text-sm text-neutral-500 dark:text-neutral-300">
-              Apr 2005
-            </p>
+            <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-indigo-500" />
+            <p className="text-sm text-neutral-500">Apr 2005</p>
           </div>
           <div className="ml-4 mt-2 pb-5">
             <h3 className="text-amethyst-smoke-800 mb-1.5 text-xl font-semibold">
