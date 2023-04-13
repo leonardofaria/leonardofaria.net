@@ -1,0 +1,73 @@
+---
+title: New website behind the scenes
+publishedAt: 2023-04-12T21:40:00:00-08:00
+template: post
+type: Micropost
+ogImage: /images/og-images/new-website-behind-the-scenes.png
+tags:
+  - meta
+---
+
+import { SegmentedControl } from '../../src/components/UI/SegmentedControl';
+
+Last December I [moved this website from Hugo to Next.js](/2022/12/30/moving-to-nextjs) - hoping to write more - and in this micropost I'll share some quirks and features of this version. I also created a [colophon](/about/colophon) page for the website.
+
+## 🧨 TNT stack
+
+I started the work by porting my [Bento Hugo theme](https://bento-hugo-theme.netlify.app) to Next.js (or [TNT stack](https://twitter.com/rauchg/status/1641465057426165764): TypeScript, Next.js, and Tailwind CSS), changing some design elements when possible.
+
+## ContentLayer
+
+As I mentioned in the migration post, Contentlayer gave me MDX and TypeScript support simultaneously. With ContentLayer I was able to have more control of Markdown content, by injecting Tailwind CSS classes and then modifying the design of specific elements (ex. show YouTube videos wider than the text content).
+
+## Vercel Analytics
+
+I have been using [Umami](https://github.com/umami-software/umami) for a while as a Google Analytics alternative but since I moved to Vercel, I decided to use their Analytics product, based on [Splitbee](https://splitbee.io). It seems their Analytics can track more visitors than Umami - since it is not getting blocked by Adblockers - but I am still keeping Umami around. The reason is that Vercel acquired Splitbee last October and they say Analytics is "free while in beta" so I'm afraid this can become an upsell feature.
+
+## Sandpack
+
+One advantage of having a blog built with React is that I can [share code using Sandpack](https://leonardofaria.net/microblog/using-sandpack-your-custom-codesandbox). I still want to make this editor prettier and more functional like [Josh](https://www.joshwcomeau.com/react/next-level-playground/), but it might not be that soon.
+
+## Design
+
+I learned one or two things about design with this work - I know blobs are trending and I used a [online generator](https://www.blobmaker.app) to give my profile photo a nice touch. I also used a [tool](https://app.haikei.app) for the blurry gradient background image. I am also using [React Wrap Balancer](https://react-wrap-balancer.vercel.app) for better-looking titles.
+
+### Segmented Control
+
+[Segmented Control](https://developer.apple.com/design/human-interface-guidelines/components/selection-and-input/segmented-controls/) is a type of button group used in iOS. I found an [implementation in Vue and Tailwind CSS](https://medium.com/swlh/responsive-ios-segmented-control-component-built-with-vuejs-tailwindcss-72545e7b8790) and I ported it to React.
+
+<SegmentedControl
+  items={[
+    {
+      label: 'Dogs',
+      onClick: () => {},
+    },
+    {
+      label: 'Cats',
+      onClick: () => {},
+    },
+  ]}
+/>
+
+### Fira Code
+
+Since I'm using [Fira Code](https://github.com/tonsky/FiraCode) in my VS Code and iTerm and I enjoy fonts with ligatures, I added it here using [@next/font](https://nextjs.org/docs/api-reference/next/font). Doesn't know what are ligatures? Here is a sample:
+
+```plain
+# from https://github.com/tonsky/FiraCode/blob/master/extras/showcases.txt
+      .= ..= := ::= =:= __
+     == != === !== =/= =!=
+<-< <<- <-- <- <-> -> --> ->> >->
+        <~~ <~ ~~ ~> ~~>
+     <<< << <= <> >= >> >>>
+      </ <!--  </>  --> />
+      0xF www Fl Tl Il fi fj
+```
+
+### Animations and Parallax(es)
+
+I want to use this website as an experiment center for animations and parallaxes (is that the right plural?). I initially thought about using [AOS](https://michalsnik.github.io/aos/) (something similar to the old [wow.js](https://wowjs.uk) but I might just stick with [Framer Motion](https://www.framer.com/motion/). Parallax-wise, there are a few things with [react-scroll-parallax](https://npmjs.com/package/react-scroll-parallax), that I still want to improve.
+
+## Conclusion
+
+I spent a lot of time on this website :D

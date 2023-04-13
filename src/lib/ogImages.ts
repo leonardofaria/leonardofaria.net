@@ -84,7 +84,7 @@ async function visitPageAndScreenshot(
       height: 630,
       deviceScaleFactor: 1.5,
     });
-    await page.goto(url);
+    await page.goto(url, { waitUntil: 'networkidle0', timeout: 10 * 1000 });
     await page.screenshot({
       type: 'png',
       path: `./public${ogImagePath}`,
