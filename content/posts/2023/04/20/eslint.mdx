@@ -1,0 +1,150 @@
+---
+id: 2239
+title: ESLint
+publishedAt: 2023-04-20:12:00:00-08:00
+type: Post
+permalink: /2023/04/20/eslint
+description: (Almost) everything you want to know about ESLint
+---
+
+Have you ever asked yourself how ESLint works and what we can do with it? In this post, I guarantee that you will learn one thing or two about this linter and its rules.
+
+## Intro
+
+A linter is a tool that statically analyzes your code and based on their rules, reports warnings and errors. Linters are helpful to catch bugs and enforce standards in a codebase.
+
+ESLint is the most popular JavaScript linter these days but it is not the only one: [JSHint](https://jshint.com) was a popular tool in the past and [Rome](https://rome.tools) is a promising tool that accomplishes similar goals.
+
+### But, how exactly?
+
+We can not talk about linters without talking about AST (Abstract Syntax Trees). AST is a JavaScript object containing a tree representation of your code. Let's use as example a function that sums two numbers:
+
+```js
+function sum(a, b) {
+  return a + b;
+}
+
+sum(1, 2);
+```
+
+The AST for the code above will be a three like:
+
+```json
+{
+  "type": "Program",
+  "start": 0,
+  "end": 50,
+  "body": [
+    {
+      "type": "FunctionDeclaration",
+      "start": 0,
+      "end": 38,
+      "id": {
+        "type": "Identifier",
+        "start": 9,
+        "end": 12,
+        "name": "sum"
+      },
+      "expression": false,
+      "generator": false,
+      "async": false,
+      "params": [
+        {
+          "type": "Identifier",
+          "start": 13,
+          "end": 14,
+          "name": "a"
+        },
+        {
+          "type": "Identifier",
+          "start": 16,
+          "end": 17,
+          "name": "b"
+        }
+      ],
+      "body": {
+        "type": "BlockStatement",
+        "start": 19,
+        "end": 38,
+        "body": [
+          {
+            "type": "ReturnStatement",
+            "start": 23,
+            "end": 36,
+            "argument": {
+              "type": "BinaryExpression",
+              "start": 30,
+              "end": 35,
+              "left": {
+                "type": "Identifier",
+                "start": 30,
+                "end": 31,
+                "name": "a"
+              },
+              "operator": "+",
+              "right": {
+                "type": "Identifier",
+                "start": 34,
+                "end": 35,
+                "name": "b"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "ExpressionStatement",
+      "start": 40,
+      "end": 50,
+      "expression": {
+        "type": "CallExpression",
+        "start": 40,
+        "end": 49,
+        "callee": {
+          "type": "Identifier",
+          "start": 40,
+          "end": 43,
+          "name": "sum"
+        },
+        "arguments": [
+          {
+            "type": "Literal",
+            "start": 44,
+            "end": 45,
+            "value": 1,
+            "raw": "1"
+          },
+          {
+            "type": "Literal",
+            "start": 47,
+            "end": 48,
+            "value": 2,
+            "raw": "2"
+          }
+        ],
+        "optional": false
+      }
+    }
+  ],
+  "sourceType": "module"
+}
+```
+
+The parser is smart enough to ignore spaces and things that don't matter: `console.log('Hello')` and `console.log(    'Hello'    )` are the same. A linter will analyze the object and report warnings and errors according to its rules. For example, a linter can scan this code and report that we should not have a function called `sum`.
+
+You can use a website like [AST Explorer](https://astexplorer.net) to create a object of your code or [jointJS JavaScript AST Visualiser](https://www.jointjs.com/demos/abstract-syntax-tree) to create the chart above.
+
+(talk about linter, no console)
+
+## Commands
+
+(run for a specific file, folder, override)
+
+## Rules and plugins
+
+(talk about a simple rule like no-console)
+
+## Curious rules
+
+(things like import order)
