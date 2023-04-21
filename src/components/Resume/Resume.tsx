@@ -1,6 +1,6 @@
 export default function Resume() {
   return (
-    <div className="my-[.5in] mx-auto max-w-[7.1in] text-gray-700">
+    <div className="my-8 mx-auto max-w-[800px] text-gray-700 print:my-0 print:max-w-full">
       <header className="flex flex-wrap">
         <aside className="print:w-1/4 sm:w-1/4">
           <h1 className="m-0 text-4xl text-gray-500">Leonardo Faria</h1>
@@ -13,9 +13,10 @@ export default function Resume() {
               href="mailto:leonardo@leonardofaria.net"
             >
               <small>leonardo@leonardofaria.net</small>
-            </a>
+            </a>{' '}
+            —{' '}
             <a
-              className="ml-3 text-blue-500 underline"
+              className="text-blue-500 underline"
               href="https://leonardofaria.net"
             >
               <small>https://leonardofaria.net</small>
@@ -27,12 +28,18 @@ export default function Resume() {
             delivery of SaaS products and websites
           </p>
 
+          <p className="mb-3 text-base">
+            Seeking engineering roles in a product-driven organization. With my
+            work, I bring creative and customer-focused solutions with attention
+            to detail and a pragmatic approach. Previously in a manager path, I
+            have experience delivering work that matters for customers and
+            growing products and people
+          </p>
+
           <p className="text-sm">
-            Focus on front-end solutions (React, TypeScript)
-            <br />
-            Extensive hands-on experience in Ruby on Rails and JavaScript
-            <br />
-            Experience in a leadership position leading up to seven developers
+            <span className="font-semibold">Interests:</span> Front-end,
+            technical leadership, architecture, mentorship, Continuous
+            Integration, Design System, Developer Experience
           </p>
         </div>
       </header>
@@ -50,16 +57,20 @@ export default function Resume() {
             </div>
             <div className="mb-2 flex items-center justify-between">
               <b className="font-semibold">Staff Software Engineer</b>
-              <small className="shrink-0">Apr 2022 - Present</small>
+              <small className="shrink-0">Apr 2022 — Present</small>
             </div>
 
-            <ul className="mt-2 list-disc pl-[18px]">
-              <li>Led projects in a new 0 to 1 company initiative</li>
+            <ul className="mt-2 list-disc pl-3">
+              <li>
+                Led projects in a new 0 to 1 company initiative with TypeScript
+                and React
+              </li>
               <li>
                 Improved testing by creating documentation, guidelines and
                 building a CI tool to track test coverage across different teams
               </li>
-              <li>TODO: Improved developer experience</li>
+              <li>Improved developer experience tools and documentation</li>
+              <li>Advocated for accessibility by leveraging automated tests</li>
             </ul>
           </div>
 
@@ -74,10 +85,10 @@ export default function Resume() {
             </div>
             <div className="mb-2 flex items-center justify-between">
               <b className="font-semibold">Technical Architect - Front-end</b>
-              <small className="shrink-0">Sep 2020 - Mar 2022</small>
+              <small className="shrink-0">Sep 2020 — Mar 2022</small>
             </div>
 
-            <ul className="mt-2 list-disc pl-[18px]">
+            <ul className="mt-2 list-disc pl-3">
               <li>
                 Improved Front-end performance by: introducing Lighthouse
                 testing in CI; refactoring the product to support webp and
@@ -85,7 +96,7 @@ export default function Resume() {
                 experience
               </li>
               <li>
-                Worked close to teams to demonstrate the feasibility of
+                Worked closely with teams to demonstrate the feasibility of
                 technical solutions in upcoming projects, bridging product and
                 engineering
               </li>
@@ -95,31 +106,35 @@ export default function Resume() {
               </li>
               <li>
                 Supported the Design System solution (used by different React
-                and Ruby on Rails applications), specially in CI and
+                and Ruby on Rails applications), especially in CI and
                 accessibility tasks
               </li>
             </ul>
 
             <div className="mt-3 mb-2 flex items-center justify-between">
               <b className="font-semibold">Engineering Team Lead</b>
-              <small className="shrink-0">Oct 2017 - Sep 2020</small>
+              <small className="shrink-0">Oct 2017 — Sep 2020</small>
             </div>
 
-            <ul className="mt-2 list-disc pl-[18px]">
+            <ul className="mt-2 list-disc pl-3">
               <li>
-                Led a team of up to 7 of back-end/front-end engineers working on
-                projects for different customer personas (course creators /
-                students)
+                Led a team of up to 7 back-end/front-end engineers working on
+                projects for different customer personas (course
+                creators/students)
+              </li>
+              <li>
+                Provided mentorship, collected and delivered feedback; set goals
+                for engineer reports and conducted performance reviews
               </li>
               <li>
                 Owned projects end-to-end, including the redesign of the
-                product, React adoption and the creation of Thinkific Design
-                System (2018 - present)
+                product, React adoption, and the creation of the Thinkific
+                Design System (2018 — present)
               </li>
               <li>
                 Grew the team by proactively sourcing ICs. Successfully
-                recruited 4 engineers and mentored others inside and outside the
-                team
+                recruited 4 engineers by partnering with the HR department and
+                working on creative ways to find talent
               </li>
               <li>
                 Led different initiatives in R&D (All-hands, onboarding of new
@@ -130,13 +145,12 @@ export default function Resume() {
 
             <div className="mt-3 mb-2 flex items-center justify-between">
               <b className="font-semibold">Senior Software Engineer</b>
-              <small className="shrink-0">Nov 2016 - Oct 2017</small>
+              <small className="shrink-0">Nov 2016 — Oct 2017</small>
             </div>
 
             <p>
-              Worked on different projects mostly focusing on front-end and
-              using Ruby on Rails, Ember.js and React to add value to the
-              product
+              Worked on different customer-facing projects mostly focusing on
+              front-end and using Ruby on Rails and Ember.js
             </p>
           </div>
 
@@ -148,14 +162,21 @@ export default function Resume() {
               <small>Vancouver</small>
             </div>
             <div className="mb-2 flex items-center justify-between">
-              <b className="font-semibold">Full Stack Developer</b>
-              <small className="shrink-0">Feb 2016 - Nov 2016</small>
+              <b className="font-semibold">
+                Full Stack Developer (contract work)
+              </b>
+              <small className="shrink-0">Feb 2016 — Nov 2016</small>
             </div>
 
-            <p>
-              Developed websites using WordPress and Single Page Applications
-              with Ember for clients of Dynamic Lead Technology
-            </p>
+            <ul className="list-disc pl-3">
+              <li>
+                Developed websites using WordPress for Dynamic Leap and its
+                clients
+              </li>
+              <li>
+                Built MVPs for clients using Ember.js and Ruby on Rails APIs.
+              </li>
+            </ul>
           </div>
 
           <div className="my-6 sm:px-2">
@@ -167,15 +188,20 @@ export default function Resume() {
                 <small>Vancouver</small>
               </div>
               <div className="mb-2 flex items-center justify-between">
-                <b className="font-semibold">Full Stack Developer</b>
-                <small className="shrink-0">Oct 2015 - Jan 2016</small>
+                <b className="font-semibold">
+                  Full Stack Developer (contract work)
+                </b>
+                <small className="shrink-0">Oct 2015 — Jan 2016</small>
               </div>
             </div>
 
-            <p>
-              Worked on the development of Intranet applications using PHP
-              (Laravel and WordPress) and iOS/Android apps with Phonegap
-            </p>
+            <ul className="list-disc pl-3">
+              <li>
+                Maintained Intranet applications (PHP/Laravel) and WordPress
+                websites for agency clients
+              </li>
+              <li>Maintained iOS/Android apps built with Phonegap</li>
+            </ul>
           </div>
 
           <div className="my-6 sm:px-2">
@@ -188,11 +214,11 @@ export default function Resume() {
               </div>
               <div className="mb-2 flex items-center justify-between">
                 <b className="font-semibold">Full Stack Developer</b>
-                <small className="shrink-0">Sep 2011 - Aug 2015</small>
+                <small className="shrink-0">Sep 2011 — Aug 2015</small>
               </div>
             </div>
 
-            <ul className="list-disc pl-[18px]">
+            <ul className="list-disc pl-3">
               <li>
                 Developed and maintained new and legacy Intranet applications
                 used by thousands of civil servants in Brazil between 2011 -
@@ -204,7 +230,7 @@ export default function Resume() {
               </li>
               <li>
                 Created one of the first iOS and Android apps in the public
-                sector
+                sector using Cordova
               </li>
             </ul>
           </div>
@@ -219,18 +245,22 @@ export default function Resume() {
               </div>
               <div className="mb-2 flex items-center justify-between">
                 <b className="font-semibold">Full Stack Developer</b>
-                <small className="shrink-0">2006 - 2015</small>
+                <small className="shrink-0">2006 — 2015</small>
               </div>
             </div>
 
-            <ul className="list-disc pl-[18px]">
+            <ul className="list-disc pl-3">
               <li>
-                Development of applications/websites using several technologies
-                including Ruby on Rails, PHP, and Flash
+                Built custom-made Ruby on Rails applications for B2B (fast
+                fashion companies)
               </li>
               <li>
-                Mobile work (iOS/Android) using Ionic (Writing for IELTS and
-                TOEFL)
+                Created WordPress websites for 10+ clients partnering with a
+                designer and using PHP & jQuery
+              </li>
+              <li>
+                Built &quot;Writing for IELTS and TOEFL&quot; (app for
+                iOS/Android) using Ionic
               </li>
             </ul>
           </div>
@@ -268,11 +298,9 @@ export default function Resume() {
               </div>
               <div className="flex items-center justify-between">
                 <span>
-                  Web and Mobile App Development
-                  <br />
-                  Post-Degree Diploma
+                  Web and Mobile App Development / Post-Degree Diploma
                 </span>
-                <small className="shrink-0">2015 - 2016</small>
+                <small className="shrink-0">2015 — 2016</small>
               </div>
             </div>
           </div>
@@ -287,7 +315,7 @@ export default function Resume() {
               </div>
               <div className="flex items-center justify-between">
                 <span>Bachelor of Information Systems</span>
-                <small className="shrink-0">2006 - 2011</small>
+                <small className="shrink-0">2006 — 2011</small>
               </div>
             </div>
           </div>
@@ -313,7 +341,7 @@ export default function Resume() {
                   Instructed workshops including HTML & CSS for Beginners and
                   WordPress for Beginners as a volunteer
                 </span>
-                <small className="shrink-0">2017 - 2019</small>
+                <small className="ml-3 shrink-0">2017 — 2019</small>
               </div>
             </div>
           </div>
@@ -336,7 +364,7 @@ export default function Resume() {
                     https://leonardofaria.net/talks
                   </a>
                 </span>
-                <small className="shrink-0">2015 - 2019</small>
+                <small className="shrink-0">2015 — 2019</small>
               </div>
             </div>
           </div>

@@ -1,10 +1,21 @@
 import { NextSeo } from 'next-seo';
-import Link from 'next/link';
+import Head from 'next/head';
 import Resume from 'src/components/Resume/Resume';
 
 export default function Page() {
   return (
     <>
+      <Head>
+        <style media="print" type="text/css">
+          {`
+          body {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+          }
+        `}
+        </style>
+      </Head>
+
       <NextSeo
         description="Leonardo Faria's resume"
         openGraph={{
@@ -16,7 +27,7 @@ export default function Page() {
 
       <div className="flex flex-col bg-gray-200">
         <div className="my-4 text-center print:hidden">
-          <Link
+          <a
             className="group inline-flex items-center rounded-full bg-transparent px-4 py-1.5 transition hover:bg-white"
             href="/pub/resume.pdf"
             download
@@ -39,7 +50,7 @@ export default function Page() {
                 d="M1 1l4 4-4 4"
               />
             </svg>
-          </Link>
+          </a>
         </div>
         <div className="m-auto inline-flex bg-white px-3 print:p-0 lg:px-10">
           <Resume />
