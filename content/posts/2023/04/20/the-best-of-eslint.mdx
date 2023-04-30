@@ -199,21 +199,33 @@ You don't need to be an ESLint or JavaScript expert to decide which rules to ado
 
 ### eslint-plugin-jsx-a11y
 
+[eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y) checks for some acessibility rules in JSX elements. I previously [wrote about accessibility](https://leonardofaria.net/2020/08/13/automating-accessibility-tests-with-cypress) here and keep in mind that using linters and automated tests don't garantee that your app or website is 100% accessible however it can capture several mistakes, like [images without an alternative text](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/src/rules/alt-text.js) or [pages without a `lang` attribute](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/src/rules/lang.js).
+
 ### eslint-config-airbnb
+
+[eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb) extends `eslint-plugin-import`, `eslint-plugin-react`, `eslint-plugin-react-hooks` and `eslint-plugin-jsx-a11y`. It is ready to go and probably the best one to adopt if you have nothing and want to start from somewhere.
 
 ### eslint-config-airbnb-base
 
-### TYPESCRIPT
+[eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base) is the right choice if you are not using React. It still gives you all JavaScript best-practices and style defined by Airbnb. In the past I have used this package in Ember.js applications.
 
-### eslint-config-prettier
+### @typescript-eslint/eslint-plugin
 
-### eslint-config-relay
+[@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin) is an ESLint plugin meant to be used in TypeScript codebases. Similarly to the react-hooks plugin, this one can be very helpful to teach best practices.
+
+I like their website has a [playground](https://typescript-eslint.io/play/) so you can test your code online.
+
+### eslint-plugin-prettier
+
+[eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier) is helpful to avoid ESLint conflicting with Prettier. Overall we should not rely on ESLint for formating our code and this plugin will make sure that ESLint doesn't get on Prettier's way.
+
+### eslint-plugin-relay
+
+[eslint-plugin-relay](https://www.npmjs.com/package/eslint-plugin-relay) catches common problems in code using Relay. I learned about this plugin at my current job and I can see how a [rule to remove unused fields](https://github.com/relayjs/eslint-plugin-relay/blob/main/src/rule-unused-fields.js) from your GraphQL queries can help with performance of your application.
 
 ### eslint-config-next
 
-This is only helpful if you have a Next.js application. It already extends `eslint-plugin-react`, `eslint-plugin-react-hooks`, `eslint-plugin-jsx-a11y` and add some rules to enforce Next.js features, like using their `<Image>` component instead of `<img>` HTML tags.
-
-(things like import order)
+[eslint-config-next](https://www.npmjs.com/package/eslint-config-next) is obviously only helpful if you have a Next.js application. It already extends `eslint-plugin-react`, `eslint-plugin-react-hooks`, `eslint-plugin-jsx-a11y` and add some rules to enforce Next.js features, like using their `<Image>` component instead of `<img>` HTML tags.
 
 ## Creating your own set of recommended rules
 
@@ -227,12 +239,23 @@ The source-code of my project is a good start if you are looking at creating a p
 
 The following rules are not enabled by default in any of recommended plugins above:
 
+### no-unused-vars
+
+### import/order
+
+### import/prefer-default-export
+
+### react/jsx-sort-props
+
+### react/react-in-jsx-scope
+
+### @typescript-eslint/consistent-type-imports
+
 ## References
 
 Some posts I'm based on to write this post:
 
-- https://www.nearform.com/blog/what-is-an-abstract-syntax-tree/
-- https://www.jointjs.com/demos/abstract-syntax-tree
-- https://stackoverflow.com/questions/16127985/what-is-javascript-ast-how-to-play-with-it
-- https://jotadeveloper.medium.com/abstract-syntax-trees-on-javascript-534e33361fc7
-- https://www.digitalocean.com/community/tutorials/js-traversing-ast
+- [What is an Abstract Syntax Tree](https://www.nearform.com/blog/what-is-an-abstract-syntax-tree/)
+- [What is JavaScript AST, how to play with it?](https://stackoverflow.com/questions/16127985/what-is-javascript-ast-how-to-play-with-it)
+- [Abstract syntax trees on JavaScript](https://jotadeveloper.medium.com/abstract-syntax-trees-on-javascript-534e33361fc7)
+- [Read JavaScript Source Code, Using an AST](https://www.digitalocean.com/community/tutorials/js-traversing-ast)
