@@ -7,7 +7,7 @@ const CODE_STYLES = {
     'w-[100vw] relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] bg-gradient-to-b from-gray-50 to-white overflow-scroll',
   TITLE:
     'max-w-3xl m-auto mb-0.5 bg-gray-100/10 px-3 py-1 font-mono text-xs text-gray-500',
-  PRE: 'max-w-3xl m-auto my-2 py-4 font-mono text-lg bg-gradient-to-b from-gray-50 to-white rounded',
+  PRE: 'max-w-3xl max-h-[75vh] m-auto my-2 py-4 font-mono text-lg bg-gradient-to-b from-gray-50 to-white rounded',
   CODE: 'whitespace-pre-wrap grid [&>span]:border-l-4 [&>span]:border-l-transparent [&>span]:pl-2 [&>span]:pr-3',
   INLINE_BLOCK:
     'whitespace-pre-wrap border border-[#E3EDF3] px-1.5 py-px rounded-md bg-[#F7FAFB]',
