@@ -1,23 +1,24 @@
 ---
 id: 2239
 title: The best of ESLint
-publishedAt: 2023-04-20:12:00:00-08:00
+publishedAt: 2023-04-30:21:15:00-08:00
 type: Post
-permalink: /2023/04/20/the-best-of-eslint
-description: (Almost) everything you want to know about ESLint
+ogImage: /images/og-images/2239.png
+permalink: /2023/04/30/the-best-of-eslint
+description: Have you ever asked yourself how ESLint works and what we can do with it? Why do we have so many rules, and which are the best and most helpful? In this post, you will learn one thing or two about this linter and its rules.
 ---
 
-Have you ever asked yourself how ESLint works and what we can do with it? Why do we have so many rules and which ones are the best, most helpful ones? In this post, you will learn one thing or two about this linter and its rules.
+Have you ever asked yourself how ESLint works and what we can do with it? Why do we have so many rules, and which are the best and most helpful? In this post, you will learn one thing or two about this linter and its rules.
 
 ## Introduction
 
-A linter is a tool that statically analyzes your code and based on their rules, reports warnings and errors. Linters are helpful to catch bugs and enforce standards in a codebase.
+A linter is a tool that statically analyzes your code and, based on its rules, reports warnings and errors. Linters are helpful to catch bugs and enforce standards in a codebase.
 
-ESLint is the most popular JavaScript linter these days but it is not the only one: [JSHint](https://jshint.com) was a popular tool in the past and [Rome](https://rome.tools) is a promising tool that accomplishes similar goals.
+ESLint is the most popular JavaScript linter these days, but it is not the only one: [JSHint](https://jshint.com) was a popular tool in the past, and [Rome](https://rome.tools) is a promising tool that accomplishes similar goals.
 
 ### But, how exactly?
 
-We can not talk about linters without talking about AST (Abstract Syntax Trees). AST is a JavaScript object containing a tree representation of your code. Let's use as example a function that sums two numbers:
+We can not talk about linters without talking about AST (Abstract Syntax Trees). AST is a JavaScript object containing a tree representation of your code. Let's use as an example a function that sums two numbers:
 
 ```js
 function sum(a, b) {
@@ -27,7 +28,7 @@ function sum(a, b) {
 sum(1, 2);
 ```
 
-The AST for the code above will be a three like:
+The AST for the code above will be an object like:
 
 ```json
 {
@@ -137,7 +138,7 @@ The parser is smart enough to ignore spaces and things that don't matter: `conso
 
 You can use a website like [AST Explorer](https://astexplorer.net) to create a object of your code or [jointJS JavaScript AST Visualiser](https://www.jointjs.com/demos/abstract-syntax-tree) to create the chart above.
 
-Once we have the parseable content, we can analyze it and ditch what we don't want. Imagine we don't want a function called `sum` and this would be a very simple code to report and fix "the issue":
+Once we have the parseable content, we can analyze it and ditch what we don't want. Imagine we don't want a function called `sum`: here is how to identify and fix the issue:
 
 ```js
 // @ts-check
@@ -164,13 +165,13 @@ module.exports = {
 };
 ```
 
-Defined the rule, the next step is to define the severity level: `error`, `warning` and `info`.
+Defined the rule, the next step is to determinate the severity level: `error`, `warning`, and `info`.
 
 ## Rules and plugins
 
-Once we know which rules we want in place and the severity, we can create or adopt plugins. Plugins extend ESLint with custom rules or an opinated way to write JavaScript.
+Once we know which rules we want in place and the severity, we can create or adopt plugins. Plugins extend ESLint with custom rules or an opinionated way to write JavaScript.
 
-Let's take for example `eslint-config-airbnb`, a very popular package. They have adopt a set of rules they understand as [best practices](https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/best-practices.js) and reflect the [style](https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/style.js) of JavaScript code they want in their applications.
+Let's take for example `eslint-config-airbnb`, a very popular package. They have adopted a set of rules they understand as [best practices](https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/best-practices.js) and reflect the [style](https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/style.js) of JavaScript code they want in their applications.
 
 Here is part of the [`styles.js`](https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/style.js), let's check these 2 rules:
 
@@ -200,11 +201,11 @@ module.exports = {
 };
 ```
 
-If you are using their plugin in your app, an error will be reported with you create a variable called `number_of_items`, and you should use `numberOfItems` instead. Your code should not have more than 100 characters per line, except for the cases defined in the options object.
+If you are using their plugin in your app, an error will be reported with you create a variable called `number_of_items`, and you should use `numberOfItems` instead. Your code should have at most 100 characters per line, except for the cases defined in the options object.
 
 ## Useful plugins to adopt
 
-You don't need to be an ESLint or JavaScript expert to decide which rules to adopt, you can basically adopt one or more plugins created by the community and you will write a better, more consistent code. Here are some of the more popular ones:
+You don't need to be an ESLint or JavaScript expert to decide which rules to adopt, you can adopt one or more plugins created by the community and you will write a better, more consistent code. Here are some of the more popular ones:
 
 ### eslint-plugin-import
 
@@ -216,11 +217,11 @@ You don't need to be an ESLint or JavaScript expert to decide which rules to ado
 
 ### eslint-plugin-react-hooks
 
-[eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks) is extremely useful if you don't understand well hooks because it 'teaches' you how to use the feature introduced in React 16.8.
+[eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks) is extremely useful if you don't understand hooks well because it 'teaches' you how to use the feature introduced in React 16.8.
 
 ### eslint-plugin-jsx-a11y
 
-[eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y) checks for some acessibility rules in JSX elements. I previously [wrote about accessibility](https://leonardofaria.net/2020/08/13/automating-accessibility-tests-with-cypress) here and keep in mind that using linters and automated tests don't garantee that your app or website is 100% accessible however it can capture several mistakes, like [images without an alternative text](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/src/rules/alt-text.js) or [pages without a `lang` attribute](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/src/rules/lang.js).
+[eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y) checks for some accessibility rules in JSX elements. I previously [wrote about accessibility](https://leonardofaria.net/2020/08/13/automating-accessibility-tests-with-cypress) here and keep in mind that using linters and automated tests doesn't garantee that your app or website is 100% accessible; however it can capture several mistakes, like [images without an alternative text](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/src/rules/alt-text.js) or [pages without a `lang` attribute](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/src/rules/lang.js).
 
 ### eslint-config-airbnb
 
@@ -228,7 +229,7 @@ You don't need to be an ESLint or JavaScript expert to decide which rules to ado
 
 ### eslint-config-airbnb-base
 
-[eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base) is the right choice if you are not using React. It still gives you all JavaScript best-practices and style defined by Airbnb. In the past I have used this package in Ember.js applications.
+[eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base) is the right choice if you are not using React. It still gives you all JavaScript best practices and code style defined by Airbnb. In the past I have used this package in Ember.js applications.
 
 ### @typescript-eslint/eslint-plugin
 
@@ -238,15 +239,15 @@ I like their website has a [playground](https://typescript-eslint.io/play/) so y
 
 ### eslint-plugin-prettier
 
-[eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier) is helpful to avoid ESLint conflicting with Prettier. Overall we should not rely on ESLint for formating our code and this plugin will make sure that ESLint doesn't get on Prettier's way.
+[eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier) is helpful to avoid ESLint conflicting with Prettier. Overall we should not rely on ESLint for formatting our code and this plugin will make sure that ESLint doesn't get on Prettier's way.
 
 ### eslint-plugin-relay
 
-[eslint-plugin-relay](https://www.npmjs.com/package/eslint-plugin-relay) catches common problems in code using Relay. I learned about this plugin at my current job and I can see how a [rule to remove unused fields](https://github.com/relayjs/eslint-plugin-relay/blob/main/src/rule-unused-fields.js) from your GraphQL queries can help with performance of your application.
+[eslint-plugin-relay](https://www.npmjs.com/package/eslint-plugin-relay) catches common problems in code using Relay. I learned about this plugin at my current job, and I can see how a [rule to remove unused fields](https://github.com/relayjs/eslint-plugin-relay/blob/main/src/rule-unused-fields.js) from your GraphQL queries can help with the performance of your application.
 
 ### eslint-plugin-eslint-comments
 
-[eslint-plugin-eslint-comments](https://www.npmjs.com/package/eslint-plugin-eslint-comments) applies best practices on directive comments such as `/* eslint-disable */`. Between many best practices, the recommended rules of this plugin require you to describe which rule do you want to disable.
+[eslint-plugin-eslint-comments](https://www.npmjs.com/package/eslint-plugin-eslint-comments) applies best practices on directive comments such as `/* eslint-disable */`. Among many best practices, the recommended rules of this plugin require you to describe which rule you want to disable.
 
 ### eslint-config-next
 
@@ -268,7 +269,7 @@ Here are a few rules that I enable/disable/customize. You can add them in the [r
 
 Enabled in `eslint:recommended` - [Documentation](https://eslint.org/docs/latest/rules/no-unused-vars)
 
-In languages like Ruby we prefix variables with `_` if we are not using them. The rule as it is doesn't respect that so we can fix with:
+In languages like Ruby, we prefix variables with `_` if we are not using them. The rule as it is doesn't respect that, so we can fix it with:
 
 ```js
 'no-unused-vars': [
@@ -335,7 +336,7 @@ This rule is helpful to avoid surprises if you are using dependencies there are 
 
 From eslint-plugin-import - Enabled in `airbnb` - [Documentation](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-default-export.md)
 
-This is a rule that I disable because I don't see the benefit of prefering default exports. Like mentioned in the Airbnb's [project issue](https://github.com/airbnb/javascript/issues/1365), this rule makes refactoring more difficult.
+This is a rule that I disable because I don't see the benefit of preferring default exports. As mentioned in Airbnb's [project issue](https://github.com/airbnb/javascript/issues/1365), this rule makes refactoring more difficult.
 
 ```js
 'import/prefer-default-export': 'off',
@@ -345,7 +346,7 @@ This is a rule that I disable because I don't see the benefit of prefering defau
 
 From eslint-plugin-react - [Documentation](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md)
 
-I like this rule because in my opinion it makes easier to find a prop in a component. I also like to move to the end shorthand and callback props:
+I like this rule because it makes it easier to find a prop in a component. I also like to move to the end shorthand and callback props:
 
 ```js
 'react/jsx-sort-props': [
