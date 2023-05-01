@@ -9,7 +9,7 @@ description: (Almost) everything you want to know about ESLint
 
 Have you ever asked yourself how ESLint works and what we can do with it? Why do we have so many rules and which ones are the best, most helpful ones? In this post, you will learn one thing or two about this linter and its rules.
 
-## Intro
+## Introduction
 
 A linter is a tool that statically analyzes your code and based on their rules, reports warnings and errors. Linters are helpful to catch bugs and enforce standards in a codebase.
 
@@ -137,10 +137,31 @@ The parser is smart enough to ignore spaces and things that don't matter: `conso
 
 You can use a website like [AST Explorer](https://astexplorer.net) to create a object of your code or [jointJS JavaScript AST Visualiser](https://www.jointjs.com/demos/abstract-syntax-tree) to create the chart above.
 
-Once we have the parseable content, we can analyze it and ditch what we don't want. Imagine we don't want a function called `sum` and this would be a very simple code to report this:
+Once we have the parseable content, we can analyze it and ditch what we don't want. Imagine we don't want a function called `sum` and this would be a very simple code to report and fix "the issue":
 
 ```js
-// Add code
+// @ts-check
+/** @type {import('eslint').Rule.RuleModule} */
+module.exports = {
+  create: (context) => {
+    return {
+      FunctionDeclaration: (node) => {
+        if (node.id && node.id.name === 'sum') {
+          context.report({
+            node,
+            message: 'Do not call a function sum. Call it add instead',
+            fix(fixer) {
+              if (node.id?.range) {
+                return [fixer.replaceTextRange(node.id.range, 'add')];
+              }
+              return [];
+            },
+          });
+        }
+      },
+    };
+  },
+};
 ```
 
 Defined the rule, the next step is to define the severity level: `error`, `warning` and `info`.
@@ -223,6 +244,10 @@ I like their website has a [playground](https://typescript-eslint.io/play/) so y
 
 [eslint-plugin-relay](https://www.npmjs.com/package/eslint-plugin-relay) catches common problems in code using Relay. I learned about this plugin at my current job and I can see how a [rule to remove unused fields](https://github.com/relayjs/eslint-plugin-relay/blob/main/src/rule-unused-fields.js) from your GraphQL queries can help with performance of your application.
 
+### eslint-plugin-eslint-comments
+
+[eslint-plugin-eslint-comments](https://www.npmjs.com/package/eslint-plugin-eslint-comments) applies best practices on directive comments such as `/* eslint-disable */`. Between many best practices, the recommended rules of this plugin require you to describe which rule do you want to disable.
+
 ### eslint-config-next
 
 [eslint-config-next](https://www.npmjs.com/package/eslint-config-next) is obviously only helpful if you have a Next.js application. It already extends `eslint-plugin-react`, `eslint-plugin-react-hooks`, `eslint-plugin-jsx-a11y` and add some rules to enforce Next.js features, like using their `<Image>` component instead of `<img>` HTML tags.
@@ -233,7 +258,7 @@ Instead of manually adding all these plugins in all your different codebases, yo
 
 In the past I created a package called `eslint-config-leozera` which extends `eslint-plugin-import`, `eslint-plugin-react`, `eslint-plugin-react-hooks`, `eslint-plugin-jsx-a11y` and overrides some of their configs.
 
-The source-code of my project is a good start if you are looking at creating a package for different apps of your company for example.
+The [source-code of my project](https://github.com/leonardofaria/eslint-config-leozera) is a good start if you are looking at creating a package for different apps of your company for example.
 
 ## Helpful and/or curious rules to use
 
@@ -375,3 +400,4 @@ Some posts I'm based on to write this post:
 - [What is JavaScript AST, how to play with it?](https://stackoverflow.com/questions/16127985/what-is-javascript-ast-how-to-play-with-it)
 - [Abstract syntax trees on JavaScript](https://jotadeveloper.medium.com/abstract-syntax-trees-on-javascript-534e33361fc7)
 - [Read JavaScript Source Code, Using an AST](https://www.digitalocean.com/community/tutorials/js-traversing-ast)
+- [How to write custom ESLint rules for your project](https://camchenry.com/blog/eslint-custom-rules)
