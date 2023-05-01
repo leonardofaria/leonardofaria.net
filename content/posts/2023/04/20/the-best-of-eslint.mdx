@@ -237,19 +237,135 @@ The source-code of my project is a good start if you are looking at creating a p
 
 ## Helpful and/or curious rules to use
 
-The following rules are not enabled by default in any of recommended plugins above:
+Here are a few rules that I enable/disable/customize. You can add them in the [rules object of your config](https://eslint.org/docs/latest/use/configure/rules).
 
 ### no-unused-vars
 
+Enabled in `eslint:recommended` - [Documentation](https://eslint.org/docs/latest/rules/no-unused-vars)
+
+In languages like Ruby we prefix variables with `_` if we are not using them. The rule as it is doesn't respect that so we can fix with:
+
+```js
+'no-unused-vars': [
+  'error', // or warning
+  { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+],
+```
+
 ### import/order
+
+From eslint-plugin-import - [Documentation](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md)
+
+This rule enforces a convention in the order of `require()` / `import` statements. Here is one example of keeping `react`, `react-relay` and `next` imports first and others imports in alphabetic order, following their grouping:
+
+```js
+'import/order': [
+  'error',
+  {
+    groups: [
+      'external',
+      'builtin',
+      'internal',
+      'sibling',
+      'parent',
+      'index',
+    ],
+    pathGroups: [
+      {
+        pattern: 'react',
+        group: 'external',
+        position: 'before',
+      },
+      {
+        pattern: 'react-relay',
+        group: 'external',
+        position: 'before',
+      },
+      {
+        pattern: 'next',
+        group: 'external',
+        position: 'before',
+      },
+    ],
+    pathGroupsExcludedImportTypes: ['react', 'react-relay', 'next'],
+    alphabetize: {
+      order: 'asc',
+      caseInsensitive: true,
+    },
+  },
+],
+```
+
+### no-extraneous-dependencies
+
+From eslint-plugin-import - [Documentation](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md)
+
+This rule is helpful to avoid surprises if you are using dependencies there are not mentioned in the `package.json`:
+
+```js
+'import/no-extraneous-dependencies': 'error',
+```
 
 ### import/prefer-default-export
 
+From eslint-plugin-import - Enabled in `airbnb` - [Documentation](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-default-export.md)
+
+This is a rule that I disable because I don't see the benefit of prefering default exports. Like mentioned in the Airbnb's [project issue](https://github.com/airbnb/javascript/issues/1365), this rule makes refactoring more difficult.
+
+```js
+'import/prefer-default-export': 'off',
+```
+
 ### react/jsx-sort-props
+
+From eslint-plugin-react - [Documentation](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md)
+
+I like this rule because in my opinion it makes easier to find a prop in a component. I also like to move to the end shorthand and callback props:
+
+```js
+'react/jsx-sort-props': [
+  'warn',
+  {
+    callbacksLast: true,
+    shorthandFirst: false,
+    shorthandLast: true,
+    ignoreCase: true,
+    noSortAlphabetically: false,
+  },
+],
+```
 
 ### react/react-in-jsx-scope
 
+From eslint-plugin-react - Enabled in `airbnb` - [Documentation](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md)
+
+This rule is not longer valid since React 17.
+
+```js
+'react/require-extension': 'off',
+```
+
 ### @typescript-eslint/consistent-type-imports
+
+From @typescript-eslint/eslint-plugin - [Documentation](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/website/blog/2023-02-24-consistent-type-exports-and-imports-why-and-how.md)
+
+Explaining this one with an example of the plugin's documentation:
+
+```js
+// Is SomeThing a class? A type? A variable?
+// Just from this file, we don't know! 😫
+import { SomeThing } from './may-include-side-effects.js';
+
+// Now we know this file's SomeThing is only used as a type.
+// We can remove this import in transpiled JavaScript syntax.
+import type { SomeThing } from './may-include-side-effects.js';
+```
+
+I like this rule because it increases the legibility of the code. Enabled with:
+
+```js
+'@typescript-eslint/consistent-type-imports': 'error',
+```
 
 ## References
 
