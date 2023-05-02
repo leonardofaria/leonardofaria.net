@@ -29,6 +29,7 @@ export const WIDE_WRAPPER =
 export const CONTENT_STYLES = {
   a: 'transition duration-300 ease-in-out text-blue-600 hover:text-blue-800',
   blockquote: 'pl-5 border-l-4 border-charade-600',
+  code: 'border-charade-600 bg-gray-200 rounded-md px-2 -mt-1 py-1 inline-flex items-center text-[85%]',
   h1: 'my-2 font-semibold tracking-tighter text-charade-700 text-3xl lg:text-4xl',
   h2: 'my-2 font-semibold tracking-tighter text-charade-700 text-2xl lg:text-3xl',
   h3: 'my-2 font-semibold tracking-tighter text-charade-700 text-xl lg:text-2xl',

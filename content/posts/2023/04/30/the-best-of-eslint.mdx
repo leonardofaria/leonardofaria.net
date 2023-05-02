@@ -136,9 +136,9 @@ The AST for the code above will be an object like:
 }
 ```
 
-The parser is smart enough to ignore spaces and things that don't matter: `console.log('Hello')` and `console.log(    'Hello'    )` are the same. A linter will analyze the object and report warnings and errors according to its rules. For example, a linter can scan this code and report that we should not have a function called `sum`.
+The parser is smart enough to ignore spaces and things that don't matter: `console.log('Hello')` and `console.log(   'Hello'    )` are the same. A linter will analyze the object and report warnings and errors according to its rules. For example, a linter can scan this code and report that we should not have a function called `sum`.
 
-![AST](/wp-content/uploads/2023/04/ast.svg)
+![AST](/wp-content/uploads/2023/04/ast-example.svg)
 
 You can use a website like [AST Explorer](https://astexplorer.net) to create a object of your code or [jointJS JavaScript AST Visualiser](https://www.jointjs.com/demos/abstract-syntax-tree) to create the chart above.
 
