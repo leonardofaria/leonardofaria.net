@@ -4,7 +4,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks';
 import Image from 'next/image';
 import Link from 'next/link';
 import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
-import { Badge, H1 } from 'src/components/UI';
+import { A, Badge, H1 } from 'src/components/UI';
 import { Playground } from 'src/components/Playground';
 import Embed from '../../Embed';
 
@@ -64,7 +64,7 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
         /* eslint-disable-next-line tailwindcss/no-custom-classname */
         className={`e-content ${CONTENT_STYLES_WRAPPER}`}
       >
-        <MDXContent components={{ Playground, Embed, Image }} />
+        <MDXContent components={{ A, Playground, Embed, Image }} />
       </div>
 
       <footer className="hidden">

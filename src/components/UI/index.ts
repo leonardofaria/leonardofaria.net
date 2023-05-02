@@ -1,3 +1,4 @@
+export { A } from './A';
 export { Article } from './Article';
 export { Badge } from './Badge';
 export { Footer } from './Footer';

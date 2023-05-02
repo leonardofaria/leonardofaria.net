@@ -9,7 +9,7 @@ import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import { Playground } from '../Playground';
 import Embed from '../Embed';
-import { Article, Badge, Footer, H1, Header, Main } from '../UI';
+import { A, Article, Badge, Footer, H1, Header, Main } from '../UI';
 import { Interactions } from './shared/Interactions';
 // import { TableOfContents } from './shared/TableOfContents';
 
@@ -138,7 +138,9 @@ export default function Single({
             /* eslint-disable-next-line tailwindcss/no-custom-classname */
             className={`e-content ${CONTENT_STYLES_WRAPPER}`}
           >
-            <MDXContent components={{ Playground, Embed, Image, Parallax }} />
+            <MDXContent
+              components={{ A, Playground, Embed, Image, Parallax }}
+            />
           </div>
 
           <footer className="hidden">
