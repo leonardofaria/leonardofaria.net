@@ -18,6 +18,8 @@ const CODE_STYLES = {
     '!border-l-purple-300/70 bg-purple-200/15 before:!text-gray-600',
 };
 
+export const HEADING_LINK_ANCHOR = `before:content-['#'] before:absolute before:-ml-[1em] before:text-charade-700/0 hover:before:text-charade-700 pl-[1em] -ml-[1em]`;
+
 export const FULL_WIDTH_WRAPPER =
   'w-screen relative left-2/4 right-2/4 -ml-[50vw] -mr-[50vw]';
 
