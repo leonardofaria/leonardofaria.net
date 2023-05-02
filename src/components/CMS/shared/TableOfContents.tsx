@@ -1,19 +1,21 @@
-export function TableOfContents(post: any) {
+import { type Page, type Post } from 'contentlayer/generated';
+
+export function TableOfContents({ post }: { post: Post | Page }) {
   const { headings } = post;
+
+  if (headings === undefined) {
+    return null;
+  }
 
   return (
     <div>
       {headings.map((heading: any) => {
+        const classes = `hover:underline ${heading.heading === 2 && 'pl-2'} ${
+          heading.heading === 3 && 'pl-4'
+        }`;
         return (
           <div key={heading.slug}>
-            <a
-              className="block underline-offset-2 transition-all hover:underline hover:decoration-rose-200/50"
-              href={`#${heading.slug}`}
-              // {
-              //   'pl-2': heading.heading === 2,
-              //   'pl-4': heading.heading === 3,
-              // }
-            >
+            <a className={classes} href={`#${heading.slug}`}>
               {heading.text}
             </a>
           </div>

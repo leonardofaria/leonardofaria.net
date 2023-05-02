@@ -11,6 +11,7 @@ import { Playground } from '../Playground';
 import Embed from '../Embed';
 import { Article, Badge, Footer, H1, Header, Main } from '../UI';
 import { Interactions } from './shared/Interactions';
+// import { TableOfContents } from './shared/TableOfContents';
 
 export default function Single({
   post,
@@ -130,6 +131,8 @@ export default function Single({
               </Balancer>
             </H1>
           </header>
+
+          {/* <TableOfContents post={post} /> */}
 
           <div
             /* eslint-disable-next-line tailwindcss/no-custom-classname */
