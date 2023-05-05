@@ -19,15 +19,15 @@ Tempos atrás tinha instalado o Sublime, mas não o usei efetivamente. O [Nando 
 
 O Sublime possui um gerenciador de plugins que extendem as funcionalidades do editor. O post que citei do Nando mostra como instalá-los. Esses são os plugins que andei testando:
 
-  * [Git](https://github.com/kemayo/sublime-text-2-git/): integra funcionalidades do Git a seu projeto;
-  * [SidebarGit](https://github.com/SublimeText/SideBarGit): integrar comandos do Git a sidebar do projeto;<img src="/wp-content/uploads/2012/12/tree.jpg" className="foto right" align="right" />
-  * [MacTerminal](https://github.com/afterdesign/MacTerminal): integra o iTerm 2 ao Sublime;
-  * [BracketHighlighter](https://github.com/facelessuser/BracketHighlighter/): destaca blocos de código. Útil quando você pega código alheiro e se perde tentando entender onde começam e terminam funções e métodos;
-  * [Sublime Lint](https://github.com/lunixbochs/sublimelint): valida a sintaxe inline de códigos JavaScript, Ruby e PHP. Nunca fui fã desses recursos, mas resolvi instalar para experimentar;
+  * <A href="https://github.com/kemayo/sublime-text-2-git/">Git</A>: integra funcionalidades do Git a seu projeto;
+  * <A href="https://github.com/SublimeText/SideBarGit">SidebarGit</A>: integrar comandos do Git a sidebar do projeto;<img src="/wp-content/uploads/2012/12/tree.jpg" className="foto right" align="right" />
+  * <A href="https://github.com/afterdesign/MacTerminal">MacTerminal</A>: integra o iTerm 2 ao Sublime;
+  * <A href="https://github.com/facelessuser/BracketHighlighter/">BracketHighlighter</A>: destaca blocos de código. Útil quando você pega código alheiro e se perde tentando entender onde começam e terminam funções e métodos;
+  * <A href="https://github.com/lunixbochs/sublimelint">Sublime Lint</A>: valida a sintaxe inline de códigos JavaScript, Ruby e PHP. Nunca fui fã desses recursos, mas resolvi instalar para experimentar;
 
 ## Tema
 
-No Textmate eu usava o esquema de cor All Hallow's Eve. Esse e todos os outros esquemas de cores podem ser usados no Sublime. Para isso você precisará do tema Soda. Criei um [fork](https://github.com/leonardofaria/soda-theme) do [tema original](http://buymeasoda.github.com/soda-theme/) para colocar ícones nas pastas, baseado em um [hack que encontrei](http://sublimetext.userecho.com/topic/19274-theming-of-the-sidebar/). Para instalar o tema, clona o repositório:
+No Textmate eu usava o esquema de cor All Hallow's Eve. Esse e todos os outros esquemas de cores podem ser usados no Sublime. Para isso você precisará do tema Soda. Criei um <A href="https://github.com/leonardofaria/soda-theme">fork</A> do [tema original](http://buymeasoda.github.com/soda-theme/) para colocar ícones nas pastas, baseado em um [hack que encontrei](http://sublimetext.userecho.com/topic/19274-theming-of-the-sidebar/). Para instalar o tema, clona o repositório:
 
 ```shell
 cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages
@@ -43,7 +43,7 @@ Para ativá-lo, abra o arquivo de preferências do Sublime (Sublime Text 2 > Pre
 }
 ```
 
-Os temas do Textmate podem ser encontrados [nesse repositório](https://github.com/jwhitmire/tm-themes) do Github. O tema Soda permite a customização das abas, tornando-as semelhantes as abas do Google Chrome.
+Os temas do Textmate podem ser encontrados <A href="https://github.com/jwhitmire/tm-themes">nesse repositório</A> do Github. O tema Soda permite a customização das abas, tornando-as semelhantes as abas do Google Chrome.
 
 <center>
   <img src="/wp-content/uploads/2012/12/multiple-tab-styles.png" />

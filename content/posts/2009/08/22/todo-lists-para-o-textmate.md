@@ -15,10 +15,10 @@ tags:
   - mac
   - software
 ---
-Fica a dica para quem usa o Textmate: [Tasks](http://github.com/henrik/tasks.tmbundle/) é um bundle para o Textmate que permite a criação de Todo lists bonitinhas.
+Fica a dica para quem usa o Textmate: <A href="https://github.com/henrik/tasks.tmbundle/">Tasks</A> é um bundle para o Textmate que permite a criação de Todo lists bonitinhas.
 
 <center>
-  <a href="http://github.com/henrik/tasks.tmbundle/"><img src="/wp-content/uploads/2009/08/textmate_tasks-bundle.png" alt="Tasks" title="Tasks" /></a>
+  <a href="https://github.com/henrik/tasks.tmbundle/"><img src="/wp-content/uploads/2009/08/textmate_tasks-bundle.png" alt="Tasks" title="Tasks" /></a>
 </center>
 
 A [instalação](http://henrik.nyh.se/2007/08/tasks-bundle) é fácil:

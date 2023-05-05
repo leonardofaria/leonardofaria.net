@@ -104,13 +104,13 @@ Last month I started taking accessibility courses at [Deque University](https://
   * Modals: modals can be problematic. Decided to follow [Ire Aderinokun's](https://bitsofco.de/accessible-modal-dialog/) approach.
   * [axe](https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd): the extension is an accessibility checker for WCAG 2 and Section 508 accessibility rules.
 
-It is not perfect, there are a few things that I didn't work it, like adding a skip link to the main content. If you are curious, [here is the Pull Request with all the changes](https://github.com/leonardofaria/collection/pull/1).
+It is not perfect, there are a few things that I didn't work it, like adding a skip link to the main content. If you are curious, <A href="https://github.com/leonardofaria/collection/pull/1">here is the Pull Request with all the changes</A>.
 
 ## Create a website that works in old browsers
 
 I couldn't achieve this objective since I had no control over scripts and styles. However, it doesn't seem to be impossible. A few things I noticed:
 
-  * [Expedite](https://github.com/SteinHQ/Expedite) (Stein client) uses [fetch](https://github.com/SteinHQ/Expedite/blob/master/index.js#L51-L54), which was only [added in Safari 10](https://caniuse.com/#feat=fetch). The request to their server could be probably replaced for an XMLHttpRequest.
+  * <A href="https://github.com/SteinHQ/Expedite">Expedite</A> (Stein client) uses <A href="https://github.com/SteinHQ/Expedite/blob/master/index.js#L51-L54">fetch</A>, which was only [added in Safari 10](https://caniuse.com/#feat=fetch). The request to their server could be probably replaced for an XMLHttpRequest.
   * Tailwind uses flexbox in many elements. Safari only started supporting Flexbox in iOS 7. Maybe I could write a few properties to their existing elements to achieve a decent look.
   * SSL Certificates may be an issue to old browsers.
 

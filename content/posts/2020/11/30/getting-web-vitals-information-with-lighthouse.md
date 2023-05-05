@@ -47,7 +47,7 @@ The three facets are:
 
 ![Core Web Vitals](/wp-content/uploads/2020/11/core-web-vitals.png)
 
-All of Google's popular tools for developers support measurement of Core Web Vitals, including [Lighthouse](https://github.com/GoogleChrome/lighthouse), [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/), [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools), [Search Console](https://search.google.com/search-console/about), [web.dev's measure tool](/measure/), the [Web Vitals Chrome extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma) and the new [Chrome UX Report](https://developers.google.com/web/tools/chrome-user-experience-report) API. 
+All of Google's popular tools for developers support measurement of Core Web Vitals, including <A href="https://github.com/GoogleChrome/lighthouse">Lighthouse</A>, [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/), [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools), [Search Console](https://search.google.com/search-console/about), [web.dev's measure tool](/measure/), the [Web Vitals Chrome extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma) and the new [Chrome UX Report](https://developers.google.com/web/tools/chrome-user-experience-report) API. 
 
 It is important to mention that FID can't be measured in Lighthouse and as an alternative, Google recommends measuring the [Total Blocking Time (TBT)](https://web.dev/tbt/). Tools like Lighthouse that load pages in a simulated environment without a user can not measure FID, since a simulated environment has no user input.
 
@@ -57,7 +57,7 @@ The Web Vitals information is very easily found in the Lighthouse reports:
 
 ![Web Vitals information in Lighthouse report](/wp-content/uploads/2020/11/lighthouse-web-vitals-report.jpg)
 
-What I want to share today is how to get Web Vitals information from the Lighthouse node package (from my [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples)):
+What I want to share today is how to get Web Vitals information from the Lighthouse node package (from my <A href="https://github.com/leonardofaria/lighthouse-examples">lighthouse-examples GitHub repository</A>):
 
 ```js showLineNumbers
 const lighthouse = require('lighthouse');

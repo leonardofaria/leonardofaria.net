@@ -33,7 +33,7 @@ Have you ever about thought tracking what is added to a page or web app? Did not
 </ul>
 </div>
 
-In this post you will learn how to collect similar data using Lighthouse. Here is the recipe (from my [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples)):
+In this post you will learn how to collect similar data using Lighthouse. Here is the recipe (from my <A href="https://github.com/leonardofaria/lighthouse-examples">lighthouse-examples GitHub repository</A>):
 
 ```js showLineNumbers
 const lighthouse = require('lighthouse');

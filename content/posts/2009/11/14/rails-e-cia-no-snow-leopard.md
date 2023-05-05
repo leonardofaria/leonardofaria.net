@@ -65,7 +65,7 @@ sudo gem install mysql -- --with-mysql-config=/usr/local/mysql/bin/mysql_config
 
 ### ImageMagick & rmagick
 
-Fiz a instalação do ImageMagick com o [script do chdorner](http://github.com/chdorner/magick-installer/blob/master/magick-installer.sh):
+Fiz a instalação do ImageMagick com o <A href="https://github.com/chdorner/magick-installer/blob/master/magick-installer.sh">script do chdorner</A>:
 
 ```shell
 #!/bin/sh

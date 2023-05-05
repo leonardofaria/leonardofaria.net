@@ -18,9 +18,9 @@ HAR (HTTP Archive) is a JSON file containing all information about a browser’s
 
 ![HAR Viewer](/wp-content/uploads/2020/06/har-viewer.jpg)
 
-There are different ways to automate the HAR creation: [puppeteer-har](https://www.npmjs.com/package/puppeteer-har) is a NPM package you can add in your tooling or if you are not from the JavaScript world you can use [Selenium](https://octopus.com/blog/selenium/13-capturing-har-files/capturing-har-files). 
+There are different ways to automate the HAR creation: <A href="https://www.npmjs.com/package/puppeteer-har">puppeteer-har</A> is a NPM package you can add in your tooling or if you are not from the JavaScript world you can use [Selenium](https://octopus.com/blog/selenium/13-capturing-har-files/capturing-har-files). 
 
-I was using puppeteer-har for a few months but then I noticed that the HAR was missing a few files in specific scenarios (ex. a React app with Loadable and React Router). For this reason, I decided to look for analternative and this is how I found the [chrome-har-capturer](https://www.npmjs.com/package/chrome-har-capturer) package.
+I was using puppeteer-har for a few months but then I noticed that the HAR was missing a few files in specific scenarios (ex. a React app with Loadable and React Router). For this reason, I decided to look for analternative and this is how I found the <A href="https://www.npmjs.com/package/chrome-har-capturer">chrome-har-capturer</A> package.
 
 <div className="my-10 p-4 border border-charade-6 rounded-md bg-white">
 <strong>Hi! This post is part of a Lighthouse post series. Also, check out:</strong>
@@ -37,7 +37,7 @@ I was using puppeteer-har for a few months but then I noticed that the HAR was m
 
 This package works like a charm; it creates a HAR file following the [HAR 1.2 spec](http://www.softwareishard.com/blog/har-12-spec/) and all that I need to provide is an array of raw events that comes from the [Chrome Debugging Protocol](https://chromedevtools.github.io/devtools-protocol/). Who provides the raw events? Lighthouse!
 
-Let's take a look at the implementation (from my [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples)):
+Let's take a look at the implementation (from my <A href="https://github.com/leonardofaria/lighthouse-examples">lighthouse-examples GitHub repository</A>):
 
 ```js showLineNumbers
 const lighthouse = require('lighthouse');
@@ -60,7 +60,7 @@ const { writeFileSync } = require('fs');
 
 In my other posts, I shared how to use the `lighthouse()` function to get all kinds of information: from web vitals metrics to page screenshots. What I didn't mention was the function also keeps the artifacts created by the DevTools protocols. This is what we are storing in line 10 and this is the array of raw events that chrome-har-capturer needs to generate a HAR file.
 
-In line 12, we use the `fromLog` function to build the HAR object, which we store in the file system in the following line. If you are curious about how the `fromLog` function works, I would recommend reading the package source-code, in special [one of their tests](https://github.com/cyrus-and/chrome-har-capturer/blob/master/test/offline.js).
+In line 12, we use the `fromLog` function to build the HAR object, which we store in the file system in the following line. If you are curious about how the `fromLog` function works, I would recommend reading the package source-code, in special <A href="https://github.com/cyrus-and/chrome-har-capturer/blob/master/test/offline.js">one of their tests</A>.
 
 Next, the generated HAR is stored in `page.har`. and we can use it in the [HAR Viewer](http://www.softwareishard.com/har/viewer/) for performance analysis. 
 

@@ -25,13 +25,13 @@ By the end of this post we will have PRs with Cypress tests:
 
 I created a [sample website](https://cypress-example.vercel.app/) to mimic a Component Library. It is a very simple website created with TailwindCSS and hosted in Vercel and it documents 2 components: [badge](https://cypress-example.vercel.app/badge.html) and [button](https://cypress-example.vercel.app/button.html).
 
-You can check the [source code](https://github.com/leonardofaria/cypress-example) in GitHub. The website is static and it is inside the `public` folder. You can see the website locally by running `npm run serve` and checking in the browser [http://localhost:8000](http://localhost:8000).
+You can check the <A href="https://github.com/leonardofaria/cypress-example">source code</A> in GitHub. The website is static and it is inside the `public` folder. You can see the website locally by running `npm run serve` and checking in the browser [http://localhost:8000](http://localhost:8000).
 
 ![Sample website](/wp-content/uploads/2020/08/cypress-sample-website.png)
 
 ## Adding Cypress and Cypress Image Snapshot
 
-Start by cloning the [example repository](https://github.com/leonardofaria/cypress-example). Next, create a new branch and install [Cypress Image Snapshot](https://www.npmjs.com/package/cypress-image-snapshot), the package responsible for capturing/comparing screenshots.
+Start by cloning the <A href="https://github.com/leonardofaria/cypress-example">example repository</A>. Next, create a new branch and install <A href="https://www.npmjs.com/package/cypress-image-snapshot">Cypress Image Snapshot</A>, the package responsible for capturing/comparing screenshots.
 
 ```bash
 git checkout -b add-cypress
@@ -126,7 +126,7 @@ Using `npm run cypress open`, Cypress Test Runner will be opened and you can fol
 
 ![Cypress Test Runner screenshot](/wp-content/uploads/2020/08/cypress-test-runner.jpg)
 
-Our first milestone is done, let's merge this branch to master. If you want to see the work done so far, jump in my [Pull Request](https://github.com/leonardofaria/cypress-example/pull/1). 
+Our first milestone is done, let's merge this branch to master. If you want to see the work done so far, jump in my <A href="https://github.com/leonardofaria/cypress-example/pull/1">Pull Request</A>. 
 
 ## Using Cypress inside Docker
 
@@ -178,7 +178,7 @@ CYPRESS_updateSnapshots=true npm run test
 
 Please notice that I am prefixing the test command with the environment variable `CYPRESS_updateSnapshots`.
 
-The second milestone is done. In case you need help, check my [pull request](https://github.com/leonardofaria/cypress-example/pull/2).
+The second milestone is done. In case you need help, check my <A href="https://github.com/leonardofaria/cypress-example/pull/2">pull request</A>.
 
 Let's merge this branch and move forward.
 
@@ -188,7 +188,7 @@ Our next step is adding the tests in CI. There are different CI solutions in the
 
 Before we create our Semaphore configuration file, let's prepare our project to run in CI.
 
-The first step is installing [start-server-and-test](https://www.npmjs.com/package/start-server-and-test). As the package name says, it will start a server, waits for URL, then runs a test command:
+The first step is installing <A href="https://www.npmjs.com/package/start-server-and-test">start-server-and-test</A>. As the package name says, it will start a server, waits for URL, then runs a test command:
 
 ```bash
 npm install -D start-server-and-test
@@ -245,7 +245,7 @@ Breaking the configuration in details:
 - In line 27, we are dynamically setting the `CYPRESS_baseUrl` environment variable based in the IP Docker is using at the moment. This will replace `http://host.docker.internal:8000/`, which may not work in all environments.
 - In line 28, we finally run the test using `start-server-and-test`: once the server is ready for connections, Cypress will run the test suite.
 
-Another milestone is done, time to merge our branch! You can check the [Pull request](https://github.com/leonardofaria/cypress-example/pull/6/files) that contains all the files from this section and check the [build inside Semaphore](https://leonardofaria.semaphoreci.com/workflows/061f6c9f-8f2d-4351-8a25-e5bc1568f67e).
+Another milestone is done, time to merge our branch! You can check the <A href="https://github.com/leonardofaria/cypress-example/pull/6/files">Pull request</A> that contains all the files from this section and check the [build inside Semaphore](https://leonardofaria.semaphoreci.com/workflows/061f6c9f-8f2d-4351-8a25-e5bc1568f67e).
 
 ## Recording the tests in cypress.io
 
@@ -276,7 +276,7 @@ In Semaphore, I added the record key as an environment variable called `CYPRESS_
 }
 ```
 
-That is pretty much all that needs to be done. In the [Pull request](https://github.com/leonardofaria/cypress-example/pull/8) we can see the cypress.io integration in the comments. There is even a deep link that takes us to their dashboard and shows all the screenshots. Check the video below: 
+That is pretty much all that needs to be done. In the <A href="https://github.com/leonardofaria/cypress-example/pull/8">Pull request</A> we can see the cypress.io integration in the comments. There is even a deep link that takes us to their dashboard and shows all the screenshots. Check the video below: 
 
 <video className="h-auto" controls loop autoPlay="autoPlay">
   <source src="/wp-content/uploads/2020/08/cypress-io-test-dashboard.mp4" type="video/mp4" />
@@ -288,7 +288,7 @@ Time to merge our work and that is the end of our integration.
 
 Imagine we are working on a change that affects the padding of the buttons: time to test if Cypress will capture the difference. 
 
-In the example website, let's double the horizontal padding from 16px to 32px. This change is quite simple since we are using Tailwind CSS: `px-4` gets replaced by `px-8`. Here is [Pull request](https://github.com/leonardofaria/cypress-example/pull/9).
+In the example website, let's double the horizontal padding from 16px to 32px. This change is quite simple since we are using Tailwind CSS: `px-4` gets replaced by `px-8`. Here is <A href="https://github.com/leonardofaria/cypress-example/pull/9">Pull request</A>.
 
 As we could expect, Cypress captured that the button doesn't match the screenshots. Visiting the page, we can check the screenshot of the broken test:
 

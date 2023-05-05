@@ -27,9 +27,9 @@ I recently came across [Contentlayer](https://contentlayer.dev/). Contentlayer 
 
 [Delba Oliveira](https://delba.dev) has a great post series called "[Build a Developer Blog with Next.js](https://delba.dev/blog/next-blog-structured-mdx-content-with-contentlayer)". Her posts and website source code helped me understand what needed to be done here. There is also another tutorial called "[Building Better Next.js Static Sites with MDX and Contentlayer](https://dawchihliou.github.io/articles/build-better-nextjs-static-sites-with-mdx-and-contentlayer)" that helped me a lot.
 
-If you come from the WordPress world, you are familiar with Posts and Pages. With Contentlayer, I [recreated these entities](https://github.com/leonardofaria/leonardofaria.net/blob/master/contentlayer.config.ts) with the attributes that I needed (permalink, slug, excerpt, etc.), while keeping the same URLs that I used in WordPress and Hugo. I also kept the tags pages in place.
+If you come from the WordPress world, you are familiar with Posts and Pages. With Contentlayer, I <A href="https://github.com/leonardofaria/leonardofaria.net/blob/master/contentlayer.config.ts">recreated these entities</A> with the attributes that I needed (permalink, slug, excerpt, etc.), while keeping the same URLs that I used in WordPress and Hugo. I also kept the tags pages in place.
 
-Here is the [PR of the migration](https://github.com/leonardofaria/leonardofaria.net/pull/128), in case you like big PRs. I organized the commits into different types:
+Here is the <A href="https://github.com/leonardofaria/leonardofaria.net/pull/128">PR of the migration</A>, in case you like big PRs. I organized the commits into different types:
 
 - Add Next.js (aka initial commit)
 - Rename static → public (Hugo stores static content in a `static` folder and Next.js in a `public` one)

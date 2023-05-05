@@ -21,7 +21,7 @@ tags:
 
 ### Editor: Atom
 
-I have been using Atom for a while. Despite I started testing VS Code in the latest months, I returned to Atom because VS Code doesn't separate [UI theme from syntax theme](https://github.com/Microsoft/vscode/issues/25986) – you may not care about this, but I am a fan of a light UI and a dark code highlight.
+I have been using Atom for a while. Despite I started testing VS Code in the latest months, I returned to Atom because VS Code doesn't separate <A href="https://github.com/Microsoft/vscode/issues/25986">UI theme from syntax theme</A> – you may not care about this, but I am a fan of a light UI and a dark code highlight.
 
 [![My Atom](/wp-content/uploads/2017/12/screenshot-atom.png)](https://gist.github.com/leonardofaria/982b8055af2d6d02116b03950bbf0583)
 
@@ -50,11 +50,11 @@ Here are the packages that I have installed:
 * [sublime-style-column-selection](https://atom.io/packages/sublime-style-column-selection): Enable Sublime style &#8216;Column Selection'. Just hold &#8216;alt' while you select, or select using your middle mouse button. Also similar to Texmate's &#8216;Multiple Carets', or BBEdit's &#8216;Block Select'
 * [sync-settings](https://atom.io/packages/sync-settings): Synchronize package settings, keymap and installed packages
 
-Note: I didn't add in the list linters and language support because it depends basically on the devs choice. Also, since I use sync-settings, you can check [my editor settings on Gist](https://gist.github.com/leonardofaria/982b8055af2d6d02116b03950bbf0583).
+Note: I didn't add in the list linters and language support because it depends basically on the devs choice. Also, since I use sync-settings, you can check <A href="https://gist.github.com/leonardofaria/982b8055af2d6d02116b03950bbf0583">my editor settings on Gist</A>.
 
 ### Terminal: iTerm2 + oh-my-zsh
 
-I am using **[iTerm2](https://www.iterm2.com/)** for a long time with Zsh and **[oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)**. If you are not familiar with these tools, I strongly suggest watching Wes Bos **[Command Line Power User](https://commandlinepoweruser.com/)** free videos.
+I am using **[iTerm2](https://www.iterm2.com/)** for a long time with Zsh and **<A href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</A>**. If you are not familiar with these tools, I strongly suggest watching Wes Bos **[Command Line Power User](https://commandlinepoweruser.com/)** free videos.
 
 ### Github: Gitify
 
@@ -86,12 +86,12 @@ Last but not least, **[Tad](https://www.tadviewer.com/)** is useful to deal with
 
 **[Franz](https://meetfranz.com)** is useful because it groups all your Slacks, Messenger, Whatsapp, Telegram and everything else in one single window.
 
-**[LaunchRocket](https://github.com/jimbojsb/launchrocket)** is definitely an app that you need to install if you install services via Homebrew. It searches services in the Homebrew folder and list them inside the System Preferences.
+**<A href="https://github.com/jimbojsb/launchrocket">LaunchRocket</A>** is definitely an app that you need to install if you install services via Homebrew. It searches services in the Homebrew folder and list them inside the System Preferences.
 
 [![launchrocket](/wp-content/uploads/2017/12/screenshot-launchrocket.png)](https://github.com/jimbojsb/launchrocket)
 
 **[MenuMeters](https://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/)** adds in the menubar the CPU usage. [iStat Menus](https://bjango.com/mac/istatmenus/) is probably the most famous and it deliveries much more stuff but I want to keep this simple.
 
-**[Spectacle](https://www.spectacleapp.com)** is an [open source](https://github.com/eczarny/spectacle) window control app via shortcuts. Since I use a 4K display is quite handy having all windows in place.
+**[Spectacle](https://www.spectacleapp.com)** is an <A href="https://github.com/eczarny/spectacle">open source</A> window control app via shortcuts. Since I use a 4K display is quite handy having all windows in place.
 
 **[SourceTree](https://www.sourcetreeapp.com/)** is my favourite Git GUI because it is friendly and free. It helps me a lot interacting with my repositories.

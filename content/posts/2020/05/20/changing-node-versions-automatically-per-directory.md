@@ -11,7 +11,7 @@ tags:
   - javascript
 ---
 
-Working in multiple Node projects sometimes means using different versions of Node. [nvm](https://github.com/nvm-sh/nvm) is one popular solution for Linux, macOS and Windows WSL that handles multiple Node installations. One of its most unknown tricks is the [deeper shell integration](https://github.com/nvm-sh/nvm#deeper-shell-integration). Check the video:
+Working in multiple Node projects sometimes means using different versions of Node. <A href="https://github.com/nvm-sh/nvm">nvm</A> is one popular solution for Linux, macOS and Windows WSL that handles multiple Node installations. One of its most unknown tricks is the <A href="https://github.com/nvm-sh/nvm#deeper-shell-integration">deeper shell integration</A>. Check the video:
 
 <video className="h-auto" controls autoPlay="autoPlay">
   <source src="/wp-content/uploads/2020/05/nvm.mp4" type="video/mp4" />

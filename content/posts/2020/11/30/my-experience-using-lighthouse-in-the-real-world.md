@@ -37,7 +37,7 @@ _Disclaimers_: 1. This content may be reviewed in the future as I learn more abo
 
 It sounds obvious but it doesn’t hurt to repeat the message: do not reinvent the wheel (until you absolutely need to). You can start [monitoring Core Web Vitals for free](https://support.google.com/webmasters/answer/9205520) in the Google Search Console. 
 
-If this is not enough, or if you have a complex web app behind authentication, or any other scenarios, you can start by using a tool listed in the [Lighthouse integrations docs](https://github.com/GoogleChrome/lighthouse#lighthouse-integrations-in-web-perf-services). From that list, I can only speak of [Calibre](https://calibreapp.com) as I have not used the others. I am not affiliated with them.
+If this is not enough, or if you have a complex web app behind authentication, or any other scenarios, you can start by using a tool listed in the <A href="https://github.com/GoogleChrome/lighthouse#lighthouse-integrations-in-web-perf-services">Lighthouse integrations docs</A>. From that list, I can only speak of [Calibre](https://calibreapp.com) as I have not used the others. I am not affiliated with them.
 
 Using Calibre, you can schedule Lighthouse tests, create performance budgets, see pretty charts, and learn what performance looks like in your product. The relevant information is easy to find and their product has a very polished UI, however, at a certain point, you may want more and that means ‘custom development’.
 
@@ -50,13 +50,13 @@ We have decided to create our own tool at [Thinkific](https://thinkific.com) in 
 - The report files (JSON, HTML), along with the page screenshot and HAR file are stored in S3 for future reference;
 - The numbers (Lighthouse scores, assets file sizes, Web Vitals) are sent to a relational database (Postgres) and [Promotheus](https://prometheus.io/), a monitoring system and time series database. Postgres empowers the creation of custom reports as we need and Prometheus is used with Grafana to create custom dashboards.
 
-Comparing to open-source solutions, our tool is similar to [lighthouse-monitor](https://github.com/Verivox/lighthouse-monitor/).
+Comparing to open-source solutions, our tool is similar to <A href="https://github.com/Verivox/lighthouse-monitor/">lighthouse-monitor</A>.
 
 ### Understanding variability
 
 Running Lighthouse in our tool, we noticed the performance score changed due to inherent variability in web and network technologies, even when there hadn't been a code change.
 
-Network, client hardware, and web server variabilities are some examples of how the score can trick you. [Lighthouse documentation](https://github.com/GoogleChrome/lighthouse/blob/master/docs/variability.md) clarifies all the different sources of variability and how to deal with them.
+Network, client hardware, and web server variabilities are some examples of how the score can trick you. <A href="https://github.com/GoogleChrome/lighthouse/blob/master/docs/variability.md">Lighthouse documentation</A> clarifies all the different sources of variability and how to deal with them.
 
 In our case, we run Lighthouse 5 times per URL, calculating a median score. We also store the min/max values in case we want to investigate one-off results.
 
@@ -83,7 +83,7 @@ When it comes to performance, there is no silver bullet. Sometimes images are th
 
 Images impact page load time since bigger images will take longer to be downloaded and as a result, it will impact different Lighthouse metrics - usually CLS, LCP. 
 
-Recently, [Google worked with Next.js](https://github.com/vercel/next.js/discussions/16832) to create an [Image component](https://nextjs.org/docs/basic-features/image-optimization) that delivers optimized images. The framework supports image conversion from via Imgix, Cloudinary, Akamai and as expected, Vercel.
+Recently, <A href="https://github.com/vercel/next.js/discussions/16832">Google worked with Next.js</A> to create an [Image component](https://nextjs.org/docs/basic-features/image-optimization) that delivers optimized images. The framework supports image conversion from via Imgix, Cloudinary, Akamai and as expected, Vercel.
 
 I predict that the conversion on demand, by using third-party services as mentioned above or by using serverless solutions will become more and more popular. Starting next year, Google [will include Web Vitals metrics](https://developers.google.com/search/blog/2020/11/timing-for-page-experience) in the page ranking algorithms.
 ### Old architectures didn't age well

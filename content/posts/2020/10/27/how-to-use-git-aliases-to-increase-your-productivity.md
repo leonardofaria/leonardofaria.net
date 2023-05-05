@@ -72,7 +72,7 @@ Here are some aliases that I have been using a lot lately:
 
 ## Shell aliases with Oh My Zsh Git plugin
 
-The list above is quite small, you may think. And it is indeed. This is because I also use the aliases created by the [Oh My Zsh Git plugin](https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh). 
+The list above is quite small, you may think. And it is indeed. This is because I also use the aliases created by the <A href="https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/git.plugin.zsh">Oh My Zsh Git plugin</A>. 
 
 > If you don't what is Oh My Zsh: Oh My Zsh is a framework for managing your zsh configuration. With this tool, you can customize the shell prompt, use different themes and add plugins that offer aliases to increase your productivity. 
 
@@ -93,7 +93,7 @@ I prefer shell aliases over Git aliases for 2 reasons:
 1. Shell aliases don't need to be prefixed by the command `git`.
 2. I don't need to maintain a list of aliases since I can just learn the ones maintained by the Oh My Zsh community.
 
-> Protip: If you are using the default shell without any customization, I do recommend checking out the [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/) project and [Wes Bos](https://wesbos.com/)' [Command Line Power User](https://commandlinepoweruser.com/).
+> Protip: If you are using the default shell without any customization, I do recommend checking out the <A href="https://github.com/ohmyzsh/ohmyzsh/">Oh My Zsh</A> project and [Wes Bos](https://wesbos.com/)' [Command Line Power User](https://commandlinepoweruser.com/).
 
 ## Conclusion
 

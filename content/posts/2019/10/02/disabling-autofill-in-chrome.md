@@ -35,7 +35,7 @@ Digging in Stackoverflow and Google results, I found a [bug issued in 2015 about
 >
 > As an example, if you have an address input field in your CRM tool that you don't want Chrome to Autofill, you can give it semantic meaning that makes sense relative to what you're asking for: e.g. autocomplete=&#8221;new-user-street-address&#8221;. If Chrome encounters that, it won't try and autofill the field.
 
-I also found a [gist](https://gist.github.com/niksumeiko/360164708c3b326bd1c8) with a few solutions. Many people reported using `autocomplete="new-password"` fixes this issue but I have no success on this front. Which solved the issue for me is setting the form fields to read only and then removing the attribute once the user focus them.
+I also found a <A href="https://gist.github.com/niksumeiko/360164708c3b326bd1c8">gist</A> with a few solutions. Many people reported using `autocomplete="new-password"` fixes this issue but I have no success on this front. Which solved the issue for me is setting the form fields to read only and then removing the attribute once the user focus them.
 
 ```html
 <input readonly="readonly" onfocus="this.removeAttribute('readonly');" type="text" value="user@email.com">

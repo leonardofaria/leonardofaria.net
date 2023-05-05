@@ -20,6 +20,6 @@ php -S localhost:9999
 python -m SimpleHTTPServer 9999
 ```
 
-The option that uses PHP [built-in web server](http://php.net/manual/en/features.commandline.webserver.php) requires PHP 5.4+. The [following gist](https://gist.github.com/willurd/5720255) provides several other ways to run a webserver locally.  
+The option that uses PHP [built-in web server](http://php.net/manual/en/features.commandline.webserver.php) requires PHP 5.4+. The <A href="https://gist.github.com/willurd/5720255">following gist</A> provides several other ways to run a webserver locally.  
 
 gist willurd 5720255

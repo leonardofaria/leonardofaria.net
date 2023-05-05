@@ -32,14 +32,14 @@ import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc5
 
 ### 3. Packages
 
-* **[AutoFileName](https://github.com/BoundInCode/AutoFileName)**: it's a plugin that autocompletes filenames. It saves your time when you are assigned to insert 45 images in one page ;)
-* **[Bracket Highligher](https://github.com/facelessuser/BracketHighlighter/)**: matches a variety of brackets such as: `[]`, `()`, `{}`.
-* **[ColorHighlighter](https://github.com/Monnoroch/ColorHighlighter)**: previews color values by underlaying the selected hex codes in different styles, coloring text or gutter icons.
-* **[ColorSchemeSelector](https://github.com/jugyo/SublimeColorSchemeSelector)**: select theme quickly via the Quick Panel.  
+* **<A href="https://github.com/BoundInCode/AutoFileName">AutoFileName</A>**: it's a plugin that autocompletes filenames. It saves your time when you are assigned to insert 45 images in one page ;)
+* **<A href="https://github.com/facelessuser/BracketHighlighter/">Bracket Highligher</A>**: matches a variety of brackets such as: `[]`, `()`, `{}`.
+* **<A href="https://github.com/Monnoroch/ColorHighlighter">ColorHighlighter</A>**: previews color values by underlaying the selected hex codes in different styles, coloring text or gutter icons.
+* **<A href="https://github.com/jugyo/SublimeColorSchemeSelector">ColorSchemeSelector</A>**: select theme quickly via the Quick Panel.  
 ![colorschemeselector](/wp-content/uploads/2015/10/colorschemeselector.gif)
-* **[DashDoc](https://github.com/farcaller/DashDoc)** (Mac only): [Dash](https://kapeli.com/dash) is an awesome programming documentation browser for Mac and it offers 150+ offline documentation sets. I can press `alt + ctrl + h` in a Sublime editor and DashDoc immediately opens Dash to show the appropriate documentation based on the cursor position. The image below shows hot DashDoc works (image via [Matt Bricson](https://mattbrictson.com/sublime-text-3-recommendations)):  
+* **<A href="https://github.com/farcaller/DashDoc">DashDoc</A>** (Mac only): [Dash](https://kapeli.com/dash) is an awesome programming documentation browser for Mac and it offers 150+ offline documentation sets. I can press `alt + ctrl + h` in a Sublime editor and DashDoc immediately opens Dash to show the appropriate documentation based on the cursor position. The image below shows hot DashDoc works (image via [Matt Bricson](https://mattbrictson.com/sublime-text-3-recommendations)):  
 ![](/wp-content/uploads/2015/10/dash.gif)
-* <img src="/wp-content/uploads/2015/10/gitgutter.png" className="right size-full wp-image-1645" /> **[GitGutter](https://github.com/jisaacks/GitGutter)**: this plugin shows an icon in the gutter area indicating whether a line has been inserted, modified or deleted.
+* <img src="/wp-content/uploads/2015/10/gitgutter.png" className="right size-full wp-image-1645" /> **<A href="https://github.com/jisaacks/GitGutter">GitGutter</A>**: this plugin shows an icon in the gutter area indicating whether a line has been inserted, modified or deleted.
 * **[SublimeLinter](https://packagecontrol.io/packages/SublimeLinter)**: is a linting framework. A linter is a small program that checks code for stylistic or programming errors. You must install this package before install specific linters for specific languages. For example, if you use PHP, you should install [SublimeLinter-php](https://packagecontrol.io/packages/SublimeLinter-php) package. Ruby developers can use [SublimeLinter-ruby](https://packagecontrol.io/packages/SublimeLinter-ruby) and [SublimeLinter-rubocop](https://packagecontrol.io/packages/SublimeLinter-rubocop)
 * **[JSHint](https://packagecontrol.io/packages/JSHint)**: is a JavaScript Linter, which will look over your code and verify it has proper styling, proper syntax, and is free of common errors related to these. You must have jslint installed in your computer (`npm install -g jshint`).
 * **[JSHint Gutter](https://packagecontrol.io/packages/JSHint%20Gutter)**: you can use this package to get more explicit warning as to where the javascript error occurred.
@@ -73,7 +73,7 @@ Many Sublime settings, such as editor's font and colour scheme are stored in a f
 
 ### 5. Theme
 
-My current theme is [El Capitan](https://github.com/iccir/El-Capitan-Theme). I use the Monokai colour scheme. There are several colours schemes avaliable in [Colorsublime](http://colorsublime.com/).
+My current theme is <A href="https://github.com/iccir/El-Capitan-Theme">El Capitan</A>. I use the Monokai colour scheme. There are several colours schemes avaliable in [Colorsublime](http://colorsublime.com/).
 
 [![](/wp-content/uploads/2015/10/elcapitan-1024x637.png)](https://github.com/iccir/El-Capitan-Theme)
 

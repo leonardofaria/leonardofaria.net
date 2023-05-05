@@ -175,9 +175,9 @@ Defined the rule, the next step is to determinate the severity level: `error`, `
 
 Once we know which rules we want in place and the severity, we can create or adopt plugins. Plugins extend ESLint with custom rules or an opinionated way to write JavaScript.
 
-Let's take for example `eslint-config-airbnb`, a very popular package. They have adopted a set of rules they understand as [best practices](https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/best-practices.js) and reflect the [style](https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/style.js) of JavaScript code they want in their applications.
+Let's take for example `eslint-config-airbnb`, a very popular package. They have adopted a set of rules they understand as <A href="https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/best-practices.js">best practices</A> and reflect the <A href="https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/style.js">style</A> of JavaScript code they want in their applications.
 
-Here is part of the [`styles.js`](https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/style.js), let's check these 2 rules:
+Here is part of the <A href="https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/style.js">`styles.js`</A>, let's check these 2 rules:
 
 ```js
 module.exports = {
@@ -213,49 +213,49 @@ You don't need to be an ESLint or JavaScript expert to decide which rules to ado
 
 ### eslint-plugin-import
 
-[eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import) helps with all ES2015+ import/export syntax.
+<A href="https://www.npmjs.com/package/eslint-plugin-import">eslint-plugin-import</A> helps with all ES2015+ import/export syntax.
 
 ### eslint-plugin-react
 
-[eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) gives you a set of rules to write better/clear/modern React code.
+<A href="https://www.npmjs.com/package/eslint-plugin-react">eslint-plugin-react</A> gives you a set of rules to write better/clear/modern React code.
 
 ### eslint-plugin-react-hooks
 
-[eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks) is extremely useful if you don't understand hooks well because it 'teaches' you how to use the feature introduced in React 16.8.
+<A href="https://www.npmjs.com/package/eslint-plugin-react-hooks">eslint-plugin-react-hooks</A> is extremely useful if you don't understand hooks well because it 'teaches' you how to use the feature introduced in React 16.8.
 
 ### eslint-plugin-jsx-a11y
 
-[eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y) checks for some accessibility rules in JSX elements. I previously [wrote about accessibility](https://leonardofaria.net/2020/08/13/automating-accessibility-tests-with-cypress) here and keep in mind that using linters and automated tests doesn't garantee that your app or website is 100% accessible; however it can capture several mistakes, like [images without an alternative text](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/src/rules/alt-text.js) or [pages without a `lang` attribute](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/src/rules/lang.js).
+<A href="https://www.npmjs.com/package/eslint-plugin-jsx-a11y">eslint-plugin-jsx-a11y</A> checks for some accessibility rules in JSX elements. I previously [wrote about accessibility](https://leonardofaria.net/2020/08/13/automating-accessibility-tests-with-cypress) here and keep in mind that using linters and automated tests doesn't garantee that your app or website is 100% accessible; however it can capture several mistakes, like <A href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/src/rules/alt-text.js">images without an alternative text</A> or <A href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/src/rules/lang.js">pages without a `lang` attribute</A>.
 
 ### eslint-config-airbnb
 
-[eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb) extends `eslint-plugin-import`, `eslint-plugin-react`, `eslint-plugin-react-hooks` and `eslint-plugin-jsx-a11y`. It is ready to go and probably the best one to adopt if you have nothing and want to start from somewhere.
+<A href="https://www.npmjs.com/package/eslint-config-airbnb">eslint-config-airbnb</A> extends `eslint-plugin-import`, `eslint-plugin-react`, `eslint-plugin-react-hooks` and `eslint-plugin-jsx-a11y`. It is ready to go and probably the best one to adopt if you have nothing and want to start from somewhere.
 
 ### eslint-config-airbnb-base
 
-[eslint-config-airbnb-base](https://www.npmjs.com/package/eslint-config-airbnb-base) is the right choice if you are not using React. It still gives you all JavaScript best practices and code style defined by Airbnb. In the past I have used this package in Ember.js applications.
+<A href="https://www.npmjs.com/package/eslint-config-airbnb-base">eslint-config-airbnb-base</A> is the right choice if you are not using React. It still gives you all JavaScript best practices and code style defined by Airbnb. In the past I have used this package in Ember.js applications.
 
 ### @typescript-eslint/eslint-plugin
 
-[@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin) is an ESLint plugin meant to be used in TypeScript codebases. Similarly to the react-hooks plugin, this one can be very helpful to teach best practices.
+<A href="https://www.npmjs.com/package/@typescript-eslint/eslint-plugin">@typescript-eslint/eslint-plugin</A> is an ESLint plugin meant to be used in TypeScript codebases. Similarly to the react-hooks plugin, this one can be very helpful to teach best practices.
 
 I like their website has a [playground](https://typescript-eslint.io/play/) so you can test your code online.
 
 ### eslint-plugin-prettier
 
-[eslint-plugin-prettier](https://www.npmjs.com/package/eslint-plugin-prettier) is helpful to avoid ESLint conflicting with Prettier. Overall we should not rely on ESLint for formatting our code and this plugin will make sure that ESLint doesn't get on Prettier's way.
+<A href="https://www.npmjs.com/package/eslint-plugin-prettier">eslint-plugin-prettier</A> is helpful to avoid ESLint conflicting with Prettier. Overall we should not rely on ESLint for formatting our code and this plugin will make sure that ESLint doesn't get on Prettier's way.
 
 ### eslint-plugin-relay
 
-[eslint-plugin-relay](https://www.npmjs.com/package/eslint-plugin-relay) catches common problems in code using Relay. I learned about this plugin at my current job, and I can see how a [rule to remove unused fields](https://github.com/relayjs/eslint-plugin-relay/blob/main/src/rule-unused-fields.js) from your GraphQL queries can help with the performance of your application.
+<A href="https://www.npmjs.com/package/eslint-plugin-relay">eslint-plugin-relay</A> catches common problems in code using Relay. I learned about this plugin at my current job, and I can see how a <A href="https://github.com/relayjs/eslint-plugin-relay/blob/main/src/rule-unused-fields.js">rule to remove unused fields</A> from your GraphQL queries can help with the performance of your application.
 
 ### eslint-plugin-eslint-comments
 
-[eslint-plugin-eslint-comments](https://www.npmjs.com/package/eslint-plugin-eslint-comments) applies best practices on directive comments such as `/* eslint-disable */`. Among many best practices, the recommended rules of this plugin require you to describe which rule you want to disable.
+<A href="https://www.npmjs.com/package/eslint-plugin-eslint-comments">eslint-plugin-eslint-comments</A> applies best practices on directive comments such as `/* eslint-disable */`. Among many best practices, the recommended rules of this plugin require you to describe which rule you want to disable.
 
 ### eslint-config-next
 
-[eslint-config-next](https://www.npmjs.com/package/eslint-config-next) is obviously only helpful if you have a Next.js application. It already extends `eslint-plugin-react`, `eslint-plugin-react-hooks`, `eslint-plugin-jsx-a11y` and add some rules to enforce Next.js features, like using their `<Image>` component instead of `<img>` HTML tags.
+<A href="https://www.npmjs.com/package/eslint-config-next">eslint-config-next</A> is obviously only helpful if you have a Next.js application. It already extends `eslint-plugin-react`, `eslint-plugin-react-hooks`, `eslint-plugin-jsx-a11y` and add some rules to enforce Next.js features, like using their `<Image>` component instead of `<img>` HTML tags.
 
 ## Creating your own set of recommended rules
 
@@ -263,15 +263,15 @@ Instead of manually adding all these plugins in all your different codebases, yo
 
 In the past I created a package called `eslint-config-leozera` which extends `eslint-plugin-import`, `eslint-plugin-react`, `eslint-plugin-react-hooks`, `eslint-plugin-jsx-a11y` and overrides some of their configs.
 
-The [source-code of my project](https://github.com/leonardofaria/eslint-config-leozera) is a good start if you are looking at creating a package for different apps of your company for example.
+The <A href="https://github.com/leonardofaria/eslint-config-leozera">source-code of my project</A> is a good start if you are looking at creating a package for different apps of your company for example.
 
 ## Helpful and/or curious rules to use
 
-Here are a few rules that I enable/disable/customize. You can add them in the [rules object of your config](https://eslint.org/docs/latest/use/configure/rules).
+Here are a few rules that I enable/disable/customize. You can add them in the <A href="https://eslint.org/docs/latest/use/configure/rules">rules object of your config</A>.
 
 ### no-unused-vars
 
-Enabled in `eslint:recommended` - [Documentation](https://eslint.org/docs/latest/rules/no-unused-vars)
+Enabled in `eslint:recommended` - <A href="https://eslint.org/docs/latest/rules/no-unused-vars">Documentation</A>
 
 In languages like Ruby, we prefix variables with `_` if we are not using them. The rule as it is doesn't respect that, so we can fix it with:
 
@@ -284,7 +284,7 @@ In languages like Ruby, we prefix variables with `_` if we are not using them. T
 
 ### import/order
 
-From eslint-plugin-import - [Documentation](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md)
+From eslint-plugin-import - <A href="https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md">Documentation</A>
 
 This rule enforces a convention in the order of `require()` / `import` statements. Here is one example of keeping `react`, `react-relay` and `next` imports first and others imports in alphabetic order, following their grouping:
 
@@ -328,7 +328,7 @@ This rule enforces a convention in the order of `require()` / `import` statement
 
 ### no-extraneous-dependencies
 
-From eslint-plugin-import - [Documentation](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md)
+From eslint-plugin-import - <A href="https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md">Documentation</A>
 
 This rule is helpful to avoid surprises if you are using dependencies there are not mentioned in the `package.json`:
 
@@ -338,9 +338,9 @@ This rule is helpful to avoid surprises if you are using dependencies there are 
 
 ### import/prefer-default-export
 
-From eslint-plugin-import - Enabled in `airbnb` - [Documentation](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-default-export.md)
+From eslint-plugin-import - Enabled in `airbnb` - <A href="https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-default-export.md">Documentation</A>
 
-This is a rule that I disable because I don't see the benefit of preferring default exports. As mentioned in Airbnb's [project issue](https://github.com/airbnb/javascript/issues/1365), this rule makes refactoring more difficult.
+This is a rule that I disable because I don't see the benefit of preferring default exports. As mentioned in Airbnb's <A href="https://github.com/airbnb/javascript/issues/1365">project issue</A>, this rule makes refactoring more difficult.
 
 ```js
 'import/prefer-default-export': 'off',
@@ -348,7 +348,7 @@ This is a rule that I disable because I don't see the benefit of preferring defa
 
 ### react/jsx-sort-props
 
-From eslint-plugin-react - [Documentation](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md)
+From eslint-plugin-react - <A href="https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md">Documentation</A>
 
 I like this rule because it makes it easier to find a prop in a component. I also like to move to the end shorthand and callback props:
 
@@ -367,7 +367,7 @@ I like this rule because it makes it easier to find a prop in a component. I als
 
 ### react/react-in-jsx-scope
 
-From eslint-plugin-react - Enabled in `airbnb` - [Documentation](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md)
+From eslint-plugin-react - Enabled in `airbnb` - <A href="https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md">Documentation</A>
 
 This rule is not longer valid since React 17.
 
@@ -377,7 +377,7 @@ This rule is not longer valid since React 17.
 
 ### @typescript-eslint/consistent-type-imports
 
-From @typescript-eslint/eslint-plugin - [Documentation](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/website/blog/2023-02-24-consistent-type-exports-and-imports-why-and-how.md)
+From @typescript-eslint/eslint-plugin - <A href="https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/website/blog/2023-02-24-consistent-type-exports-and-imports-why-and-how.md">Documentation</A>
 
 Explaining this one with an example of the plugin's documentation:
 

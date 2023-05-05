@@ -15,7 +15,7 @@ tags:
 ---
 Trabalhar com Rails é certeza de encontrar ótimo material para trabalhar/documentar sua aplicação. Tenho uma lista de plugins/gems úteis para o desenvolvimento, o que daria um enorme post. Seguindo os conceitos do Getting Real, rapidinho vou postando (é muito material).
 
-O primeiro da lista é o [annotate_model](http://github.com/ctran/annotate_models/), um gem que gera para cada model as informações da estrutura da tabela daquela entidade. Por exemplo:
+O primeiro da lista é o <A href="https://github.com/ctran/annotate_models/">annotate_model</A>, um gem que gera para cada model as informações da estrutura da tabela daquela entidade. Por exemplo:
 
 ```ruby
 # == Schema Information  

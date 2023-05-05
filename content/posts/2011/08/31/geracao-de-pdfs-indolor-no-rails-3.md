@@ -13,7 +13,7 @@ categories:
 tags:
   - rubyonrails
 ---
-Em um trabalho recente, precisei gerar relatórios em PDF. Considerei algumas soluções e optei por uma que não me fizesse perder os cabelos e reescrever código: [wicked_pdf](https://github.com/mileszs/wicked_pdf).
+Em um trabalho recente, precisei gerar relatórios em PDF. Considerei algumas soluções e optei por uma que não me fizesse perder os cabelos e reescrever código: <A href="https://github.com/mileszs/wicked_pdf">wicked_pdf</A>.
 
 wicked_pdf usa [wkhtmltopdf](http://code.google.com/p/wkhtmltopdf/), um incrível utilitário que converte HTML para PDF, usando Webkit e QT. Você não precisa compilá-lo, basta apenas copiar o binário certo do site do projeto.
 
@@ -46,4 +46,4 @@ O readme da gem apresenta as informações pertinentes para seu uso e não é me
 WickedPdf.config = { :exe_path => '/home/meuusario/wkhtmltopdf' }
 ```
 
-PS. você pode usar o wkhtmltopdf no PHP com o [Snappy](https://github.com/knplabs/snappy). Não testei, mas pode ser uma boa opção.
+PS. você pode usar o wkhtmltopdf no PHP com o <A href="https://github.com/knplabs/snappy">Snappy</A>. Não testei, mas pode ser uma boa opção.

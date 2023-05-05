@@ -34,7 +34,7 @@ Lighthouse is the go-to tool for improving the quality of web pages. Lately, I h
 
 ## Quick Lighthouse intro
 
-Lighthouse is an [open-source](https://github.com/GoogleChrome/lighthouse) automated tool for auditing the quality of web pages. This tool generates scores for performance, accessibility, progressive web apps, SEO, and best practices of a specific URL. Lighthouse also offers recommendations on how to improve the inefficient items of the audits.
+Lighthouse is an <A href="https://github.com/GoogleChrome/lighthouse">open-source</A> automated tool for auditing the quality of web pages. This tool generates scores for performance, accessibility, progressive web apps, SEO, and best practices of a specific URL. Lighthouse also offers recommendations on how to improve the inefficient items of the audits.
 
 ![Lighthouse report for leonardofaria.net](/wp-content/uploads/2020/11/lighthouse-report-leonardofaria-net.jpg)
 
@@ -45,13 +45,13 @@ There are different ways to run Lighthouse audits:
 - [From a web UI](https://developers.google.com/speed/pagespeed/insights/): Run Lighthouse via PageSpeed Insights
 - [In Chrome DevTools](https://developers.google.com/web/tools/lighthouse#devtools): Open the tab Audit in the Chrome DevTools - a quick way to audit pages behind authentication
 - [From the command line](https://developers.google.com/web/tools/lighthouse#cli): Install the `lighthouse` CLI and start testing
-- [As a Node module](https://github.com/GoogleChrome/lighthouse): Add the `lighthouse` module in Node scripts
+- <A href="https://github.com/GoogleChrome/lighthouse">As a Node module</A>: Add the `lighthouse` module in Node scripts
 
 This series of posts will cover the usage of Lighthouse as a Node module. At my workplsvr, I have created a JavaScript tool which runs every hour to programmatically audit 9 critical parts of our applications. The results are stored in a Postgres database and in Prometheus (a monitoring system & time-series database) so we can follow the reports over time.
 
 ## The Lighthouse Node package
 
-The Lighthouse docs present a [basic example of how to start our journey](https://github.com/GoogleChrome/lighthouse/blob/master/docs/readme.md#using-programmatically). Please see below: 
+The Lighthouse docs present a <A href="https://github.com/GoogleChrome/lighthouse/blob/master/docs/readme.md#using-programmatically">basic example of how to start our journey</A>. Please see below: 
 
 ```js showLineNumbers
 const fs = require('fs');
@@ -77,7 +77,7 @@ const chromeLauncher = require('chrome-launcher');
 
 The first 3 lines import required packages: `fs` for file system manipulation; `lighthouse`, the main audit package; and `chrome-launcher`, a package used for launching Chrome. Lighthouse needs to know which port has a Chrome instance running, so this audit can happen.
 
-Line 7 surfaces a few Lighthouse options, like `logLevel` (`silent | error | info |verbose`), `output` (`json | html | csv`) and `onlyCategories` (an array filtering the tests you want to run). Their [type definitions file](https://github.com/GoogleChrome/lighthouse/blob/888bd6dc9d927a734a8e20ea8a0248baa5b425ed/typings/externs.d.ts#L82-L119) showcase all the offered options.
+Line 7 surfaces a few Lighthouse options, like `logLevel` (`silent | error | info |verbose`), `output` (`json | html | csv`) and `onlyCategories` (an array filtering the tests you want to run). Their <A href="https://github.com/GoogleChrome/lighthouse/blob/888bd6dc9d927a734a8e20ea8a0248baa5b425ed/typings/externs.d.ts#L82-L119">type definitions file</A> showcase all the offered options.
 
 Next, the test is stored in the `runnerResult` variable (line 8). The `runnerResult` is an object that contains an HTML report, which is stored in the disk (lines 11-12). This result object is the main topic of my next few posts. There we will learn how to get relevant information from the audits.
 
@@ -91,7 +91,7 @@ The HTML report is slightly different from the initial report of the post: only 
 
 This post covered what Lighthouse is, why to use it, and how to use it programmatically. 
 
-The snippet from this blog post can be found in the [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples). From here you can check out different recipes in the [Lighthouse docs](https://github.com/GoogleChrome/lighthouse#docs--recipes) or keep reading the ones I have created:
+The snippet from this blog post can be found in the <A href="https://github.com/leonardofaria/lighthouse-examples">lighthouse-examples GitHub repository</A>. From here you can check out different recipes in the <A href="https://github.com/GoogleChrome/lighthouse#docs--recipes">Lighthouse docs</A> or keep reading the ones I have created:
 
 <ul>
 <li><a href="/2020/11/30/getting-asset-transferred-information-with-lighthouse/">Getting asset transferred information with Lighthouse</a></li>

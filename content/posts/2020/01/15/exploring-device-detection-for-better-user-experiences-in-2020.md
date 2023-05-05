@@ -24,7 +24,7 @@ It blew my mind all the work done by Facebook in identifying devices to create a
 
 User agents are well-known by developers. We use them to detect bots, redirect users to a specific version of our website or append CSS classes on our page so we can create different experiences.
 
-At Thinkific we already use the [browser Ruby gem](https://github.com/fnando/browser) to parse the user-agent and get relevant info (bot detection for instance). So, I decided to persist the main info in a visitor_device table – here is the schema:
+At Thinkific we already use the <A href="https://github.com/fnando/browser">browser Ruby gem</A> to parse the user-agent and get relevant info (bot detection for instance). So, I decided to persist the main info in a visitor_device table – here is the schema:
 
 ```
 tenant_id: the course creator school the visitor is checking
@@ -53,7 +53,7 @@ As covered in the Chrome Dev Summit video, we can use JS to get this info
 
 More about it:
 
-  * [Spec from W3C](https://github.com/w3c/device-memory)
+  * <A href="https://github.com/w3c/device-memory">Spec from W3C</A>
   * [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory)
   * [Can I use deviceMemory](https://caniuse.com/#feat=mdn-api_navigator_devicememory)
 
@@ -85,4 +85,4 @@ We could get browser info inside other tools however as a SaaS product we don't 
 
 _Question: Do you have a list of low-end/high-end devices?_
 
-No. Maybe this can be built combining the number of processors and memory but I didn't invest much time on this. In this project, my colleague created a Rails helper that would determinate if the user would use the lite or default version of a website based on hardware. On this topic, it is important to mention Facebook has a library for Android called [Device Year Class](https://github.com/facebook/device-year-class/).
+No. Maybe this can be built combining the number of processors and memory but I didn't invest much time on this. In this project, my colleague created a Rails helper that would determinate if the user would use the lite or default version of a website based on hardware. On this topic, it is important to mention Facebook has a library for Android called <A href="https://github.com/facebook/device-year-class/">Device Year Class</A>.

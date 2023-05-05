@@ -13,7 +13,7 @@ categories:
 tags:
   - php
 ---
-Tempos atrás escrevi um artigo sobre como gerar PDF dentro do Rails usando a gem [wicked_pdf](https://github.com/mileszs/wicked_pdf) e o [wkhtmltopdf](http://code.google.com/p/wkhtmltopdf). Como escrevi no [post anterior](https://leonardofaria.net/2011/08/31/geracao-de-pdfs-indolor-no-rails-3/), o wkhtmltopdf usa Webkit, a engine de renderização do Safari / Chrome para gerar a visualização do documento. Isso o torna superior se comparado com bibliotecas do PHP como o FPDF, pois, geralmente, essa bibliotecas possuem dificuldades para reproduzir efeitos de CSS.
+Tempos atrás escrevi um artigo sobre como gerar PDF dentro do Rails usando a gem <A href="https://github.com/mileszs/wicked_pdf">wicked_pdf</A> e o [wkhtmltopdf](http://code.google.com/p/wkhtmltopdf). Como escrevi no [post anterior](https://leonardofaria.net/2011/08/31/geracao-de-pdfs-indolor-no-rails-3/), o wkhtmltopdf usa Webkit, a engine de renderização do Safari / Chrome para gerar a visualização do documento. Isso o torna superior se comparado com bibliotecas do PHP como o FPDF, pois, geralmente, essa bibliotecas possuem dificuldades para reproduzir efeitos de CSS.
 
 Em um novo projeto, estou usando novamente o wkhtmltopdf, mas agora dentro do PHP. [No post anterior](https://leonardofaria.net/2011/08/31/geracao-de-pdfs-indolor-no-rails-3/), indiquei que você pode usar o binário disponível no site, entretanto no servidor atual, tive alguns problemas com isso. Então, se possível, compile o wkhtmltopdf direto da fonte.
 
@@ -55,7 +55,7 @@ Não inventei a [receita](http://code.google.com/p/wkhtmltopdf/wiki/compilation)
 
 ### PHP
 
-Dentro do próprio site do wkhtmltopdf há uma [classe em PHP](http://code.google.com/p/wkhtmltopdf/wiki/IntegrationWithPhp) para utilizar o aplicativo dentro do seu site, entretanto, optei por uma [classe disponível](https://github.com/aur1mas/Wkhtmltopdf) no Github. Um simples exemplo, tirado do próprio repositório:
+Dentro do próprio site do wkhtmltopdf há uma [classe em PHP](http://code.google.com/p/wkhtmltopdf/wiki/IntegrationWithPhp) para utilizar o aplicativo dentro do seu site, entretanto, optei por uma <A href="https://github.com/aur1mas/Wkhtmltopdf">classe disponível</A> no Github. Um simples exemplo, tirado do próprio repositório:
 
 ```php
 <?php

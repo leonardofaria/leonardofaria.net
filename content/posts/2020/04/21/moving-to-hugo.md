@@ -17,10 +17,10 @@ I decided to use Hugo here because I wanted something simple. KISS. I like Gatsb
 
 My previous site used a theme called [Casper](http://lacymorrow.com/casper/), which is inspired in [Ghost's default theme](https://ghost.org/). I decided to build the theme from scratch inspired by Casper, Medium and many other minimalist blogs. I still have a feel things to fix/improve but designwise I am quite happy with the result.
 
-As I mentioned before, I used [Tailwind CSS](https://tailwindcss.com/) in this project. The utility-first approach definitely makes prototying faster. To avoid a bloated CSS file I am using a [purgecss package](https://www.npmjs.com/package/@fullhuman/postcss-purgecss) to remove all the classes I am not using in the site. The final result is a 2.5KB CSS file.
+As I mentioned before, I used [Tailwind CSS](https://tailwindcss.com/) in this project. The utility-first approach definitely makes prototying faster. To avoid a bloated CSS file I am using a <A href="https://www.npmjs.com/package/@fullhuman/postcss-purgecss">purgecss package</A> to remove all the classes I am not using in the site. The final result is a 2.5KB CSS file.
 
 The previous WordPress had a good score in Lighthouse tests, and I was able to make it even better:
 
 ![Lighthouse results](/wp-content/uploads/2020/04/lighthouse.jpg)
 
-The theme is called [Bento](http://bento-hugo-theme.netlify.com/) and it is [open-source](https://github.com/leonardofaria/bento).
+The theme is called [Bento](http://bento-hugo-theme.netlify.com/) and it is <A href="https://github.com/leonardofaria/bento">open-source</A>.

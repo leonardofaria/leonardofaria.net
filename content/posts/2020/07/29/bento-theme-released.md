@@ -41,7 +41,7 @@ I built Bento with Performance in mind. I wanted to deliver fast pages and no bl
 
 ### Turbolinks
 
-From [their README](https://github.com/turbolinks/turbolinks): 
+From <A href="https://github.com/turbolinks/turbolinks">their README</A>: 
 
 > _Turbolinks® makes navigating your web application faster. Get the performance benefits of a single-page application without the added complexity of a client-side JavaScript framework. Use HTML to render your views on the server side and link to pages as usual. When you follow a link, Turbolinks automatically fetches the page, swaps in its `<body>`, and merges its `<head>`, all without incurring the cost of a full page load._
 
@@ -49,9 +49,9 @@ Turbolinks is well-known in the Rails community but it can also be used outside 
 
 ### PostCSS
 
-CSS libraries like Bootstrap and TailwindCSS are often critized for their weight. Offering modular styles has its tradeoff however packages like [postcss-purgecss](https://www.npmjs.com/package/@fullhuman/postcss-purgecss) can avoid the big CSS files. 
+CSS libraries like Bootstrap and TailwindCSS are often critized for their weight. Offering modular styles has its tradeoff however packages like <A href="https://www.npmjs.com/package/@fullhuman/postcss-purgecss">postcss-purgecss</A> can avoid the big CSS files. 
 
-The setup I used here came from the [hugopipes-tailwindcss](https://github.com/budparr/hugopipes-tailwindcss), in case you are curious.
+The setup I used here came from the <A href="https://github.com/budparr/hugopipes-tailwindcss">hugopipes-tailwindcss</A>, in case you are curious.
 
 ## Future
 

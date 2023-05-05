@@ -236,7 +236,7 @@ pre::-webkit-scrollbar-thumb:vertical, pre::-webkit-scrollbar-thumb:horizontal {
 }
 ```
 
-Para terminar, foi aplicado em um elemento `<pre>`. Todos os exemplos acima estão no meu GitHub, no repositório [webkit-examples](https://github.com/leonardofaria/webkit-examples). [Confira outros exemplos no site do WebKit](http://trac.webkit.org/export/41842/trunk/LayoutTests/scrollbars/overflow-scrollbar-combinations.html).
+Para terminar, foi aplicado em um elemento `<pre>`. Todos os exemplos acima estão no meu GitHub, no repositório <A href="https://github.com/leonardofaria/webkit-examples">webkit-examples</A>. [Confira outros exemplos no site do WebKit](http://trac.webkit.org/export/41842/trunk/LayoutTests/scrollbars/overflow-scrollbar-combinations.html).
 
 ### Extra: detectando o WebKit
 

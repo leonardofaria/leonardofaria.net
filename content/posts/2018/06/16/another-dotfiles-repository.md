@@ -15,7 +15,7 @@ tags:
   - git
   - mac
 ---
-A few days weeks I got a MacBook Air as secondary machine. Since its SSD is smaller than my main Mac I couldn’t use Time Machine. It was definitely a good time to finally create my [dotfiles](https://github.com/leonardofaria/dotfiles) repository. My repository is based in [webpro/dotfiles](https://github.com/webpro/dotfiles/) (you may want to check it out his repo to understand this one if you feel lost).
+A few days weeks I got a MacBook Air as secondary machine. Since its SSD is smaller than my main Mac I couldn’t use Time Machine. It was definitely a good time to finally create my <A href="https://github.com/leonardofaria/dotfiles">dotfiles</A> repository. My repository is based in <A href="https://github.com/webpro/dotfiles/">webpro/dotfiles</A> (you may want to check it out his repo to understand this one if you feel lost).
 
 <span className="hidden">more</span>
 
@@ -35,17 +35,17 @@ A few days weeks I got a MacBook Air as secondary machine. Since its SSD is smal
 > Check the description of the less popular apps
 
   * [bats](http://brewformulas.org/Bats) – Bash Automated Testing System
-  * [dockutil](https://github.com/kcrawford/dockutil) – Command line tool for managing dock items
+  * <A href="https://github.com/kcrawford/dockutil">dockutil</A> – Command line tool for managing dock items
   * [exa](https://the.exa.website/) – A modern replacement for `ls`
   * ffmpeg
   * git
   * git-extras
   * htop
-  * [httpie](https://github.com/jakubroztocil/httpie) – A Modern command line HTTP client
+  * <A href="https://github.com/jakubroztocil/httpie">httpie</A> – A Modern command line HTTP client
   * hugo
   * imagemagick
   * mysql
-  * [neofetch](https://github.com/dylanaraps/neofetch) – A command-line system information tool
+  * <A href="https://github.com/dylanaraps/neofetch">neofetch</A> – A command-line system information tool
   * nginx
   * python3
   * sqlite
@@ -98,19 +98,19 @@ A few days weeks I got a MacBook Air as secondary machine. Since its SSD is smal
 ### Other stuff also installed
 
   * Node 8 via `nvm`, with a few global packages: 
-      * [dockly](https://www.npmjs.com/package/dockly)
-      * [list-scripts](https://www.npmjs.com/package/list-scripts)
-      * [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
-      * [npm-scripts-tree](https://www.npmjs.com/package/npm-scripts-tree)
-      * [script-list](https://www.npmjs.com/package/script-list)
-      * [space-hogs](https://www.npmjs.com/package/space-hogs)
-      * [speed-test](https://www.npmjs.com/package/speed-test)
+      * <A href="https://www.npmjs.com/package/dockly">dockly</A>
+      * <A href="https://www.npmjs.com/package/list-scripts">list-scripts</A>
+      * <A href="https://www.npmjs.com/package/npm-check-updates">npm-check-updates</A>
+      * <A href="https://www.npmjs.com/package/npm-scripts-tree">npm-scripts-tree</A>
+      * <A href="https://www.npmjs.com/package/script-list">script-list</A>
+      * <A href="https://www.npmjs.com/package/space-hogs">space-hogs</A>
+      * <A href="https://www.npmjs.com/package/speed-test">speed-test</A>
   * Ruby 2.5.1 via `rvm`
-  * [Oh my zsh](https://github.com/robbyrussell/oh-my-zsh), with [powerlevel9k](https://github.com/bhilburn/powerlevel9k) theme and git, rails, ruby, npm and osx plugins
+  * <A href="https://github.com/robbyrussell/oh-my-zsh">Oh my zsh</A>, with <A href="https://github.com/bhilburn/powerlevel9k">powerlevel9k</A> theme and git, rails, ruby, npm and osx plugins
 
 ## Mac Defaults
 
-There are lots of customizable Mac settings. Check [`macos/defaults.sh`](https://github.com/leonardofaria/dotfiles/blob/master/macos/defaults.sh) for all details.
+There are lots of customizable Mac settings. Check <A href="https://github.com/leonardofaria/dotfiles/blob/master/macos/defaults.sh">`macos/defaults.sh`</A> for all details.
 
 ### Dock items
 

@@ -12,11 +12,11 @@ tags:
 description: Learn how to use Vercel Edge Middleware in Next.js and create a cool world map with your visitor location
 ---
 
-A few months ago, Wes Bos [tweeted](https://twitter.com/wesbos/status/1603090933347672066) _"Really neat feature of the new SvelteKit website, this dynamic SVG is rendered on the edge and changes based on your location"_. I decided to port the code to Next.js:
+A few months ago, Wes Bos <A href="https://twitter.com/wesbos/status/1603090933347672066">tweeted</A> _"Really neat feature of the new SvelteKit website, this dynamic SVG is rendered on the edge and changes based on your location"_. I decided to port the code to Next.js:
 
 ![World globe](/world-globe.svg)
 
-Unless you are using a VPN, the image above should pin where you are. Let's check some details (or check [this pull request](https://github.com/leonardofaria/leonardofaria.net/pull/149/)):
+Unless you are using a VPN, the image above should pin where you are. Let's check some details (or check <A href="https://github.com/leonardofaria/leonardofaria.net/pull/149/">this pull request</A>):
 
 ## Middleware
 
@@ -36,13 +36,13 @@ export async function middleware(req: NextRequest) {
 
 ## Dependencies
 
-The map is plotted with the help of the [d3-geo](https://github.com/d3/d3-geo), [d3-geo-projection](https://github.com/d3/d3-geo-projection) and [topojson-client](https://github.com/topojson/topojson-client). The `d3-geo` might take you back to the geography classes. Here is a different map with the same location info:
+The map is plotted with the help of the <A href="https://github.com/d3/d3-geo">d3-geo</A>, <A href="https://github.com/d3/d3-geo-projection">d3-geo-projection</A> and <A href="https://github.com/topojson/topojson-client">topojson-client</A>. The `d3-geo` might take you back to the geography classes. Here is a different map with the same location info:
 
 ![World map](/world-map.svg)
 
 ## Endpoint returning an SVG
 
-The endpoint to return an SVG is similar to the [Vue implementation](https://github.com/sveltejs/kit/blob/3aecae584917b9e686cc6372f87e58a340d2099f/sites/kit.svelte.dev/src/routes/edge.svg/%2Bserver.js), however since this is Next.js I am using `getServerSideProps` to get the location information and rendering the SVG with a `handler` function. The endpoint file lives in the `api` folder. I chose this folder instead of the regular `pages` folder since Next.js expects React components instead of content with a different mime-type ([context](https://github.com/vercel/next.js/discussions/14991#discussioncomment-35302)). A short draft:
+The endpoint to return an SVG is similar to the <A href="https://github.com/sveltejs/kit/blob/3aecae584917b9e686cc6372f87e58a340d2099f/sites/kit.svelte.dev/src/routes/edge.svg/%2Bserver.js">Vue implementation</A>, however since this is Next.js I am using `getServerSideProps` to get the location information and rendering the SVG with a `handler` function. The endpoint file lives in the `api` folder. I chose this folder instead of the regular `pages` folder since Next.js expects React components instead of content with a different mime-type (<A href="https://github.com/vercel/next.js/discussions/14991#discussioncomment-35302">context</A>). A short draft:
 
 ```js title="api/world-globe/index.ts"
 function render({ city, country, latitude, longitude }) {

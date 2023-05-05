@@ -27,4 +27,4 @@ You only need to follow the formula:
 https://rawgit.com/USER/REPOSITORY/BRANCH/file.html
 ```
 
-The advantage of using RawGit over Github Pages is that RawGit works with all branches, while Github Pages requires a gh-pages branch. Last not the least, the [source code](https://github.com/rgrove/rawgit) of this solution is also available in Github.
+The advantage of using RawGit over Github Pages is that RawGit works with all branches, while Github Pages requires a gh-pages branch. Last not the least, the <A href="https://github.com/rgrove/rawgit">source code</A> of this solution is also available in Github.

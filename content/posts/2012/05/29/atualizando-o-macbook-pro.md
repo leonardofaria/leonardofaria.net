@@ -19,7 +19,7 @@ Estive um mês de férias na Califórnia, com direito a visitas a Cupertino na A
 
   * Porque não tinha grana para comprar um MacBook Air;
   * Porque ainda que tivesse grana para um MacBook Air, não poder fazer trocar memória era algo que me incomodava;
-  * Porque abrir Macs [é divertido](https://twitter.com/leozera/statuses/14649034669039616).
+  * Porque abrir Macs <A href="https://twitter.com/leozera/statuses/14649034669039616">é divertido</A>.
 
 ### Lista de compras
 

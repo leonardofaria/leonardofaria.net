@@ -16,6 +16,6 @@ tags:
 
 Last week I presented in [Code & Coffee](http://www.meetup.com/Code-Coffee-Vancouver/events/231709823/) about WordPress and Gulp. In my 10 minutes talk, I explained briefly what is Gulp and how its tasks can save our time.
 
-Here are [my slides](http://leonardofaria.github.io/wordpress-gulp-meetup/) and the [example repository](http://github.com/leonardofaria/meetup-gulp) that I created for the event.
+Here are [my slides](http://leonardofaria.github.io/wordpress-gulp-meetup/) and the <A href="https://github.com/leonardofaria/meetup-gulp">example repository</A> that I created for the event.
 
 <Embed type="YouTube" id="5bg9gBWwInQ" /> 

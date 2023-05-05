@@ -13,7 +13,7 @@ categories:
 tags:
   - rubyonrails
 ---
-## [Richard Kilmer](http://twitter.com/rich_kilmer): MacRuby
+## <A href="https://twitter.com/rich_kilmer">Richard Kilmer</A>: MacRuby
 
 A primeira palestra do segundo dia trouxe o americano Richard Kilmer que falou sobre [MacRuby](http://www.macruby.org), a união entre Ruby e Objective-C. Notas dos slides:
 
@@ -57,14 +57,14 @@ render partial: "hello"
 * Migrar ou não migrar? Verifique antes se todas suas gems já foram portadas e acesse o site: [isitruby19.com](http://isitruby19.com). Projetos com testes migram para a versão 1.9 com mais segurança.
 * [Changelog da versão](http://svn.ruby-lang.org/repos/ruby/tags/v1_9_1_0/NEWS) – [Slides da apresentação](http://simplesideias.com.br/rails-summit-o-que-mudou-no-ruby-1-9/)
 
-## [Pratik Naik](http://twitter.com/lifo): Experiências recentes com Rails
+## <A href="https://twitter.com/lifo">Pratik Naik</A>: Experiências recentes com Rails
 
 Essa foi a primeira apresentação do Pratik Naik. Ele apresentou suas experiências recentes sobre Rails. Algumas notas:
 
 * Use Ruby Enterprise Edition (também usuário pelo Twitter, 37 Signals, Shopify). É recomendado porque é mais rápido e executará seus testes mais rápidos.
 * Use o plugin Tickle para execução de testes em paralelo, o que agiliza o processo.
 * Focar em testes de integração e não em testes unitários.
-* Segurança: [rails_xss](http://github.com/NZKoz/rails_xss), default no Rails 3.
+* Segurança: <A href="https://github.com/NZKoz/rails_xss">rails_xss</A>, default no Rails 3.
 * will_paginate não escala. Alternativa: usar Ajax para criar paginações como Twitter
 
 ## [Bruno Miranda](http://www.twitter.com/brupm) / [Jason Seifer](http://www.twitter.com/jseifer): Rails não Escala
@@ -79,7 +79,7 @@ O Bruno trouxe seu caso de uso: [Cyloop](http://br.msn.cyloop.com/) é o canal d
 * Testes: testar aplicações com dados reais
 * Logs para tudo, para garantir a segurança caso algo caia
 
-## [Arthur Geek](http://twitter.com/arthurgeek): Controle de Versões com Git
+## <A href="https://twitter.com/arthurgeek">Arthur Geek</A>: Controle de Versões com Git
 
 Arthur falou sobre o que são sistemas de controle de versão, os tipos (centralizado e distribuído). Git, para quem não sabe, é um sistema de controle de versões criado pelo Linus Torvals (sim, o do Linux). Seu foco é em rapidez, eficiência e uso em grandes projetos.
 
@@ -87,7 +87,7 @@ Sua palestra foi técnica com o Git em ação. [Slides da apresentação](http:/
 
 ps. A palestra na outra sala foi do genial Vinícius Teles. [Para quem não viu](http://blog.improveit.com.br/articles/2009/10/19/palestra-no-rails-summit-2009).
 
-## [Obie Fernandez](http://twitter.com/obie): Dominando a Arte de Desenvolvimento de Aplicações
+## <A href="https://twitter.com/obie">Obie Fernandez</A>: Dominando a Arte de Desenvolvimento de Aplicações
 
 A última apresentação do Rails Summit foi com o Obie Fernandez. Pontos da apresentação:
 

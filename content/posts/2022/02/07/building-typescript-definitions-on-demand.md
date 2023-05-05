@@ -11,7 +11,7 @@ tags:
   - javascript
 ---
 
-I recently came across an interesting problem: is it possible to dynamically create TypeScript definitions for a React component library that doesn't use TypeScript at all? Something like a [DefinitelyTyped package](https://github.com/DefinitelyTyped/DefinitelyTyped) for a private NPM package?
+I recently came across an interesting problem: is it possible to dynamically create TypeScript definitions for a React component library that doesn't use TypeScript at all? Something like a <A href="https://github.com/DefinitelyTyped/DefinitelyTyped">DefinitelyTyped package</A> for a private NPM package?
 
 ## The problem 
 
@@ -52,13 +52,13 @@ The new developer used to work with [Material UI](https://mui.com/components/but
 
 It would be great to have a warning in our editor mentioning that `variant` is not a valid prop for `<Button>`. It would be great to have an autocomplete feature in our editor, so the developer could learn the component API as they work in the codebase. TypeScript solves these problems; however, the codebase doesn't use TS. 
 
-In addition, the Button is imported from a private NPM package. If the repository and packages were public, probably someone would create definitions and add them in the [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) repository.
+In addition, the Button is imported from a private NPM package. If the repository and packages were public, probably someone would create definitions and add them in the <A href="https://github.com/DefinitelyTyped/DefinitelyTyped">DefinitelyTyped</A> repository.
 
 Going back to the initial question of this post: is it possible to dynamically create TypeScript definitions for a React component library that doesn't use TypeScript at all? YES!
 
 ## The solution
 
-I am using the [react-to-typescript-definitions](https://www.npmjs.com/package/react-to-typescript-definitions) package to create definitions from the compiled files. The tool can map most PropTypes (`any`, `array`, `bool`, `func`, `number`, `object`, `string`, `node`, `element`, `oneOfType`, `arrayOf`, `symbol`, `shape`) and identify the required ones. The package partially support `oneOf` PropType and can even re-use your comments.
+I am using the <A href="https://www.npmjs.com/package/react-to-typescript-definitions">react-to-typescript-definitions</A> package to create definitions from the compiled files. The tool can map most PropTypes (`any`, `array`, `bool`, `func`, `number`, `object`, `string`, `node`, `element`, `oneOfType`, `arrayOf`, `symbol`, `shape`) and identify the required ones. The package partially support `oneOf` PropType and can even re-use your comments.
 
 You can create definitions from the command line or import the functionality into a script with this tool. Here is one example:
 

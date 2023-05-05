@@ -19,7 +19,7 @@ I work at Thinkific with 20+ other developers in different codebases. GitHub is 
 
 ### [Refined GitHub](https://chrome.google.com/webstore/detail/refined-github/hlepfoohegkhhmjieoechaddaejaokhf?hl=en)
 
-[Sindre Sorhus](https://sindresorhus.com/) extension brings a [massive list of improvements](https://github.com/sindresorhus/refined-github#repositories) to GitHub UI and many of them have become part of the product after a bit.
+[Sindre Sorhus](https://sindresorhus.com/) extension brings a <A href="https://github.com/sindresorhus/refined-github#repositories">massive list of improvements</A> to GitHub UI and many of them have become part of the product after a bit.
 
 ### [Better Pull Request for GitHub](https://chrome.google.com/webstore/detail/better-pull-request-for-g/nfhdjopbhlggibjlimhdbogflgmbiahc?hl=en)
 
@@ -53,7 +53,7 @@ Pull Panda can also spot bottlenecks, show who are the ones most pushing/reviewi
 
 ### [Gitify](https://www.gitify.io/)
 
-Gitify lives in your Mac menu bar and it is quite simple to understand. If the icon is green, you have a notification! It is also cool to mention the app is [open-source](https://github.com/manosim/gitify) (Electron-based, if you are curious).
+Gitify lives in your Mac menu bar and it is quite simple to understand. If the icon is green, you have a notification! It is also cool to mention the app is <A href="https://github.com/manosim/gitify">open-source</A> (Electron-based, if you are curious).
 
 ### [Quests](https://steamclock.com/quests/)
 

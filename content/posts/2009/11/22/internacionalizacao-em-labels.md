@@ -15,7 +15,7 @@ tags:
 ---
 Desenvolvendo uma aplicação onde apliquei os recurso de internacionalização do Rails, percebi que o framework [não traduz os valores dos labels](https://rails.lighthouseapp.com/projects/8994/tickets/745-form-label-should-use-i18n) para a tradução do atributo.
 
-Para corrigir isso, existem duas formas: um plugin chamado [i18n_label](http://github.com/iain/i18n_label) ou <s>uma gambiarra</s> um recurso técnico avançado adaptado a condições tecnológicas precárias em um determinado momento:
+Para corrigir isso, existem duas formas: um plugin chamado <A href="https://github.com/iain/i18n_label">i18n_label</A> ou <s>uma gambiarra</s> um recurso técnico avançado adaptado a condições tecnológicas precárias em um determinado momento:
 
 ```ruby
 module ActionView

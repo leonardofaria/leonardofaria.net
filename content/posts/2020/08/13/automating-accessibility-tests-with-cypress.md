@@ -30,19 +30,19 @@ There are different ways to test if your website/app is accessible. The W3C WAI 
 - Real users testing: companies like [Fable](https://www.makeitfable.com/) connect you and people with disabilities in research and user testing to meet your compliance goals.
 - Browser extensions: [axe](https://www.deque.com/axe/browser-extensions/) is a recommended extension for Chrome, Firefox, Edge that help identify and resolve common accessibility issues.
 
-The [accessibility engine of axe is open-source](https://github.com/dequelabs/axe-core) and it can be used in different ways, as this post will show.
+The <A href="https://github.com/dequelabs/axe-core">accessibility engine of axe is open-source</A> and it can be used in different ways, as this post will show.
 
 ## Before we start
 
 I created a [sample website](https://cypress-accessibility-example.vercel.app/) to mimic a Component Library. It is a very simple website created with Tailwind CSS and hosted in Vercel and it documents 2 components: [badge](https://cypress-accessibility-example.vercel.app/badge.html) and [button](https://cypress-accessibility-example.vercel.app/button.html).
 
-You can check the [source code](https://github.com/leonardofaria/cypress-accessibility-example) in GitHub. The website is static and it is inside the `public` folder. You can see the website locally by running `npm run serve` and checking in the browser [http://localhost:8000](http://localhost:8000).
+You can check the <A href="https://github.com/leonardofaria/cypress-accessibility-example">source code</A> in GitHub. The website is static and it is inside the `public` folder. You can see the website locally by running `npm run serve` and checking in the browser [http://localhost:8000](http://localhost:8000).
 
 ![Sample website](/wp-content/uploads/2020/08/cypress-sample-website.png)
 
 ## Adding Cypress and cypress-axe
 
-Start by cloning the [example repository](https://github.com/leonardofaria/cypress-example). Next, create a new branch and install [cypress-axe](https://www.npmjs.com/package/cypress-axe), the package responsible for tieing the axe engine to Cypress.
+Start by cloning the <A href="https://github.com/leonardofaria/cypress-example">example repository</A>. Next, create a new branch and install <A href="https://www.npmjs.com/package/cypress-axe">cypress-axe</A>, the package responsible for tieing the axe engine to Cypress.
 
 ```bash
 git checkout -b add-cypress
@@ -119,7 +119,7 @@ In the code above, I am creating dynamically tests based in the `routes` array. 
 | `section508`     | Old Section 508 rules                                |
 | `section508.*.*` | Requirement in old Section 508                       |
 
-You can find more information about it in the [axe-core docs](https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#axe-core-tags).
+You can find more information about it in the <A href="https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#axe-core-tags">axe-core docs</A>.
 
 Last, let's create inside the `package.json` the command to trigger the tests:
 
@@ -145,7 +145,7 @@ Using `npm run test open`, Cypress Test Runner will be opened and you can follow
 
 ![Cypress Test Runner screenshot](/wp-content/uploads/2020/08/cypress-accessibility-test-runner.jpg)
 
-Our first milestone is done, let's merge this branch to master. If you want to see the work done so far, jump in my [Pull Request](https://github.com/leonardofaria/cypress-accessility-example/pull/1/files). 
+Our first milestone is done, let's merge this branch to master. If you want to see the work done so far, jump in my <A href="https://github.com/leonardofaria/cypress-accessility-example/pull/1/files">Pull Request</A>. 
 
 ## Testing in real life
 
@@ -225,7 +225,7 @@ When you run the test again, you'll a table containing the issues reported by ax
 
 ![Output of failed test with a nice table](/wp-content/uploads/2020/08/cypress-accessibility-failed-test-table.jpg)
 
-If you have any questions, please check the [Pull request](https://github.com/leonardofaria/cypress-accessibility-example/pull/2/files) in Github. 
+If you have any questions, please check the <A href="https://github.com/leonardofaria/cypress-accessibility-example/pull/2/files">Pull request</A> in Github. 
 
 ## Next steps
 

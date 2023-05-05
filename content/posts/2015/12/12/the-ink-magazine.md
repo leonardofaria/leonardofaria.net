@@ -17,6 +17,6 @@ tags:
 
 The students was supposed to create a magazine responsive layout using HTML/CSS. (I usually use Gulp and SASS in my projects, however, I didn't use extra tools in this task).
 
-The [source code](http://bit.ly/1M9LNF5) is available in [my Github profile](http://github.com/leonardofaria/).
+The [source code](http://bit.ly/1M9LNF5) is available in <A href="https://github.com/leonardofaria/">my Github profile</A>.
 
-[![](https://raw.github.com/leonardofaria/the-ink-magazine/master/img/static/mockup.jpg)](http://bit.ly/the-ink-magazine)
+<a href="http://bit.ly/the-ink-magazine"><img src="https://raw.github.com/leonardofaria/the-ink-magazine/master/img/static/mockup.jpg" /></a>

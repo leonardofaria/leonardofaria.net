@@ -13,7 +13,7 @@ tags:
 ---
 People and organizations often have preferences for a specific package manager. At work, we decided to use Yarn due to emoji support (jk) but how to keep everybody using Yarn?&nbsp;
 
-We can use the [preinstall hook](https://docs.npmjs.com/misc/scripts) to check if the user run `npm install`or `yarn install`. Here is one example:
+We can use the <A href="https://docs.npmjs.com/misc/scripts">preinstall hook</A> to check if the user run `npm install`or `yarn install`. Here is one example:
 
 <span className="hidden">more</span>
 
@@ -33,7 +33,7 @@ If you want to ignore the checking (CI environment for instance), use the `--ign
 npm install --ignore-scripts
 ```
 
-Moreover, you can use the [engines option](https://docs.npmjs.com/files/package.json#engines) of NPM to force a specific version of Node, and/or Yarn. Here is an example:
+Moreover, you can use the <A href="https://docs.npmjs.com/files/package.json#engines">engines option</A> of NPM to force a specific version of Node, and/or Yarn. Here is an example:
 
 ```js title="package.json"
 "engines": {

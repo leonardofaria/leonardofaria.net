@@ -15,7 +15,7 @@ tags:
 ---
 Esse é um rascunho do que foi abordado no primeiro dia do Rails Summit. 
 
-## [Chad Fowler](http://twitter.com/chadfowler/): Insurgência Ruby on Rails
+## <A href="https://twitter.com/chadfowler/">Chad Fowler</A>: Insurgência Ruby on Rails
 
   * Stop doing things you know are wrong!
   * A primeira Rubyconf aconteceu em 2001 com 34 pessoas.
@@ -26,7 +26,7 @@ Esse é um rascunho do que foi abordado no primeiro dia do Rails Summit.
   * Don't do (.Net | Java | C++ | C | Perl l PHP) in Ruby: a razão de trocar de tecnologia é fazer as coisas diferentes!
   * Linguagens de computador são como namoradas: a nova é melhor porque você é melhor.
 
-## [Gregg Pollack](http://twitter.com/greggpollack): Na Vanguarda da Performance em Rails
+## <A href="https://twitter.com/greggpollack">Gregg Pollack</A>: Na Vanguarda da Performance em Rails
 
 Gregg Pollack, o cara dos screencasts do [RailsEnvy](http://www.RailsEnvy.com/), falou sobre performance. Primeiramente ele trouxe em 60 segundos algumas coisinhas para otimizar apps.
 
@@ -49,7 +49,7 @@ Trouxe também um monte de plugins interessantes. Alguns deles:
 
 A apresentação dele tem o mesmo estilo dos seus screencasts. [Links da apresentação](http://blog.envylabs.com/summit/).
 
-## [Carlos Brando](http://twitter.com/carlosbrando): Yet Another Ruby Framework – Como o Rails funciona por dentro
+## <A href="https://twitter.com/carlosbrando">Carlos Brando</A>: Yet Another Ruby Framework – Como o Rails funciona por dentro
 
 Carlos Brando trouxe sua experiência sobre aplicações sociais.
 
@@ -58,11 +58,11 @@ Carlos Brando trouxe sua experiência sobre aplicações sociais.
 
 Carlos prometeu falar mais do funcionamento do Rails em seu blog. [Slides de sua apresentação](http://www.nomedojogo.com/2009/10/13/os-slides-da-minha-apresentacao-no-rails-summit-latin-america-2009/).
 
-## [Ilya Grigorik](http://twitter.com/Igrigorik): Ruby em tempo real para Web em tempo real
+## <A href="https://twitter.com/Igrigorik">Ilya Grigorik</A>: Ruby em tempo real para Web em tempo real
 
 Essa palestra foi concomitante a palestra do Carlos e não assisti. [Slides da apresentação](http://www.slideshare.net/igrigorik/realtime-ruby-for-the-realtime-web).
 
-## [José Valim](http://twitter.com/josevalim): Geradores de código com Thor
+## <A href="https://twitter.com/josevalim">José Valim</A>: Geradores de código com Thor
 
 José Valim falou dos novos generators do Rails 3. A necessidade de reescrevê-lo deu-se ao fato do código duplicado existe caso você alterasse algumas coisas padrões (tests, erb). O resultado disso tudo é o Thor.
 
@@ -70,7 +70,7 @@ Thor = Rake + Sake + Rubigen + Rails template
 
 [Slides da apresentação](http://blog.plataformatec.com.br/2009/10/thor-e-devise-no-rails-summit-latin-america-2009/)
 
-## [David Chelimsky](http://twitter.com/dchelimsky): RSpec e Cucumber: Além do Básico
+## <A href="https://twitter.com/dchelimsky">David Chelimsky</A>: RSpec e Cucumber: Além do Básico
 
 David é líder do projeto RSpec. Sua palestra, naturalmente sobre o assunto, apresentou algumas técnicas do TDD.
 
@@ -89,7 +89,7 @@ Foi uma palestra altamente conceitual, uma verdadeira viagem envolvendo psicolog
   </p>
     
   <h2>
-    <a href="http://twitter.com/mattetti">Matt Aimonetti</a>: O futuro do Ruby & Rails
+    <a href="https://twitter.com/mattetti">Matt Aimonetti</a>: O futuro do Ruby & Rails
   </h2>
   
   <p>
@@ -116,12 +116,12 @@ Foi uma palestra altamente conceitual, uma verdadeira viagem envolvendo psicolog
   </h2>
   
   <p>
-    <a href="http://twitter.com/danicuki"><img src="/wp-content/uploads/2009/10/summit4.jpg" alt="melô do teste automatizado" title="melô do teste automatizado" align="right" /></a>
+    <a href="https://twitter.com/danicuki"><img src="/wp-content/uploads/2009/10/summit4.jpg" alt="melô do teste automatizado" title="melô do teste automatizado" align="right" /></a>
   </p>
   
   <ul>
     <li>
-      IMPORTANTE: A <a href="http://github.com/railssummit/morena_opensource/">morena opensource</a> está de novo no evento e há <a href="http://github.com/railssummit/morena_opensource/tree/master/RailsSummit2009/">fotos novinhas dela</a> no Github
+      IMPORTANTE: A <a href="https://github.com/railssummit/morena_opensource/">morena opensource</a> está de novo no evento e há <a href="https://github.com/railssummit/morena_opensource/tree/master/RailsSummit2009/">fotos novinhas dela</a> no Github
     </li>
     <li>
       O pessoal do Guru SP apareceu e falou de seus projetos, como o Coding Dojo.
@@ -133,22 +133,22 @@ Foi uma palestra altamente conceitual, uma verdadeira viagem envolvendo psicolog
       O pessoal do Rio também falou da sua experiência em organizar eventos e pessoas. Segundo eles, o foco está nas pessoas. Eles parecem ser um grupo bem organizado, onde até as esposas se reúnem!
     </li>
     <li>
-      O <a href="http://twitter.com/rafaelp">Rafael Lima</a> apresentou sobre aplicações e empreendimento. Entre várias coisas interessante, ele disse que o desenvolvedor esquece de que ele também precisa conhecer de negócios para manter sua aplicação no ar.
+      O <a href="https://twitter.com/rafaelp">Rafael Lima</a> apresentou sobre aplicações e empreendimento. Entre várias coisas interessante, ele disse que o desenvolvedor esquece de que ele também precisa conhecer de negócios para manter sua aplicação no ar.
     </li>
     <li>
       O <a href="http://blog.areacriacoes.com.br/">Daniel Lopes</a> apresentou seu problema quanto as finanças de sua empresa e sua solução: uma aplicação de gerenciamento financeiro que está para vir.
     </li>
     <li>
-      O <a href="http://twitter.com/lfcipriani">@lfcipriani</a> apresentou seu case de aplicação: <a href="http://www.maratonadebasquete.com.br/marathons/1">Maratona de Basquete</a>. Trata-se de uma maratona de basquete cujo placar eletrônico é uma aplicação com um mega esquema de arquitetura envolvendo Rails, jQuery, XMPP, bots Ruby e tudo mais. <a href="http://prezi.com/-9hz7py6rkkc/">Sua apresentação</a>
+      O <a href="https://twitter.com/lfcipriani">@lfcipriani</a> apresentou seu case de aplicação: <a href="http://www.maratonadebasquete.com.br/marathons/1">Maratona de Basquete</a>. Trata-se de uma maratona de basquete cujo placar eletrônico é uma aplicação com um mega esquema de arquitetura envolvendo Rails, jQuery, XMPP, bots Ruby e tudo mais. <a href="http://prezi.com/-9hz7py6rkkc/">Sua apresentação</a>
     </li>
     <li>
       O Alexandre Gomes falou <a href="http://bluesoft.wordpress.com/2009/10/15/manifesto-2-0-por-alexandre-gomes-no-rails-summit-2009/">sobre o manifesto 2.0</a> que representa uma nova escola de pensamento de Tecnologia da Informação que vem transformando a industria de desenvolvilmento de software.
     </li>
     <li>
-      O George apresentou o <a href="http://github.com/plataformatec/devise">Devise</a>, plugin para autenticação
+      O George apresentou o <a href="https://github.com/plataformatec/devise">Devise</a>, plugin para autenticação
     </li>
     <li>
-      Por último, o <a href="http://twitter.com/danicuki">Daniel Cukier</a> cantou duas músicas: Melô dos Testes e o <a href="http://agileandart.blogspot.com/2009/10/samba-do-akita.html">Samba do Akita</a>. *excelente*
+      Por último, o <a href="https://twitter.com/danicuki">Daniel Cukier</a> cantou duas músicas: Melô dos Testes e o <a href="http://agileandart.blogspot.com/2009/10/samba-do-akita.html">Samba do Akita</a>. *excelente*
     </li>
     <li>
       Além disso, rolou um #horaextra no <a href="http://www.barbrahmasp.com/aeroclube/">Bar Brahma do Clube de Aviação</a>, com umas 100 pessoas. Hora de tomar um chopp gelado e encontrar pessoas do mundo online.

@@ -60,4 +60,4 @@ How awesome is Alfred? It is totally awesome! Alfred is a great tool working as 
 
 ### WhatApp Desktop
 
-There are dozens of WhatsApp Web apps, but I've been using [this option](https://github.com/Aluxian/WhatsApp-Desktop), which runs in background as a menubar app. The same developer also created a [Facebook Messenger for Desktop](http://messengerfordesktop.com/).
+There are dozens of WhatsApp Web apps, but I've been using <A href="https://github.com/Aluxian/WhatsApp-Desktop">this option</A>, which runs in background as a menubar app. The same developer also created a [Facebook Messenger for Desktop](http://messengerfordesktop.com/).

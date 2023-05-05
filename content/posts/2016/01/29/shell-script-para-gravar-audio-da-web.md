@@ -65,7 +65,7 @@ rm $OUT.ts
 echo "DONE"
 ```
 
-O [script](https://github.com/leonardofaria/audio-recorder) usa timelimit, ffmpeg and livestreamer. Você pode criar uma cron task para executar o script de acordo com a necessidade. Por examplo:
+O <A href="https://github.com/leonardofaria/audio-recorder">script</A> usa timelimit, ffmpeg and livestreamer. Você pode criar uma cron task para executar o script de acordo com a necessidade. Por examplo:
 
 ```
 00 10 * * 1-5 /Users/leonardo/Sites/audio-recorder/98.sh "hlsvariant://http://stream.izap.com.br/live/98fm.stream/playlist.m3u8" "/Users/leonardo/Downloads/central98.mp3" 3600

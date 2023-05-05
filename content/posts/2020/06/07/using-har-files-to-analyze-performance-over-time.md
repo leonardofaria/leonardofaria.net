@@ -78,4 +78,4 @@ HAR files can be useful to collect information about the assets of a page. Since
 ## More information
 
 - [Measure Resource Loading Times](https://developers.google.com/web/tools/chrome-devtools/network/resource-loading#view-network-timing-details-for-a-specific-resource)
-- [HAR Viewer source code](https://github.com/janodvarko/harviewer)
+- <A href="https://github.com/janodvarko/harviewer">HAR Viewer source code</A>

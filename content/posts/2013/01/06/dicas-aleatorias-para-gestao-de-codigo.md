@@ -36,7 +36,7 @@ sudo ipfw pipe delete 1
 
 ### Gitlab
 
-O [**Gitlab**](https://github.com/gitlabhq/gitlabhq) é feito com Rails e faz o gerencimento de repositórios Git. Sua interface e funcionalidades lembram muito o GitHub. Você cria e edita repositórios com cliques, adiciona membros ao time com facilidade e ainda tem a possibilidade de criar wikis para seus projetos. Só me arrependo de não o ter instalado antes.  
+O <A href="https://github.com/gitlabhq/gitlabhq">**Gitlab**</A> é feito com Rails e faz o gerencimento de repositórios Git. Sua interface e funcionalidades lembram muito o GitHub. Você cria e edita repositórios com cliques, adiciona membros ao time com facilidade e ainda tem a possibilidade de criar wikis para seus projetos. Só me arrependo de não o ter instalado antes.  
 
 
 <center>

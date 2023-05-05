@@ -20,7 +20,7 @@ Nos últimos dias, tenho lido muita coisa sobre RoR. Infelizmente, queria blogar
   1. [Ruby on Rails – The basics](http://www.fearoffish.co.uk/assets/2006/12/27/fof_training_handout.pdf) – um pequeno pdf de caráter beeeem introdutório.
   2. [Ruby on Rails Handbook](http://railshandbook.com/) – uma lista com inúmeros materiais sobre o framework.
   3. [Log Visualizer](http://railslogvislzr.rubyforge.org/) – apesar do nome Tabajara, essa aplicação gera gráficos e outras firulas dos seus arquivos de log.
-  4. [Curso online de Ruby](http://rubylearning.com/satishtalim/tutorial.html) – via [Caio Salim](http://twitter.com/caiosalim) no Twitter (por isso que eu gosto desse Twitter).
+  4. [Curso online de Ruby](http://rubylearning.com/satishtalim/tutorial.html) – via <A href="https://twitter.com/caiosalim">Caio Salim</A> no Twitter (por isso que eu gosto desse Twitter).
 
 ### Documentação
 

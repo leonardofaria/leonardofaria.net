@@ -17,7 +17,7 @@ I am attending to a [post-degree program](http://langara.ca/programs-and-courses
 
 ![Todo](/wp-content/uploads/2016/07/todo.gif) <span className="hidden">more</span>
 
-The back end is a decent example of how to use Sinatra and Active Record to create simple APIs. In the [repository's readme](https://github.com/leonardofaria/todo-api#todo-api), I show how to install it and use it. In this post, I detail what I coded:
+The back end is a decent example of how to use Sinatra and Active Record to create simple APIs. In the <A href="https://github.com/leonardofaria/todo-api#todo-api">repository's readme</A>, I show how to install it and use it. In this post, I detail what I coded:
 
 ## Managing dependencies and configuring the database
 
@@ -41,7 +41,7 @@ group :development do
 end
 ```
 
-In this project, I use [shotgun](https://github.com/rtomayko/shotgun) to update my Sinatra app without restarting the server every time that I change my `app.rb`. The gem [sinatra-cross_origin](https://github.com/britg/sinatra-cross_origin) is needed to allow me perform requests externally. In addition, I use activerecord as ORM and [sinatra-activerecord](https://github.com/janko-m/sinatra-activerecord) to extends Sinatra with extension methods and Rake tasks.
+In this project, I use <A href="https://github.com/rtomayko/shotgun">shotgun</A> to update my Sinatra app without restarting the server every time that I change my `app.rb`. The gem <A href="https://github.com/britg/sinatra-cross_origin">sinatra-cross_origin</A> is needed to allow me perform requests externally. In addition, I use activerecord as ORM and <A href="https://github.com/janko-m/sinatra-activerecord">sinatra-activerecord</A> to extends Sinatra with extension methods and Rake tasks.
 
 The file `environment.rb` specifies the database credentials:
 
@@ -381,9 +381,9 @@ This is not the focus of this post, then read the Heroku documentation [[1](http
 
 ## Final thoughts
 
-I am not sure if I described everything but I hope that you got the main idea. You can take a look in the [source code](https://github.com/leonardofaria/todo-api) on Github, fork it or star it.
+I am not sure if I described everything but I hope that you got the main idea. You can take a look in the <A href="https://github.com/leonardofaria/todo-api">source code</A> on Github, fork it or star it.
 
-A [web app](http://leonardofaria.github.io/todo) (gif above) was also created to show how to use the API. The web app is also [available in Github](http://github.com/leonardofaria/todo).
+A [web app](http://leonardofaria.github.io/todo) (gif above) was also created to show how to use the API. The web app is also <A href="https://github.com/leonardofaria/todo">available in Github</A>.
 
 ## Other references
 
@@ -392,4 +392,4 @@ Part of my work was inspired in the following articles:
 * [Create a lightweight REST service using Sinatra](https://www.xplatform.rocks/2014/04/28/create-a-lightweight-rest-service-using-sinatra/)
 * [Deploying REST APIs to Docker Using Ruby and Sinatra](http://blog.cloud66.com/deploying-rest-apis-to-docker-using-ruby-and-sinatra/)
 * [Uno! Use Sinatra to Implement a REST API](https://www.sitepoint.com/uno-use-sinatra-implement-rest-api/)
-* [sinatra-activerecord-heroku](https://github.com/hatboysam/sinatra-activerecord-heroku)
+* <A href="https://github.com/hatboysam/sinatra-activerecord-heroku">sinatra-activerecord-heroku</A>

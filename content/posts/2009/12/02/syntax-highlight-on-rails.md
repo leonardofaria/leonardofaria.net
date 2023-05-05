@@ -25,7 +25,7 @@ Faça o download da biblioteca de expressões regulares [Oniguruma](http://www.g
 ./configure && make && make install
 ```
 
-Após isso instale as gems Oniguruma, Textpow e Ultraviolet e instale o plugin [tm\_syntax\_highlighting](http://github.com/arya/tm_syntax_highlighting) em seu projeto.
+Após isso instale as gems Oniguruma, Textpow e Ultraviolet e instale o plugin <A href="https://github.com/arya/tm_syntax_highlighting">tm\_syntax\_highlighting</A> em seu projeto.
 
 Em suas views, utilize:
 

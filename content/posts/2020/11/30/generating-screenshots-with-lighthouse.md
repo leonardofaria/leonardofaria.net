@@ -33,7 +33,7 @@ The filmstrip above reveals how a page is rendered in a browser and gives us an 
 </ul>
 </div>
 
-In this post you will learn where these images are stored and how to store them in a file system. Here is the script (from my [lighthouse-examples GitHub repository](https://github.com/leonardofaria/lighthouse-examples)): 
+In this post you will learn where these images are stored and how to store them in a file system. Here is the script (from my <A href="https://github.com/leonardofaria/lighthouse-examples">lighthouse-examples GitHub repository</A>): 
 
 ```js showLineNumbers
 const { writeFileSync } = require('fs');
