@@ -5,7 +5,7 @@ import { BiMenu } from 'react-icons/bi';
 import { MdClose } from 'react-icons/md';
 import useScrollPosition from '../../lib/hooks/useScrollPosition';
 import useWindowSize from '../../lib/hooks/useWindowSize';
-import { BASE_URL, LARGE_SCREEN_BREAKPOINT } from '../../lib/constants';
+import { LARGE_SCREEN_BREAKPOINT } from '../../lib/constants';
 import { PageNav } from './PageNav';
 import { SocialNav } from './SocialNav';
 
@@ -71,7 +71,7 @@ export function Header() {
               <Link
                 /* eslint-disable-next-line tailwindcss/no-custom-classname */
                 className="h-card text-amethyst-smoke-800 flex shrink-0 text-3xl font-semibold leading-10 tracking-tighter"
-                href={BASE_URL}
+                href="/"
                 rel="me"
               >
                 Leonardo Faria
