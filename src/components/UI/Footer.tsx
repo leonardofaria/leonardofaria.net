@@ -6,7 +6,7 @@ export function Footer() {
 
   return (
     <footer className="mx-auto w-full max-w-7xl lg:px-4">
-      <div className="flex flex-col items-center justify-between gap-3 border-t border-charade-300 p-4 text-sm text-charade-500 lg:flex-row">
+      <div className="border-charade-300 text-charade-500 flex flex-col items-center justify-between gap-3 border-t p-4 text-sm lg:flex-row">
         <p className="flex flex-col lg:flex-row">
           <span className="text-center">
             <a
