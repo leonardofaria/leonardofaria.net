@@ -13,7 +13,8 @@
     "start": "next start",
     "lint": "next lint --fix",
     "build:ogImages": "ts-node --esm src/lib/ogImages.ts",
-    "count:domains": "find content -type f -exec grep -Eo \"(http|https)://([a-zA-Z0-9]*)(.)(com|net)\" {} \\; | sort | uniq -c | sort -nr"
+    "count:domains": "find content -type f -exec grep -Eo \"(http|https)://([a-zA-Z0-9]*)(.)(com|net)\" {} \\; | sort | uniq -c | sort -nr",
+    "stats": "npx cloc ./content ./src ./.github"
   },
   "devDependencies": {
     "@types/d3-geo": "^3.0.3",
