@@ -141,7 +141,7 @@ function Mention({ originalMention }: { originalMention: WebMention }) {
         <div>
           <span
             dangerouslySetInnerHTML={{
-              __html: mention.activity.sentence_html.replace(/\\"/g, ''),
+              __html: mention.activity.sentence_html?.replace(/\\"/g, ''),
             }}
           />
           {mention.activity.type === 'like' && renderDate()}
