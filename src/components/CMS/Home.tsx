@@ -26,7 +26,7 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
           url: BASE_URL,
           images: [
             {
-              url: `${BASE_URL}/images/og_image.jpg`,
+              url: 'https://leonardofaria.net/api/thumbnail?url=https://leonardofaria.net',
               width: 1800,
               height: 945,
               alt: `Cover photo`,

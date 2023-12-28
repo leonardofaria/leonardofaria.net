@@ -12,7 +12,7 @@
     "build": "contentlayer build && pnpm prebuild && next build",
     "start": "next start",
     "lint": "next lint --fix",
-    "build:ogImages": "ts-node --esm src/lib/ogImages.ts",
+    "build:ogImages": "tsx src/lib/ogImages.ts",
     "count:domains": "find content -type f -exec grep -Eo \"(http|https)://([a-zA-Z0-9]*)(.)(com|net)\" {} \\; | sort | uniq -c | sort -nr",
     "stats": "npx cloc ./content ./src ./.github"
   },
@@ -46,6 +46,7 @@
     "@codesandbox/sandpack-themes": "^1.19.0",
     "@next/font": "^13.1.1",
     "@sentry/nextjs": "^7.91.0",
+    "@sparticuz/chromium-min": "^119.0.2",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/aos": "^3.0.4",
     "@vercel/analytics": "^0.1.6",

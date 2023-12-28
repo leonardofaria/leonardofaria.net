@@ -1,6 +1,6 @@
 export const IS_SSR = typeof window !== 'undefined';
 export const AUTHOR = 'Leonardo Faria';
-export const BASE_URL = 'https://leonardofaria.net';
+export const BASE_URL = process.env.BASE_URL || 'https://leonardofaria.net';
 export const DISQUS_SHORTNAME = 'leonardofaria';
 export const WEBSITE_TITLE = 'Leonardo Faria';
 export const WEBSITE_SUBHEADING = "Hi, I'm Leo";

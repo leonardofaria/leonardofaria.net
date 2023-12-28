@@ -2,6 +2,7 @@ import { existsSync, readdirSync, statSync } from 'fs';
 import { readFile } from 'fs/promises';
 // @ts-ignore
 import lineReplace from 'line-replace';
+import chromium from '@sparticuz/chromium-min';
 
 import path, { parse } from 'path';
 import matter from 'gray-matter';
@@ -84,13 +85,13 @@ async function visitPageAndScreenshot(
       height: 630,
       deviceScaleFactor: 1.5,
     });
-    await page.goto(url, { waitUntil: 'networkidle0', timeout: 10 * 1000 });
+    await page.goto(url, { waitUntil: 'networkidle0', timeout: 30 * 1000 });
     await page.screenshot({
       type: 'png',
       path: `./public${ogImagePath}`,
     });
 
-    console.log('  Screenshot saved');
+    console.log('  ✓ Screenshot saved');
   } catch (error) {
     console.error(`  Error visiting: ${url}`);
     console.log(error);
@@ -98,12 +99,19 @@ async function visitPageAndScreenshot(
 }
 
 async function launchBrowser() {
-  const exePath =
-    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+  const isProduction = process.env.NODE_ENV === 'production';
+  console.log(
+    `Launching browser in ${isProduction ? 'production' : 'dev'} mode`,
+  );
+  const executablePath = isProduction
+    ? await chromium.executablePath(
+        `https://github.com/Sparticuz/chromium/releases/download/v119.0.2/chromium-v119.0.2-pack.tar`,
+      )
+    : '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
   const options = {
-    executablePath: exePath,
-    headless: true,
+    executablePath,
+    headless: isProduction ? chromium.headless : false,
   };
 
   const puppeteer = await import('puppeteer-core');
