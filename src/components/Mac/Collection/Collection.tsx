@@ -8,7 +8,6 @@ import {
   CONTENT_STYLES_WRAPPER,
 } from 'src/lib/rehypePrettyCode';
 import { Footer, Header, Main, SegmentedControl } from 'src/components/UI';
-import Balancer from 'react-wrap-balancer';
 import { Cards } from './Cards';
 import { Table } from './Table';
 
@@ -34,15 +33,13 @@ export function Collection({
             <h1
               className={`${CONTENT_STYLES.h1} my-0 mr-2 grow self-start lg:self-center`}
             >
-              <Balancer>
-                <Link
-                  /* eslint-disable-next-line tailwindcss/no-custom-classname */
-                  className="p-name u-url"
-                  href="/mac/collection"
-                >
-                  Mac Collection
-                </Link>
-              </Balancer>
+              <Link
+                /* eslint-disable-next-line tailwindcss/no-custom-classname */
+                className="p-name u-url"
+                href="/mac/collection"
+              >
+                Mac Collection
+              </Link>
             </h1>
 
             <div className="w-72 self-end lg:self-center">

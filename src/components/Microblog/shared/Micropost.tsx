@@ -1,4 +1,3 @@
-import Balancer from 'react-wrap-balancer';
 import { type Micropost as MicropostType } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import Image from 'next/image';
@@ -46,15 +45,13 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
         </small>
 
         <H1>
-          <Balancer>
-            <Link
-              /* eslint-disable-next-line tailwindcss/no-custom-classname */
-              className="p-name u-url"
-              href={`/microblog/${slug}`}
-            >
-              {title}
-            </Link>
-          </Balancer>
+          <Link
+            /* eslint-disable-next-line tailwindcss/no-custom-classname */
+            className="p-name u-url"
+            href={`/microblog/${slug}`}
+          >
+            {title}
+          </Link>
         </H1>
       </header>
 

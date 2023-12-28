@@ -98,9 +98,6 @@ dependencies:
   react-twitter-embed:
     specifier: ^4.0.4
     version: 4.0.4(react-dom@18.2.0)(react@18.2.0)
-  react-wrap-balancer:
-    specifier: ^0.3.0
-    version: 0.3.0(react@18.2.0)
   reading-time:
     specifier: ^1.5.0
     version: 1.5.0
@@ -218,7 +215,7 @@ devDependencies:
     specifier: ^3.1.1
     version: 3.1.1
   tailwindcss:
-    specifier: ^3.2.4
+    specifier: ^3.4.0
     version: 3.4.0(ts-node@10.9.2)
   typescript:
     specifier: 4.9.4
@@ -5782,14 +5779,6 @@ packages:
       throttle-debounce: 3.0.1
       ts-easing: 0.2.0
       tslib: 2.6.2
-    dev: false
-
-  /react-wrap-balancer@0.3.0(react@18.2.0):
-    resolution: {integrity: sha512-UlnQvCvSRW0jh8uILic2LJs4tV0KjOO+P70ookE5qRpfZvsKmY8KLcV8s7TBPB6cuVYkoH7+fbqankFrFata8w==}
-    peerDependencies:
-      react: ^18.0.0
-    dependencies:
-      react: 18.2.0
     dev: false
 
   /react-youtube@7.14.0(react@18.2.0):

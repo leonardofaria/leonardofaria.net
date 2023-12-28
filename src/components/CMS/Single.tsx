@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import { Parallax } from 'react-scroll-parallax';
-import Balancer from 'react-wrap-balancer';
 import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import { Playground } from '../Playground';
@@ -120,15 +119,13 @@ export default function Single({
             )}
 
             <H1>
-              <Balancer>
-                <Link
-                  /* eslint-disable-next-line tailwindcss/no-custom-classname */
-                  className="p-name u-url"
-                  href={permalink}
-                >
-                  {title}
-                </Link>
-              </Balancer>
+              <Link
+                /* eslint-disable-next-line tailwindcss/no-custom-classname */
+                className="p-name u-url"
+                href={permalink}
+              >
+                {title}
+              </Link>
             </H1>
           </header>
 
