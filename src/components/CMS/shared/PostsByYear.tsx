@@ -12,7 +12,7 @@ export function PostsByYear({
   return (
     <section className="relative mb-8 flex flex-col md:flex-row">
       <div>
-        <h2 className="text-amethyst-smoke-800 sticky top-28 z-10 mb-2 shrink-0 grow-0 text-3xl font-semibold md:w-32 lg:my-0">
+        <h2 className="sticky top-28 z-10 mb-2 shrink-0 grow-0 text-3xl font-semibold text-amethyst-smoke-800 md:w-32 lg:my-0">
           {year}
         </h2>
       </div>

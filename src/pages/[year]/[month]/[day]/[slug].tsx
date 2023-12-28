@@ -19,9 +19,7 @@ export const getStaticPaths = () => {
 export const getStaticProps: GetStaticProps<{
   post: Post;
 }> = ({ params }) => {
-  const permalink = `/${params?.year?.toString()}/${params?.month}/${
-    params?.day
-  }/${params?.slug}`;
+  const permalink = `/${params?.year?.toString()}/${params?.month}/${params?.day}/${params?.slug}`;
   // using startWith since some permalink have a final / and others not
   const post = allPosts.find((p: Post) => p.permalink.startsWith(permalink));
 

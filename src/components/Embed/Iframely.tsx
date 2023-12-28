@@ -15,8 +15,8 @@ export default function Iframely({ url }: { url: string }) {
     if (url) {
       fetch(
         `https://cdn.iframe.ly/api/iframely?url=${encodeURIComponent(
-          url
-        )}&key=${NEXT_PUBLIC_IFRAMELY_KEY}&iframe=1&omit_script=1`
+          url,
+        )}&key=${NEXT_PUBLIC_IFRAMELY_KEY}&iframe=1&omit_script=1`,
       )
         .then((res) => res.json())
         .then(
@@ -31,7 +31,7 @@ export default function Iframely({ url }: { url: string }) {
           (err: any) => {
             setIsLoaded(true);
             setError(err);
-          }
+          },
         );
     } else {
       setError('400 - Provide url attribute for the element');

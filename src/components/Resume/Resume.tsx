@@ -1,6 +1,6 @@
 export default function Resume() {
   return (
-    <div className="my-8 mx-auto max-w-[800px] text-gray-700 print:my-0 print:max-w-full">
+    <div className="mx-auto my-8 max-w-[800px] text-gray-700 print:my-0 print:max-w-full">
       <header className="flex flex-wrap">
         <aside className="print:w-1/4 sm:w-1/4">
           <h1 className="m-0 text-4xl text-gray-500">Leonardo Faria</h1>
@@ -111,7 +111,7 @@ export default function Resume() {
               </li>
             </ul>
 
-            <div className="mt-3 mb-2 flex items-center justify-between">
+            <div className="mb-2 mt-3 flex items-center justify-between">
               <b className="font-semibold">Engineering Team Lead</b>
               <small className="shrink-0">Oct 2017 — Sep 2020</small>
             </div>
@@ -143,7 +143,7 @@ export default function Resume() {
               </li>
             </ul>
 
-            <div className="mt-3 mb-2 flex items-center justify-between">
+            <div className="mb-2 mt-3 flex items-center justify-between">
               <b className="font-semibold">Senior Software Engineer</b>
               <small className="shrink-0">Nov 2016 — Oct 2017</small>
             </div>

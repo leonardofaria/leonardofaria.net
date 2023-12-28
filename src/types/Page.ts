@@ -55,7 +55,7 @@ export const Page = defineDocumentType(() => ({
               text: content,
               slug: content ? slugger.slug(content) : undefined,
             };
-          }
+          },
         );
 
         return headings;

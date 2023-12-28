@@ -21,7 +21,7 @@ export function Collection({
 }) {
   const [mode, setMode] = useState('cards');
   const [collection, setCollection] = useState<Computer[] | Idevice[]>(
-    computers
+    computers,
   );
 
   return (
@@ -66,7 +66,7 @@ export function Collection({
             className={`e-content ${CONTENT_STYLES_WRAPPER}`}
           >
             <div className="flex flex-col flex-wrap items-center justify-between lg:flex-row">
-              <p className="mt-6 mb-16 mr-2 self-start text-xl lg:self-center">
+              <p className="mb-16 mr-2 mt-6 self-start text-xl lg:self-center">
                 I like Macs.
                 <br />
                 Here is my collection.

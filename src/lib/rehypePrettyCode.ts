@@ -111,11 +111,11 @@ export function rehypePrettyCodeClasses() {
         Boolean(
           TAGS.includes(node.tagName) &&
             Object.keys(node.properties).length === 0 &&
-            node.children.some((n: any) => n.type === 'text')
+            node.children.some((n: any) => n.type === 'text'),
         ),
       (node: any) => {
         injectTailwindClasses(node);
-      }
+      },
     );
 
     // Replace "full-width" to right Tailwind CSS classes
@@ -129,7 +129,7 @@ export function rehypePrettyCodeClasses() {
                 attribute.name === 'className' &&
                 attribute.value?.includes('full-width')
               );
-            })
+            }),
         ),
       (node: any) => {
         node.attributes = node.attributes.map((attribute: any) => {
@@ -141,7 +141,7 @@ export function rehypePrettyCodeClasses() {
         });
 
         return node;
-      }
+      },
     );
 
     // Make images wider than text container
@@ -151,7 +151,7 @@ export function rehypePrettyCodeClasses() {
         Boolean(
           node.tagName === 'p' &&
             node.children?.length === 1 &&
-            node.children.some((n: any) => n.tagName === 'img')
+            node.children.some((n: any) => n.tagName === 'img'),
         ),
       (node: any) => {
         node.children = node.children.map((n: any) => {
@@ -164,7 +164,7 @@ export function rehypePrettyCodeClasses() {
         });
 
         return node;
-      }
+      },
     );
 
     // Make videos wider than text container
@@ -182,7 +182,7 @@ export function rehypePrettyCodeClasses() {
         });
 
         return node;
-      }
+      },
     );
 
     // Append icons to links ↗︎
@@ -192,7 +192,7 @@ export function rehypePrettyCodeClasses() {
         Boolean(
           node.tagName === 'p' &&
             node.children?.length > 1 &&
-            node.children.some((n: any) => n.tagName === 'a')
+            node.children.some((n: any) => n.tagName === 'a'),
         ),
       (node: any) => {
         node.children = node.children.map((n: any) => {
@@ -228,7 +228,7 @@ export function rehypePrettyCodeClasses() {
         });
 
         return node;
-      }
+      },
     );
 
     // Related to code highlighting
@@ -238,7 +238,7 @@ export function rehypePrettyCodeClasses() {
         Boolean(
           node.tagName === 'code' &&
             Object.keys(node.properties).length === 0 &&
-            node.children.some((n: any) => n.type === 'text')
+            node.children.some((n: any) => n.type === 'text'),
         ),
       (node: any) => {
         const textNode = node.children.find((n: any) => n.type === 'text');
@@ -248,7 +248,7 @@ export function rehypePrettyCodeClasses() {
         textNode.children = [{ type: 'text', value: textNode.value }];
         node.properties.className = [CODE_STYLES.INLINE_BLOCK];
         node.tagName = 'span';
-      }
+      },
     );
 
     visit(
@@ -256,7 +256,7 @@ export function rehypePrettyCodeClasses() {
       (node: any) =>
         Boolean(
           typeof node?.properties?.['data-rehype-pretty-code-fragment'] !==
-            'undefined'
+            'undefined',
         ),
       (node: any) => {
         if (node.tagName === 'span') {
@@ -301,7 +301,7 @@ export function rehypePrettyCodeClasses() {
                   'undefined'
                 ) {
                   node.children[0].properties.className.push(
-                    CODE_STYLES.NUMBERED_LINES
+                    CODE_STYLES.NUMBERED_LINES,
                   );
                 }
               }
@@ -314,7 +314,7 @@ export function rehypePrettyCodeClasses() {
         }
 
         return node;
-      }
+      },
     );
   };
 }

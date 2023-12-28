@@ -35,7 +35,7 @@ export default function Page() {
             <span>Download PDF</span>
             <svg
               aria-hidden="true"
-              className="mt-0.5 ml-2 -mr-1 stroke-black stroke-2"
+              className="-mr-1 ml-2 mt-0.5 stroke-black stroke-2"
               fill="none"
               height="10"
               viewBox="0 0 10 10"

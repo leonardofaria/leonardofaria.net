@@ -39,7 +39,7 @@ export const getStaticProps: GetStaticProps<{
   posts: (Post | Page | Micropost)[];
 }> = async ({ params }) => {
   let posts = [...allDocuments].sort(
-    (a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+    (a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)),
   );
 
   let currentFilters: CurrentFilters = { type: 'home' };
@@ -93,7 +93,7 @@ export default function SinglePostPage({
       <Home
         posts={
           posts.filter(
-            (post) => post.type === 'Post' || post.type === 'Micropost'
+            (post) => post.type === 'Post' || post.type === 'Micropost',
           ) as (Post | Micropost)[]
         }
       />

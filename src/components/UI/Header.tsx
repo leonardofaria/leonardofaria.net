@@ -70,7 +70,7 @@ export function Header() {
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <Link
                 /* eslint-disable-next-line tailwindcss/no-custom-classname */
-                className="h-card text-amethyst-smoke-800 flex shrink-0 text-3xl font-semibold leading-10 tracking-tighter"
+                className="h-card flex shrink-0 text-3xl font-semibold leading-10 tracking-tighter text-amethyst-smoke-800"
                 href="/"
                 rel="me"
               >
@@ -95,13 +95,13 @@ export function Header() {
             {showMenu ? (
               <div className="absolute right-8 top-16 flex flex-col items-center rounded-md bg-white shadow lg:relative lg:right-0 lg:top-0 lg:flex-row lg:bg-transparent lg:shadow-none">
                 <nav
-                  className={`${pageNavClasses} text-charade-600 w-full p-4 lg:order-last lg:ml-3 lg:w-auto lg:p-0`}
+                  className={`${pageNavClasses} w-full p-4 text-charade-600 lg:order-last lg:ml-3 lg:w-auto lg:p-0`}
                 >
                   <SocialNav />
                 </nav>
 
                 <nav
-                  className={`${pageNavClasses} text-charade-600 w-full p-4 lg:w-auto lg:p-0`}
+                  className={`${pageNavClasses} w-full p-4 text-charade-600 lg:w-auto lg:p-0`}
                 >
                   <PageNav />
                 </nav>

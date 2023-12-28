@@ -39,7 +39,7 @@ export default function Archives({ posts }: { posts: Post[] }) {
             </H1>
           </header>
 
-          <p className="mt-6 mb-12 flex flex-wrap text-lg">
+          <p className="mb-12 mt-6 flex flex-wrap text-lg">
             I like to talk about:&nbsp;
             {allTags.map((tag) => (
               <span key={tag}>

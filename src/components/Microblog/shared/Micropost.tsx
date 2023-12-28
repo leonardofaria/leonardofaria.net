@@ -22,7 +22,7 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
 
   return (
     <>
-      <header className="pt-10 pb-6 text-center">
+      <header className="pb-6 pt-10 text-center">
         <small className="mb-4 flex items-center justify-center gap-3 text-center text-sm">
           <time /* eslint-disable-next-line tailwindcss/no-custom-classname */
             className="dt-published text-charade-500"

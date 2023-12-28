@@ -2,7 +2,7 @@ import { writeFileSync } from 'fs';
 
 (async () => {
   const request = await fetch(
-    'https://api.github.com/repos/leonardofaria/leonardofaria.net/commits'
+    'https://api.github.com/repos/leonardofaria/leonardofaria.net/commits',
   );
 
   const commits = await request.json();

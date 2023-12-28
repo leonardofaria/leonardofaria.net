@@ -6,7 +6,7 @@ export const getStaticProps: GetStaticProps<{
   microposts: Micropost[];
 }> = () => {
   const microposts = allMicroposts.sort(
-    (a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+    (a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)),
   );
 
   return { props: { microposts } };

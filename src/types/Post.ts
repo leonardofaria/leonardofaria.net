@@ -64,7 +64,7 @@ export const Post = defineDocumentType(() => ({
               text: content,
               slug: content ? slugger.slug(content) : undefined,
             };
-          }
+          },
         );
 
         return headings;

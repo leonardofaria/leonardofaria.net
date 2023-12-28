@@ -22,7 +22,7 @@ export function PageNav() {
   const router = useRouter();
   const initialTab = pages.find((page) => router.asPath.includes(page.value));
   const [activeTab, setActiveTab] = useState<string | null>(
-    initialTab?.name ?? null
+    initialTab?.name ?? null,
   );
 
   return (

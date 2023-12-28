@@ -40,9 +40,9 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
 
       <Main>
         <Article>
-          <section className="from-charade-50 mt-6 mb-12 flex gap-3 overflow-hidden rounded-lg border bg-gradient-to-b to-white shadow-inner">
+          <section className="mb-12 mt-6 flex gap-3 overflow-hidden rounded-lg border bg-gradient-to-b from-charade-50 to-white shadow-inner">
             <div className="flex grow flex-col gap-6 p-8">
-              <h1 className="text-charade-700 flex items-center text-3xl font-semibold tracking-tighter lg:text-4xl">
+              <h1 className="flex items-center text-3xl font-semibold tracking-tighter text-charade-700 lg:text-4xl">
                 <Image
                   alt="Headshot"
                   /* eslint-disable-next-line tailwindcss/no-custom-classname */
@@ -52,7 +52,7 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
                   width={36}
                 />
                 <span>{WEBSITE_SUBHEADING}</span>{' '}
-                <span className="animate-wiggle ml-2">👋</span>
+                <span className="ml-2 animate-wiggle">👋</span>
               </h1>
 
               <p
@@ -65,7 +65,7 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
               />
             </div>
             <div className="relative hidden max-w-[240px] lg:block">
-              <div className="absolute top-20 left-5 z-0 h-full w-full scale-150 text-orange-100">
+              <div className="absolute left-5 top-20 z-0 h-full w-full scale-150 text-orange-100">
                 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M54.9,-58.2C67.6,-42.1,71.9,-21.1,70.7,-1.2C69.5,18.6,62.7,37.3,50,53.2C37.3,69,18.6,82.1,-2,84.1C-22.6,86,-45.1,76.9,-60.4,61C-75.8,45.1,-83.8,22.6,-81.7,2.1C-79.6,-18.3,-67.3,-36.6,-52,-52.7C-36.6,-68.8,-18.3,-82.6,1.4,-84C21.1,-85.4,42.1,-74.3,54.9,-58.2Z"
@@ -78,7 +78,7 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
                 <Image
                   alt="Headshot"
                   /* eslint-disable-next-line tailwindcss/no-custom-classname */
-                  className="u-photo relative z-10 -top-5 object-cover"
+                  className="u-photo relative -top-5 z-10 object-cover"
                   height={800}
                   src="/images/avatar.webp"
                   width={800}
@@ -93,7 +93,7 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
               <PostsByYear key={key} posts={postsByYears[key]} year={key} />
             ))}
 
-          <section className="mt-12 mb-24 flex justify-center">
+          <section className="mb-24 mt-12 flex justify-center">
             <Link
               className="group inline-flex items-center rounded-full bg-transparent px-4 py-1.5 transition hover:bg-white"
               href="/archives"
@@ -101,7 +101,7 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
               <span>All posts</span>
               <svg
                 aria-hidden="true"
-                className="mt-0.5 ml-2 -mr-1 stroke-black stroke-2"
+                className="-mr-1 ml-2 mt-0.5 stroke-black stroke-2"
                 fill="none"
                 height="10"
                 viewBox="0 0 10 10"

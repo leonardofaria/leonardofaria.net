@@ -39,7 +39,7 @@ function Share({ url, title }: { url: string; title: string }) {
   const buttonClasses = `flex gap-2 items-center rounded-md px-3 py-2 text-xs font-bold text-white no-underline hover:opacity-75 transition`;
 
   return (
-    <div className="mt-4 mb-2 flex flex-wrap items-center gap-3">
+    <div className="mb-2 mt-4 flex flex-wrap items-center gap-3">
       <span>Like this content? </span>
 
       <a

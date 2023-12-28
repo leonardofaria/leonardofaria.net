@@ -73,7 +73,7 @@ async function processMarkdownFiles(files: string[]) {
 async function visitPageAndScreenshot(
   browser: any,
   url: string,
-  ogImagePath: string
+  ogImagePath: string,
 ) {
   try {
     console.log(`  Visiting ${url}`);

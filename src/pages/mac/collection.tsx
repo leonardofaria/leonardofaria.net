@@ -29,7 +29,7 @@ export const getStaticProps: GetStaticProps<{
   iDevices: Idevice[];
 }> = async () => {
   const store = new SteinStore(
-    'https://api.steinhq.com/v1/storages/5d5ca196bb4eaf04c5eaa28a'
+    'https://api.steinhq.com/v1/storages/5d5ca196bb4eaf04c5eaa28a',
   );
 
   const computers: Computer[] = await store.read('Computers');

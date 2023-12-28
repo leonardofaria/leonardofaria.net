@@ -1,7 +1,7 @@
 import { type Post, type Micropost } from 'contentlayer/generated';
 
 export function groupPostsByYears(
-  posts: (Post | Micropost)[]
+  posts: (Post | Micropost)[],
 ): Record<string, (Post | Micropost)[]> {
   const postsByYear = posts.reduce(
     (r: Record<string, (Post | Micropost)[]>, post) => {
@@ -9,13 +9,13 @@ export function groupPostsByYears(
       r[post.year].push(post);
       return r;
     },
-    {}
+    {},
   );
 
   Object.keys(postsByYear).forEach((year) => {
     postsByYear[year] = postsByYear[year].sort(
       (a, b) =>
-        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)),
     );
   });
 

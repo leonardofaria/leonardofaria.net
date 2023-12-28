@@ -32,7 +32,7 @@ export function Cards({ collection }: { collection: Computer[] | Idevice[] }) {
                 <p>{item.hardware}</p>
               </div>
             </div>
-            <div className="from-charade-50 bg-gradient-to-b to-white p-4">
+            <div className="bg-gradient-to-b from-charade-50 to-white p-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <div className="text-sm text-gray-700 md:text-base">

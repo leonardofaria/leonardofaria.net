@@ -48,7 +48,7 @@ export default function Colophon() {
               <p className="text-neutral-500">Dec 2022</p>
             </div>
             <div className="mb-6 ml-4 mt-2">
-              <h3 className="text-amethyst-smoke-800 mb-1.5 text-xl font-semibold">
+              <h3 className="mb-1.5 text-xl font-semibold text-amethyst-smoke-800">
                 Moved to Next.js
               </h3>
               <p className="mb-3  text-lg">
@@ -71,7 +71,7 @@ export default function Colophon() {
               <p className="text-neutral-500">Apr 2020</p>
             </div>
             <div className="mb-6 ml-4 mt-2">
-              <h3 className="text-amethyst-smoke-800 mb-1.5 text-xl font-semibold">
+              <h3 className="mb-1.5 text-xl font-semibold text-amethyst-smoke-800">
                 Moved to Hugo
               </h3>
               <p className="mb-3  text-lg">
@@ -93,7 +93,7 @@ export default function Colophon() {
               <p className="text-neutral-500">Apr 2005</p>
             </div>
             <div className="ml-4 mt-2 pb-5">
-              <h3 className="text-amethyst-smoke-800 mb-1.5 text-xl font-semibold">
+              <h3 className="mb-1.5 text-xl font-semibold text-amethyst-smoke-800">
                 Got this domain
               </h3>
               <p className="mb-3  text-lg">

@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps<{
   micropost: Micropost;
 }> = ({ params }) => {
   const micropost = allMicroposts.find(
-    (m: Micropost) => m.slug === params?.slug
+    (m: Micropost) => m.slug === params?.slug,
   );
 
   if (!micropost) {

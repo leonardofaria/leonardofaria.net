@@ -11,31 +11,31 @@ export function Table({ collection }: { collection: Computer[] | Idevice[] }) {
         <thead>
           <tr className="bg-indigo-800">
             <th
-              className="w-auto border-b py-4 px-6 font-sans text-sm font-bold uppercase tracking-wide text-white"
+              className="w-auto border-b px-6 py-4 font-sans text-sm font-bold uppercase tracking-wide text-white"
               scope="col"
             >
               Photo
             </th>
             <th
-              className="w-auto border-b py-4 px-6 font-sans text-sm font-bold uppercase tracking-wide text-white"
+              className="w-auto border-b px-6 py-4 font-sans text-sm font-bold uppercase tracking-wide text-white"
               scope="col"
             >
               {computerCollection ? 'Computer' : 'iDevice'}
             </th>
             <th
-              className="w-auto border-b py-4 px-6 font-sans text-sm font-bold uppercase tracking-wide text-white"
+              className="w-auto border-b px-6 py-4 font-sans text-sm font-bold uppercase tracking-wide text-white"
               scope="col"
             >
               Bought at
             </th>
             <th
-              className="w-auto border-b py-4 px-6 font-sans text-sm font-bold uppercase tracking-wide text-white"
+              className="w-auto border-b px-6 py-4 font-sans text-sm font-bold uppercase tracking-wide text-white"
               scope="col"
             >
               Hardware
             </th>
             <th
-              className="border-b py-4 px-6 font-sans text-sm font-bold uppercase tracking-wide text-white"
+              className="border-b px-6 py-4 font-sans text-sm font-bold uppercase tracking-wide text-white"
               scope="col"
             >
               Notes
@@ -57,7 +57,7 @@ export function Table({ collection }: { collection: Computer[] | Idevice[] }) {
                   width={640}
                 />
               </td>
-              <td className="w-32 border-b py-4 px-6">
+              <td className="w-32 border-b px-6 py-4">
                 <a
                   className="text-blue-600 underline"
                   href={item.reference}
@@ -67,9 +67,9 @@ export function Table({ collection }: { collection: Computer[] | Idevice[] }) {
                   {'device' in item && item.device}
                 </a>
               </td>
-              <td className="w-16 border-b py-4 px-6">{item.bought_at}</td>
-              <td className="w-40 border-b py-4 px-6">{item.hardware}</td>
-              <td className="w-48 border-b py-4 px-6">{item.notes}</td>
+              <td className="w-16 border-b px-6 py-4">{item.bought_at}</td>
+              <td className="w-40 border-b px-6 py-4">{item.hardware}</td>
+              <td className="w-48 border-b px-6 py-4">{item.notes}</td>
             </tr>
           ))}
         </tbody>

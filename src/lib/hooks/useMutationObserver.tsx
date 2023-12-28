@@ -10,7 +10,7 @@ interface Props {
 }
 
 function getRefElement<T>(
-  element?: RefObject<Element> | T
+  element?: RefObject<Element> | T,
 ): Element | T | undefined | null {
   // @ts-ignore
   if (element && 'current' in element) {
@@ -27,10 +27,11 @@ export const useMutationObserver = ({
 }: Props): void => {
   const observer = useMemo(
     () =>
-      new MutationObserver((mutationRecord, mutationObserver) =>
-        callback?.(mutationRecord, mutationObserver)
+      new MutationObserver(
+        (mutationRecord, mutationObserver) =>
+          callback?.(mutationRecord, mutationObserver),
       ),
-    [callback]
+    [callback],
   );
 
   useEffect(() => {
