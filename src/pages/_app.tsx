@@ -6,7 +6,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { DefaultSeo } from 'next-seo';
 import { ParallaxProvider } from 'react-scroll-parallax';
 /* eslint-disable-next-line camelcase */
-import { Inter, Fira_Code } from '@next/font/google';
+import { Inter, Fira_Code } from 'next/font/google';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
 import AOS from 'aos';

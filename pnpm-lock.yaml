@@ -14,9 +14,6 @@ dependencies:
   '@codesandbox/sandpack-themes':
     specifier: ^1.19.0
     version: 1.19.0
-  '@next/font':
-    specifier: ^13.1.1
-    version: 13.5.6
   '@sentry/nextjs':
     specifier: ^7.91.0
     version: 7.91.0(next@14.0.4)(react@18.2.0)
@@ -1017,10 +1014,6 @@ packages:
     dependencies:
       glob: 7.1.7
     dev: true
-
-  /@next/font@13.5.6:
-    resolution: {integrity: sha512-urmUq05uCVJsBqAAJEV+xK5OTTodrSxdiG+351SOSjlWctywdBM6qX+K9pIe3K48RxjfnxlBbXjGyOJAji+pfw==}
-    dev: false
 
   /@next/swc-darwin-arm64@14.0.4:
     resolution: {integrity: sha512-mF05E/5uPthWzyYDyptcwHptucf/jj09i2SXBPwNzbgBNc+XnwzrL0U6BmPjQeOL+FiB+iG1gwBeq7mlDjSRPg==}
