@@ -2,8 +2,7 @@ import { type Post, type Micropost } from 'contentlayer/generated';
 import Image from 'next/image';
 import { NextSeo } from 'next-seo';
 import { Parallax } from 'react-scroll-parallax';
-import Link from 'next/link';
-import { Header, Footer, Article, Main } from '../UI';
+import { Header, Footer, Article, Main, CtaLink } from '../UI';
 import {
   BASE_URL,
   WEBSITE_DESCRIPTION,
@@ -94,29 +93,7 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
             ))}
 
           <section className="mb-24 mt-12 flex justify-center">
-            <Link
-              className="group inline-flex items-center rounded-full bg-transparent px-4 py-1.5 transition hover:bg-white"
-              href="/archives"
-            >
-              <span>All posts</span>
-              <svg
-                aria-hidden="true"
-                className="-mr-1 ml-2 mt-0.5 stroke-black stroke-2"
-                fill="none"
-                height="10"
-                viewBox="0 0 10 10"
-                width="10"
-              >
-                <path
-                  className="opacity-0 transition group-hover:opacity-100"
-                  d="M0 5h7"
-                />
-                <path
-                  className="transition group-hover:translate-x-[3px]"
-                  d="M1 1l4 4-4 4"
-                />
-              </svg>
-            </Link>
+            <CtaLink href="/archives">All posts</CtaLink>
           </section>
         </Article>
       </Main>
