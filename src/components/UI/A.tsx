@@ -3,16 +3,93 @@ import {
   AiOutlineTwitter,
   AiFillInstagram,
 } from 'react-icons/ai';
-import { FaYoutube } from 'react-icons/fa';
+import { FaYoutube, FaMeetup } from 'react-icons/fa';
+import { BsFileEarmarkSlides } from 'react-icons/bs';
 import { PiGoodreadsLogoFill } from 'react-icons/pi';
 import { ImNpm } from 'react-icons/im';
 import { SiEslint, SiSubstack, SiWikipedia } from 'react-icons/si';
 
 import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 
+// const ICONS = [
+//   {
+//     domain: 'eslint.org',
+//     component: SiEslint,
+//     color: '#4B32C3',
+//   },
+//   {
+//     domain: 'github.com',
+//     component: AiOutlineGithub,
+//     color: '#333333',
+//   },
+//   {
+//     domain: 'goodreads.com',
+//     component: PiGoodreadsLogoFill,
+//     color: '#553b08',
+//   },
+//   {
+//     domain: 'instagram.com',
+//     component: AiFillInstagram,
+//     color: '#c13584',
+//   },
+//   {
+//     domain: 'icloud.com/keynote',
+//     component: BsFileEarmarkSlides,
+//     color: '#636466',
+//   },
+//   {
+//     domain: 'meetup.com',
+//     component: FaMeetup,
+//     color: '#ed1c40',
+//   },
+//   {
+//     domain: 'npmjs.com',
+//     component: ImNpm,
+//     color: '#cb3837',
+//   },
+//   {
+//     domain: 'substack.com',
+//     component: SiSubstack,
+//     color: '#FF6719',
+//   },
+//   {
+//     domain: 'youtube.com',
+//     component: FaYoutube,
+//     color: '#c4302b',
+//   },
+//   {
+//     domain: 'youtu.be',
+//     component: FaYoutube,
+//     color: '#c4302b',
+//   },
+//   {
+//     domain: 'twitter.com',
+//     component: AiOutlineTwitter,
+//     color: '#1da1f2',
+//   },
+//   {
+//     domain: 'wikipedia.com',
+//     component: SiWikipedia,
+//     color: '#636466',
+//   },
+// ];
+
+// TODO: this needs to be generated from the above but it is not working
+// right now since the text-color classes are created dynamically
 function getIcon(href: string) {
-  // TODO: maybe use favicon instead
   const iconClasses = 'mx-1 mt-[-4px] inline-block';
+
+  // eslint-disable-next-line no-restricted-syntax
+  // for (const { domain, component: Component, color } of ICONS) {
+  //   if (href.includes(domain)) {
+  //     return (
+  //       <Component
+  //         // eslint-disable-next-line tailwindcss/no-custom-classname
+  //         className={`${iconClasses} text-[${color}]`}
+  //       />
+  //     );
+  //   }
+  // }
 
   if (href.includes('eslint.org')) {
     return (
@@ -38,10 +115,26 @@ function getIcon(href: string) {
     );
   }
 
+  if (href.includes('icloud.com/keynote')) {
+    return (
+      <BsFileEarmarkSlides
+        className={`${iconClasses} text-[#636466] hover:text-[#636466]`}
+      />
+    );
+  }
+
   if (href.includes('instagram.com')) {
     return (
       <AiFillInstagram
         className={`${iconClasses} text-[#c13584] hover:text-[#c13584]`}
+      />
+    );
+  }
+
+  if (href.includes('meetup.com')) {
+    return (
+      <FaMeetup
+        className={`${iconClasses} text-[#ed1c40] hover:text-[#ed1c40]`}
       />
     );
   }
@@ -61,6 +154,14 @@ function getIcon(href: string) {
   }
 
   if (href.includes('youtube.com')) {
+    return (
+      <FaYoutube
+        className={`${iconClasses} text-[#c4302b] hover:text-[#c4302b]`}
+      />
+    );
+  }
+
+  if (href.includes('youtu.be')) {
     return (
       <FaYoutube
         className={`${iconClasses} text-[#c4302b] hover:text-[#c4302b]`}
