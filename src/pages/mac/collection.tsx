@@ -3,6 +3,7 @@ import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
 import SteinStore from 'stein-js-client';
 import { Computer, Idevice } from 'src/lib/types';
 import { Collection } from 'src/components/Mac/Collection/Collection';
+import { WEBSITE_TITLE } from '../../lib/constants';
 
 export default function Page({
   iDevices,
@@ -11,12 +12,12 @@ export default function Page({
   return (
     <>
       <NextSeo
-        description="Mac Collection"
+        description={`Mac Collection · ${WEBSITE_TITLE}`}
         openGraph={{
           title: 'Leonardo Faria',
-          description: 'Mac Collection',
+          description: `Mac Collection · ${WEBSITE_TITLE}`,
         }}
-        title="Mac Collection"
+        title={`Mac Collection · ${WEBSITE_TITLE}`}
       />
 
       <Collection computers={computers} iDevices={iDevices} />
