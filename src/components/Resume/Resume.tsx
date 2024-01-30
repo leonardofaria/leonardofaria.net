@@ -1,12 +1,13 @@
+// Ready to print in Chrome Canary
 export default function Resume() {
   return (
     <div className="mx-auto my-8 max-w-[800px] text-gray-700 print:my-0 print:max-w-full">
       <header className="flex flex-wrap">
-        <aside className="print:w-1/4 sm:w-1/4">
-          <h1 className="m-0 text-4xl text-gray-500">Leonardo Faria</h1>
+        <aside className="print:w-2/12 sm:w-2/12">
+          <h1 className="m-0 text-3xl text-gray-500">Leonardo Faria</h1>
         </aside>
 
-        <div className="pb-5 text-sm print:w-3/4 sm:w-3/4 sm:px-2">
+        <div className="pb-5 text-sm print:w-10/12 sm:w-10/12 sm:px-2">
           <p className="mb-5 text-right">
             <a
               className="text-blue-500 underline"
@@ -23,33 +24,28 @@ export default function Resume() {
             </a>
           </p>
 
-          <p className="mb-3 text-lg">
-            15+ years of experience in design, architecture, development, and
-            delivery of SaaS products and websites
-          </p>
-
           <p className="mb-3 text-base">
-            Seeking engineering roles in a product-driven organization. With my
-            work, I bring creative and customer-focused solutions with attention
-            to detail and a pragmatic approach. Previously in a manager path, I
-            have experience delivering work that matters for customers and
-            growing products and people
+            Software engineer with broad experience designing, architecturing,
+            and developing websites and SaaS products. Growth-minded
+            technologist passionate about building 0 to 1 products through
+            thoughtful stakeholder engagements, deep technical expertise, and an
+            eye for scaling processes and people.
           </p>
 
-          <p className="text-sm">
-            <span className="font-semibold">Interests:</span> Front-end,
+          <p className="mb-3 text-sm">
+            <span className="font-semibold">Core competencies:</span> Front-end,
             technical leadership, architecture, mentorship, Continuous
-            Integration, Design System, Developer Experience
+            Integration, Design System, accessibility, Developer Experience
           </p>
         </div>
       </header>
 
       <div className="flex flex-wrap">
-        <aside className="shrink-0 py-6 print:w-1/4 sm:w-1/4">
-          <h2 className="text-2xl text-gray-500">Experience</h2>
+        <aside className="shrink-0 py-6 print:w-2/12 sm:w-2/12">
+          <h2 className="text-xl text-gray-500">Experience</h2>
         </aside>
 
-        <section className="w-full border-t border-gray-400 py-6 text-sm print:w-3/4 sm:w-3/4">
+        <section className="w-full border-t border-gray-400 py-6 text-sm print:w-10/12 sm:w-10/12">
           <div className="mb-6 sm:px-2">
             <div className="flex items-center justify-between">
               <h3 className="text-base font-semibold text-gray-500">Lattice</h3>
@@ -62,15 +58,22 @@ export default function Resume() {
 
             <ul className="mt-2 list-disc pl-3">
               <li>
-                Led projects in a new 0 to 1 company initiative with TypeScript
-                and React
+                Worked on different 0 to 1 projects from a new company
+                initiative with TypeScript and React, iterating and adapting the
+                product according to requirements/customer needs
               </li>
               <li>
                 Improved testing by creating documentation, guidelines and
                 building a CI tool to track test coverage across different teams
               </li>
-              <li>Improved developer experience tools and documentation</li>
-              <li>Advocated for accessibility by leveraging automated tests</li>
+              <li>
+                Enhanced developer experience tools and documentation, making
+                engineers more productive
+              </li>
+              <li>
+                Advocated for accessibility by leveraging automated tests to
+                create a product usable for all customers
+              </li>
             </ul>
           </div>
 
@@ -204,7 +207,7 @@ export default function Resume() {
             </ul>
           </div>
 
-          <div className="my-6 sm:px-2">
+          <div className="mt-6 sm:px-2">
             <div>
               <div className="flex items-center justify-between">
                 <h3 className="text-base font-semibold text-gray-500">
@@ -234,46 +237,16 @@ export default function Resume() {
               </li>
             </ul>
           </div>
-
-          <div className="mt-6 sm:px-2">
-            <div>
-              <div className="flex items-center justify-between">
-                <h3 className="text-base font-semibold text-gray-500">
-                  Freelance
-                </h3>
-                <small>Brazil</small>
-              </div>
-              <div className="mb-2 flex items-center justify-between">
-                <b className="font-semibold">Full Stack Developer</b>
-                <small className="shrink-0">2006 — 2015</small>
-              </div>
-            </div>
-
-            <ul className="list-disc pl-3">
-              <li>
-                Built custom-made Ruby on Rails applications for B2B (fast
-                fashion companies)
-              </li>
-              <li>
-                Created WordPress websites for 10+ clients partnering with a
-                designer and using PHP & jQuery
-              </li>
-              <li>
-                Built &quot;Writing for IELTS and TOEFL&quot; (app for
-                iOS/Android) using Ionic
-              </li>
-            </ul>
-          </div>
         </section>
       </div>
 
       <div className="flex flex-wrap">
-        <aside className="shrink-0 py-6 print:w-1/4 sm:w-1/4">
-          <h2 className="text-2xl text-gray-500">Education</h2>
+        <aside className="shrink-0 py-6 print:w-2/12 sm:w-2/12">
+          <h2 className="text-xl text-gray-500">Education</h2>
         </aside>
 
-        <section className="w-full border-t border-gray-400 py-6 text-sm print:w-3/4 sm:w-3/4">
-          <div className="mb-6 hidden sm:px-2">
+        <section className="w-full border-t border-gray-400 py-6 text-sm print:w-10/12 sm:w-10/12">
+          <div className="mb-6 sm:px-2">
             <div>
               <div className="flex items-center justify-between">
                 <h3 className="text-base font-semibold text-gray-500">
@@ -323,11 +296,11 @@ export default function Resume() {
       </div>
 
       <div className="flex flex-wrap">
-        <aside className="shrink-0 py-6 print:w-1/4 sm:w-1/4">
-          <h2 className="text-2xl text-gray-500">Other</h2>
+        <aside className="shrink-0 py-6 print:w-2/12 sm:w-2/12">
+          <h2 className="text-xl text-gray-500">Other</h2>
         </aside>
 
-        <section className="w-full border-t border-gray-400 py-6 text-sm print:w-3/4 sm:w-3/4">
+        <section className="w-full border-t border-gray-400 py-6 text-sm print:w-10/12 sm:w-10/12">
           <div className="mb-6 sm:px-2">
             <div>
               <div className="flex items-center justify-between">
@@ -338,15 +311,15 @@ export default function Resume() {
               </div>
               <div className="flex items-center justify-between">
                 <span>
-                  Instructed workshops including HTML & CSS for Beginners and
-                  WordPress for Beginners as a volunteer
+                  Instructed HTML & CSS for Beginners and WordPress for
+                  Beginners as a volunteer
                 </span>
                 <small className="ml-3 shrink-0">2017 — 2019</small>
               </div>
             </div>
           </div>
 
-          <div className="my-6 sm:px-2">
+          <div className="mt-6 sm:px-2">
             <div>
               <div className="flex items-center justify-between">
                 <h3 className="text-base font-semibold text-gray-500">
@@ -364,9 +337,47 @@ export default function Resume() {
                     https://leonardofaria.net/talks
                   </a>
                 </span>
-                <small className="shrink-0">2015 — 2019</small>
+                <small className="shrink-0">2015 — Present</small>
               </div>
             </div>
+          </div>
+        </section>
+      </div>
+
+      <div className="flex flex-wrap">
+        <aside className="shrink-0 py-6 print:w-2/12 sm:w-2/12">
+          <h2 className="text-xl text-gray-500">Technical Skills</h2>
+        </aside>
+
+        <section className="w-full border-t border-gray-400 py-6 text-sm print:w-10/12 sm:w-10/12">
+          <div className="mb-6 sm:px-2">
+            <ul className="list-disc pl-3">
+              <li>
+                <span className="font-semibold text-gray-500">Front end:</span>{' '}
+                React, TypeScript, Next.js, Chakra UI, Tailwind CSS, Ember.js,
+                Storybook, axe, Jest
+              </li>
+              <li>
+                <span className="font-semibold text-gray-500">Back end:</span>{' '}
+                Node.js, Ruby on Rails, PHP, Posgres, MySQL
+              </li>
+              <li>
+                <span className="font-semibold text-gray-500">
+                  Other Technologies:
+                </span>{' '}
+                Lighthouse, Supabase, graphQL, REST, WordPress
+              </li>
+              <li>
+                <span className="font-semibold text-gray-500">Tools:</span>{' '}
+                Figma, GitHub, GitHub Actions, Circle CI, Datadog, Grafana
+              </li>
+              <li>
+                <span className="font-semibold text-gray-500">
+                  Infrastructure:
+                </span>{' '}
+                AWS, Vercel, Netlify, Fastly
+              </li>
+            </ul>
           </div>
         </section>
       </div>
