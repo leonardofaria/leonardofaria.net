@@ -25,11 +25,11 @@ export default function Resume() {
           </p>
 
           <p className="mb-3 text-base">
-            Software engineer with broad experience designing, architecturing,
-            and developing websites and SaaS products. Growth-minded
-            technologist passionate about building 0 to 1 products through
-            thoughtful stakeholder engagements, deep technical expertise, and an
-            eye for scaling processes and people.
+            Software engineer with broad experience designing, architecting, and
+            developing websites and SaaS products. Growth-minded and passionate
+            about building 0 to 1 products through thoughtful stakeholder
+            engagements, deep technical expertise, and an eye for scaling
+            processes and people.
           </p>
 
           <p className="mb-3 text-sm">
