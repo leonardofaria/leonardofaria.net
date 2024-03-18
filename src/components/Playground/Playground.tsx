@@ -15,6 +15,7 @@ export function Playground({
   wrapperClassNames = FULL_WIDTH_WRAPPER,
   files,
   options,
+  showTabs = true,
   showConsole = false,
   showPreview = true,
   template = 'react-ts',
@@ -22,6 +23,7 @@ export function Playground({
   wrapperClassNames?: string;
   files: any;
   options?: SandpackProviderProps;
+  showTabs?: boolean;
   showConsole?: boolean;
   showPreview?: boolean;
   template?: SandpackPredefinedTemplate;
@@ -34,9 +36,11 @@ export function Playground({
         template={template}
         theme={githubLight}
       >
-        <header className="border-b border-charade-200">
-          <CustomTabs />
-        </header>
+        {showTabs && (
+          <header className="border-b border-charade-200">
+            <CustomTabs />
+          </header>
+        )}
         <SandpackLayout>
           <SandpackCodeEditor showTabs={false} showLineNumbers />
           {showPreview && (
