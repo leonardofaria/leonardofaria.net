@@ -107,7 +107,7 @@ async function launchBrowser() {
     ? await chromium.executablePath(
         `https://github.com/Sparticuz/chromium/releases/download/v119.0.2/chromium-v119.0.2-pack.tar`,
       )
-    : '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+    : '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary';
 
   const options = {
     executablePath,
