@@ -1,0 +1,148 @@
+---
+title: Poof
+publishedAt: 2024-03-30T12:00:00-08:00
+template: post
+type: Micropost
+ogImage: /images/og-images/poof.png
+tags: 
+  - javascript
+  - css
+---
+
+No body: ...<br/>
+Me: remember that poof animation from the Mac OS dock? 
+
+<Playground template="vanilla" files={
+{
+    'index.html': {code: `<div class="poof"></div>`},
+
+    'index.js': { hidden: true, code: `import "../styles.css";
+
+setInterval(() => {
+    document.body.innerHTML = '<div class="poof"></div>';
+  }, 1000);` },
+
+    'styles.css': { active: true, code: `.poof {
+  width: 128px;
+  height: 128px;
+  opacity: 0.6;
+  background-image: url('https://i.imgur.com/W1nerWk.png');
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  animation: poof ease-out 300ms, fade 600ms ease-out 200ms forwards;
+}
+
+@keyframes poof {
+  0% { background-position: 0 -512px; }
+  1% { background-position: 0 -512px; }
+  2% { background-position: 0 -512px; }
+  3% { background-position: 0 -512px; }
+  4% { background-position: 0 -512px; }
+  5% { background-position: 0 -512px; }
+  6% { background-position: 0 -512px; }
+  7% { background-position: 0 -512px; }
+  8% { background-position: 0 -512px; }
+  9% { background-position: 0 -512px; }
+  10% { background-position: 0 -512px; }
+  11% { background-position: 0 -512px; }
+  12% { background-position: 0 -512px; }
+  13% { background-position: 0 -512px; }
+  14% { background-position: 0 -512px; }
+  15% { background-position: 0 -512px; }
+  16% { background-position: 0 -512px; }
+  17% { background-position: 0 -512px; }
+  18% { background-position: 0 -512px; }
+  19% { background-position: 0 -512px; }
+  20% { background-position: 0 -384px; }
+  21% { background-position: 0 -384px; }
+  22% { background-position: 0 -384px; }
+  23% { background-position: 0 -384px; }
+  24% { background-position: 0 -384px; }
+  25% { background-position: 0 -384px; }
+  26% { background-position: 0 -384px; }
+  27% { background-position: 0 -384px; }
+  28% { background-position: 0 -384px; }
+  29% { background-position: 0 -384px; }
+  30% { background-position: 0 -384px; }
+  31% { background-position: 0 -384px; }
+  32% { background-position: 0 -384px; }
+  33% { background-position: 0 -384px; }
+  34% { background-position: 0 -384px; }
+  35% { background-position: 0 -384px; }
+  36% { background-position: 0 -384px; }
+  37% { background-position: 0 -384px; }
+  38% { background-position: 0 -384px; }
+  39% { background-position: 0 -384px; }
+  40% { background-position: 0 -256px; }
+  41% { background-position: 0 -256px; }
+  42% { background-position: 0 -256px; }
+  43% { background-position: 0 -256px; }
+  44% { background-position: 0 -256px; }
+  45% { background-position: 0 -256px; }
+  46% { background-position: 0 -256px; }
+  47% { background-position: 0 -256px; }
+  48% { background-position: 0 -256px; }
+  49% { background-position: 0 -256px; }
+  50% { background-position: 0 -256px; }
+  51% { background-position: 0 -256px; }
+  52% { background-position: 0 -256px; }
+  53% { background-position: 0 -256px; }
+  54% { background-position: 0 -256px; }
+  55% { background-position: 0 -256px; }
+  56% { background-position: 0 -256px; }
+  57% { background-position: 0 -256px; }
+  58% { background-position: 0 -256px; }
+  59% { background-position: 0 -256px; }
+  60% { background-position: 0 -128px; }
+  61% { background-position: 0 -128px; }
+  62% { background-position: 0 -128px; }
+  63% { background-position: 0 -128px; }
+  64% { background-position: 0 -128px; }
+  65% { background-position: 0 -128px; }
+  66% { background-position: 0 -128px; }
+  67% { background-position: 0 -128px; }
+  68% { background-position: 0 -128px; }
+  69% { background-position: 0 -128px; }
+  70% { background-position: 0 -128px; }
+  71% { background-position: 0 -128px; }
+  72% { background-position: 0 -128px; }
+  73% { background-position: 0 -128px; }
+  74% { background-position: 0 -128px; }
+  75% { background-position: 0 -128px; }
+  76% { background-position: 0 -128px; }
+  77% { background-position: 0 -128px; }
+  78% { background-position: 0 -128px; }
+  79% { background-position: 0 -128px; }
+  80% { background-position: 0 0; }
+  81% { background-position: 0 0; }
+  82% { background-position: 0 0; }
+  83% { background-position: 0 0; }
+  84% { background-position: 0 0; }
+  85% { background-position: 0 0; }
+  86% { background-position: 0 0; }
+  87% { background-position: 0 0; }
+  88% { background-position: 0 0; }
+  89% { background-position: 0 0; }
+  90% { background-position: 0 0; }
+  91% { background-position: 0 0; }
+  92% { background-position: 0 0; }
+  93% { background-position: 0 0; }
+  94% { background-position: 0 0; }
+  95% { background-position: 0 0; }
+  96% { background-position: 0 0; }
+  97% { background-position: 0 0; }
+  98% { background-position: 0 0; }
+  99% { background-position: 0 0; }
+  100% { background-position: 0 0; }  
+}
+
+@keyframes fade {
+  from { opacity: 0.6; }
+  to { opacity: 0; }
+}
+`},
+  }
+} />
+
+<br/>
+This animation would be great in a list of tags with a delete button. The delete button would trigger the animation and remove the item from the DOM. <A href="https://codepen.io/leonardofaria/pen/abyNOqO">My pen in Codepen</A>
