@@ -13,10 +13,6 @@ export const LARGE_SCREEN_BREAKPOINT = 1024;
 
 export const SOCIAL_LINKS = [
   {
-    name: 'Mastodon',
-    url: 'https://indieweb.social/@leonardo',
-  },
-  {
     name: 'Twitter',
     url: 'https://twitter.com/leozera',
   },
@@ -38,5 +34,5 @@ export const SOCIAL_LINKS = [
   },
 ];
 
-export const UMAMI_URL = 'https://umami.leonardofaria.net/umami.js';
+export const UMAMI_URL = 'https://umami.leonardofaria.net/script.js';
 export const UMAMI_SITEID = 'ef25ee64-202b-4378-822f-22398533a59c';
