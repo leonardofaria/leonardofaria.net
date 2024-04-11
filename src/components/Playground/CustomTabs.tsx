@@ -5,7 +5,7 @@ export default function CustomTabs() {
   const { visibleFiles, activeFile, setActiveFile } = sandpack;
 
   return (
-    <nav className="-mb-px flex space-x-6">
+    <nav className="-mb-px flex space-x-6 overflow-y-scroll">
       {visibleFiles.map((name) => (
         <button
           className={`group inline-flex items-center border-b-2 border-transparent px-1 py-2 text-sm font-medium transition duration-300 ease-in-out hover:border-gray-300 hover:text-gray-700 ${
