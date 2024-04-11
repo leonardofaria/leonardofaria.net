@@ -1,0 +1,133 @@
+---
+id: 2241
+title: Tracking Test Coverage over time
+publishedAt: 2024-04-11:08:00:00-07:00
+type: Post
+ogImage: /images/og-images/2241.png
+permalink: /2024/04/11/tracking-test-coverage-over-time
+categories:
+  - javascript
+  - ci
+tags:
+  - javascript
+  - ci
+---
+
+Writing tests is important because it helps ensure that individual parts of your code work as intended, both initially and after modifications. Part of testing best practices is ensure that you have coverage, but how do you keep track of that over time? You can use Code Climate, Codecov and others but today I will share how to build something from scratch.
+
+You might be asking yourself why building vs buying?
+
+- Cost: these tools usually charge per user and companies are avoiding paying for tools unless considered essential. That means space for creative solutions;
+- Customization: a tailor-made CLI can integrate better with your CI and you might want to organize tracking per team or domain. If you are working in a monolith, without custom development is quite difficult to map which feature belongs to whom.
+
+With that in mind, I have a <A href="https://github.com/leonardofaria/test-coverage-tracker-example">small codebase</A> that I will use as an example for this post. This codebase contains 2 folders: `utils` has `array.js` and `string.js` and `math` contains `calculator.js`. These 3 files have simple functions that may/may not have tests, as you can see below:
+
+<Playground template="test-ts" showPreview={false} showTests={true} showTabs={true} files={{
+'/add.test.ts': '',
+
+'array.js': `export const square = (items) => items.map((item) => item * item);
+
+export const cube = (items) => items.map((item) => item * item * item);
+`,
+'array.test.js': `import { square } from './array';
+
+test('reverse', () => {
+  expect(square([2, 3, 4])).toEqual([4, 9, 16]);
+});
+`,
+'string.js': `export const reverse = (input) => input.split("").reverse().join("");`,
+'string.test.js': `import { reverse } from './string';
+
+test('reverse', () => {
+  expect(reverse('tacocat')).toEqual('tacocat');
+});
+`,
+'calculator.js': `export const divide = (numerator, denominator) => {
+  if (denominator === 0) {
+    throw new Error('Division by zero is not allowed');
+  }
+
+  return numerator / denominator;
+}`,
+'calculator.test.js': `import { divide } from './calculator';
+
+test('calculator', () => {
+  expect(divide(4, 2)).toEqual(2);
+});`,
+'package.json': `{
+  "type": "module",
+	"dependencies": {},
+	"devDependencies": {
+		"typescript": "^4.0.0"
+	},
+	"main": "/array.js"
+}
+`
+}} 
+
+options={{
+  activeFile: "array.js",
+  visibleFiles: ["array.js", "array.test.js", "string.js", "string.test.js", "calculator.js", "calculator.test.js"]
+}}
+/>
+
+A [JSON file](/pub/test-coverage-tracker-example-coverage/coverage-final.json) and the HTML report below are generated when running `jest` with the `--coverage` option:
+
+<div className="full-width">
+  <iframe
+     src="/pub/test-coverage-tracker-example-coverage/lcov-report/index.html"
+     className="w-full min-h-[360px] bg-white" loading="lazy"
+   ></iframe>
+</div>
+
+The [HTML report](/pub/test-coverage-tracker-example-coverage/lcov-report/index.html) is useful because it details exactly what is and what is not covered by tests. It also generates statistics in 4 different ways:
+
+- Statements: individual lines of code, ex: `const x = 1`;
+- Branches: decision paths within conditional statements, ex: `if (x > 0) { ... } else { ... }`
+- Functions: named blocks of code, ex: `function add(a, b) { return a + b }`
+- Lines: all lines of code, including comments and blank lines. This is not helpful
+
+The [JSON report](/pub/test-coverage-tracker-example-coverage/coverage-final.json) is the source of information we want to use in the CLI. When researching the topic, I found an old project called <A href="https://github.com/godaddy-wordpress/circleci-coverage-github-reporter">circleci-coverage-github-reporter</A>. By using <A href="https://www.npmjs.com/package/istanbul-lib-coverage">istanbul-lib-coverage</A> and <A href="https://www.npmjs.com/package/istanbul-lib-report">istanbul-lib-report</A>, this CLI parses the `coverage-final.json` file, loops through its content and renders a friendly list of files, their coverage, and emojis. The coverage number takes in consideration statements and branches in a weighted way: `coverage = statements * 0.75 + branches * 0.25`.
+
+For this post, I quickly cleaned up / updated the <A href="https://github.com/leonardofaria/test-coverage-tracker-example/blob/main/track.js">code</A> from the open-source project mentioned above and this is the output of the track script:
+
+> <h2 className="font-semibold text-2xl"><A href="/pub/test-coverage-tracker-example-coverage/lcov-report/index.html">Code Coverage</A>:   68.75% 💛</h2>
+> 
+> <pre>
+> <A href="/pub/test-coverage-tracker-example-coverage/lcov-report/lib/index.html">src/lib/       </A>    75.00% 💛
+> <A href="/pub/test-coverage-tracker-example-coverage/lcov-report/lib/array.js.html">  array.js     </A>    66.67% 💛
+> <A href="/pub/test-coverage-tracker-example-coverage/lcov-report/lib/string.js.html">  string.js    </A>   100.00% ✅
+> <A href="/pub/test-coverage-tracker-example-coverage/lcov-report/math/index.html">src/math/      </A>    68.75% 💛
+> <A href="/pub/test-coverage-tracker-example-coverage/lcov-report/math/calculator.js.html">  calculator.js</A>    68.75% 💛
+> </pre>
+
+## What is next?
+
+The data mentioned above can be shared in different ways:
+
+### Pull Request comments
+
+This is something often seen in third-party tools like Codecov:
+
+![Codecov screenshot](/wp-content/uploads/2024/04/codecov-pr-comment.png)
+
+A similar result can be achieved by running the script in CI and posting a comment in a Pull Request. I previously used the <A href="https://github.com/peter-evans/create-or-update-comment">Create or Update comment</A> GitHub action for this use case.
+
+A few extra tips:
+
+- Leverage git comments to identify which files are being modified in the PR, then run the script. This will avoid spamming PRs that touch files not related to JS/TS code.
+- Define what needs to be tracked: create a data structure mapping what needs to be tracked and who is responsible for it, for example, Team A is responsible for the folder `lib` and Team B is responsible for the folder `math`. By doing this you can create a healthy competition to see who has the highest test coverage ;)
+
+### Slack messages
+
+Instead of posting in a pull request, the formatted information of the test coverage can be posted in Slack (or any other messaging app). This is something I haven't done before but it is straightforward to build. 
+
+### Long term storage
+
+The final numbers - aggregated by folder or team - can also be stored for future reference. For this use case, consider using a time series database like Prometheus or a tool like Datadog. Another option is tracking this in a relational database. 
+
+In both cases, the information can be shown in dashboards in a very informative way. I previously used Datadog and created dashboards organized by teams and this tool also offers alarms, which can be triggered, for example, if the overall coverage is below a specific number.
+
+## Conclusion
+
+The end of Zero Interest Rate Policy (ZIRP) impacted companies in different ways, including decisions regarding buy x build solutions. In this post, I showed that building something from zero is not impossible and within hours, you can highlight test coverage numbers in different ways.

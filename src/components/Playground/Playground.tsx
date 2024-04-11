@@ -3,6 +3,7 @@ import {
   SandpackProvider,
   SandpackCodeEditor,
   SandpackConsole,
+  SandpackTests,
   SandpackLayout,
   SandpackProviderProps,
   SandpackPredefinedTemplate,
@@ -18,6 +19,7 @@ export function Playground({
   showTabs = true,
   showConsole = false,
   showPreview = true,
+  showTests = false,
   template = 'react-ts',
 }: {
   wrapperClassNames?: string;
@@ -26,6 +28,7 @@ export function Playground({
   showTabs?: boolean;
   showConsole?: boolean;
   showPreview?: boolean;
+  showTests?: boolean;
   template?: SandpackPredefinedTemplate;
 }) {
   return (
@@ -46,6 +49,7 @@ export function Playground({
           {showPreview && (
             <SandpackPreview showRefreshButton={false} showOpenInCodeSandbox />
           )}
+          {showTests && <SandpackTests />}
           {showConsole && <SandpackConsole />}
         </SandpackLayout>
       </SandpackProvider>
