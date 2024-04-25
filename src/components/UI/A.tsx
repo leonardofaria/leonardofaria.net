@@ -7,7 +7,7 @@ import { FaYoutube, FaMeetup } from 'react-icons/fa';
 import { BsFileEarmarkSlides } from 'react-icons/bs';
 import { PiGoodreadsLogoFill } from 'react-icons/pi';
 import { ImNpm } from 'react-icons/im';
-import { SiEslint, SiSubstack, SiWikipedia } from 'react-icons/si';
+import { SiNextdotjs, SiEslint, SiSubstack, SiWikipedia } from 'react-icons/si';
 
 import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 
@@ -135,6 +135,14 @@ function getIcon(href: string) {
     return (
       <FaMeetup
         className={`${iconClasses} text-[#ed1c40] hover:text-[#ed1c40]`}
+      />
+    );
+  }
+
+  if (href.includes('nextjs.org')) {
+    return (
+      <SiNextdotjs
+        className={`${iconClasses} text-[#333333] hover:text-[#333333]`}
       />
     );
   }

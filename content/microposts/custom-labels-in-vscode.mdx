@@ -1,0 +1,39 @@
+---
+title: Custom labels in VS Code
+publishedAt: 2024-04-25T10:00:00-08:00
+template: post
+type: Micropost
+ogImage: /images/og-images/custom-labels-in-vscode.png
+tags: 
+  - vscode
+  - nextjs
+---
+
+When <A href="https://nextjs.org/docs/app">App Router</A> was released in Next.js I was not a big fan of the file structure. I thought that having multiple `page.tsx`, `layout.tsx` files make things a bit confusing in the code editor.
+
+In [March 2024's release](https://code.visualstudio.com/updates/v1_88#_custom-labels-for-open-editors), VS Code included a feature that helps labeling the files currently opened in the editor. Here is my customization:
+
+![VS Code tabs](/wp-content/uploads/2024/04/vscode-tabs.jpg)
+
+```json
+"workbench.editor.customLabels.patterns": {
+  "**/app/**/page.{tsx,ts,jsx,js,mdx}": "${dirname} [page]",
+  "**/app/**/index.{tsx,ts,jsx,js}": "${dirname} [index]",
+  "**/app/**/layout.{tsx,ts,jsx,js}": "${dirname} [layout]",
+  "**/app/**/template.{tsx,ts,jsx,js}": "${dirname} [template]",
+  // For a second level route
+  "**/app/**/[[]*[]]/page.{tsx,ts,jsx,js,mdx}": "${dirname(1)}/${dirname} [page]",
+  "**/app/**/[[]*[]]/index.{tsx,ts,jsx,js}": "${dirname(1)}/${dirname} [index]",
+  "**/app/**/[[]*[]]/layout.{tsx,ts,jsx,js}": "${dirname(1)}/${dirname} [layout]",
+  "**/app/**/[[]*[]]/template.{tsx,ts,jsx,js}": "${dirname(1)}/${dirname} [template]",
+  // For a third level route
+  "**/app/**/[[]*[]]/**/[[]*[]]/page.{tsx,ts,jsx,js,mdx}": "${dirname(2)}/${dirname(1)}/${dirname} [page]",
+  "**/app/**/[[]*[]]/**/[[]*[]]/index.{tsx,ts,jsx,js}": "${dirname(2)}/${dirname(1)}/${dirname} [index]",
+  "**/app/**/[[]*[]]/**/[[]*[]]/layout.{tsx,ts,jsx,js}": "${dirname(2)}/${dirname(1)}/${dirname} [layout]",
+  "**/app/**/[[]*[]]/**/[[]*[]]/template.{tsx,ts,jsx,js}": "${dirname(2)}/${dirname(1)}/${dirname} [template]",
+  "**/app/**/route.ts": "${dirname} [route]",
+  "**/components/**/index.{tsx,ts,jsx,js}": "${dirname} [component]", 
+}
+```
+
+The configuration takes in consideration routes with nested subroutes, for example `posts/[id]/page.tsx` or `posts/[id]/comments/[commentId]/page.tsx`. I usually wouldn't expect the third level route labeling being needed, but I included in this micropost as an example of extensibility.
