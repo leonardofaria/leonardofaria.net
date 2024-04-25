@@ -1,6 +1,6 @@
 ---
 title: Custom labels in VS Code
-publishedAt: 2024-04-25T10:00:00-08:00
+publishedAt: 2024-04-25T8:00:00-08:00
 template: post
 type: Micropost
 ogImage: /images/og-images/custom-labels-in-vscode.png
@@ -37,3 +37,5 @@ In [March 2024's release](https://code.visualstudio.com/updates/v1_88#_custom-la
 ```
 
 The configuration takes in consideration routes with nested subroutes, for example `posts/[id]/page.tsx` or `posts/[id]/comments/[commentId]/page.tsx`. I usually wouldn't expect the third level route labeling being needed, but I included in this micropost as an example of extensibility.
+
+The last line of this config improves the navigability of many projects, especially component libraries: people often organize their components into separated folders and use a `index.tsx` for the main code (ex: `button/index.tsx`, `modal/index.tsx`). The change above will improve how these files are shown in the tab bar.
