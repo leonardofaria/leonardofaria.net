@@ -2,6 +2,7 @@ import { type Post } from 'contentlayer/generated';
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
+import { Fragment } from 'react';
 import { BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import { groupPostsByYears, getAllTags } from './shared';
 import { PostsByYear } from './shared/PostsByYear';
@@ -39,17 +40,22 @@ export default function Archives({ posts }: { posts: Post[] }) {
             </H1>
           </header>
 
-          <p className="mb-12 mt-6 flex flex-wrap text-lg">
-            I like to talk about:&nbsp;
-            {allTags.map((tag) => (
-              <span key={tag}>
-                <Link className={CONTENT_STYLES.a} href={`/tags/${tag}`}>
-                  {tag}
-                </Link>
-                &nbsp;
-              </span>
-            ))}
-          </p>
+          <div className="my-10 rounded-md border bg-white p-4">
+            <p>
+              {posts.length} posts since 2005 (posts English written starting in
+              2015) · Tags:
+            </p>
+            <p className="mt-4 flex flex-wrap">
+              {allTags.map((tag) => (
+                <Fragment key={tag}>
+                  <Link className={CONTENT_STYLES.a} href={`/tags/${tag}`}>
+                    {tag}
+                  </Link>
+                  &nbsp;
+                </Fragment>
+              ))}
+            </p>
+          </div>
 
           {Object.keys(postsByYears)
             .reverse()

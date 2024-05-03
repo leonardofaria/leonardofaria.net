@@ -8,7 +8,7 @@ permalink: /portfolio
 description: Nothing is forever in the www world. Here are a few projects from my past.
 ---
 
-<Parallax speed={5}><p className="!mb-16">Nothing is forever in the www world.<br/>Here are a few projects from my past.</p></Parallax>
+<p className="!mb-16">Nothing is forever in the www world.<br/>Here are a few projects from my past.</p>
 
 <div className="full-width"><img alt="Portfolio" src="/images/portfolio.jpg" /></div>
 
