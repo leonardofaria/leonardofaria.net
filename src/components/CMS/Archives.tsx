@@ -1,4 +1,4 @@
-import { type Post } from 'contentlayer/generated';
+import { type Post } from 'contentlayer2/generated';
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';

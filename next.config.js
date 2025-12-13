@@ -1,4 +1,4 @@
-const { withContentlayer } = require('next-contentlayer');
+const { withContentlayer } = require('next-contentlayer2');
 const { withSentryConfig } = require('@sentry/nextjs');
 
 const sentryWebpackPluginOptions = {
@@ -18,6 +18,9 @@ module.exports = withSentryConfig(
   withContentlayer({
     // Disabled due to react-embed
     // reactStrictMode: true,
+    
+    // Next.js 16 uses Turbopack by default
+    turbopack: {},
 
     async rewrites() {
       return [

@@ -1,5 +1,5 @@
 import GithubSlugger from 'github-slugger';
-import { defineDocumentType } from 'contentlayer/source-files';
+import { defineDocumentType } from 'contentlayer2/source-files';
 import { generateExcerpt } from '../lib/utils';
 
 export const Page = defineDocumentType(() => ({

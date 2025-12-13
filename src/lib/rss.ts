@@ -1,6 +1,6 @@
 import { writeFileSync } from 'fs';
 import RSS from 'rss';
-import { allPosts, allMicroposts } from 'contentlayer/generated';
+import { allPosts, allMicroposts } from 'contentlayer2/generated';
 import { BASE_URL, WEBSITE_TITLE, WEBSITE_DESCRIPTION } from './constants';
 
 export default function generateFeed() {

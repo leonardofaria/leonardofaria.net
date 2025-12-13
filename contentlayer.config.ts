@@ -1,4 +1,4 @@
-import { makeSource } from 'contentlayer/source-files';
+import { makeSource } from 'contentlayer2/source-files';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import rehypePrettyCode from 'rehype-pretty-code';

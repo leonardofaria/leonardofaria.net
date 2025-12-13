@@ -16,7 +16,7 @@ export default function Disqus({
 }) {
   const config = { url, title };
 
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   // Hacky way to hide recommendations. I can't just remove
   // the node because otherwise disqus will break

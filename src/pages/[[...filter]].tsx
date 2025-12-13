@@ -6,7 +6,7 @@ import {
   type Micropost,
   type Page,
   type Post,
-} from 'contentlayer/generated';
+} from 'contentlayer2/generated';
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
 import { getPartialContent } from 'src/lib/utils';
 import Archives from '../components/CMS/Archives';

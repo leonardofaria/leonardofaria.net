@@ -1,4 +1,4 @@
-import { defineDocumentType } from 'contentlayer/source-files';
+import { defineDocumentType } from 'contentlayer2/source-files';
 import { generateExcerpt } from '../lib/utils';
 
 export const Micropost = defineDocumentType(() => ({

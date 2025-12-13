@@ -3,8 +3,8 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import rehypeSanitize from 'rehype-sanitize';
-import { type Micropost, type Page, type Post } from 'contentlayer/generated';
-import { MDX } from 'contentlayer/core';
+import { type Micropost, type Page, type Post } from 'contentlayer2/generated';
+import { MDX } from 'contentlayer2/core';
 import { BASE_URL } from './constants';
 
 export const getAbsoluteURL = (path: string): string => {

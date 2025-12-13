@@ -1,4 +1,4 @@
-import { type Micropost as MicropostType } from 'contentlayer/generated';
+import { type Micropost as MicropostType } from 'contentlayer2/generated';
 import { NextSeo } from 'next-seo';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import Micropost from './shared/Micropost';

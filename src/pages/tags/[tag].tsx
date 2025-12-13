@@ -1,4 +1,4 @@
-import { allPosts } from 'contentlayer/generated';
+import { allPosts } from 'contentlayer2/generated';
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';

@@ -1,4 +1,4 @@
-import { type Post, type Micropost } from 'contentlayer/generated';
+import { type Post, type Micropost } from 'contentlayer2/generated';
 import { NextSeo } from 'next-seo';
 import { Header, Footer, Article, Main, CtaLink } from '../UI';
 import {

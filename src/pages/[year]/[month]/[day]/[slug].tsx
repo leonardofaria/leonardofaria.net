@@ -1,4 +1,4 @@
-import { allPosts, type Post } from 'contentlayer/generated';
+import { allPosts, type Post } from 'contentlayer2/generated';
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
 import Single from '../../../../components/CMS/Single';
 

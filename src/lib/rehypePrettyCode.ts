@@ -320,7 +320,7 @@ export function rehypePrettyCodeClasses() {
 }
 
 export const rehypePrettyCodeOptions: Partial<Options> = {
-  theme: 'github-light',
+  theme: 'github-light-default',
   tokensMap: {
     // VScode command palette: Inspect Editor Tokens and Scopes
     // https://github.com/Binaryify/OneDark-Pro/blob/47c66a2f2d3e5c85490e1aaad96f5fab3293b091/themes/OneDark-Pro.json
@@ -336,6 +336,8 @@ export const rehypePrettyCodeOptions: Partial<Options> = {
     node.properties.className = [''];
   },
   onVisitHighlightedLine(node) {
-    node.properties.className.push(CODE_STYLES.HIGHLIGHTED_LINE);
+    if (node.properties?.className) {
+      node.properties.className.push(CODE_STYLES.HIGHLIGHTED_LINE);
+    }
   },
 };

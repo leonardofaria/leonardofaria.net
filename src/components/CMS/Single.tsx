@@ -1,5 +1,5 @@
-import { type Page, type Post } from 'contentlayer/generated';
-import { useMDXComponent } from 'next-contentlayer/hooks';
+import { type Page, type Post } from 'contentlayer2/generated';
+import { useMDXComponent } from 'next-contentlayer2/hooks';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
