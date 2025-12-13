@@ -12,7 +12,7 @@ export default function generateFeed() {
     site_url: BASE_URL,
   });
 
-  // eslint-disable-next-line no-console
+   
   console.log('info  - Generating RSS');
 
   [...allPosts, ...allMicroposts]

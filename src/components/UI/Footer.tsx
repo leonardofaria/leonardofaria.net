@@ -1,5 +1,5 @@
-import { SocialNav } from './SocialNav';
 import commits from '../../../public/commits.json';
+import { SocialNav } from './SocialNav';
 
 export function Footer() {
   const lastCommitDate = new Date(commits[0]?.commit?.committer?.date);

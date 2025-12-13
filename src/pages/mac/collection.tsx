@@ -1,8 +1,8 @@
-import { NextSeo } from 'next-seo';
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
+import { NextSeo } from 'next-seo';
 import SteinStore from 'stein-js-client';
-import { Computer, Idevice } from 'src/lib/types';
 import { Collection } from 'src/components/Mac/Collection/Collection';
+import { Computer, Idevice } from 'src/lib/types';
 import { WEBSITE_TITLE } from '../../lib/constants';
 
 export default function Page({

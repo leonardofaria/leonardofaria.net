@@ -9,7 +9,7 @@ import { writeFileSync } from 'fs';
 
   writeFileSync('./public/commits.json', JSON.stringify(commits, null, 2));
 
-  // eslint-disable-next-line no-console
+   
   console.log('Response saved to file');
 })();
 

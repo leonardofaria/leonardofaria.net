@@ -3,7 +3,7 @@ import { type Post } from 'contentlayer2/generated';
 import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 import { SimplePost } from 'src/types/ContentLayer';
 
-/* eslint-disable react/no-danger */
+ 
 export function PostSummary({ post }: { post: Post | SimplePost }) {
   const createdAt = new Date(post.publishedAt);
 

@@ -1,5 +1,5 @@
-import { allPosts, type Post } from 'contentlayer2/generated';
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
+import { allPosts, type Post } from 'contentlayer2/generated';
 import Single from '../../../../components/CMS/Single';
 
 export const getStaticPaths = () => {
@@ -24,7 +24,7 @@ export const getStaticProps: GetStaticProps<{
   const post = allPosts.find((p: Post) => p.permalink.startsWith(permalink));
 
   if (!post) {
-    // eslint-disable-next-line no-console
+     
     console.error({ permalink });
     return { notFound: true };
   }

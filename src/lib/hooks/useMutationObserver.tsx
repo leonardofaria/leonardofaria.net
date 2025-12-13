@@ -1,7 +1,7 @@
 // https://tobbelindstrom.com/blog/useMutationObserver/
 import { RefObject, useEffect, useMemo } from 'react';
 
-/* eslint-disable no-undef, no-unused-vars, consistent-return */
+ 
 
 interface Props {
   target?: RefObject<Element | null> | Element | Node | null;

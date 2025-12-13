@@ -1,9 +1,9 @@
 // import Image from 'next/image';
 import Link from 'next/link';
 import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
-import type { ReactNode } from 'react';
 import { BASE_URL } from '../../lib/constants';
 import { Article, Footer, H1, Header, Main } from '../UI';
+import type { ReactNode } from 'react';
 
 export default function Page({
   title,

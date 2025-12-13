@@ -277,7 +277,7 @@ export function rehypePrettyCodeClasses() {
             ...(node.properties.className || []),
             CODE_STYLES.BLOCK,
           ];
-          // eslint-disable-next-line no-shadow
+           
           node.children = node.children.map((node: any) => {
             if (
               node.tagName === 'div' &&

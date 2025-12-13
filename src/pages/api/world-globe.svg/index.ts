@@ -1,8 +1,8 @@
-import { NextApiRequest, NextApiResponse, GetServerSideProps } from 'next';
 
 import { geoPath } from 'd3-geo';
 /* @ts-ignore */
 import { geoSatellite } from 'd3-geo-projection';
+import { NextApiRequest, NextApiResponse, GetServerSideProps } from 'next';
 import * as topojson from 'topojson-client';
 import topology from './land-110m.json';
 

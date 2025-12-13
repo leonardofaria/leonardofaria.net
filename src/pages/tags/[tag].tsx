@@ -1,12 +1,12 @@
-import { allPosts } from 'contentlayer2/generated';
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
+import { allPosts } from 'contentlayer2/generated';
 import { Article, Footer, Header, Main, H1 } from 'src/components/UI';
-import type { SimplePost } from 'src/types/ContentLayer';
 import { getAllTags } from '../../components/CMS/shared';
-import { BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import { PostSummary } from '../../components/CMS/shared/PostSummary';
+import { BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
+import type { SimplePost } from 'src/types/ContentLayer';
 
 export const getStaticPaths = () => {
   const allTags = getAllTags(allPosts);
@@ -33,8 +33,7 @@ export const getStaticProps: GetStaticProps<{
     .reverse();
 
   const simplePosts = posts.map((post) => {
-    /* eslint-disable-next-line no-unused-vars */
-    const { body, _raw, ...rest } = post;
+    const { body: _body, _raw, ...rest } = post;
     return { ...rest };
   });
 

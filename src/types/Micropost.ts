@@ -37,12 +37,12 @@ export const Micropost = defineDocumentType(() => ({
     slug: {
       type: 'string',
       resolve: (micropost) =>
-        micropost._raw.sourceFileName.replace(/\.mdx$/, ''), // eslint-disable-line no-underscore-dangle
+        micropost._raw.sourceFileName.replace(/\.mdx$/, ''),  
     },
     permalink: {
       type: 'string',
       resolve: (micropost) =>
-        `/microblog/${micropost._raw.sourceFileName.replace(/\.mdx$/, '')}`, // eslint-disable-line no-underscore-dangle
+        `/microblog/${micropost._raw.sourceFileName.replace(/\.mdx$/, '')}`,  
     },
     year: {
       type: 'string',

@@ -1,7 +1,8 @@
 import Image from 'next/image';
-import type { Computer, Idevice } from 'src/lib/types';
-import { IoHardwareChipSharp } from 'react-icons/io5';
 import { FiExternalLink } from 'react-icons/fi';
+import { IoHardwareChipSharp } from 'react-icons/io5';
+import type { Computer, Idevice } from 'src/lib/types';
+
 
 export function Cards({ collection }: { collection: Computer[] | Idevice[] }) {
   return (
@@ -49,7 +50,7 @@ export function Cards({ collection }: { collection: Computer[] | Idevice[] }) {
                   target="_blank"
                 >
                   <span>History</span>
-                  <FiExternalLink className="h-4 w-4 text-white" />
+                  <FiExternalLink className="size-4 text-white" />
                 </a>
               </div>
             </div>

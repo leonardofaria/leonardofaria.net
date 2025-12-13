@@ -1,14 +1,15 @@
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { FaTwitter, FaLinkedin, FaCopy } from 'react-icons/fa';
-import Link from 'next/link';
 import { SiBuymeacoffee } from 'react-icons/si';
-import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 import useCopyToClipboard from 'src/lib/hooks/useCopyToClipboard';
-import type { WebMention } from '../../lib/types';
-import useWindowSize from '../../lib/hooks/useWindowSize';
+import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 import { LARGE_SCREEN_BREAKPOINT } from '../../lib/constants';
+import useWindowSize from '../../lib/hooks/useWindowSize';
+import type { WebMention } from '../../lib/types';
 
-/* eslint-disable @next/next/no-img-element, react/no-danger */
+
+/* eslint-disable @next/next/no-img-element */
 
 // user-circle icon from heroicons.com encoded by https://yoksel.github.io/url-encoder/
 const ANON_AVATAR =
@@ -87,7 +88,7 @@ function Share({ url, title }: { url: string; title: string }) {
 }
 
 function Mention({ originalMention }: { originalMention: WebMention }) {
-  const mention = originalMention;
+  const mention = { ...originalMention };
 
   if (!mention.data.author) {
     const domain = new URL(mention.source).origin;
@@ -95,10 +96,13 @@ function Mention({ originalMention }: { originalMention: WebMention }) {
     // https://dev.to/derlin/get-favicons-from-any-website-using-a-hidden-google-api-3p1e
     const favicon = `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
 
-    mention.data.author = {
-      url: mention.source,
-      name: 'External link',
-      photo: favicon || ANON_AVATAR,
+    mention.data = {
+      ...mention.data,
+      author: {
+        url: mention.source,
+        name: 'External link',
+        photo: favicon || ANON_AVATAR,
+      }
     };
   }
 
@@ -118,20 +122,20 @@ function Mention({ originalMention }: { originalMention: WebMention }) {
 
   return (
     <li className="mb-8 flex text-base">
-      <a className="shrink-0" href={mention.data.author.url}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
+      <a className="shrink-0" href={mention.data.author?.url || '#'}>
+        { }
         <img
           alt=""
-          className="mr-3 h-8 w-8 rounded-full"
-          src={mention.data.author.photo}
+          className="mr-3 size-8 rounded-full"
+          src={mention.data.author?.photo || ANON_AVATAR}
         />
       </a>
       <div>
         {mention.activity.type !== 'like' ? (
           <div>
             <strong>
-              <a className="no-underline" href={mention.data.author.url}>
-                {mention.data.author.name}
+              <a className="no-underline" href={mention.data.author?.url || '#'}>
+                {mention.data.author?.name || 'Unknown'}
               </a>
             </strong>
             {renderDate()}
@@ -215,7 +219,7 @@ export default function Webmentions({
               if (index === LIMIT_AVATARS) {
                 return (
                   <span
-                    className="flex h-8 w-8 items-center justify-center rounded-full bg-black text-xs font-bold text-white ring-2 ring-white"
+                    className="flex size-8 items-center justify-center rounded-full bg-black text-xs font-bold text-white ring-2 ring-white"
                     key="more"
                   >
                     +{(mentions?.length || 0) - LIMIT_AVATARS}
@@ -235,7 +239,7 @@ export default function Webmentions({
                 >
                   <img
                     alt=""
-                    className="inline-block h-8 w-8 rounded-full ring-2 ring-white"
+                    className="inline-block size-8 rounded-full ring-2 ring-white"
                     src={mention.data.author?.photo}
                   />
                 </Link>

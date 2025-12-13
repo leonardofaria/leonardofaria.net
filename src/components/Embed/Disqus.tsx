@@ -1,5 +1,5 @@
-import { useRef, useCallback } from 'react';
 import { DiscussionEmbed } from 'disqus-react';
+import { useRef, useCallback } from 'react';
 import { DISQUS_SHORTNAME } from '../../lib/constants';
 import { useMutationObserver } from '../../lib/hooks/useMutationObserver';
 

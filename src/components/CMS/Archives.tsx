@@ -1,12 +1,12 @@
-import { type Post } from 'contentlayer2/generated';
-import { NextSeo } from 'next-seo';
 import Link from 'next/link';
-import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
+import { NextSeo } from 'next-seo';
 import { Fragment } from 'react';
+import { type Post } from 'contentlayer2/generated';
+import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 import { BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
+import { Article, H1, Main, Footer, Header } from '../UI';
 import { groupPostsByYears, getAllTags } from './shared';
 import { PostsByYear } from './shared/PostsByYear';
-import { Article, H1, Main, Footer, Header } from '../UI';
 
 export default function Archives({ posts }: { posts: Post[] }) {
   const postsByYears = groupPostsByYears(posts);

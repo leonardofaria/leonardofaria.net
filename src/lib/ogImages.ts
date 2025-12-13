@@ -1,15 +1,14 @@
 import { existsSync, readdirSync, statSync } from 'fs';
 import { readFile } from 'fs/promises';
 // @ts-ignore
-import lineReplace from 'line-replace';
-import chromium from '@sparticuz/chromium-min';
-
 import path, { parse } from 'path';
+import chromium from '@sparticuz/chromium-min';
 import matter from 'gray-matter';
+import lineReplace from 'line-replace';
 
 const BASE_URL = 'http://localhost:3000';
 
-/* eslint-disable no-console */
+ 
 
 function getAllMarkdownFiles(dirPath: string, arrayOfFiles: string[]) {
   const files = readdirSync(dirPath);
@@ -33,9 +32,9 @@ function getAllMarkdownFiles(dirPath: string, arrayOfFiles: string[]) {
 async function processMarkdownFiles(files: string[]) {
   const browser = await launchBrowser();
 
-  // eslint-disable-next-line no-restricted-syntax
+   
   for (const file of files) {
-    // eslint-disable-next-line no-await-in-loop
+     
     const data = await readFile(file);
     const {
       data: { id, permalink, type, ogImage },
@@ -48,7 +47,7 @@ async function processMarkdownFiles(files: string[]) {
     if (!existsSync(`./public/${ogImage}`)) {
       const ogImagePath = `/images/og-images/${filename}.png`;
       console.log(`${filename} - image not found`);
-      // eslint-disable-next-line no-await-in-loop
+       
       await visitPageAndScreenshot(browser, `${BASE_URL}${url}`, ogImagePath);
 
       if (!ogImage) {

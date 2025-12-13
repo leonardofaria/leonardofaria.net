@@ -2,7 +2,7 @@
 import { RefObject, useEffect, useRef } from 'react';
 import useIsomorphicLayoutEffect from './useIsomorphicLayoutEffect';
 
-/* eslint-disable no-undef, no-unused-vars, no-redeclare, consistent-return */
+ 
 
 // MediaQueryList Event based useEventListener interface
 function useEventListener<K extends keyof MediaQueryListEventMap>(

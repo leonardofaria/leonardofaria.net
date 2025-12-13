@@ -1,5 +1,5 @@
-import { NextSeo } from 'next-seo';
 import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import Resume from 'src/components/Resume/Resume';
 
 export default function Page() {
@@ -52,7 +52,7 @@ export default function Page() {
             </svg>
           </a>
         </div>
-        <div className="m-auto inline-flex bg-white px-3 print:p-0 lg:px-10">
+        <div className="m-auto inline-flex bg-white px-3 lg:px-10 print:p-0">
           <Resume />
         </div>
       </div>

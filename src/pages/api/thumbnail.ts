@@ -20,7 +20,6 @@ const getBrowser = () =>
         headless: 'new',
       });
 
-// eslint-disable-next-line import/no-anonymous-default-export, consistent-return
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const browser = await getBrowser();
@@ -47,7 +46,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.setHeader('Content-Type', 'image/png');
     res.end(data);
   } catch (error) {
-    // eslint-disable-next-line no-console
+     
     console.log({ error });
     return res.status(500).end(error);
   }

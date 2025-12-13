@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const { NEXT_PUBLIC_IFRAMELY_KEY } = process.env;
 
-/* eslint-disable react/no-danger */
+ 
 
 export default function Iframely({ url }: { url: string }) {
   const [error, setError] = useState<string | null>(null);
@@ -39,8 +39,9 @@ export default function Iframely({ url }: { url: string }) {
   }, [url]);
 
   useEffect(() => {
-    // eslint-disable-next-line no-unused-expressions
-    window !== undefined && window.iframely && window.iframely.load();
+    if (window !== undefined && window.iframely) {
+      window.iframely.load();
+    }
   });
 
   if (error) {
