@@ -1,5 +1,5 @@
-const { withContentlayer } = require('next-contentlayer2');
 const { withSentryConfig } = require('@sentry/nextjs');
+const { withContentlayer } = require('next-contentlayer2');
 
 const sentryWebpackPluginOptions = {
   // Additional config options for the Sentry Webpack plugin. Keep in mind that
