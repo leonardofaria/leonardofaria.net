@@ -10,11 +10,10 @@ export default function Iframely({ url }: { url: string }) {
   const [html, setHtml] = useState({
     __html: '<div />',
   });
-
   useEffect(() => {
     if (url) {
       fetch(
-        `https://cdn.iframe.ly/api/iframely?url=${encodeURIComponent(
+        `https://iframe.ly/api/iframely?url=${encodeURIComponent(
           url,
         )}&key=${NEXT_PUBLIC_IFRAMELY_KEY}&iframe=1&omit_script=1`,
       )
