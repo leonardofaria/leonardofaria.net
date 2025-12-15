@@ -1,4 +1,4 @@
-import { type Post, type Micropost } from 'contentlayer/generated';
+import { type Post, type Micropost } from 'contentlayer2/generated';
 
 export function groupPostsByYears(
   posts: (Post | Micropost)[],

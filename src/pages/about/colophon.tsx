@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import Page from 'src/components/CMS/Page';
 import { H2 } from 'src/components/UI';
-import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 import { WEBSITE_TITLE } from 'src/lib/constants';
+import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 
 export default function Colophon() {
   return (
@@ -44,7 +44,7 @@ export default function Colophon() {
         <ol className="border-l border-indigo-500">
           <li>
             <div className="flex items-center pt-3">
-              <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-indigo-500" />
+              <div className="-ml-[5px] mr-3 size-[9px] rounded-full bg-indigo-500" />
               <p className="text-neutral-500">Dec 2022</p>
             </div>
             <div className="mb-6 ml-4 mt-2">
@@ -67,7 +67,7 @@ export default function Colophon() {
 
           <li>
             <div className="flex items-center pt-2">
-              <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-indigo-500" />
+              <div className="-ml-[5px] mr-3 size-[9px] rounded-full bg-indigo-500" />
               <p className="text-neutral-500">Apr 2020</p>
             </div>
             <div className="mb-6 ml-4 mt-2">
@@ -89,7 +89,7 @@ export default function Colophon() {
 
           <li>
             <div className="flex items-center pt-2">
-              <div className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-indigo-500" />
+              <div className="-ml-[5px] mr-3 size-[9px] rounded-full bg-indigo-500" />
               <p className="text-neutral-500">Apr 2005</p>
             </div>
             <div className="ml-4 mt-2 pb-5">

@@ -1,5 +1,5 @@
-import { useRef, useCallback } from 'react';
 import { DiscussionEmbed } from 'disqus-react';
+import { useRef, useCallback } from 'react';
 import { DISQUS_SHORTNAME } from '../../lib/constants';
 import { useMutationObserver } from '../../lib/hooks/useMutationObserver';
 
@@ -16,7 +16,7 @@ export default function Disqus({
 }) {
   const config = { url, title };
 
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   // Hacky way to hide recommendations. I can't just remove
   // the node because otherwise disqus will break

@@ -29,11 +29,11 @@ function SectionDetails({ details }: { details: SectionData['details'] }) {
               {detail.title !== '' ? (
                 <b className="font-semibold">{detail.title}</b>
               ) : (
-                // eslint-disable-next-line react/jsx-no-useless-fragment
+                 
                 <>
                   {!Array.isArray(detail.description) && (
                     <p
-                      // eslint-disable-next-line react/no-danger
+                       
                       dangerouslySetInnerHTML={{ __html: detail.description }}
                     />
                   )}

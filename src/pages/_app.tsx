@@ -1,18 +1,17 @@
 import '../styles/globals.css';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
-import type { AppProps } from 'next/app';
 import { Analytics } from '@vercel/analytics/react';
-import { DefaultSeo } from 'next-seo';
-import { ParallaxProvider } from 'react-scroll-parallax';
-/* eslint-disable-next-line camelcase */
-import { Inter, Fira_Code } from 'next/font/google';
-import Script from 'next/script';
-import { useRouter } from 'next/router';
 import AOS from 'aos';
+import { Inter, Fira_Code } from 'next/font/google';
+import { useRouter } from 'next/router';
+import Script from 'next/script';
+import { DefaultSeo } from 'next-seo';
+import { useEffect } from 'react';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import { UMAMI_SITEID, UMAMI_URL } from '../lib/constants';
 import SEO from '../lib/next-seo.config';
 import { getAbsoluteURL } from '../lib/utils';
+import type { AppProps } from 'next/app';
 
 const inter = Inter({
   subsets: ['latin'],

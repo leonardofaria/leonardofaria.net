@@ -1,8 +1,8 @@
-import { type Micropost as MicropostType } from 'contentlayer/generated';
 import { NextSeo } from 'next-seo';
+import { type Micropost as MicropostType } from 'contentlayer2/generated';
 import { BASE_URL, WEBSITE_TITLE, MICROBLOG_INTRO } from '../../lib/constants';
-import Micropost from './shared/Micropost';
 import { Article, Badge, Footer, Header, Main } from '../UI';
+import Micropost from './shared/Micropost';
 
 export default function Microposts({
   microposts,

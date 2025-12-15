@@ -1,6 +1,6 @@
+import { defineDocumentType } from 'contentlayer2/source-files';
 import GithubSlugger from 'github-slugger';
 import readingTime from 'reading-time';
-import { defineDocumentType } from 'contentlayer/source-files';
 import { generateExcerpt } from '../lib/utils';
 
 export const Post = defineDocumentType(() => ({

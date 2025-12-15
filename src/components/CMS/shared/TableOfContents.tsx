@@ -1,4 +1,4 @@
-import { type Page, type Post } from 'contentlayer/generated';
+import { type Page, type Post } from 'contentlayer2/generated';
 
 export function TableOfContents({ post }: { post: Post | Page }) {
   const { headings } = post;

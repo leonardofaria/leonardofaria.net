@@ -1,6 +1,6 @@
 import { writeFileSync } from 'fs';
 import RSS from 'rss';
-import { allPosts, allMicroposts } from 'contentlayer/generated';
+import { allPosts, allMicroposts } from 'contentlayer2/generated';
 import { BASE_URL, WEBSITE_TITLE, WEBSITE_DESCRIPTION } from './constants';
 
 export default function generateFeed() {
@@ -12,7 +12,7 @@ export default function generateFeed() {
     site_url: BASE_URL,
   });
 
-  // eslint-disable-next-line no-console
+   
   console.log('info  - Generating RSS');
 
   [...allPosts, ...allMicroposts]

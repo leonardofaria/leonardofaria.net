@@ -1,7 +1,7 @@
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 
 const pages = [
   {

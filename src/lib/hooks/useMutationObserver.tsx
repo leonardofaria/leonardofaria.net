@@ -1,16 +1,16 @@
 // https://tobbelindstrom.com/blog/useMutationObserver/
 import { RefObject, useEffect, useMemo } from 'react';
 
-/* eslint-disable no-undef, no-unused-vars, consistent-return */
+ 
 
 interface Props {
-  target?: RefObject<Element> | Element | Node | null;
+  target?: RefObject<Element | null> | Element | Node | null;
   options?: MutationObserverInit;
   callback?: MutationCallback;
 }
 
 function getRefElement<T>(
-  element?: RefObject<Element> | T,
+  element?: RefObject<Element | null> | T,
 ): Element | T | undefined | null {
   // @ts-ignore
   if (element && 'current' in element) {

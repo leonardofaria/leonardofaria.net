@@ -1,13 +1,13 @@
-import { type Page, type Post } from 'contentlayer/generated';
-import { useMDXComponent } from 'next-contentlayer/hooks';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useMDXComponent } from 'next-contentlayer2/hooks';
 import { NextSeo } from 'next-seo';
 import { Parallax } from 'react-scroll-parallax';
+import { type Page, type Post } from 'contentlayer2/generated';
 import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
-import { Playground } from '../Playground';
 import Embed from '../Embed';
+import { Playground } from '../Playground';
 import { A, Article, Badge, Footer, H1, Header, Main } from '../UI';
 import { Interactions } from './shared/Interactions';
 // import { TableOfContents } from './shared/TableOfContents';
@@ -141,7 +141,7 @@ export default function Single({
           </div>
 
           <footer className="hidden">
-            Written by {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            Written by
             <a
               /* eslint-disable-next-line tailwindcss/no-custom-classname */
               className="p-author h-card"

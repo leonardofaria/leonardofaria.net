@@ -1,4 +1,4 @@
-import { type Post } from 'contentlayer/generated';
+import { type Post } from 'contentlayer2/generated';
 
 // SimplePost is a Post without the content, making building
 // times smaller in a few pages (/tags/* for example)

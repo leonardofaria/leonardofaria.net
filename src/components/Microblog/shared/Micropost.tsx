@@ -1,10 +1,10 @@
-import { type Micropost as MicropostType } from 'contentlayer/generated';
-import { useMDXComponent } from 'next-contentlayer/hooks';
 import Image from 'next/image';
 import Link from 'next/link';
-import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
-import { A, Badge, H1 } from 'src/components/UI';
+import { useMDXComponent } from 'next-contentlayer2/hooks';
+import { type Micropost as MicropostType } from 'contentlayer2/generated';
 import { Playground } from 'src/components/Playground';
+import { A, Badge, H1 } from 'src/components/UI';
+import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
 import Embed from '../../Embed';
 
 export default function Micropost({ micropost }: { micropost: MicropostType }) {
@@ -65,7 +65,7 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
       </div>
 
       <footer className="hidden">
-        Written by {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+        Written by
         <a
           /* eslint-disable-next-line tailwindcss/no-custom-classname */
           className="p-author h-card"

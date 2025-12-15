@@ -1,4 +1,4 @@
-import { defineDocumentType } from 'contentlayer/source-files';
+import { defineDocumentType } from 'contentlayer2/source-files';
 import { generateExcerpt } from '../lib/utils';
 
 export const Micropost = defineDocumentType(() => ({
@@ -37,12 +37,12 @@ export const Micropost = defineDocumentType(() => ({
     slug: {
       type: 'string',
       resolve: (micropost) =>
-        micropost._raw.sourceFileName.replace(/\.mdx$/, ''), // eslint-disable-line no-underscore-dangle
+        micropost._raw.sourceFileName.replace(/\.mdx$/, ''),  
     },
     permalink: {
       type: 'string',
       resolve: (micropost) =>
-        `/microblog/${micropost._raw.sourceFileName.replace(/\.mdx$/, '')}`, // eslint-disable-line no-underscore-dangle
+        `/microblog/${micropost._raw.sourceFileName.replace(/\.mdx$/, '')}`,  
     },
     year: {
       type: 'string',

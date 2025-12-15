@@ -3,12 +3,11 @@ import {
   AiOutlineTwitter,
   AiFillInstagram,
 } from 'react-icons/ai';
-import { FaYoutube, FaMeetup } from 'react-icons/fa';
 import { BsFileEarmarkSlides } from 'react-icons/bs';
-import { PiGoodreadsLogoFill } from 'react-icons/pi';
+import { FaYoutube, FaMeetup } from 'react-icons/fa';
 import { ImNpm } from 'react-icons/im';
+import { PiGoodreadsLogoFill } from 'react-icons/pi';
 import { SiNextdotjs, SiEslint, SiSubstack, SiWikipedia } from 'react-icons/si';
-
 import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 
 // const ICONS = [
@@ -79,7 +78,7 @@ import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 function getIcon(href: string) {
   const iconClasses = 'mx-1 mt-[-4px] inline-block';
 
-  // eslint-disable-next-line no-restricted-syntax
+   
   // for (const { domain, component: Component, color } of ICONS) {
   //   if (href.includes(domain)) {
   //     return (
@@ -102,7 +101,7 @@ function getIcon(href: string) {
   if (href.includes('github.com')) {
     return (
       <AiOutlineGithub
-        className={`${iconClasses} text-[#333333] hover:text-[#333333]`}
+        className={`${iconClasses} text-github hover:text-github`}
       />
     );
   }
@@ -142,7 +141,7 @@ function getIcon(href: string) {
   if (href.includes('nextjs.org')) {
     return (
       <SiNextdotjs
-        className={`${iconClasses} text-[#333333] hover:text-[#333333]`}
+        className={`${iconClasses} text-github hover:text-github`}
       />
     );
   }
@@ -180,7 +179,7 @@ function getIcon(href: string) {
   if (href.includes('twitter.com')) {
     return (
       <AiOutlineTwitter
-        className={`${iconClasses} text-[#1da1f2] hover:text-[#1da1f2]`}
+        className={`${iconClasses} text-twitter hover:text-twitter`}
       />
     );
   }

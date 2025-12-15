@@ -277,7 +277,7 @@ export function rehypePrettyCodeClasses() {
             ...(node.properties.className || []),
             CODE_STYLES.BLOCK,
           ];
-          // eslint-disable-next-line no-shadow
+           
           node.children = node.children.map((node: any) => {
             if (
               node.tagName === 'div' &&
@@ -336,6 +336,8 @@ export const rehypePrettyCodeOptions: Partial<Options> = {
     node.properties.className = [''];
   },
   onVisitHighlightedLine(node) {
-    node.properties.className.push(CODE_STYLES.HIGHLIGHTED_LINE);
+    if (node.properties?.className) {
+      node.properties.className.push(CODE_STYLES.HIGHLIGHTED_LINE);
+    }
   },
 };

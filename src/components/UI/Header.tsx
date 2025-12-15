@@ -1,11 +1,11 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import { BiMenu } from 'react-icons/bi';
 import { MdClose } from 'react-icons/md';
+import { LARGE_SCREEN_BREAKPOINT } from '../../lib/constants';
 import useScrollPosition from '../../lib/hooks/useScrollPosition';
 import useWindowSize from '../../lib/hooks/useWindowSize';
-import { LARGE_SCREEN_BREAKPOINT } from '../../lib/constants';
 import { PageNav } from './PageNav';
 import { SocialNav } from './SocialNav';
 
@@ -18,16 +18,16 @@ function ToggleButton({
 }) {
   return (
     <button
-      className="flex h-10 w-10 items-center justify-center opacity-75 transition duration-300 ease-in-out hover:opacity-100"
+      className="flex size-10 items-center justify-center opacity-75 transition duration-300 ease-in-out hover:opacity-100"
       type="button"
       onClick={() => {
         setShowMenu(!showMenu);
       }}
     >
       {showMenu ? (
-        <MdClose className="h-6 w-6 fill-current" />
+        <MdClose className="size-6 fill-current" />
       ) : (
-        <BiMenu className="h-6 w-6 fill-current" />
+        <BiMenu className="size-6 fill-current" />
       )}
     </button>
   );

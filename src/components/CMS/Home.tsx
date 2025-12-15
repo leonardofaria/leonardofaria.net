@@ -1,12 +1,12 @@
-import { type Post, type Micropost } from 'contentlayer/generated';
 import { NextSeo } from 'next-seo';
-import { Header, Footer, Article, Main, CtaLink } from '../UI';
+import { type Post, type Micropost } from 'contentlayer2/generated';
 import {
   BASE_URL,
   WEBSITE_DESCRIPTION,
   WEBSITE_SUBHEADING,
   WEBSITE_TITLE,
 } from '../../lib/constants';
+import { Header, Footer, Article, Main, CtaLink } from '../UI';
 import { groupPostsByYears } from './shared';
 import { PostsByYear } from './shared/PostsByYear';
 
