@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const { NEXT_PUBLIC_IFRAMELY_KEY } = process.env;
+const NEXT_PUBLIC_IFRAMELY_KEY = process.env.NEXT_PUBLIC_IFRAMELY_KEY;
 
  
 
