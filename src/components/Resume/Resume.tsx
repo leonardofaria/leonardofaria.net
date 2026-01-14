@@ -1,6 +1,6 @@
 // Ready to print in Chrome Canary
 
-import { EDUCATION, EXPERIENCE, OTHER, type SectionData } from './data';
+import { EDUCATION, EXPERIENCE, type SectionData } from './data';
 
 function SectionTitle({ title }: { title: string }) {
   return (
@@ -29,11 +29,9 @@ function SectionDetails({ details }: { details: SectionData['details'] }) {
               {detail.title !== '' ? (
                 <b className="font-semibold">{detail.title}</b>
               ) : (
-                 
                 <>
                   {!Array.isArray(detail.description) && (
                     <p
-                       
                       dangerouslySetInnerHTML={{ __html: detail.description }}
                     />
                   )}
@@ -124,13 +122,12 @@ export default function Resume() {
       <section>
         <p className="mb-3 text-base">
           Software engineer with broad experience designing, architecting, and
-          developing websites and SaaS products. Growth-minded and passionate
-          about building 0 to 1 products through thoughtful stakeholder
-          engagements, deep technical expertise, and an eye for scaling
-          processes and people.
+          developing SaaS products. Growth-minded and passionate about building
+          0 to 1 products through thoughtful stakeholder engagements, deep
+          technical expertise, and an eye for scaling processes and people.
         </p>
 
-        <p className="mb-3 text-sm">
+        <p className="hidden mb-3 text-sm">
           <span className="font-semibold">Core competencies:</span> Front-end,
           technical leadership, architecture, mentorship, Continuous
           Integration, Design System, accessibility, Developer Experience
@@ -140,8 +137,6 @@ export default function Resume() {
       <Section sectionData={EXPERIENCE} title="Experience" />
 
       <Section sectionData={EDUCATION} title="Education" />
-
-      <Section sectionData={OTHER} title="Other" />
 
       <section className="flex w-full flex-col gap-3 text-sm">
         <SectionTitle title="Technical skills" />

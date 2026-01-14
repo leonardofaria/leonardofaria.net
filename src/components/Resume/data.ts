@@ -12,12 +12,28 @@ export type SectionData = {
 
 export const EXPERIENCE: SectionData[] = [
   {
+    name: 'Pistachio',
+    location: 'San Francisco / Remote',
+    details: [
+      {
+        title: 'Founding Software Engineer',
+        period: 'May 2024 — Present',
+        description: [
+          'As the first hire, worked with the CEO and customers to build a Point of Sale for furniture stores from 0 to 1, processing $20M+ in GMV',
+          'Worked on every part of the software: back end (TypeScript), front end (Next.js), database (PostgreSQL), infrastructure (CI/CD, observability), integrations (taxes, payment processing, and others)',
+          'Partnered with the University of San Francisco to mentor and work with their students in AI-related projects',
+          'Onboarded customers analyzing their data migration needs and ensuring a smooth transition to the product',
+        ],
+      },
+    ],
+  },
+  {
     name: 'Lattice',
     location: 'San Francisco / Remote',
     details: [
       {
         title: 'Staff Software Engineer',
-        period: 'Apr 2022 — Present',
+        period: 'Apr 2022 — Feb 2024',
         description: [
           'Worked on different 0 to 1 projects from a new company initiative with TypeScript and React, iterating and adapting the product according to requirements/customer needs',
           'Improved testing by creating documentation, guidelines and building a CI tool to track test coverage across different teams',
