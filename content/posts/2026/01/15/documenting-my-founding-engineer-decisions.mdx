@@ -11,58 +11,128 @@ tags:
   - career
 ---
 
-Building a product from zero implies making a lot of decisions. Since May 2024, I have been writing code non-stop, and I want to document the decisions I made as a founding engineer and the lessons I learned from them.
+Building a product from scratch requires making numerous architectural and technical decisions. Since May 2024, I have been developing continuously, and I want to document the decisions I made as a founding engineer and the lessons learned from them.
 
 <center>
   <img src="/wp-content/uploads/2026/01/github-contributors.png" className="w-full md:max-w-[440px]" />
   <small>A random GitHub chart trying to prove a point</small>
 </center>
 
-In this post, I will group the decisions in categories: back end & front end, infrastructure and tools, but not before giving a few context about the product and the team.
+In this post, I will categorize the decisions into back end & front end, infrastructure, and tools, but first I will provide context about the product and the team.
 
 ## Context
 
-Pistachio is an all-in-one software for furniture/mattress stores. As a Point of Sale, it allows sales associates to create orders, process payments, and manage inventory. It also allows store owners to manage their business, including accounting, reporting, and inventory management.
+[Pistachio](https://pistachiosoftware.com) is an all-in-one software for furniture/mattress stores. As a Point of Sale, it allows sales associates to create orders, process payments, and manage inventory. It also allows store owners to manage their business, including accounting, reporting, and inventory management.
 
-The team is small and remote. It started with a CEO, a CTO and a Founding Engineer, then we hired another engineer and one person for support/onboarding/training. Working on a small tech company with limited money is a rollercoaster and the team decreased in size over time. 
+The team is small and fully remote. It started with a CEO, a CTO, and a Founding Engineer, then we hired an additional engineer and one person for support/onboarding/training. Operating a bootstrapped startup involves significant volatility, and the team size has decreased over time. 
 
-When making decisions, I had a few factors to consider the obvious ones: cost, time, and complexity, but one thing that I always considered is a quote from Sandi Metz, who I saw in a Ruby Meetup back in 2017:
+When making decisions, I considered several factors including the obvious ones: cost, time, and complexity. However, one principle I consistently applied is a quote from Sandi Metz, whom I saw at a Ruby Meetup in 2017:
 
 > "When the future cost of doing nothing is the same as the current cost, postpone the decision. Make the decision only when you must with the information you have at that time."
 
 
 ## Back end & front end
 
-On my first day of work I learned there was a "hello world" app in place, built with Next.js and next-auth. Coming from a company that had a monorepo with Next.js and Node.js back end projects communicating through GraphQL, I realized that architecture was not the best for a small team. 
+On my first day, I learned there was a "hello world" app in place, built with Next.js and next-auth. Coming from a company that used a monorepo with separate Next.js and Node.js backend projects communicating through GraphQL, I realized that architecture would not be optimal for a small team. 
 
-- React Server Components were a great fit for a small team. It allowed us to build a new app fast without worrying about API servers, authentication and type-sharing. 
-- ORM: Prisma, which sounded safer than Drizzle at the time. Over time I organized some scripts to look like Ruby on Rails / ActiveRecord (migrations, seeds, etc).
-- Database: Postgres, which is a good choice for multi-tenant SaaS applications. It was initially Vercel's Postgres, but Vercel eventually moved their customers to Neon.
-- Authentication: next-auth was already in the initial codebase and at the time there were no other open-source options. next-auth became Auth.js and it is now part of Better Auth, which seems to be a much more mature solution.
-- Queues: Vercel Queues. Last year Vercel launched their own queues service and it is still in beta. They offered a shared Slack channel with their engineers to help us with the implementation. It is not on par with other Vercel services, but it works for now.
-- Tests: Jest and React Testing Library. In retrospect, I should have used Vitest but since I was familiar with Jest, it was a quick decision.
-- Styles: Tailwind CSS / Shadcn UI. Specially with the progress of AI and tools like v0, that was a solid choice.
+### React Server Components 
+
+React Server Components launched at the right time and proved to be an excellent fit for a small team. It enabled us to build the application rapidly without managing separate API servers, authentication layers, or type-sharing infrastructure. I was still able to implement an authorization/permission system without impacting delivery velocity.
+
+### Prisma
+
+Prisma seemed like a safe bet, even though Drizzle was gaining momentum. Prisma later introduced [typed queries](https://www.prisma.io/docs/orm/prisma-client/using-raw-sql/typedsql), which proved valuable for custom report queries. Over time, I organized database scripts with a Ruby on Rails/ActiveRecord-inspired interface:
+
+- `pnpm db:migrate`: creates a new migration file
+- `pnpm db:seed`: seeds the database with some data
+- `pnpm db:reset`: resets the database
+- `pnpm db:setup`: resets the database and seeds it with some data
+- `pnpm db:rollback`: rolls back the last migration
+
+I also adjusted the CI/CD pipeline to run migrations accordingly when deployed to production.
+
+<center>
+  <img src="/wp-content/uploads/2026/01/slack-prisma.png" className="w-full md:max-w-[350px]" />
+</center>
+
+### Database
+
+Since most of the data is relational, choosing PostgreSQL for a multi-tenant SaaS application was straightforward. We initially used Vercel Postgres, though Vercel eventually migrated their customers to Neon.
+
+While one feature would have benefited from a NoSQL database, the trade-off was not justified at this stage of product development.
+
+### Queues
+
+In this application, queues are used to pull and classify (using AI) messages from users.
+
+Last year Vercel [launched their queues service](https://vercel.com/changelog/vercel-queues-is-now-in-limited-beta), which remains in beta. They provided a dedicated Slack channel with their engineers to support our implementation. While it doesn't yet match the maturity of other Vercel services, it satisfies our current requirements.
+
+### Tests
+
+I chose Jest and React Testing Library. In retrospect, Vitest would have been a better choice, but my familiarity with Jest made it a quick decision at the time.
+
+Tests are often neglected in early-stage products, but they are crucial for maintaining a healthy codebase. In a small team especially, tests enable confident refactoring and feature development.
+
+### Styles
+
+I chose Tailwind CSS and shadcn/ui. Especially with the progress of AI and tools like v0, this proved to be a solid choice.
+
+While I have strong interest in frontend development and have contributed to design systems in the past, building a comprehensive design system was not a priority. I found a compromise by isolating components (with the option to extract them into a separate package later) and creating an internal examples section in the app. While not as robust as Storybook or dedicated design system documentation sites, it serves our current needs.
+
+In some cases, I created wrapper components that internally use shadcn/ui but include custom shadows, paddings, margins, and color styles that are not customizable through their theming system.
 
 ## Infrastructure
 
-The goal of a new company is to get to market fast. We needed to find a way to deploy the app quickly and easily.
+The primary goal for an early-stage company is rapid time-to-market. We needed a deployment solution that was both fast and straightforward.
 
-- Deployment: Vercel. Vercel makes it easy to deploy a Next.js app and it is a solid choice for a small team. We benefited from Deploy Previews but we moved our production deployments to GitHub. Without a lot of work, I was able to build two environments (app and app2), each of which one has a different version of Next.js. That is helpful for canary deployments and testing new features in production.
-- CI/CD: GitHub Actions, responsible for running tests and linters, running migration scripts and building the app and deploying to Vercel. 
-  1. I decided to move productions builds to GHA because we kept running into Out of Memory errors in Vercel when building the app with source-maps for Sentry. I don't think this is going to repeat after the Next.js 16 upgrade.
-  2. I run the GHA builds using Blacksmith instead of the regular hardware. It is faster and cheaper.
-  3. I added Oxlint in an attempt to speed up the linting process, removing ESLint rules that could be handled by Oxlint. It is not a perfect solution since now there are 2 linters instead of 1. Probably will revert this decision.
-- Monitoring: Sentry. Not much to say here, it just works.
-- Logging: Axiom. I haven't used it a lot but it works fine for now. The caveat here is paying Vercel for log delivery.
+### Deployment
+
+Vercel makes deploying Next.js applications straightforward. Deploy Previews are a particularly valuable feature, enabling us to test and review changes before merging to production.
+
+For Next.js upgrades and with minimal configuration, I established two environments (main and app2), each running a different Next.js version. This setup facilitates canary deployments and production testing of new features.
+
+<center>
+  <img src="/wp-content/uploads/2026/01/slack-deploy1.png" className="w-full md:max-w-[350px]" />
+  <img src="/wp-content/uploads/2026/01/slack-deploy2.png" className="w-full md:max-w-[350px]" />
+</center>
+
+### CI/CD 
+
+GitHub Actions handles test execution, linting, migration scripts, application builds, and Vercel deployments. Key decisions:
+
+- I moved production builds to GitHub Actions after encountering persistent out-of-memory errors in Vercel when building with source maps for Sentry. This may no longer be necessary after the Next.js 16 upgrade, but it proved to be an effective workaround.
+- I used [Blacksmith](https://blacksmith.sh/) for GitHub Actions builds instead of GitHub's standard runners. It delivers faster performance at lower cost with a single-line workflow change. If you are curious, my small [benchmark results](https://x.com/leozera/status/1957182366646182090).
+- I added Oxlint to accelerate linting by removing ESLint rules that Oxlint can handle. This introduced dual linters, which is not ideal for Developer Experience and I may revert this decision.
+- I adopted the Go implementation of TypeScript in July, which delivered significant performance gains: type-checking time decreased from 51s to 6s.
+
+### Monitoring & logging
+
+Sentry provides error tracking across the application. I implemented a wrapper function for server actions to ensure each exception is sent to Sentry with user context and metadata. Sentry also serves two additional purposes:
+
+- Capturing messages: We log full API responses from certain integrations to help future debugging.
+- Monitoring performance: We instrument individual server action steps to identify bottlenecks.
+
+For application logging, [Axiom](https://axiom.co/) was a good choice given its generous free tier. While usage has been limited, it works for current needs. The trade-off is the cost of Vercel's log delivery.
 
 ## Tools
 
-- Claude and Cursor: in times of AI, a codebase with a good `AGENTS.md` file is a game changer. Claude also helps with code reviews, last year I tried several tools, but none of them were as good as Claude.
-- PostHog: I decided to use PostHog because it is an all-in-one tool for feature flags, replays and event tracking. Out of the three, feature flags is the most important for us since I can write many different features and gradually roll them out to the users. Replays are useful for debugging issues, very handy for understanding user behavior. Event tracking is the least important for us. It is a good nice-to-have but not essential.
-- Linear: I wished Linear was more utilized by the team, especially templates. It is pretty, fast and simple to use.
-- Metabase: technically not my decision, but it helps a lot creating custom reports for customers. 
-  1. One company with multiple tenants had very specific requirements for reports. A creative way to solve this was creating a read-only user with access to views that filtered data by the correct tenants.
+### Claude & Cursor
+
+In the age of AI-assisted development, maintaining a comprehensive `AGENTS.md` file is fundamental. When not helping writing features, Claude assists with code reviews and automated test generation. However, there are two important caveats:
+
+- Test generation: Claude frequently mocked components that should remain un-mocked, nullifying the purpose of the tests.
+- Code reviews: Claude reviewing its own generated code fails to identify as many issues as alternative tools or human reviewers would.
+
+![Part of a code review by Claude](/wp-content/uploads/2026/01/claude-review.jpg)
+
+### PostHog
+
+I chose PostHog as an all-in-one solution for feature flags, session replays, and event tracking. Of these capabilities, feature flags are most critical, enabling progressive rollout of features to users. Session replays provide value for debugging and understanding user behavior, particularly for identifying pain points. Event tracking, while useful, is the lowest priority—a nice-to-have rather than essential.
+
+### Metabase
+
+Technically not my decision, but Metabase helps a lot with custom reports. One multi-tenant customer had very specific reporting requirements that Metabase helped to solve. The solution involved provisioning a read-only database user with access to views that automatically filter data by their multiple tenants.
 
 ## Conclusion
 
-Most decisions made sense at the time and still do. It is helpful to document them and reflect on them later.
+In retrospect, most decisions made sense. Documenting and reflecting on these choices provides valuable perspective for future architectural decisions.
