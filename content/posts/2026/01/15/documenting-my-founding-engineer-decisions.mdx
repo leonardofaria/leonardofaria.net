@@ -1,0 +1,64 @@
+---
+id: 2244
+title: "Documenting my Founding Engineer decisions"
+publishedAt: 2026-01-15:11:32:00-07:00
+type: Post
+ogImage: /images/og-images/2244.png
+permalink: /2026/01/15/documenting-my-founding-engineer-decisions
+categories:
+  - career
+tags:
+  - career
+---
+
+Building a product from zero implies making a lot of decisions. Since May 2024, I have been writing code non-stop, and I want to document the decisions I made as a founding engineer and the lessons I learned from them.
+
+<center>
+  <img src="/wp-content/uploads/2026/01/github-contributors.png" className="max-w-[440px]" />
+  <small>A random GitHub chart trying to prove a point</small>
+</center>
+
+In this post, I will group the decisions in categories: back end & front end, infrastructure and tools, but not before giving a few context about the product and the team.
+
+## Context
+
+Pistachio is an all-in-one software for furniture/mattress stores. As a Point of Sale, it allows sales associates to create orders, process payments, and manage inventory. It also allows store owners to manage their business, including accounting, reporting, and inventory management.
+
+The team is small and remote. It started with a CEO, a CTO and a Founding Engineer, then we hired another engineer and one person for support/onboarding/training. Working on a small tech company with limited money is a rollercoaster and the team decreased in size over time. 
+
+When making decisions, I had a few factors to consider the obvious ones: cost, time, and complexity, but one thing that I always considered is a quote from Sandi Metz, who I saw in a Ruby Meetup back in 2017:
+
+> "When the future cost of doing nothing is the same as the current cost, postpone the decision. Make the decision only when you must with the information you have at that time."
+
+
+## Back end & front end
+
+On my first day of work I learned there was a "hello world" app in place, built with Next.js and next-auth. Coming from a company that had a monorepo with Next.js and Node.js back end projects communicating through GraphQL, I realized that architecture was not the best for a small team. 
+
+- React Server Components were a great fit for a small team. It allowed us to build a new app fast without worrying about API servers, authentication and type-sharing. 
+- ORM: Prisma, which sounded safer than Drizzle at the time. Over time I organized some scripts to look like Ruby on Rails / ActiveRecord (migrations, seeds, etc).
+- Database: Postgres, which is a good choice for multi-tenant SaaS applications. It was initially Vercel's Postgres, but Vercel eventually moved their customers to Neon.
+- Authentication: next-auth was already in the initial codebase and at the time there were no other open-source options. next-auth became Auth.js and it is now part of Better Auth, which seems to be a much more mature solution.
+- Queues: Vercel Queues. Last year Vercel launched their own queues service and it is still in beta. They offered a shared Slack channel with their engineers to help us with the implementation. It is not on par with other Vercel services, but it works for now.
+- Tests: Jest and React Testing Library. In retrospect, I should have used Vitest but since I was familiar with Jest, it was a quick decision.
+- Styles: Tailwind CSS / Shadcn UI. Specially with the progress of AI and tools like v0, that was a solid choice.
+
+## Infrastructure
+
+The goal of a new company is to get to market fast. We needed to find a way to deploy the app quickly and easily.
+
+- Deployment: Vercel. Vercel makes it easy to deploy a Next.js app and it is a solid choice for a small team. We benefited from Deploy Previews but we moved our production deployments to GitHub. Without a lot of work, I was able to build two environments (app and app2), each of which one has a different version of Next.js. That is helpful for canary deployments and testing new features in production.
+- CI/CD: GitHub Actions, responsible for running tests and linters, running migration scripts and building the app and deploying to Vercel. 
+  1. I decided to move productions builds to GHA because we kept running into Out of Memory errors in Vercel when building the app with source-maps for Sentry. I don't think this is going to repeat after the Next.js 16 upgrade.
+  2. I run the GHA builds using Blacksmith instead of the regular hardware. It is faster and cheaper.
+  3. I added Oxlint in an attempt to speed up the linting process, removing ESLint rules that could be handled by Oxlint. It is not a perfect solution since now there are 2 linters instead of 1. Probably will revert this decision.
+- Monitoring: Sentry. Not much to say here, it just works.
+- Logging: Axiom. I haven't used it a lot but it works fine for now. The caveat here is paying Vercel for log delivery.
+
+## Tools
+
+- Claude and Cursor: in times of AI, a codebase with a good `AGENTS.md` file is a game changer. Claude also helps with code reviews, last year I tried several tools, but none of them were as good as Claude.
+- PostHog: I decided to use PostHog because it is an all-in-one tool for feature flags, replays and event tracking. Out of the three, feature flags is the most important for us since I can write many different features and gradually roll them out to the users. Replays are useful for debugging issues, very handy for understanding user behavior. Event tracking is the least important for us. It is a good nice-to-have but not essential.
+- Linear: I wished Linear was more utilized by the team. It is pretty, fast and simple to use.
+- Metabase: technically not my decision, but it helps a lot creating custom reports for customers. 
+  1. One company with multiple tenants had very specific requirements for reports. A creative way to solve this was creating a read-only user with access to views that filtered data by the correct tenants.
