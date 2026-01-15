@@ -48,7 +48,7 @@ export const EXPERIENCE: SectionData[] = [
     location: 'Vancouver',
     details: [
       {
-        title: 'Technical Architect - Front-end',
+        title: 'Staff Software Engineer',
         period: 'Sep 2020 — Mar 2022',
         description: [
           'Improved Front-end performance by: introducing Lighthouse testing in CI; refactoring the product to support webp and working on different projects to improve page load and user experience',
@@ -58,7 +58,7 @@ export const EXPERIENCE: SectionData[] = [
         ],
       },
       {
-        title: 'Engineering Team Lead',
+        title: 'Engineering Manager',
         period: 'Oct 2017 — Sep 2020',
         description: [
           'Led a team of up to 7 back-end/front-end engineers working on projects for different customer personas (course creators/students)',

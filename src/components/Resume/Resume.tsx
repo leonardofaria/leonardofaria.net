@@ -138,7 +138,7 @@ export default function Resume() {
 
       <Section sectionData={EDUCATION} title="Education" />
 
-      <section className="flex w-full flex-col gap-3 text-sm">
+      <section className="hidden w-full flex-col gap-3 text-sm">
         <SectionTitle title="Technical skills" />
 
         <ul>
@@ -149,7 +149,7 @@ export default function Resume() {
           </li>
           <li className="before:mr-2 before:text-gray-500 before:content-['•']">
             <span className="font-semibold text-gray-500">Back end:</span>{' '}
-            Node.js, Ruby on Rails, PHP, Posgres, MySQL
+            Node.js, Ruby on Rails, PHP, Postgres, MySQL
           </li>
           <li className="before:mr-2 before:text-gray-500 before:content-['•']">
             <span className="font-semibold text-gray-500">
@@ -163,7 +163,7 @@ export default function Resume() {
           </li>
           <li className="before:mr-2 before:text-gray-500 before:content-['•']">
             <span className="font-semibold text-gray-500">Infrastructure:</span>{' '}
-            AWS, Vercel, Netlify, Fastly, Heroku
+            AWS, GCP, Vercel, Netlify, Fastly, Heroku
           </li>
         </ul>
       </section>
