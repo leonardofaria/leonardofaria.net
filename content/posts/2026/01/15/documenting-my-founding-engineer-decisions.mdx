@@ -14,7 +14,7 @@ tags:
 Building a product from zero implies making a lot of decisions. Since May 2024, I have been writing code non-stop, and I want to document the decisions I made as a founding engineer and the lessons I learned from them.
 
 <center>
-  <img src="/wp-content/uploads/2026/01/github-contributors.png" className="max-w-[440px]" />
+  <img src="/wp-content/uploads/2026/01/github-contributors.png" className="w-full md:max-w-[440px]" />
   <small>A random GitHub chart trying to prove a point</small>
 </center>
 
@@ -59,6 +59,10 @@ The goal of a new company is to get to market fast. We needed to find a way to d
 
 - Claude and Cursor: in times of AI, a codebase with a good `AGENTS.md` file is a game changer. Claude also helps with code reviews, last year I tried several tools, but none of them were as good as Claude.
 - PostHog: I decided to use PostHog because it is an all-in-one tool for feature flags, replays and event tracking. Out of the three, feature flags is the most important for us since I can write many different features and gradually roll them out to the users. Replays are useful for debugging issues, very handy for understanding user behavior. Event tracking is the least important for us. It is a good nice-to-have but not essential.
-- Linear: I wished Linear was more utilized by the team. It is pretty, fast and simple to use.
+- Linear: I wished Linear was more utilized by the team, especially templates. It is pretty, fast and simple to use.
 - Metabase: technically not my decision, but it helps a lot creating custom reports for customers. 
   1. One company with multiple tenants had very specific requirements for reports. A creative way to solve this was creating a read-only user with access to views that filtered data by the correct tenants.
+
+## Conclusion
+
+Most decisions made sense at the time and still do. It is helpful to document them and reflect on them later.
