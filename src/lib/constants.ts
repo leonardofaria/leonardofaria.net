@@ -5,7 +5,7 @@ export const DISQUS_SHORTNAME = 'leonardofaria';
 export const WEBSITE_TITLE = 'Leonardo Faria';
 export const WEBSITE_SUBHEADING = "Hi, I'm Leo";
 export const WEBSITE_DESCRIPTION =
-  'I like to write code and build products. Here, I write about development since 2005. Currently Staff Software Engineer at Lattice.';
+  'I like to write code and build products. Here, I write about development since 2005.';
 export const MICROBLOG_INTRO =
   'Remember Microblogs? My favourite links, videos and short thoughts';
 
