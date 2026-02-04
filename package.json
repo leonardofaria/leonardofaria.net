@@ -14,7 +14,7 @@
     "prebuild": "tsx src/lib/githubCommits.ts",
     "build": "contentlayer2 build && pnpm prebuild && next build",
     "start": "next start",
-    "lint": "eslint .",
+    "lint": "eslint . --fix",
     "build:ogImages": "tsx src/lib/ogImages.ts",
     "count:domains": "find content -type f -exec grep -Eo \"(http|https)://([a-zA-Z0-9]*)(.)(com|net)\" {} \\; | sort | uniq -c | sort -nr",
     "stats": "npx cloc ./content ./src ./.github"

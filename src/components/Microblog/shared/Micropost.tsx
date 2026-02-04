@@ -1,7 +1,7 @@
+import { type Micropost as MicropostType } from 'contentlayer2/generated';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useMDXComponent } from 'next-contentlayer2/hooks';
-import { type Micropost as MicropostType } from 'contentlayer2/generated';
 import { Playground } from 'src/components/Playground';
 import { A, Badge, H1 } from 'src/components/UI';
 import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';

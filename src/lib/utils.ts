@@ -1,10 +1,10 @@
 import { MDX } from 'contentlayer2/core';
+import { type Micropost, type Page, type Post } from 'contentlayer2/generated';
 import rehypeSanitize from 'rehype-sanitize';
 import rehypeStringify from 'rehype-stringify';
 import { remark } from 'remark';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
-import { type Micropost, type Page, type Post } from 'contentlayer2/generated';
 import { BASE_URL } from './constants';
 
 export const getAbsoluteURL = (path: string): string => {

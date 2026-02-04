@@ -1,5 +1,5 @@
-import { NextSeo } from 'next-seo';
 import { type Micropost as MicropostType } from 'contentlayer2/generated';
+import { NextSeo } from 'next-seo';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import { Interactions } from '../CMS/shared/Interactions';
 import { Article, Header, Footer, Main } from '../UI';

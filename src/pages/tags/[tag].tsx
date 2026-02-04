@@ -1,7 +1,7 @@
+import { allPosts } from 'contentlayer2/generated';
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
-import { allPosts } from 'contentlayer2/generated';
 import { Article, Footer, Header, Main, H1 } from 'src/components/UI';
 import { getAllTags } from '../../components/CMS/shared';
 import { PostSummary } from '../../components/CMS/shared/PostSummary';

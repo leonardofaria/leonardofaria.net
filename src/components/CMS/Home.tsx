@@ -1,5 +1,5 @@
-import { NextSeo } from 'next-seo';
 import { type Post, type Micropost } from 'contentlayer2/generated';
+import { NextSeo } from 'next-seo';
 import {
   BASE_URL,
   WEBSITE_DESCRIPTION,

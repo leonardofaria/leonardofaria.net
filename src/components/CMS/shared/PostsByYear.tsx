@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { type Micropost, type Post } from 'contentlayer2/generated';
+import Link from 'next/link';
 import { Badge } from 'src/components/UI/Badge';
 
 export function PostsByYear({

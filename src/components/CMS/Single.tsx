@@ -1,9 +1,9 @@
+import { type Page, type Post } from 'contentlayer2/generated';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useMDXComponent } from 'next-contentlayer2/hooks';
 import { NextSeo } from 'next-seo';
 import { Parallax } from 'react-scroll-parallax';
-import { type Page, type Post } from 'contentlayer2/generated';
 import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import Embed from '../Embed';

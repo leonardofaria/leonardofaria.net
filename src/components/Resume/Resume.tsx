@@ -127,7 +127,7 @@ export default function Resume() {
           technical expertise, and an eye for scaling processes and people.
         </p>
 
-        <p className="hidden mb-3 text-sm">
+        <p className="mb-3 hidden text-sm">
           <span className="font-semibold">Core competencies:</span> Front-end,
           technical leadership, architecture, mentorship, Continuous
           Integration, Design System, accessibility, Developer Experience

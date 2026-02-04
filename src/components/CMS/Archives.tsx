@@ -1,7 +1,7 @@
+import { type Post } from 'contentlayer2/generated';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import { Fragment } from 'react';
-import { type Post } from 'contentlayer2/generated';
 import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 import { BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import { Article, H1, Main, Footer, Header } from '../UI';
