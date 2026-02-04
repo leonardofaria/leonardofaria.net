@@ -81,6 +81,11 @@ While I have strong interest in frontend development and have contributed to des
 
 In some cases, I created wrapper components that internally use shadcn/ui but include custom shadows, paddings, margins, and color styles that are not customizable through their theming system.
 
+![Buttons](/wp-content/uploads/2026/01/buttons.png)
+<center className="-mt-6">
+  <small>Buttons, buttons and more buttons</small>
+</center>
+
 ## Infrastructure
 
 The primary goal for an early-stage company is rapid time-to-market. We needed a deployment solution that was both fast and straightforward.
@@ -101,9 +106,11 @@ For Next.js upgrades and with minimal configuration, I established two environme
 GitHub Actions handles test execution, linting, migration scripts, application builds, and Vercel deployments. Key decisions:
 
 - I moved production builds to GitHub Actions after encountering persistent out-of-memory errors in Vercel when building with source maps for Sentry. This may no longer be necessary after the Next.js 16 upgrade, but it proved to be an effective workaround.
-- I used [Blacksmith](https://blacksmith.sh/) for GitHub Actions builds instead of GitHub's standard runners. It delivers faster performance at lower cost with a single-line workflow change. If you are curious, my small [benchmark results](https://x.com/leozera/status/1957182366646182090).
-- I added Oxlint to accelerate linting by removing ESLint rules that Oxlint can handle. This introduced dual linters, which is not ideal for Developer Experience and I may revert this decision.
-- I adopted the Go implementation of TypeScript in July, which delivered significant performance gains: type-checking time decreased from 51s to 6s.
+- I added [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) to accelerate linting by removing ESLint rules that Oxlint can handle. This introduced dual linters, which is not ideal for Developer Experience and I may revert this decision.
+- I adopted the Go implementation of TypeScript in July, which delivered significant performance gains: type-checking time decreased from **51s to 6s**.
+- I used [Blacksmith](https://blacksmith.sh/) for GitHub Actions builds instead of GitHub's standard runners. It delivers faster performance at lower cost with a single-line workflow change. If you are curious, my small [benchmark results](https://x.com/leozera/status/1957182366646182090):
+
+<Embed id="1957182366646182090" type="Twitter" />
 
 ### Monitoring & logging
 
