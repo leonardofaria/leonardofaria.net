@@ -108,16 +108,6 @@ export default tseslint.config(
         },
       ],
     },
-    settings: {
-      'import/resolver': {
-        typescript: {
-          alwaysTryTypes: true,
-        },
-      },
-      'import/parsers': {
-        '@typescript-eslint/parser': ['.ts', '.tsx'],
-      },
-    },
   },
 
   // Next.js plugin
