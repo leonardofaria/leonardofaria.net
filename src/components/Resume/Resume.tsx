@@ -1,6 +1,6 @@
 // Ready to print in Chrome Canary
 
-import { EDUCATION, EXPERIENCE, type SectionData } from './data';
+import { EDUCATION, EXPERIENCE, PATENT, type SectionData } from './data';
 
 function SectionTitle({ title }: { title: string }) {
   return (
@@ -38,7 +38,7 @@ function SectionDetails({ details }: { details: SectionData['details'] }) {
                 </>
               )}
 
-              <small className="shrink-0">{detail.period}</small>
+              <small className="shrink-0 self-start">{detail.period}</small>
             </div>
 
             {Array.isArray(detail.description) ? (
@@ -137,6 +137,8 @@ export default function Resume() {
       <Section sectionData={EXPERIENCE} title="Experience" />
 
       <Section sectionData={EDUCATION} title="Education" />
+
+      <Section sectionData={PATENT} title="Patent" />
 
       <section className="hidden w-full flex-col gap-3 text-sm">
         <SectionTitle title="Technical skills" />

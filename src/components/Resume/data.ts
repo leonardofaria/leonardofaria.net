@@ -38,7 +38,7 @@ export const EXPERIENCE: SectionData[] = [
           'Worked on different 0 to 1 projects from a new company initiative with TypeScript and React, iterating and adapting the product according to requirements/customer needs',
           'Improved testing by creating documentation, guidelines and building a CI tool to track test coverage across different teams',
           'Enhanced developer experience tools and documentation, making engineers more productive',
-          'Advocated for accessibility by leveraging automated tests to create a product usable for all customers',
+          'Advocated for accessibility by leveraging automated tests to create a product usable for all customers'
         ],
       },
     ],
@@ -152,6 +152,20 @@ export const EDUCATION: SectionData[] = [
         title: '',
         period: '2006 — 2011',
         description: 'Bachelor of Information Systems',
+      },
+    ],
+  },
+];
+
+export const PATENT: SectionData[] = [
+  {
+    name: 'Administration services for compensation platforms',
+    location: 'US20240095680A1',
+    details: [
+      {
+        title: '',
+        period: '2023 — 2024',
+        description: 'Co-inventor on patent for compensation platform admin services. Developed scalable systems and intuitive UX for compensation review workflows, streamlining manager/director operations',
       },
     ],
   },
