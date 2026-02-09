@@ -7,7 +7,7 @@
   "author": "Leonardo Faria <leonardofaria@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev:nextjs": "next dev",
+    "dev:nextjs": "next dev -p 9000",
     "dev:contentlayer": "contentlayer2 dev",
     "dev": "run-p dev:*",
     "bootstrap": "pnpm install && contentlayer2 build && pnpm prebuild",
