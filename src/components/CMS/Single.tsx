@@ -7,6 +7,7 @@ import { Parallax } from 'react-scroll-parallax';
 import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import Embed from '../Embed';
+import IframeResizer from '../Embed/IframeResizer';
 import { Playground } from '../Playground';
 import { A, Article, Badge, Footer, H1, Header, Main } from '../UI';
 import { Interactions } from './shared/Interactions';
@@ -136,7 +137,14 @@ export default function Single({
             className={`e-content ${CONTENT_STYLES_WRAPPER}`}
           >
             <MDXContent
-              components={{ A, Playground, Embed, Image, Parallax }}
+              components={{
+                A,
+                Embed,
+                IframeResizer,
+                Image,
+                Parallax,
+                Playground,
+              }}
             />
           </div>
 
