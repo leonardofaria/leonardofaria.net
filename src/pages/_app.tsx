@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
 import { DefaultSeo } from 'next-seo';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { UMAMI_SITEID, UMAMI_URL } from '../lib/constants';
 import SEO from '../lib/next-seo.config';
@@ -33,6 +33,34 @@ function MyApp({ Component, pageProps }: AppProps) {
   searchParams.set('path', router.asPath);
   const ogImageUrl = getAbsoluteURL(`/api/thumbnail?${searchParams}`);
   const pathname = usePathname();
+
+  const resolveViewTransition = useRef<(() => void) | null>(null);
+
+  useEffect(() => {
+    const onStart = () => {
+      if (!('startViewTransition' in document)) return;
+      (document as unknown as { startViewTransition: (cb: () => Promise<void>) => void }).startViewTransition(
+        () =>
+          new Promise<void>((resolve) => {
+            resolveViewTransition.current = resolve;
+          })
+      );
+    };
+
+    const onComplete = () => {
+      resolveViewTransition.current?.();
+      resolveViewTransition.current = null;
+    };
+
+    router.events.on('routeChangeStart', onStart);
+    router.events.on('routeChangeComplete', onComplete);
+    router.events.on('routeChangeError', onComplete);
+    return () => {
+      router.events.off('routeChangeStart', onStart);
+      router.events.off('routeChangeComplete', onComplete);
+      router.events.off('routeChangeError', onComplete);
+    };
+  }, [router]);
 
   useEffect(() => {
     AOS.init({

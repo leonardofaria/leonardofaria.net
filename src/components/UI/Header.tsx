@@ -62,7 +62,7 @@ export function Header() {
         />
       </div>
 
-      <header className="fixed z-20 my-2 w-full">
+      <header className="fixed z-20 my-2 w-full" style={{ viewTransitionName: 'header' }}>
         <div className="relative mx-auto max-w-7xl">
           <div
             className={`relative z-10 flex items-center justify-between px-6 py-4 md:justify-start md:space-x-10 lg:px-8 ${mobileBackgroundClasses}`}
