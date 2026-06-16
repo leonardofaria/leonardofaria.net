@@ -20,6 +20,8 @@ Building a product from scratch requires making numerous architectural and techn
 
 In this post, I will categorize the decisions into back end & front end, infrastructure, and tools, but first I will provide context about the product and the team.
 
+<TableOfContents minLevel={2} maxLevel={3} title="Table of Contents" />
+
 ## Context
 
 [Pistachio](https://pistachiosoftware.com) is an all-in-one software for furniture/mattress stores. As a Point of Sale, it allows sales associates to create orders, process payments, and manage inventory. It also allows store owners to manage their business, including accounting, reporting, and inventory management.
@@ -55,9 +57,22 @@ I also adjusted the CI/CD pipeline to run migrations accordingly when deployed t
   <img src="/wp-content/uploads/2026/01/slack-prisma.png" className="w-full md:max-w-[350px]" />
 </center>
 
+Prisma (the company) also offered Prisma Optimize, their solution for optimizing PostgreSQL databases. We evaluated it for a period, but the performance issues were not significant enough to justify the cost.
+
 ### Database
 
-Since most of the data is relational, choosing PostgreSQL for a multi-tenant SaaS application was straightforward. We initially used Vercel Postgres, though Vercel eventually migrated their customers to Neon.
+Since most of the data is relational, choosing PostgreSQL for a multi-tenant SaaS application was straightforward. Data was stored in Vercel Postgres (initially just a rebranded Neon), though Vercel eventually migrated their customers to Neon directly.
+
+#### Neon Pros
+
+- Integrates with Vercel out of the box
+- Standard features are easy to set up (replication, backups, auto-scaling)
+
+#### Neon Cons
+
+- More expensive than maintaining your own PostgreSQL server
+- No data masking
+- Lower-tier plans impose security limitations (HIPAA compliance, networking restrictions, etc.)
 
 While one feature would have benefited from a NoSQL database, the trade-off was not justified at this stage of product development.
 
@@ -65,7 +80,7 @@ While one feature would have benefited from a NoSQL database, the trade-off was 
 
 In this application, queues are used to pull and classify (using AI) messages from users.
 
-Last year Vercel [launched their queues service](https://vercel.com/changelog/vercel-queues-is-now-in-limited-beta), which remains in beta. They provided a dedicated Slack channel with their engineers to support our implementation. While it doesn't yet match the maturity of other Vercel services, it satisfies our current requirements.
+Last year Vercel [launched their queues service](https://vercel.com/changelog/vercel-queues-is-now-in-limited-beta), which remains in beta. They provided a dedicated Slack channel with their engineers to support our implementation. While it doesn't yet match the maturity of other Vercel services, it satisfies our current requirements. A more mature alternative would be Inngest, but Vercel Queues was sufficient for our needs at the time. Vercel also provides a serviceable UI for cron jobs, which met our initial requirements.
 
 ### Tests
 
@@ -86,6 +101,8 @@ In some cases, I created wrapper components that internally use shadcn/ui but in
   <small>Buttons, buttons and more buttons</small>
 </center>
 
+Part of this design was influenced by [Campsite](https://campsite.com). Although their product wound down, it was great to see their [source code published on GitHub](https://github.com/campsite/campsite).
+
 ## Infrastructure
 
 The primary goal for an early-stage company is rapid time-to-market. We needed a deployment solution that was both fast and straightforward.
@@ -94,7 +111,7 @@ The primary goal for an early-stage company is rapid time-to-market. We needed a
 
 Vercel makes deploying Next.js applications straightforward. Deploy Previews are a particularly valuable feature, enabling us to test and review changes before merging to production.
 
-For Next.js upgrades and with minimal configuration, I established two environments (main and app2), each running a different Next.js version. This setup facilitates canary deployments and production testing of new features.
+For Next.js upgrades and with minimal configuration, I established two environments (main and app2), each running a different Next.js version. This setup enabled incremental upgrades from Next.js 14 to 15, and from 15 to 16.
 
 <center>
   <img src="/wp-content/uploads/2026/01/slack-deploy1.png" className="w-full md:max-w-[350px]" />
@@ -121,6 +138,32 @@ Sentry provides error tracking across the application. I implemented a wrapper f
 
 For application logging, [Axiom](https://axiom.co/) was a good choice given its generous free tier. While usage has been limited, it works for current needs. The trade-off is the cost of Vercel's log delivery.
 
+## Integrations
+
+### Payments
+
+In an ideal world, we would use Stripe. In practice, that did not align with our customers' needs—primarily due to cost. CardPointe, even when accessed through different intermediaries, offered more competitive pricing for our customers.
+
+#### Terminals
+
+One lesson from integrating with CardPointe is that merchant fees vary depending on how a transaction is processed. For example, credit cards verified with both a PIN and a signature incur different fees than those verified with a signature alone.
+
+#### Payment links
+
+We later added the ability to generate payment links, allowing customers to pay for orders without sharing credit card details over email or phone.
+
+### Tax calculations
+
+As someone outside the United States, I was struck by the complexity of US tax calculations. Several providers offer tax calculation services; Avalara is the most widely known, but we ultimately chose TaxJar (a Stripe company). Their SDK is well documented. We encountered only one edge case—a specific tax calculation in a particular state—which was straightforward to resolve.
+
+### Accounting
+
+Again, as a non-American citizen, I was impressed by the complexity of the accounting in the United States. I was not the one in charge of accounting, so I will briefly mention the company integrated with QuickBooks Online. Their developer experience is not great, not offering a good SDK with TypeScript support these days is unthinkable, but they still do it.
+
+### Delivery
+
+One of my favorite integrations—and one that receives relatively little attention—is [DispatchTrack](https://dispatchtrack.com/). It organizes deliveries by optimizing routes for time and distance. Several of our customers use DispatchTrack; our integration syncs orders to DispatchTrack, receives delivery status updates, and marks orders as delivered in Pistachio once delivery is complete.
+
 ## Tools
 
 ### Claude & Cursor
@@ -134,11 +177,30 @@ In the age of AI-assisted development, maintaining a comprehensive `AGENTS.md` f
 
 ### PostHog
 
-I chose PostHog as an all-in-one solution for feature flags, session replays, and event tracking. Of these capabilities, feature flags are most critical, enabling progressive rollout of features to users. Session replays provide value for debugging and understanding user behavior, particularly for identifying pain points. Event tracking, while useful, is the lowest priority—a nice-to-have rather than essential.
+I chose PostHog as an all-in-one solution for feature flags, session replays, and event tracking. Of these capabilities, feature flags are most critical, enabling progressive rollout of features to users. Session replays provide value for debugging and understanding user behavior, particularly for identifying pain points. Event tracking, while useful, is the lowest priority—a nice-to-have rather than essential. My preferred event-tracking dashboard included:
+
+- Daily active users
+- Total online users
+- Device and resolution breakdown
+- Users per tenant over the last 7 days
 
 ### Metabase
 
 Technically not my decision, but Metabase helps a lot with custom reports. One multi-tenant customer had very specific reporting requirements that Metabase helped to solve. The solution involved provisioning a read-only database user with access to views that automatically filter data by their multiple tenants.
+
+### Typesense
+
+We adopted Typesense for search in two areas: the product catalog and global search. Catalog search matches product names as well as descriptions, specifications, and other metadata. Global search spans sales orders, customers, products, purchase orders, and related entities.
+
+![Global search](/wp-content/uploads/2026/01/global-search.jpg)
+
+### Framer
+
+In July 2025, I rebuilt the marketing website. We had used Framer since the company's inception; I redesigned the one-page site to be more polished and responsive, reflecting the features we had added to the product.
+
+![I really like the animations on this website](/wp-content/uploads/2025/12/pistachio-website.jpg)
+
+<center className="-mt-6"><small>The animations on this site are a particular highlight</small></center>
 
 ## Conclusion
 
