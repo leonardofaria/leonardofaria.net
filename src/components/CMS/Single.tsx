@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useMDXComponent } from 'next-contentlayer2/hooks';
 import { NextSeo } from 'next-seo';
+import { type ComponentProps } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
@@ -11,7 +12,7 @@ import IframeResizer from '../Embed/IframeResizer';
 import { Playground } from '../Playground';
 import { A, Article, Badge, Footer, H1, Header, Main } from '../UI';
 import { Interactions } from './shared/Interactions';
-// import { TableOfContents } from './shared/TableOfContents';
+import { TableOfContents } from './shared/TableOfContents';
 
 export default function Single({
   post,
@@ -33,6 +34,9 @@ export default function Single({
   } = post;
   const url = `${BASE_URL}${permalink}`;
   const MDXContent = useMDXComponent(code);
+  const TableOfContentsFromPost = (
+    props: Omit<ComponentProps<typeof TableOfContents>, 'headings' | 'post'>,
+  ) => <TableOfContents headings={post.headings} {...props} />;
   const createdAt = new Date(publishedTime);
   // const disqusId = disqusIds?.[0];
   const isPost = type === 'post';
@@ -130,8 +134,6 @@ export default function Single({
             </H1>
           </header>
 
-          {/* <TableOfContents post={post} /> */}
-
           <div
             /* eslint-disable-next-line tailwindcss/no-custom-classname */
             className={`e-content ${CONTENT_STYLES_WRAPPER}`}
@@ -144,6 +146,7 @@ export default function Single({
                 Image,
                 Parallax,
                 Playground,
+                TableOfContents: TableOfContentsFromPost,
               }}
             />
           </div>

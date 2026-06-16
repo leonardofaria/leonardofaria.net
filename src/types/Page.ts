@@ -1,5 +1,5 @@
 import { defineDocumentType } from 'contentlayer2/source-files';
-import GithubSlugger from 'github-slugger';
+import { extractHeadings } from '../lib/headings';
 import { generateExcerpt } from '../lib/utils';
 
 export const Page = defineDocumentType(() => ({
@@ -38,28 +38,7 @@ export const Page = defineDocumentType(() => ({
   computedFields: {
     headings: {
       type: 'json',
-      resolve: async (doc) => {
-        // use same package as rehypeSlug so toc and sluggified headings match
-        // https://github.com/rehypejs/rehype-slug/blob/main/package.json#L36
-        const slugger = new GithubSlugger();
-
-        // https://stackoverflow.com/a/70802303
-        const regXHeader = /\n\n(?<flag>#{1,6})\s+(?<content>.+)/g;
-
-        const headings = Array.from(doc.body.raw.matchAll(regXHeader)).map(
-          ({ groups }) => {
-            const flag = groups?.flag;
-            const content = groups?.content;
-            return {
-              heading: flag?.length,
-              text: content,
-              slug: content ? slugger.slug(content) : undefined,
-            };
-          },
-        );
-
-        return headings;
-      },
+      resolve: (doc) => extractHeadings(doc.body.raw),
     },
     excerpt: {
       type: 'string',
