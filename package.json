@@ -12,7 +12,7 @@
     "dev": "pnpm dev:nextjs",
     "bootstrap": "pnpm install && contentlayer2 build && pnpm prebuild",
     "prebuild": "tsx src/lib/githubCommits.ts",
-    "build": "contentlayer2 build && pnpm prebuild && next build",
+    "build": "contentlayer2 build && pnpm prebuild && next build --turbopack",
     "start": "next start",
     "lint": "eslint . --fix",
     "build:ogImages": "tsx src/lib/ogImages.ts",

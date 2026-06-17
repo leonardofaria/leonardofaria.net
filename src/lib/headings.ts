@@ -10,7 +10,13 @@ export type DocumentHeading = {
   slug: string;
 };
 
-function headingText(node: { children?: Array<{ type: string; value?: string }> }) {
+type MdastInline = {
+  type: string;
+  value?: string;
+  children?: MdastInline[];
+};
+
+function headingText(node: MdastInline): string {
   if (!node.children) {
     return '';
   }
@@ -21,8 +27,8 @@ function headingText(node: { children?: Array<{ type: string; value?: string }> 
         return child.value ?? '';
       }
 
-      if (child.type === 'link' && 'children' in child) {
-        return headingText(child as { children?: Array<{ type: string; value?: string }> });
+      if (child.type === 'link' && child.children) {
+        return headingText(child);
       }
 
       return '';
@@ -57,7 +63,7 @@ export function extractHeadings(raw: string): DocumentHeading[] {
   const tree = remark().use(remarkParse).parse(raw);
   const headings: DocumentHeading[] = [];
 
-  visit(tree, 'heading', (node) => {
+  visit(tree, 'heading', (node: MdastInline & { depth: number }) => {
     const text = headingText(node).trim();
 
     if (!text) {
