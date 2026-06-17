@@ -5,6 +5,7 @@ import { useMDXComponent } from 'next-contentlayer2/hooks';
 import { NextSeo } from 'next-seo';
 import { type ComponentProps } from 'react';
 import { Parallax } from 'react-scroll-parallax';
+import { normalizeHeadings } from '../../lib/headings';
 import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import Embed from '../Embed';
@@ -36,7 +37,9 @@ export default function Single({
   const MDXContent = useMDXComponent(code);
   const TableOfContentsFromPost = (
     props: Omit<ComponentProps<typeof TableOfContents>, 'headings' | 'post'>,
-  ) => <TableOfContents headings={post.headings} {...props} />;
+  ) => (
+    <TableOfContents headings={normalizeHeadings(post.headings)} {...props} />
+  );
   const createdAt = new Date(publishedTime);
   // const disqusId = disqusIds?.[0];
   const isPost = type === 'post';

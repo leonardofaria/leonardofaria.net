@@ -1,6 +1,6 @@
 import { defineDocumentType } from 'contentlayer2/source-files';
 import readingTime from 'reading-time';
-import { extractHeadings } from '../lib/headings';
+import { extractHeadings, type DocumentHeading } from '../lib/headings';
 import { generateExcerpt } from '../lib/utils';
 
 export const Post = defineDocumentType(() => ({
@@ -47,7 +47,7 @@ export const Post = defineDocumentType(() => ({
   computedFields: {
     headings: {
       type: 'json',
-      resolve: (doc) => extractHeadings(doc.body.raw),
+      resolve: (doc) => extractHeadings(doc.body.raw) satisfies DocumentHeading[],
     },
     excerpt: {
       type: 'string',

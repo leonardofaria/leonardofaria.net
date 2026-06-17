@@ -16,17 +16,26 @@
 }
 
 @keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem; /* matches Main mt-24 / fixed header */
 }
 
 .yt-lite {

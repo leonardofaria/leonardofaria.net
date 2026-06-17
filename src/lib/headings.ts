@@ -30,6 +30,28 @@ function headingText(node: { children?: Array<{ type: string; value?: string }> 
     .join('');
 }
 
+export function isDocumentHeading(value: unknown): value is DocumentHeading {
+  if (typeof value !== 'object' || value === null) {
+    return false;
+  }
+
+  const heading = value as DocumentHeading;
+
+  return (
+    typeof heading.heading === 'number' &&
+    typeof heading.text === 'string' &&
+    typeof heading.slug === 'string'
+  );
+}
+
+export function normalizeHeadings(value: unknown): DocumentHeading[] {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return value.filter(isDocumentHeading);
+}
+
 export function extractHeadings(raw: string): DocumentHeading[] {
   const slugger = new GithubSlugger();
   const tree = remark().use(remarkParse).parse(raw);
