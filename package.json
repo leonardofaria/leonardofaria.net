@@ -7,9 +7,9 @@
   "author": "Leonardo Faria <leonardofaria@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev:nextjs": "next dev -p 9000",
+    "dev:nextjs": "next dev --webpack -p 8888",
     "dev:contentlayer": "contentlayer2 dev",
-    "dev": "run-p dev:*",
+    "dev": "pnpm dev:nextjs",
     "bootstrap": "pnpm install && contentlayer2 build && pnpm prebuild",
     "prebuild": "tsx src/lib/githubCommits.ts",
     "build": "contentlayer2 build && pnpm prebuild && next build",

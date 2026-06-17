@@ -6,7 +6,7 @@ import chromium from '@sparticuz/chromium-min';
 import matter from 'gray-matter';
 import lineReplace from 'line-replace';
 
-const BASE_URL = 'http://localhost:9000';
+const BASE_URL = 'http://localhost:8888';
 
 function getAllMarkdownFiles(dirPath: string, arrayOfFiles: string[]) {
   const files = readdirSync(dirPath);
