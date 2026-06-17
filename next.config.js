@@ -18,9 +18,9 @@ module.exports = withSentryConfig(
   withContentlayer({
     // Disabled due to react-embed
     // reactStrictMode: true,
-    
-    // Next.js 16 uses Turbopack by default
-    turbopack: {},
+
+    // Contentlayer HMR relies on the webpack plugin in next-contentlayer2.
+    // Turbopack reloads generated files mid-write and breaks on MDX saves.
 
     async rewrites() {
       return [
@@ -56,5 +56,5 @@ module.exports = withSentryConfig(
       largePageDataBytes: 1024 * 1024, // 1 MB
     },
   }),
-  sentryWebpackPluginOptions
+  sentryWebpackPluginOptions,
 );
