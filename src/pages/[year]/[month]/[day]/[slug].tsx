@@ -1,4 +1,4 @@
-import { allPosts, type Post } from 'contentlayer2/generated';
+import { allPosts, type Post } from 'src/lib/content';
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
 import Single from '../../../../components/CMS/Single';
 
@@ -24,7 +24,6 @@ export const getStaticProps: GetStaticProps<{
   const post = allPosts.find((p: Post) => p.permalink.startsWith(permalink));
 
   if (!post) {
-     
     console.error({ permalink });
     return { notFound: true };
   }

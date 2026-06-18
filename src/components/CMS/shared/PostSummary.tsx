@@ -1,9 +1,8 @@
-import { type Post } from 'contentlayer2/generated';
+import { type Post } from 'src/lib/content';
 import Link from 'next/link';
 import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 import { SimplePost } from 'src/types/ContentLayer';
 
- 
 export function PostSummary({ post }: { post: Post | SimplePost }) {
   const createdAt = new Date(post.publishedAt);
 

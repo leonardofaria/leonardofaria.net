@@ -1,5 +1,5 @@
 const { withSentryConfig } = require('@sentry/nextjs');
-const { withContentlayer } = require('next-contentlayer2');
+const { withContentCollections } = require('@content-collections/next');
 
 const sentryWebpackPluginOptions = {
   // Additional config options for the Sentry Webpack plugin. Keep in mind that
@@ -14,13 +14,10 @@ const sentryWebpackPluginOptions = {
 };
 
 /** @type {import('next').NextConfig} */
-module.exports = withSentryConfig(
-  withContentlayer({
+const nextConfig = withSentryConfig(
+  {
     // Disabled due to react-embed
     // reactStrictMode: true,
-
-    // Contentlayer HMR relies on the webpack plugin in next-contentlayer2.
-    // Turbopack reloads generated files mid-write and breaks on MDX saves.
 
     async rewrites() {
       return [
@@ -55,6 +52,8 @@ module.exports = withSentryConfig(
       // https://github.com/github/docs/blob/0820c53e071a0a28d5a1cad4cc27bcb6b0e37d45/next.config.js#L52
       largePageDataBytes: 1024 * 1024, // 1 MB
     },
-  }),
+  },
   sentryWebpackPluginOptions,
 );
+
+module.exports = withContentCollections(nextConfig);

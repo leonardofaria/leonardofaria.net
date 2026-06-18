@@ -35,8 +35,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# contentlayer
-.contentlayer
+# content-collections
+.content-collections
 
 public/rss.xml
 public/commits.json

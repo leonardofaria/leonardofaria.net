@@ -7,12 +7,10 @@
   "author": "Leonardo Faria <leonardofaria@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev:nextjs": "next dev --webpack -p 8888",
-    "dev:contentlayer": "contentlayer2 dev",
-    "dev": "pnpm dev:nextjs",
-    "bootstrap": "pnpm install && contentlayer2 build && pnpm prebuild",
+    "dev": "next dev -p 8888",
+    "bootstrap": "pnpm install && pnpm prebuild",
     "prebuild": "tsx src/lib/githubCommits.ts",
-    "build": "contentlayer2 build && pnpm prebuild && next build --turbopack",
+    "build": "pnpm prebuild && next build --turbopack",
     "start": "next start",
     "lint": "eslint . --fix",
     "build:ogImages": "tsx src/lib/ogImages.ts",
@@ -20,6 +18,9 @@
     "stats": "npx cloc ./content ./src ./.github"
   },
   "devDependencies": {
+    "@content-collections/core": "^0.15.2",
+    "@content-collections/mdx": "^0.2.2",
+    "@content-collections/next": "^0.2.11",
     "@eslint/js": "^9.39.2",
     "@next/eslint-plugin-next": "^16.0.10",
     "@types/d3-geo": "^3.0.3",
@@ -42,7 +43,8 @@
     "prettier": "^3.1.1",
     "tailwindcss": "^3.4.0",
     "typescript": "5.9.3",
-    "typescript-eslint": "^8.49.0"
+    "typescript-eslint": "^8.49.0",
+    "zod": "^4.4.3"
   },
   "dependencies": {
     "@codemirror/autocomplete": "^6.4.0",
@@ -55,7 +57,6 @@
     "@vercel/analytics": "^0.1.6",
     "@vercel/og": "^0.0.27",
     "aos": "^2.3.4",
-    "contentlayer2": "^0.5.8",
     "d3-geo": "^3.1.0",
     "d3-geo-projection": "^4.0.0",
     "disqus-react": "^1.1.5",
@@ -63,7 +64,6 @@
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.3",
     "next": "^16.0.10",
-    "next-contentlayer2": "^0.5.8",
     "next-seo": "^5.15.0",
     "playwright-aws-lambda": "^0.9.0",
     "playwright-core": "^1.29.2",
@@ -99,10 +99,5 @@
     "> 1%",
     "maintained node versions",
     "not dead"
-  ],
-  "overrides": {
-    "next-contentlayer": {
-      "next": "$next"
-    }
-  }
+  ]
 }

@@ -3,12 +3,13 @@ import {
   allMicroposts,
   allPages,
   allPosts,
+  type Document,
   type Micropost,
   type Page,
   type Post,
-} from 'contentlayer2/generated';
+} from 'src/lib/content';
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
-import { getPartialContent } from 'src/lib/utils';
+import { getPartialContent, type PartialContentItem } from 'src/lib/utils';
 import Archives from '../components/CMS/Archives';
 import Home from '../components/CMS/Home';
 import Single from '../components/CMS/Single';
@@ -36,9 +37,9 @@ type CurrentFilters = {
 
 export const getStaticProps: GetStaticProps<{
   currentFilters: CurrentFilters;
-  posts: (Post | Page | Micropost)[];
+  posts: PartialContentItem[];
 }> = async ({ params }) => {
-  let posts = [...allDocuments].sort(
+  let posts: Document[] = [...allDocuments].sort(
     (a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)),
   );
 
@@ -57,7 +58,7 @@ export const getStaticProps: GetStaticProps<{
   if (params?.filter?.[0] === 'archives') {
     currentFilters = { type: 'archives' };
 
-    posts = getPartialContent(posts);
+    posts = getPartialContent(posts) as Document[];
   }
 
   if (currentFilters.type === 'home') {
@@ -68,7 +69,7 @@ export const getStaticProps: GetStaticProps<{
       return false;
     });
 
-    posts = getPartialContent(posts);
+    posts = getPartialContent(posts) as Document[];
   }
 
   // Catch 404
@@ -81,7 +82,7 @@ export const getStaticProps: GetStaticProps<{
     return { notFound: true };
   }
 
-  return { props: { posts, currentFilters } };
+  return { props: { posts: posts as PartialContentItem[], currentFilters } };
 };
 
 export default function SinglePostPage({

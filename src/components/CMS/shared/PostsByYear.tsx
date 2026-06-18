@@ -1,4 +1,4 @@
-import { type Micropost, type Post } from 'contentlayer2/generated';
+import { type Micropost, type Post } from 'src/lib/content';
 import Link from 'next/link';
 import { Badge } from 'src/components/UI/Badge';
 

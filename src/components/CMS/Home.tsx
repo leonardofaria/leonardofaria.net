@@ -1,4 +1,4 @@
-import { type Post, type Micropost } from 'contentlayer2/generated';
+import { type Post, type Micropost } from 'src/lib/content';
 import { NextSeo } from 'next-seo';
 import {
   BASE_URL,

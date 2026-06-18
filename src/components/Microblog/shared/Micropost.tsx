@@ -1,7 +1,7 @@
-import { type Micropost as MicropostType } from 'contentlayer2/generated';
+import { type Micropost as MicropostType } from 'src/lib/content';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useMDXComponent } from 'next-contentlayer2/hooks';
+import { useMDXComponent } from '@content-collections/mdx/react';
 import { Playground } from 'src/components/Playground';
 import { A, Badge, H1 } from 'src/components/UI';
 import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
@@ -14,9 +14,9 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
     tags,
     slug,
     // ogImage,
-    body: { code },
+    body,
   } = micropost;
-  const MDXContent = useMDXComponent(code);
+  const MDXContent = useMDXComponent(body);
   const createdAt = new Date(publishedAt);
 
   return (

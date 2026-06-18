@@ -1,5 +1,5 @@
 import { writeFileSync } from 'fs';
-import { allPosts, allMicroposts } from 'contentlayer2/generated';
+import { allPosts, allMicroposts } from 'src/lib/content';
 import RSS from 'rss';
 import { BASE_URL, WEBSITE_TITLE, WEBSITE_DESCRIPTION } from './constants';
 
@@ -7,7 +7,7 @@ export default function generateFeed() {
   const feed = new RSS({
     title: WEBSITE_TITLE,
     description: WEBSITE_DESCRIPTION,
-    generator: 'Next.js + Contentlayer',
+    generator: 'Next.js + Content Collections',
     feed_url: `${BASE_URL}/rss.xml`,
     site_url: BASE_URL,
   });

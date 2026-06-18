@@ -1,10 +1,9 @@
-import { type Micropost as MicropostType } from 'contentlayer2/generated';
+import { type Micropost as MicropostType } from 'src/lib/content';
 import { NextSeo } from 'next-seo';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import { Interactions } from '../CMS/shared/Interactions';
 import { Article, Header, Footer, Main } from '../UI';
 import Micropost from './shared/Micropost';
-
 
 export default function Single({ micropost }: { micropost: MicropostType }) {
   const { title, publishedAt, excerpt, tags, ogImage, slug } = micropost;

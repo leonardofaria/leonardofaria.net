@@ -1,7 +1,7 @@
-import { type Page, type Post } from 'contentlayer2/generated';
+import { type Page, type Post } from 'src/lib/content';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useMDXComponent } from 'next-contentlayer2/hooks';
+import { useMDXComponent } from '@content-collections/mdx/react';
 import { NextSeo } from 'next-seo';
 import { type ComponentProps } from 'react';
 import { Parallax } from 'react-scroll-parallax';
@@ -29,12 +29,12 @@ export default function Single({
     tags,
     permalink,
     ogImage,
-    body: { code },
+    body,
     // TODO: check if dsq_thread_id is really needed
     // dsq_thread_id: disqusIds,
   } = post;
   const url = `${BASE_URL}${permalink}`;
-  const MDXContent = useMDXComponent(code);
+  const MDXContent = useMDXComponent(body);
   const TableOfContentsFromPost = (
     props: Omit<ComponentProps<typeof TableOfContents>, 'headings' | 'post'>,
   ) => (

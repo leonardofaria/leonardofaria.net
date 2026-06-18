@@ -11,7 +11,7 @@ import tseslint from 'typescript-eslint';
 export default tseslint.config(
   // Base ESLint recommended rules
   js.configs.recommended,
-  
+
   // TypeScript ESLint recommended rules
   ...tseslint.configs.recommended,
 
@@ -27,7 +27,7 @@ export default tseslint.config(
       },
     },
   },
-  
+
   // React plugin
   {
     files: ['**/*.{js,jsx,ts,tsx}'],
@@ -140,9 +140,9 @@ export default tseslint.config(
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
-        { 
-          argsIgnorePattern: '^_', 
-          varsIgnorePattern: '^_' 
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
         },
       ],
       '@typescript-eslint/no-explicit-any': 'warn',
@@ -175,19 +175,25 @@ export default tseslint.config(
       'react/require-extension': 'off',
 
       // Prop sorting rules
-      'react/jsx-sort-props': ['warn', {
-        callbacksLast: true,
-        shorthandFirst: false,
-        shorthandLast: true,
-        ignoreCase: true,
-        noSortAlphabetically: false
-      }],
-      'react/sort-prop-types': ['warn', {
-        callbacksLast: true,
-        ignoreCase: true,
-        requiredFirst: false,
-        sortShapeProp: true
-      }],
+      'react/jsx-sort-props': [
+        'warn',
+        {
+          callbacksLast: true,
+          shorthandFirst: false,
+          shorthandLast: true,
+          ignoreCase: true,
+          noSortAlphabetically: false,
+        },
+      ],
+      'react/sort-prop-types': [
+        'warn',
+        {
+          callbacksLast: true,
+          ignoreCase: true,
+          requiredFirst: false,
+          sortShapeProp: true,
+        },
+      ],
     },
   },
 
@@ -201,7 +207,7 @@ export default tseslint.config(
       '**/.next/**',
       '**/out/**',
       '**/public/**',
-      '**/.contentlayer/**',
+      '**/.content-collections/**',
       '**/generated/**',
     ],
   },

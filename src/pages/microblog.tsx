@@ -1,4 +1,4 @@
-import { allMicroposts, type Micropost } from 'contentlayer2/generated';
+import { allMicroposts, type Micropost } from 'src/lib/content';
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
 import Microposts from '../components/Microblog/Microposts';
 

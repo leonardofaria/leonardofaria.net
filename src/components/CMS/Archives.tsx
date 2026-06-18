@@ -1,4 +1,4 @@
-import { type Post } from 'contentlayer2/generated';
+import { type Post } from 'src/lib/content';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import { Fragment } from 'react';

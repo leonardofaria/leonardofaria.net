@@ -1,6 +1,6 @@
 'use client';
 
-import { type Page, type Post } from 'contentlayer2/generated';
+import { type Page, type Post } from 'src/lib/content';
 import { useCallback, useEffect, useId, useState } from 'react';
 import { type DocumentHeading, normalizeHeadings } from '../../../lib/headings';
 

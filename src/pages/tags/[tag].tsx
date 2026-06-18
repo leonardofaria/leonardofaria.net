@@ -1,4 +1,4 @@
-import { allPosts } from 'contentlayer2/generated';
+import { allPosts } from 'src/lib/content';
 import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
@@ -33,7 +33,7 @@ export const getStaticProps: GetStaticProps<{
     .reverse();
 
   const simplePosts = posts.map((post) => {
-    const { body: _body, _raw, ...rest } = post;
+    const { body: _body, content: _content, ...rest } = post;
     return { ...rest };
   });
 
