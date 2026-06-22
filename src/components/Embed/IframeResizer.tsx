@@ -45,7 +45,7 @@ export default function IframeResizer({
       iframe.removeEventListener('load', handleLoad);
       window.removeEventListener('message', handleMessage);
     };
-  }, [src]);
+  }, []);
 
   return (
     <iframe

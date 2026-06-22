@@ -1,7 +1,5 @@
 // https://tobbelindstrom.com/blog/useMutationObserver/
-import { RefObject, useEffect, useMemo } from 'react';
-
- 
+import { type RefObject, useEffect, useMemo } from 'react';
 
 interface Props {
   target?: RefObject<Element | null> | Element | Node | null;
@@ -12,7 +10,7 @@ interface Props {
 function getRefElement<T>(
   element?: RefObject<Element | null> | T,
 ): Element | T | undefined | null {
-  // @ts-ignore
+  // @ts-expect-error
   if (element && 'current' in element) {
     return element.current;
   }
@@ -27,9 +25,8 @@ export const useMutationObserver = ({
 }: Props): void => {
   const observer = useMemo(
     () =>
-      new MutationObserver(
-        (mutationRecord, mutationObserver) =>
-          callback?.(mutationRecord, mutationObserver),
+      new MutationObserver((mutationRecord, mutationObserver) =>
+        callback?.(mutationRecord, mutationObserver),
       ),
     [callback],
   );

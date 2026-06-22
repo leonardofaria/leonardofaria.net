@@ -1,10 +1,10 @@
 import {
-  FaMastodon,
-  FaTwitter,
+  FaEnvelope,
   FaGithub,
   FaLinkedin,
-  FaEnvelope,
+  FaMastodon,
   FaRss,
+  FaTwitter,
 } from 'react-icons/fa';
 import { SOCIAL_LINKS } from '../../lib/constants';
 

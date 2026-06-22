@@ -1,5 +1,5 @@
-import { fontFamily } from 'tailwindcss/defaultTheme';
 import type { Config } from 'tailwindcss';
+import { fontFamily } from 'tailwindcss/defaultTheme';
 
 export default {
   content: [
@@ -63,6 +63,6 @@ export default {
       },
     },
   },
-   
+
   plugins: [require('@tailwindcss/aspect-ratio')],
 } satisfies Config;

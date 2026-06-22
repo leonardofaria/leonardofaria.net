@@ -1,11 +1,11 @@
-import { type Post } from 'src/lib/content';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import { Fragment } from 'react';
+import type { Post } from 'src/lib/content';
 import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 import { BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
-import { Article, H1, Main, Footer, Header } from '../UI';
-import { groupPostsByYears, getAllTags } from './shared';
+import { Article, Footer, H1, Header, Main } from '../UI';
+import { getAllTags, groupPostsByYears } from './shared';
 import { PostsByYear } from './shared/PostsByYear';
 
 export default function Archives({ posts }: { posts: Post[] }) {

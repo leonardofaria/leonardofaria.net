@@ -29,13 +29,9 @@ function SectionDetails({ details }: { details: SectionData['details'] }) {
               {detail.title !== '' ? (
                 <b className="font-semibold">{detail.title}</b>
               ) : (
-                <>
-                  {!Array.isArray(detail.description) && (
-                    <p
-                      dangerouslySetInnerHTML={{ __html: detail.description }}
-                    />
-                  )}
-                </>
+                !Array.isArray(detail.description) && (
+                  <p dangerouslySetInnerHTML={{ __html: detail.description }} />
+                )
               )}
 
               <small className="shrink-0 self-start">{detail.period}</small>

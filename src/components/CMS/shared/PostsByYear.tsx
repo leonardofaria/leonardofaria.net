@@ -1,6 +1,6 @@
-import { type Micropost, type Post } from 'src/lib/content';
 import Link from 'next/link';
 import { Badge } from 'src/components/UI/Badge';
+import type { Micropost, Post } from 'src/lib/content';
 
 export function PostsByYear({
   year,

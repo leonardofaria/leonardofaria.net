@@ -1,12 +1,12 @@
-import { allPosts } from 'src/lib/content';
-import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
-import { Article, Footer, Header, Main, H1 } from 'src/components/UI';
+import { Article, Footer, H1, Header, Main } from 'src/components/UI';
+import { allPosts } from 'src/lib/content';
+import type { SimplePost } from 'src/types/ContentLayer';
 import { getAllTags } from '../../components/CMS/shared';
 import { PostSummary } from '../../components/CMS/shared/PostSummary';
 import { BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
-import type { SimplePost } from 'src/types/ContentLayer';
 
 export const getStaticPaths = () => {
   const allTags = getAllTags(allPosts);

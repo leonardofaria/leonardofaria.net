@@ -29,8 +29,8 @@ export default function Page() {
         <div className="my-4 text-center print:hidden">
           <a
             className="group inline-flex items-center rounded-full bg-transparent px-4 py-1.5 transition hover:bg-white"
-            href="/pub/resume.pdf"
             download
+            href="/pub/resume.pdf"
           >
             <span>Download PDF</span>
             <svg

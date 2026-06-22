@@ -1,9 +1,9 @@
-import { type Micropost as MicropostType } from 'src/lib/content';
+import { useMDXComponent } from '@content-collections/mdx/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useMDXComponent } from '@content-collections/mdx/react';
 import { Playground } from 'src/components/Playground';
 import { A, Badge, H1 } from 'src/components/UI';
+import type { Micropost as MicropostType } from 'src/lib/content';
 import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
 import Embed from '../../Embed';
 

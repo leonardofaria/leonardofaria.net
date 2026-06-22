@@ -1,4 +1,4 @@
-import { type Post, type Micropost } from 'src/lib/content';
+import type { Micropost, Post } from 'src/lib/content';
 
 export function groupPostsByYears(
   posts: (Post | Micropost)[],

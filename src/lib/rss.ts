@@ -1,7 +1,7 @@
-import { writeFileSync } from 'fs';
-import { allPosts, allMicroposts } from 'src/lib/content';
+import { writeFileSync } from 'node:fs';
 import RSS from 'rss';
-import { BASE_URL, WEBSITE_TITLE, WEBSITE_DESCRIPTION } from './constants';
+import { allMicroposts, allPosts } from 'src/lib/content';
+import { BASE_URL, WEBSITE_DESCRIPTION, WEBSITE_TITLE } from './constants';
 
 export default function generateFeed() {
   const feed = new RSS({
@@ -12,7 +12,6 @@ export default function generateFeed() {
     site_url: BASE_URL,
   });
 
-   
   console.log('info  - Generating RSS');
 
   [...allPosts, ...allMicroposts]

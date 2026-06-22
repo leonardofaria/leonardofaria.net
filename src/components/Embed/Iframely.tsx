@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react';
 
 const NEXT_PUBLIC_IFRAMELY_KEY = process.env.NEXT_PUBLIC_IFRAMELY_KEY;
 
- 
-
 export default function Iframely({ url }: { url: string }) {
   const [error, setError] = useState<string | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -38,7 +36,7 @@ export default function Iframely({ url }: { url: string }) {
   }, [url]);
 
   useEffect(() => {
-    if (window !== undefined && window.iframely) {
+    if (window?.iframely) {
       window.iframely.load();
     }
   });

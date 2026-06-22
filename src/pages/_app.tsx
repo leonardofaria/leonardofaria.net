@@ -2,7 +2,8 @@ import '../styles/globals.css';
 import 'aos/dist/aos.css';
 import { Analytics } from '@vercel/analytics/react';
 import AOS from 'aos';
-import { Inter, Fira_Code } from 'next/font/google';
+import type { AppProps } from 'next/app';
+import { Fira_Code, Inter } from 'next/font/google';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
@@ -12,8 +13,6 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import { UMAMI_SITEID, UMAMI_URL } from '../lib/constants';
 import SEO from '../lib/next-seo.config';
 import { getAbsoluteURL } from '../lib/utils';
-import type { AppProps } from 'next/app';
-
 
 const inter = Inter({
   subsets: ['latin'],
@@ -32,18 +31,22 @@ function MyApp({ Component, pageProps }: AppProps) {
   const searchParams = new URLSearchParams();
   searchParams.set('path', router.asPath);
   const ogImageUrl = getAbsoluteURL(`/api/thumbnail?${searchParams}`);
-  const pathname = usePathname();
+  const _pathname = usePathname();
 
   const resolveViewTransition = useRef<(() => void) | null>(null);
 
   useEffect(() => {
     const onStart = () => {
       if (!('startViewTransition' in document)) return;
-      (document as unknown as { startViewTransition: (cb: () => Promise<void>) => void }).startViewTransition(
+      (
+        document as unknown as {
+          startViewTransition: (cb: () => Promise<void>) => void;
+        }
+      ).startViewTransition(
         () =>
           new Promise<void>((resolve) => {
             resolveViewTransition.current = resolve;
-          })
+          }),
       );
     };
 
@@ -81,7 +84,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     script.src = `https://ddwl4m2hdecbv.cloudfront.net/b/R6G5YH8MJ165/R6G5YH8MJ165.js.gz`;
     script.async = true;
     document.body.appendChild(script);
-  }, [pathname]);
+  }, []);
 
   return (
     <ParallaxProvider>

@@ -1,3 +1,4 @@
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import {
   allDocuments,
   allMicroposts,
@@ -8,7 +9,6 @@ import {
   type Page,
   type Post,
 } from 'src/lib/content';
-import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
 import { getPartialContent, type PartialContentItem } from 'src/lib/utils';
 import Archives from '../components/CMS/Archives';
 import Home from '../components/CMS/Home';

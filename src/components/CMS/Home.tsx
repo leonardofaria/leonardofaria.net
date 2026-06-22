@@ -1,12 +1,12 @@
-import { type Post, type Micropost } from 'src/lib/content';
 import { NextSeo } from 'next-seo';
+import type { Micropost, Post } from 'src/lib/content';
 import {
   BASE_URL,
   WEBSITE_DESCRIPTION,
   WEBSITE_SUBHEADING,
   WEBSITE_TITLE,
 } from '../../lib/constants';
-import { Header, Footer, Article, Main, CtaLink } from '../UI';
+import { Article, CtaLink, Footer, Header, Main } from '../UI';
 import { groupPostsByYears } from './shared';
 import { PostsByYear } from './shared/PostsByYear';
 

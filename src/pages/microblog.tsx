@@ -1,5 +1,5 @@
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { allMicroposts, type Micropost } from 'src/lib/content';
-import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
 import Microposts from '../components/Microblog/Microposts';
 
 export const getStaticProps: GetStaticProps<{

@@ -1,13 +1,13 @@
-import { type Page, type Post } from 'src/lib/content';
+import { useMDXComponent } from '@content-collections/mdx/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useMDXComponent } from '@content-collections/mdx/react';
 import { NextSeo } from 'next-seo';
-import { type ComponentProps } from 'react';
+import type { ComponentProps } from 'react';
 import { Parallax } from 'react-scroll-parallax';
-import { normalizeHeadings } from '../../lib/headings';
+import type { Page, Post } from 'src/lib/content';
 import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
+import { normalizeHeadings } from '../../lib/headings';
 import Embed from '../Embed';
 import IframeResizer from '../Embed/IframeResizer';
 import { Playground } from '../Playground';

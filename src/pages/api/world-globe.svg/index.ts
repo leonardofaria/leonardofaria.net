@@ -1,8 +1,7 @@
-
 import { geoPath } from 'd3-geo';
-/* @ts-ignore */
+/* @ts-expect-error */
 import { geoSatellite } from 'd3-geo-projection';
-import { NextApiRequest, NextApiResponse, GetServerSideProps } from 'next';
+import type { GetServerSideProps, NextApiRequest, NextApiResponse } from 'next';
 import * as topojson from 'topojson-client';
 import topology from './land-110m.json';
 
@@ -13,7 +12,7 @@ type Query = {
   longitude: string;
 };
 
-/* @ts-ignore */
+/* @ts-expect-error */
 const land = topojson.feature(topology, topology.objects.land);
 const FONT_SIZE = 36;
 

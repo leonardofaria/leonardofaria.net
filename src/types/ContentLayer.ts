@@ -1,4 +1,4 @@
-import { type Post } from 'src/lib/content';
+import type { Post } from 'src/lib/content';
 
 // SimplePost is a Post without the compiled MDX body, making build
 // times smaller on a few pages (/tags/* for example)

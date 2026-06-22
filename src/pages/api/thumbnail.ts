@@ -1,5 +1,5 @@
 // https://playwright.tech/blog/generate-opengraph-images-using-playwright
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 import puppeteer from 'puppeteer-core';
 
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
@@ -46,7 +46,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.setHeader('Content-Type', 'image/png');
     res.end(data);
   } catch (error) {
-     
     console.log({ error });
     return res.status(500).end(error);
   }

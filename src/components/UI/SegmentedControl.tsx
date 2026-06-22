@@ -49,11 +49,11 @@ export function SegmentedControl({ items }: Props) {
             <button
               className="relative m-px flex flex-1 cursor-pointer items-center justify-center p-px text-sm font-semibold"
               key={item.label}
-              type="button"
               onClick={() => {
                 setCurrent(`item${i}`);
                 item.onClick();
               }}
+              type="button"
             >
               {item.label}
             </button>

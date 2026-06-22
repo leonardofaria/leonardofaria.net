@@ -50,7 +50,7 @@ html {
 
 /* gradient */
 .yt-lite::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   top: 0;
@@ -67,7 +67,7 @@ html {
     thanks https://css-tricks.com/responsive-iframes/
 */
 .yt-lite::after {
-  content: '';
+  content: "";
   display: block;
   padding-bottom: calc(100% / (16 / 9));
 }
@@ -99,7 +99,7 @@ html {
 
 /* play button triangle */
 .yt-lite > .lty-playbtn:before {
-  content: '';
+  content: "";
   border-style: solid;
   border-width: 11px 0 11px 19px;
   border-color: transparent transparent transparent #fff;

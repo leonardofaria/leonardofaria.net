@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
 export function H1({ children, ...rest }: { children: ReactNode }) {
   return (
