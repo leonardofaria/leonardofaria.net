@@ -1,13 +1,13 @@
 import {
+  AiFillInstagram,
   AiOutlineGithub,
   AiOutlineTwitter,
-  AiFillInstagram,
 } from 'react-icons/ai';
 import { BsFileEarmarkSlides } from 'react-icons/bs';
-import { FaYoutube, FaMeetup } from 'react-icons/fa';
+import { FaMeetup, FaYoutube } from 'react-icons/fa';
 import { ImNpm } from 'react-icons/im';
 import { PiGoodreadsLogoFill } from 'react-icons/pi';
-import { SiNextdotjs, SiEslint, SiSubstack, SiWikipedia } from 'react-icons/si';
+import { SiEslint, SiNextdotjs, SiSubstack, SiWikipedia } from 'react-icons/si';
 import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 
 // const ICONS = [
@@ -78,7 +78,6 @@ import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 function getIcon(href: string) {
   const iconClasses = 'mx-1 mt-[-4px] inline-block';
 
-   
   // for (const { domain, component: Component, color } of ICONS) {
   //   if (href.includes(domain)) {
   //     return (
@@ -140,9 +139,7 @@ function getIcon(href: string) {
 
   if (href.includes('nextjs.org')) {
     return (
-      <SiNextdotjs
-        className={`${iconClasses} text-github hover:text-github`}
-      />
+      <SiNextdotjs className={`${iconClasses} text-github hover:text-github`} />
     );
   }
 

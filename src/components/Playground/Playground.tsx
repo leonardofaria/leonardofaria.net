@@ -1,12 +1,12 @@
 import {
-  SandpackPreview,
-  SandpackProvider,
   SandpackCodeEditor,
   SandpackConsole,
-  SandpackTests,
   SandpackLayout,
-  SandpackProviderProps,
-  SandpackPredefinedTemplate,
+  type SandpackPredefinedTemplate,
+  SandpackPreview,
+  SandpackProvider,
+  type SandpackProviderProps,
+  SandpackTests,
 } from '@codesandbox/sandpack-react';
 import { githubLight } from '@codesandbox/sandpack-themes';
 import { FULL_WIDTH_WRAPPER } from 'src/lib/rehypePrettyCode';
@@ -45,9 +45,9 @@ export function Playground({
           </header>
         )}
         <SandpackLayout>
-          <SandpackCodeEditor showTabs={false} showLineNumbers />
+          <SandpackCodeEditor showLineNumbers showTabs={false} />
           {showPreview && (
-            <SandpackPreview showRefreshButton={false} showOpenInCodeSandbox />
+            <SandpackPreview showOpenInCodeSandbox showRefreshButton={false} />
           )}
           {showTests && <SandpackTests />}
           {showConsole && <SandpackConsole />}

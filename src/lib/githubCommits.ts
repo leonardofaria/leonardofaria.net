@@ -1,4 +1,4 @@
-import { writeFileSync } from 'fs';
+import { writeFileSync } from 'node:fs';
 
 (async () => {
   const request = await fetch(
@@ -9,8 +9,5 @@ import { writeFileSync } from 'fs';
 
   writeFileSync('./public/commits.json', JSON.stringify(commits, null, 2));
 
-   
   console.log('Response saved to file');
 })();
-
-export {}; // Empty export because I have to

@@ -13,7 +13,7 @@
  */
 
 import * as Sentry from '@sentry/nextjs';
-import { NextPageContext } from 'next';
+import type { NextPageContext } from 'next';
 import NextErrorComponent from 'next/error';
 
 function CustomErrorComponent({ statusCode }: { statusCode: number }) {

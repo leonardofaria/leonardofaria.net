@@ -1,5 +1,5 @@
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { allPosts, type Post } from 'src/lib/content';
-import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
 import Single from '../../../../components/CMS/Single';
 
 export const getStaticPaths = () => {

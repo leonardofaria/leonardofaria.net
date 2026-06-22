@@ -1,4 +1,3 @@
-
 // import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -7,9 +6,9 @@ import {
   CONTENT_STYLES,
   CONTENT_STYLES_WRAPPER,
 } from 'src/lib/rehypePrettyCode';
+import type { Computer, Idevice } from 'src/lib/types';
 import { Cards } from './Cards';
 import { Table } from './Table';
-import type { Computer, Idevice } from 'src/lib/types';
 
 export function Collection({
   computers,

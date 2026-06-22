@@ -15,7 +15,7 @@ export default function Embed({
   type?: 'YouTube' | 'Twitter';
   id?: string;
 }) {
-  if (url && url.includes('instagram.com')) {
+  if (url?.includes('instagram.com')) {
     return <Iframely url={url} />;
   }
 

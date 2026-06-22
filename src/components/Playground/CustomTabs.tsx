@@ -15,8 +15,8 @@ export default function CustomTabs() {
           }`}
           data-active={name === activeFile}
           key={name}
-          type="button"
           onClick={() => setActiveFile(name)}
+          type="button"
         >
           {name.startsWith('/') ? name.replace('/', '') : name}
         </button>

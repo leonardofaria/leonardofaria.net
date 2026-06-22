@@ -1,5 +1,5 @@
-import { type Document, type Micropost, type Page, type Post } from './content';
 import { BASE_URL } from './constants';
+import type { Document, Micropost, Page, Post } from './content';
 
 export { generateExcerpt } from './excerpt';
 

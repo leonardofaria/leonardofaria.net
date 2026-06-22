@@ -1,13 +1,12 @@
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { FaTwitter, FaLinkedin, FaCopy } from 'react-icons/fa';
+import { useEffect, useState } from 'react';
+import { FaCopy, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { SiBuymeacoffee } from 'react-icons/si';
 import useCopyToClipboard from 'src/lib/hooks/useCopyToClipboard';
 import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 import { LARGE_SCREEN_BREAKPOINT } from '../../lib/constants';
 import useWindowSize from '../../lib/hooks/useWindowSize';
 import type { WebMention } from '../../lib/types';
-
 
 /* eslint-disable @next/next/no-img-element */
 
@@ -55,7 +54,6 @@ function Share({ url, title }: { url: string; title: string }) {
 
       <button
         className={`${buttonClasses} ${copyBgColor}`}
-        type="button"
         onClick={() => {
           copy(url);
           setCopyBgColor('bg-teal-600');
@@ -63,6 +61,7 @@ function Share({ url, title }: { url: string; title: string }) {
             setCopyBgColor('bg-gray-600');
           }, 2000);
         }}
+        type="button"
       >
         <FaCopy className={iconClasses} />
         <span className="hidden lg:flex">Share URL</span>
@@ -102,7 +101,7 @@ function Mention({ originalMention }: { originalMention: WebMention }) {
         url: mention.source,
         name: 'External link',
         photo: favicon || ANON_AVATAR,
-      }
+      },
     };
   }
 
@@ -123,7 +122,7 @@ function Mention({ originalMention }: { originalMention: WebMention }) {
   return (
     <li className="mb-8 flex text-base">
       <a className="shrink-0" href={mention.data.author?.url || '#'}>
-        { }
+        {}
         <img
           alt=""
           className="mr-3 size-8 rounded-full"
@@ -134,7 +133,10 @@ function Mention({ originalMention }: { originalMention: WebMention }) {
         {mention.activity.type !== 'like' ? (
           <div>
             <strong>
-              <a className="no-underline" href={mention.data.author?.url || '#'}>
+              <a
+                className="no-underline"
+                href={mention.data.author?.url || '#'}
+              >
                 {mention.data.author?.name || 'Unknown'}
               </a>
             </strong>

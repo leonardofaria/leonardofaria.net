@@ -19,10 +19,10 @@ function ToggleButton({
   return (
     <button
       className="flex size-10 items-center justify-center opacity-75 transition duration-300 ease-in-out hover:opacity-100"
-      type="button"
       onClick={() => {
         setShowMenu(!showMenu);
       }}
+      type="button"
     >
       {showMenu ? (
         <MdClose className="size-6 fill-current" />
@@ -62,7 +62,10 @@ export function Header() {
         />
       </div>
 
-      <header className="fixed z-20 my-2 w-full" style={{ viewTransitionName: 'header' }}>
+      <header
+        className="fixed z-20 my-2 w-full"
+        style={{ viewTransitionName: 'header' }}
+      >
         <div className="relative mx-auto max-w-7xl">
           <div
             className={`relative z-10 flex items-center justify-between px-6 py-4 md:justify-start md:space-x-10 lg:px-8 ${mobileBackgroundClasses}`}

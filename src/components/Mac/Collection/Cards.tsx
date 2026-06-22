@@ -3,7 +3,6 @@ import { FiExternalLink } from 'react-icons/fi';
 import { IoHardwareChipSharp } from 'react-icons/io5';
 import type { Computer, Idevice } from 'src/lib/types';
 
-
 export function Cards({ collection }: { collection: Computer[] | Idevice[] }) {
   return (
     <section className="-mx-5 flex flex-wrap">
@@ -47,6 +46,7 @@ export function Cards({ collection }: { collection: Computer[] | Idevice[] }) {
                 <a
                   className="flex items-center gap-2 rounded-md bg-indigo-600 px-3 py-2 text-xs font-bold text-white no-underline transition hover:opacity-75"
                   href="{ item.reference}"
+                  rel="noopener"
                   target="_blank"
                 >
                   <span>History</span>

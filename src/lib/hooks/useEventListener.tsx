@@ -1,8 +1,6 @@
 // https://usehooks-ts.com/react-hook/use-event-listener
-import { RefObject, useEffect, useRef } from 'react';
+import { type RefObject, useEffect, useRef } from 'react';
 import useIsomorphicLayoutEffect from './useIsomorphicLayoutEffect';
-
- 
 
 // MediaQueryList Event based useEventListener interface
 function useEventListener<K extends keyof MediaQueryListEventMap>(
@@ -43,7 +41,7 @@ function useEventListener<
   KW extends keyof WindowEventMap,
   KH extends keyof HTMLElementEventMap,
   KM extends keyof MediaQueryListEventMap,
-  T extends HTMLElement | MediaQueryList | void = void,
+  T extends HTMLElement | MediaQueryList | undefined = undefined,
 >(
   eventName: KW | KH | KM,
   handler: (
@@ -67,7 +65,7 @@ function useEventListener<
     // Define the listening target
     const targetElement: T | Window = element?.current ?? window;
 
-    if (!(targetElement && targetElement.addEventListener)) return;
+    if (!targetElement?.addEventListener) return;
 
     // Create event listener that calls handler function stored in ref
     const listener: typeof handler = (event) => savedHandler.current(event);

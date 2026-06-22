@@ -1,4 +1,4 @@
-import { type Options } from 'rehype-pretty-code';
+import type { Options } from 'rehype-pretty-code';
 import { visit } from 'unist-util-visit';
 
 // div.BLOCK > pre.PRE > code.CODE
@@ -71,7 +71,7 @@ type Node = {
 
 const injectTailwindClasses = (node: Node) => {
   node.properties = {
-    // @ts-ignore trust me ts
+    // @ts-expect-error trust me ts
     ...node.properties,
     className: CONTENT_STYLES[node.tagName],
   };
@@ -277,7 +277,7 @@ export function rehypePrettyCodeClasses() {
             ...(node.properties.className || []),
             CODE_STYLES.BLOCK,
           ];
-           
+
           node.children = node.children.map((node: any) => {
             if (
               node.tagName === 'div' &&

@@ -1,6 +1,6 @@
-import { type Micropost as MicropostType } from 'src/lib/content';
 import { NextSeo } from 'next-seo';
-import { BASE_URL, WEBSITE_TITLE, MICROBLOG_INTRO } from '../../lib/constants';
+import type { Micropost as MicropostType } from 'src/lib/content';
+import { BASE_URL, MICROBLOG_INTRO, WEBSITE_TITLE } from '../../lib/constants';
 import { Article, Badge, Footer, Header, Main } from '../UI';
 import Micropost from './shared/Micropost';
 

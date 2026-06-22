@@ -1,2 +1,2 @@
 declare module 'stein-js-client';
-declare module 'line-replace'
+declare module 'line-replace';

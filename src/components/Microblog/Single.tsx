@@ -1,8 +1,8 @@
-import { type Micropost as MicropostType } from 'src/lib/content';
 import { NextSeo } from 'next-seo';
+import type { Micropost as MicropostType } from 'src/lib/content';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import { Interactions } from '../CMS/shared/Interactions';
-import { Article, Header, Footer, Main } from '../UI';
+import { Article, Footer, Header, Main } from '../UI';
 import Micropost from './shared/Micropost';
 
 export default function Single({ micropost }: { micropost: MicropostType }) {

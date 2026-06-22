@@ -1,7 +1,7 @@
 'use client';
 
-import { type Page, type Post } from 'src/lib/content';
 import { useCallback, useEffect, useId, useState } from 'react';
+import type { Page, Post } from 'src/lib/content';
 import { type DocumentHeading, normalizeHeadings } from '../../../lib/headings';
 
 type TableOfContentsProps = {
@@ -65,8 +65,8 @@ export function TableOfContents({
           aria-expanded={open}
           aria-label={open ? `Close ${title}` : `Open ${title}`}
           className="flex shrink-0 cursor-pointer items-center justify-center border-r p-3 text-xs font-semibold uppercase tracking-widest transition-colors hover:bg-white"
-          type="button"
           onClick={toggle}
+          type="button"
         >
           <span className="rotate-180 select-none whitespace-nowrap [text-orientation:mixed] [writing-mode:vertical-rl]">
             {title}

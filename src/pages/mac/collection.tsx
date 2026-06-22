@@ -1,7 +1,7 @@
-import { type GetStaticProps, type InferGetStaticPropsType } from 'next';
+import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { NextSeo } from 'next-seo';
 import { Collection } from 'src/components/Mac/Collection/Collection';
-import { Computer, Idevice } from 'src/lib/types';
+import type { Computer, Idevice } from 'src/lib/types';
 import SteinStore from 'stein-js-client';
 import { WEBSITE_TITLE } from '../../lib/constants';
 
