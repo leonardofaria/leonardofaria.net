@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 
 // Based on https://medium.com/swlh/responsive-ios-segmented-control-component-built-with-vuejs-tailwindcss-72545e7b8790

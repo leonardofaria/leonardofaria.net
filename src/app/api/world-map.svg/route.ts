@@ -1,10 +1,11 @@
-
 import { geoPath } from 'd3-geo';
 /* @ts-ignore */
 import { geoCylindricalEqualArea } from 'd3-geo-projection';
-import { NextApiRequest, NextApiResponse, GetServerSideProps } from 'next';
+import { NextRequest } from 'next/server';
+import topology from 'src/lib/land-110m.json';
 import * as topojson from 'topojson-client';
-import topology from './world-globe.svg/land-110m.json';
+
+export const runtime = 'nodejs';
 
 type Query = {
   country: string;
@@ -17,11 +18,6 @@ type Query = {
 const land = topojson.feature(topology, topology.objects.land);
 const FONT_SIZE = 36;
 
-/**
- * distance of the satellite observer from the earth
- * https://github.com/d3/d3-geo-projection#satellite_distance
- */
-// const distance = 8;
 const w = 960;
 const h = 500;
 
@@ -34,8 +30,6 @@ const path = geoPath(projection);
 function render({ city, country, latitude, longitude }: Query) {
   const coords = [+longitude, +latitude];
 
-  // spin globe a little west of the user's location so that it isn't
-  // dead centre, and tilt them slightly towards the vertical center
   projection.rotate([-coords[0] - 30, -coords[1] * (30 / 90), 0]);
 
   const dot = longitude && latitude ? projection([longitude, latitude]) : null;
@@ -106,17 +100,16 @@ function render({ city, country, latitude, longitude }: Query) {
 	`;
 }
 
-// Forward properties from `middleware.ts`
-// When support for configuring gSSP to use Edge Functions lands,
-// We could add that logic here directly.
-export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  return {
-    props: query as Query,
-  };
-};
+export async function GET(request: NextRequest) {
+  const { searchParams } = request.nextUrl;
+  const svg = render({
+    city: searchParams.get('city') ?? '',
+    country: searchParams.get('country') ?? '',
+    latitude: searchParams.get('latitude') ?? '',
+    longitude: searchParams.get('longitude') ?? '',
+  });
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const svg = render(req.query as Query);
-  res.setHeader('Content-Type', 'image/svg+xml');
-  res.end(svg);
+  return new Response(svg, {
+    headers: { 'Content-Type': 'image/svg+xml' },
+  });
 }

@@ -1,3 +1,5 @@
+'use client';
+
 import { useSandpack } from '@codesandbox/sandpack-react';
 
 export default function CustomTabs() {

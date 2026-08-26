@@ -1,3 +1,5 @@
+'use client';
+
 import dynamic from 'next/dynamic';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import { TwitterTweetEmbed } from 'react-twitter-embed';

@@ -1,8 +1,9 @@
+import { formatPublishedDate } from 'src/lib/utils';
 import commits from '../../../public/commits.json';
 import { SocialNav } from './SocialNav';
 
 export function Footer() {
-  const lastCommitDate = new Date(commits[0]?.commit?.committer?.date);
+  const lastCommitDate = commits[0]?.commit?.committer?.date;
 
   return (
     <footer className="mx-auto w-full max-w-7xl lg:px-4">
@@ -27,10 +28,7 @@ export function Footer() {
             .&nbsp;
           </span>
           <span className="text-center">
-            Last update:{' '}
-            {new Intl.DateTimeFormat('en', {
-              dateStyle: 'medium',
-            }).format(lastCommitDate)}
+            Last update: {formatPublishedDate(lastCommitDate)}
           </span>
         </p>
         <nav>

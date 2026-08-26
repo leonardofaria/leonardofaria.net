@@ -1,6 +1,8 @@
-// https://playwright.tech/blog/generate-opengraph-images-using-playwright
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextRequest } from 'next/server';
 import puppeteer from 'puppeteer-core';
+import { BASE_URL } from 'src/lib/constants';
+
+export const runtime = 'nodejs';
 
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 const { BROWSERLESS_API_TOKEN } = process.env;
@@ -20,8 +22,22 @@ const getBrowser = () =>
         headless: 'new',
       });
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+export async function GET(request: NextRequest) {
   try {
+    const { searchParams } = request.nextUrl;
+    const urlParam = searchParams.get('url');
+    const pathParam = searchParams.get('path');
+    const url =
+      urlParam ?? (pathParam ? `${BASE_URL}${pathParam.startsWith('/') ? pathParam : `/${pathParam}`}` : null);
+
+    if (!url) {
+      return new Response('Missing url or path', { status: 400 });
+    }
+
+    if (!ALLOWED_ORIGINS.includes(new URL(url).hostname)) {
+      return new Response(null, { status: 403 });
+    }
+
     const browser = await getBrowser();
     const page = await browser.newPage();
     await page.setViewport({
@@ -30,24 +46,24 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       deviceScaleFactor: 1.5,
     });
 
-    const url = req.query.url as string;
-
-    if (!ALLOWED_ORIGINS.includes(new URL(url).hostname)) {
-      return res.status(403).end();
-    }
     await page.goto(url, { waitUntil: 'networkidle0', timeout: 30 * 1000 });
     const data = await page.screenshot({
       type: 'png',
     });
     setTimeout(() => browser.close(), 0);
-    if (IS_PRODUCTION) {
-      res.setHeader('cache-control', 's-maxage=60, stale-while-revalidate');
-    }
-    res.setHeader('Content-Type', 'image/png');
-    res.end(data);
+
+    return new Response(new Uint8Array(data), {
+      headers: {
+        'Content-Type': 'image/png',
+        ...(IS_PRODUCTION
+          ? { 'cache-control': 's-maxage=60, stale-while-revalidate' }
+          : {}),
+      },
+    });
   } catch (error) {
-     
     console.log({ error });
-    return res.status(500).end(error);
+    return new Response(error instanceof Error ? error.message : 'Error', {
+      status: 500,
+    });
   }
-};
+}

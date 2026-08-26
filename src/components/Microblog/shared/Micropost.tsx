@@ -1,10 +1,13 @@
-import { type Micropost as MicropostType } from 'src/lib/content';
+'use client';
+
+import { useMDXComponent } from '@content-collections/mdx/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useMDXComponent } from '@content-collections/mdx/react';
 import { Playground } from 'src/components/Playground';
 import { A, Badge, H1 } from 'src/components/UI';
+import { type Micropost as MicropostType } from 'src/lib/content';
 import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
+import { formatPublishedDate } from 'src/lib/utils';
 import Embed from '../../Embed';
 
 export default function Micropost({ micropost }: { micropost: MicropostType }) {
@@ -17,7 +20,6 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
     body,
   } = micropost;
   const MDXContent = useMDXComponent(body);
-  const createdAt = new Date(publishedAt);
 
   return (
     <>
@@ -27,9 +29,7 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
             className="dt-published text-charade-500"
             dateTime={publishedAt}
           >
-            {createdAt.toLocaleDateString('en-US', {
-              dateStyle: 'medium',
-            })}
+            {formatPublishedDate(publishedAt)}
           </time>
 
           {tags?.map((tag) => (

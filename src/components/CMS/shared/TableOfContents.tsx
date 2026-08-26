@@ -1,7 +1,7 @@
 'use client';
 
-import { type Page, type Post } from 'src/lib/content';
 import { useCallback, useEffect, useId, useState } from 'react';
+import { type Page, type Post } from 'src/lib/content';
 import { type DocumentHeading, normalizeHeadings } from '../../../lib/headings';
 
 type TableOfContentsProps = {

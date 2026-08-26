@@ -1,6 +1,8 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 const pages = [
@@ -19,8 +21,8 @@ const pages = [
 ];
 
 export function PageNav() {
-  const router = useRouter();
-  const initialTab = pages.find((page) => router.asPath.includes(page.value));
+  const pathname = usePathname();
+  const initialTab = pages.find((page) => pathname.includes(page.value));
   const [activeTab, setActiveTab] = useState<string | null>(
     initialTab?.name ?? null,
   );
@@ -30,7 +32,7 @@ export function PageNav() {
       {pages.map((page) => (
         <li
           className={`relative rounded-full border border-transparent transition duration-300 ease-in-out ${
-            router.asPath.includes(page.value)
+            pathname.includes(page.value)
               ? 'bg-amethyst-smoke-200 shadow-inner'
               : null
           }`}

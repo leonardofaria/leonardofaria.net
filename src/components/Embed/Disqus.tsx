@@ -1,3 +1,5 @@
+'use client';
+
 import { DiscussionEmbed } from 'disqus-react';
 import { useRef, useCallback } from 'react';
 import { DISQUS_SHORTNAME } from '../../lib/constants';

@@ -1,9 +1,7 @@
-import { type Post } from 'src/lib/content';
 import Link from 'next/link';
-import { NextSeo } from 'next-seo';
 import { Fragment } from 'react';
+import { type Post } from 'src/lib/content';
 import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
-import { BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
 import { Article, H1, Main, Footer, Header } from '../UI';
 import { groupPostsByYears, getAllTags } from './shared';
 import { PostsByYear } from './shared/PostsByYear';
@@ -14,22 +12,6 @@ export default function Archives({ posts }: { posts: Post[] }) {
 
   return (
     <>
-      <NextSeo
-        openGraph={{
-          title: `Archives · ${WEBSITE_TITLE}`,
-          url: BASE_URL,
-          images: [
-            {
-              url: `${BASE_URL}/images/og_image.jpg`,
-              width: 1800,
-              height: 945,
-              alt: `Cover photo`,
-            },
-          ],
-        }}
-        title={`Archives · ${WEBSITE_TITLE}`}
-      />
-
       <Header />
 
       <Main>
