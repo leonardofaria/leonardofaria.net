@@ -1,13 +1,14 @@
-import { type Page, type Post } from 'src/lib/content';
+'use client';
+
+import { useMDXComponent } from '@content-collections/mdx/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useMDXComponent } from '@content-collections/mdx/react';
-import { NextSeo } from 'next-seo';
 import { type ComponentProps } from 'react';
 import { Parallax } from 'react-scroll-parallax';
-import { normalizeHeadings } from '../../lib/headings';
+import { type Page, type Post } from 'src/lib/content';
 import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
-import { AUTHOR, BASE_URL, WEBSITE_TITLE } from '../../lib/constants';
+import { BASE_URL } from '../../lib/constants';
+import { normalizeHeadings } from '../../lib/headings';
 import Embed from '../Embed';
 import IframeResizer from '../Embed/IframeResizer';
 import { Playground } from '../Playground';
@@ -25,13 +26,9 @@ export default function Single({
   const {
     title,
     publishedAt: publishedTime,
-    excerpt,
     tags,
     permalink,
-    ogImage,
     body,
-    // TODO: check if dsq_thread_id is really needed
-    // dsq_thread_id: disqusIds,
   } = post;
   const url = `${BASE_URL}${permalink}`;
   const MDXContent = useMDXComponent(body);
@@ -41,61 +38,10 @@ export default function Single({
     <TableOfContents headings={normalizeHeadings(post.headings)} {...props} />
   );
   const createdAt = new Date(publishedTime);
-  // const disqusId = disqusIds?.[0];
   const isPost = type === 'post';
-  const description = excerpt.replace(/(<([^>]+)>)/gi, '');
-
-  let additionalMetaTags: any = [];
-  if (isPost) {
-    additionalMetaTags = [
-      {
-        name: 'twitter:label1',
-        content: 'Reading time',
-      },
-      {
-        name: 'twitter:data1',
-        content: (post as Post).readingTime.text,
-      },
-      {
-        name: 'twitter:label2',
-        content: 'Published',
-      },
-      {
-        name: 'twitter:data2',
-        content: createdAt.toLocaleDateString('en-US', {
-          dateStyle: 'medium',
-        }),
-      },
-    ];
-  }
 
   return (
     <>
-      <NextSeo
-        additionalMetaTags={additionalMetaTags}
-        description={description}
-        openGraph={{
-          title: `${title} · ${WEBSITE_TITLE}`,
-          description,
-          url,
-          type: 'article',
-          article: {
-            publishedTime,
-            tags,
-            authors: [AUTHOR],
-          },
-          images: [
-            {
-              url: `${BASE_URL}/${ogImage}`,
-              width: 1800,
-              height: 945,
-              alt: `Cover photo of ${title}`,
-            },
-          ],
-        }}
-        title={`${title} · ${WEBSITE_TITLE}`}
-      />
-
       <Header />
 
       <Main>

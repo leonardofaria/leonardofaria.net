@@ -6,13 +6,13 @@ import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 import { z } from 'zod';
+import { generateExcerpt } from './src/lib/excerpt';
 import { extractHeadings } from './src/lib/headings';
 import {
   HEADING_LINK_ANCHOR,
   rehypePrettyCodeClasses,
   rehypePrettyCodeOptions,
 } from './src/lib/rehypePrettyCode';
-import { generateExcerpt } from './src/lib/excerpt';
 
 const mdxOptions = {
   remarkPlugins: [remarkGfm],

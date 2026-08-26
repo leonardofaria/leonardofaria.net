@@ -1,29 +1,26 @@
-import Head from 'next/head';
-import { NextSeo } from 'next-seo';
 import Resume from 'src/components/Resume/Resume';
+import type { Metadata } from 'next';
 
-export default function Page() {
+export const metadata: Metadata = {
+  title: "Leonardo Faria's resume",
+  description: "Leonardo Faria's resume",
+  openGraph: {
+    title: 'Leonardo Faria',
+    description: "Leonardo Faria's resume",
+  },
+};
+
+export default function ResumePage() {
   return (
     <>
-      <Head>
-        <style media="print" type="text/css">
-          {`
+      <style>{`
+        @media print {
           body {
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
           }
-        `}
-        </style>
-      </Head>
-
-      <NextSeo
-        description="Leonardo Faria's resume"
-        openGraph={{
-          title: 'Leonardo Faria',
-          description: "Leonardo Faria's resume",
-        }}
-        title="Leonardo Faria's resume"
-      />
+        }
+      `}</style>
 
       <div className="flex flex-col bg-gray-200">
         <div className="my-4 text-center print:hidden">

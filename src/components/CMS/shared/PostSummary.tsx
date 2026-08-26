@@ -1,5 +1,5 @@
-import { type Post } from 'src/lib/content';
 import Link from 'next/link';
+import { type Post } from 'src/lib/content';
 import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 import { SimplePost } from 'src/types/ContentLayer';
 

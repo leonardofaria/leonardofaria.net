@@ -1,5 +1,5 @@
-const { withSentryConfig } = require('@sentry/nextjs');
 const { withContentCollections } = require('@content-collections/next');
+const { withSentryConfig } = require('@sentry/nextjs');
 
 const sentryWebpackPluginOptions = {
   // Additional config options for the Sentry Webpack plugin. Keep in mind that

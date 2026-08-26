@@ -1,14 +1,12 @@
-import { type Document, type Micropost, type Page, type Post } from './content';
 import { BASE_URL } from './constants';
+import { type Document, type Micropost, type Page, type Post } from './content';
 
 export { generateExcerpt } from './excerpt';
 
 export const getAbsoluteURL = (path: string): string => {
-  // const baseURL = process.env.VERCEL_URL
-  //   ? `https://${process.env.VERCEL_URL}`
-  //   : 'http://localhost:3000';
-  // return baseURL + path;
-  return `${BASE_URL}/${path}`;
+  if (path.startsWith('http')) return path;
+  const normalized = path.startsWith('/') ? path : `/${path}`;
+  return `${BASE_URL}${normalized}`;
 };
 
 export type PartialPost = Omit<Post, 'body' | 'content'>;

@@ -1,9 +1,8 @@
-import { writeFileSync } from 'fs';
-import { allPosts, allMicroposts } from 'src/lib/content';
 import RSS from 'rss';
+import { allPosts, allMicroposts } from 'src/lib/content';
 import { BASE_URL, WEBSITE_TITLE, WEBSITE_DESCRIPTION } from './constants';
 
-export default function generateFeed() {
+export function buildRssXml() {
   const feed = new RSS({
     title: WEBSITE_TITLE,
     description: WEBSITE_DESCRIPTION,
@@ -12,7 +11,6 @@ export default function generateFeed() {
     site_url: BASE_URL,
   });
 
-   
   console.log('info  - Generating RSS');
 
   [...allPosts, ...allMicroposts]
@@ -33,5 +31,5 @@ export default function generateFeed() {
       feed.item(item);
     });
 
-  writeFileSync('./public/rss.xml', feed.xml({ indent: true }));
+  return feed.xml({ indent: true });
 }

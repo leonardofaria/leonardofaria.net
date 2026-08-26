@@ -1,3 +1,5 @@
+'use client';
+
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import { SegmentedControl } from 'src/components/UI';

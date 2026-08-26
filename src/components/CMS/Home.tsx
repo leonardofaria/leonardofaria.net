@@ -1,11 +1,4 @@
 import { type Post, type Micropost } from 'src/lib/content';
-import { NextSeo } from 'next-seo';
-import {
-  BASE_URL,
-  WEBSITE_DESCRIPTION,
-  WEBSITE_SUBHEADING,
-  WEBSITE_TITLE,
-} from '../../lib/constants';
 import { Header, Footer, Article, Main, CtaLink } from '../UI';
 import { groupPostsByYears } from './shared';
 import { PostsByYear } from './shared/PostsByYear';
@@ -15,24 +8,6 @@ export default function Home({ posts }: { posts: (Post | Micropost)[] }) {
 
   return (
     <>
-      <NextSeo
-        description={WEBSITE_DESCRIPTION}
-        openGraph={{
-          title: WEBSITE_TITLE,
-          description: WEBSITE_DESCRIPTION,
-          url: BASE_URL,
-          images: [
-            {
-              url: 'https://leonardofaria.net/api/thumbnail?url=https://leonardofaria.net',
-              width: 1800,
-              height: 945,
-              alt: `Cover photo`,
-            },
-          ],
-        }}
-        title={`${WEBSITE_SUBHEADING} · ${WEBSITE_TITLE}`}
-      />
-
       <Header />
 
       <Main>
