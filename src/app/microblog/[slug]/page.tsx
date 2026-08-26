@@ -3,6 +3,7 @@ import Single from 'src/components/Microblog/Single';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from 'src/lib/constants';
 import { allMicroposts, type Micropost } from 'src/lib/content';
 import { DEFAULT_OG_IMAGE } from 'src/lib/siteMetadata';
+import { formatPublishedDate } from 'src/lib/utils';
 import type { Metadata } from 'next';
 
 export const dynamicParams = false;
@@ -31,9 +32,7 @@ export async function generateMetadata({
 
   const { title, publishedAt, excerpt, tags, ogImage } = micropost;
   const url = `${BASE_URL}/microblog/${slug}`;
-  const createdAt = new Date(publishedAt).toLocaleDateString('en-US', {
-    dateStyle: 'medium',
-  });
+  const createdAt = formatPublishedDate(publishedAt);
   const description = excerpt.replace(/(<([^>]+)>)/gi, '');
 
   return {

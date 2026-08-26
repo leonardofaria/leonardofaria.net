@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Badge } from 'src/components/UI/Badge';
 import { type Micropost, type Post } from 'src/lib/content';
+import { formatPublishedDate } from 'src/lib/utils';
 
 export function PostsByYear({
   year,
@@ -20,7 +21,6 @@ export function PostsByYear({
       <ol className="flex w-full list-none flex-col gap-y-8">
         {posts.map((post /* , i */) => {
           const { slug, permalink, title, publishedAt, tags, type } = post;
-          const createdAt = new Date(publishedAt);
 
           return (
             <li
@@ -45,13 +45,7 @@ export function PostsByYear({
 
               <small className="relative z-10 my-2 flex items-center gap-3 text-sm">
                 <time className="text-charade-500" dateTime={publishedAt}>
-                  {
-                    createdAt
-                      .toLocaleDateString('en-US', {
-                        dateStyle: 'medium',
-                      })
-                      .split(',')[0]
-                  }
+                  {formatPublishedDate(publishedAt).split(',')[0]}
                 </time>
 
                 {tags?.map((tag) => (

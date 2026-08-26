@@ -9,6 +9,15 @@ export const getAbsoluteURL = (path: string): string => {
   return `${BASE_URL}${normalized}`;
 };
 
+// Content dates carry no timezone, so they anchor to UTC. Formatting in the
+// runtime's local zone would shift the calendar date and desync server and
+// client markup during hydration.
+export const formatPublishedDate = (date: string | Date): string =>
+  new Date(date).toLocaleDateString('en-US', {
+    dateStyle: 'medium',
+    timeZone: 'UTC',
+  });
+
 export type PartialPost = Omit<Post, 'body' | 'content'>;
 export type PartialContentItem = PartialPost | Page | Micropost;
 

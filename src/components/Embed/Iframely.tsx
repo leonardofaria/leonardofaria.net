@@ -31,7 +31,7 @@ export default function Iframely({ url }: { url: string }) {
           },
           (err: any) => {
             setIsLoaded(true);
-            setError(err);
+            setError(err?.message ?? String(err));
           },
         );
     } else {
@@ -46,7 +46,11 @@ export default function Iframely({ url }: { url: string }) {
   });
 
   if (error) {
-    return <span>{error}</span>;
+    return (
+      <a href={url} rel="noreferrer" target="_blank">
+        {url}
+      </a>
+    );
   }
   if (!isLoaded) {
     return <div>Loading…</div>;

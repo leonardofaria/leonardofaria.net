@@ -7,6 +7,7 @@ import { type ComponentProps } from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import { type Page, type Post } from 'src/lib/content';
 import { CONTENT_STYLES_WRAPPER } from 'src/lib/rehypePrettyCode';
+import { formatPublishedDate } from 'src/lib/utils';
 import { BASE_URL } from '../../lib/constants';
 import { normalizeHeadings } from '../../lib/headings';
 import Embed from '../Embed';
@@ -37,7 +38,6 @@ export default function Single({
   ) => (
     <TableOfContents headings={normalizeHeadings(post.headings)} {...props} />
   );
-  const createdAt = new Date(publishedTime);
   const isPost = type === 'post';
 
   return (
@@ -54,9 +54,7 @@ export default function Single({
                   className="dt-published text-charade-500"
                   dateTime={publishedTime}
                 >
-                  {createdAt.toLocaleDateString('en-US', {
-                    dateStyle: 'medium',
-                  })}
+                  {formatPublishedDate(publishedTime)}
                 </time>
 
                 {tags?.map((tag) => (

@@ -3,6 +3,7 @@ import Single from 'src/components/CMS/Single';
 import { AUTHOR, BASE_URL, WEBSITE_TITLE } from 'src/lib/constants';
 import { allPosts, type Post } from 'src/lib/content';
 import { pageUrl } from 'src/lib/siteMetadata';
+import { formatPublishedDate } from 'src/lib/utils';
 import type { Metadata } from 'next';
 
 export const dynamicParams = false;
@@ -37,9 +38,7 @@ export async function generateMetadata({
     post;
   const url = `${BASE_URL}${permalink}`;
   const description = excerpt.replace(/(<([^>]+)>)/gi, '');
-  const published = new Date(publishedAt).toLocaleDateString('en-US', {
-    dateStyle: 'medium',
-  });
+  const published = formatPublishedDate(publishedAt);
 
   return {
     title: `${title} · ${WEBSITE_TITLE}`,
