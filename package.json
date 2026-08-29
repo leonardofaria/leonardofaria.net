@@ -12,6 +12,8 @@
     "prebuild": "tsx src/lib/githubCommits.ts",
     "build": "pnpm prebuild && next build --turbopack",
     "start": "next start",
+    "test": "tsx --test tests/agentic.test.ts",
+    "test:agentic:endpoints": "tsx --test tests/endpoints/agentic-endpoints.test.ts",
     "lint": "eslint . --fix",
     "build:ogImages": "tsx src/lib/ogImages.ts",
     "count:domains": "find content -type f -exec grep -Eo \"(http|https)://([a-zA-Z0-9]*)(.)(com|net)\" {} \\; | sort | uniq -c | sort -nr",
