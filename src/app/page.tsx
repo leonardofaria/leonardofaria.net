@@ -1,4 +1,5 @@
 import Home from 'src/components/CMS/Home';
+import { structuredData } from 'src/lib/agentic';
 import {
   BASE_URL,
   WEBSITE_DESCRIPTION,
@@ -17,7 +18,14 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: `${WEBSITE_SUBHEADING} · ${WEBSITE_TITLE}`,
   description: WEBSITE_DESCRIPTION,
+  alternates: {
+    canonical: BASE_URL,
+    types: {
+      'text/markdown': `${BASE_URL}/index.md`,
+    },
+  },
   openGraph: {
+    type: 'website',
     title: WEBSITE_TITLE,
     description: WEBSITE_DESCRIPTION,
     url: BASE_URL,
@@ -39,5 +47,15 @@ export default function HomePage() {
     ),
   ) as (Post | Micropost)[];
 
-  return <Home posts={posts} />;
+  return (
+    <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData).replaceAll('<', '\\u003c'),
+        }}
+        type="application/ld+json"
+      />
+      <Home posts={posts} />
+    </>
+  );
 }
