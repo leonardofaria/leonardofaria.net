@@ -34,8 +34,8 @@ export default function ColophonPage() {
       <p className="text-lg">
         Over the years, people moved from personal websites to social media. I
         learned a lot from famous and not famous tech people on Twitter but in
-        all these platforms the creator doesn&apos;t own their content. Having
-        a website is the only way to guarantee the content will be live for
+        all these platforms the creator doesn&apos;t own their content. Having a
+        website is the only way to guarantee the content will be live for
         eternity (or until you keep paying the hosting bill).
       </p>
 
@@ -96,8 +96,8 @@ export default function ColophonPage() {
               Got this domain
             </h3>
             <p className="mb-3  text-lg">
-              I was still in high school when I registered this domain. Back
-              in the day, there were no <code>.io</code> or <code>.dev</code>{' '}
+              I was still in high school when I registered this domain. Back in
+              the day, there were no <code>.io</code> or <code>.dev</code>{' '}
               domains and <code>.net</code> was usually the choice of people
               working with the Internet.
             </p>

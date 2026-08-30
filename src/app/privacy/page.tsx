@@ -38,10 +38,7 @@ export default function PrivacyPage() {
 
         <p>
           Questions about this notice can be sent to{' '}
-          <a
-            className={CONTENT_STYLES.a}
-            href="mailto:leonardofaria@gmail.com"
-          >
+          <a className={CONTENT_STYLES.a} href="mailto:leonardofaria@gmail.com">
             leonardofaria@gmail.com
           </a>
           .

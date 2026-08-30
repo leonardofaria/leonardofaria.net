@@ -33,11 +33,7 @@ export function Collection({
             <h1
               className={`${CONTENT_STYLES.h1} my-0 mr-2 grow self-start lg:self-center`}
             >
-              <Link
-                /* eslint-disable-next-line tailwindcss/no-custom-classname */
-                className="p-name u-url"
-                href="/mac/collection"
-              >
+              <Link className="p-name u-url" href="/mac/collection">
                 Mac Collection
               </Link>
             </h1>
@@ -58,10 +54,7 @@ export function Collection({
             </div>
           </header>
 
-          <div
-            /* eslint-disable-next-line tailwindcss/no-custom-classname */
-            className={`e-content ${CONTENT_STYLES_WRAPPER}`}
-          >
+          <div className={`e-content ${CONTENT_STYLES_WRAPPER}`}>
             <div className="flex flex-col flex-wrap items-center justify-between lg:flex-row">
               <p className="mb-16 mr-2 mt-6 self-start text-xl lg:self-center">
                 I like Macs.

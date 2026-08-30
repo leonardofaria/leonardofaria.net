@@ -9,7 +9,6 @@ import { writeFileSync } from 'fs';
 
   writeFileSync('./public/commits.json', JSON.stringify(commits, null, 2));
 
-   
   console.log('Response saved to file');
 })();
 

@@ -1,8 +1,6 @@
 // https://tobbelindstrom.com/blog/useMutationObserver/
 import { RefObject, useEffect, useMemo } from 'react';
 
- 
-
 interface Props {
   target?: RefObject<Element | null> | Element | Node | null;
   options?: MutationObserverInit;
@@ -27,9 +25,8 @@ export const useMutationObserver = ({
 }: Props): void => {
   const observer = useMemo(
     () =>
-      new MutationObserver(
-        (mutationRecord, mutationObserver) =>
-          callback?.(mutationRecord, mutationObserver),
+      new MutationObserver((mutationRecord, mutationObserver) =>
+        callback?.(mutationRecord, mutationObserver),
       ),
     [callback],
   );

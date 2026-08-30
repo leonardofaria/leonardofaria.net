@@ -3,7 +3,6 @@ import { FiExternalLink } from 'react-icons/fi';
 import { IoHardwareChipSharp } from 'react-icons/io5';
 import type { Computer, Idevice } from 'src/lib/types';
 
-
 export function Cards({ collection }: { collection: Computer[] | Idevice[] }) {
   return (
     <section className="-mx-5 flex flex-wrap">

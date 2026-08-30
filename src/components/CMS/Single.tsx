@@ -24,13 +24,7 @@ export default function Single({
   post: Post | Page;
   type: 'post' | 'page';
 }) {
-  const {
-    title,
-    publishedAt: publishedTime,
-    tags,
-    permalink,
-    body,
-  } = post;
+  const { title, publishedAt: publishedTime, tags, permalink, body } = post;
   const url = `${BASE_URL}${permalink}`;
   const MDXContent = useMDXComponent(body);
   const TableOfContentsFromPost = (
@@ -50,7 +44,6 @@ export default function Single({
             {isPost && (
               <small className="mb-4 flex items-center justify-center gap-3 text-center text-sm">
                 <time
-                  /* eslint-disable-next-line tailwindcss/no-custom-classname */
                   className="dt-published text-charade-500"
                   dateTime={publishedTime}
                 >
@@ -58,12 +51,7 @@ export default function Single({
                 </time>
 
                 {tags?.map((tag) => (
-                  <Link
-                    /* eslint-disable-next-line tailwindcss/no-custom-classname */
-                    className="p-category"
-                    href={`/tags/${tag}`}
-                    key={tag}
-                  >
+                  <Link className="p-category" href={`/tags/${tag}`} key={tag}>
                     <Badge variation="secondary">{tag}</Badge>
                   </Link>
                 ))}
@@ -71,20 +59,13 @@ export default function Single({
             )}
 
             <H1>
-              <Link
-                /* eslint-disable-next-line tailwindcss/no-custom-classname */
-                className="p-name u-url"
-                href={permalink}
-              >
+              <Link className="p-name u-url" href={permalink}>
                 {title}
               </Link>
             </H1>
           </header>
 
-          <div
-            /* eslint-disable-next-line tailwindcss/no-custom-classname */
-            className={`e-content ${CONTENT_STYLES_WRAPPER}`}
-          >
+          <div className={`e-content ${CONTENT_STYLES_WRAPPER}`}>
             <MDXContent
               components={{
                 A,
@@ -100,11 +81,7 @@ export default function Single({
 
           <footer className="hidden">
             Written by
-            <a
-              /* eslint-disable-next-line tailwindcss/no-custom-classname */
-              className="p-author h-card"
-              rel="author"
-            >
+            <a className="p-author h-card" rel="author">
               Leonardo Faria
             </a>
           </footer>

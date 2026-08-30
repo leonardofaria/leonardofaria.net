@@ -64,14 +64,16 @@ export function Header() {
         />
       </div>
 
-      <header className="fixed z-20 my-2 w-full" style={{ viewTransitionName: 'header' }}>
+      <header
+        className="fixed z-20 my-2 w-full"
+        style={{ viewTransitionName: 'header' }}
+      >
         <div className="relative mx-auto max-w-7xl">
           <div
             className={`relative z-10 flex items-center justify-between px-6 py-4 md:justify-start md:space-x-10 lg:px-8 ${mobileBackgroundClasses}`}
           >
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <Link
-                /* eslint-disable-next-line tailwindcss/no-custom-classname */
                 className="h-card flex shrink-0 text-3xl font-semibold leading-10 tracking-tighter text-amethyst-smoke-800"
                 href="/"
                 rel="me"

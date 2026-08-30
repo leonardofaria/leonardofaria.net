@@ -42,9 +42,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const posts = getPartialContent(
-    [...allMicroposts, ...allPosts].filter(
-      (p) => parseInt(p.year, 10) >= 2021,
-    ),
+    [...allMicroposts, ...allPosts].filter((p) => parseInt(p.year, 10) >= 2021),
   ) as (Post | Micropost)[];
 
   return (

@@ -17,10 +17,7 @@ function parseAccept(accept: string): MediaRange[] {
   return accept
     .split(',')
     .map((value) => {
-      const [mediaType, ...parameters] = value
-        .trim()
-        .toLowerCase()
-        .split(';');
+      const [mediaType, ...parameters] = value.trim().toLowerCase().split(';');
       const qualityParameter = parameters.find((parameter) =>
         parameter.trim().startsWith('q='),
       );

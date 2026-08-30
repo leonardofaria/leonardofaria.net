@@ -2,24 +2,26 @@ import { PRIVACY_PARAGRAPHS, notFoundMarkdown } from 'src/lib/agentic';
 import { BASE_URL } from 'src/lib/constants';
 import { allMicroposts, allPages, allPosts } from 'src/lib/content';
 
-const STATIC_PAGE_SUMMARIES: Record<string, { title: string; summary: string }> =
-  {
-    '/about/resume': {
-      title: 'Leonardo Faria’s résumé',
-      summary:
-        'Professional experience, education, patent, speaking, volunteering, and open-source work. Visit the HTML page for the complete structured résumé or download the linked PDF.',
-    },
-    '/mac/collection': {
-      title: 'Mac collection',
-      summary:
-        'A visual catalog of vintage Apple computers in Leonardo Faria’s collection.',
-    },
-    '/playground': {
-      title: 'Playground',
-      summary:
-        'Interactive code and interface experiments. Visit the HTML page to run them.',
-    },
-  };
+const STATIC_PAGE_SUMMARIES: Record<
+  string,
+  { title: string; summary: string }
+> = {
+  '/about/resume': {
+    title: 'Leonardo Faria’s résumé',
+    summary:
+      'Professional experience, education, patent, speaking, volunteering, and open-source work. Visit the HTML page for the complete structured résumé or download the linked PDF.',
+  },
+  '/mac/collection': {
+    title: 'Mac collection',
+    summary:
+      'A visual catalog of vintage Apple computers in Leonardo Faria’s collection.',
+  },
+  '/playground': {
+    title: 'Playground',
+    summary:
+      'Interactive code and interface experiments. Visit the HTML page to run them.',
+  },
+};
 
 function documentMarkdown(pathname: string) {
   const page = allPages.find(
@@ -84,8 +86,7 @@ function listingMarkdown(pathname: string) {
     const links = [...allPosts, ...allMicroposts]
       .filter((document) => document.tags?.includes(tag))
       .map(
-        (document) =>
-          `- [${document.title}](${BASE_URL}${document.permalink})`,
+        (document) => `- [${document.title}](${BASE_URL}${document.permalink})`,
       )
       .join('\n');
 

@@ -30,9 +30,7 @@ function getAllMarkdownFiles(dirPath: string, arrayOfFiles: string[]) {
 async function processMarkdownFiles(files: string[]) {
   const browser = await launchBrowser();
 
-   
   for (const file of files) {
-     
     const data = await readFile(file);
     const {
       data: { id, permalink, type, ogImage },
@@ -45,7 +43,7 @@ async function processMarkdownFiles(files: string[]) {
     if (!existsSync(`./public/${ogImage}`)) {
       const ogImagePath = `/images/og-images/${filename}.png`;
       console.log(`${filename} - image not found`);
-       
+
       await visitPageAndScreenshot(browser, `${BASE_URL}${url}`, ogImagePath);
 
       if (!ogImage) {
