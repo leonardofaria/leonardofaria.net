@@ -10,8 +10,7 @@ import { LARGE_SCREEN_BREAKPOINT } from '../../lib/constants';
 import useWindowSize from '../../lib/hooks/useWindowSize';
 import type { WebMention } from '../../lib/types';
 
-
-/* eslint-disable @next/next/no-img-element */
+/* oxlint-disable nextjs/no-img-element */
 
 // user-circle icon from heroicons.com encoded by https://yoksel.github.io/url-encoder/
 const ANON_AVATAR =
@@ -104,7 +103,7 @@ function Mention({ originalMention }: { originalMention: WebMention }) {
         url: mention.source,
         name: 'External link',
         photo: favicon || ANON_AVATAR,
-      }
+      },
     };
   }
 
@@ -125,7 +124,7 @@ function Mention({ originalMention }: { originalMention: WebMention }) {
   return (
     <li className="mb-8 flex text-base">
       <a className="shrink-0" href={mention.data.author?.url || '#'}>
-        { }
+        {}
         <img
           alt=""
           className="mr-3 size-8 rounded-full"
@@ -136,7 +135,10 @@ function Mention({ originalMention }: { originalMention: WebMention }) {
         {mention.activity.type !== 'like' ? (
           <div>
             <strong>
-              <a className="no-underline" href={mention.data.author?.url || '#'}>
+              <a
+                className="no-underline"
+                href={mention.data.author?.url || '#'}
+              >
                 {mention.data.author?.name || 'Unknown'}
               </a>
             </strong>

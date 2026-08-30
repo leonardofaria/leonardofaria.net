@@ -2,8 +2,8 @@ import { geoPath } from 'd3-geo';
 /* @ts-ignore */
 import { geoSatellite } from 'd3-geo-projection';
 import { NextRequest } from 'next/server';
-import topology from 'src/lib/land-110m.json';
 import * as topojson from 'topojson-client';
+import topology from 'src/lib/land-110m.json';
 
 export const runtime = 'nodejs';
 

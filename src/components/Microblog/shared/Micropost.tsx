@@ -25,7 +25,7 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
     <>
       <header className="pb-6 pt-10 text-center">
         <small className="mb-4 flex items-center justify-center gap-3 text-center text-sm">
-          <time /* eslint-disable-next-line tailwindcss/no-custom-classname */
+          <time
             className="dt-published text-charade-500"
             dateTime={publishedAt}
           >
@@ -34,7 +34,6 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
 
           {tags?.map((tag) => (
             <Link
-              /* eslint-disable-next-line tailwindcss/no-custom-classname */
               className="p-category"
               href={`/microblog/tags/${tag}`}
               key={tag}
@@ -45,11 +44,7 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
         </small>
 
         <H1>
-          <Link
-            /* eslint-disable-next-line tailwindcss/no-custom-classname */
-            className="p-name u-url"
-            href={`/microblog/${slug}`}
-          >
+          <Link className="p-name u-url" href={`/microblog/${slug}`}>
             {title}
           </Link>
         </H1>
@@ -57,20 +52,13 @@ export default function Micropost({ micropost }: { micropost: MicropostType }) {
 
       {micropost.link && <Embed url={micropost.link} />}
 
-      <div
-        /* eslint-disable-next-line tailwindcss/no-custom-classname */
-        className={`e-content ${CONTENT_STYLES_WRAPPER}`}
-      >
+      <div className={`e-content ${CONTENT_STYLES_WRAPPER}`}>
         <MDXContent components={{ A, Playground, Embed, Image }} />
       </div>
 
       <footer className="hidden">
         Written by
-        <a
-          /* eslint-disable-next-line tailwindcss/no-custom-classname */
-          className="p-author h-card"
-          rel="author"
-        >
+        <a className="p-author h-card" rel="author">
           Leonardo Faria
         </a>
       </footer>

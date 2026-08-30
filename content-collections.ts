@@ -1,5 +1,12 @@
-import { defineCollection, defineConfig, type Context } from '@content-collections/core';
-import { compileMDX, type Options as MdxOptions } from '@content-collections/mdx';
+import {
+  defineCollection,
+  defineConfig,
+  type Context,
+} from '@content-collections/core';
+import {
+  compileMDX,
+  type Options as MdxOptions,
+} from '@content-collections/mdx';
 import readingTime from 'reading-time';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypePrettyCode from 'rehype-pretty-code';

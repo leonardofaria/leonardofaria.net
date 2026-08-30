@@ -7,7 +7,14 @@ import {
   type Post,
 } from 'content-collections';
 
-export { allMicroposts, allPages, allPosts, type Micropost, type Page, type Post };
+export {
+  allMicroposts,
+  allPages,
+  allPosts,
+  type Micropost,
+  type Page,
+  type Post,
+};
 
 export const allDocuments: Array<Post | Page | Micropost> = [
   ...allPosts,

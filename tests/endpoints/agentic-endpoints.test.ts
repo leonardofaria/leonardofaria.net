@@ -19,7 +19,10 @@ function headerHasToken(response: Response, header: string, token: string) {
       ?.split(',')
       .map((value) => value.trim().toLowerCase()) ?? [];
 
-  assert.ok(values.includes(token.toLowerCase()), `${header} must include ${token}`);
+  assert.ok(
+    values.includes(token.toLowerCase()),
+    `${header} must include ${token}`,
+  );
 }
 
 test('homepage exposes substantial HTML, identity metadata, and JSON-LD', async () => {
@@ -32,7 +35,10 @@ test('homepage exposes substantial HTML, identity metadata, and JSON-LD', async 
   assert.match(response.headers.get('content-type') ?? '', /^text\/html/);
   assert.match(html, /<h1\b[^>]*>[\s\S]*Leonardo Faria/);
   assert.ok(visibleText(html).length >= 500);
-  assert.match(html, /<link rel="canonical" href="https:\/\/leonardofaria\.net"\/?>/);
+  assert.match(
+    html,
+    /<link rel="canonical" href="https:\/\/leonardofaria\.net"\/?>/,
+  );
   assert.match(html, /<meta property="og:type" content="website"\/?>/);
   assert.match(html, /<meta property="og:image"/);
   assert.match(html, /<script type="application\/ld\+json">/);
@@ -145,7 +151,10 @@ test('sitemap and robots expose indexable URLs and lastmod dates', async () => {
     sitemap,
     /<loc>https:\/\/leonardofaria\.net\/contact<\/loc>/,
   );
-  assert.doesNotMatch(sitemap, /<loc>https:\/\/leonardofaria\.net\/likes<\/loc>/);
+  assert.doesNotMatch(
+    sitemap,
+    /<loc>https:\/\/leonardofaria\.net\/likes<\/loc>/,
+  );
 
   assert.equal(robotsResponse.status, 200);
   assert.match(robots, /Sitemap: https:\/\/leonardofaria\.net\/sitemap\.xml/);

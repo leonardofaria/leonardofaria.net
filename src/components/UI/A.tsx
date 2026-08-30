@@ -78,12 +78,11 @@ import { CONTENT_STYLES } from 'src/lib/rehypePrettyCode';
 function getIcon(href: string) {
   const iconClasses = 'mx-1 mt-[-4px] inline-block';
 
-   
   // for (const { domain, component: Component, color } of ICONS) {
   //   if (href.includes(domain)) {
   //     return (
   //       <Component
-  //         // eslint-disable-next-line tailwindcss/no-custom-classname
+  //
   //         className={`${iconClasses} text-[${color}]`}
   //       />
   //     );
@@ -140,9 +139,7 @@ function getIcon(href: string) {
 
   if (href.includes('nextjs.org')) {
     return (
-      <SiNextdotjs
-        className={`${iconClasses} text-github hover:text-github`}
-      />
+      <SiNextdotjs className={`${iconClasses} text-github hover:text-github`} />
     );
   }
 

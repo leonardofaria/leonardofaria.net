@@ -1,8 +1,4 @@
-import {
-  BASE_URL,
-  WEBSITE_DESCRIPTION,
-  WEBSITE_TITLE,
-} from './constants';
+import { BASE_URL, WEBSITE_DESCRIPTION, WEBSITE_TITLE } from './constants';
 import type { Metadata } from 'next';
 
 export const DEFAULT_OG_IMAGE = `${BASE_URL}/images/og_image.jpg`;

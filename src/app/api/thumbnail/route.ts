@@ -28,7 +28,10 @@ export async function GET(request: NextRequest) {
     const urlParam = searchParams.get('url');
     const pathParam = searchParams.get('path');
     const url =
-      urlParam ?? (pathParam ? `${BASE_URL}${pathParam.startsWith('/') ? pathParam : `/${pathParam}`}` : null);
+      urlParam ??
+      (pathParam
+        ? `${BASE_URL}${pathParam.startsWith('/') ? pathParam : `/${pathParam}`}`
+        : null);
 
     if (!url) {
       return new Response('Missing url or path', { status: 400 });

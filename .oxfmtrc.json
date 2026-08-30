@@ -1,0 +1,23 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "semi": true,
+  "singleQuote": true,
+  "printWidth": 80,
+  "sortPackageJson": false,
+  "sortImports": {
+    "ignoreCase": true,
+    "newlinesBetween": false,
+    "order": "asc",
+    "groups": [
+      "value-builtin",
+      "value-external",
+      "value-internal",
+      "value-parent",
+      "value-sibling",
+      "value-index",
+      "type-import"
+    ],
+    "internalPattern": ["src/", "~/"]
+  },
+  "ignorePatterns": ["*.mdx", "*.md", "public/**"]
+}

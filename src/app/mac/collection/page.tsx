@@ -1,7 +1,7 @@
+import SteinStore from 'stein-js-client';
 import { Collection } from 'src/components/Mac/Collection/Collection';
 import { WEBSITE_TITLE } from 'src/lib/constants';
 import { Computer, Idevice } from 'src/lib/types';
-import SteinStore from 'stein-js-client';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

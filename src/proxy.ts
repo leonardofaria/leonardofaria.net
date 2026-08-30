@@ -7,10 +7,7 @@ const DISCOVERY_LINKS =
 export function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
-  if (
-    pathname === '/world-globe.svg' ||
-    pathname === '/world-map.svg'
-  ) {
+  if (pathname === '/world-globe.svg' || pathname === '/world-map.svg') {
     const url = request.nextUrl.clone();
 
     // Geo is no longer available in Next.js 16, so preserve the existing
@@ -40,9 +37,7 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const representation = negotiateRepresentation(
-    request.headers.get('accept'),
-  );
+  const representation = negotiateRepresentation(request.headers.get('accept'));
 
   if (representation === 'not-acceptable') {
     return new NextResponse(

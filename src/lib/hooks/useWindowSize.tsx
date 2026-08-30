@@ -26,7 +26,6 @@ function useWindowSize(): WindowSize {
   // Set size at the first client-side load
   useIsomorphicLayoutEffect(() => {
     handleSize();
-     
   }, []);
 
   return windowSize;

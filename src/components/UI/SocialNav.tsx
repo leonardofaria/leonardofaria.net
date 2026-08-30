@@ -33,7 +33,6 @@ export function SocialNav() {
   return (
     <ul className="flex list-none justify-end lg:justify-start">
       {/* Hack to get all the classes otherwise we don't get them generated */}
-      {/* eslint-disable-next-line tailwindcss/no-contradicting-classname */}
       <span className="hidden hover:text-email hover:text-github hover:text-linkedin hover:text-mastodon hover:text-rss hover:text-twitter" />
       {SOCIAL_LINKS.map((social) => {
         const className = `block p-2 transition duration-300 ease-in-out text-charade-600 hover:text-${social.name.toLowerCase()}`;

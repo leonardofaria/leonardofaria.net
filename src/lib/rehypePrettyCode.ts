@@ -110,8 +110,8 @@ export function rehypePrettyCodeClasses() {
       (node: any) =>
         Boolean(
           TAGS.includes(node.tagName) &&
-            Object.keys(node.properties).length === 0 &&
-            node.children.some((n: any) => n.type === 'text'),
+          Object.keys(node.properties).length === 0 &&
+          node.children.some((n: any) => n.type === 'text'),
         ),
       (node: any) => {
         injectTailwindClasses(node);
@@ -124,12 +124,12 @@ export function rehypePrettyCodeClasses() {
       (node: any) =>
         Boolean(
           node.type === 'mdxJsxFlowElement' &&
-            node?.attributes?.some((attribute: any) => {
-              return (
-                attribute.name === 'className' &&
-                attribute.value?.includes('full-width')
-              );
-            }),
+          node?.attributes?.some((attribute: any) => {
+            return (
+              attribute.name === 'className' &&
+              attribute.value?.includes('full-width')
+            );
+          }),
         ),
       (node: any) => {
         node.attributes = node.attributes.map((attribute: any) => {
@@ -150,8 +150,8 @@ export function rehypePrettyCodeClasses() {
       (node: any) =>
         Boolean(
           node.tagName === 'p' &&
-            node.children?.length === 1 &&
-            node.children.some((n: any) => n.tagName === 'img'),
+          node.children?.length === 1 &&
+          node.children.some((n: any) => n.tagName === 'img'),
         ),
       (node: any) => {
         node.children = node.children.map((n: any) => {
@@ -191,8 +191,8 @@ export function rehypePrettyCodeClasses() {
       (node: any) =>
         Boolean(
           node.tagName === 'p' &&
-            node.children?.length > 1 &&
-            node.children.some((n: any) => n.tagName === 'a'),
+          node.children?.length > 1 &&
+          node.children.some((n: any) => n.tagName === 'a'),
         ),
       (node: any) => {
         node.children = node.children.map((n: any) => {
@@ -210,7 +210,7 @@ export function rehypePrettyCodeClasses() {
 
           if (
             n.tagName === 'a' &&
-            // eslint-disable-next-line no-prototype-builtins
+            // oxlint-disable-next-line no-prototype-builtins
             n.properties.hasOwnProperty('href') &&
             n.properties.href.startsWith('https://') &&
             !n.properties.href.includes('https://leonardofaria.net')
@@ -237,8 +237,8 @@ export function rehypePrettyCodeClasses() {
       (node: any) =>
         Boolean(
           node.tagName === 'code' &&
-            Object.keys(node.properties).length === 0 &&
-            node.children.some((n: any) => n.type === 'text'),
+          Object.keys(node.properties).length === 0 &&
+          node.children.some((n: any) => n.type === 'text'),
         ),
       (node: any) => {
         const textNode = node.children.find((n: any) => n.type === 'text');
@@ -256,7 +256,7 @@ export function rehypePrettyCodeClasses() {
       (node: any) =>
         Boolean(
           typeof node?.properties?.['data-rehype-pretty-code-fragment'] !==
-            'undefined',
+          'undefined',
         ),
       (node: any) => {
         if (node.tagName === 'span') {
@@ -277,7 +277,7 @@ export function rehypePrettyCodeClasses() {
             ...(node.properties.className || []),
             CODE_STYLES.BLOCK,
           ];
-           
+
           node.children = node.children.map((node: any) => {
             if (
               node.tagName === 'div' &&
