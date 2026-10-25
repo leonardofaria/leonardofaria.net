@@ -71,7 +71,7 @@ function Share({ url, title }: { url: string; title: string }) {
 
       <a
         className={`${buttonClasses} bg-twitter`}
-        href={`https://twitter.com/intent/tweet?url=${url}&amp;text=${title}`}
+        href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`}
       >
         <FaTwitter className={iconClasses} />
         <span className="hidden lg:flex">Twitter</span>
@@ -79,7 +79,7 @@ function Share({ url, title }: { url: string; title: string }) {
 
       <a
         className={`${buttonClasses} bg-linkedin`}
-        href={`https://twitter.com/intent/tweet?url=${url}&amp;text=${title}`}
+        href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`}
       >
         <FaLinkedin className={iconClasses} />
         <span className="hidden lg:flex">Linkedin</span>
@@ -172,20 +172,9 @@ export default function Webmentions({
   const LIMIT_AVATARS = isDesktop ? 20 : 4;
   const [mentions, setMentions] = useState<WebMention[]>();
 
-  let likesTotal = 0;
-  const uniqueAuthorUrls: string[] = [];
-
-  mentions?.forEach((mention) => {
-    if (mention.activity.type === 'like') {
-      likesTotal += 1;
-
-      const authorUrl = mention.data.author?.photo;
-      if (authorUrl && !uniqueAuthorUrls.includes(authorUrl)) {
-        uniqueAuthorUrls.push(authorUrl);
-      }
-    }
-  });
-
+  const likes =
+    mentions?.filter((mention) => mention.activity.type === 'like') || [];
+  const likesTotal = likes.length;
   const interactionsTotal = (mentions?.length || 0) - likesTotal;
 
   useEffect(() => {
@@ -200,7 +189,10 @@ export default function Webmentions({
     fetch(webmentionUrl)
       .then((response) => response.json())
       .then((result) => {
-        setMentions(result.links);
+        setMentions(result.links || []);
+      })
+      .catch(() => {
+        setMentions([]);
       });
   }, [url]);
 
@@ -214,19 +206,19 @@ export default function Webmentions({
 
       <div className="flex items-center">
         <h4 className={`${CONTENT_STYLES.h4} mr-3`}>
-          {likesTotal} {likesTotal > 1 ? 'Likes' : 'Like'}
+          {likesTotal} {likesTotal === 1 ? 'Like' : 'Likes'}
         </h4>
 
         <div className="grow">
           <div className="flex -space-x-2 overflow-hidden">
-            {mentions?.map((mention, index) => {
+            {likes.map((mention, index) => {
               if (index === LIMIT_AVATARS) {
                 return (
                   <span
                     className="flex size-8 items-center justify-center rounded-full bg-black text-xs font-bold text-white ring-2 ring-white"
                     key="more"
                   >
-                    +{(mentions?.length || 0) - LIMIT_AVATARS}
+                    +{likesTotal - LIMIT_AVATARS}
                   </span>
                 );
               }
@@ -255,7 +247,7 @@ export default function Webmentions({
 
       <h4 className={CONTENT_STYLES.h4}>
         {interactionsTotal}{' '}
-        {interactionsTotal > 1 ? 'Replies & Shares' : 'Reply & Share'}
+        {interactionsTotal === 1 ? 'Reply & Share' : 'Replies & Shares'}
       </h4>
 
       <ul>
