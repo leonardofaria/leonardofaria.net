@@ -75,6 +75,8 @@ const posts = defineCollection({
     categories: z.array(z.string()).optional(),
     dsq_thread_id: z.array(z.coerce.string()).optional(),
     description: z.string().optional(),
+    // Extra URLs whose webmentions should also be listed on this post
+    webmentionTargets: z.array(z.string()).optional(),
     content: z.string(),
   }),
   transform: async (document, context) => {

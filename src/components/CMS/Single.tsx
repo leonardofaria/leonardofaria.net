@@ -86,7 +86,15 @@ export default function Single({
             </a>
           </footer>
 
-          {type === 'post' && <Interactions title={title} url={url} />}
+          {type === 'post' && (
+            <Interactions
+              extraTargets={
+                'webmentionTargets' in post ? post.webmentionTargets : undefined
+              }
+              title={title}
+              url={url}
+            />
+          )}
         </Article>
       </Main>
 

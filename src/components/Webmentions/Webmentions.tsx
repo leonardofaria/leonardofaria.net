@@ -162,9 +162,11 @@ function Mention({ originalMention }: { originalMention: WebMention }) {
 export default function Webmentions({
   url,
   title,
+  extraTargets,
 }: {
   url: string;
   title: string;
+  extraTargets?: string[];
 }) {
   const { width } = useWindowSize();
   const isDesktop = width >= LARGE_SCREEN_BREAKPOINT;
@@ -177,8 +179,10 @@ export default function Webmentions({
   const likesTotal = likes.length;
   const interactionsTotal = (mentions?.length || 0) - likesTotal;
 
+  const targetsKey = [url, ...(extraTargets || [])].join(' ');
+
   useEffect(() => {
-    const targets = getUrlPermutations(url);
+    const targets = targetsKey.split(' ').flatMap(getUrlPermutations);
 
     let webmentionUrl = 'https://webmention.io/api/mentions?perPage=500';
     targets.forEach((targetUrl) => {
@@ -194,7 +198,7 @@ export default function Webmentions({
       .catch(() => {
         setMentions([]);
       });
-  }, [url]);
+  }, [targetsKey]);
 
   if (mentions?.length === 0) {
     return <Share title={title || ''} url={url} />;
